@@ -1,0 +1,24 @@
+version: 2
+enable-beta-ecosystems: true
+updates:
+  - package-ecosystem: pub
+    directory: "/packages/massa"
+    versioning-strategy: increase # https://github.com/dependabot/dependabot-core/issues/6446
+    schedule:
+      interval: weekly
+  - package-ecosystem: pub
+    directory: "/packages/massa/example"
+    schedule:
+      interval: weekly
+  - package-ecosystem: pub
+    directory: "/packages/massa_flutter"
+    schedule:
+      interval: weekly
+  - package-ecosystem: pub
+    directory: "/packages/massa_flutter/example"
+    schedule:
+      interval: weekly
+  - package-ecosystem: cargo
+    directory: "/packages/massa/native"
+    schedule:
+      interval: weekly
