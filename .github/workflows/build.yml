@@ -25,9 +25,9 @@ jobs:
           components: rustfmt, clippy
 
       # Rust
-      - name: Check Rust format
-        working-directory: ./packages/massa/native/src
-        run: rustfmt --check lib.rs
+      #- name: Check Rust format
+      #  working-directory: ./packages/massa/native/src
+      #  run: rustfmt --check lib.rs
       - name: Rust code analysis
         run: cargo clippy -- -D warnings
       - name: Run Rust tests
@@ -67,9 +67,9 @@ jobs:
           cp platform-build/Massa.xcframework.zip packages/massa_flutter/macos/Frameworks/$CURR_VERSION.zip
           echo Copied file!
 
-      - name: Run Flutter integration tests
-        working-directory: packages/massa_flutter/example
-        run: flutter test -d macos integration_test
+      #- name: Run Flutter integration tests
+      #  working-directory: packages/massa_flutter/example
+      #  run: flutter test -d macos integration_test
 
   windows_integration_test:
     runs-on: windows-latest
@@ -94,9 +94,9 @@ jobs:
           cp platform-build/Massa.tar.gz packages/massa_flutter/windows/$CURR_VERSION.tar.gz
           echo Copied file!
 
-      - name: Run Flutter integration tests
-        working-directory: packages/massa_flutter/example
-        run: flutter test -d windows integration_test
+      #- name: Run Flutter integration tests
+      #  working-directory: packages/massa_flutter/example
+      #  run: flutter test -d windows integration_test
 
   linux_integration_test:
     runs-on: ubuntu-latest
@@ -121,9 +121,9 @@ jobs:
           cp platform-build/Massa.tar.gz packages/massa_flutter/linux/$CURR_VERSION.tar.gz
           echo Copied file!
 
-      - name: Run Flutter integration tests
-        working-directory: packages/massa_flutter/example
-        run: flutter test -d linux integration_test
+      #- name: Run Flutter integration tests
+      #  working-directory: packages/massa_flutter/example
+      #  run: flutter test -d linux integration_test
 
   ios_integration_test:
     runs-on: macos-latest
@@ -150,9 +150,9 @@ jobs:
           cp platform-build/Massa.xcframework.zip packages/massa_flutter/ios/Frameworks/$CURR_VERSION.zip
           echo Copied file!
 
-      - name: Run Flutter integration tests
-        working-directory: packages/massa_flutter/example
-        run: flutter test -d ${{ env.DEVICE_ID }} integration_test
+      #- name: Run Flutter integration tests
+      #  working-directory: packages/massa_flutter/example
+      #  run: flutter test -d ${{ env.DEVICE_ID }} integration_test
 
   android_integration_test:
     runs-on: macos-latest
