@@ -25,7 +25,7 @@ jobs:
       - name: Setup git
         run: |
           git config user.name "MassaActionsBot"
-          git config user.email "mimir-bot@gsconrad.com"
+          git config user.email "dev.jwm@gmail.com"
       - uses: subosito/flutter-action@v2
       - uses: bluefireteam/melos-action@v2
 

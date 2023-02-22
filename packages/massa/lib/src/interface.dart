@@ -1,6 +1,5 @@
 import 'package:massa/src/bridge_generated.dart';
 import 'package:massa/src/impl/instance_impl.dart';
-import 'package:massa/src/instance.dart';
 import 'package:massa/src/impl/ffi/stub.dart'
     if (dart.library.io) 'package:massa/src/impl/ffi/io.dart'
     if (dart.library.html) 'package:massa/src/impl/ffi/web.dart';

@@ -1,4 +1,3 @@
-import 'package:massa/massa.dart';
 import 'package:test/test.dart';
 
 void main() {
