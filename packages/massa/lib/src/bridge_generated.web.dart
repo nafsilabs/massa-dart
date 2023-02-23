@@ -18,6 +18,30 @@ class MassaPlatform extends FlutterRustBridgeBase<MassaWire>
 
 // Section: api2wire
 
+  @protected
+  String api2wire_String(String raw) {
+    return raw;
+  }
+
+  @protected
+  List<dynamic> api2wire_account(Account raw) {
+    return [
+      api2wire_String(raw.privateKey),
+      api2wire_String(raw.publicKey),
+      api2wire_String(raw.address),
+      api2wire_u8(raw.thread)
+    ];
+  }
+
+  @protected
+  List<dynamic> api2wire_box_autoadd_account(Account raw) {
+    return api2wire_account(raw);
+  }
+
+  @protected
+  Uint8List api2wire_uint_8_list(Uint8List raw) {
+    return raw;
+  }
 // Section: finalizer
 }
 
@@ -34,6 +58,15 @@ class MassaWasmModule implements WasmModule {
   external dynamic /* void */ wire_sum(NativePortType port_, int a, int b);
 
   external dynamic /* void */ wire_sub(NativePortType port_, int a, int b);
+
+  external dynamic /* void */ wire_new__static_method__Account(
+      NativePortType port_);
+
+  external dynamic /* void */ wire_from_string__static_method__Account(
+      NativePortType port_, String priv_key);
+
+  external dynamic /* void */ wire_sign__method__Account(
+      NativePortType port_, List<dynamic> that, String data);
 }
 
 // Section: WASM wire connector
@@ -47,4 +80,15 @@ class MassaWire extends FlutterRustBridgeWasmWireBase<MassaWasmModule> {
 
   void wire_sub(NativePortType port_, int a, int b) =>
       wasmModule.wire_sub(port_, a, b);
+
+  void wire_new__static_method__Account(NativePortType port_) =>
+      wasmModule.wire_new__static_method__Account(port_);
+
+  void wire_from_string__static_method__Account(
+          NativePortType port_, String priv_key) =>
+      wasmModule.wire_from_string__static_method__Account(port_, priv_key);
+
+  void wire_sign__method__Account(
+          NativePortType port_, List<dynamic> that, String data) =>
+      wasmModule.wire_sign__method__Account(port_, that, data);
 }

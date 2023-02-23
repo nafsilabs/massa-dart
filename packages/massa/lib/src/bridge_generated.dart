@@ -22,6 +22,49 @@ abstract class Massa {
   Future<int> sub({required int a, required int b, dynamic hint});
 
   FlutterRustBridgeTaskConstMeta get kSubConstMeta;
+
+  Future<Account> newStaticMethodAccount({dynamic hint});
+
+  FlutterRustBridgeTaskConstMeta get kNewStaticMethodAccountConstMeta;
+
+  Future<Account> fromStringStaticMethodAccount(
+      {required String privKey, dynamic hint});
+
+  FlutterRustBridgeTaskConstMeta get kFromStringStaticMethodAccountConstMeta;
+
+  Future<String> signMethodAccount(
+      {required Account that, required String data, dynamic hint});
+
+  FlutterRustBridgeTaskConstMeta get kSignMethodAccountConstMeta;
+}
+
+class Account {
+  final Massa bridge;
+  final String privateKey;
+  final String publicKey;
+  final String address;
+  final int thread;
+
+  Account({
+    required this.bridge,
+    required this.privateKey,
+    required this.publicKey,
+    required this.address,
+    required this.thread,
+  });
+
+  static Future<Account> newAccount({required Massa bridge, dynamic hint}) =>
+      bridge.newStaticMethodAccount(hint: hint);
+
+  static Future<Account> fromString(
+          {required Massa bridge, required String privKey, dynamic hint}) =>
+      bridge.fromStringStaticMethodAccount(privKey: privKey, hint: hint);
+
+  Future<String> sign({required String data, dynamic hint}) =>
+      bridge.signMethodAccount(
+        that: this,
+        data: data,
+      );
 }
 
 class MassaImpl implements Massa {
@@ -69,13 +112,94 @@ class MassaImpl implements Massa {
         argNames: ["a", "b"],
       );
 
+  Future<Account> newStaticMethodAccount({dynamic hint}) {
+    return _platform.executeNormal(FlutterRustBridgeTask(
+      callFfi: (port_) =>
+          _platform.inner.wire_new__static_method__Account(port_),
+      parseSuccessData: (d) => _wire2api_account(d),
+      constMeta: kNewStaticMethodAccountConstMeta,
+      argValues: [],
+      hint: hint,
+    ));
+  }
+
+  FlutterRustBridgeTaskConstMeta get kNewStaticMethodAccountConstMeta =>
+      const FlutterRustBridgeTaskConstMeta(
+        debugName: "new__static_method__Account",
+        argNames: [],
+      );
+
+  Future<Account> fromStringStaticMethodAccount(
+      {required String privKey, dynamic hint}) {
+    var arg0 = _platform.api2wire_String(privKey);
+    return _platform.executeNormal(FlutterRustBridgeTask(
+      callFfi: (port_) =>
+          _platform.inner.wire_from_string__static_method__Account(port_, arg0),
+      parseSuccessData: (d) => _wire2api_account(d),
+      constMeta: kFromStringStaticMethodAccountConstMeta,
+      argValues: [privKey],
+      hint: hint,
+    ));
+  }
+
+  FlutterRustBridgeTaskConstMeta get kFromStringStaticMethodAccountConstMeta =>
+      const FlutterRustBridgeTaskConstMeta(
+        debugName: "from_string__static_method__Account",
+        argNames: ["privKey"],
+      );
+
+  Future<String> signMethodAccount(
+      {required Account that, required String data, dynamic hint}) {
+    var arg0 = _platform.api2wire_box_autoadd_account(that);
+    var arg1 = _platform.api2wire_String(data);
+    return _platform.executeNormal(FlutterRustBridgeTask(
+      callFfi: (port_) =>
+          _platform.inner.wire_sign__method__Account(port_, arg0, arg1),
+      parseSuccessData: _wire2api_String,
+      constMeta: kSignMethodAccountConstMeta,
+      argValues: [that, data],
+      hint: hint,
+    ));
+  }
+
+  FlutterRustBridgeTaskConstMeta get kSignMethodAccountConstMeta =>
+      const FlutterRustBridgeTaskConstMeta(
+        debugName: "sign__method__Account",
+        argNames: ["that", "data"],
+      );
+
   void dispose() {
     _platform.dispose();
   }
 // Section: wire2api
 
+  String _wire2api_String(dynamic raw) {
+    return raw as String;
+  }
+
+  Account _wire2api_account(dynamic raw) {
+    final arr = raw as List<dynamic>;
+    if (arr.length != 4)
+      throw Exception('unexpected arr length: expect 4 but see ${arr.length}');
+    return Account(
+      bridge: this,
+      privateKey: _wire2api_String(arr[0]),
+      publicKey: _wire2api_String(arr[1]),
+      address: _wire2api_String(arr[2]),
+      thread: _wire2api_u8(arr[3]),
+    );
+  }
+
   int _wire2api_i32(dynamic raw) {
     return raw as int;
+  }
+
+  int _wire2api_u8(dynamic raw) {
+    return raw as int;
+  }
+
+  Uint8List _wire2api_uint_8_list(dynamic raw) {
+    return raw as Uint8List;
   }
 }
 
@@ -85,4 +209,10 @@ class MassaImpl implements Massa {
 int api2wire_i32(int raw) {
   return raw;
 }
+
+@protected
+int api2wire_u8(int raw) {
+  return raw;
+}
+
 // Section: finalizer

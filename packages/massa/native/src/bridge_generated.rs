@@ -57,6 +57,50 @@ fn wire_sub_impl(
         },
     )
 }
+fn wire_new__static_method__Account_impl(port_: MessagePort) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "new__static_method__Account",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || move |task_callback| Ok(Account::new()),
+    )
+}
+fn wire_from_string__static_method__Account_impl(
+    port_: MessagePort,
+    priv_key: impl Wire2Api<String> + UnwindSafe,
+) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "from_string__static_method__Account",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || {
+            let api_priv_key = priv_key.wire2api();
+            move |task_callback| Ok(Account::from_string(api_priv_key))
+        },
+    )
+}
+fn wire_sign__method__Account_impl(
+    port_: MessagePort,
+    that: impl Wire2Api<Account> + UnwindSafe,
+    data: impl Wire2Api<String> + UnwindSafe,
+) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "sign__method__Account",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || {
+            let api_that = that.wire2api();
+            let api_data = data.wire2api();
+            move |task_callback| Ok(Account::sign(&api_that, api_data))
+        },
+    )
+}
 // Section: wrapper structs
 
 // Section: static checks
@@ -79,12 +123,32 @@ where
         (!self.is_null()).then(|| self.wire2api())
     }
 }
+
 impl Wire2Api<i32> for i32 {
     fn wire2api(self) -> i32 {
         self
     }
 }
+impl Wire2Api<u8> for u8 {
+    fn wire2api(self) -> u8 {
+        self
+    }
+}
+
 // Section: impl IntoDart
+
+impl support::IntoDart for Account {
+    fn into_dart(self) -> support::DartAbi {
+        vec![
+            self.private_key.into_dart(),
+            self.public_key.into_dart(),
+            self.address.into_dart(),
+            self.thread.into_dart(),
+        ]
+        .into_dart()
+    }
+}
+impl support::IntoDartExceptPrimitive for Account {}
 
 // Section: executor
 
@@ -108,17 +172,75 @@ mod web {
         wire_sub_impl(port_, a, b)
     }
 
+    #[wasm_bindgen]
+    pub fn wire_new__static_method__Account(port_: MessagePort) {
+        wire_new__static_method__Account_impl(port_)
+    }
+
+    #[wasm_bindgen]
+    pub fn wire_from_string__static_method__Account(port_: MessagePort, priv_key: String) {
+        wire_from_string__static_method__Account_impl(port_, priv_key)
+    }
+
+    #[wasm_bindgen]
+    pub fn wire_sign__method__Account(port_: MessagePort, that: JsValue, data: String) {
+        wire_sign__method__Account_impl(port_, that, data)
+    }
+
     // Section: allocate functions
 
     // Section: related functions
 
     // Section: impl Wire2Api
 
+    impl Wire2Api<String> for String {
+        fn wire2api(self) -> String {
+            self
+        }
+    }
+    impl Wire2Api<Account> for JsValue {
+        fn wire2api(self) -> Account {
+            let self_ = self.dyn_into::<JsArray>().unwrap();
+            assert_eq!(
+                self_.length(),
+                4,
+                "Expected 4 elements, got {}",
+                self_.length()
+            );
+            Account {
+                private_key: self_.get(0).wire2api(),
+                public_key: self_.get(1).wire2api(),
+                address: self_.get(2).wire2api(),
+                thread: self_.get(3).wire2api(),
+            }
+        }
+    }
+
+    impl Wire2Api<Vec<u8>> for Box<[u8]> {
+        fn wire2api(self) -> Vec<u8> {
+            self.into_vec()
+        }
+    }
     // Section: impl Wire2Api for JsValue
 
+    impl Wire2Api<String> for JsValue {
+        fn wire2api(self) -> String {
+            self.as_string().expect("non-UTF-8 string, or not a string")
+        }
+    }
     impl Wire2Api<i32> for JsValue {
         fn wire2api(self) -> i32 {
             self.unchecked_into_f64() as _
+        }
+    }
+    impl Wire2Api<u8> for JsValue {
+        fn wire2api(self) -> u8 {
+            self.unchecked_into_f64() as _
+        }
+    }
+    impl Wire2Api<Vec<u8>> for JsValue {
+        fn wire2api(self) -> Vec<u8> {
+            self.unchecked_into::<js_sys::Uint8Array>().to_vec().into()
         }
     }
 }
@@ -140,13 +262,96 @@ mod io {
         wire_sub_impl(port_, a, b)
     }
 
+    #[no_mangle]
+    pub extern "C" fn wire_new__static_method__Account(port_: i64) {
+        wire_new__static_method__Account_impl(port_)
+    }
+
+    #[no_mangle]
+    pub extern "C" fn wire_from_string__static_method__Account(
+        port_: i64,
+        priv_key: *mut wire_uint_8_list,
+    ) {
+        wire_from_string__static_method__Account_impl(port_, priv_key)
+    }
+
+    #[no_mangle]
+    pub extern "C" fn wire_sign__method__Account(
+        port_: i64,
+        that: *mut wire_Account,
+        data: *mut wire_uint_8_list,
+    ) {
+        wire_sign__method__Account_impl(port_, that, data)
+    }
+
     // Section: allocate functions
+
+    #[no_mangle]
+    pub extern "C" fn new_box_autoadd_account_0() -> *mut wire_Account {
+        support::new_leak_box_ptr(wire_Account::new_with_null_ptr())
+    }
+
+    #[no_mangle]
+    pub extern "C" fn new_uint_8_list_0(len: i32) -> *mut wire_uint_8_list {
+        let ans = wire_uint_8_list {
+            ptr: support::new_leak_vec_ptr(Default::default(), len),
+            len,
+        };
+        support::new_leak_box_ptr(ans)
+    }
 
     // Section: related functions
 
     // Section: impl Wire2Api
 
+    impl Wire2Api<String> for *mut wire_uint_8_list {
+        fn wire2api(self) -> String {
+            let vec: Vec<u8> = self.wire2api();
+            String::from_utf8_lossy(&vec).into_owned()
+        }
+    }
+    impl Wire2Api<Account> for wire_Account {
+        fn wire2api(self) -> Account {
+            Account {
+                private_key: self.private_key.wire2api(),
+                public_key: self.public_key.wire2api(),
+                address: self.address.wire2api(),
+                thread: self.thread.wire2api(),
+            }
+        }
+    }
+    impl Wire2Api<Account> for *mut wire_Account {
+        fn wire2api(self) -> Account {
+            let wrap = unsafe { support::box_from_leak_ptr(self) };
+            Wire2Api::<Account>::wire2api(*wrap).into()
+        }
+    }
+
+    impl Wire2Api<Vec<u8>> for *mut wire_uint_8_list {
+        fn wire2api(self) -> Vec<u8> {
+            unsafe {
+                let wrap = support::box_from_leak_ptr(self);
+                support::vec_from_leak_ptr(wrap.ptr, wrap.len)
+            }
+        }
+    }
     // Section: wire structs
+
+    #[repr(C)]
+    #[derive(Clone)]
+    pub struct wire_Account {
+        private_key: *mut wire_uint_8_list,
+        public_key: *mut wire_uint_8_list,
+        address: *mut wire_uint_8_list,
+        thread: u8,
+    }
+
+    #[repr(C)]
+    #[derive(Clone)]
+    pub struct wire_uint_8_list {
+        ptr: *mut u8,
+        len: i32,
+    }
 
     // Section: impl NewWithNullPtr
 
@@ -157,6 +362,17 @@ mod io {
     impl<T> NewWithNullPtr for *mut T {
         fn new_with_null_ptr() -> Self {
             std::ptr::null_mut()
+        }
+    }
+
+    impl NewWithNullPtr for wire_Account {
+        fn new_with_null_ptr() -> Self {
+            Self {
+                private_key: core::ptr::null_mut(),
+                public_key: core::ptr::null_mut(),
+                address: core::ptr::null_mut(),
+                thread: Default::default(),
+            }
         }
     }
 

@@ -11,3 +11,6 @@ flutter_rust_bridge_codegen = "1.64.*"
 
 [dependencies]
 flutter_rust_bridge = "1.64.*"
+massa_signature = { git = "https://github.com/massalabs/massa", version = "0.1.0" }
+massa_models = { git = "https://github.com/massalabs/massa", version = "0.1.0" }
+massa_hash = { git = "https://github.com/massalabs/massa", version = "0.1.0" }

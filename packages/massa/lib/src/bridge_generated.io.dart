@@ -15,9 +15,39 @@ class MassaPlatform extends FlutterRustBridgeBase<MassaWire> {
 
 // Section: api2wire
 
+  @protected
+  ffi.Pointer<wire_uint_8_list> api2wire_String(String raw) {
+    return api2wire_uint_8_list(utf8.encoder.convert(raw));
+  }
+
+  @protected
+  ffi.Pointer<wire_Account> api2wire_box_autoadd_account(Account raw) {
+    final ptr = inner.new_box_autoadd_account_0();
+    _api_fill_to_wire_account(raw, ptr.ref);
+    return ptr;
+  }
+
+  @protected
+  ffi.Pointer<wire_uint_8_list> api2wire_uint_8_list(Uint8List raw) {
+    final ans = inner.new_uint_8_list_0(raw.length);
+    ans.ref.ptr.asTypedList(raw.length).setAll(0, raw);
+    return ans;
+  }
 // Section: finalizer
 
 // Section: api_fill_to_wire
+
+  void _api_fill_to_wire_account(Account apiObj, wire_Account wireObj) {
+    wireObj.private_key = api2wire_String(apiObj.privateKey);
+    wireObj.public_key = api2wire_String(apiObj.publicKey);
+    wireObj.address = api2wire_String(apiObj.address);
+    wireObj.thread = api2wire_u8(apiObj.thread);
+  }
+
+  void _api_fill_to_wire_box_autoadd_account(
+      Account apiObj, ffi.Pointer<wire_Account> wireObj) {
+    _api_fill_to_wire_account(apiObj, wireObj.ref);
+  }
 }
 
 // ignore_for_file: camel_case_types, non_constant_identifier_names, avoid_positional_boolean_parameters, annotate_overrides, constant_identifier_names
@@ -151,6 +181,84 @@ class MassaWire implements FlutterRustBridgeWireBase {
   late final _wire_sub =
       _wire_subPtr.asFunction<void Function(int, int, int)>();
 
+  void wire_new__static_method__Account(
+    int port_,
+  ) {
+    return _wire_new__static_method__Account(
+      port_,
+    );
+  }
+
+  late final _wire_new__static_method__AccountPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int64)>>(
+          'wire_new__static_method__Account');
+  late final _wire_new__static_method__Account =
+      _wire_new__static_method__AccountPtr.asFunction<void Function(int)>();
+
+  void wire_from_string__static_method__Account(
+    int port_,
+    ffi.Pointer<wire_uint_8_list> priv_key,
+  ) {
+    return _wire_from_string__static_method__Account(
+      port_,
+      priv_key,
+    );
+  }
+
+  late final _wire_from_string__static_method__AccountPtr = _lookup<
+          ffi.NativeFunction<
+              ffi.Void Function(ffi.Int64, ffi.Pointer<wire_uint_8_list>)>>(
+      'wire_from_string__static_method__Account');
+  late final _wire_from_string__static_method__Account =
+      _wire_from_string__static_method__AccountPtr
+          .asFunction<void Function(int, ffi.Pointer<wire_uint_8_list>)>();
+
+  void wire_sign__method__Account(
+    int port_,
+    ffi.Pointer<wire_Account> that,
+    ffi.Pointer<wire_uint_8_list> data,
+  ) {
+    return _wire_sign__method__Account(
+      port_,
+      that,
+      data,
+    );
+  }
+
+  late final _wire_sign__method__AccountPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Int64, ffi.Pointer<wire_Account>,
+              ffi.Pointer<wire_uint_8_list>)>>('wire_sign__method__Account');
+  late final _wire_sign__method__Account =
+      _wire_sign__method__AccountPtr.asFunction<
+          void Function(
+              int, ffi.Pointer<wire_Account>, ffi.Pointer<wire_uint_8_list>)>();
+
+  ffi.Pointer<wire_Account> new_box_autoadd_account_0() {
+    return _new_box_autoadd_account_0();
+  }
+
+  late final _new_box_autoadd_account_0Ptr =
+      _lookup<ffi.NativeFunction<ffi.Pointer<wire_Account> Function()>>(
+          'new_box_autoadd_account_0');
+  late final _new_box_autoadd_account_0 = _new_box_autoadd_account_0Ptr
+      .asFunction<ffi.Pointer<wire_Account> Function()>();
+
+  ffi.Pointer<wire_uint_8_list> new_uint_8_list_0(
+    int len,
+  ) {
+    return _new_uint_8_list_0(
+      len,
+    );
+  }
+
+  late final _new_uint_8_list_0Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<wire_uint_8_list> Function(
+              ffi.Int32)>>('new_uint_8_list_0');
+  late final _new_uint_8_list_0 = _new_uint_8_list_0Ptr
+      .asFunction<ffi.Pointer<wire_uint_8_list> Function(int)>();
+
   void free_WireSyncReturn(
     WireSyncReturn ptr,
   ) {
@@ -167,6 +275,24 @@ class MassaWire implements FlutterRustBridgeWireBase {
 }
 
 class _Dart_Handle extends ffi.Opaque {}
+
+class wire_uint_8_list extends ffi.Struct {
+  external ffi.Pointer<ffi.Uint8> ptr;
+
+  @ffi.Int32()
+  external int len;
+}
+
+class wire_Account extends ffi.Struct {
+  external ffi.Pointer<wire_uint_8_list> private_key;
+
+  external ffi.Pointer<wire_uint_8_list> public_key;
+
+  external ffi.Pointer<wire_uint_8_list> address;
+
+  @ffi.Uint8()
+  external int thread;
+}
 
 typedef DartPostCObjectFnType = ffi.Pointer<
     ffi.NativeFunction<ffi.Bool Function(DartPort, ffi.Pointer<ffi.Void>)>>;
