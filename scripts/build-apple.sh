@@ -11,6 +11,7 @@ for TARGET in \
         x86_64-apple-darwin aarch64-apple-darwin
 do
     rustup target add $TARGET
+    rustup default nightly
     cargo build -r --target=$TARGET
 done
 
