@@ -42,18 +42,9 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-
-      - name: Build the XCFramework
-        run: melos run build:apple
-      - name: Copy the XCFramework to the needed location
-        run: |
-          CURR_VERSION=massa-v`awk '/^version: /{print $2}' packages/massa/pubspec.yaml`
-          cp platform-build/Massa.xcframework.zip packages/massa_flutter/macos/Frameworks/$CURR_VERSION.zip
-          echo Copied file!
-
-      #- name: Run Flutter integration tests
-      #  working-directory: packages/massa_flutter/example
-      #  run: flutter test -d macos integration_test
+      - name: Run Flutter integration tests
+        working-directory: packages/massa_flutter/example
+        run: flutter test -d macos integration_test
 
   windows_integration_test:
     runs-on: windows-latest
@@ -69,18 +60,9 @@ jobs:
         with:
           toolchain: stable
 
-      - name: Build the binaries
-        run: melos run build:other
-      - name: Copy the binaries to the needed location
-        shell: bash
-        run: |
-          CURR_VERSION=massa-v`awk '/^version: /{print $2}' packages/massa/pubspec.yaml`
-          cp platform-build/Massa.tar.gz packages/massa_flutter/windows/$CURR_VERSION.tar.gz
-          echo Copied file!
-
-      #- name: Run Flutter integration tests
-      #  working-directory: packages/massa_flutter/example
-      #  run: flutter test -d windows integration_test
+      - name: Run Flutter integration tests
+        working-directory: packages/massa_flutter/example
+        run: flutter test -d windows integration_test
 
   linux_integration_test:
     runs-on: ubuntu-latest
