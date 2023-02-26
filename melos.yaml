@@ -7,7 +7,7 @@ packages:
 
 scripts:
   analyze:
-    exec: flutter analyze .
+    exec: dart analyze .
     description: Analyze a specific package in this project.
 
   check-format:
@@ -23,19 +23,8 @@ scripts:
     run: bash scripts/version.sh
 
   test:
-    run: melos run test:dart --no-select && melos run test:flutter --no-select
+    run: dart test test/*
     description: Run all Dart & Flutter tests in this project.
 
-  test:dart:
-    run: melos exec -c 1 --fail-fast -- "dart test test"
-    description: Run Dart tests for a specific package in this project.
-    select-package:
-      flutter: false
-      dir-exists: test
 
-  test:flutter:
-    run: melos exec -c 1 --fail-fast -- "flutter test test"
-    description: Run Flutter tests for a specific package in this project.
-    select-package:
-      flutter: true
-      dir-exists: test
+  

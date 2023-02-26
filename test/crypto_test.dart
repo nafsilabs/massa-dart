@@ -1,16 +1,17 @@
-import 'dart:typed_data';
-
 import 'package:massa/src/crypto/crypto.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('Massa crypto test', () {
+  group('Massa Crypto: ', () {
     test('Generate keypair', () async {
       var keyPair = await generateKeyPair();
-      print('priv: ${keyPair.privateKey.toString()}');
-      print('pub: ${keyPair.publicKey.toString()}');
-      print('addr: ${keyPair.address()}');
-      print('thread: ${keyPair.thread()}');
+      //print('priv: ${keyPair.privateKey.toString()}');
+      //print('pub: ${keyPair.publicKey.toString()}');
+      //print('addr: ${keyPair.address()}');
+      //print('thread: ${keyPair.thread()}');
+      final privateKey = keyPair.privateKey.toString();
+      final privateKey2 = encodePrivateKey(keyPair.privateKey);
+      expect(privateKey, privateKey2);
     });
 
     test('Generate key pair from existing secret string', () async {
@@ -22,7 +23,7 @@ void main() {
       expect(keyPair.address(), keyPair2.address());
     });
 
-    test('Test signature', () async {
+    test('Test Massa signature', () async {
       const key = 'S1EV1dv6iE8UyFdSKphtTsqVdpX3dNLhw8FiXcESH8SySPhAKC5';
       var keyPair = await keyPairFromSecret(key);
       const message = 'Hello Massa!';
@@ -31,7 +32,7 @@ void main() {
       final signature = await keyPair.sign(message);
       expect(expectedSignature, signature);
     });
-    test('Verify signature', () async {
+    test('Verify Massa signature', () async {
       const key = 'S1EV1dv6iE8UyFdSKphtTsqVdpX3dNLhw8FiXcESH8SySPhAKC5';
       var keyPair = await keyPairFromSecret(key);
       const message = 'Hello Massa!';

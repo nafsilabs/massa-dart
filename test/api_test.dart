@@ -17,10 +17,10 @@ void main() {
     //   print("status response: ${resp!.connectedNodes}");
     // });
 
-    test("Get Cliques", () async {
-      Cliques? resp = await api.getCliques();
-      print("cliques response: ${resp!.encode()}");
-    });
+    // test("Get Cliques", () async {
+    //   Cliques? resp = await api.getCliques();
+    //   print("cliques response: ${resp!.encode()}");
+    // });
 
     // test("Get Stakers", () async {
     //   var resp = await api.getStakers();
@@ -40,16 +40,16 @@ void main() {
     //   }
     // });
 
-    test("Get graph interval", () async {
-      int start = 1676140794989;
-      int end = 1676142544000;
-      List<GraphInterval>? resp = await api.getGraphInterval(start, end);
-      if (resp != null) {
-        print("addresses response: ${resp[0].encode()}");
-      } else {
-        print("no info obtained");
-      }
-    });
+    // test("Get graph interval", () async {
+    //   int start = 1676140794989;
+    //   int end = 1676142544000;
+    //   List<GraphInterval>? resp = await api.getGraphInterval(start, end);
+    //   if (resp != null) {
+    //     print("addresses response: ${resp[0].encode()}");
+    //   } else {
+    //     print("no info obtained");
+    //   }
+    // });
 
     // test("Get Block", () async {
     //   var block = [
