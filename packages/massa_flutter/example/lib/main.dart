@@ -17,13 +17,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   late int sumResult;
   late Future<int> sumAsyncResult;
-  late massa.Massa massaLib;
+  late massa.Calculator cal;
 
   @override
   void initState() {
     super.initState();
-    massaLib = massa.createLib();
-    sumAsyncResult = massaLib.sum(a: 12, b: 5);
+    sumResult = cal.addOne(10);
   }
 
   @override
@@ -41,19 +40,18 @@ class _MyAppState extends State<MyApp> {
             child: Column(
               children: [
                 const Text(
-                  'This calls a native function through FFI that is shipped as source in the package. '
-                  'The native code is built as part of the Flutter Runner build.',
+                  'This calls a dart library',
                   style: textStyle,
                   textAlign: TextAlign.center,
                 ),
                 spacerSmall,
-                /*Text(
+                Text(
                   'sum(1, 2) = $sumResult',
                   style: textStyle,
                   textAlign: TextAlign.center,
-                ),*/
+                ),
                 spacerSmall,
-                FutureBuilder<int>(
+                /*FutureBuilder<int>(
                   future: sumAsyncResult,
                   builder: (BuildContext context, AsyncSnapshot<int> value) {
                     final displayValue =
@@ -64,7 +62,7 @@ class _MyAppState extends State<MyApp> {
                       textAlign: TextAlign.center,
                     );
                   },
-                ),
+                ),*/
               ],
             ),
           ),

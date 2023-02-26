@@ -22,22 +22,6 @@ scripts:
     description: Updates version numbers in all build files
     run: bash scripts/version.sh
 
-  build:
-    run: melos run build:apple && melos run build:android && melos run build:other
-    description: Build all native libraries for the project.
-
-  build:apple:
-    run: bash scripts/build-apple.sh
-    description: Build the XCFramework for iOS and macOS.
-
-  build:android:
-    run: bash scripts/build-android.sh
-    description: Build the .tar.gz for Android.
-
-  build:other:
-    run: bash scripts/build-other.sh
-    description: Build the .tar.gz for all other platforms.
-
   test:
     run: melos run test:dart --no-select && melos run test:flutter --no-select
     description: Run all Dart & Flutter tests in this project.
@@ -55,21 +39,3 @@ scripts:
     select-package:
       flutter: true
       dir-exists: test
-  transfer:ios:
-    exec: |
-        CURR_VERSION=massa-v`awk '/^version: /{print $2}' packages/massa/pubspec.yaml`
-        cp platform-build/Massa.xcframework.zip packages/massa_flutter/ios/Frameworks/$CURR_VERSION.zip
-        rm -r packages/massa_flutter/ios/Frameworks/Massa.xcframework
-        echo Copied file!
-  transfer:macos:
-    exec: |
-        CURR_VERSION=massa-v`awk '/^version: /{print $2}' packages/massa/pubspec.yaml`
-        cp platform-build/Massa.xcframework.zip packages/massa_flutter/ios/Frameworks/$CURR_VERSION.zip
-        rm -r packages/massa_flutter/ios/Frameworks/Massa.xcframework
-        echo Copied file!
-  transfer:macos:
-    exec: |
-        CURR_VERSION=massa-v`awk '/^version: /{print $2}' packages/massa/pubspec.yaml`
-        cp platform-build/Massa.xcframework.zip packages/massa_flutter/ios/Frameworks/$CURR_VERSION.zip
-        rm -r packages/massa_flutter/ios/Frameworks/Massa.xcframework
-        echo Copied file!

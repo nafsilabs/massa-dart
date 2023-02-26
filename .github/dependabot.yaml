@@ -18,7 +18,3 @@ updates:
     directory: "/packages/massa_flutter/example"
     schedule:
       interval: weekly
-  - package-ecosystem: cargo
-    directory: "/packages/massa/native"
-    schedule:
-      interval: weekly
