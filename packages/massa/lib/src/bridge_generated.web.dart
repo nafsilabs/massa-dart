@@ -67,6 +67,9 @@ class MassaWasmModule implements WasmModule {
 
   external dynamic /* void */ wire_sign__method__Account(
       NativePortType port_, List<dynamic> that, String data);
+
+  external dynamic /* void */ wire_verify__method__Account(NativePortType port_,
+      List<dynamic> that, String data, String signature_string);
 }
 
 // Section: WASM wire connector
@@ -91,4 +94,9 @@ class MassaWire extends FlutterRustBridgeWasmWireBase<MassaWasmModule> {
   void wire_sign__method__Account(
           NativePortType port_, List<dynamic> that, String data) =>
       wasmModule.wire_sign__method__Account(port_, that, data);
+
+  void wire_verify__method__Account(NativePortType port_, List<dynamic> that,
+          String data, String signature_string) =>
+      wasmModule.wire_verify__method__Account(
+          port_, that, data, signature_string);
 }

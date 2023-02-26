@@ -36,6 +36,14 @@ abstract class Massa {
       {required Account that, required String data, dynamic hint});
 
   FlutterRustBridgeTaskConstMeta get kSignMethodAccountConstMeta;
+
+  Future<bool> verifyMethodAccount(
+      {required Account that,
+      required String data,
+      required String signatureString,
+      dynamic hint});
+
+  FlutterRustBridgeTaskConstMeta get kVerifyMethodAccountConstMeta;
 }
 
 class Account {
@@ -64,6 +72,16 @@ class Account {
       bridge.signMethodAccount(
         that: this,
         data: data,
+      );
+
+  Future<bool> verify(
+          {required String data,
+          required String signatureString,
+          dynamic hint}) =>
+      bridge.verifyMethodAccount(
+        that: this,
+        data: data,
+        signatureString: signatureString,
       );
 }
 
@@ -168,6 +186,30 @@ class MassaImpl implements Massa {
         argNames: ["that", "data"],
       );
 
+  Future<bool> verifyMethodAccount(
+      {required Account that,
+      required String data,
+      required String signatureString,
+      dynamic hint}) {
+    var arg0 = _platform.api2wire_box_autoadd_account(that);
+    var arg1 = _platform.api2wire_String(data);
+    var arg2 = _platform.api2wire_String(signatureString);
+    return _platform.executeNormal(FlutterRustBridgeTask(
+      callFfi: (port_) =>
+          _platform.inner.wire_verify__method__Account(port_, arg0, arg1, arg2),
+      parseSuccessData: _wire2api_bool,
+      constMeta: kVerifyMethodAccountConstMeta,
+      argValues: [that, data, signatureString],
+      hint: hint,
+    ));
+  }
+
+  FlutterRustBridgeTaskConstMeta get kVerifyMethodAccountConstMeta =>
+      const FlutterRustBridgeTaskConstMeta(
+        debugName: "verify__method__Account",
+        argNames: ["that", "data", "signatureString"],
+      );
+
   void dispose() {
     _platform.dispose();
   }
@@ -188,6 +230,10 @@ class MassaImpl implements Massa {
       address: _wire2api_String(arr[2]),
       thread: _wire2api_u8(arr[3]),
     );
+  }
+
+  bool _wire2api_bool(dynamic raw) {
+    return raw as bool;
   }
 
   int _wire2api_i32(dynamic raw) {

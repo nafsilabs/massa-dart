@@ -55,3 +55,21 @@ scripts:
     select-package:
       flutter: true
       dir-exists: test
+  transfer:ios:
+    exec: |
+        CURR_VERSION=massa-v`awk '/^version: /{print $2}' packages/massa/pubspec.yaml`
+        cp platform-build/Massa.xcframework.zip packages/massa_flutter/ios/Frameworks/$CURR_VERSION.zip
+        rm -r packages/massa_flutter/ios/Frameworks/Massa.xcframework
+        echo Copied file!
+  transfer:macos:
+    exec: |
+        CURR_VERSION=massa-v`awk '/^version: /{print $2}' packages/massa/pubspec.yaml`
+        cp platform-build/Massa.xcframework.zip packages/massa_flutter/ios/Frameworks/$CURR_VERSION.zip
+        rm -r packages/massa_flutter/ios/Frameworks/Massa.xcframework
+        echo Copied file!
+  transfer:macos:
+    exec: |
+        CURR_VERSION=massa-v`awk '/^version: /{print $2}' packages/massa/pubspec.yaml`
+        cp platform-build/Massa.xcframework.zip packages/massa_flutter/ios/Frameworks/$CURR_VERSION.zip
+        rm -r packages/massa_flutter/ios/Frameworks/Massa.xcframework
+        echo Copied file!

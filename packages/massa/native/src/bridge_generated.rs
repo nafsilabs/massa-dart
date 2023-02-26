@@ -101,6 +101,26 @@ fn wire_sign__method__Account_impl(
         },
     )
 }
+fn wire_verify__method__Account_impl(
+    port_: MessagePort,
+    that: impl Wire2Api<Account> + UnwindSafe,
+    data: impl Wire2Api<String> + UnwindSafe,
+    signature_string: impl Wire2Api<String> + UnwindSafe,
+) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "verify__method__Account",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || {
+            let api_that = that.wire2api();
+            let api_data = data.wire2api();
+            let api_signature_string = signature_string.wire2api();
+            move |task_callback| Ok(Account::verify(&api_that, api_data, api_signature_string))
+        },
+    )
+}
 // Section: wrapper structs
 
 // Section: static checks
@@ -185,6 +205,16 @@ mod web {
     #[wasm_bindgen]
     pub fn wire_sign__method__Account(port_: MessagePort, that: JsValue, data: String) {
         wire_sign__method__Account_impl(port_, that, data)
+    }
+
+    #[wasm_bindgen]
+    pub fn wire_verify__method__Account(
+        port_: MessagePort,
+        that: JsValue,
+        data: String,
+        signature_string: String,
+    ) {
+        wire_verify__method__Account_impl(port_, that, data, signature_string)
     }
 
     // Section: allocate functions
@@ -282,6 +312,16 @@ mod io {
         data: *mut wire_uint_8_list,
     ) {
         wire_sign__method__Account_impl(port_, that, data)
+    }
+
+    #[no_mangle]
+    pub extern "C" fn wire_verify__method__Account(
+        port_: i64,
+        that: *mut wire_Account,
+        data: *mut wire_uint_8_list,
+        signature_string: *mut wire_uint_8_list,
+    ) {
+        wire_verify__method__Account_impl(port_, that, data, signature_string)
     }
 
     // Section: allocate functions

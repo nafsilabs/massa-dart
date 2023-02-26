@@ -45,6 +45,11 @@ void wire_sign__method__Account(int64_t port_,
                                 struct wire_Account *that,
                                 struct wire_uint_8_list *data);
 
+void wire_verify__method__Account(int64_t port_,
+                                  struct wire_Account *that,
+                                  struct wire_uint_8_list *data,
+                                  struct wire_uint_8_list *signature_string);
+
 struct wire_Account *new_box_autoadd_account_0(void);
 
 struct wire_uint_8_list *new_uint_8_list_0(int32_t len);
@@ -58,6 +63,7 @@ static int64_t dummy_method_to_enforce_bundling(void) {
     dummy_var ^= ((int64_t) (void*) wire_new__static_method__Account);
     dummy_var ^= ((int64_t) (void*) wire_from_string__static_method__Account);
     dummy_var ^= ((int64_t) (void*) wire_sign__method__Account);
+    dummy_var ^= ((int64_t) (void*) wire_verify__method__Account);
     dummy_var ^= ((int64_t) (void*) new_box_autoadd_account_0);
     dummy_var ^= ((int64_t) (void*) new_uint_8_list_0);
     dummy_var ^= ((int64_t) (void*) free_WireSyncReturn);

@@ -234,6 +234,32 @@ class MassaWire implements FlutterRustBridgeWireBase {
           void Function(
               int, ffi.Pointer<wire_Account>, ffi.Pointer<wire_uint_8_list>)>();
 
+  void wire_verify__method__Account(
+    int port_,
+    ffi.Pointer<wire_Account> that,
+    ffi.Pointer<wire_uint_8_list> data,
+    ffi.Pointer<wire_uint_8_list> signature_string,
+  ) {
+    return _wire_verify__method__Account(
+      port_,
+      that,
+      data,
+      signature_string,
+    );
+  }
+
+  late final _wire_verify__method__AccountPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Int64,
+              ffi.Pointer<wire_Account>,
+              ffi.Pointer<wire_uint_8_list>,
+              ffi.Pointer<wire_uint_8_list>)>>('wire_verify__method__Account');
+  late final _wire_verify__method__Account =
+      _wire_verify__method__AccountPtr.asFunction<
+          void Function(int, ffi.Pointer<wire_Account>,
+              ffi.Pointer<wire_uint_8_list>, ffi.Pointer<wire_uint_8_list>)>();
+
   ffi.Pointer<wire_Account> new_box_autoadd_account_0() {
     return _new_box_autoadd_account_0();
   }
