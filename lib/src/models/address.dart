@@ -1,3 +1,5 @@
+// ignore_for_file: inference_failure_on_instance_creation
+
 import 'package:massa/src/models/slot.dart';
 
 class Address {
@@ -61,24 +63,24 @@ class Address {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['address'] = address;
-    _data['thread'] = thread;
-    _data['final_balance'] = finalBalance;
-    _data['final_roll_count'] = finalRollCount;
-    _data['final_datastore_keys'] = finalDatastoreKeys;
-    _data['candidate_balance'] = candidateBalance;
-    _data['candidate_roll_count'] = candidateRollCount;
-    _data['candidate_datastore_keys'] = candidateDatastoreKeys;
-    _data['deferred_credits'] = deferredCredits;
-    _data['next_block_draws'] = nextBlockDraws;
-    _data['next_endorsement_draws'] =
+    final data = <String, dynamic>{};
+    data['address'] = address;
+    data['thread'] = thread;
+    data['final_balance'] = finalBalance;
+    data['final_roll_count'] = finalRollCount;
+    data['final_datastore_keys'] = finalDatastoreKeys;
+    data['candidate_balance'] = candidateBalance;
+    data['candidate_roll_count'] = candidateRollCount;
+    data['candidate_datastore_keys'] = candidateDatastoreKeys;
+    data['deferred_credits'] = deferredCredits;
+    data['next_block_draws'] = nextBlockDraws;
+    data['next_endorsement_draws'] =
         nextEndorsementDraws.map((e) => e.encode()).toList();
-    _data['created_blocks'] = createdBlocks;
-    _data['created_operations'] = createdOperations;
-    _data['created_endorsements'] = createdEndorsements;
-    _data['cycle_infos'] = cycleInfos.map((e) => e.encode()).toList();
-    return _data;
+    data['created_blocks'] = createdBlocks;
+    data['created_operations'] = createdOperations;
+    data['created_endorsements'] = createdEndorsements;
+    data['cycle_infos'] = cycleInfos.map((e) => e.encode()).toList();
+    return data;
   }
 }
 

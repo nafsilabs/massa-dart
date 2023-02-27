@@ -2,12 +2,11 @@ import 'dart:math';
 import 'dart:typed_data';
 
 import 'package:base_codecs/base_codecs.dart';
+import 'package:massa/src/crypto/hash.dart';
 import 'package:pointycastle/digests/ripemd160.dart';
 import 'package:pointycastle/digests/sha256.dart';
-import 'package:thirds/blake3.dart';
 import 'package:pointycastle/random/fortuna_random.dart';
 import 'package:pointycastle/api.dart';
-
 
 ///
 /// Get a SHA256 hash bytes for the given [bytes].
@@ -45,7 +44,6 @@ String base58Encode(Uint8List data) {
 Uint8List base58Decode(String data) {
   return base58CheckDecode(data);
 }
-
 
 //generate a secure random bytes of a specific length
 Uint8List generateSecureRandomBytes(int length) {

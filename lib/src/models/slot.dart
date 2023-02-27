@@ -12,9 +12,9 @@ class Slot {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['period'] = period;
-    _data['thread'] = thread;
-    return _data;
+    final data = <String, dynamic>{};
+    data['period'] = period;
+    data['thread'] = thread;
+    return data;
   }
 }

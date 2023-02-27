@@ -3,7 +3,6 @@ import 'dart:typed_data';
 import 'package:cryptography/cryptography.dart';
 import 'package:massa/src/crypto/common.dart';
 import 'package:massa/src/helpers/helpers.dart';
-import 'package:base_codecs/base_codecs.dart';
 
 const keyPairVersion = 0x00;
 const secretPrefix = 'S';
@@ -67,7 +66,6 @@ class KeyPair {
   }
 
   Future<String> sign(String message) async {
-    //hash the message
     final messageBytes = Uint8List.fromList(message.codeUnits);
     final hash = blake3Hash(messageBytes);
     final keyPair =

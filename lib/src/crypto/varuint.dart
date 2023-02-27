@@ -24,7 +24,7 @@ class Varint {
     throw ArgumentError('Byte array did not contain valid varints.');
   }
 
-  static Uint8List encode(value) {
+  static Uint8List encode(int value) {
     Uint8List buff = Uint8List(10);
     buff.fillRange(0, 10, 0);
 

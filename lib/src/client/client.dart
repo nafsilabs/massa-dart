@@ -53,7 +53,8 @@ class Client {
     return _returnResponse(response);
   }
 
-  Future<dynamic> put({required Map body, headers}) async {
+  Future<dynamic> put(
+      {required Map<String, dynamic> body, dynamic headers}) async {
     final response = await r.retry(
       () => http.put(uri, body: body, headers: headers),
       // Retry on SocketException or TimeoutException
@@ -62,7 +63,8 @@ class Client {
     return _returnResponse(response);
   }
 
-  Future<dynamic> delete({required Map body, headers}) async {
+  Future<dynamic> delete(
+      {required Map<String, dynamic> body, dynamic headers}) async {
     final response = await r.retry(
       () => http.delete(uri, headers: headers),
       retryIf: (e) => e is SocketException || e is TimeoutException,

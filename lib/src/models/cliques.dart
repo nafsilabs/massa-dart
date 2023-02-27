@@ -25,10 +25,10 @@ class Cliques {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['block_ids'] = blockIds;
-    _data['fitness'] = fitness;
-    _data['is_blockclique'] = isBlockclique;
-    return _data;
+    final data = <String, dynamic>{};
+    data['block_ids'] = blockIds;
+    data['fitness'] = fitness;
+    data['is_blockclique'] = isBlockclique;
+    return data;
   }
 }

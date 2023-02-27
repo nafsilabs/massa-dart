@@ -63,23 +63,23 @@ class Status {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['node_id'] = nodeId;
-    _data['node_ip'] = nodeIp;
-    _data['version'] = version;
-    _data['current_time'] = currentTime;
-    _data['current_cycle'] = currentCycle;
-    _data['current_cycle_time'] = currentCycleTime;
-    _data['next_cycle_time'] = nextCycleTime;
-    _data['connected_nodes'] = connectedNodes;
-    _data['last_slot'] = lastSlot.encode();
-    _data['next_slot'] = nextSlot.encode();
-    _data['consensus_stats'] = consensusStats.encode();
-    _data['pool_stats'] = poolStats;
-    _data['network_stats'] = networkStats.encode();
-    _data['execution_stats'] = executionStats.encode();
-    _data['config'] = config.encode();
-    return _data;
+    final data = <String, dynamic>{};
+    data['node_id'] = nodeId;
+    data['node_ip'] = nodeIp;
+    data['version'] = version;
+    data['current_time'] = currentTime;
+    data['current_cycle'] = currentCycle;
+    data['current_cycle_time'] = currentCycleTime;
+    data['next_cycle_time'] = nextCycleTime;
+    data['connected_nodes'] = connectedNodes;
+    data['last_slot'] = lastSlot.encode();
+    data['next_slot'] = nextSlot.encode();
+    data['consensus_stats'] = consensusStats.encode();
+    data['pool_stats'] = poolStats;
+    data['network_stats'] = networkStats.encode();
+    data['execution_stats'] = executionStats.encode();
+    data['config'] = config.encode();
+    return data;
   }
 }
 
@@ -106,13 +106,13 @@ class ConsensusStats {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['start_timespan'] = startTimespan;
-    _data['end_timespan'] = endTimespan;
-    _data['final_block_count'] = finalBlockCount;
-    _data['stale_block_count'] = staleBlockCount;
-    _data['clique_count'] = cliqueCount;
-    return _data;
+    final data = <String, dynamic>{};
+    data['start_timespan'] = startTimespan;
+    data['end_timespan'] = endTimespan;
+    data['final_block_count'] = finalBlockCount;
+    data['stale_block_count'] = staleBlockCount;
+    data['clique_count'] = cliqueCount;
+    return data;
   }
 }
 
@@ -139,13 +139,13 @@ class NetworkStats {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['in_connection_count'] = inConnectionCount;
-    _data['out_connection_count'] = outConnectionCount;
-    _data['known_peer_count'] = knownPeerCount;
-    _data['banned_peer_count'] = bannedPeerCount;
-    _data['active_node_count'] = activeNodeCount;
-    return _data;
+    final data = <String, dynamic>{};
+    data['in_connection_count'] = inConnectionCount;
+    data['out_connection_count'] = outConnectionCount;
+    data['known_peer_count'] = knownPeerCount;
+    data['banned_peer_count'] = bannedPeerCount;
+    data['active_node_count'] = activeNodeCount;
+    return data;
   }
 }
 
@@ -172,13 +172,13 @@ class ExecutionStats {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['time_window_start'] = timeWindowStart;
-    _data['time_window_end'] = timeWindowEnd;
-    _data['final_block_count'] = finalBlockCount;
-    _data['final_executed_operations_count'] = finalExecutedOperationsCount;
-    _data['active_cursor'] = activeCursor.encode();
-    return _data;
+    final data = <String, dynamic>{};
+    data['time_window_start'] = timeWindowStart;
+    data['time_window_end'] = timeWindowEnd;
+    data['final_block_count'] = finalBlockCount;
+    data['final_executed_operations_count'] = finalExecutedOperationsCount;
+    data['active_cursor'] = activeCursor.encode();
+    return data;
   }
 }
 
@@ -196,10 +196,10 @@ class ActiveCursor {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['period'] = period;
-    _data['thread'] = thread;
-    return _data;
+    final data = <String, dynamic>{};
+    data['period'] = period;
+    data['thread'] = thread;
+    return data;
   }
 }
 
@@ -241,17 +241,17 @@ class Config {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['genesis_timestamp'] = genesisTimestamp;
-    _data['end_timestamp'] = endTimestamp;
-    _data['thread_count'] = threadCount;
-    _data['t0'] = t0;
-    _data['delta_f0'] = deltaF0;
-    _data['operation_validity_periods'] = operationValidityPeriods;
-    _data['periods_per_cycle'] = periodsPerCycle;
-    _data['block_reward'] = blockReward;
-    _data['roll_price'] = rollPrice;
-    _data['max_block_size'] = maxBlockSize;
-    return _data;
+    final data = <String, dynamic>{};
+    data['genesis_timestamp'] = genesisTimestamp;
+    data['end_timestamp'] = endTimestamp;
+    data['thread_count'] = threadCount;
+    data['t0'] = t0;
+    data['delta_f0'] = deltaF0;
+    data['operation_validity_periods'] = operationValidityPeriods;
+    data['periods_per_cycle'] = periodsPerCycle;
+    data['block_reward'] = blockReward;
+    data['roll_price'] = rollPrice;
+    data['max_block_size'] = maxBlockSize;
+    return data;
   }
 }

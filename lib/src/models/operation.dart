@@ -24,14 +24,14 @@ class Operation {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['id'] = id;
-    _data['in_pool'] = inPool;
-    _data['in_blocks'] = inBlocks;
-    _data['is_final'] = isFinal;
-    _data['thread'] = thread;
-    _data['operation'] = operation.encode();
-    return _data;
+    final data = <String, dynamic>{};
+    data['id'] = id;
+    data['in_pool'] = inPool;
+    data['in_blocks'] = inBlocks;
+    data['is_final'] = isFinal;
+    data['thread'] = thread;
+    data['operation'] = operation.encode();
+    return data;
   }
 }
 
@@ -58,13 +58,13 @@ class OperationData {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['content'] = content.encode();
-    _data['signature'] = signature;
-    _data['content_creator_pub_key'] = contentCreatorPubKey;
-    _data['content_creator_address'] = contentCreatorAddress;
-    _data['id'] = id;
-    return _data;
+    final data = <String, dynamic>{};
+    data['content'] = content.encode();
+    data['signature'] = signature;
+    data['content_creator_pub_key'] = contentCreatorPubKey;
+    data['content_creator_address'] = contentCreatorAddress;
+    data['id'] = id;
+    return data;
   }
 }
 
@@ -85,11 +85,11 @@ class Content {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['fee'] = fee;
-    _data['expire_period'] = expirePeriod;
-    _data['op'] = op.encode();
-    return _data;
+    final data = <String, dynamic>{};
+    data['fee'] = fee;
+    data['expire_period'] = expirePeriod;
+    data['op'] = op.encode();
+    return data;
   }
 }
 
@@ -104,9 +104,9 @@ class Op {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['Transaction'] = transaction.encode();
-    return _data;
+    final data = <String, dynamic>{};
+    data['Transaction'] = transaction.encode();
+    return data;
   }
 }
 
@@ -124,9 +124,9 @@ class Transaction {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['recipient_address'] = recipientAddress;
-    _data['amount'] = amount;
-    return _data;
+    final data = <String, dynamic>{};
+    data['recipient_address'] = recipientAddress;
+    data['amount'] = amount;
+    return data;
   }
 }

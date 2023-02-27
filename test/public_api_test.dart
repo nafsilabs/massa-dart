@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:massa/src/client/public_api.dart';
 import 'package:massa/src/models/status.dart';
 import 'package:test/test.dart';

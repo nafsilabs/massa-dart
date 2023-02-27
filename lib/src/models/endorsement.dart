@@ -23,13 +23,13 @@ class Endorsement {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['id'] = id;
-    _data['in_pool'] = inPool;
-    _data['in_blocks'] = inBlocks;
-    _data['is_final'] = isFinal;
-    _data['endorsement'] = endorsement.encode();
-    return _data;
+    final data = <String, dynamic>{};
+    data['id'] = id;
+    data['in_pool'] = inPool;
+    data['in_blocks'] = inBlocks;
+    data['is_final'] = isFinal;
+    data['endorsement'] = endorsement.encode();
+    return data;
   }
 }
 
@@ -56,13 +56,13 @@ class EndorsemenContent {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['content'] = content.encode();
-    _data['signature'] = signature;
-    _data['content_creator_pub_key'] = contentCreatorPubKey;
-    _data['content_creator_address'] = contentCreatorAddress;
-    _data['id'] = id;
-    return _data;
+    final data = <String, dynamic>{};
+    data['content'] = content.encode();
+    data['signature'] = signature;
+    data['content_creator_pub_key'] = contentCreatorPubKey;
+    data['content_creator_address'] = contentCreatorAddress;
+    data['id'] = id;
+    return data;
   }
 }
 
@@ -83,10 +83,10 @@ class Content {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['slot'] = slot.encode();
-    _data['index'] = index;
-    _data['endorsed_block'] = endorsedBlock;
-    return _data;
+    final data = <String, dynamic>{};
+    data['slot'] = slot.encode();
+    data['index'] = index;
+    data['endorsed_block'] = endorsedBlock;
+    return data;
   }
 }

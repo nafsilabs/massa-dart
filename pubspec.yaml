@@ -9,15 +9,13 @@ environment:
 
 dependencies:
   base_codecs: ^1.0.1 # base_codecs support base16, base32, base58 and base85
-  bip340: ^0.0.4
   cryptography: ^2.0.5
-  thirds: ^0.2.0-alpha.1
+  pointycastle: ^3.6.2
   hex: ^0.2.0
   retry: ^3.1.0 
   http: ^0.13.5
 
 
 dev_dependencies:
-  ffigen: ^7.2.6
   lints: ^2.0.0
   test: ^1.21.0

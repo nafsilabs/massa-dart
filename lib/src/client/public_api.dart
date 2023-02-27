@@ -60,11 +60,11 @@ class PublicApi {
       var response =
           await client.post(RequestMethod.getAddress, params: params);
       response = response['result'];
-      List<Address> _addresses = [];
+      List<Address> addresses0 = [];
       for (var address in response['result']) {
-        _addresses.add(Address.decode(address));
+        addresses0.add(Address.decode(address));
       }
-      return _addresses;
+      return addresses0;
     } catch (e) {
       return null;
     }

@@ -12,10 +12,10 @@ class Block {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['id'] = id;
-    _data['content'] = content.encode();
-    return _data;
+    final data = <String, dynamic>{};
+    data['id'] = id;
+    data['content'] = content.encode();
+    return data;
   }
 }
 
@@ -42,13 +42,13 @@ class Content {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['is_final'] = isFinal;
-    _data['is_in_blockclique'] = isInBlockclique;
-    _data['is_candidate'] = isCandidate;
-    _data['is_discarded'] = isDiscarded;
-    _data['block'] = block.encode();
-    return _data;
+    final data = <String, dynamic>{};
+    data['is_final'] = isFinal;
+    data['is_in_blockclique'] = isInBlockclique;
+    data['is_candidate'] = isCandidate;
+    data['is_discarded'] = isDiscarded;
+    data['block'] = block.encode();
+    return data;
   }
 }
 
@@ -66,10 +66,10 @@ class BlockHeader {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['header'] = header.encode();
-    _data['operations'] = operations;
-    return _data;
+    final data = <String, dynamic>{};
+    data['header'] = header.encode();
+    data['operations'] = operations;
+    return data;
   }
 }
 
@@ -96,12 +96,12 @@ class Header {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['content'] = content.encode();
-    _data['signature'] = signature;
-    _data['content_creator_pub_key'] = contentCreatorPubKey;
-    _data['content_creator_address'] = contentCreatorAddress;
-    _data['id'] = id;
-    return _data;
+    final data = <String, dynamic>{};
+    data['content'] = content.encode();
+    data['signature'] = signature;
+    data['content_creator_pub_key'] = contentCreatorPubKey;
+    data['content_creator_address'] = contentCreatorAddress;
+    data['id'] = id;
+    return data;
   }
 }

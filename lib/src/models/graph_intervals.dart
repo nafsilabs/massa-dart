@@ -29,14 +29,14 @@ class GraphInterval {
   }
 
   Map<String, dynamic> encode() {
-    final _data = <String, dynamic>{};
-    _data['creator'] = creator;
-    _data['id'] = id;
-    _data['is_final'] = isFinal;
-    _data['is_in_blockclique'] = isInBlockclique;
-    _data['is_stale'] = isStale;
-    _data['parents'] = parents;
-    _data['slot'] = slot.encode();
-    return _data;
+    final data = <String, dynamic>{};
+    data['creator'] = creator;
+    data['id'] = id;
+    data['is_final'] = isFinal;
+    data['is_in_blockclique'] = isInBlockclique;
+    data['is_stale'] = isStale;
+    data['parents'] = parents;
+    data['slot'] = slot.encode();
+    return data;
   }
 }
