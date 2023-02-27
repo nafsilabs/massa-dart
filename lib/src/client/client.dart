@@ -17,27 +17,27 @@ class Client {
   final r = const RetryOptions(
       maxAttempts: maxRetryAttempts, delayFactor: Duration(seconds: 1));
   static const headers = {'Content-type': 'application/json'};
-  //Singleton class
-  static final Client _instance = Client.internal();
-  Client.internal();
-  factory Client() => _instance;
+  late Uri uri;
+  Client(this.uri);
 
-  Future<dynamic> get(Uri uri, String method,
+  Future<dynamic> get(String method,
       {Map<String, dynamic> header = Client.headers}) async {
     final response = await r.retry(
       () => http.get(uri, headers: headers),
-      // Retry on SocketException or TimeoutException
       retryIf: (e) => e is SocketException || e is TimeoutException,
     );
     return _returnResponse(response);
   }
 
-  Future<dynamic> post(Uri uri, String method,
+  Future<dynamic> post(String method,
       {Map<String, dynamic> headers = Client.headers,
       Map<String, dynamic>? body,
       Map<String, dynamic>? encoding,
       dynamic params}) async {
-    body!['method'] = method;
+    body = body ?? <String, dynamic>{'method': ''};
+    body['jsonrpc'] = '2.0';
+    body['id'] = 1;
+    body['method'] = method;
     if (params != null) {
       body['params'] = params;
     }
@@ -53,7 +53,7 @@ class Client {
     return _returnResponse(response);
   }
 
-  Future<dynamic> put(Uri uri, {required Map body, headers}) async {
+  Future<dynamic> put({required Map body, headers}) async {
     final response = await r.retry(
       () => http.put(uri, body: body, headers: headers),
       // Retry on SocketException or TimeoutException
@@ -62,10 +62,9 @@ class Client {
     return _returnResponse(response);
   }
 
-  Future<dynamic> delete(Uri uri, {required Map body, headers}) async {
+  Future<dynamic> delete({required Map body, headers}) async {
     final response = await r.retry(
       () => http.delete(uri, headers: headers),
-      // Retry on SocketException or TimeoutException
       retryIf: (e) => e is SocketException || e is TimeoutException,
     );
     return _returnResponse(response);
