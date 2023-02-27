@@ -21,7 +21,7 @@ class PublicApi {
     return _instance;
   }
 
-  Future<Status?> getStatus(String? ip) async {
+  Future<Status?> getStatus() async {
     try {
       var response = await client.post(RequestMethod.getStatus);
       return Status.decode(response['result']);
