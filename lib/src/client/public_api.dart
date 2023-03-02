@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:massa/src/client/http_client.dart';
 import 'package:massa/src/client/methods.dart';
 import 'package:massa/src/models/address.dart';
@@ -126,6 +128,25 @@ class PublicApi {
         endorsements.add(Endorsement.decode(endorsement));
       }
       return endorsements;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  Future<String?> sendOperations(
+      Uint8List data, String publicKey, String signature) async {
+    var params = [
+      {
+        'serialized_content': data,
+        'creator_public_key': publicKey,
+        'signature': signature
+      }
+    ];
+
+    try {
+      var response =
+          await client.post(RequestMethod.sendOperations, params: params);
+      return response['result'];
     } catch (e) {
       return null;
     }
