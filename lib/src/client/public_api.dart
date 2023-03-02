@@ -1,4 +1,4 @@
-import 'package:massa/src/client/client.dart';
+import 'package:massa/src/client/http_client.dart';
 import 'package:massa/src/client/methods.dart';
 import 'package:massa/src/models/address.dart';
 import 'package:massa/src/models/block.dart';

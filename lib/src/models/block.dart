@@ -4,11 +4,11 @@ class Block {
     required this.content,
   });
   late final String id;
-  late final Content content;
+  late final BlockContent content;
 
   Block.decode(Map<String, dynamic> json) {
     id = json['id'];
-    content = Content.decode(json['content']);
+    content = BlockContent.decode(json['content']);
   }
 
   Map<String, dynamic> encode() {
@@ -19,8 +19,8 @@ class Block {
   }
 }
 
-class Content {
-  Content({
+class BlockContent {
+  BlockContent({
     required this.isFinal,
     required this.isInBlockclique,
     required this.isCandidate,
@@ -33,7 +33,7 @@ class Content {
   late final bool isDiscarded;
   late final BlockHeader block;
 
-  Content.decode(Map<String, dynamic> json) {
+  BlockContent.decode(Map<String, dynamic> json) {
     isFinal = json['is_final'];
     isInBlockclique = json['is_in_blockclique'];
     isCandidate = json['is_candidate'];
@@ -81,14 +81,14 @@ class Header {
     required this.contentCreatorAddress,
     required this.id,
   });
-  late final Content content;
+  late final BlockContent content;
   late final String signature;
   late final String contentCreatorPubKey;
   late final String contentCreatorAddress;
   late final String id;
 
   Header.decode(Map<String, dynamic> json) {
-    content = Content.decode(json['content']);
+    content = BlockContent.decode(json['content']);
     signature = json['signature'];
     contentCreatorPubKey = json['content_creator_pub_key'];
     contentCreatorAddress = json['content_creator_address'];

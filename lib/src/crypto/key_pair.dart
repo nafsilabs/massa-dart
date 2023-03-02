@@ -8,6 +8,10 @@ const keyPairVersion = 0x00;
 const secretPrefix = 'S';
 const publicPrefix = 'P';
 const addressPrefix = 'A';
+const userAddressPrefix = 'U';
+const smartContractAddressPrefix = 'S';
+
+enum AddressType { user, smartContract }
 
 /// PublicKey is the type of Ed25519 public key.
 class PublicKey {
@@ -53,8 +57,12 @@ class KeyPair {
       publicKey == other.publicKey &&
       privateKey == other.privateKey;
 
-  String address() {
+  String address([AddressType? addressType]) {
+    var secondPrifix = addressType == AddressType.user
+        ? userAddressPrefix
+        : smartContractAddressPrefix;
     return addressPrefix +
+        secondPrifix +
         base58Encode(concat([
           Uint8List.fromList([keyPairVersion]),
           blake3Hash(publicKey.bytes)
@@ -148,7 +156,7 @@ PublicKey decodePublicKey(String publicKeyString) {
 }
 
 Uint8List parseAddress(String address) {
-  final pubKeyHash = base58Decode(address.substring(1));
+  final pubKeyHash = base58Decode(address.substring(2));
   if (pubKeyHash.length != 33) {
     throw 'Invalid address.';
   }

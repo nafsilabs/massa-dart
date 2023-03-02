@@ -43,14 +43,14 @@ class OperationData {
     required this.contentCreatorAddress,
     required this.id,
   });
-  late final Content content;
+  late final OperationContent content;
   late final String signature;
   late final String contentCreatorPubKey;
   late final String contentCreatorAddress;
   late final String id;
 
   OperationData.decode(Map<String, dynamic> json) {
-    content = Content.decode(json['content']);
+    content = OperationContent.decode(json['content']);
     signature = json['signature'];
     contentCreatorPubKey = json['content_creator_pub_key'];
     contentCreatorAddress = json['content_creator_address'];
@@ -68,8 +68,8 @@ class OperationData {
   }
 }
 
-class Content {
-  Content({
+class OperationContent {
+  OperationContent({
     required this.fee,
     required this.expirePeriod,
     required this.op,
@@ -78,7 +78,7 @@ class Content {
   late final int expirePeriod;
   late final Op op;
 
-  Content.decode(Map<String, dynamic> json) {
+  OperationContent.decode(Map<String, dynamic> json) {
     fee = json['fee'];
     expirePeriod = json['expire_period'];
     op = Op.decode(json['op']);

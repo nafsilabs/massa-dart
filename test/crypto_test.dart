@@ -5,10 +5,10 @@ void main() {
   group('Massa Crypto: ', () {
     test('Generate keypair', () async {
       var keyPair = await generateKeyPair();
-      //print('priv: ${keyPair.privateKey.toString()}');
-      //print('pub: ${keyPair.publicKey.toString()}');
-      //print('addr: ${keyPair.address()}');
-      //print('thread: ${keyPair.thread()}');
+      print('priv: ${keyPair.privateKey.toString()}');
+      print('pub: ${keyPair.publicKey.toString()}');
+      print('addr: ${keyPair.address()}');
+      print('thread: ${keyPair.thread()}');
       final privateKey = keyPair.privateKey.toString();
       final privateKey2 = encodePrivateKey(keyPair.privateKey);
       expect(privateKey, privateKey2);

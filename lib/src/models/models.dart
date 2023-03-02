@@ -1,9 +1,9 @@
 export 'address.dart';
 export 'block.dart';
 export 'cliques.dart';
-//export 'endorsement.dart';
+export 'endorsement.dart';
 export 'graph_intervals.dart';
-//export 'operation.dart';
+export 'operation.dart';
 export 'slot.dart';
 export 'stakers.dart';
 export 'status.dart';
