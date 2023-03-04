@@ -26,6 +26,11 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [x] get_status
 - [x] get_operations
 - [ ] send_operations
+      - [ ] transaction
+      - [ ] buy rolls
+      - [ ] sell rolls
+      - [ ] execute smart contract
+      - [ ] call smart contract
 ### Private API (node_ip:33034)
 - [ ] add_staking_secret_keys
 - [ ] get_staking_addresses
@@ -65,11 +70,31 @@ Check usage in `/test` folder.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+View examples in `/example` folder. 
 
+The example below shows how to get list of stakers
 ```dart
-const like = 'sample';
+import 'package:massa/massa.dart';
+
+Future<void> main() async {
+  final Uri pubUri = Uri.https('test.massa.net', 'api/v2');
+
+  PublicApi api = PublicApi(pubUri);
+  Stakers stakers = await api.getStakers();
+  if (stakers.stakers.isEmpty) {
+    print('No stakers found');
+    return;
+  }
+
+  final totalAddresses = stakers.stakers.length;
+  int totalRolls = 0;
+  for (var staker in stakers.stakers) {
+    print('${staker.address}:${staker.roles}');
+    totalRolls += staker.roles;
+  }
+  print('Total addresses: $totalAddresses');
+  print('Total rolls: $totalRolls');
+}
 ```
 
 ## Additional information
