@@ -5,6 +5,7 @@ import 'package:massa/src/wallet/account.dart';
 class Wallet {
   late Uri pubUri;
   late PublicApi api;
+  Balance totalBalance = Balance(0, 0, 0, 0);
   Wallet(this.pubUri) {
     api = PublicApi(pubUri);
   }
@@ -40,16 +41,23 @@ class Wallet {
   }
 
   Future<Balance> getBalance() async {
-    final addresses = accounts.keys as List<String>;
+    List<String> addresses = [];
+    accounts.forEach((key, value) {
+      addresses.add(key);
+    });
+
     final List<Address>? addressInfo = await api.getAddresses(addresses);
-    Balance balance = Balance(0, 0);
-    if (addressInfo != null || addressInfo!.isEmpty) {
-      return balance;
+    //print('length: ${addressInfo!.length}');
+
+    if (addressInfo == null) {
+      return totalBalance;
     }
     for (var address in addressInfo) {
-      balance.finalBalance += double.parse(address.finalBalance);
-      balance.candidateBalance += double.parse(address.candidateBalance);
+      totalBalance.finalBalance += address.finalBalance;
+      totalBalance.candidateBalance += address.candidateBalance;
+      totalBalance.finalRolls = address.finalRollCount;
+      totalBalance.candidateRolls = address.candidateRollCount;
     }
-    return balance;
+    return totalBalance;
   }
 }

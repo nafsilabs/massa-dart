@@ -22,46 +22,56 @@ class Address {
   });
   late final String address;
   late final int thread;
-  late final String finalBalance;
+  late final double finalBalance;
   late final int finalRollCount;
   late final List<dynamic> finalDatastoreKeys;
-  late final String candidateBalance;
+  late final double candidateBalance;
   late final int candidateRollCount;
   late final List<dynamic> candidateDatastoreKeys;
   late final List<dynamic> deferredCredits;
   late final List<dynamic> nextBlockDraws;
   late final List<NextEndorsementDraws> nextEndorsementDraws;
-  late final List<String> createdBlocks;
-  late final List<String> createdOperations;
-  late final List<String> createdEndorsements;
+  late final List<dynamic> createdBlocks;
+  late final List<dynamic> createdOperations;
+  late final List<dynamic> createdEndorsements;
   late final List<CycleInfos> cycleInfos;
 
   Address.decode(Map<String, dynamic> json) {
     address = json['address'];
     thread = json['thread'];
-    finalBalance = json['final_balance'];
+    finalBalance =
+        json['final_balance'] != null ? double.parse(json['final_balance']) : 0;
+
     finalRollCount = json['final_roll_count'];
-    finalDatastoreKeys =
-        List.castFrom<dynamic, dynamic>(json['final_datastore_keys']);
-    candidateBalance = json['candidate_balance'];
+    ;
+    finalDatastoreKeys = List<dynamic>.from(json['final_datastore_keys']);
+    candidateBalance = json['candidate_balance'] != null
+        ? double.parse(json['candidate_balance'])
+        : 0;
     candidateRollCount = json['candidate_roll_count'];
     candidateDatastoreKeys =
-        List.castFrom<dynamic, dynamic>(json['candidate_datastore_keys']);
-    deferredCredits = List.castFrom<dynamic, dynamic>(json['deferred_credits']);
-    nextBlockDraws = List.castFrom<dynamic, dynamic>(json['next_block_draws']);
-    nextEndorsementDraws = List.from(json['next_endorsement_draws'])
-        .map((e) => NextEndorsementDraws.decode(e))
-        .toList();
-    createdBlocks = List.castFrom<String, String>(json['created_blocks']);
-    createdOperations =
-        List.castFrom<dynamic, String>(json['created_operations']);
-    createdEndorsements =
-        List.castFrom<String, String>(json['created_endorsements']);
+        List<dynamic>.from(json['candidate_datastore_keys']);
+    deferredCredits = List<dynamic>.from(json['deferred_credits']);
+    nextBlockDraws = List<dynamic>.from(json['next_block_draws']);
+    if (json['next_endorsement_draws'] == null) {
+      nextEndorsementDraws = [];
+    } else {
+      nextEndorsementDraws = List.from(json['next_endorsement_draws'])
+          .map((e) => NextEndorsementDraws.decode(e))
+          .toList();
+    }
+
+    createdBlocks = List<dynamic>.from(json['created_blocks']);
+    createdOperations = List<dynamic>.from(json['created_operations']);
+    createdEndorsements = List<dynamic>.from(json['created_endorsements']);
     cycleInfos = List.from(json['cycle_infos'])
         .map((e) => CycleInfos.decode(e))
         .toList();
   }
 
+/*
+[{address: AU1Rnv57yVeTzHHFcxgw3LT46RndzFW32kFce8LPbYVKkQTCqK3P, thread: 7, final_balance: 499.99975, final_roll_count: 0, final_datastore_keys: [], candidate_balance: 499.99975, candidate_roll_count: 0, candidate_datastore_keys: [], deferred_credits: [], next_block_draws: [], next_endorsement_draws: [], created_blocks: [], created_operations: [], created_endorsements: [], cycle_infos: [{cycle: 60, is_final: true, ok_count: 0, nok_count: 0, active_rolls: null}, {cycle: 61, is_final: true, ok_count: 0, nok_count: 0, active_rolls: null}, {cycle: 62, is_final: true, ok_count: 0, nok_count: 0, active_rolls: null}, {cycle: 63, is_final: true, ok_count: 0, nok_count: 0, active_rolls: null}, {cycle: 64, is_final: false, ok_count: 0, nok_count: 0, active_rolls: null}]}]
+*/
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['address'] = address;
@@ -74,8 +84,9 @@ class Address {
     data['candidate_datastore_keys'] = candidateDatastoreKeys;
     data['deferred_credits'] = deferredCredits;
     data['next_block_draws'] = nextBlockDraws;
-    data['next_endorsement_draws'] =
-        nextEndorsementDraws.map((e) => e.encode()).toList();
+    data['next_endorsement_draws'] = nextEndorsementDraws != null
+        ? nextEndorsementDraws.map((e) => e.encode()).toList()
+        : [];
     data['created_blocks'] = createdBlocks;
     data['created_operations'] = createdOperations;
     data['created_endorsements'] = createdEndorsements;
@@ -111,20 +122,20 @@ class CycleInfos {
     required this.isFinal,
     required this.okCount,
     required this.nokCount,
-    this.activeRolls,
+    required this.activeRolls,
   });
   late final int cycle;
   late final bool isFinal;
   late final int okCount;
   late final int nokCount;
-  late final int? activeRolls;
+  late final int activeRolls;
 
   CycleInfos.decode(Map<String, dynamic> json) {
     cycle = json['cycle'];
     isFinal = json['is_final'];
     okCount = json['ok_count'];
     nokCount = json['nok_count'];
-    activeRolls = null;
+    activeRolls = json['active_rolls'] ?? 0;
   }
 
   Map<String, dynamic> encode() {

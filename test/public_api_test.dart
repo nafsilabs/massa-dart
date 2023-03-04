@@ -13,5 +13,12 @@ void main() {
       Status? status = await api.getStatus();
       print(status?.encode());
     });
+    test('get address', () async {
+      List<String> addresses = [
+        'AU12gafk5nWeYgvxQCP7MQySsraFrGBs1qEUBAeT5hYQc74B43aBL'
+      ];
+      final addresess = await api.getAddresses(addresses);
+      print(addresess![0].encode());
+    });
   });
 }

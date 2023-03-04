@@ -61,12 +61,14 @@ class PublicApi {
     try {
       var response =
           await client.post(RequestMethod.getAddress, params: params);
-      response = response['result'];
-      List<Address> addresses0 = [];
-      for (var address in response['result']) {
-        addresses0.add(Address.decode(address));
+      List<Address> addressInfos = [];
+      var data = List<dynamic>.from(response['result']);
+
+      for (var address in data) {
+        final addr = Address.decode(address);
+        addressInfos.add(addr);
       }
-      return addresses0;
+      return addressInfos;
     } catch (e) {
       return null;
     }
