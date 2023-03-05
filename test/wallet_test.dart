@@ -34,5 +34,11 @@ void main() {
       final resp = await wallet.buyRolls(address, 1);
       print('resp: $resp');
     });
+
+    test('sell rolls', () async {
+      const address = 'AU1Rnv57yVeTzHHFcxgw3LT46RndzFW32kFce8LPbYVKkQTCqK3P';
+      final resp = await wallet.sellRolls(address, 1);
+      print('resp: $resp');
+    });
   });
 }

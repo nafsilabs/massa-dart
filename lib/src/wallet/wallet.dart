@@ -108,4 +108,33 @@ class Wallet {
         rollsCompactData, account.publicKey(), signature);
     return operationID!;
   }
+
+  Future<String> sellRolls(String address, int rollCount) async {
+    if (!accounts.containsKey(address)) {
+      return 'wallet does not contain the wallet key';
+    }
+    final account = accounts[address];
+
+    final balance = await getAccountBalance(address);
+    final status = await api.getStatus();
+    if (status == null) return 'could not get network status';
+
+    final rollPrice = int.parse(status.config.rollPrice);
+    if (rollCount * rollPrice > balance.finalBalance) {
+      return 'insufficient balance - available: ${balance.finalBalance}, required: ${rollCount * rollPrice}';
+    }
+
+    final rolls = RollData(0, rollCount);
+    final expirePeriod = status.nextSlot.period + slotOffset;
+    var rollsCompactData = operationByteCompact(
+        rolls, OperationType.sellRoll, account!.publicKey(), expirePeriod);
+
+    final signatureData =
+        concat([account.keyPair.publicKey.bytes, rollsCompactData]);
+    final signature = await account.keyPair.sign(signatureData);
+
+    final operationID = await api.sendOperations(
+        rollsCompactData, account.publicKey(), signature);
+    return operationID!;
+  }
 }

@@ -27,8 +27,8 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [x] get_operations
 - [ ] send_operations
       - [ ] transaction
-      - [ ] buy rolls
-      - [ ] sell rolls
+      - [x] buy rolls
+      - [x] sell rolls
       - [ ] execute smart contract
       - [ ] call smart contract
 ### Private API (node_ip:33034)
