@@ -55,6 +55,7 @@ class Wallet {
       return totalBalance;
     }
     for (var address in addressInfo) {
+      _updateAccountBalance(address);
       totalBalance.finalBalance += address.finalBalance;
       totalBalance.candidateBalance += address.candidateBalance;
       totalBalance.finalRolls += address.finalRollCount;
@@ -71,13 +72,53 @@ class Wallet {
     if (addressInfo == null) {
       return balance;
     }
+
     for (var address in addressInfo) {
+      _updateAccountBalance(address);
       balance.finalBalance += address.finalBalance;
       balance.candidateBalance += address.candidateBalance;
       balance.finalRolls += address.finalRollCount;
       balance.candidateRolls += address.candidateRollCount;
     }
     return balance;
+  }
+
+  void _updateAccountBalance(Address address) {
+    final addr = address.address;
+    if (accounts.containsKey(addr)) {
+      accounts[addr]!.balance.finalBalance = address.finalBalance;
+      accounts[addr]!.balance.candidateBalance = address.candidateBalance;
+      accounts[addr]!.balance.finalRolls = address.finalRollCount;
+      accounts[addr]!.balance.candidateRolls = address.candidateRollCount;
+    }
+  }
+
+  Future<String> transaction(
+      String senderAddress, String recipientAddress, double amount) async {
+    if (!accounts.containsKey(senderAddress)) {
+      return 'wallet does not contain the wallet key';
+    }
+    final account = accounts[senderAddress];
+
+    final balance = await getAccountBalance(senderAddress);
+    final status = await api.getStatus();
+    if (status == null) return 'could not get network status';
+
+    if (amount > balance.finalBalance) {
+      return 'insufficient balance - available: ${balance.finalBalance}, required: $amount';
+    }
+
+    final tx = TransactionData(0, amount, recipientAddress);
+    final expirePeriod = status.nextSlot.period + slotOffset;
+    var txCompact = operationByteCompact(
+        tx, OperationType.transaction, account!.publicKey(), expirePeriod);
+
+    final signatureData = concat([account.keyPair.publicKey.bytes, txCompact]);
+    final signature = await account.keyPair.sign(signatureData);
+
+    final operationID =
+        await api.sendOperations(txCompact, account.publicKey(), signature);
+    return operationID!;
   }
 
   Future<String> buyRolls(String address, int rollCount) async {

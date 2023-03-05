@@ -25,12 +25,11 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [x] get_stakers
 - [x] get_status
 - [x] get_operations
-- [ ] send_operations
-      - [ ] transaction
-      - [x] buy rolls
-      - [x] sell rolls
-      - [ ] execute smart contract
-      - [ ] call smart contract
+- [x] send_operations - transaction
+- [x] send_operations - buy rolls
+- [x] send_operations - sell rolls
+- [ ] send_operations - execute smart contract
+- [ ] send_operations - call smart contract
 ### Private API (node_ip:33034)
 - [ ] add_staking_secret_keys
 - [ ] get_staking_addresses
@@ -70,7 +69,7 @@ Check usage in `/test` folder.
 
 ## Usage
 
-View examples in `/example` folder. 
+View more examples in `/example` folder. 
 
 The example below shows how to get list of stakers
 ```dart

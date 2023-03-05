@@ -154,7 +154,6 @@ class PublicApi {
     try {
       var response =
           await client.post(RequestMethod.sendOperations, params: [params]);
-      print('send operation response: $response');
       return response['result'][0];
     } catch (e) {
       return null;

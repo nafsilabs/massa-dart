@@ -29,7 +29,7 @@ void main() {
       print(balance.toString());
     });
 
-    test('buy rolls', () async {
+    /* test('buy rolls', () async {
       const address = 'AU1Rnv57yVeTzHHFcxgw3LT46RndzFW32kFce8LPbYVKkQTCqK3P';
       final resp = await wallet.buyRolls(address, 1);
       print('resp: $resp');
@@ -39,6 +39,22 @@ void main() {
       const address = 'AU1Rnv57yVeTzHHFcxgw3LT46RndzFW32kFce8LPbYVKkQTCqK3P';
       final resp = await wallet.sellRolls(address, 1);
       print('resp: $resp');
+    });*/
+
+    test('transaction', () async {
+      const senderAddress =
+          'AU1Rnv57yVeTzHHFcxgw3LT46RndzFW32kFce8LPbYVKkQTCqK3P';
+      const recipientAddress =
+          'AU12GGfPcCRbo3Ey7x6NPxN4Xo1y8W8cMWJyg1kXj9vCUH3ckEAzJ';
+      const amount = 10.00;
+      final resp =
+          await wallet.transaction(senderAddress, recipientAddress, amount);
+      print('resp: $resp');
+    });
+
+    test('list accounts', () async {
+      final accounts = wallet.listAccounts();
+      accounts.forEach((key, value) => {print(value.toString())});
     });
   });
 }

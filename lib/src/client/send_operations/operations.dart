@@ -19,7 +19,7 @@ class RollData {
 
 class TransactionData {
   int fee;
-  int amount;
+  double amount;
   String recipientAddress;
   TransactionData(this.fee, this.amount, this.recipientAddress);
 }
@@ -36,7 +36,8 @@ Uint8List operationByteCompact(dynamic data, OperationType operationType,
       final recipientAddressEncoded =
           base58Decode(transactionData.recipientAddress.substring(2));
       //TODO: check if one or two letters have to be removed from the address
-      final amountEncoded = Varint.encode(transactionData.amount);
+      final amount = doubleToMassaInt(transactionData.amount);
+      final amountEncoded = Varint.encode(amount);
 
       return concat([
         feeEncoded,
