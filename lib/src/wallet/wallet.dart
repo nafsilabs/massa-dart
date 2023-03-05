@@ -1,8 +1,8 @@
 import 'package:massa/massa.dart';
-import 'package:massa/src/client/send_operations/operations.dart';
 import 'package:massa/src/helpers/helpers.dart';
 import 'package:massa/src/models/balance.dart';
 import 'package:massa/src/wallet/account.dart';
+import 'package:massa/src/client/send_operations/send_operations.dart';
 
 const slotOffset = 30;
 
@@ -107,13 +107,16 @@ class Wallet {
     if (amount > balance.finalBalance) {
       return 'insufficient balance - available: ${balance.finalBalance}, required: $amount';
     }
-
-    final tx = TransactionData(0, amount, recipientAddress);
     final expirePeriod = status.nextSlot.period + slotOffset;
-    var txCompact = operationByteCompact(
-        tx, OperationType.transaction, account!.publicKey(), expirePeriod);
 
-    final signatureData = concat([account.keyPair.publicKey.bytes, txCompact]);
+    final tx = TransactionOperation(
+        amount: amount,
+        fee: 0.01,
+        recipientAddress: recipientAddress,
+        expirePeriod: expirePeriod);
+    var txCompact = tx.compact();
+
+    final signatureData = concat([account!.keyPair.publicKey.bytes, txCompact]);
     final signature = await account.keyPair.sign(signatureData);
 
     final operationID =
@@ -135,14 +138,13 @@ class Wallet {
     if (rollCount * rollPrice > balance.finalBalance) {
       return 'insufficient balance - available: ${balance.finalBalance}, required: ${rollCount * rollPrice}';
     }
-
-    final rolls = RollData(0, rollCount);
     final expirePeriod = status.nextSlot.period + slotOffset;
-    var rollsCompactData = operationByteCompact(
-        rolls, OperationType.buyRoll, account!.publicKey(), expirePeriod);
 
+    final rolls =
+        BuyRolls(rollCount: rollCount, fee: 0.01, expirePeriod: expirePeriod);
+    final rollsCompactData = rolls.compact();
     final signatureData =
-        concat([account.keyPair.publicKey.bytes, rollsCompactData]);
+        concat([account!.keyPair.publicKey.bytes, rollsCompactData]);
     final signature = await account.keyPair.sign(signatureData);
 
     final operationID = await api.sendOperations(
@@ -164,14 +166,13 @@ class Wallet {
     if (rollCount * rollPrice > balance.finalBalance) {
       return 'insufficient balance - available: ${balance.finalBalance}, required: ${rollCount * rollPrice}';
     }
-
-    final rolls = RollData(0, rollCount);
     final expirePeriod = status.nextSlot.period + slotOffset;
-    var rollsCompactData = operationByteCompact(
-        rolls, OperationType.sellRoll, account!.publicKey(), expirePeriod);
 
+    final rolls =
+        SellRolls(rollCount: rollCount, fee: 0.01, expirePeriod: expirePeriod);
+    final rollsCompactData = rolls.compact();
     final signatureData =
-        concat([account.keyPair.publicKey.bytes, rollsCompactData]);
+        concat([account!.keyPair.publicKey.bytes, rollsCompactData]);
     final signature = await account.keyPair.sign(signatureData);
 
     final operationID = await api.sendOperations(
