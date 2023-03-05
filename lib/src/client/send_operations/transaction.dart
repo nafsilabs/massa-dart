@@ -13,11 +13,11 @@ class TransactionOperation extends BaseSendOperation {
       required double fee,
       required this.recipientAddress,
       required int expirePeriod})
-      : super(OperationType.transaction, fee, expirePeriod);
+      : super(OperationType.transaction, fee: fee, expirePeriod: expirePeriod);
   @override
   Uint8List compact() {
-    final feeEncoded = Varint.encode(doubleToMassaInt(fee));
-    final expirePeriodEncoded = Varint.encode(expirePeriod);
+    final feeEncoded = Varint.encode(doubleToMassaInt(fee!));
+    final expirePeriodEncoded = Varint.encode(expirePeriod!);
     final operationTypeEncoded = Varint.encode(operationType.index);
     final recipientAddressEncoded = base58Decode(recipientAddress.substring(2));
     final amountEncoded = Varint.encode(doubleToMassaInt(amount));

@@ -8,11 +8,11 @@ class SellRolls extends BaseSendOperation {
   int rollCount;
   SellRolls(
       {required this.rollCount, required double fee, required int expirePeriod})
-      : super(OperationType.sellRoll, fee, expirePeriod);
+      : super(OperationType.sellRoll, fee: fee, expirePeriod: expirePeriod);
   @override
   Uint8List compact() {
-    final feeEncoded = Varint.encode(doubleToMassaInt(fee));
-    final expirePeriodEncoded = Varint.encode(expirePeriod);
+    final feeEncoded = Varint.encode(doubleToMassaInt(fee!));
+    final expirePeriodEncoded = Varint.encode(expirePeriod!);
     final operationTypeEncoded = Varint.encode(operationType.index);
     final rollCountEncoded = Varint.encode(rollCount);
     return concat([

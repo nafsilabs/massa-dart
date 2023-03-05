@@ -10,9 +10,9 @@ enum OperationType {
 
 abstract class BaseSendOperation {
   OperationType operationType;
-  double fee;
-  int expirePeriod;
-  BaseSendOperation(this.operationType, this.fee, this.expirePeriod);
+  double? fee;
+  int? expirePeriod;
+  BaseSendOperation(this.operationType, {this.fee, this.expirePeriod});
 
   Uint8List compact();
 }
