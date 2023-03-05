@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:massa/src/crypto/crypto.dart';
 import 'package:test/test.dart';
 
@@ -27,17 +29,19 @@ void main() {
       const key = 'S1EV1dv6iE8UyFdSKphtTsqVdpX3dNLhw8FiXcESH8SySPhAKC5';
       var keyPair = await keyPairFromSecret(key);
       const message = 'Hello Massa!';
+      final messageBytes = Uint8List.fromList(message.codeUnits);
       const expectedSignature =
           'DCLYMLLZ8Gmqz7dAYV76qorP4Cf9CkcXMo3viGY4taQwhLK1r1FFxPR8qseKmRb2GtgRMYhYKnwSpD2gTfryfeiWzqYyf';
-      final signature = await keyPair.sign(message);
+      final signature = await keyPair.sign(messageBytes);
       expect(expectedSignature, signature);
     });
     test('Verify Massa signature', () async {
       const key = 'S1EV1dv6iE8UyFdSKphtTsqVdpX3dNLhw8FiXcESH8SySPhAKC5';
       var keyPair = await keyPairFromSecret(key);
       const message = 'Hello Massa!';
+      final messageBytes = Uint8List.fromList(message.codeUnits);
       const expectedResult = true;
-      final signature = await keyPair.sign(message);
+      final signature = await keyPair.sign(messageBytes);
       final verify = await keyPair.verify(message, signature);
       expect(expectedResult, verify);
     });

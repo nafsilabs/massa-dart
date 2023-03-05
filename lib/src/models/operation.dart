@@ -1,3 +1,5 @@
+/*
+ operation: {content: {fee: 0, expire_period: 19899, op: {Transaction: {recipient_address: AU12WQRoxQJKMjNG8hVjkyh4YgBwaYeUH4BsqJEEdTUJda37GhSx9, amount: 0.000100666}}}, signature: 74qbPf1ugt8dUYyVFAxCyFyTSNmq3nCpKkjMgCfxKVqQ5fLguypHDWh98HxJ1CAPDzB15sc3ubZHvd9neX3Wfai6TQoTz, content_creator_pub_key: P1W9HovxZFyzxyXMQmYkXYgczaevjnV6hxoLWjfpqTaQs54vmhd, content_creator_address: AU12MMHhydaLVJAgiPkg4Nb2w3w96nLG3eZZ98ewgx76ZKtPom5kF, id: O11BfUt2iDrLJ42cBEfmKToZfQW1qyBB78oVzvpKbdpB7Pu5Bar}, op_exec_status: true}*/
 class Operation {
   Operation({
     required this.id,
@@ -17,7 +19,7 @@ class Operation {
   Operation.decode(Map<String, dynamic> json) {
     id = json['id'];
     inPool = json['in_pool'];
-    inBlocks = List.castFrom<dynamic, String>(json['in_blocks']);
+    inBlocks = json['in_blocks'] ?? [];
     isFinal = json['is_final'];
     thread = json['thread'];
     operation = OperationData.decode(json['operation']);

@@ -73,9 +73,9 @@ class KeyPair {
     return _getAddressThread(address());
   }
 
-  Future<String> sign(String message) async {
-    final messageBytes = Uint8List.fromList(message.codeUnits);
-    final hash = blake3Hash(messageBytes);
+  Future<String> sign(Uint8List message) async {
+    //final messageBytes = Uint8List.fromList(message.codeUnits);
+    final hash = blake3Hash(message);
     final keyPair =
         await Ed25519().newKeyPairFromSeed(List.from(privateKey.bytes));
     final signature = await Ed25519().sign(List.from(hash), keyPair: keyPair);

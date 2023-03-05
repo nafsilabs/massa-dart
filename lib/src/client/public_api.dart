@@ -110,8 +110,14 @@ class PublicApi {
     try {
       var response =
           await client.post(RequestMethod.getOperations, params: params);
+
+      // print('operation: $response');
+      var data = List<dynamic>.from(response['result']);
+      if (data.isEmpty) {
+        return null;
+      }
       List<Operation> operations = [];
-      for (var operation in response['result']) {
+      for (var operation in data) {
         operations.add(Operation.decode(operation));
       }
       return operations;
@@ -147,8 +153,9 @@ class PublicApi {
 
     try {
       var response =
-          await client.post(RequestMethod.sendOperations, params: params);
-      return response['result'];
+          await client.post(RequestMethod.sendOperations, params: [params]);
+      print('send operation response: $response');
+      return response['result'][0];
     } catch (e) {
       return null;
     }

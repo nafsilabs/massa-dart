@@ -20,5 +20,13 @@ void main() {
       final addresess = await api.getAddresses(addresses);
       print(addresess![0].encode());
     });
+
+    test('get operation', () async {
+      List<String> ops = [
+        'O12TdsZ7aemTpYn1RELNY9eRC6o8LNgxepEWbLeeBbPTxdYpXBcP'
+      ];
+      final operations = await api.getOperations(ops);
+      print(operations![0].encode());
+    });
   });
 }

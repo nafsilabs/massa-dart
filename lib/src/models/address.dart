@@ -69,9 +69,6 @@ class Address {
         .toList();
   }
 
-/*
-[{address: AU1Rnv57yVeTzHHFcxgw3LT46RndzFW32kFce8LPbYVKkQTCqK3P, thread: 7, final_balance: 499.99975, final_roll_count: 0, final_datastore_keys: [], candidate_balance: 499.99975, candidate_roll_count: 0, candidate_datastore_keys: [], deferred_credits: [], next_block_draws: [], next_endorsement_draws: [], created_blocks: [], created_operations: [], created_endorsements: [], cycle_infos: [{cycle: 60, is_final: true, ok_count: 0, nok_count: 0, active_rolls: null}, {cycle: 61, is_final: true, ok_count: 0, nok_count: 0, active_rolls: null}, {cycle: 62, is_final: true, ok_count: 0, nok_count: 0, active_rolls: null}, {cycle: 63, is_final: true, ok_count: 0, nok_count: 0, active_rolls: null}, {cycle: 64, is_final: false, ok_count: 0, nok_count: 0, active_rolls: null}]}]
-*/
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['address'] = address;
