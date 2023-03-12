@@ -10,7 +10,7 @@ void main() {
     const secret = 'S1ypuNJxYyk9tURXSJ5EwrVPGDyRoL67Vs378koe7Km2khuudBa';
     const secret2 = 'S12m3p3rc3BYXfok5xEMEawmmmcXrkkSMiat2zXUFdNsPVjX8i5V';
     final wallet = Wallet(pubUri);
-    // wallet.newAccount(AddressType.user);
+    wallet.newAccount(AddressType.user);
     wallet.addAccountFromSecretKey(secret, AddressType.user);
     wallet.addAccountFromSecretKey(secret2, AddressType.user);
     test('list accounts', () async {
@@ -48,7 +48,7 @@ void main() {
           'AU12GGfPcCRbo3Ey7x6NPxN4Xo1y8W8cMWJyg1kXj9vCUH3ckEAzJ';
       const amount = 10.00;
       final resp =
-          await wallet.transaction(senderAddress, recipientAddress, amount);
+          await wallet.sendTransaction(senderAddress, recipientAddress, amount);
       print('resp: $resp');
     });
 

@@ -5,6 +5,7 @@ import 'package:massa/src/wallet/account.dart';
 import 'package:massa/src/client/send_operations/send_operations.dart';
 
 const slotOffset = 30;
+const defaultGas = 0.7;
 
 class Wallet {
   late Uri pubUri;
@@ -93,7 +94,7 @@ class Wallet {
     }
   }
 
-  Future<String> transaction(
+  Future<String> sendTransaction(
       String senderAddress, String recipientAddress, double amount) async {
     if (!accounts.containsKey(senderAddress)) {
       return 'wallet does not contain the wallet key';
@@ -109,7 +110,7 @@ class Wallet {
     }
     final expirePeriod = status.nextSlot.period + slotOffset;
 
-    final tx = TransactionOperation(
+    final tx = SendTransaction(
         amount: amount,
         fee: 0.01,
         recipientAddress: recipientAddress,

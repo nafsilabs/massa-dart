@@ -5,10 +5,10 @@ import 'package:massa/src/crypto/common.dart';
 import 'package:massa/src/crypto/varuint.dart';
 import 'package:massa/src/helpers/helpers.dart';
 
-class TransactionOperation extends BaseSendOperation {
+class SendTransaction extends BaseSendOperation {
   double amount;
   String recipientAddress;
-  TransactionOperation(
+  SendTransaction(
       {required this.amount,
       required double fee,
       required this.recipientAddress,

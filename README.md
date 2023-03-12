@@ -25,7 +25,7 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [x] get_stakers
 - [x] get_status
 - [x] get_operations
-- [x] send_operations - transaction
+- [x] send_operations - send transaction
 - [x] send_operations - buy rolls
 - [x] send_operations - sell rolls
 - [ ] send_operations - execute smart contract
