@@ -28,3 +28,15 @@ class RequestMethod {
   static const nodeRemoveFromWhitelist = 'node_remove_from_whitelist';
   static const nodeAddToPeersWhitelist = 'node_add_to_peers_whitelist';
 }
+
+enum WebsocketMethod {
+  newBlocks('new_blocks'),
+  newBlocksHeaders('new_blocks_headers'),
+  newFilledBlocks('new_filled_blocks'),
+  newOperations('new_operations');
+
+  final String name;
+  const WebsocketMethod(this.name);
+  String get subscribe => 'subscribe_$name';
+  String get unsubscribe => 'unsubscribe_$name';
+}
