@@ -54,8 +54,8 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [ ] node_whitelist
 
 ### Websocket API (node_ip:33036)
-- [ ] subscribe_new_blocks
-- [ ] unsubscribe_new_blocks
+- [x] subscribe_new_blocks
+- [x] unsubscribe_new_blocks
 - [ ] subscribe_new_blocks_headers
 - [ ] unsubscribe_new_blocks_headers
 - [ ] subscribe_new_filled_blocks
