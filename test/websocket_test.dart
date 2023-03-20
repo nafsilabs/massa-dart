@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('Public API Test: ', () {
-    const url = 'ws://5.161.94.95:33036';
+    const url = 'ws://test.massa.net:33036';
 
     onConnect() {
       print('connected');
@@ -29,7 +29,7 @@ void main() {
     api.connect(onConnected: onConnect, onCannotConnect: onCannotConnect);
 
     test('subscribe new block', () async {
-    api.subscribeNewBlocks(onSubscribed, onMessage, onDisconnected);
+      api.subscribeNewBlocks(onSubscribed, onMessage, onDisconnected);
       await Future.delayed(const Duration(minutes: 1), () {});
     });
   });

@@ -16,6 +16,7 @@ class Websocket {
   Map<String, Function?> _onChannelSubscribedCallbacks = {};
   Map<String, Function?> _onChannelDisconnectedCallbacks = {};
   Map<String, Function?> _onChannelMessageCallbacks = {};
+  Map<String, int> _subscriptionIDs = {};
 
   //Singleton class
   static final Websocket _instance = Websocket.internal();
@@ -85,6 +86,7 @@ class Websocket {
     _onChannelSubscribedCallbacks[method.name] = null;
     _onChannelDisconnectedCallbacks[method.name] = null;
     _onChannelMessageCallbacks[method.name] = null;
+    params ??= [_subscriptionIDs[method.name]];
     send(method.unsubscribe, params: params);
   }
 
@@ -105,9 +107,20 @@ class Websocket {
   void _onData(dynamic payload) {
     payload = jsonDecode(payload);
     final method = payload['method'];
-    final onMessage = _onChannelMessageCallbacks[method];
-    if (onMessage != null) {
-      onMessage(payload);
+    if (method != null) {
+      final onMessage = _onChannelMessageCallbacks[method];
+      if (onMessage != null) {
+        onMessage(payload);
+      }
+    }
+
+    //extract subscription id
+    var params = payload['params'];
+    if (params != null) {
+      var sub = params['subscription'] as int;
+      if (sub != 0 && method != null) {
+        _subscriptionIDs[method] = sub;
+      }
     }
   }
 }

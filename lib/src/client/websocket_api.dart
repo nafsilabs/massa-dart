@@ -15,7 +15,9 @@ class WebsocketApi {
     return _instance;
   }
 
-  connected() {}
+  connected() {
+    print('connection established....');
+  }
 
   void connect(
       {Function? onConnected,
@@ -30,7 +32,7 @@ class WebsocketApi {
 
   void disconnect() {
     client.disconnect();
-    print('network closed...');
+    print('connection closed...');
   }
 
   void subscribeNewBlocks(
@@ -41,8 +43,47 @@ class WebsocketApi {
         onDisconnected: onDisconnected);
   }
 
-  void unsubscribeNewBlocks(int subscriptionID) {
-    var params = [subscriptionID];
+  void unsubscribeNewBlocks({int? subscriptionID}) {
+    var params = subscriptionID != null ? [subscriptionID] : null;
     client.unsubscribe(WebsocketMethod.newBlocks, params: params);
+  }
+
+  void subscribeNewBlocksHeaders(
+      Function onSubscribed, Function onMessage, Function onDisconnected) {
+    client.subscribe(WebsocketMethod.newBlocksHeaders,
+        onSubscribed: onSubscribed,
+        onMessage: onMessage,
+        onDisconnected: onDisconnected);
+  }
+
+  void unsubscribeNewBlocksHeaders({int? subscriptionID}) {
+    var params = subscriptionID != null ? [subscriptionID] : null;
+    client.unsubscribe(WebsocketMethod.newBlocksHeaders, params: params);
+  }
+
+  void subscribeNewNewFilledBlocks(
+      Function onSubscribed, Function onMessage, Function onDisconnected) {
+    client.subscribe(WebsocketMethod.newFilledBlocks,
+        onSubscribed: onSubscribed,
+        onMessage: onMessage,
+        onDisconnected: onDisconnected);
+  }
+
+  void unsubscribeNewNewFilledBlocks({int? subscriptionID}) {
+    var params = subscriptionID != null ? [subscriptionID] : null;
+    client.unsubscribe(WebsocketMethod.newFilledBlocks, params: params);
+  }
+
+  void subscribeNewOperations(
+      Function onSubscribed, Function onMessage, Function onDisconnected) {
+    client.subscribe(WebsocketMethod.newOperations,
+        onSubscribed: onSubscribed,
+        onMessage: onMessage,
+        onDisconnected: onDisconnected);
+  }
+
+  void unsubscribeNewOperations({int? subscriptionID}) {
+    var params = subscriptionID != null ? [subscriptionID] : null;
+    client.unsubscribe(WebsocketMethod.newOperations, params: params);
   }
 }
