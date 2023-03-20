@@ -40,7 +40,7 @@ void main() async {
   api.subscribeNewBlocks(onSubscribed, onMessage, onDisconnected);
 
   await Future.delayed(const Duration(minutes: 1), () {});
-  api.unsubscribeNewBlocks(subID);
+  api.unsubscribeNewBlocks(subscriptionID: subID);
   print('unsubscribed...');
   api.disconnect();
   return;
