@@ -13,10 +13,10 @@ class Websocket {
   Function? onConnected;
   Function? onCannotConnect;
   Function? onConnectionLost;
-  Map<String, Function?> _onChannelSubscribedCallbacks = {};
-  Map<String, Function?> _onChannelDisconnectedCallbacks = {};
-  Map<String, Function?> _onChannelMessageCallbacks = {};
-  Map<String, int> _subscriptionIDs = {};
+  final Map<String, Function?> _onChannelSubscribedCallbacks = {};
+  final Map<String, Function?> _onChannelDisconnectedCallbacks = {};
+  final Map<String, Function?> _onChannelMessageCallbacks = {};
+  final Map<String, int> _subscriptionIDs = {};
 
   //Singleton class
   static final Websocket _instance = Websocket.internal();
@@ -32,7 +32,7 @@ class Websocket {
 
   Websocket.connect(
     String url, {
-    Map<String, String> headers: const {},
+    Map<String, String> headers = const {},
     this.onConnected,
     this.onConnectionLost,
     this.onCannotConnect,
@@ -82,7 +82,7 @@ class Websocket {
     send(method.subscribe, params: params);
   }
 
-  void unsubscribe(WebsocketMethod method, {dynamic? params}) {
+  void unsubscribe(WebsocketMethod method, {dynamic params}) {
     _onChannelSubscribedCallbacks[method.name] = null;
     _onChannelDisconnectedCallbacks[method.name] = null;
     _onChannelMessageCallbacks[method.name] = null;
@@ -90,8 +90,8 @@ class Websocket {
     send(method.unsubscribe, params: params);
   }
 
-  void send(String methodName, {dynamic? params}) {
-    params ??= {};
+  void send(String methodName, {dynamic params}) {
+    params ??= <String, dynamic>{};
     _send({
       'jsonrpc': '2.0',
       'id': 1,

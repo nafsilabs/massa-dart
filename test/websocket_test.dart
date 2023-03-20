@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:massa/src/client/websocket_api.dart';
 import 'package:test/test.dart';
 
@@ -17,7 +19,7 @@ void main() {
       print('subscribed');
     }
 
-    onMessage(Map data) {
+    onMessage(Map<String, dynamic> data) {
       print(data);
     }
 

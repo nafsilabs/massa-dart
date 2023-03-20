@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:massa/massa.dart';
 import 'package:massa/src/client/websocket.dart';
 
@@ -15,15 +13,10 @@ class WebsocketApi {
     return _instance;
   }
 
-  connected() {
-    print('connection established....');
-  }
-
   void connect(
       {Function? onConnected,
       Function? onConnectionLost,
       Function? onCannotConnect}) {
-    onCannotConnect ??= connected;
     client = Websocket.connect(websocketUri,
         onConnected: onConnected,
         onConnectionLost: onConnectionLost,
@@ -32,7 +25,6 @@ class WebsocketApi {
 
   void disconnect() {
     client.disconnect();
-    print('connection closed...');
   }
 
   void subscribeNewBlocks(

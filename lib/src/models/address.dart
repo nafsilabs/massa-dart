@@ -43,7 +43,6 @@ class Address {
         json['final_balance'] != null ? double.parse(json['final_balance']) : 0;
 
     finalRollCount = json['final_roll_count'];
-    ;
     finalDatastoreKeys = List<dynamic>.from(json['final_datastore_keys']);
     candidateBalance = json['candidate_balance'] != null
         ? double.parse(json['candidate_balance'])
@@ -81,9 +80,8 @@ class Address {
     data['candidate_datastore_keys'] = candidateDatastoreKeys;
     data['deferred_credits'] = deferredCredits;
     data['next_block_draws'] = nextBlockDraws;
-    data['next_endorsement_draws'] = nextEndorsementDraws != null
-        ? nextEndorsementDraws.map((e) => e.encode()).toList()
-        : [];
+    data['next_endorsement_draws'] =
+        nextEndorsementDraws.map((e) => e.encode()).toList();
     data['created_blocks'] = createdBlocks;
     data['created_operations'] = createdOperations;
     data['created_endorsements'] = createdEndorsements;
