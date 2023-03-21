@@ -20,6 +20,7 @@ class Wallet {
     accounts.putIfAbsent(account.address(), () => account);
   }
 
+  /// Add account into the wallet from secret key
   Future<void> addAccountFromSecretKey(
       String secret, AddressType addressType) async {
     var keyPair = await keyPairFromSecret(secret);
@@ -27,6 +28,7 @@ class Wallet {
     _addAccount(account);
   }
 
+  /// Get an account associated to a given address
   Account? getAccount(String address) {
     if (accounts.containsKey(address)) {
       return accounts[address];
@@ -35,6 +37,7 @@ class Wallet {
     }
   }
 
+// Creates a new account and add it into the wallet
   Future<void> newAccount(AddressType addressType) async {
     var keyPair = await generateKeyPair();
     var account = Account(keyPair, addressType);
@@ -45,6 +48,7 @@ class Wallet {
     return accounts;
   }
 
+  /// Gets wallet balance - which is a sum of all account balances
   Future<Balance> getBalance() async {
     List<String> addresses = [];
     accounts.forEach((key, value) {
@@ -65,6 +69,7 @@ class Wallet {
     return totalBalance;
   }
 
+  /// Returns balance of a specific account address
   Future<Balance> getAccountBalance(String address) async {
     List<String> addresses = [address];
     Balance balance = Balance(0, 0, 0, 0);
@@ -94,6 +99,7 @@ class Wallet {
     }
   }
 
+  /// Send transaction from one address to another
   Future<String> sendTransaction(
       String senderAddress, String recipientAddress, double amount) async {
     if (!accounts.containsKey(senderAddress)) {
@@ -125,6 +131,7 @@ class Wallet {
     return operationID!;
   }
 
+  /// buy rolls for a given address
   Future<String> buyRolls(String address, int rollCount) async {
     if (!accounts.containsKey(address)) {
       return 'wallet does not contain the wallet key';
@@ -153,6 +160,7 @@ class Wallet {
     return operationID!;
   }
 
+  /// Sell rolls associated with a given address
   Future<String> sellRolls(String address, int rollCount) async {
     if (!accounts.containsKey(address)) {
       return 'wallet does not contain the wallet key';

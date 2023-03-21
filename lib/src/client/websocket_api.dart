@@ -27,6 +27,7 @@ class WebsocketApi {
     client.disconnect();
   }
 
+  /// Subscribe new blocks
   void subscribeNewBlocks(
       Function onSubscribed, Function onMessage, Function onDisconnected) {
     client.subscribe(WebsocketMethod.newBlocks,
@@ -35,11 +36,13 @@ class WebsocketApi {
         onDisconnected: onDisconnected);
   }
 
+  /// Unsubscribe new blocks
   void unsubscribeNewBlocks({int? subscriptionID}) {
     var params = subscriptionID != null ? [subscriptionID] : null;
     client.unsubscribe(WebsocketMethod.newBlocks, params: params);
   }
 
+  /// Subscribe new blocks headers
   void subscribeNewBlocksHeaders(
       Function onSubscribed, Function onMessage, Function onDisconnected) {
     client.subscribe(WebsocketMethod.newBlocksHeaders,
@@ -48,11 +51,13 @@ class WebsocketApi {
         onDisconnected: onDisconnected);
   }
 
+  /// Unsubscribe to stop receiving new blocks headers events
   void unsubscribeNewBlocksHeaders({int? subscriptionID}) {
     var params = subscriptionID != null ? [subscriptionID] : null;
     client.unsubscribe(WebsocketMethod.newBlocksHeaders, params: params);
   }
 
+  /// Subscribe to receive events when a new block is filled
   void subscribeNewNewFilledBlocks(
       Function onSubscribed, Function onMessage, Function onDisconnected) {
     client.subscribe(WebsocketMethod.newFilledBlocks,
@@ -61,11 +66,13 @@ class WebsocketApi {
         onDisconnected: onDisconnected);
   }
 
+  /// Unsubscribe to stop receive events when a new block is filled
   void unsubscribeNewNewFilledBlocks({int? subscriptionID}) {
     var params = subscriptionID != null ? [subscriptionID] : null;
     client.unsubscribe(WebsocketMethod.newFilledBlocks, params: params);
   }
 
+  /// Subscribe to receive new operation events
   void subscribeNewOperations(
       Function onSubscribed, Function onMessage, Function onDisconnected) {
     client.subscribe(WebsocketMethod.newOperations,
@@ -74,6 +81,7 @@ class WebsocketApi {
         onDisconnected: onDisconnected);
   }
 
+  /// Unsubscribe to stop receiving new operation events
   void unsubscribeNewOperations({int? subscriptionID}) {
     var params = subscriptionID != null ? [subscriptionID] : null;
     client.unsubscribe(WebsocketMethod.newOperations, params: params);

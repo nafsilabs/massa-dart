@@ -5,6 +5,7 @@ import 'package:massa/src/crypto/key_pair.dart';
 import 'package:massa/src/crypto/varuint.dart';
 import 'package:massa/src/helpers/helpers.dart';
 
+/// Call smart contract class extends send operation base class
 class CallSC extends BaseSendOperation {
   String targetAddress;
   String targetFunction;
@@ -18,6 +19,8 @@ class CallSC extends BaseSendOperation {
       required this.maximumGas,
       required this.coins})
       : super(OperationType.transaction);
+
+  /// Compact bytes to be sent
   @override
   Uint8List compact() {
     final operationTypeEncoded = Varint.encode(operationType.index);

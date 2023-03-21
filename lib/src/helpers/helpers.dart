@@ -43,7 +43,6 @@ String bytesToUtf8String(Uint8List bytes) {
 }
 
 /// Concatenates one or more byte arrays
-///
 /// @param {List<Uint8List>} bytes
 /// @returns {Uint8List}
 Uint8List concat(List<Uint8List> bytes) {
@@ -54,6 +53,7 @@ Uint8List concat(List<Uint8List> bytes) {
   return hexToBytes(hex);
 }
 
+/// Joins two lists into one
 Uint8List joinUint8Lists(Uint8List p1, Uint8List p2) {
   List<int> keyList = p1.toList();
   keyList.addAll(p2);
@@ -80,7 +80,6 @@ int getTimestamp() {
 /// If a [separator] is provided, it is placed the hexadecimal characters
 /// representing each byte. Otherwise, all the hexadecimal characters are
 /// simply concatenated together.
-///
 String bin2hex(Uint8List bytes, {required String separator, int? wrap}) {
   var len = 0;
   final buf = StringBuffer();
@@ -102,10 +101,7 @@ String bin2hex(Uint8List bytes, {required String separator, int? wrap}) {
   return buf.toString();
 }
 
-///
 /// Decode a hexadecimal string [hexStr] into a sequence of bytes.
-///
-
 Uint8List hex2bin(String hexStr) {
   if (hexStr.length % 2 != 0) {
     throw const FormatException('not an even number of hexadecimal characters');
@@ -117,6 +113,7 @@ Uint8List hex2bin(String hexStr) {
   return result;
 }
 
+/// Converts list of bytes as hex string
 String asHexString(List<int> bytes) {
   final sb = StringBuffer();
   for (int b in bytes) {

@@ -367,6 +367,7 @@ class _HashContext {
 
 final _ctx = _HashContext();
 
+/// brake3 function hashes the data using brake 3
 List<int> blake3(List<int> input, [int outputLength = 32]) {
   if (input is! Uint8List) {
     input = Uint8List.fromList(input);
@@ -381,6 +382,7 @@ List<int> blake3(List<int> input, [int outputLength = 32]) {
   return output;
 }
 
+/// Hashes the supplied bytes into blake3 hashes and returns the result as hex string
 String blake3Hex(List<int> input, [int outputLength = 32]) {
   return asHexString(blake3(input, outputLength));
 }

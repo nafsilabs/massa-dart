@@ -13,6 +13,7 @@ class SendResponse {
 
 const maxRetryAttempts = 8;
 
+/// HTTP client
 class Client {
   final r = const RetryOptions(
       maxAttempts: maxRetryAttempts, delayFactor: Duration(seconds: 1));
@@ -29,6 +30,7 @@ class Client {
     return _returnResponse(response);
   }
 
+  /// POST function
   Future<dynamic> post(String method,
       {Map<String, dynamic> headers = Client.headers,
       Map<String, dynamic>? body,
@@ -53,6 +55,7 @@ class Client {
     return _returnResponse(response);
   }
 
+  /// PUT function
   Future<dynamic> put(
       {required Map<String, dynamic> body, dynamic headers}) async {
     final response = await r.retry(
@@ -63,6 +66,7 @@ class Client {
     return _returnResponse(response);
   }
 
+  /// DELETE function
   Future<dynamic> delete(
       {required Map<String, dynamic> body, dynamic headers}) async {
     final response = await r.retry(

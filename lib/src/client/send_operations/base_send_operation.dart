@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+/// Operation types
 enum OperationType {
   transaction,
   buyRoll,
@@ -8,6 +9,7 @@ enum OperationType {
   callSC,
 }
 
+/// Abstract base class for send operation
 abstract class BaseSendOperation {
   OperationType operationType;
   double? fee;

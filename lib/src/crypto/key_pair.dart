@@ -11,6 +11,8 @@ const addressPrefix = 'A';
 const userAddressPrefix = 'U';
 const smartContractAddressPrefix = 'S';
 
+/// Address type - which are either user address or smart contract address
+/// User address starts with AU and Smart contract address starts with AS
 enum AddressType { user, smartContract }
 
 /// PublicKey is the type of Ed25519 public key.
@@ -57,6 +59,7 @@ class KeyPair {
       publicKey == other.publicKey &&
       privateKey == other.privateKey;
 
+  /// Generates encoded massa address
   String address([AddressType? addressType]) {
     var secondPrifix = addressType == AddressType.user
         ? userAddressPrefix
@@ -69,12 +72,13 @@ class KeyPair {
         ]));
   }
 
+  /// Computes address thread
   int thread() {
     return _getAddressThread(address());
   }
 
+  /// Signs the message using ed25519 private key
   Future<String> sign(Uint8List message) async {
-    //final messageBytes = Uint8List.fromList(message.codeUnits);
     final hash = blake3Hash(message);
     final keyPair =
         await Ed25519().newKeyPairFromSeed(List.from(privateKey.bytes));
@@ -82,6 +86,7 @@ class KeyPair {
     return base58Encode(Uint8List.fromList(signature.bytes));
   }
 
+  /// Verify the signature
   Future<bool> verify(String message, String signatureString) async {
     final keyPair =
         await Ed25519().newKeyPairFromSeed(List.from(privateKey.bytes));
@@ -95,6 +100,7 @@ class KeyPair {
   }
 }
 
+///Generates ed25519 key pair
 Future<KeyPair> generateKeyPair() async {
   final keyPair = await Ed25519().newKeyPair();
   final pub = await keyPair.extractPublicKey();
@@ -104,6 +110,7 @@ Future<KeyPair> generateKeyPair() async {
   return KeyPair(privateKey, publicKey);
 }
 
+/// Generate ed25519 key pair from the [privateKeyString]
 Future<KeyPair> keyPairFromSecret(String privateKeyString) async {
   final decodedPrivateKey = decodePrivateKey(privateKeyString);
   final keyPair =
@@ -115,12 +122,14 @@ Future<KeyPair> keyPairFromSecret(String privateKeyString) async {
   return KeyPair(privateKey, publicKey);
 }
 
+/// Returns [PublicKey] from a given private key [privateKey]
 Future<PublicKey> public(PrivateKey privateKey) async {
   final key = await Ed25519().newKeyPairFromSeed(List.from(privateKey.bytes));
   final pub = await key.extractPublicKey();
   return PublicKey(Uint8List.fromList(pub.bytes));
 }
 
+/// Generate massa address from a given public key [publicKey]
 String address(PublicKey publicKey) {
   return addressPrefix +
       base58Encode(concat([
@@ -129,6 +138,7 @@ String address(PublicKey publicKey) {
       ]));
 }
 
+///Encodes private key [privateKey] into base 58 format
 String encodePrivateKey(PrivateKey privateKey) {
   return secretPrefix +
       base58Encode(concat([
@@ -137,6 +147,7 @@ String encodePrivateKey(PrivateKey privateKey) {
       ]));
 }
 
+/// Encodes public key [publicKey] into base 58 format
 String encodePublicKey(PublicKey publicKey) {
   return publicPrefix +
       base58Encode(concat([
@@ -145,16 +156,19 @@ String encodePublicKey(PublicKey publicKey) {
       ]));
 }
 
+/// Decodes private key string [privateKeyString] into [PrivateKey]
 PrivateKey decodePrivateKey(String privateKeyString) {
   var privateKeyBytes = base58Decode(privateKeyString.substring(1));
   return PrivateKey(privateKeyBytes.sublist(1));
 }
 
+/// Decodes public key string [publicKeyString] into [PublicKey]
 PublicKey decodePublicKey(String publicKeyString) {
   var publicKeyBytes = base58Decode(publicKeyString.substring(1));
   return PublicKey(publicKeyBytes.sublist(1));
 }
 
+///Parses address [address] into bytes
 Uint8List parseAddress(String address) {
   final pubKeyHash = base58Decode(address.substring(2));
   if (pubKeyHash.length != 33) {

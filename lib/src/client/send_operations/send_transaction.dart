@@ -5,6 +5,7 @@ import 'package:massa/src/crypto/common.dart';
 import 'package:massa/src/crypto/varuint.dart';
 import 'package:massa/src/helpers/helpers.dart';
 
+///Send transaction class extends send operation base class
 class SendTransaction extends BaseSendOperation {
   double amount;
   String recipientAddress;
@@ -14,6 +15,8 @@ class SendTransaction extends BaseSendOperation {
       required this.recipientAddress,
       required int expirePeriod})
       : super(OperationType.transaction, fee: fee, expirePeriod: expirePeriod);
+
+  /// Compats bytes before sending
   @override
   Uint8List compact() {
     final feeEncoded = Varint.encode(doubleToMassaInt(fee!));

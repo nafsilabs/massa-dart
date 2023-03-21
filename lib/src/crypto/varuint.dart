@@ -1,9 +1,11 @@
 import 'dart:typed_data';
 
+/// Variable interger class
 class Varint {
   static const _allButMSB = 0x7f;
   static const _justMSB = 0x80;
 
+  /// Decode bytes into integer
   static int decode(List<int> bytes) {
     int result = 0;
     int currentShift = 0;
@@ -24,6 +26,7 @@ class Varint {
     throw ArgumentError('Byte array did not contain valid varints.');
   }
 
+  /// Encodes the integer into varint in the byte format
   static Uint8List encode(int value) {
     Uint8List buff = Uint8List(10);
     buff.fillRange(0, 10, 0);

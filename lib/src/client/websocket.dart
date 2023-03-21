@@ -4,6 +4,7 @@ import 'package:massa/src/client/methods.dart';
 import 'package:web_socket_channel/io.dart';
 import 'package:web_socket_channel/status.dart' as status;
 
+/// Websocke class
 class Websocket {
   late Uri websocketUrl;
   DateTime? _lastPing;
@@ -30,6 +31,7 @@ class Websocket {
     return _instance;
   }
 
+  /// Establish websocket connection
   Websocket.connect(
     String url, {
     Map<String, String> headers = const {},
@@ -71,6 +73,7 @@ class Websocket {
     }
   }
 
+  /// Subscribe to websocket stream
   void subscribe(WebsocketMethod method,
       {Map<String, dynamic>? params,
       Function? onSubscribed,
@@ -82,6 +85,7 @@ class Websocket {
     send(method.subscribe, params: params);
   }
 
+  /// Unsubscribe to websocket stream
   void unsubscribe(WebsocketMethod method, {dynamic params}) {
     _onChannelSubscribedCallbacks[method.name] = null;
     _onChannelDisconnectedCallbacks[method.name] = null;
@@ -90,6 +94,7 @@ class Websocket {
     send(method.unsubscribe, params: params);
   }
 
+  /// send data to the websocket
   void send(String methodName, {dynamic params}) {
     params ??= <String, dynamic>{};
     _send({

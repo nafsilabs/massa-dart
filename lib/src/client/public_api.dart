@@ -23,6 +23,7 @@ class PublicApi {
     return _instance;
   }
 
+  /// Gets massa network status
   Future<Status?> getStatus() async {
     try {
       var response = await client.post(RequestMethod.getStatus);
@@ -32,6 +33,7 @@ class PublicApi {
     }
   }
 
+  /// Gets cliques
   Future<Cliques?> getCliques() async {
     try {
       var response = await client.post(RequestMethod.getCliques);
@@ -46,7 +48,7 @@ class PublicApi {
     }
   }
 
-// getStakers returns a map of addresses with their respective staked rolls
+  /// Returns a map of addresses with their respective staked rolls
   Future<Stakers> getStakers() async {
     var response = await client.post(RequestMethod.getStaker);
     List<Staker> stakers = [];
@@ -56,6 +58,7 @@ class PublicApi {
     return Stakers(stakers: stakers);
   }
 
+  /// Returns details of passed addresses
   Future<List<Address>?> getAddresses(List<String> addresses) async {
     var params = [addresses];
     try {
@@ -74,6 +77,7 @@ class PublicApi {
     }
   }
 
+  /// Gets massa blockchain graph intervals
   Future<List<GraphInterval>?> getGraphInterval(int start, int end) async {
     var params = [
       {'start': start, 'end': end}
@@ -91,6 +95,7 @@ class PublicApi {
     }
   }
 
+  /// Gets details of a blocks given block hashes
   Future<List<Block>?> getBlocks(List<String> blockHashes) async {
     var params = [blockHashes];
     try {
@@ -105,6 +110,7 @@ class PublicApi {
     }
   }
 
+  /// Gets operation details given the operation hashes
   Future<List<Operation>?> getOperations(List<String> ops) async {
     var params = [ops];
     try {
@@ -126,6 +132,7 @@ class PublicApi {
     }
   }
 
+  /// Returns details of endosements
   Future<List<Endorsement>?> getEndosements(List<String> endosementIds) async {
     var params = [endosementIds];
     try {
@@ -141,6 +148,7 @@ class PublicApi {
     }
   }
 
+  /// Returns send operations
   Future<String?> sendOperations(
       Uint8List data, String publicKey, String signature) async {
     var params = [

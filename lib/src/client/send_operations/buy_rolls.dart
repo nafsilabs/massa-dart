@@ -4,11 +4,14 @@ import 'package:massa/src/client/send_operations/base_send_operation.dart';
 import 'package:massa/src/crypto/varuint.dart';
 import 'package:massa/src/helpers/helpers.dart';
 
+/// Buy roll class extends send operation base class
 class BuyRolls extends BaseSendOperation {
   int rollCount;
   BuyRolls(
       {required this.rollCount, required double fee, required int expirePeriod})
       : super(OperationType.buyRoll, fee: fee, expirePeriod: expirePeriod);
+
+  /// Compact bytes to be sent
   @override
   Uint8List compact() {
     final feeEncoded = Varint.encode(doubleToMassaInt(fee!));

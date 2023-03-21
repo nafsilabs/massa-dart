@@ -1,12 +1,4 @@
-/*
-Get clique
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "get_cliques",
-    "params": []
-}
-*/
+
 
 class Cliques {
   Cliques({

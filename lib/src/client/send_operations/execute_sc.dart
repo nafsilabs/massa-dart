@@ -4,6 +4,7 @@ import 'package:massa/src/client/send_operations/base_send_operation.dart';
 import 'package:massa/src/crypto/varuint.dart';
 import 'package:massa/src/helpers/helpers.dart';
 
+/// Execute smart contract class extends send operation base class
 class ExecuteSC extends BaseSendOperation {
   Uint8List data;
   double maximumGas;

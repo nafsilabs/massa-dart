@@ -1,3 +1,4 @@
+/// HTTP massa supported api methods
 class RequestMethod {
   //public api
   static const getAddress = 'get_addresses';
@@ -29,6 +30,7 @@ class RequestMethod {
   static const nodeAddToPeersWhitelist = 'node_add_to_peers_whitelist';
 }
 
+/// Websocket massa supported methods
 enum WebsocketMethod {
   newBlocks('new_blocks'),
   newBlocksHeaders('new_blocks_headers'),
