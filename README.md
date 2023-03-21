@@ -116,8 +116,8 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[pub-dev-shield]: https://img.shields.io/pub/v/massa_dart?style=for-the-badge
-[pub-dev-url]: https://pub.dev/packages/massa_dart
+[pub-dev-shield]: https://img.shields.io/pub/v/massa?style=for-the-badge
+[pub-dev-url]: https://pub.dev/packages/massa
 [stars-shield]: https://img.shields.io/github/stars/jwmdev/massa-dart.svg?style=for-the-badge&logo=github&colorB=deeppink&label=stars
 [stars-url]: https://packagist.org/packages/jwmdev/massa-dart
 [issues-shield]: https://img.shields.io/github/issues/jwmdev/massa-dart.svg?style=for-the-badge
