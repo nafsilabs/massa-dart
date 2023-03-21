@@ -97,13 +97,8 @@ Future<void> main() async {
 ```
 
 ## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
-
-
-## Links
+You can get more information about massa by visiting the links below.
+### Links
 - [Massa: Massa main website](https://massa.net)
 - [Testnet: Massa testnet](https://test.massa.net)
 - [Testnet: Massa testnet](https://massa.net/testnet)
@@ -111,6 +106,8 @@ from the package authors, and more.
 - [Massa API: Massa official api documentation](https://docs.massa.net/en/latest/technical-doc/api.html)
 - [Massa Web3: massa-dart will have similar functionalities as massa-web3](https://github.com/massalabs/massa-web3)
 
+### Contribute
+You can contribute to this package, request new features or report any bug by visiting the package repository at [massa-dart](https://github.com/jwmdev/massa-dart)
 
 ## License
 
