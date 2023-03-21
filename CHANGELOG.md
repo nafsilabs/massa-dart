@@ -1,3 +1,7 @@
+## 1.1.1
+
+ - **DOCS**: improve the api documentation.
+
 ## 1.1.0
 
  - **FEAT**: crypto, api and webscoket.
