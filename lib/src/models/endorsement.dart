@@ -1,5 +1,6 @@
 import 'package:massa/src/models/slot.dart';
 
+/// Endorsement class
 class Endorsement {
   Endorsement({
     required this.id,
@@ -14,6 +15,7 @@ class Endorsement {
   late final bool isFinal;
   late final EndorsemenContent endorsement;
 
+  /// Decode endorsement
   Endorsement.decode(Map<String, dynamic> json) {
     id = json['id'];
     inPool = json['in_pool'];
@@ -22,6 +24,7 @@ class Endorsement {
     endorsement = EndorsemenContent.decode(json['endorsement']);
   }
 
+  /// Encode endorsement
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['id'] = id;
@@ -33,6 +36,7 @@ class Endorsement {
   }
 }
 
+/// Endorsement content class
 class EndorsemenContent {
   EndorsemenContent({
     required this.content,
@@ -47,6 +51,7 @@ class EndorsemenContent {
   late final String contentCreatorAddress;
   late final String id;
 
+  /// Decode endorsement content
   EndorsemenContent.decode(Map<String, dynamic> json) {
     content = Content.decode(json['content']);
     signature = json['signature'];
@@ -55,6 +60,7 @@ class EndorsemenContent {
     id = json['id'];
   }
 
+  /// Encode endorsement content
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['content'] = content.encode();
@@ -66,6 +72,7 @@ class EndorsemenContent {
   }
 }
 
+/// Content class
 class Content {
   Content({
     required this.slot,
@@ -76,12 +83,14 @@ class Content {
   late final int index;
   late final String endorsedBlock;
 
+  /// Decode content class
   Content.decode(Map<String, dynamic> json) {
     slot = Slot.decode(json['slot']);
     index = json['index'];
     endorsedBlock = json['endorsed_block'];
   }
 
+  /// Encode content class
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['slot'] = slot.encode();

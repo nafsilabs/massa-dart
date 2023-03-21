@@ -1,5 +1,4 @@
-
-
+/// Cliques class
 class Cliques {
   Cliques({
     required this.blockIds,
@@ -10,12 +9,14 @@ class Cliques {
   late final int fitness;
   late final bool isBlockclique;
 
+  /// Decode cliques class
   Cliques.decode(Map<String, dynamic> json) {
     blockIds = List.castFrom<dynamic, String>(json['block_ids']);
     fitness = json['fitness'];
     isBlockclique = json['is_blockclique'];
   }
 
+  /// Encode clique class
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['block_ids'] = blockIds;

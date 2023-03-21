@@ -1,3 +1,4 @@
+/// Massa balance class
 class Balance {
   double finalBalance;
   double candidateBalance;
@@ -6,6 +7,7 @@ class Balance {
   Balance(this.finalBalance, this.candidateBalance, this.finalRolls,
       this.candidateRolls);
 
+  /// Returns balance in string format
   @override
   String toString() {
     return 'final balance: $finalBalance, candidate candidate: $candidateBalance, final rolls: $finalRolls, candicate roll: $candidateRolls';

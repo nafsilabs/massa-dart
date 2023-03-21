@@ -1,5 +1,6 @@
 import 'package:massa/massa.dart';
 
+/// This example shows how to use the api, e.g for getting address info
 Future<void> main() async {
   final Uri pubUri = Uri.https('test.massa.net', 'api/v2');
 

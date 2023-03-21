@@ -1,3 +1,4 @@
+/// Massa block class
 class Block {
   Block({
     required this.id,
@@ -6,11 +7,13 @@ class Block {
   late final String id;
   late final BlockContent content;
 
+  /// Decode block
   Block.decode(Map<String, dynamic> json) {
     id = json['id'];
     content = BlockContent.decode(json['content']);
   }
 
+  /// Encode class
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['id'] = id;
@@ -19,6 +22,7 @@ class Block {
   }
 }
 
+/// Block content class
 class BlockContent {
   BlockContent({
     required this.isFinal,
@@ -33,6 +37,7 @@ class BlockContent {
   late final bool isDiscarded;
   late final BlockHeader block;
 
+  /// Decode block content
   BlockContent.decode(Map<String, dynamic> json) {
     isFinal = json['is_final'];
     isInBlockclique = json['is_in_blockclique'];
@@ -41,6 +46,7 @@ class BlockContent {
     block = BlockHeader.decode(json['block']);
   }
 
+  /// Encode block content
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['is_final'] = isFinal;
@@ -52,6 +58,7 @@ class BlockContent {
   }
 }
 
+/// Block header class
 class BlockHeader {
   BlockHeader({
     required this.header,
@@ -60,11 +67,13 @@ class BlockHeader {
   late final Header header;
   late final List<String> operations;
 
+  /// Decode block header class
   BlockHeader.decode(Map<String, dynamic> json) {
     header = Header.decode(json['header']);
     operations = List.castFrom<dynamic, String>(json['operations']);
   }
 
+  /// Encoded block header
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['header'] = header.encode();
@@ -73,6 +82,7 @@ class BlockHeader {
   }
 }
 
+/// Header class
 class Header {
   Header({
     required this.content,
@@ -87,6 +97,7 @@ class Header {
   late final String contentCreatorAddress;
   late final String id;
 
+  /// Decode header
   Header.decode(Map<String, dynamic> json) {
     content = BlockContent.decode(json['content']);
     signature = json['signature'];
@@ -95,6 +106,7 @@ class Header {
     id = json['id'];
   }
 
+  /// Encode header
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['content'] = content.encode();

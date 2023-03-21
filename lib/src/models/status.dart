@@ -1,15 +1,6 @@
-// request post:
-/*
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "get_status",
-    "params": []
-}
-*/
-
 import 'package:massa/src/models/slot.dart';
 
+/// Status class
 class Status {
   Status({
     required this.nodeId,
@@ -44,6 +35,7 @@ class Status {
   late final ExecutionStats executionStats;
   late final Config config;
 
+  /// Decode status
   Status.decode(Map<String, dynamic> json) {
     nodeId = json['node_id'];
     nodeIp = json['node_ip'];
@@ -62,6 +54,7 @@ class Status {
     config = Config.decode(json['config']);
   }
 
+  /// Encode status
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['node_id'] = nodeId;
@@ -83,6 +76,7 @@ class Status {
   }
 }
 
+/// Consensus stats class
 class ConsensusStats {
   ConsensusStats({
     required this.startTimespan,
@@ -97,6 +91,7 @@ class ConsensusStats {
   late final int staleBlockCount;
   late final int cliqueCount;
 
+  /// Decode consensus stats
   ConsensusStats.decode(Map<String, dynamic> json) {
     startTimespan = json['start_timespan'];
     endTimespan = json['end_timespan'];
@@ -105,6 +100,7 @@ class ConsensusStats {
     cliqueCount = json['clique_count'];
   }
 
+// Encode consensus stats
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['start_timespan'] = startTimespan;
@@ -116,6 +112,7 @@ class ConsensusStats {
   }
 }
 
+/// Network stat class
 class NetworkStats {
   NetworkStats({
     required this.inConnectionCount,
@@ -130,6 +127,7 @@ class NetworkStats {
   late final int bannedPeerCount;
   late final int activeNodeCount;
 
+  /// Decode network stats
   NetworkStats.decode(Map<String, dynamic> json) {
     inConnectionCount = json['in_connection_count'];
     outConnectionCount = json['out_connection_count'];
@@ -138,6 +136,7 @@ class NetworkStats {
     activeNodeCount = json['active_node_count'];
   }
 
+  /// Encode network stats
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['in_connection_count'] = inConnectionCount;
@@ -149,6 +148,7 @@ class NetworkStats {
   }
 }
 
+/// ExecutionStats class
 class ExecutionStats {
   ExecutionStats({
     required this.timeWindowStart,
@@ -163,6 +163,7 @@ class ExecutionStats {
   late final int finalExecutedOperationsCount;
   late final ActiveCursor activeCursor;
 
+  /// Decode ExecutionStats
   ExecutionStats.decode(Map<String, dynamic> json) {
     timeWindowStart = json['time_window_start'];
     timeWindowEnd = json['time_window_end'];
@@ -171,6 +172,7 @@ class ExecutionStats {
     activeCursor = ActiveCursor.decode(json['active_cursor']);
   }
 
+  /// Encode ExecutionStats
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['time_window_start'] = timeWindowStart;
@@ -182,6 +184,7 @@ class ExecutionStats {
   }
 }
 
+/// ActiveCursor class
 class ActiveCursor {
   ActiveCursor({
     required this.period,
@@ -190,11 +193,13 @@ class ActiveCursor {
   late final int period;
   late final int thread;
 
+//Encode ActiveCursor
   ActiveCursor.decode(Map<String, dynamic> json) {
     period = json['period'];
     thread = json['thread'];
   }
 
+//Decode ActiveCursor
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['period'] = period;
@@ -203,6 +208,7 @@ class ActiveCursor {
   }
 }
 
+///Config class
 class Config {
   Config({
     required this.genesisTimestamp,
@@ -227,6 +233,7 @@ class Config {
   late final String rollPrice;
   late final int maxBlockSize;
 
+  /// Decode Config
   Config.decode(Map<String, dynamic> json) {
     genesisTimestamp = json['genesis_timestamp'];
     endTimestamp = json['end_timestamp'];
@@ -240,6 +247,7 @@ class Config {
     maxBlockSize = json['max_block_size'];
   }
 
+  /// Encode Config
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['genesis_timestamp'] = genesisTimestamp;

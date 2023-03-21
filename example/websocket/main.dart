@@ -26,6 +26,9 @@ onDisconnected() {
 }
 
 late int subID;
+
+/// This example shows how to use the websocket api
+
 void main() async {
   var me = WebsocketMethod.newBlocks.subscribe;
   print('websocket: $me');

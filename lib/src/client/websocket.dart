@@ -55,14 +55,15 @@ class Websocket {
     _timer = Timer.periodic(const Duration(seconds: 3), healthCheck);
   }
 
+  /// Disconnect webscoket channel
   void disconnect() {
     _timer.cancel();
     _socketChannel.sink.close(status.goingAway);
     _listener.cancel();
   }
 
-  // check if there is no ping for 3 seconds and signal a [onConnectionLost] if
-  // there is no ping for more than 6 seconds
+  /// check if there is no ping for 3 seconds and signal a [onConnectionLost] if
+  /// there is no ping for more than 6 seconds
   void healthCheck(_) {
     if (_lastPing == null) {
       return;

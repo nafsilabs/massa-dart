@@ -1,5 +1,6 @@
 import 'package:massa/src/models/slot.dart';
 
+/// Graph interval class
 class GraphInterval {
   GraphInterval({
     required this.creator,
@@ -18,6 +19,7 @@ class GraphInterval {
   late final List<String> parents;
   late final Slot slot;
 
+  /// Decode graph interval
   GraphInterval.decode(Map<String, dynamic> json) {
     creator = json['creator'];
     id = json['id'];
@@ -28,6 +30,7 @@ class GraphInterval {
     slot = Slot.decode(json['slot']);
   }
 
+  /// Encode graph interval
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['creator'] = creator;

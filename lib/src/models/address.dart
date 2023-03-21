@@ -2,6 +2,7 @@
 
 import 'package:massa/src/models/slot.dart';
 
+/// Address class
 class Address {
   Address({
     required this.address,
@@ -36,6 +37,7 @@ class Address {
   late final List<dynamic> createdEndorsements;
   late final List<CycleInfos> cycleInfos;
 
+  /// Decode address
   Address.decode(Map<String, dynamic> json) {
     address = json['address'];
     thread = json['thread'];
@@ -68,6 +70,7 @@ class Address {
         .toList();
   }
 
+  /// Encode address
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['address'] = address;
@@ -90,6 +93,7 @@ class Address {
   }
 }
 
+/// Next endosement draws class
 class NextEndorsementDraws {
   NextEndorsementDraws({
     required this.slot,
@@ -98,11 +102,13 @@ class NextEndorsementDraws {
   late final Slot slot;
   late final int index;
 
+  /// Decode next endosement draws
   NextEndorsementDraws.decode(Map<String, dynamic> json) {
     slot = Slot.decode(json['slot']);
     index = json['index'];
   }
 
+  /// Encode next endosement draws
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['slot'] = slot.encode();
@@ -111,6 +117,7 @@ class NextEndorsementDraws {
   }
 }
 
+/// Cycle Infos class
 class CycleInfos {
   CycleInfos({
     required this.cycle,
@@ -125,6 +132,7 @@ class CycleInfos {
   late final int nokCount;
   late final int activeRolls;
 
+  /// Decode cycle info class
   CycleInfos.decode(Map<String, dynamic> json) {
     cycle = json['cycle'];
     isFinal = json['is_final'];
@@ -133,6 +141,7 @@ class CycleInfos {
     activeRolls = json['active_rolls'] ?? 0;
   }
 
+  /// Encode cycle info class
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
     data['cycle'] = cycle;
