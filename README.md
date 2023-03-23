@@ -1,5 +1,5 @@
 
-# massa-dart
+# massa
 [![pub.dev][pub-dev-shield]][pub-dev-url]
 [![Stars][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
