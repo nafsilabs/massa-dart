@@ -23,6 +23,17 @@ class PrivateApi {
     }
   }
 
+  /// Add node to peers whitelist
+  Future<dynamic> addToPeersWhiteList(String ipAddress) async {
+    try {
+      var response = await client
+          .post(RequestMethod.nodeAddToPeersWhitelist, params: [ipAddress]);
+      return response['result'];
+    } catch (e) {
+      return null;
+    }
+  }
+
   /// Node ban by id
   Future<dynamic> nodeBanByID(String nodeID) async {
     try {
@@ -45,8 +56,8 @@ class PrivateApi {
     }
   }
 
-  /// Node ban by ip
-  Future<dynamic> nodeBanByIP(String nodeIP) async {
+  /// Ban a given ip address
+  Future<dynamic> nodeBanByIPAddress(String nodeIP) async {
     try {
       var response =
           await client.post(RequestMethod.nodeBanByIP, params: [nodeIP]);
@@ -56,8 +67,8 @@ class PrivateApi {
     }
   }
 
-  /// Node ban by ip
-  Future<dynamic> nodeUnbanByIP(String nodeIP) async {
+  /// Unban a given ip address
+  Future<dynamic> nodeUnbanByIPAddress(String nodeIP) async {
     try {
       var response =
           await client.post(RequestMethod.nodeUnbanByIP, params: [nodeIP]);
