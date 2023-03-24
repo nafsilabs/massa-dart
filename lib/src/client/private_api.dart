@@ -67,7 +67,7 @@ class PrivateApi {
   }
 
   /// Remove staking addresses
-  Future<List<String>?> removeStakingAddresses(List<String> secretKeys) async {
+  Future<dynamic> removeStakingAddresses(List<String> secretKeys) async {
     try {
       var response = await client.post(RequestMethod.removeStakingAddresses,
           params: secretKeys);
