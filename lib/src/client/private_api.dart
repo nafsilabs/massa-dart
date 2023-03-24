@@ -23,6 +23,17 @@ class PrivateApi {
     }
   }
 
+  /// Node ban by id
+  Future<dynamic> nodeBanByID(String nodeID) async {
+    try {
+      var response =
+          await client.post(RequestMethod.nodeBanByID, params: [nodeID]);
+      return response['result'];
+    } catch (e) {
+      return null;
+    }
+  }
+
   /// Gets staking addresses of the node
   Future<List<String>?> getStakingAddresses() async {
     try {
