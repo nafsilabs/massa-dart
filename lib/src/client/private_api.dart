@@ -56,6 +56,17 @@ class PrivateApi {
     }
   }
 
+  /// Node ban by ip
+  Future<dynamic> nodeUnbanByIP(String nodeIP) async {
+    try {
+      var response =
+          await client.post(RequestMethod.nodeUnbanByIP, params: [nodeIP]);
+      return response['result'];
+    } catch (e) {
+      return null;
+    }
+  }
+
   /// Gets staking addresses of the node
   Future<List<String>?> getStakingAddresses() async {
     try {
