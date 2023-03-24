@@ -13,6 +13,16 @@ class PrivateApi {
     return _instance;
   }
 
+  /// Stop node
+  Future<void> stopNode() async {
+    try {
+      await client.post(RequestMethod.stopNode);
+      return;
+    } catch (e) {
+      return;
+    }
+  }
+
   /// Gets staking addresses of the node
   Future<List<String>?> getStakingAddresses() async {
     try {

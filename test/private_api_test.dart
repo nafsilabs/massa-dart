@@ -12,5 +12,9 @@ void main() {
       var stakingAddresses = await api.getStakingAddresses();
       print(stakingAddresses);
     });
+
+    test('stop node', () async {
+      await api.stopNode();
+    });
   });
 }
