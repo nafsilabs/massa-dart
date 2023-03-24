@@ -32,4 +32,13 @@ class PrivateApi {
       return null;
     }
   }
+  /// Add staking secret keys
+  Future<List<String>?> addStakingSecretKeys(List<String> secretKeys) async {
+    try {
+      var response = await client.post(RequestMethod.addStakingPrivateKeys,params: secretKeys);
+      return response['result'];
+    } catch (e) {
+      return null;
+    }
+  }
 }
