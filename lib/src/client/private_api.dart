@@ -24,10 +24,25 @@ class PrivateApi {
   }
 
   /// Add node to peers whitelist
-  Future<dynamic> addToPeersWhiteList(String ipAddress) async {
+  Future<dynamic> addToPeersWhitelist(String ipAddress) async {
     try {
-      var response = await client
-          .post(RequestMethod.nodeAddToPeersWhitelist, params: [ipAddress]);
+      var response =
+          await client.post(RequestMethod.nodeAddToPeersWhitelist, params: [
+        [ipAddress]
+      ]);
+      return response['result'];
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// Add node to peers whitelist
+  Future<dynamic> removeFromWhitelist(String ipAddress) async {
+    try {
+      var response =
+          await client.post(RequestMethod.nodeRemoveFromWhitelist, params: [
+        [ipAddress]
+      ]);
       return response['result'];
     } catch (e) {
       return null;
@@ -37,8 +52,9 @@ class PrivateApi {
   /// Node ban by id
   Future<dynamic> nodeBanByID(String nodeID) async {
     try {
-      var response =
-          await client.post(RequestMethod.nodeBanByID, params: [nodeID]);
+      var response = await client.post(RequestMethod.nodeBanByID, params: [
+        [nodeID]
+      ]);
       return response['result'];
     } catch (e) {
       return null;
@@ -48,8 +64,9 @@ class PrivateApi {
   /// Node unban by id
   Future<dynamic> nodeUnbanByID(String nodeID) async {
     try {
-      var response =
-          await client.post(RequestMethod.nodeUnbanByID, params: [nodeID]);
+      var response = await client.post(RequestMethod.nodeUnbanByID, params: [
+        [nodeID]
+      ]);
       return response['result'];
     } catch (e) {
       return null;
@@ -59,8 +76,9 @@ class PrivateApi {
   /// Ban a given ip address
   Future<dynamic> nodeBanByIPAddress(String nodeIP) async {
     try {
-      var response =
-          await client.post(RequestMethod.nodeBanByIP, params: [nodeIP]);
+      var response = await client.post(RequestMethod.nodeBanByIP, params: [
+        [nodeIP]
+      ]);
       return response['result'];
     } catch (e) {
       return null;
@@ -70,8 +88,9 @@ class PrivateApi {
   /// Unban a given ip address
   Future<dynamic> nodeUnbanByIPAddress(String nodeIP) async {
     try {
-      var response =
-          await client.post(RequestMethod.nodeUnbanByIP, params: [nodeIP]);
+      var response = await client.post(RequestMethod.nodeUnbanByIP, params: [
+        [nodeIP]
+      ]);
       return response['result'];
     } catch (e) {
       return null;
