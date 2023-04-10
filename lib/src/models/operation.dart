@@ -1,5 +1,5 @@
-/*
- operation: {content: {fee: 0, expire_period: 19899, op: {Transaction: {recipient_address: AU12WQRoxQJKMjNG8hVjkyh4YgBwaYeUH4BsqJEEdTUJda37GhSx9, amount: 0.000100666}}}, signature: 74qbPf1ugt8dUYyVFAxCyFyTSNmq3nCpKkjMgCfxKVqQ5fLguypHDWh98HxJ1CAPDzB15sc3ubZHvd9neX3Wfai6TQoTz, content_creator_pub_key: P1W9HovxZFyzxyXMQmYkXYgczaevjnV6hxoLWjfpqTaQs54vmhd, content_creator_address: AU12MMHhydaLVJAgiPkg4Nb2w3w96nLG3eZZ98ewgx76ZKtPom5kF, id: O11BfUt2iDrLJ42cBEfmKToZfQW1qyBB78oVzvpKbdpB7Pu5Bar}, op_exec_status: true}*/
+import 'package:massa/src/models/operation_types.dart';
+
 class Operation {
   Operation({
     required this.id,
@@ -78,12 +78,12 @@ class OperationContent {
   });
   late final String fee;
   late final int expirePeriod;
-  late final Op op;
+  late final OperationType op;
 
   OperationContent.decode(Map<String, dynamic> json) {
     fee = json['fee'];
     expirePeriod = json['expire_period'];
-    op = Op.decode(json['op']);
+    op = OperationType.decode(json['op']);
   }
 
   Map<String, dynamic> encode() {
@@ -91,44 +91,6 @@ class OperationContent {
     data['fee'] = fee;
     data['expire_period'] = expirePeriod;
     data['op'] = op.encode();
-    return data;
-  }
-}
-
-class Op {
-  Op({
-    required this.transaction,
-  });
-  late final Transaction transaction;
-
-  Op.decode(Map<String, dynamic> json) {
-    transaction = Transaction.decode(json['Transaction']);
-  }
-
-  Map<String, dynamic> encode() {
-    final data = <String, dynamic>{};
-    data['Transaction'] = transaction.encode();
-    return data;
-  }
-}
-
-class Transaction {
-  Transaction({
-    required this.recipientAddress,
-    required this.amount,
-  });
-  late final String recipientAddress;
-  late final String amount;
-
-  Transaction.decode(Map<String, dynamic> json) {
-    recipientAddress = json['recipient_address'];
-    amount = json['amount'];
-  }
-
-  Map<String, dynamic> encode() {
-    final data = <String, dynamic>{};
-    data['recipient_address'] = recipientAddress;
-    data['amount'] = amount;
     return data;
   }
 }

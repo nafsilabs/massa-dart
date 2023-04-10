@@ -43,9 +43,7 @@ class Websocket {
     // channel gets a ping every 6 seconds
 
     _socketChannel = IOWebSocketChannel.connect(websocketUrl,
-        headers: headers,
-        pingInterval: const Duration(seconds: 3),
-        connectTimeout: const Duration(seconds: 30));
+        headers: headers, pingInterval: const Duration(seconds: 3));
 
     _listener = _socketChannel.stream.listen(_onData, onError: (_) async {
       disconnect(); // close a socket and the timer

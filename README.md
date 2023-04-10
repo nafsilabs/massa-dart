@@ -63,6 +63,22 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [x] subscribe_new_operations
 - [x] unsubscribe_new_operations
 
+### GRPC API (node_ip:33037)
+- [x] getBlocksBySlots
+- [x] getDataStoreEntries
+- [x] getNextBlockBestParent
+- [x] getSelectorDraw
+- [x] getTransactionsThroughput
+- [x] getVersion
+- [x] newBlocks
+- [x] newBlockHeaders
+- [x] newFilledBlocks
+- [x] newOperations
+- [x] sendBlock
+- [x] sendEndorsement
+- [x] sendOperations
+- [x] transactionThroughput
+
 ## Getting started
 
 Check usage in `/test` folder.
