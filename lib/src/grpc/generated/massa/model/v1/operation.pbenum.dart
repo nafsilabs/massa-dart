@@ -10,14 +10,38 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class OperationStatus extends $pb.ProtobufEnum {
-  static const OperationStatus OPERATION_STATUS_UNSPECIFIED = OperationStatus._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'OPERATION_STATUS_UNSPECIFIED');
-  static const OperationStatus OPERATION_STATUS_PENDING = OperationStatus._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'OPERATION_STATUS_PENDING');
-  static const OperationStatus OPERATION_STATUS_FINAL = OperationStatus._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'OPERATION_STATUS_FINAL');
-  static const OperationStatus OPERATION_STATUS_SUCCESS = OperationStatus._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'OPERATION_STATUS_SUCCESS');
-  static const OperationStatus OPERATION_STATUS_FAILURE = OperationStatus._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'OPERATION_STATUS_FAILURE');
-  static const OperationStatus OPERATION_STATUS_UNKNOWN = OperationStatus._(5, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'OPERATION_STATUS_UNKNOWN');
+  static const OperationStatus OPERATION_STATUS_UNSPECIFIED = OperationStatus._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATUS_UNSPECIFIED');
+  static const OperationStatus OPERATION_STATUS_PENDING = OperationStatus._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATUS_PENDING');
+  static const OperationStatus OPERATION_STATUS_FINAL = OperationStatus._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATUS_FINAL');
+  static const OperationStatus OPERATION_STATUS_SUCCESS = OperationStatus._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATUS_SUCCESS');
+  static const OperationStatus OPERATION_STATUS_FAILURE = OperationStatus._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATUS_FAILURE');
+  static const OperationStatus OPERATION_STATUS_UNKNOWN = OperationStatus._(
+      5,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'OPERATION_STATUS_UNKNOWN');
 
-  static const $core.List<OperationStatus> values = <OperationStatus> [
+  static const $core.List<OperationStatus> values = <OperationStatus>[
     OPERATION_STATUS_UNSPECIFIED,
     OPERATION_STATUS_PENDING,
     OPERATION_STATUS_FINAL,
@@ -26,9 +50,9 @@ class OperationStatus extends $pb.ProtobufEnum {
     OPERATION_STATUS_UNKNOWN,
   ];
 
-  static final $core.Map<$core.int, OperationStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, OperationStatus> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static OperationStatus? valueOf($core.int value) => _byValue[value];
 
   const OperationStatus._($core.int v, $core.String n) : super(v, n);
 }
-
