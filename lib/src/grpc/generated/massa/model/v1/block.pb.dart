@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: block.proto
+//  source: massa/model/v1/block.proto
 //
 // @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
@@ -9,12 +9,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'slot.pb.dart' as $1;
-import 'endorsement.pb.dart' as $3;
-import 'operation.pb.dart' as $4;
+import 'slot.pb.dart' as $3;
+import 'endorsement.pb.dart' as $5;
+import 'operation.pb.dart' as $6;
+
+import 'block.pbenum.dart';
+
+export 'block.pbenum.dart';
 
 class Block extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Block', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.api.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Block', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
     ..aOM<SignedBlockHeader>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'header', subBuilder: SignedBlockHeader.create)
     ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operations')
     ..hasRequiredFields = false
@@ -71,7 +75,7 @@ class Block extends $pb.GeneratedMessage {
 }
 
 class FilledBlock extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FilledBlock', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.api.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FilledBlock', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
     ..aOM<SignedBlockHeader>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'header', subBuilder: SignedBlockHeader.create)
     ..pc<FilledOperationTuple>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operations', $pb.PbFieldType.PM, subBuilder: FilledOperationTuple.create)
     ..hasRequiredFields = false
@@ -128,20 +132,20 @@ class FilledBlock extends $pb.GeneratedMessage {
 }
 
 class BlockHeader extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockHeader', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.api.v1'), createEmptyInstance: create)
-    ..aOM<$1.Slot>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', subBuilder: $1.Slot.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockHeader', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOM<$3.Slot>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', subBuilder: $3.Slot.create)
     ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parents')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operationMerkleRoot')
-    ..pc<$3.SignedEndorsement>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endorsements', $pb.PbFieldType.PM, subBuilder: $3.SignedEndorsement.create)
+    ..pc<$5.SignedEndorsement>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endorsements', $pb.PbFieldType.PM, subBuilder: $5.SignedEndorsement.create)
     ..hasRequiredFields = false
   ;
 
   BlockHeader._() : super();
   factory BlockHeader({
-    $1.Slot? slot,
+    $3.Slot? slot,
     $core.Iterable<$core.String>? parents,
     $core.String? operationMerkleRoot,
-    $core.Iterable<$3.SignedEndorsement>? endorsements,
+    $core.Iterable<$5.SignedEndorsement>? endorsements,
   }) {
     final _result = create();
     if (slot != null) {
@@ -180,15 +184,15 @@ class BlockHeader extends $pb.GeneratedMessage {
   static BlockHeader? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.Slot get slot => $_getN(0);
+  $3.Slot get slot => $_getN(0);
   @$pb.TagNumber(1)
-  set slot($1.Slot v) { setField(1, v); }
+  set slot($3.Slot v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSlot() => $_has(0);
   @$pb.TagNumber(1)
   void clearSlot() => clearField(1);
   @$pb.TagNumber(1)
-  $1.Slot ensureSlot() => $_ensure(0);
+  $3.Slot ensureSlot() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<$core.String> get parents => $_getList(1);
@@ -203,20 +207,20 @@ class BlockHeader extends $pb.GeneratedMessage {
   void clearOperationMerkleRoot() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<$3.SignedEndorsement> get endorsements => $_getList(3);
+  $core.List<$5.SignedEndorsement> get endorsements => $_getList(3);
 }
 
 class FilledOperationTuple extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FilledOperationTuple', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.api.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FilledOperationTuple', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operationId')
-    ..aOM<$4.SignedOperation>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operation', subBuilder: $4.SignedOperation.create)
+    ..aOM<$6.SignedOperation>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operation', subBuilder: $6.SignedOperation.create)
     ..hasRequiredFields = false
   ;
 
   FilledOperationTuple._() : super();
   factory FilledOperationTuple({
     $core.String? operationId,
-    $4.SignedOperation? operation,
+    $6.SignedOperation? operation,
   }) {
     final _result = create();
     if (operationId != null) {
@@ -258,19 +262,19 @@ class FilledOperationTuple extends $pb.GeneratedMessage {
   void clearOperationId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $4.SignedOperation get operation => $_getN(1);
+  $6.SignedOperation get operation => $_getN(1);
   @$pb.TagNumber(2)
-  set operation($4.SignedOperation v) { setField(2, v); }
+  set operation($6.SignedOperation v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasOperation() => $_has(1);
   @$pb.TagNumber(2)
   void clearOperation() => clearField(2);
   @$pb.TagNumber(2)
-  $4.SignedOperation ensureOperation() => $_ensure(1);
+  $6.SignedOperation ensureOperation() => $_ensure(1);
 }
 
 class SignedBlock extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignedBlock', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.api.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignedBlock', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
     ..aOM<Block>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'content', subBuilder: Block.create)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentCreatorPubKey')
@@ -375,7 +379,7 @@ class SignedBlock extends $pb.GeneratedMessage {
 }
 
 class SignedBlockHeader extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignedBlockHeader', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.api.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignedBlockHeader', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
     ..aOM<BlockHeader>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'content', subBuilder: BlockHeader.create)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentCreatorPubKey')
@@ -477,5 +481,76 @@ class SignedBlockHeader extends $pb.GeneratedMessage {
   $core.bool hasId() => $_has(4);
   @$pb.TagNumber(5)
   void clearId() => clearField(5);
+}
+
+class BlockWrapper extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockWrapper', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<Block>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'block', subBuilder: Block.create)
+    ..pc<BlockStatus>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.KE, valueOf: BlockStatus.valueOf, enumValues: BlockStatus.values, defaultEnumValue: BlockStatus.BLOCK_STATUS_UNSPECIFIED)
+    ..hasRequiredFields = false
+  ;
+
+  BlockWrapper._() : super();
+  factory BlockWrapper({
+    $core.String? id,
+    Block? block,
+    $core.Iterable<BlockStatus>? status,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (block != null) {
+      _result.block = block;
+    }
+    if (status != null) {
+      _result.status.addAll(status);
+    }
+    return _result;
+  }
+  factory BlockWrapper.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BlockWrapper.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  BlockWrapper clone() => BlockWrapper()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BlockWrapper copyWith(void Function(BlockWrapper) updates) => super.copyWith((message) => updates(message as BlockWrapper)) as BlockWrapper; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BlockWrapper create() => BlockWrapper._();
+  BlockWrapper createEmptyInstance() => create();
+  static $pb.PbList<BlockWrapper> createRepeated() => $pb.PbList<BlockWrapper>();
+  @$core.pragma('dart2js:noInline')
+  static BlockWrapper getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BlockWrapper>(create);
+  static BlockWrapper? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  Block get block => $_getN(1);
+  @$pb.TagNumber(2)
+  set block(Block v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasBlock() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBlock() => clearField(2);
+  @$pb.TagNumber(2)
+  Block ensureBlock() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.List<BlockStatus> get status => $_getList(2);
 }
 

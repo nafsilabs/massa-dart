@@ -7,18 +7,20 @@ import 'package:test/test.dart';
 void main() {
   group('Wallet test: ', () {
     final Uri pubUri = Uri.https('test.massa.net', 'api/v2');
-    const secret = 'S1ypuNJxYyk9tURXSJ5EwrVPGDyRoL67Vs378koe7Km2khuudBa';
-    const secret2 = 'S12m3p3rc3BYXfok5xEMEawmmmcXrkkSMiat2zXUFdNsPVjX8i5V';
+    const secret = 'S13MTiwmU1pD8vLV4FBRDnAZ1XbceRmw8mTHaZCy3EW9Lf4ME9L';
+    const publicKey = 'P1XK13a4uvBm1n5R7bZ839ZTbgVana7FHBh4nEgcmNoUb7KzCaa';
+    const address = 'AU124FuDBRPmWLCtTRvXqMemBnD1Ky4L8QAqoJxF8gYP1reAGgv5Q';
+
     final wallet = Wallet(pubUri);
-    wallet.newAccount(AddressType.user);
+    //wallet.newAccount(AddressType.user);
     wallet.addAccountFromSecretKey(secret, AddressType.user);
-    wallet.addAccountFromSecretKey(secret2, AddressType.user);
+    //wallet.addAccountFromSecretKey(secret2, AddressType.user);
     test('list accounts', () async {
       final accounts = wallet.listAccounts();
-      accounts.forEach((key, value) => {print(value.toString())});
+      accounts.forEach((key, value) => print(value.toString()));
     });
 
-    test('wallet all balances', () async {
+    /* test('wallet all balances', () async {
       final balance = await wallet.getBalance();
       print(balance.toString());
     });
@@ -29,7 +31,7 @@ void main() {
       print(balance.toString());
     });
 
-    /* test('buy rolls', () async {
+    test('buy rolls', () async {
       const address = 'AU1Rnv57yVeTzHHFcxgw3LT46RndzFW32kFce8LPbYVKkQTCqK3P';
       final resp = await wallet.buyRolls(address, 1);
       print('resp: $resp');
@@ -39,7 +41,7 @@ void main() {
       const address = 'AU1Rnv57yVeTzHHFcxgw3LT46RndzFW32kFce8LPbYVKkQTCqK3P';
       final resp = await wallet.sellRolls(address, 1);
       print('resp: $resp');
-    });*/
+    });
 
     test('transaction', () async {
       const senderAddress =
@@ -54,7 +56,7 @@ void main() {
 
     test('list accounts', () async {
       final accounts = wallet.listAccounts();
-      accounts.forEach((key, value) => {print(value.toString())});
-    });
+      accounts.forEach((key, value) => print(value.toString()));
+    });*/
   });
 }

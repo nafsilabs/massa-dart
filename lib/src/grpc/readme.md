@@ -3,10 +3,13 @@
 Run the following command
 ```
 protoc \
-  ../massa/massa-proto/proto/**/*.proto \
-  --proto_path=../massa/massa-proto/proto/massa/api/v1 \
-  --proto_path=../massa/massa-proto/proto/third-party \
+  ../massa-proto/proto/**/*.proto \
+  --proto_path=../massa-proto/proto/apis/massa/api/v1 \
+  --proto_path=../massa-proto/proto/abis/massa/abi/v1 \
+  --proto_path=../massa-proto/proto/commons \
+  --proto_path=../massa-proto/proto/third_party \
   --dart_out=grpc:lib/src/grpc/generated
 ```
-
 Assumpton: give correct path of massa repository
+
+

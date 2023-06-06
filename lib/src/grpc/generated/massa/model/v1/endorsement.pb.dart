@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: endorsement.proto
+//  source: massa/model/v1/endorsement.proto
 //
 // @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
@@ -9,11 +9,11 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'slot.pb.dart' as $1;
+import 'slot.pb.dart' as $3;
 
 class Endorsement extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Endorsement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.api.v1'), createEmptyInstance: create)
-    ..aOM<$1.Slot>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', subBuilder: $1.Slot.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Endorsement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOM<$3.Slot>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', subBuilder: $3.Slot.create)
     ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'index', $pb.PbFieldType.OF3)
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endorsedBlock')
     ..hasRequiredFields = false
@@ -21,7 +21,7 @@ class Endorsement extends $pb.GeneratedMessage {
 
   Endorsement._() : super();
   factory Endorsement({
-    $1.Slot? slot,
+    $3.Slot? slot,
     $core.int? index,
     $core.String? endorsedBlock,
   }) {
@@ -59,15 +59,15 @@ class Endorsement extends $pb.GeneratedMessage {
   static Endorsement? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.Slot get slot => $_getN(0);
+  $3.Slot get slot => $_getN(0);
   @$pb.TagNumber(1)
-  set slot($1.Slot v) { setField(1, v); }
+  set slot($3.Slot v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSlot() => $_has(0);
   @$pb.TagNumber(1)
   void clearSlot() => clearField(1);
   @$pb.TagNumber(1)
-  $1.Slot ensureSlot() => $_ensure(0);
+  $3.Slot ensureSlot() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.int get index => $_getIZ(1);
@@ -89,7 +89,7 @@ class Endorsement extends $pb.GeneratedMessage {
 }
 
 class SignedEndorsement extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignedEndorsement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.api.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignedEndorsement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
     ..aOM<Endorsement>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'content', subBuilder: Endorsement.create)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentCreatorPubKey')

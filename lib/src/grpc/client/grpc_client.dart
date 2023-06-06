@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:fixnum/fixnum.dart';
 import 'package:grpc/grpc.dart';
 import 'package:massa/src/grpc/generated/api.pbgrpc.dart';
-import 'package:massa/src/grpc/generated/common.pb.dart';
-import 'package:massa/src/grpc/generated/slot.pb.dart';
+import 'package:massa/src/grpc/generated/massa/model/v1/commons.pb.dart';
+import 'package:massa/src/grpc/generated/massa/model/v1/slot.pb.dart';
 
 class GrpcClient {
   late String host; //host ip address
@@ -124,7 +124,6 @@ class GrpcClient {
         TransactionsThroughputRequest(id: '1', interval: interval));
     return massaServiceClient.transactionsThroughput(req);
   }
-
 
   /// client shutdwon
   Future<void> shutDown() async {

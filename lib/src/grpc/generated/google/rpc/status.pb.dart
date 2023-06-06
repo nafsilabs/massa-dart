@@ -9,13 +9,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../protobuf/any.pb.dart' as $6;
+import '../protobuf/any.pb.dart' as $2;
 
 class Status extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Status', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'google.rpc'), createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'code', $pb.PbFieldType.O3)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'message')
-    ..pc<$6.Any>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'details', $pb.PbFieldType.PM, subBuilder: $6.Any.create)
+    ..pc<$2.Any>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'details', $pb.PbFieldType.PM, subBuilder: $2.Any.create)
     ..hasRequiredFields = false
   ;
 
@@ -23,7 +23,7 @@ class Status extends $pb.GeneratedMessage {
   factory Status({
     $core.int? code,
     $core.String? message,
-    $core.Iterable<$6.Any>? details,
+    $core.Iterable<$2.Any>? details,
   }) {
     final _result = create();
     if (code != null) {
@@ -77,6 +77,6 @@ class Status extends $pb.GeneratedMessage {
   void clearMessage() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<$6.Any> get details => $_getList(2);
+  $core.List<$2.Any> get details => $_getList(2);
 }
 
