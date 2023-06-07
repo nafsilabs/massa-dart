@@ -7,6 +7,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('Massa Crypto: ', () {
+    const secret = 'S13MTiwmU1pD8vLV4FBRDnAZ1XbceRmw8mTHaZCy3EW9Lf4ME9L';
     test('Generate keypair', () async {
       var keyPair = await generateKeyPair();
       print('priv: ${keyPair.privateKey.toString()}');
@@ -28,18 +29,20 @@ void main() {
     });
 
     test('Test Massa signature', () async {
-      const key = 'S1EV1dv6iE8UyFdSKphtTsqVdpX3dNLhw8FiXcESH8SySPhAKC5';
-      var keyPair = await keyPairFromSecret(key);
-      const message = 'Hello Massa!';
+      var keyPair = await keyPairFromSecret(secret);
+      print('priv: ${keyPair.privateKey.toString()}');
+      print('pub: ${keyPair.publicKey.toString()}');
+      print('addr: ${keyPair.address()}');
+      print('thread: ${keyPair.thread()}');
+      const message = 'Hello Massa!!';
       final messageBytes = Uint8List.fromList(message.codeUnits);
       const expectedSignature =
-          'DCLYMLLZ8Gmqz7dAYV76qorP4Cf9CkcXMo3viGY4taQwhLK1r1FFxPR8qseKmRb2GtgRMYhYKnwSpD2gTfryfeiWzqYyf';
+          '1V5AKkDRG81CkHdPzSwCzJKPU1VAiisujxv5j7Xh3CuVz4capezobAXgKBERDmwakZJScZ8Zd53CkqApy7b9mbMj72qycr';
       final signature = await keyPair.sign(messageBytes);
       expect(expectedSignature, signature);
     });
     test('Verify Massa signature', () async {
-      const key = 'S1EV1dv6iE8UyFdSKphtTsqVdpX3dNLhw8FiXcESH8SySPhAKC5';
-      var keyPair = await keyPairFromSecret(key);
+      var keyPair = await keyPairFromSecret(secret);
       const message = 'Hello Massa!';
       final messageBytes = Uint8List.fromList(message.codeUnits);
       const expectedResult = true;

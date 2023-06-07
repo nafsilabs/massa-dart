@@ -89,7 +89,11 @@ class KeyPair {
     final keyPair =
         await Ed25519().newKeyPairFromSeed(List.from(privateKey.bytes));
     final signature = await Ed25519().sign(List.from(hash), keyPair: keyPair);
-    return base58Encode(Uint8List.fromList(signature.bytes));
+    final versionedSignature = concat([
+      Uint8List.fromList([keyPairVersion]),
+      Uint8List.fromList(signature.bytes)
+    ]);
+    return base58Encode(versionedSignature);
   }
 
   /// Verify the signature
@@ -99,7 +103,7 @@ class KeyPair {
     final decodedSignature = base58Decode(signatureString);
     final publicKey = await keyPair.extractPublicKey();
     final signature =
-        Signature(List.from(decodedSignature), publicKey: publicKey);
+        Signature(List.from(decodedSignature.sublist(1)), publicKey: publicKey);
     final messageBytes = Uint8List.fromList(message.codeUnits);
     final hash = blake3Hash(messageBytes);
     return await Ed25519().verify(hash, signature: signature);
@@ -181,7 +185,6 @@ PublicKey decodePublicKey(String publicKeyString) {
 ///Parses address [address] into bytes
 Uint8List parseAddress(String address) {
   final pubKeyHash = base58Decode(address.substring(2));
-  print(pubKeyHash.length);
   if (pubKeyHash.length != 33) {
     throw 'Invalid address.';
   }

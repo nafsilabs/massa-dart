@@ -53,16 +53,6 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [ ] node_unban_by_ip
 - [ ] node_whitelist
 
-### Websocket API (node_ip:33036)
-- [x] subscribe_new_blocks
-- [x] unsubscribe_new_blocks
-- [x] subscribe_new_blocks_headers
-- [x] unsubscribe_new_blocks_headers
-- [x] subscribe_new_filled_blocks
-- [x] unsubscribe_new_filled_blocks
-- [x] subscribe_new_operations
-- [x] unsubscribe_new_operations
-
 ### GRPC API (node_ip:33037)
 - [x] getBlocksBySlots
 - [x] getDataStoreEntries

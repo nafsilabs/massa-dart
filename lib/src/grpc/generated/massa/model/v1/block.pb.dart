@@ -3,7 +3,7 @@
 //  source: massa/model/v1/block.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name, no_leading_underscores_for_local_identifiers
 
 import 'dart:core' as $core;
 
@@ -588,7 +588,7 @@ class SignedBlockHeader extends $pb.GeneratedMessage {
     $core.String? contentCreatorAddress,
     $core.String? id,
   }) {
-    final _result = create();
+    final  _result = create();
     if (content != null) {
       _result.content = content;
     }

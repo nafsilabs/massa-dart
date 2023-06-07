@@ -86,7 +86,7 @@ class FilledBlockHeaderContent {
     operationMerkleRoot = json['operation_merkle_root'];
     if (json['endorsements'] != null) {
       endorsements = <FilledBlockEndorsement>[];
-      json['endorsements'].forEach((v) {
+      json['endorsements'].forEach((Map<String, dynamic> v) {
         endorsements!.add(FilledBlockEndorsement.decode(v));
       });
     }
