@@ -58,8 +58,6 @@ class KeyPair {
     if (addressType == AddressType.smartContract) {
       secondPrifix = smartContractAddressPrefix;
     }
-
-    print(secondPrifix);
     final versionPublicKeyBytes = concat([
       Uint8List.fromList([keyPairVersion]),
       publicKey.bytes
