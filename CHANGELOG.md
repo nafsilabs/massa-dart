@@ -1,3 +1,8 @@
+## 1.3.1
+
+ - **FIX**: fixing address generation from public key.
+ - **FIX**: added signature version.
+
 ## 1.3.0
 
  - **FEAT**: upgrade crypto and grpc.
