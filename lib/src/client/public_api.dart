@@ -23,6 +23,10 @@ class PublicApi {
     return _instance;
   }
 
+  /// Execute a smart contract in a read only context
+
+  /// Call a function of a contract in a read only context
+
   /// Gets massa network status
   Future<Status?> getStatus() async {
     try {
@@ -58,7 +62,7 @@ class PublicApi {
     return Stakers(stakers: stakers);
   }
 
-  /// Returns details of passed addresses
+  /// Returns details of passed addresses mainly to check when a specific address is selected to stake
   Future<List<Address>?> getAddresses(List<String> addresses) async {
     var params = [addresses];
     try {

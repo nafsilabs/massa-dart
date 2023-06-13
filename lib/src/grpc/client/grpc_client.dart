@@ -6,6 +6,29 @@ import 'package:massa/src/grpc/generated/api.pbgrpc.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/commons.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/slot.pb.dart';
 
+/*
+GetBlocks
+GetBlocksBySlots
+GetDatastoreEntries
+GetLargestStakers
+GetNextBlockBestParents
+GetOperations
+GetScExecutionEvents
+GetSelectorDraws
+GetTransactionsThroughput
+GetVersion
+NewBlocks
+NewBlocksHeaders
+NewEndorsements
+NewFilledBlocks
+NewOperations
+NewSlotExecutionOutputs
+SendBlocks
+SendEndorsements
+SendOperations
+TransactionsThroughput
+*/
+
 class GrpcClient {
   late String host; //host ip address
   late int port;
@@ -23,6 +46,12 @@ class GrpcClient {
             const ChannelOptions(credentials: ChannelCredentials.insecure()));
     _instance.massaServiceClient = MassaServiceClient(_instance.channel);
     return _instance;
+  }
+
+  /// get blocks
+  Future<GetBlocksResponse?> getBlocks({List<GetBlocksQuery>? blocks}) async {
+    final request = GetBlocksRequest(id: '1', queries: blocks);
+    return await massaServiceClient.getBlocks(request);
   }
 
   /// get blocks by slots

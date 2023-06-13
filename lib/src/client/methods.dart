@@ -1,6 +1,8 @@
 /// HTTP massa supported api methods
 class RequestMethod {
   //public api
+  static const executeReadOnlyBytecode = 'execute_read_only_bytecode';
+  static const executeReadOnlyCall = 'execute_read_only_call';
   static const getAddress = 'get_addresses';
   static const getStatus = 'get_status';
   static const sendOperations = 'send_operations';
@@ -10,8 +12,6 @@ class RequestMethod {
   static const getCliques = 'get_cliques';
   static const getStaker = 'get_stakers';
   static const getFilteredSCOutputEvent = 'get_filtered_sc_output_event';
-  static const executeReadOnlyBytecode = 'execute_read_only_bytecode';
-  static const executeReadOnlyCall = 'execute_read_only_call';
   static const getDatastoreEntries = 'get_datastore_entries';
   static const getBlockcliqueBlockBySlot = 'get_blockclique_block_by_slot';
   static const getGraphInterval = 'get_graph_interval';

@@ -22,7 +22,14 @@ class SendTransaction extends BaseSendOperation {
     final feeEncoded = Varint.encode(doubleToMassaInt(fee!));
     final expirePeriodEncoded = Varint.encode(expirePeriod!);
     final operationTypeEncoded = Varint.encode(operationType.index);
-    final recipientAddressEncoded = base58Decode(recipientAddress.substring(2));
+    final addressPrifix = recipientAddress[1] == smartContractAddressPrefix
+        ? 1
+        : 0; //user address
+
+    final recipientAddressEncoded = concat([
+      Uint8List.fromList([addressPrifix]),
+      base58Decode(recipientAddress.substring(2))
+    ]);
     final amountEncoded = Varint.encode(doubleToMassaInt(amount));
 
     return concat([

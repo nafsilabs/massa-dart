@@ -8,6 +8,13 @@ import 'package:pointycastle/digests/sha256.dart';
 import 'package:pointycastle/random/fortuna_random.dart';
 import 'package:pointycastle/api.dart';
 
+const keyPairVersion = 0x00;
+const secretPrefix = 'S';
+const publicPrefix = 'P';
+const addressPrefix = 'A';
+const userAddressPrefix = 'U';
+const smartContractAddressPrefix = 'S';
+
 /// Get a SHA256 hash bytes for the given [bytes].
 Uint8List sha256Digest(Uint8List bytes) => SHA256Digest().process(bytes);
 

@@ -106,10 +106,10 @@ Future<void> main() async {
 You can get more information about massa by visiting the links below.
 ### Links
 - [Massa: Massa main website](https://massa.net)
-- [Testnet: Massa testnet](https://test.massa.net)
 - [Testnet: Massa testnet](https://massa.net/testnet)
 - [Massa Github: Massa official github repository](https://github.com/massalabs)
 - [Massa API: Massa official api documentation](https://docs.massa.net/en/latest/technical-doc/api.html)
+- [Massa OpenRPC: Massa official openrpc](https://docs.massa.net/en/latest/technical-doc/api.html)
 - [Massa Web3: massa-dart will have similar functionalities as massa-web3](https://github.com/massalabs/massa-web3)
 
 ### Contribute

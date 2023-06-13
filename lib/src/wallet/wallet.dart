@@ -100,8 +100,8 @@ class Wallet {
   }
 
   /// Send transaction from one address to another
-  Future<String> sendTransaction(
-      String senderAddress, String recipientAddress, double amount) async {
+  Future<String> sendTransaction(String senderAddress, String recipientAddress,
+      double amount, double fee) async {
     if (!accounts.containsKey(senderAddress)) {
       return 'wallet does not contain the wallet key';
     }
@@ -118,12 +118,13 @@ class Wallet {
 
     final tx = SendTransaction(
         amount: amount,
-        fee: 0.01,
+        fee: fee,
         recipientAddress: recipientAddress,
         expirePeriod: expirePeriod);
     var txCompact = tx.compact();
 
-    final signatureData = concat([account!.keyPair.publicKey.bytes, txCompact]);
+    final signatureData =
+        concat([getBytesPublicKeyVersioned(account!.publicKey()), txCompact]);
     final signature = await account.keyPair.sign(signatureData);
 
     final operationID =
@@ -151,8 +152,8 @@ class Wallet {
     final rolls =
         BuyRolls(rollCount: rollCount, fee: 0.01, expirePeriod: expirePeriod);
     final rollsCompactData = rolls.compact();
-    final signatureData =
-        concat([account!.keyPair.publicKey.bytes, rollsCompactData]);
+    final signatureData = concat(
+        [getBytesPublicKeyVersioned(account!.publicKey()), rollsCompactData]);
     final signature = await account.keyPair.sign(signatureData);
 
     final operationID = await api.sendOperations(
@@ -180,8 +181,8 @@ class Wallet {
     final rolls =
         SellRolls(rollCount: rollCount, fee: 0.01, expirePeriod: expirePeriod);
     final rollsCompactData = rolls.compact();
-    final signatureData =
-        concat([account!.keyPair.publicKey.bytes, rollsCompactData]);
+    final signatureData = concat(
+        [getBytesPublicKeyVersioned(account!.publicKey()), rollsCompactData]);
     final signature = await account.keyPair.sign(signatureData);
 
     final operationID = await api.sendOperations(

@@ -15,7 +15,7 @@ void main() {
     });
     test('get address', () async {
       List<String> addresses = [
-        'AU12gafk5nWeYgvxQCP7MQySsraFrGBs1qEUBAeT5hYQc74B43aBL'
+        'AU125TiSrnD2YatYfEyRAWnBdD7TEuVbvGFkFgDuaYc2bdKyqKtb'
       ];
       final addresess = await api.getAddresses(addresses);
       print(addresess![0].encode());

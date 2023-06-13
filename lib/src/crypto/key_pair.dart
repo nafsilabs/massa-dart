@@ -4,13 +4,6 @@ import 'package:cryptography/cryptography.dart';
 import 'package:massa/src/crypto/common.dart';
 import 'package:massa/src/helpers/helpers.dart';
 
-const keyPairVersion = 0x00;
-const secretPrefix = 'S';
-const publicPrefix = 'P';
-const addressPrefix = 'A';
-const userAddressPrefix = 'U';
-const smartContractAddressPrefix = 'S';
-
 /// Address type - which are either user address or smart contract address
 /// User address starts with AU and Smart contract address starts with AS
 enum AddressType { user, smartContract }
@@ -61,10 +54,12 @@ class KeyPair {
 
   /// Generates encoded massa address
   String address([AddressType? addressType]) {
-    var secondPrifix = addressType == AddressType.user
-        ? userAddressPrefix
-        : smartContractAddressPrefix;
+    var secondPrifix = userAddressPrefix;
+    if (addressType == AddressType.smartContract) {
+      secondPrifix = smartContractAddressPrefix;
+    }
 
+    print(secondPrifix);
     final versionPublicKeyBytes = concat([
       Uint8List.fromList([keyPairVersion]),
       publicKey.bytes
@@ -168,6 +163,23 @@ String encodePublicKey(PublicKey publicKey) {
         Uint8List.fromList([keyPairVersion]),
         publicKey.bytes
       ]));
+}
+
+/// Retrieves the byte representation of a given public key.
+Uint8List getBytesPublicKey(String publicKeyString) {
+  if (publicKeyString[0] != publicPrefix) {
+    throw 'Invalid public key prefix: ${publicKeyString[0]} should be $publicPrefix';
+  }
+  final publicKey = decodePublicKey(publicKeyString);
+  return publicKey.bytes;
+}
+
+/// Retrieves the byte representation of a given public key.
+Uint8List getBytesPublicKeyVersioned(String publicKeyString) {
+  if (publicKeyString[0] != publicPrefix) {
+    throw 'Invalid public key prefix: ${publicKeyString[0]} should be $publicPrefix';
+  }
+  return base58Decode(publicKeyString.substring(1));
 }
 
 /// Decodes private key string [privateKeyString] into [PrivateKey]
