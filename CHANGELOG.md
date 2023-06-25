@@ -1,3 +1,7 @@
+## 1.3.2
+
+ - **FIX**: additional bug fix.
+
 ## 1.3.1
 
  - **FIX**: fixing address generation from public key.
