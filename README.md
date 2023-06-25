@@ -16,15 +16,17 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [ ] execute_read_only_bytecode
 - [ ] execute_read_only_call
 - [x] get_addresses
-- [x] get_block
+- [x] get_blocks
+- [ ] get_blockclique_block_by_slot
 - [x] get_cliques
 - [ ] get_datastore_entries
+- [ ] get_datastore_entry
 - [x] get_endorsements
 - [ ] get_filtered_sc_output_event
 - [x] get_graph_interval
+- [x] get_operations
 - [x] get_stakers
 - [x] get_status
-- [x] get_operations
 - [x] send_operations - send transaction
 - [x] send_operations - buy rolls
 - [x] send_operations - sell rolls

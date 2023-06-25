@@ -10,8 +10,8 @@ void main() {
     final grpc = GrpcClient(ipAddress, port);
 
     test('get version', () async {
-      var blocks = await grpc.getBlocks();
-      print(blocks!.blocks);
+      var version = await grpc.getVersion();
+      print(version?.version);
     });
 
     /* test('get transaction throughupt', () async {

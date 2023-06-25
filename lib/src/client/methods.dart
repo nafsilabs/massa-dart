@@ -4,17 +4,18 @@ class RequestMethod {
   static const executeReadOnlyBytecode = 'execute_read_only_bytecode';
   static const executeReadOnlyCall = 'execute_read_only_call';
   static const getAddress = 'get_addresses';
+  static const getBlocks = 'get_blocks';
+  static const getBlockcliqueBlockBySlot = 'get_blockclique_block_by_slot';
+  static const getCliques = 'get_cliques';
+  static const getDatastoreEntries = 'get_datastore_entries';
+  static const getDatastoreEntry = 'get_datastore_entry';
+  static const getEndorsements = 'get_endorsements';
+  static const getFilteredSCOutputEvent = 'get_filtered_sc_output_event';
+  static const getGraphInterval = 'get_graph_interval';
+  static const getOperations = 'get_operations';
+  static const getStaker = 'get_stakers';
   static const getStatus = 'get_status';
   static const sendOperations = 'send_operations';
-  static const getBlocks = 'get_blocks';
-  static const getEndorsements = 'get_endorsements';
-  static const getOperations = 'get_operations';
-  static const getCliques = 'get_cliques';
-  static const getStaker = 'get_stakers';
-  static const getFilteredSCOutputEvent = 'get_filtered_sc_output_event';
-  static const getDatastoreEntries = 'get_datastore_entries';
-  static const getBlockcliqueBlockBySlot = 'get_blockclique_block_by_slot';
-  static const getGraphInterval = 'get_graph_interval';
 
   // private Api
   static const stopNode = 'stop_node';

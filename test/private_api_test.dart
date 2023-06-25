@@ -5,13 +5,13 @@ import 'package:test/test.dart';
 
 void main() {
   group('Private API Test: ', () {
-    final Uri privUri = Uri.http('127.0.0.1:33034');
+    final Uri privUri = Uri.http('127.0.0.1:33034', '');
 
     PrivateApi api = PrivateApi(privUri);
-    test('get staking addresses', () async {
+    /*test('get staking addresses', () async {
       var stakingAddresses = await api.getStakingAddresses();
       print(stakingAddresses);
-    });
+    });*/
 
     test('stop node', () async {
       await api.stopNode();

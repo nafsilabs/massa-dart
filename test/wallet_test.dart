@@ -14,7 +14,7 @@ void main() {
     //wallet.newAccount(AddressType.user);
     wallet.addAccountFromSecretKey(secret, AddressType.user);
     //wallet.addAccountFromSecretKey(secret2, AddressType.user);
-    /*test('list accounts', () async {
+    test('list accounts', () async {
       final accounts = wallet.listAccounts();
       accounts.forEach((key, value) => print(value.toString()));
     });
@@ -27,26 +27,26 @@ void main() {
     test('wallet address balances', () async {
       final balance = await wallet.getAccountBalance(address);
       print(balance.toString());
-    });*/
+    });
 
-    /*test('buy rolls', () async {
+    test('buy rolls', () async {
       final resp = await wallet.buyRolls(address, 1);
       print('resp: $resp');
-    });*/
+    });
 
-    test('sell rolls', () async {
+    /*test('sell rolls', () async {
       final resp = await wallet.sellRolls(address, 1);
       print('resp: $resp');
     });
-/*
+*/
     test('transaction', () async {
       const recipientAddress =
           'AU125TiSrnD2YatYfEyRAWnBdD7TEuVbvGFkFgDuaYc2bdKyqKtb';
-      const amount = 10.00;
+      const amount = 20.00;
       const fee = 0.1;
       final resp =
           await wallet.sendTransaction(address, recipientAddress, amount, fee);
       print('resp: $resp');
-    });*/
+    });
   });
 }

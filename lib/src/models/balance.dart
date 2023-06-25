@@ -10,6 +10,6 @@ class Balance {
   /// Returns balance in string format
   @override
   String toString() {
-    return 'final balance: $finalBalance, candidate balance: $candidateBalance, final rolls: $finalRolls, candicate roll: $candidateRolls';
+    return 'final balance: $finalBalance, candidate balance: $candidateBalance, final rolls: $finalRolls, candicate rolls: $candidateRolls';
   }
 }

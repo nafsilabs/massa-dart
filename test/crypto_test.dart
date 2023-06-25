@@ -43,7 +43,7 @@ void main() {
     });
     test('Verify Massa signature', () async {
       var keyPair = await keyPairFromSecret(secret);
-      const message = 'Hello Massa!';
+      const message = 'Hello Massa!!';
       final messageBytes = Uint8List.fromList(message.codeUnits);
       const expectedResult = true;
       final signature = await keyPair.sign(messageBytes);

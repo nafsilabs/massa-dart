@@ -4,7 +4,7 @@ import 'package:massa/src/models/balance.dart';
 import 'package:massa/src/wallet/account.dart';
 import 'package:massa/src/client/send_operations/send_operations.dart';
 
-const slotOffset = 30;
+const slotOffset = 5;
 const defaultGas = 0.7;
 
 class Wallet {
