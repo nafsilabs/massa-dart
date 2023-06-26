@@ -4,10 +4,12 @@ import 'package:massa/src/client/http_client.dart';
 import 'package:massa/src/client/methods.dart';
 import 'package:massa/src/models/address.dart';
 import 'package:massa/src/models/block.dart';
+import 'package:massa/src/models/blockclique_block_by_slot.dart';
 import 'package:massa/src/models/cliques.dart';
 import 'package:massa/src/models/endorsement.dart';
 import 'package:massa/src/models/graph_intervals.dart';
 import 'package:massa/src/models/operation.dart';
+import 'package:massa/src/models/slot.dart';
 import 'package:massa/src/models/stakers.dart';
 import 'package:massa/src/models/status.dart';
 
@@ -73,9 +75,17 @@ class PublicApi {
 
   /// Get a block in the blockclique
   /// Provide a slot
-  void getBlockcliqueBlockBySlot() {
-    //method get_blockclique_block_by_slot
-    //TODO: implement this
+  Future<BlockcliqueBlockBySlot?> getBlockcliqueBlockBySlot(Slot slot) async {
+    var params = [
+      slot.encode(),
+    ];
+    try {
+      var response = await client.post(RequestMethod.getBlockcliqueBlockBySlot,
+          params: params);
+      return BlockcliqueBlockBySlot.decode(response['result']);
+    } catch (e) {
+      return null;
+    }
   }
 
   /// Gets cliques

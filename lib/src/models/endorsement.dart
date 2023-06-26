@@ -53,7 +53,9 @@ class EndorsemenContent {
 
   /// Decode endorsement content
   EndorsemenContent.decode(Map<String, dynamic> json) {
-    content = Content.decode(json['content']);
+    if (json['content'] != null) {
+      content = Content.decode(json['content']);
+    }
     signature = json['signature'];
     contentCreatorPubKey = json['content_creator_pub_key'];
     contentCreatorAddress = json['content_creator_address'];

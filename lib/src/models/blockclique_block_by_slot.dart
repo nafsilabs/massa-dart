@@ -1,4 +1,5 @@
-import 'package:massa/src/models/models.dart';
+import 'package:massa/src/models/endorsement.dart';
+import 'package:massa/src/models/slot.dart';
 
 class BlockcliqueBlockBySlot {
   BlockHeader? header;
@@ -9,11 +10,11 @@ class BlockcliqueBlockBySlot {
   BlockcliqueBlockBySlot.decode(Map<String, dynamic> json) {
     header = json['header'] != null ? BlockHeader.decode(json['header']) : null;
     if (json['operations'] != null) {
-      operations = json['operations'];
+      operations = json['operations'].cast<String>();
     }
   }
 
-  Map<String, dynamic> encode() {
+  /* Map<String, dynamic> encode() {
     final Map<String, dynamic> data = <String, dynamic>{};
     if (header != null) {
       data['header'] = header!.encode();
@@ -22,110 +23,98 @@ class BlockcliqueBlockBySlot {
       data['operations'] = operations;
     }
     return data;
-  }
+  }*/
 }
 
 /// Block header
 class BlockHeader {
-  EndorsementInfo? content;
+  HeaderContent? content;
   String? signature;
-  String? creatorPubKey;
-  String? creatorAddress;
+  String? contentCreatorPubKey;
+  String? contentCreatorAddress;
   String? id;
 
   BlockHeader(
       {this.content,
       this.signature,
-      this.creatorPubKey,
-      this.creatorAddress,
+      this.contentCreatorPubKey,
+      this.contentCreatorAddress,
       this.id});
 
   BlockHeader.decode(Map<String, dynamic> json) {
-    content = json['content'] != null
-        ? EndorsementInfo.decode(json['content'])
-        : null;
+    content =
+        json['content'] != null ? HeaderContent.decode(json['content']) : null;
     signature = json['signature'];
-    creatorPubKey = json['creator_pub_key'];
-    creatorAddress = json['creator_address'];
+    contentCreatorPubKey = json['content_creator_pub_key'];
+    contentCreatorAddress = json['content_creator_address'];
     id = json['id'];
   }
 
-  Map<String, dynamic> encode() {
+  /*Map<String, dynamic> encode() {
     final Map<String, dynamic> data = <String, dynamic>{};
     if (content != null) {
       data['content'] = content!.encode();
     }
     data['signature'] = signature;
-    data['creator_pub_key'] = creatorPubKey;
-    data['creator_address'] = creatorAddress;
+    data['creator_pub_key'] = contentCreatorPubKey;
+    data['creator_address'] = contentCreatorAddress;
     data['id'] = id;
     return data;
-  }
-}
-
-/// Endorsement information
-class EndorsementInfo {
-  EndorsementContent? content;
-  String? signature;
-  String? creatorPubKey;
-  String? creatorAddress;
-  String? id;
-
-  EndorsementInfo(
-      {this.content,
-      this.signature,
-      this.creatorPubKey,
-      this.creatorAddress,
-      this.id});
-
-  /// Decode filled block endorsement
-  EndorsementInfo.decode(Map<String, dynamic> json) {
-    content = json['content'] != null
-        ? EndorsementContent.decode(json['content'])
-        : null;
-    signature = json['signature'];
-    creatorPubKey = json['creator_pub_key'];
-    creatorAddress = json['creator_address'];
-    id = json['id'];
-  }
-
-  /// Encode filled block endorsement
-  Map<String, dynamic> encode() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    if (content != null) {
-      data['content'] = content!.encode();
-    }
-    data['signature'] = signature;
-    data['creator_pub_key'] = creatorPubKey;
-    data['creator_address'] = creatorAddress;
-    data['id'] = id;
-    return data;
-  }
+  }*/
 }
 
 /// Endosement content
-class EndorsementContent {
+class HeaderContent {
+  int? currentVersion;
+  int? announcedVersion;
   Slot? slot;
-  int? index;
-  String? endorsedBlock;
+  List<String>? parents;
+  String? operationMerkleRoot;
+  List<EndorsemenContent>? endorsements;
+  List<String>? denunciations;
 
-  EndorsementContent({this.slot, this.index, this.endorsedBlock});
+  HeaderContent(
+      {this.currentVersion,
+      this.announcedVersion,
+      this.slot,
+      this.parents,
+      this.operationMerkleRoot,
+      this.endorsements,
+      this.denunciations});
 
-  /// Decode filled block endorsement content
-  EndorsementContent.decode(Map<String, dynamic> json) {
+  /// Decode header content
+  HeaderContent.decode(Map<String, dynamic> json) {
+    currentVersion = json['current_version'];
+    announcedVersion = json['announced_version'];
     slot = json['slot'] != null ? Slot.decode(json['slot']) : null;
-    index = json['index'];
-    endorsedBlock = json['endorsed_block'];
+    parents = json['parents'] != null
+        ? List.castFrom<dynamic, dynamic>(json['parents']).cast()
+        : [];
+    operationMerkleRoot = json['operation_merkle_root'];
+    if (json['endorsements'] != null) {
+      endorsements = List.castFrom<dynamic, dynamic>(json['endorsements'])
+          .cast<EndorsemenContent>();
+    }
+    denunciations = json['denunciations'] != null
+        ? List.castFrom<dynamic, dynamic>(json['denunciations']).cast()
+        : [];
   }
 
   /// Encode filled block endorsement content
-  Map<String, dynamic> encode() {
+  /* Map<String, dynamic> encode() {
     final Map<String, dynamic> data = <String, dynamic>{};
+    data['current_version'] = currentVersion;
+    data['announced_version'] = announcedVersion;
     if (slot != null) {
       data['slot'] = slot!.encode();
     }
-    data['index'] = index;
-    data['endorsed_block'] = endorsedBlock;
+    data['parents'] = parents;
+    data['operation_merkle_root'] = operationMerkleRoot;
+    if (endorsements != null) {
+      data['endorsements'] = endorsements!.map((v) => v.encode()).toList();
+    }
+    data['denunciations'] = denunciations;
+
     return data;
-  }
+  }*/
 }
