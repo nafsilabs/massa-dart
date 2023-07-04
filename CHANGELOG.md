@@ -1,3 +1,7 @@
+## 1.4.0
+
+ - **FEAT**: added deploy smart contract.
+
 ## 1.3.2
 
  - **FIX**: additional bug fix.
