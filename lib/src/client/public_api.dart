@@ -217,7 +217,6 @@ class PublicApi {
     try {
       var response =
           await client.post(RequestMethod.sendOperations, params: [params]);
-      print(response);
       return response['result'][0];
     } catch (e) {
       return null;
