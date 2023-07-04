@@ -8,33 +8,48 @@ import 'package:massa/src/helpers/helpers.dart';
 class ExecuteSC extends BaseSendOperation {
   Uint8List data;
   double maximumGas;
+  double maximumCoins;
   Map<Uint8List, Uint8List> dataStore;
   ExecuteSC(
-      {required this.data, required this.maximumGas, required this.dataStore})
-      : super(OperationType.transaction);
+      {required this.data,
+      required double fee,
+      required this.maximumGas,
+      required this.maximumCoins,
+      required this.dataStore,
+      required int expirePeriod})
+      : super(OperationType.executeSC, fee: fee, expirePeriod: expirePeriod);
   @override
   Uint8List compact() {
     final operationTypeEncoded = Varint.encode(operationType.index);
+    final feeEncoded = Varint.encode(doubleToMassaInt(fee!));
     final maximumGasEncoded = Varint.encode(doubleToMassaInt(maximumGas));
+    final maximumCoinsEncoded = Varint.encode(doubleToMassaInt(maximumCoins));
+    final expirePeriodEncoded = Varint.encode(expirePeriod!);
     final numDataBytesEncoded = Varint.encode(data.length);
     final numDataStoreEntriesEncoded = Varint.encode(dataStore.length);
 
     Uint8List compactData = concat([
+      feeEncoded,
+      expirePeriodEncoded,
       operationTypeEncoded,
       maximumGasEncoded,
+      maximumCoinsEncoded,
       numDataBytesEncoded,
       data,
-      numDataStoreEntriesEncoded
+      numDataStoreEntriesEncoded,
     ]);
 
-    dataStore.forEach((key, value) {
-      //store key length and key
-      Uint8List numKeyLengthEncoded = Varint.encode(key.length);
-      compactData = concat([compactData, numKeyLengthEncoded, key]);
-      //store value length and value
-      Uint8List numValueLengthEncoded = Varint.encode(key.length);
-      compactData = concat([compactData, numValueLengthEncoded, value]);
-    });
+    //TODO: check if this works for datastore
+    if (dataStore.isNotEmpty) {
+      dataStore.forEach((key, value) {
+        //store key length and key
+        Uint8List numKeyLengthEncoded = Varint.encode(key.length);
+        compactData = concat([compactData, numKeyLengthEncoded, key]);
+        //store value length and value
+        Uint8List numValueLengthEncoded = Varint.encode(key.length);
+        compactData = concat([compactData, numValueLengthEncoded, value]);
+      });
+    }
 
     return compactData;
   }

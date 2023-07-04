@@ -18,7 +18,7 @@ class CallSC extends BaseSendOperation {
       required this.functionParameters,
       required this.maximumGas,
       required this.coins})
-      : super(OperationType.transaction);
+      : super(OperationType.callSC);
 
   /// Compact bytes to be sent
   @override

@@ -1,5 +1,8 @@
 // ignore_for_file: avoid_print
 
+import 'dart:io';
+import 'dart:typed_data';
+
 import 'package:massa/src/crypto/key_pair.dart';
 import 'package:massa/src/wallet/wallet.dart';
 import 'package:test/test.dart';
@@ -29,24 +32,33 @@ void main() {
       print(balance.toString());
     });
 
-    test('buy rolls', () async {
+    /*  test('buy rolls', () async {
       final resp = await wallet.buyRolls(address, 1);
       print('resp: $resp');
     });
 
-    /*test('sell rolls', () async {
+    test('sell rolls', () async {
       final resp = await wallet.sellRolls(address, 1);
       print('resp: $resp');
     });
-*/
+
     test('transaction', () async {
       const recipientAddress =
-          'AU125TiSrnD2YatYfEyRAWnBdD7TEuVbvGFkFgDuaYc2bdKyqKtb';
-      const amount = 20.00;
+          'AU12n6SX2mTStVgiWmZM3DZb28gs9cGH8SdvE3cV1crxxxnPxmUm2';
+      const amount = 100.00;
       const fee = 0.1;
       final resp =
           await wallet.sendTransaction(address, recipientAddress, amount, fee);
       print('resp: $resp');
+    });*/
+
+    test('deploy smart contract', () async {
+      const filePath = './test/helloworld.wasm';
+      Uint8List byteCode = Uint8List.fromList(File(filePath).readAsBytesSync());
+      print('byte length is ${byteCode.length}');
+      final response =
+          await wallet.executeSC(address, byteCode, dataStore: null);
+      print(response);
     });
   });
 }

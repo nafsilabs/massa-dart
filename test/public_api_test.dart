@@ -2,7 +2,6 @@
 
 import 'package:massa/src/client/public_api.dart';
 import 'package:massa/src/models/models.dart';
-import 'package:massa/src/models/status.dart';
 import 'package:test/test.dart';
 
 void main() {

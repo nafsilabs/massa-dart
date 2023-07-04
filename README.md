@@ -17,7 +17,7 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [ ] execute_read_only_call
 - [x] get_addresses
 - [x] get_blocks
-- [ ] get_blockclique_block_by_slot
+- [x] get_blockclique_block_by_slot
 - [x] get_cliques
 - [ ] get_datastore_entries
 - [ ] get_datastore_entry
@@ -30,7 +30,7 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [x] send_operations - send transaction
 - [x] send_operations - buy rolls
 - [x] send_operations - sell rolls
-- [ ] send_operations - execute smart contract
+- [x] send_operations - execute smart contract
 - [ ] send_operations - call smart contract
 ### Private API (node_ip:33034)
 - [ ] add_staking_secret_keys

@@ -1,11 +1,16 @@
+import 'dart:typed_data';
+
 import 'package:massa/massa.dart';
+import 'package:massa/src/client/send_operations/execute_sc.dart';
 import 'package:massa/src/helpers/helpers.dart';
 import 'package:massa/src/models/balance.dart';
 import 'package:massa/src/wallet/account.dart';
 import 'package:massa/src/client/send_operations/send_operations.dart';
 
-const slotOffset = 5;
-const defaultGas = 0.7;
+const slotOffset = 2;
+const maximuGas = 0.7;
+const maximuCoins = 100.0;
+const fee = 0.1;
 
 class Wallet {
   late Uri pubUri;
@@ -179,7 +184,7 @@ class Wallet {
     final expirePeriod = status.nextSlot.period + slotOffset;
 
     final rolls =
-        SellRolls(rollCount: rollCount, fee: 0.01, expirePeriod: expirePeriod);
+        SellRolls(rollCount: rollCount, fee: fee, expirePeriod: expirePeriod);
     final rollsCompactData = rolls.compact();
     final signatureData = concat(
         [getBytesPublicKeyVersioned(account!.publicKey()), rollsCompactData]);
@@ -188,5 +193,40 @@ class Wallet {
     final operationID = await api.sendOperations(
         rollsCompactData, account.publicKey(), signature);
     return operationID!;
+  }
+
+  /// Execute smart contract
+  Future<String?> executeSC(String address, Uint8List data,
+      {Map<Uint8List, Uint8List>? dataStore}) async {
+    if (!accounts.containsKey(address)) {
+      return 'wallet does not contain the wallet key';
+    }
+    final account = accounts[address];
+
+    final status = await api.getStatus();
+    if (status == null) return 'could not get network status';
+
+    if (data.length > status.config.maxBlockSize / 2) {
+      return 'smart contract bytecode exceed half of the allowed block size: ${data.length}, maximum allowed: ${status.config.maxBlockSize / 2}';
+    }
+    final expirePeriod = status.nextSlot.period + slotOffset;
+
+    dataStore ??= <Uint8List, Uint8List>{};
+
+    final sc = ExecuteSC(
+        data: data,
+        fee: fee,
+        maximumGas: maximuGas,
+        maximumCoins: maximuCoins,
+        dataStore: dataStore,
+        expirePeriod: expirePeriod);
+    final scCompactData = sc.compact();
+    final signatureData = concat(
+        [getBytesPublicKeyVersioned(account!.publicKey()), scCompactData]);
+    final signature = await account.keyPair.sign(signatureData);
+
+    final operationID =
+        await api.sendOperations(scCompactData, account.publicKey(), signature);
+    return operationID;
   }
 }
