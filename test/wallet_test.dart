@@ -1,64 +1,21 @@
 // ignore_for_file: avoid_print
 
-import 'dart:io';
-import 'dart:typed_data';
-
 import 'package:massa/src/crypto/key_pair.dart';
 import 'package:massa/src/wallet/wallet.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('Wallet test: ', () {
-    final Uri pubUri = Uri.https('test.massa.net', 'api/v2');
-    const secret = 'S13MTiwmU1pD8vLV4FBRDnAZ1XbceRmw8mTHaZCy3EW9Lf4ME9L';
-    const address = 'AU124FuDBRPmWLCtTRvXqMemBnD1Ky4L8QAqoJxF8gYP1reAGgv5Q';
+    const secret = 'S12PJ6nGwP9nZFfRiCct9DdAne9EDBrH1cLBvBUU8uAVXUfG4ANG';
+    const address = 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi';
 
-    final wallet = Wallet(pubUri);
+    final wallet = Wallet();
     //wallet.newAccount(AddressType.user);
     wallet.addAccountFromSecretKey(secret, AddressType.user);
     //wallet.addAccountFromSecretKey(secret2, AddressType.user);
     test('list accounts', () async {
       final accounts = wallet.listAccounts();
       accounts.forEach((key, value) => print(value.toString()));
-    });
-
-    test('wallet all balances', () async {
-      final balance = await wallet.getBalance();
-      print(balance.toString());
-    });
-
-    test('wallet address balances', () async {
-      final balance = await wallet.getAccountBalance(address);
-      print(balance.toString());
-    });
-
-    /*  test('buy rolls', () async {
-      final resp = await wallet.buyRolls(address, 1);
-      print('resp: $resp');
-    });
-
-    test('sell rolls', () async {
-      final resp = await wallet.sellRolls(address, 1);
-      print('resp: $resp');
-    });
-
-    test('transaction', () async {
-      const recipientAddress =
-          'AU12n6SX2mTStVgiWmZM3DZb28gs9cGH8SdvE3cV1crxxxnPxmUm2';
-      const amount = 100.00;
-      const fee = 0.1;
-      final resp =
-          await wallet.sendTransaction(address, recipientAddress, amount, fee);
-      print('resp: $resp');
-    });*/
-
-    test('deploy smart contract', () async {
-      const filePath = './test/helloworld.wasm';
-      Uint8List byteCode = Uint8List.fromList(File(filePath).readAsBytesSync());
-      print('byte length is ${byteCode.length}');
-      final response =
-          await wallet.executeSC(address, byteCode, dataStore: null);
-      print(response);
     });
   });
 }

@@ -12,26 +12,7 @@ It uses PROOF OF STAKE consensus mechanism to ensures full participation, protec
 Massa-dart is an SDK that is able to connect your Dart and Flutter applications to the Massa blockchain, create wallet, send transactions, and work with smart contracts.
 ## Features
 This package will allows you to interact with massa blockchain using the folloiwng public and privated methods.
-### Public API (node_ip:33035)
-- [ ] execute_read_only_bytecode
-- [ ] execute_read_only_call
-- [x] get_addresses
-- [x] get_blocks
-- [x] get_blockclique_block_by_slot
-- [x] get_cliques
-- [ ] get_datastore_entries
-- [ ] get_datastore_entry
-- [x] get_endorsements
-- [ ] get_filtered_sc_output_event
-- [x] get_graph_interval
-- [x] get_operations
-- [x] get_stakers
-- [x] get_status
-- [x] send_operations - send transaction
-- [x] send_operations - buy rolls
-- [x] send_operations - sell rolls
-- [x] send_operations - execute smart contract
-- [ ] send_operations - call smart contract
+
 ### Private API (node_ip:33034)
 - [ ] add_staking_secret_keys
 - [ ] get_staking_addresses
@@ -55,19 +36,69 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [ ] node_unban_by_ip
 - [ ] node_whitelist
 
-### GRPC API (node_ip:33037)
-- [x] getBlocksBySlots
+### Public API (node_ip:33035)
+- [ ] execute_read_only_bytecode
+- [ ] execute_read_only_call
+- [x] get_addresses
+- [x] get_blocks
+- [x] get_blockclique_block_by_slot
+- [x] get_cliques
+- [ ] get_datastore_entries
+- [ ] get_datastore_entry
+- [x] get_endorsements
+- [ ] get_filtered_sc_output_event
+- [x] get_graph_interval
+- [x] get_operations
+- [x] get_stakers
+- [x] get_status
+- [x] send_operations - send transaction
+- [x] send_operations - buy rolls
+- [x] send_operations - sell rolls
+- [x] send_operations - execute smart contract
+- [ ] send_operations - call smart contract
+
+### GRPC Private API (node_ip:33036)
+- [x] addToBootstrapBlacklist
+- [x] addToBootstrapWhitelist
+- [x] addToPeersWhitelist
+- [x] addStakingSecretKeys
+- [x] allowEveryoneToBootstrap
+- [x] banNodesByIds
+- [x] banNodesByIps
+- [x] getBootstrapBlacklist
+- [x] getBootstrapWhitelist
+- [x] getMipStatus
+- [x] getNodeStatus
+- [x] getPeersWhitelist
+- [x] removeFromBootstrapBlacklist
+- [x] removeFromBootstrapWhitelist
+- [x] removeFromPeersWhitelist
+- [x] removeStakingAddresses
+- [x] signMessages
+- [x] shutdownGracefully
+- [x] unbanNodesByIds
+- [x] unbanNodesByIps
+
+
+### GRPC Public API (node_ip:33037)
+- [x] executeReadOnlyCall
+- [x] getBlocks
 - [x] getDataStoreEntries
-- [x] getNextBlockBestParent
+- [x] getNextBlockBestParents
+- [x] getOperations
+- [x] getScExecutionEvents
 - [x] getSelectorDraw
-- [x] getTransactionsThroughput
-- [x] getVersion
+- [x] getStakers
+- [x] getStatus
+- [x] getTransactionThroughput
+- [x] queryState
 - [x] newBlocks
-- [x] newBlockHeaders
+- [x] newEndorsements
 - [x] newFilledBlocks
 - [x] newOperations
-- [x] sendBlock
-- [x] sendEndorsement
+- [x] newSlotExecutionOutputs
+- [x] sendBlocks
+- [x] sendEndorsements
 - [x] sendOperations
 - [x] transactionThroughput
 
