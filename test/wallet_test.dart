@@ -7,8 +7,6 @@ import 'package:test/test.dart';
 void main() {
   group('Wallet test: ', () {
     const secret = 'S12PJ6nGwP9nZFfRiCct9DdAne9EDBrH1cLBvBUU8uAVXUfG4ANG';
-    const address = 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi';
-
     final wallet = Wallet();
     //wallet.newAccount(AddressType.user);
     wallet.addAccountFromSecretKey(secret, AddressType.user);
