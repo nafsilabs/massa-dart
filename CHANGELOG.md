@@ -1,3 +1,7 @@
+## 1.5.0
+
+ - **FEAT**: added grpc full support as of Testnet 25.2 and removed jsonrpc support.
+
 ## 1.4.0
 
  - **FEAT**: added deploy smart contract.
