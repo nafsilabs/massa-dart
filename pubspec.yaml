@@ -13,7 +13,7 @@ dependencies:
   pointycastle: ^3.6.2
   hex: ^0.2.0
   retry: ^3.1.0 
-  http: ^0.13.5
+  http: ^1.1.0
   web_socket_channel: ^2.3.0
   protobuf: ^2.1.0
   fixnum: ^1.1.0
