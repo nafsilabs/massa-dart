@@ -10,19 +10,31 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ConnectionType extends $pb.ProtobufEnum {
-  static const ConnectionType CONNECTION_TYPE_UNSPECIFIED = ConnectionType._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CONNECTION_TYPE_UNSPECIFIED');
-  static const ConnectionType CONNECTION_TYPE_INCOMING = ConnectionType._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CONNECTION_TYPE_INCOMING');
-  static const ConnectionType CONNECTION_TYPE_OUTGOING = ConnectionType._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CONNECTION_TYPE_OUTGOING');
+  static const ConnectionType CONNECTION_TYPE_UNSPECIFIED = ConnectionType._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CONNECTION_TYPE_UNSPECIFIED');
+  static const ConnectionType CONNECTION_TYPE_INCOMING = ConnectionType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CONNECTION_TYPE_INCOMING');
+  static const ConnectionType CONNECTION_TYPE_OUTGOING = ConnectionType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'CONNECTION_TYPE_OUTGOING');
 
-  static const $core.List<ConnectionType> values = <ConnectionType> [
+  static const $core.List<ConnectionType> values = <ConnectionType>[
     CONNECTION_TYPE_UNSPECIFIED,
     CONNECTION_TYPE_INCOMING,
     CONNECTION_TYPE_OUTGOING,
   ];
 
-  static final $core.Map<$core.int, ConnectionType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, ConnectionType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static ConnectionType? valueOf($core.int value) => _byValue[value];
 
   const ConnectionType._($core.int v, $core.String n) : super(v, n);
 }
-

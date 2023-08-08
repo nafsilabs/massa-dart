@@ -3,7 +3,7 @@
 import 'package:fixnum/fixnum.dart';
 import 'package:massa/src/grpc/client/public_client.dart';
 
-/// This example shows how to use the api, e.g for listing stakers
+/// This example shows how to use massa library, e.g for listing stakers
 
 Future<void> main() async {
   const ipAddress = 'test.massa.net';

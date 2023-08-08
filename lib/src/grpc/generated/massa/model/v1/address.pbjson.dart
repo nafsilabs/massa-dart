@@ -8,6 +8,7 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
+
 @$core.Deprecated('Use addressCategoryDescriptor instead')
 const AddressCategory$json = const {
   '1': 'AddressCategory',
@@ -19,19 +20,28 @@ const AddressCategory$json = const {
 };
 
 /// Descriptor for `AddressCategory`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List addressCategoryDescriptor = $convert.base64Decode('Cg9BZGRyZXNzQ2F0ZWdvcnkSIAocQUREUkVTU19DQVRFR09SWV9VTlNQRUNJRklFRBAAEiEKHUFERFJFU1NfQ0FURUdPUllfVVNFUl9BRERSRVNTEAESHwobQUREUkVTU19DQVRFR09SWV9TQ19BRERSRVNTEAI=');
+final $typed_data.Uint8List addressCategoryDescriptor = $convert.base64Decode(
+    'Cg9BZGRyZXNzQ2F0ZWdvcnkSIAocQUREUkVTU19DQVRFR09SWV9VTlNQRUNJRklFRBAAEiEKHUFERFJFU1NfQ0FURUdPUllfVVNFUl9BRERSRVNTEAESHwobQUREUkVTU19DQVRFR09SWV9TQ19BRERSRVNTEAI=');
 @$core.Deprecated('Use nativeAddressDescriptor instead')
 const NativeAddress$json = const {
   '1': 'NativeAddress',
   '2': const [
-    const {'1': 'category', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.AddressCategory', '10': 'category'},
+    const {
+      '1': 'category',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.AddressCategory',
+      '10': 'category'
+    },
     const {'1': 'version', '3': 2, '4': 1, '5': 4, '10': 'version'},
     const {'1': 'content', '3': 3, '4': 1, '5': 12, '10': 'content'},
   ],
 };
 
 /// Descriptor for `NativeAddress`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List nativeAddressDescriptor = $convert.base64Decode('Cg1OYXRpdmVBZGRyZXNzEjsKCGNhdGVnb3J5GAEgASgOMh8ubWFzc2EubW9kZWwudjEuQWRkcmVzc0NhdGVnb3J5UghjYXRlZ29yeRIYCgd2ZXJzaW9uGAIgASgEUgd2ZXJzaW9uEhgKB2NvbnRlbnQYAyABKAxSB2NvbnRlbnQ=');
+final $typed_data.Uint8List nativeAddressDescriptor = $convert.base64Decode(
+    'Cg1OYXRpdmVBZGRyZXNzEjsKCGNhdGVnb3J5GAEgASgOMh8ubWFzc2EubW9kZWwudjEuQWRkcmVzc0NhdGVnb3J5UghjYXRlZ29yeRIYCgd2ZXJzaW9uGAIgASgEUgd2ZXJzaW9uEhgKB2NvbnRlbnQYAyABKAxSB2NvbnRlbnQ=');
 @$core.Deprecated('Use addressesDescriptor instead')
 const Addresses$json = const {
   '1': 'Addresses',
@@ -41,4 +51,5 @@ const Addresses$json = const {
 };
 
 /// Descriptor for `Addresses`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressesDescriptor = $convert.base64Decode('CglBZGRyZXNzZXMSHAoJYWRkcmVzc2VzGAEgAygJUglhZGRyZXNzZXM=');
+final $typed_data.Uint8List addressesDescriptor = $convert
+    .base64Decode('CglBZGRyZXNzZXMSHAoJYWRkcmVzc2VzGAEgAygJUglhZGRyZXNzZXM=');

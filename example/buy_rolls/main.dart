@@ -8,7 +8,6 @@ import 'package:massa/src/wallet/wallet.dart';
 import '../constants.dart' as c;
 
 void main(List<String> args) async {
-
   var grpc = GRPCPublicClient(c.ipAddress, c.port);
 
   final wallet = Wallet();

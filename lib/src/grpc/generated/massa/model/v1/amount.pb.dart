@@ -11,11 +11,29 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class NativeAmount extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NativeAmount', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mantissa', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'scale', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'NativeAmount',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..a<$fixnum.Int64>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mantissa',
+        $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'scale',
+        $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
   NativeAmount._() : super();
   factory NativeAmount({
@@ -31,31 +49,40 @@ class NativeAmount extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory NativeAmount.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NativeAmount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  factory NativeAmount.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NativeAmount.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   NativeAmount clone() => NativeAmount()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  NativeAmount copyWith(void Function(NativeAmount) updates) => super.copyWith((message) => updates(message as NativeAmount)) as NativeAmount; // ignore: deprecated_member_use
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NativeAmount copyWith(void Function(NativeAmount) updates) =>
+      super.copyWith((message) => updates(message as NativeAmount))
+          as NativeAmount; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static NativeAmount create() => NativeAmount._();
   NativeAmount createEmptyInstance() => create();
-  static $pb.PbList<NativeAmount> createRepeated() => $pb.PbList<NativeAmount>();
+  static $pb.PbList<NativeAmount> createRepeated() =>
+      $pb.PbList<NativeAmount>();
   @$core.pragma('dart2js:noInline')
-  static NativeAmount getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NativeAmount>(create);
+  static NativeAmount getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NativeAmount>(create);
   static NativeAmount? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get mantissa => $_getI64(0);
   @$pb.TagNumber(1)
-  set mantissa($fixnum.Int64 v) { $_setInt64(0, v); }
+  set mantissa($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasMantissa() => $_has(0);
   @$pb.TagNumber(1)
@@ -64,10 +91,12 @@ class NativeAmount extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get scale => $_getIZ(1);
   @$pb.TagNumber(2)
-  set scale($core.int v) { $_setUnsignedInt32(1, v); }
+  set scale($core.int v) {
+    $_setUnsignedInt32(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasScale() => $_has(1);
   @$pb.TagNumber(2)
   void clearScale() => clearField(2);
 }
-
