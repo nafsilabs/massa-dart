@@ -1,10 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:massa/src/crypto/crypto.dart';
-import 'package:massa/src/grpc/client/public_client.dart';
-import 'package:massa/src/grpc/send_operations/send_operations.dart';
-import 'package:massa/src/wallet/wallet.dart';
-
+import 'package:massa/massa.dart';
 import '../constants.dart' as c;
 
 void main(List<String> args) async {

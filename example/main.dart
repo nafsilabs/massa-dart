@@ -1,11 +1,11 @@
 // ignore_for_file: avoid_print
 
 import 'package:fixnum/fixnum.dart';
-import 'package:massa/src/grpc/client/public_client.dart';
+import 'package:massa/massa.dart';
 
 /// This example shows how to use massa library, e.g for listing stakers
 
-Future<void> main() async {
+void main() async {
   const ipAddress = 'test.massa.net';
   const port = 33037;
   var grpc = GRPCPublicClient(ipAddress, port);

@@ -292,8 +292,7 @@ class GRPCPublicClient {
   }
 
   /// stream send endorsements
-  Stream<EndorsementIds> sendEndorsements(
-      List<SecureShare> endorsements) async* {
+  Stream<List<String>> sendEndorsements(List<SecureShare> endorsements) async* {
     final requestStream = StreamController<SendEndorsementsRequest>();
     final req = SendEndorsementsRequest(endorsements: endorsements);
     requestStream.add(req);
@@ -303,7 +302,7 @@ class GRPCPublicClient {
     );
     try {
       await for (final resp in response) {
-        yield resp.endorsementsIds;
+        yield resp.endorsementsIds.endorsementsIds;
       }
     } catch (e) {
       throw 'error streaming endorsments: $e';
@@ -313,7 +312,7 @@ class GRPCPublicClient {
   }
 
   /// stream send endorsements
-  Stream<OperationIds> sendOperations(List<SecureShare> operations) async* {
+  Stream<List<String>> sendOperations(List<SecureShare> operations) async* {
     final requestStream = StreamController<SendOperationsRequest>();
     final req = SendOperationsRequest(operations: operations);
     requestStream.add(req);
@@ -323,7 +322,7 @@ class GRPCPublicClient {
     );
     try {
       await for (final resp in response) {
-        yield resp.operationsIds;
+        yield resp.operationsIds.operationIds;
       }
     } catch (e) {
       throw 'error streaming operation status: $e';
@@ -334,8 +333,7 @@ class GRPCPublicClient {
 
   /// Stream of transaction throughput,
   /// [interval] is stream interval in seconds
-  Stream<TransactionsThroughputResponse> transactionThroughput(
-      {int? interval}) async* {
+  Stream<int> transactionThroughput({int? interval}) async* {
     final requestStream = StreamController<TransactionsThroughputRequest>();
     if (interval != null) {
       final v = UInt64Value(value: Int64(interval));
@@ -349,7 +347,7 @@ class GRPCPublicClient {
     );
     try {
       await for (final resp in response) {
-        yield resp;
+        yield resp.throughput;
       }
     } catch (e) {
       throw 'error streaming transaction throughput: $e';
