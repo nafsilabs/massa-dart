@@ -1,3 +1,7 @@
+## 1.5.1
+
+ - **FIX**: dart pub compliance.
+
 ## 1.5.0
 
  - **FEAT**: added grpc full support as of Testnet 25.2 and removed jsonrpc support.
