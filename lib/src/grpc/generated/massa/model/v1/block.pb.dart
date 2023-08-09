@@ -3,15 +3,17 @@
 //  source: massa/model/v1/block.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name, no_leading_underscores_for_local_identifiers
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'slot.pb.dart' as $3;
-import 'endorsement.pb.dart' as $5;
-import 'operation.pb.dart' as $6;
+import '../../../google/protobuf/wrappers.pb.dart' as $3;
+import 'slot.pb.dart' as $5;
+import 'endorsement.pb.dart' as $12;
+import 'operation.pb.dart' as $13;
 
 import 'block.pbenum.dart';
 
@@ -114,19 +116,19 @@ class FilledBlock extends $pb.GeneratedMessage {
             ? ''
             : 'header',
         subBuilder: SignedBlockHeader.create)
-    ..pc<FilledOperationTuple>(
+    ..pc<FilledOperationEntry>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'operations',
         $pb.PbFieldType.PM,
-        subBuilder: FilledOperationTuple.create)
+        subBuilder: FilledOperationEntry.create)
     ..hasRequiredFields = false;
 
   FilledBlock._() : super();
   factory FilledBlock({
     SignedBlockHeader? header,
-    $core.Iterable<FilledOperationTuple>? operations,
+    $core.Iterable<FilledOperationEntry>? operations,
   }) {
     final _result = create();
     if (header != null) {
@@ -178,7 +180,7 @@ class FilledBlock extends $pb.GeneratedMessage {
   SignedBlockHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<FilledOperationTuple> get operations => $_getList(1);
+  $core.List<FilledOperationEntry> get operations => $_getList(1);
 }
 
 class BlockHeader extends $pb.GeneratedMessage {
@@ -191,47 +193,67 @@ class BlockHeader extends $pb.GeneratedMessage {
               ? ''
               : 'massa.model.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.Slot>(
+    ..a<$core.int>(
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'slot',
-        subBuilder: $3.Slot.create)
-    ..pPS(
+            : 'currentVersion',
+        $pb.PbFieldType.OU3)
+    ..aOM<$3.UInt32Value>(
         2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'announcedVersion',
+        subBuilder: $3.UInt32Value.create)
+    ..aOM<$5.Slot>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'slot',
+        subBuilder: $5.Slot.create)
+    ..pPS(
+        4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'parents')
     ..aOS(
-        3,
+        5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'operationMerkleRoot')
-    ..pc<$5.SignedEndorsement>(
-        4,
+            : 'operationsHash')
+    ..pc<$12.SignedEndorsement>(
+        6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'endorsements',
         $pb.PbFieldType.PM,
-        subBuilder: $5.SignedEndorsement.create)
+        subBuilder: $12.SignedEndorsement.create)
     ..hasRequiredFields = false;
 
   BlockHeader._() : super();
   factory BlockHeader({
-    $3.Slot? slot,
+    $core.int? currentVersion,
+    $3.UInt32Value? announcedVersion,
+    $5.Slot? slot,
     $core.Iterable<$core.String>? parents,
-    $core.String? operationMerkleRoot,
-    $core.Iterable<$5.SignedEndorsement>? endorsements,
+    $core.String? operationsHash,
+    $core.Iterable<$12.SignedEndorsement>? endorsements,
   }) {
     final _result = create();
+    if (currentVersion != null) {
+      _result.currentVersion = currentVersion;
+    }
+    if (announcedVersion != null) {
+      _result.announcedVersion = announcedVersion;
+    }
     if (slot != null) {
       _result.slot = slot;
     }
     if (parents != null) {
       _result.parents.addAll(parents);
     }
-    if (operationMerkleRoot != null) {
-      _result.operationMerkleRoot = operationMerkleRoot;
+    if (operationsHash != null) {
+      _result.operationsHash = operationsHash;
     }
     if (endorsements != null) {
       _result.endorsements.addAll(endorsements);
@@ -265,43 +287,69 @@ class BlockHeader extends $pb.GeneratedMessage {
   static BlockHeader? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Slot get slot => $_getN(0);
+  $core.int get currentVersion => $_getIZ(0);
   @$pb.TagNumber(1)
-  set slot($3.Slot v) {
-    setField(1, v);
+  set currentVersion($core.int v) {
+    $_setUnsignedInt32(0, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasSlot() => $_has(0);
+  $core.bool hasCurrentVersion() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSlot() => clearField(1);
-  @$pb.TagNumber(1)
-  $3.Slot ensureSlot() => $_ensure(0);
+  void clearCurrentVersion() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$core.String> get parents => $_getList(1);
+  $3.UInt32Value get announcedVersion => $_getN(1);
+  @$pb.TagNumber(2)
+  set announcedVersion($3.UInt32Value v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAnnouncedVersion() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAnnouncedVersion() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.UInt32Value ensureAnnouncedVersion() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $core.String get operationMerkleRoot => $_getSZ(2);
+  $5.Slot get slot => $_getN(2);
   @$pb.TagNumber(3)
-  set operationMerkleRoot($core.String v) {
-    $_setString(2, v);
+  set slot($5.Slot v) {
+    setField(3, v);
   }
 
   @$pb.TagNumber(3)
-  $core.bool hasOperationMerkleRoot() => $_has(2);
+  $core.bool hasSlot() => $_has(2);
   @$pb.TagNumber(3)
-  void clearOperationMerkleRoot() => clearField(3);
+  void clearSlot() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.Slot ensureSlot() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $core.List<$5.SignedEndorsement> get endorsements => $_getList(3);
+  $core.List<$core.String> get parents => $_getList(3);
+
+  @$pb.TagNumber(5)
+  $core.String get operationsHash => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set operationsHash($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasOperationsHash() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearOperationsHash() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.List<$12.SignedEndorsement> get endorsements => $_getList(5);
 }
 
-class FilledOperationTuple extends $pb.GeneratedMessage {
+class FilledOperationEntry extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
-          : 'FilledOperationTuple',
+          : 'FilledOperationEntry',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
@@ -312,18 +360,18 @@ class FilledOperationTuple extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'operationId')
-    ..aOM<$6.SignedOperation>(
+    ..aOM<$13.SignedOperation>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'operation',
-        subBuilder: $6.SignedOperation.create)
+        subBuilder: $13.SignedOperation.create)
     ..hasRequiredFields = false;
 
-  FilledOperationTuple._() : super();
-  factory FilledOperationTuple({
+  FilledOperationEntry._() : super();
+  factory FilledOperationEntry({
     $core.String? operationId,
-    $6.SignedOperation? operation,
+    $13.SignedOperation? operation,
   }) {
     final _result = create();
     if (operationId != null) {
@@ -334,33 +382,33 @@ class FilledOperationTuple extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory FilledOperationTuple.fromBuffer($core.List<$core.int> i,
+  factory FilledOperationEntry.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory FilledOperationTuple.fromJson($core.String i,
+  factory FilledOperationEntry.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  FilledOperationTuple clone() =>
-      FilledOperationTuple()..mergeFromMessage(this);
+  FilledOperationEntry clone() =>
+      FilledOperationEntry()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  FilledOperationTuple copyWith(void Function(FilledOperationTuple) updates) =>
-      super.copyWith((message) => updates(message as FilledOperationTuple))
-          as FilledOperationTuple; // ignore: deprecated_member_use
+  FilledOperationEntry copyWith(void Function(FilledOperationEntry) updates) =>
+      super.copyWith((message) => updates(message as FilledOperationEntry))
+          as FilledOperationEntry; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static FilledOperationTuple create() => FilledOperationTuple._();
-  FilledOperationTuple createEmptyInstance() => create();
-  static $pb.PbList<FilledOperationTuple> createRepeated() =>
-      $pb.PbList<FilledOperationTuple>();
+  static FilledOperationEntry create() => FilledOperationEntry._();
+  FilledOperationEntry createEmptyInstance() => create();
+  static $pb.PbList<FilledOperationEntry> createRepeated() =>
+      $pb.PbList<FilledOperationEntry>();
   @$core.pragma('dart2js:noInline')
-  static FilledOperationTuple getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FilledOperationTuple>(create);
-  static FilledOperationTuple? _defaultInstance;
+  static FilledOperationEntry getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FilledOperationEntry>(create);
+  static FilledOperationEntry? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get operationId => $_getSZ(0);
@@ -375,9 +423,9 @@ class FilledOperationTuple extends $pb.GeneratedMessage {
   void clearOperationId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $6.SignedOperation get operation => $_getN(1);
+  $13.SignedOperation get operation => $_getN(1);
   @$pb.TagNumber(2)
-  set operation($6.SignedOperation v) {
+  set operation($13.SignedOperation v) {
     setField(2, v);
   }
 
@@ -386,7 +434,7 @@ class FilledOperationTuple extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearOperation() => clearField(2);
   @$pb.TagNumber(2)
-  $6.SignedOperation ensureOperation() => $_ensure(1);
+  $13.SignedOperation ensureOperation() => $_ensure(1);
 }
 
 class SignedBlock extends $pb.GeneratedMessage {
@@ -424,7 +472,14 @@ class SignedBlock extends $pb.GeneratedMessage {
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'id')
+            : 'secureHash')
+    ..a<$fixnum.Int64>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'serializedSize',
+        $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false;
 
   SignedBlock._() : super();
@@ -433,7 +488,8 @@ class SignedBlock extends $pb.GeneratedMessage {
     $core.String? signature,
     $core.String? contentCreatorPubKey,
     $core.String? contentCreatorAddress,
-    $core.String? id,
+    $core.String? secureHash,
+    $fixnum.Int64? serializedSize,
   }) {
     final _result = create();
     if (content != null) {
@@ -448,8 +504,11 @@ class SignedBlock extends $pb.GeneratedMessage {
     if (contentCreatorAddress != null) {
       _result.contentCreatorAddress = contentCreatorAddress;
     }
-    if (id != null) {
-      _result.id = id;
+    if (secureHash != null) {
+      _result.secureHash = secureHash;
+    }
+    if (serializedSize != null) {
+      _result.serializedSize = serializedSize;
     }
     return _result;
   }
@@ -530,16 +589,28 @@ class SignedBlock extends $pb.GeneratedMessage {
   void clearContentCreatorAddress() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get id => $_getSZ(4);
+  $core.String get secureHash => $_getSZ(4);
   @$pb.TagNumber(5)
-  set id($core.String v) {
+  set secureHash($core.String v) {
     $_setString(4, v);
   }
 
   @$pb.TagNumber(5)
-  $core.bool hasId() => $_has(4);
+  $core.bool hasSecureHash() => $_has(4);
   @$pb.TagNumber(5)
-  void clearId() => clearField(5);
+  void clearSecureHash() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $fixnum.Int64 get serializedSize => $_getI64(5);
+  @$pb.TagNumber(6)
+  set serializedSize($fixnum.Int64 v) {
+    $_setInt64(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasSerializedSize() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearSerializedSize() => clearField(6);
 }
 
 class SignedBlockHeader extends $pb.GeneratedMessage {
@@ -577,7 +648,14 @@ class SignedBlockHeader extends $pb.GeneratedMessage {
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'id')
+            : 'secureHash')
+    ..a<$fixnum.Int64>(
+        6,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'serializedSize',
+        $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false;
 
   SignedBlockHeader._() : super();
@@ -586,9 +664,10 @@ class SignedBlockHeader extends $pb.GeneratedMessage {
     $core.String? signature,
     $core.String? contentCreatorPubKey,
     $core.String? contentCreatorAddress,
-    $core.String? id,
+    $core.String? secureHash,
+    $fixnum.Int64? serializedSize,
   }) {
-    final  _result = create();
+    final _result = create();
     if (content != null) {
       _result.content = content;
     }
@@ -601,8 +680,11 @@ class SignedBlockHeader extends $pb.GeneratedMessage {
     if (contentCreatorAddress != null) {
       _result.contentCreatorAddress = contentCreatorAddress;
     }
-    if (id != null) {
-      _result.id = id;
+    if (secureHash != null) {
+      _result.secureHash = secureHash;
+    }
+    if (serializedSize != null) {
+      _result.serializedSize = serializedSize;
     }
     return _result;
   }
@@ -684,16 +766,28 @@ class SignedBlockHeader extends $pb.GeneratedMessage {
   void clearContentCreatorAddress() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get id => $_getSZ(4);
+  $core.String get secureHash => $_getSZ(4);
   @$pb.TagNumber(5)
-  set id($core.String v) {
+  set secureHash($core.String v) {
     $_setString(4, v);
   }
 
   @$pb.TagNumber(5)
-  $core.bool hasId() => $_has(4);
+  $core.bool hasSecureHash() => $_has(4);
   @$pb.TagNumber(5)
-  void clearId() => clearField(5);
+  void clearSecureHash() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $fixnum.Int64 get serializedSize => $_getI64(5);
+  @$pb.TagNumber(6)
+  set serializedSize($fixnum.Int64 v) {
+    $_setInt64(5, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasSerializedSize() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearSerializedSize() => clearField(6);
 }
 
 class BlockWrapper extends $pb.GeneratedMessage {
@@ -710,39 +804,39 @@ class BlockWrapper extends $pb.GeneratedMessage {
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'id')
+            : 'blockId')
     ..aOM<Block>(
         2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'block',
         subBuilder: Block.create)
-    ..pc<BlockStatus>(
+    ..e<BlockStatus>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'status',
-        $pb.PbFieldType.KE,
+        $pb.PbFieldType.OE,
+        defaultOrMaker: BlockStatus.BLOCK_STATUS_UNSPECIFIED,
         valueOf: BlockStatus.valueOf,
-        enumValues: BlockStatus.values,
-        defaultEnumValue: BlockStatus.BLOCK_STATUS_UNSPECIFIED)
+        enumValues: BlockStatus.values)
     ..hasRequiredFields = false;
 
   BlockWrapper._() : super();
   factory BlockWrapper({
-    $core.String? id,
+    $core.String? blockId,
     Block? block,
-    $core.Iterable<BlockStatus>? status,
+    BlockStatus? status,
   }) {
     final _result = create();
-    if (id != null) {
-      _result.id = id;
+    if (blockId != null) {
+      _result.blockId = blockId;
     }
     if (block != null) {
       _result.block = block;
     }
     if (status != null) {
-      _result.status.addAll(status);
+      _result.status = status;
     }
     return _result;
   }
@@ -774,16 +868,16 @@ class BlockWrapper extends $pb.GeneratedMessage {
   static BlockWrapper? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get id => $_getSZ(0);
+  $core.String get blockId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
+  set blockId($core.String v) {
     $_setString(0, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
+  $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearBlockId() => clearField(1);
 
   @$pb.TagNumber(2)
   Block get block => $_getN(1);
@@ -800,5 +894,251 @@ class BlockWrapper extends $pb.GeneratedMessage {
   Block ensureBlock() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $core.List<BlockStatus> get status => $_getList(2);
+  BlockStatus get status => $_getN(2);
+  @$pb.TagNumber(3)
+  set status(BlockStatus v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasStatus() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStatus() => clearField(3);
+}
+
+class BlockInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BlockInfo',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'blockId')
+    ..e<BlockStatus>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'status',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: BlockStatus.BLOCK_STATUS_UNSPECIFIED,
+        valueOf: BlockStatus.valueOf,
+        enumValues: BlockStatus.values)
+    ..hasRequiredFields = false;
+
+  BlockInfo._() : super();
+  factory BlockInfo({
+    $core.String? blockId,
+    BlockStatus? status,
+  }) {
+    final _result = create();
+    if (blockId != null) {
+      _result.blockId = blockId;
+    }
+    if (status != null) {
+      _result.status = status;
+    }
+    return _result;
+  }
+  factory BlockInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BlockInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BlockInfo clone() => BlockInfo()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BlockInfo copyWith(void Function(BlockInfo) updates) =>
+      super.copyWith((message) => updates(message as BlockInfo))
+          as BlockInfo; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BlockInfo create() => BlockInfo._();
+  BlockInfo createEmptyInstance() => create();
+  static $pb.PbList<BlockInfo> createRepeated() => $pb.PbList<BlockInfo>();
+  @$core.pragma('dart2js:noInline')
+  static BlockInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BlockInfo>(create);
+  static BlockInfo? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get blockId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set blockId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasBlockId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBlockId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  BlockStatus get status => $_getN(1);
+  @$pb.TagNumber(2)
+  set status(BlockStatus v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => clearField(2);
+}
+
+class BlockIds extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BlockIds',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..pPS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'blockIds')
+    ..hasRequiredFields = false;
+
+  BlockIds._() : super();
+  factory BlockIds({
+    $core.Iterable<$core.String>? blockIds,
+  }) {
+    final _result = create();
+    if (blockIds != null) {
+      _result.blockIds.addAll(blockIds);
+    }
+    return _result;
+  }
+  factory BlockIds.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BlockIds.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BlockIds clone() => BlockIds()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BlockIds copyWith(void Function(BlockIds) updates) =>
+      super.copyWith((message) => updates(message as BlockIds))
+          as BlockIds; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BlockIds create() => BlockIds._();
+  BlockIds createEmptyInstance() => create();
+  static $pb.PbList<BlockIds> createRepeated() => $pb.PbList<BlockIds>();
+  @$core.pragma('dart2js:noInline')
+  static BlockIds getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BlockIds>(create);
+  static BlockIds? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get blockIds => $_getList(0);
+}
+
+class BlockParent extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BlockParent',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'blockId')
+    ..a<$fixnum.Int64>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'period',
+        $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false;
+
+  BlockParent._() : super();
+  factory BlockParent({
+    $core.String? blockId,
+    $fixnum.Int64? period,
+  }) {
+    final _result = create();
+    if (blockId != null) {
+      _result.blockId = blockId;
+    }
+    if (period != null) {
+      _result.period = period;
+    }
+    return _result;
+  }
+  factory BlockParent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BlockParent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BlockParent clone() => BlockParent()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BlockParent copyWith(void Function(BlockParent) updates) =>
+      super.copyWith((message) => updates(message as BlockParent))
+          as BlockParent; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BlockParent create() => BlockParent._();
+  BlockParent createEmptyInstance() => create();
+  static $pb.PbList<BlockParent> createRepeated() => $pb.PbList<BlockParent>();
+  @$core.pragma('dart2js:noInline')
+  static BlockParent getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BlockParent>(create);
+  static BlockParent? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get blockId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set blockId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasBlockId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBlockId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get period => $_getI64(1);
+  @$pb.TagNumber(2)
+  set period($fixnum.Int64 v) {
+    $_setInt64(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasPeriod() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPeriod() => clearField(2);
 }

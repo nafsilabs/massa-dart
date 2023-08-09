@@ -15,21 +15,22 @@ class BlockStatus extends $pb.ProtobufEnum {
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'BLOCK_STATUS_UNSPECIFIED');
-  static const BlockStatus BLOCK_STATUS_IN_BLOCKCLIQUE = BlockStatus._(
+  static const BlockStatus BLOCK_STATUS_NON_FINAL_BLOCKCLIQUE = BlockStatus._(
       1,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
-          : 'BLOCK_STATUS_IN_BLOCKCLIQUE');
+          : 'BLOCK_STATUS_NON_FINAL_BLOCKCLIQUE');
   static const BlockStatus BLOCK_STATUS_FINAL = BlockStatus._(
       2,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
           ? ''
           : 'BLOCK_STATUS_FINAL');
-  static const BlockStatus BLOCK_STATUS_CANDIDATE = BlockStatus._(
-      3,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'BLOCK_STATUS_CANDIDATE');
+  static const BlockStatus BLOCK_STATUS_NON_FINAL_ALTERNATE_CLIQUE =
+      BlockStatus._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'BLOCK_STATUS_NON_FINAL_ALTERNATE_CLIQUE');
   static const BlockStatus BLOCK_STATUS_DISCARDED = BlockStatus._(
       4,
       const $core.bool.fromEnvironment('protobuf.omit_enum_names')
@@ -38,9 +39,9 @@ class BlockStatus extends $pb.ProtobufEnum {
 
   static const $core.List<BlockStatus> values = <BlockStatus>[
     BLOCK_STATUS_UNSPECIFIED,
-    BLOCK_STATUS_IN_BLOCKCLIQUE,
+    BLOCK_STATUS_NON_FINAL_BLOCKCLIQUE,
     BLOCK_STATUS_FINAL,
-    BLOCK_STATUS_CANDIDATE,
+    BLOCK_STATUS_NON_FINAL_ALTERNATE_CLIQUE,
     BLOCK_STATUS_DISCARDED,
   ];
 

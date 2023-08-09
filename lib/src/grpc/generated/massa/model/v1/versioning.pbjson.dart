@@ -70,14 +70,29 @@ const MipInfo$json = const {
   '1': 'MipInfo',
   '2': const [
     const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'version', '3': 2, '4': 1, '5': 7, '10': 'version'},
-    const {'1': 'start', '3': 3, '4': 1, '5': 6, '10': 'start'},
-    const {'1': 'timeout', '3': 4, '4': 1, '5': 6, '10': 'timeout'},
+    const {'1': 'version', '3': 2, '4': 1, '5': 13, '10': 'version'},
+    const {
+      '1': 'start',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'start'
+    },
+    const {
+      '1': 'timeout',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'timeout'
+    },
     const {
       '1': 'activation_delay',
       '3': 5,
       '4': 1,
-      '5': 6,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
       '10': 'activationDelay'
     },
     const {
@@ -93,7 +108,7 @@ const MipInfo$json = const {
 
 /// Descriptor for `MipInfo`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mipInfoDescriptor = $convert.base64Decode(
-    'CgdNaXBJbmZvEhIKBG5hbWUYASABKAlSBG5hbWUSGAoHdmVyc2lvbhgCIAEoB1IHdmVyc2lvbhIUCgVzdGFydBgDIAEoBlIFc3RhcnQSGAoHdGltZW91dBgEIAEoBlIHdGltZW91dBIpChBhY3RpdmF0aW9uX2RlbGF5GAUgASgGUg9hY3RpdmF0aW9uRGVsYXkSQQoKY29tcG9uZW50cxgGIAMoCzIhLm1hc3NhLm1vZGVsLnYxLk1pcENvbXBvbmVudEVudHJ5Ugpjb21wb25lbnRz');
+    'CgdNaXBJbmZvEhIKBG5hbWUYASABKAlSBG5hbWUSGAoHdmVyc2lvbhgCIAEoDVIHdmVyc2lvbhIwCgVzdGFydBgDIAEoCzIaLm1hc3NhLm1vZGVsLnYxLk5hdGl2ZVRpbWVSBXN0YXJ0EjQKB3RpbWVvdXQYBCABKAsyGi5tYXNzYS5tb2RlbC52MS5OYXRpdmVUaW1lUgd0aW1lb3V0EkUKEGFjdGl2YXRpb25fZGVsYXkYBSABKAsyGi5tYXNzYS5tb2RlbC52MS5OYXRpdmVUaW1lUg9hY3RpdmF0aW9uRGVsYXkSQQoKY29tcG9uZW50cxgGIAMoCzIhLm1hc3NhLm1vZGVsLnYxLk1pcENvbXBvbmVudEVudHJ5Ugpjb21wb25lbnRz');
 @$core.Deprecated('Use mipComponentEntryDescriptor instead')
 const MipComponentEntry$json = const {
   '1': 'MipComponentEntry',
@@ -106,10 +121,10 @@ const MipComponentEntry$json = const {
       '6': '.massa.model.v1.MipComponent',
       '10': 'kind'
     },
-    const {'1': 'version', '3': 2, '4': 1, '5': 7, '10': 'version'},
+    const {'1': 'version', '3': 2, '4': 1, '5': 13, '10': 'version'},
   ],
 };
 
 /// Descriptor for `MipComponentEntry`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mipComponentEntryDescriptor = $convert.base64Decode(
-    'ChFNaXBDb21wb25lbnRFbnRyeRIwCgRraW5kGAEgASgOMhwubWFzc2EubW9kZWwudjEuTWlwQ29tcG9uZW50UgRraW5kEhgKB3ZlcnNpb24YAiABKAdSB3ZlcnNpb24=');
+    'ChFNaXBDb21wb25lbnRFbnRyeRIwCgRraW5kGAEgASgOMhwubWFzc2EubW9kZWwudjEuTWlwQ29tcG9uZW50UgRraW5kEhgKB3ZlcnNpb24YAiABKA1SB3ZlcnNpb24=');

@@ -9,10 +9,10 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'http.pb.dart' as $1;
+import 'http.pb.dart' as $8;
 
 class Annotations {
-  static final http = $pb.Extension<$1.HttpRule>(
+  static final http = $pb.Extension<$8.HttpRule>(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
           : 'google.protobuf.MethodOptions',
@@ -21,8 +21,8 @@ class Annotations {
           : 'http',
       72295728,
       $pb.PbFieldType.OM,
-      defaultOrMaker: $1.HttpRule.getDefault,
-      subBuilder: $1.HttpRule.create);
+      defaultOrMaker: $8.HttpRule.getDefault,
+      subBuilder: $8.HttpRule.create);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(http);
   }

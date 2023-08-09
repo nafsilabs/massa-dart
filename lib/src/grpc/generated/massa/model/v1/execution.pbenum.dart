@@ -28,19 +28,19 @@ class ScExecutionEventStatus extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'SC_EXECUTION_EVENT_STATUS_READ_ONLY');
-  static const ScExecutionEventStatus SC_EXECUTION_EVENT_STATUS_FAILURE =
+  static const ScExecutionEventStatus SC_EXECUTION_EVENT_STATUS_CANDIDATE =
       ScExecutionEventStatus._(
           3,
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
-              : 'SC_EXECUTION_EVENT_STATUS_FAILURE');
+              : 'SC_EXECUTION_EVENT_STATUS_CANDIDATE');
 
   static const $core.List<ScExecutionEventStatus> values =
       <ScExecutionEventStatus>[
     SC_EXECUTION_EVENT_STATUS_UNSPECIFIED,
     SC_EXECUTION_EVENT_STATUS_FINAL,
     SC_EXECUTION_EVENT_STATUS_READ_ONLY,
-    SC_EXECUTION_EVENT_STATUS_FAILURE,
+    SC_EXECUTION_EVENT_STATUS_CANDIDATE,
   ];
 
   static final $core.Map<$core.int, ScExecutionEventStatus> _byValue =
@@ -69,12 +69,19 @@ class ExecutionOutputStatus extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'EXECUTION_OUTPUT_STATUS_FINAL');
+  static const ExecutionOutputStatus EXECUTION_OUTPUT_STATUS_UNKNOWN =
+      ExecutionOutputStatus._(
+          3,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'EXECUTION_OUTPUT_STATUS_UNKNOWN');
 
   static const $core.List<ExecutionOutputStatus> values =
       <ExecutionOutputStatus>[
     EXECUTION_OUTPUT_STATUS_UNSPECIFIED,
     EXECUTION_OUTPUT_STATUS_CANDIDATE,
     EXECUTION_OUTPUT_STATUS_FINAL,
+    EXECUTION_OUTPUT_STATUS_UNKNOWN,
   ];
 
   static final $core.Map<$core.int, ExecutionOutputStatus> _byValue =
@@ -125,18 +132,18 @@ class AsyncPoolChangeType extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'ASYNC_POOL_CHANGE_TYPE_UNSPECIFIED');
-  static const AsyncPoolChangeType ASYNC_POOL_CHANGE_TYPE_ADD =
+  static const AsyncPoolChangeType ASYNC_POOL_CHANGE_TYPE_SET =
       AsyncPoolChangeType._(
           1,
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
-              : 'ASYNC_POOL_CHANGE_TYPE_ADD');
-  static const AsyncPoolChangeType ASYNC_POOL_CHANGE_TYPE_ACTIVATE =
+              : 'ASYNC_POOL_CHANGE_TYPE_SET');
+  static const AsyncPoolChangeType ASYNC_POOL_CHANGE_TYPE_UPDATE =
       AsyncPoolChangeType._(
           2,
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
-              : 'ASYNC_POOL_CHANGE_TYPE_ACTIVATE');
+              : 'ASYNC_POOL_CHANGE_TYPE_UPDATE');
   static const AsyncPoolChangeType ASYNC_POOL_CHANGE_TYPE_DELETE =
       AsyncPoolChangeType._(
           3,
@@ -146,8 +153,8 @@ class AsyncPoolChangeType extends $pb.ProtobufEnum {
 
   static const $core.List<AsyncPoolChangeType> values = <AsyncPoolChangeType>[
     ASYNC_POOL_CHANGE_TYPE_UNSPECIFIED,
-    ASYNC_POOL_CHANGE_TYPE_ADD,
-    ASYNC_POOL_CHANGE_TYPE_ACTIVATE,
+    ASYNC_POOL_CHANGE_TYPE_SET,
+    ASYNC_POOL_CHANGE_TYPE_UPDATE,
     ASYNC_POOL_CHANGE_TYPE_DELETE,
   ];
 
@@ -193,65 +200,4 @@ class LedgerChangeType extends $pb.ProtobufEnum {
   static LedgerChangeType? valueOf($core.int value) => _byValue[value];
 
   const LedgerChangeType._($core.int v, $core.String n) : super(v, n);
-}
-
-class SetOrKeepType extends $pb.ProtobufEnum {
-  static const SetOrKeepType SET_OR_KEEP_TYPE_UNSPECIFIED = SetOrKeepType._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SET_OR_KEEP_TYPE_UNSPECIFIED');
-  static const SetOrKeepType SET_OR_KEEP_TYPE_SET = SetOrKeepType._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SET_OR_KEEP_TYPE_SET');
-  static const SetOrKeepType SET_OR_KEEP_TYPE_KEEP = SetOrKeepType._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SET_OR_KEEP_TYPE_KEEP');
-
-  static const $core.List<SetOrKeepType> values = <SetOrKeepType>[
-    SET_OR_KEEP_TYPE_UNSPECIFIED,
-    SET_OR_KEEP_TYPE_SET,
-    SET_OR_KEEP_TYPE_KEEP,
-  ];
-
-  static final $core.Map<$core.int, SetOrKeepType> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static SetOrKeepType? valueOf($core.int value) => _byValue[value];
-
-  const SetOrKeepType._($core.int v, $core.String n) : super(v, n);
-}
-
-class SetOrDeleteType extends $pb.ProtobufEnum {
-  static const SetOrDeleteType SET_OR_DELETE_TYPE_UNSPECIFIED =
-      SetOrDeleteType._(
-          0,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'SET_OR_DELETE_TYPE_UNSPECIFIED');
-  static const SetOrDeleteType SET_OR_DELETE_TYPE_SET = SetOrDeleteType._(
-      1,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SET_OR_DELETE_TYPE_SET');
-  static const SetOrDeleteType SET_OR_DELETE_TYPE_DELETE = SetOrDeleteType._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SET_OR_DELETE_TYPE_DELETE');
-
-  static const $core.List<SetOrDeleteType> values = <SetOrDeleteType>[
-    SET_OR_DELETE_TYPE_UNSPECIFIED,
-    SET_OR_DELETE_TYPE_SET,
-    SET_OR_DELETE_TYPE_DELETE,
-  ];
-
-  static final $core.Map<$core.int, SetOrDeleteType> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static SetOrDeleteType? valueOf($core.int value) => _byValue[value];
-
-  const SetOrDeleteType._($core.int v, $core.String n) : super(v, n);
 }

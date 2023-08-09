@@ -3,12 +3,13 @@
 //  source: massa/model/v1/versioning.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name, no_leading_underscores_for_local_identifiers
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+
+import 'time.pb.dart' as $4;
 
 import 'versioning.pbenum.dart';
 
@@ -129,28 +130,25 @@ class MipInfo extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'version',
-        $pb.PbFieldType.OF3)
-    ..a<$fixnum.Int64>(
+        $pb.PbFieldType.OU3)
+    ..aOM<$4.NativeTime>(
         3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'start',
-        $pb.PbFieldType.OF6,
-        defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(
+        subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(
         4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'timeout',
-        $pb.PbFieldType.OF6,
-        defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(
+        subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(
         5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'activationDelay',
-        $pb.PbFieldType.OF6,
-        defaultOrMaker: $fixnum.Int64.ZERO)
+        subBuilder: $4.NativeTime.create)
     ..pc<MipComponentEntry>(
         6,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
@@ -164,9 +162,9 @@ class MipInfo extends $pb.GeneratedMessage {
   factory MipInfo({
     $core.String? name,
     $core.int? version,
-    $fixnum.Int64? start,
-    $fixnum.Int64? timeout,
-    $fixnum.Int64? activationDelay,
+    $4.NativeTime? start,
+    $4.NativeTime? timeout,
+    $4.NativeTime? activationDelay,
     $core.Iterable<MipComponentEntry>? components,
   }) {
     final _result = create();
@@ -241,40 +239,46 @@ class MipInfo extends $pb.GeneratedMessage {
   void clearVersion() => clearField(2);
 
   @$pb.TagNumber(3)
-  $fixnum.Int64 get start => $_getI64(2);
+  $4.NativeTime get start => $_getN(2);
   @$pb.TagNumber(3)
-  set start($fixnum.Int64 v) {
-    $_setInt64(2, v);
+  set start($4.NativeTime v) {
+    setField(3, v);
   }
 
   @$pb.TagNumber(3)
   $core.bool hasStart() => $_has(2);
   @$pb.TagNumber(3)
   void clearStart() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.NativeTime ensureStart() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $fixnum.Int64 get timeout => $_getI64(3);
+  $4.NativeTime get timeout => $_getN(3);
   @$pb.TagNumber(4)
-  set timeout($fixnum.Int64 v) {
-    $_setInt64(3, v);
+  set timeout($4.NativeTime v) {
+    setField(4, v);
   }
 
   @$pb.TagNumber(4)
   $core.bool hasTimeout() => $_has(3);
   @$pb.TagNumber(4)
   void clearTimeout() => clearField(4);
+  @$pb.TagNumber(4)
+  $4.NativeTime ensureTimeout() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $fixnum.Int64 get activationDelay => $_getI64(4);
+  $4.NativeTime get activationDelay => $_getN(4);
   @$pb.TagNumber(5)
-  set activationDelay($fixnum.Int64 v) {
-    $_setInt64(4, v);
+  set activationDelay($4.NativeTime v) {
+    setField(5, v);
   }
 
   @$pb.TagNumber(5)
   $core.bool hasActivationDelay() => $_has(4);
   @$pb.TagNumber(5)
   void clearActivationDelay() => clearField(5);
+  @$pb.TagNumber(5)
+  $4.NativeTime ensureActivationDelay() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.List<MipComponentEntry> get components => $_getList(5);
@@ -304,7 +308,7 @@ class MipComponentEntry extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'version',
-        $pb.PbFieldType.OF3)
+        $pb.PbFieldType.OU3)
     ..hasRequiredFields = false;
 
   MipComponentEntry._() : super();
