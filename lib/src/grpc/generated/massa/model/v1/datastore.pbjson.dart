@@ -8,25 +8,16 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
-
 @$core.Deprecated('Use addressKeysEntriesDescriptor instead')
 const AddressKeysEntries$json = const {
   '1': 'AddressKeysEntries',
   '2': const [
-    const {
-      '1': 'address_key_entries',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.massa.model.v1.AddressKeyEntry',
-      '10': 'addressKeyEntries'
-    },
+    const {'1': 'address_key_entries', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.AddressKeyEntry', '10': 'addressKeyEntries'},
   ],
 };
 
 /// Descriptor for `AddressKeysEntries`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressKeysEntriesDescriptor = $convert.base64Decode(
-    'ChJBZGRyZXNzS2V5c0VudHJpZXMSTwoTYWRkcmVzc19rZXlfZW50cmllcxgBIAMoCzIfLm1hc3NhLm1vZGVsLnYxLkFkZHJlc3NLZXlFbnRyeVIRYWRkcmVzc0tleUVudHJpZXM=');
+final $typed_data.Uint8List addressKeysEntriesDescriptor = $convert.base64Decode('ChJBZGRyZXNzS2V5c0VudHJpZXMSTwoTYWRkcmVzc19rZXlfZW50cmllcxgBIAMoCzIfLm1hc3NhLm1vZGVsLnYxLkFkZHJlc3NLZXlFbnRyeVIRYWRkcmVzc0tleUVudHJpZXM=');
 @$core.Deprecated('Use addressKeyEntryDescriptor instead')
 const AddressKeyEntry$json = const {
   '1': 'AddressKeyEntry',
@@ -37,23 +28,15 @@ const AddressKeyEntry$json = const {
 };
 
 /// Descriptor for `AddressKeyEntry`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressKeyEntryDescriptor = $convert.base64Decode(
-    'Cg9BZGRyZXNzS2V5RW50cnkSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcxIQCgNrZXkYAiABKAxSA2tleQ==');
+final $typed_data.Uint8List addressKeyEntryDescriptor = $convert.base64Decode('Cg9BZGRyZXNzS2V5RW50cnkSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcxIQCgNrZXkYAiABKAxSA2tleQ==');
 @$core.Deprecated('Use datastoreEntryDescriptor instead')
 const DatastoreEntry$json = const {
   '1': 'DatastoreEntry',
   '2': const [
     const {'1': 'final_value', '3': 1, '4': 1, '5': 12, '10': 'finalValue'},
-    const {
-      '1': 'candidate_value',
-      '3': 2,
-      '4': 1,
-      '5': 12,
-      '10': 'candidateValue'
-    },
+    const {'1': 'candidate_value', '3': 2, '4': 1, '5': 12, '10': 'candidateValue'},
   ],
 };
 
 /// Descriptor for `DatastoreEntry`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List datastoreEntryDescriptor = $convert.base64Decode(
-    'Cg5EYXRhc3RvcmVFbnRyeRIfCgtmaW5hbF92YWx1ZRgBIAEoDFIKZmluYWxWYWx1ZRInCg9jYW5kaWRhdGVfdmFsdWUYAiABKAxSDmNhbmRpZGF0ZVZhbHVl');
+final $typed_data.Uint8List datastoreEntryDescriptor = $convert.base64Decode('Cg5EYXRhc3RvcmVFbnRyeRIfCgtmaW5hbF92YWx1ZRgBIAEoDFIKZmluYWxWYWx1ZRInCg9jYW5kaWRhdGVfdmFsdWUYAiABKAxSDmNhbmRpZGF0ZVZhbHVl');

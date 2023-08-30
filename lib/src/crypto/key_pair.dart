@@ -58,7 +58,7 @@ class KeyPair {
     if (addressType == AddressType.smartContract) {
       secondPrifix = smartContractAddressPrefix;
     }
-    final versionPublicKeyBytes = concat([
+    final versionedPublicKeyBytes = concat([
       Uint8List.fromList([keyPairVersion]),
       publicKey.bytes
     ]);
@@ -67,7 +67,7 @@ class KeyPair {
         secondPrifix +
         base58Encode(concat([
           Uint8List.fromList([keyPairVersion]),
-          blake3Hash(versionPublicKeyBytes)
+          blake3Hash(versionedPublicKeyBytes)
         ]));
   }
 
@@ -134,14 +134,14 @@ Future<PublicKey> public(PrivateKey privateKey) async {
 
 /// Generate massa address from a given public key [publicKey]
 String address(PublicKey publicKey) {
-  final versionPublicKeyBytes = concat([
+  final versionedPublicKeyBytes = concat([
     Uint8List.fromList([keyPairVersion]),
     publicKey.bytes
   ]);
   return addressPrefix +
       base58Encode(concat([
         Uint8List.fromList([keyPairVersion]),
-        blake3Hash(versionPublicKeyBytes)
+        blake3Hash(versionedPublicKeyBytes)
       ]));
 }
 
@@ -199,6 +199,20 @@ Uint8List parseAddress(String address) {
     throw 'Invalid address.';
   }
   return pubKeyHash.sublist(1);
+}
+
+///Parses address [address] into bytes [address type (1 byte)|version (1 byte) | address (22 bytes)]
+Uint8List serialiseAddress(String address) {
+  var addressType = AddressType.user;
+  if (address[1] == smartContractAddressPrefix) {
+    addressType = AddressType.smartContract;
+  }
+  Uint8List serialisedAddress = Uint8List.fromList([addressType.index]);
+  final pubKeyHash = base58Decode(address.substring(2)); //versioned address
+  if (pubKeyHash.length != 33) {
+    throw 'Invalid address.';
+  }
+  return concat([serialisedAddress, pubKeyHash]);
 }
 
 int _getAddressThread(String address) {

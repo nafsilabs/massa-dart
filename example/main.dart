@@ -23,5 +23,5 @@ void main() async {
   }
   print('Total addresses: $totalAddresses');
   print('Total rolls: $totalRolls');
-  await grpc.shutDown();
+  await grpc.close();
 }

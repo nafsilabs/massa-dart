@@ -8,7 +8,6 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
-
 @$core.Deprecated('Use nativeAmountDescriptor instead')
 const NativeAmount$json = const {
   '1': 'NativeAmount',
@@ -19,5 +18,4 @@ const NativeAmount$json = const {
 };
 
 /// Descriptor for `NativeAmount`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List nativeAmountDescriptor = $convert.base64Decode(
-    'CgxOYXRpdmVBbW91bnQSGgoIbWFudGlzc2EYASABKARSCG1hbnRpc3NhEhQKBXNjYWxlGAIgASgNUgVzY2FsZQ==');
+final $typed_data.Uint8List nativeAmountDescriptor = $convert.base64Decode('CgxOYXRpdmVBbW91bnQSGgoIbWFudGlzc2EYASABKARSCG1hbnRpc3NhEhQKBXNjYWxlGAIgASgNUgVzY2FsZQ==');

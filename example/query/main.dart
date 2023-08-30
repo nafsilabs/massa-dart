@@ -20,5 +20,5 @@ Future<void> main() async {
   var state = await grpc.queryState(queries: [q1, q2, q3]);
   print(state.toString());
 
-  grpc.shutDown();
+  grpc.close();
 }

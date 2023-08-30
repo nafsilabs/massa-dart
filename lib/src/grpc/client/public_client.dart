@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:typed_data';
 import 'package:fixnum/fixnum.dart';
 import 'package:grpc/grpc.dart';
 import 'package:massa/src/grpc/generated/google/protobuf/wrappers.pb.dart';
@@ -10,6 +11,7 @@ import 'package:massa/src/grpc/generated/massa/model/v1/node.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/operation.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/staker.pb.dart';
 import 'package:massa/src/grpc/generated/public.pbgrpc.dart';
+import 'package:massa/src/helpers/helpers.dart';
 
 class GRPCPublicClient {
   late String host; //host ip address
@@ -31,11 +33,23 @@ class GRPCPublicClient {
   }
 
   /// ExecuteReadOnlyCall
-  Future<ReadOnlyExecutionOutput> executeReadOnlyCall(
-      ReadOnlyExecutionCall call) async {
+  Future<ReadOnlyExecutionOutput> executeReadOnlyCall(double maximuGas,
+      String targetAddress, String targetFunction, List<int> parameters,
+      {String? callerAddress}) async {
+    final fn = FunctionCall(
+        targetAddress: targetAddress,
+        targetFunction: targetFunction,
+        parameter: parameters);
+    final call = ReadOnlyExecutionCall(
+        maxGas: Int64(doubleToMassaInt(maximuGas)),
+        functionCall: fn,
+        callerAddress: StringValue(value: callerAddress));
     final request = ExecuteReadOnlyCallRequest(call: call);
     try {
-      final response = await publicServiceClient.executeReadOnlyCall(request);
+      final response = await publicServiceClient.executeReadOnlyCall(
+        request,
+        options: CallOptions(),
+      );
       return response.output;
     } catch (e) {
       throw 'error executing read only call: $e';
@@ -46,7 +60,10 @@ class GRPCPublicClient {
   Future<GetBlocksResponse?> getBlocks({List<String>? blockIds}) async {
     final request = GetBlocksRequest(blockIds: blockIds);
     try {
-      return await publicServiceClient.getBlocks(request);
+      return await publicServiceClient.getBlocks(
+        request,
+        options: CallOptions(),
+      );
     } catch (e) {
       throw 'error getting blocks: $e';
     }
@@ -55,9 +72,12 @@ class GRPCPublicClient {
   /// GetDatastoreEntries
   Future<GetDatastoreEntriesResponse?> getDataStoreEntries(
       List<GetDatastoreEntryFilter> filters) async {
-    final request = GetDatastoreEntriesRequest();
+    final request = GetDatastoreEntriesRequest(filters: filters);
     try {
-      return await publicServiceClient.getDatastoreEntries(request);
+      return await publicServiceClient.getDatastoreEntries(
+        request,
+        options: CallOptions(),
+      );
     } catch (e) {
       throw 'error getting data store entries: $e';
     }
@@ -68,7 +88,10 @@ class GRPCPublicClient {
       List<String> endorsementIds) async {
     final request = GetEndorsementsRequest(endorsementIds: endorsementIds);
     try {
-      return await publicServiceClient.getEndorsements(request);
+      return await publicServiceClient.getEndorsements(
+        request,
+        options: CallOptions(),
+      );
     } catch (e) {
       throw 'error getting endorsements: $e';
     }
@@ -78,17 +101,25 @@ class GRPCPublicClient {
   Future<GetNextBlockBestParentsResponse> getNextBlockBestParents() async {
     final request = GetNextBlockBestParentsRequest();
     try {
-      return await publicServiceClient.getNextBlockBestParents(request);
+      return await publicServiceClient.getNextBlockBestParents(
+        request,
+        options: CallOptions(),
+      );
     } catch (e) {
       throw 'error getting next block best parents: $e';
     }
   }
 
   /// Get operations
-  Future<GetOperationsResponse> getOperations(List<String> operationIds) async {
+  Future<List<OperationWrapper>> getOperations(
+      List<String> operationIds) async {
     final request = GetOperationsRequest(operationIds: operationIds);
     try {
-      return await publicServiceClient.getOperations(request);
+      final response = await publicServiceClient.getOperations(
+        request,
+        options: CallOptions(),
+      );
+      return response.wrappedOperations;
     } catch (e) {
       throw 'error getting operations: $e';
     }
@@ -99,7 +130,10 @@ class GRPCPublicClient {
       List<ScExecutionEventsFilter> filters) async {
     final request = GetScExecutionEventsRequest(filters: filters);
     try {
-      final response = await publicServiceClient.getScExecutionEvents(request);
+      final response = await publicServiceClient.getScExecutionEvents(
+        request,
+        options: CallOptions(),
+      );
       return response.events;
     } catch (e) {
       throw 'error getting sc execute events: $e';
@@ -111,7 +145,10 @@ class GRPCPublicClient {
       List<SelectorDrawsFilter> filters) async {
     final request = GetSelectorDrawsRequest(filters: filters);
     try {
-      return await publicServiceClient.getSelectorDraws(request);
+      return await publicServiceClient.getSelectorDraws(
+        request,
+        options: CallOptions(),
+      );
     } catch (e) {
       throw 'error getting selector draws: $e';
     }
@@ -124,7 +161,10 @@ class GRPCPublicClient {
         StakersFilter(minRolls: minRolls, maxRolls: maxRolls, limit: limit);
     try {
       final request = GetStakersRequest(filters: [filter]);
-      final response = await publicServiceClient.getStakers(request);
+      final response = await publicServiceClient.getStakers(
+        request,
+        options: CallOptions(),
+      );
       return response.stakers;
     } catch (e) {
       throw 'Error obtaining stakers: $e';
@@ -135,7 +175,10 @@ class GRPCPublicClient {
   Future<PublicStatus> getStatus() async {
     try {
       final request = GetStatusRequest();
-      final response = await publicServiceClient.getStatus(request);
+      final response = await publicServiceClient.getStatus(
+        request,
+        options: CallOptions(),
+      );
       return response.status;
     } catch (e) {
       throw 'error getting status: $e';
@@ -146,8 +189,10 @@ class GRPCPublicClient {
   Future<int> getTransactionThroughput() async {
     try {
       final request = GetTransactionsThroughputRequest();
-      final response =
-          await publicServiceClient.getTransactionsThroughput(request);
+      final response = await publicServiceClient.getTransactionsThroughput(
+        request,
+        options: CallOptions(),
+      );
       return response.throughput;
     } catch (e) {
       throw 'error getting status: $e';
@@ -159,7 +204,10 @@ class GRPCPublicClient {
       {List<ExecutionQueryRequestItem>? queries}) async {
     try {
       final request = QueryStateRequest(queries: queries);
-      return await publicServiceClient.queryState(request);
+      return await publicServiceClient.queryState(
+        request,
+        options: CallOptions(),
+      );
     } catch (e) {
       throw 'error querying state: $e';
     }
@@ -302,7 +350,7 @@ class GRPCPublicClient {
     );
     try {
       await for (final resp in response) {
-        yield resp.endorsementsIds.endorsementsIds;
+        yield resp.endorsementIds.endorsementIds;
       }
     } catch (e) {
       throw 'error streaming endorsments: $e';
@@ -322,7 +370,7 @@ class GRPCPublicClient {
     );
     try {
       await for (final resp in response) {
-        yield resp.operationsIds.operationIds;
+        yield resp.operationIds.operationIds;
       }
     } catch (e) {
       throw 'error streaming operation status: $e';
@@ -356,8 +404,8 @@ class GRPCPublicClient {
     }
   }
 
-  /// client shutdwon
-  Future<void> shutDown() async {
+  /// close client connection
+  Future<void> close() async {
     await _instance.channel.shutdown();
   }
 

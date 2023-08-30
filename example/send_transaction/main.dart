@@ -22,5 +22,5 @@ void main() async {
     print('operation ids = ${resp.toString()}');
     break;
   }
-  await grpc.shutDown();
+  await grpc.close();
 }

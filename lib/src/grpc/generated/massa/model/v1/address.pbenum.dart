@@ -10,32 +10,19 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AddressCategory extends $pb.ProtobufEnum {
-  static const AddressCategory ADDRESS_CATEGORY_UNSPECIFIED = AddressCategory._(
-      0,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ADDRESS_CATEGORY_UNSPECIFIED');
-  static const AddressCategory ADDRESS_CATEGORY_USER_ADDRESS =
-      AddressCategory._(
-          1,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ADDRESS_CATEGORY_USER_ADDRESS');
-  static const AddressCategory ADDRESS_CATEGORY_SC_ADDRESS = AddressCategory._(
-      2,
-      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'ADDRESS_CATEGORY_SC_ADDRESS');
+  static const AddressCategory ADDRESS_CATEGORY_UNSPECIFIED = AddressCategory._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ADDRESS_CATEGORY_UNSPECIFIED');
+  static const AddressCategory ADDRESS_CATEGORY_USER_ADDRESS = AddressCategory._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ADDRESS_CATEGORY_USER_ADDRESS');
+  static const AddressCategory ADDRESS_CATEGORY_SC_ADDRESS = AddressCategory._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ADDRESS_CATEGORY_SC_ADDRESS');
 
-  static const $core.List<AddressCategory> values = <AddressCategory>[
+  static const $core.List<AddressCategory> values = <AddressCategory> [
     ADDRESS_CATEGORY_UNSPECIFIED,
     ADDRESS_CATEGORY_USER_ADDRESS,
     ADDRESS_CATEGORY_SC_ADDRESS,
   ];
 
-  static final $core.Map<$core.int, AddressCategory> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, AddressCategory> _byValue = $pb.ProtobufEnum.initByValue(values);
   static AddressCategory? valueOf($core.int value) => _byValue[value];
 
   const AddressCategory._($core.int v, $core.String n) : super(v, n);
 }
+

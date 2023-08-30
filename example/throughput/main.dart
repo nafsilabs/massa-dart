@@ -8,5 +8,5 @@ void main() async {
   await for (final resp in grpc.transactionThroughput(interval: 5)) {
     print('throughput = ${resp} transactions/second');
   }
-  await grpc.shutDown();
+  await grpc.close();
 }

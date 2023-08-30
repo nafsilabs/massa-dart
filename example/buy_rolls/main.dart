@@ -22,5 +22,5 @@ void main(List<String> args) async {
     break;
   }
 
-  await grpc.shutDown();
+  await grpc.close();
 }

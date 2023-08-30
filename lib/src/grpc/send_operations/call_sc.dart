@@ -11,28 +11,35 @@ class CallSC extends BaseSendOperation {
   String targetFunction;
   Uint8List functionParameters;
   double maximumGas;
-  double coins;
-  CallSC(
-      {required this.targetAddress,
-      required this.targetFunction,
-      required this.functionParameters,
-      required this.maximumGas,
-      required this.coins})
-      : super(OperationType.callSC);
+  double maximumCoins;
+
+  CallSC({
+    required this.targetAddress,
+    required this.targetFunction,
+    required this.functionParameters,
+    required double fee,
+    required this.maximumGas,
+    required this.maximumCoins,
+    required int expirePeriod,
+  }) : super(OperationType.callSC, fee: fee, expirePeriod: expirePeriod);
 
   /// Compact bytes to be sent
   @override
   Uint8List compact() {
     final operationTypeEncoded = Varint.encode(operationType.index);
+    final feeEncoded = Varint.encode(doubleToMassaInt(fee!));
+    final expirePeriodEncoded = Varint.encode(expirePeriod!);
     final maximumGasEncoded = Varint.encode(doubleToMassaInt(maximumGas));
-    final coinsEncoded = Varint.encode(doubleToMassaInt(coins));
-    final targetAddressEncoded = parseAddress(targetAddress);
+    final coinsEncoded = Varint.encode(doubleToMassaInt(maximumCoins));
+    final targetAddressEncoded = serialiseAddress(targetAddress);
     final targetFunctionBytes = Uint8List.fromList(targetFunction.codeUnits);
     final targetFunctionBytesLen = targetFunctionBytes.length;
     final targetFunctionBytesLenEncoded = Varint.encode(targetFunctionBytesLen);
     final numParamsBytes = Varint.encode(functionParameters.length);
 
     Uint8List compactData = concat([
+      feeEncoded,
+      expirePeriodEncoded,
       operationTypeEncoded,
       maximumGasEncoded,
       coinsEncoded,

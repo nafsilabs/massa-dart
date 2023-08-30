@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:massa/src/crypto/crypto.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/commons.pb.dart';
+import 'package:massa/src/grpc/send_operations/call_sc.dart';
 import 'package:massa/src/grpc/send_operations/execute_sc.dart';
 import 'package:massa/src/grpc/send_operations/sell_rolls.dart';
 import 'package:massa/src/grpc/send_operations/send_transaction.dart';
@@ -72,12 +73,46 @@ Future<SecureShare> executeSC(Account account, Uint8List data, double fee,
   dataStore ??= <Uint8List, Uint8List>{};
 
   final sc = ExecuteSC(
-      data: data,
-      fee: fee,
-      maximumGas: maximumGas,
-      maximumCoins: maximumCoins,
-      dataStore: dataStore,
-      expirePeriod: expirePeriod);
+    data: data,
+    fee: fee,
+    maximumGas: maximumGas,
+    maximumCoins: maximumCoins,
+    dataStore: dataStore,
+    expirePeriod: expirePeriod,
+  );
+  final scCompactData = sc.compact();
+  final signatureData =
+      concat([getBytesPublicKeyVersioned(account.publicKey()), scCompactData]);
+  final signature = await account.keyPair.sign(signatureData);
+
+  return SecureShare(
+    serializedData: scCompactData,
+    signature: signature,
+    contentCreatorPubKey: account.publicKey(),
+    contentCreatorAddress: account.address(),
+  );
+}
+
+/// Call contract
+Future<SecureShare> callSC(
+  Account account,
+  String targetAddress,
+  String targetFunction,
+  Uint8List functionParameters,
+  double fee,
+  double maximumGas,
+  double maximumCoins,
+  int expirePeriod,
+) async {
+  final sc = CallSC(
+    targetAddress: targetAddress,
+    targetFunction: targetFunction,
+    functionParameters: functionParameters,
+    fee: fee,
+    maximumGas: maximumGas,
+    maximumCoins: maximumCoins,
+    expirePeriod: expirePeriod,
+  );
   final scCompactData = sc.compact();
   final signatureData =
       concat([getBytesPublicKeyVersioned(account.publicKey()), scCompactData]);

@@ -10,14 +10,14 @@ class ExecuteSC extends BaseSendOperation {
   double maximumGas;
   double maximumCoins;
   Map<Uint8List, Uint8List> dataStore;
-  ExecuteSC(
-      {required this.data,
-      required double fee,
-      required this.maximumGas,
-      required this.maximumCoins,
-      required this.dataStore,
-      required int expirePeriod})
-      : super(OperationType.executeSC, fee: fee, expirePeriod: expirePeriod);
+  ExecuteSC({
+    required this.data,
+    required double fee,
+    required this.maximumGas,
+    required this.maximumCoins,
+    required this.dataStore,
+    required int expirePeriod,
+  }) : super(OperationType.executeSC, fee: fee, expirePeriod: expirePeriod);
   @override
   Uint8List compact() {
     final operationTypeEncoded = Varint.encode(operationType.index);
