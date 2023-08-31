@@ -1,32 +1,38 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: massa/model/v1/datastore.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// AddressKeys holds a list of addresses - keys
 class AddressKeysEntries extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddressKeysEntries', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..pc<AddressKeyEntry>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'addressKeyEntries', $pb.PbFieldType.PM, subBuilder: AddressKeyEntry.create)
-    ..hasRequiredFields = false
-  ;
-
-  AddressKeysEntries._() : super();
   factory AddressKeysEntries({
     $core.Iterable<AddressKeyEntry>? addressKeyEntries,
   }) {
-    final _result = create();
+    final $result = create();
     if (addressKeyEntries != null) {
-      _result.addressKeyEntries.addAll(addressKeyEntries);
+      $result.addressKeyEntries.addAll(addressKeyEntries);
     }
-    return _result;
+    return $result;
   }
+  AddressKeysEntries._() : super();
   factory AddressKeysEntries.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AddressKeysEntries.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AddressKeysEntries', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..pc<AddressKeyEntry>(1, _omitFieldNames ? '' : 'addressKeyEntries', $pb.PbFieldType.PM, subBuilder: AddressKeyEntry.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -36,8 +42,10 @@ class AddressKeysEntries extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AddressKeysEntries copyWith(void Function(AddressKeysEntries) updates) => super.copyWith((message) => updates(message as AddressKeysEntries)) as AddressKeysEntries; // ignore: deprecated_member_use
+  AddressKeysEntries copyWith(void Function(AddressKeysEntries) updates) => super.copyWith((message) => updates(message as AddressKeysEntries)) as AddressKeysEntries;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AddressKeysEntries create() => AddressKeysEntries._();
   AddressKeysEntries createEmptyInstance() => create();
@@ -46,33 +54,36 @@ class AddressKeysEntries extends $pb.GeneratedMessage {
   static AddressKeysEntries getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AddressKeysEntries>(create);
   static AddressKeysEntries? _defaultInstance;
 
+  /// List of address- key entries
   @$pb.TagNumber(1)
   $core.List<AddressKeyEntry> get addressKeyEntries => $_getList(0);
 }
 
+/// AddressKeyEntry
 class AddressKeyEntry extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddressKeyEntry', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address')
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'key', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  AddressKeyEntry._() : super();
   factory AddressKeyEntry({
     $core.String? address,
     $core.List<$core.int>? key,
   }) {
-    final _result = create();
+    final $result = create();
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
-    return _result;
+    return $result;
   }
+  AddressKeyEntry._() : super();
   factory AddressKeyEntry.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AddressKeyEntry.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AddressKeyEntry', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'address')
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'key', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -82,8 +93,10 @@ class AddressKeyEntry extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AddressKeyEntry copyWith(void Function(AddressKeyEntry) updates) => super.copyWith((message) => updates(message as AddressKeyEntry)) as AddressKeyEntry; // ignore: deprecated_member_use
+  AddressKeyEntry copyWith(void Function(AddressKeyEntry) updates) => super.copyWith((message) => updates(message as AddressKeyEntry)) as AddressKeyEntry;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AddressKeyEntry create() => AddressKeyEntry._();
   AddressKeyEntry createEmptyInstance() => create();
@@ -92,6 +105,7 @@ class AddressKeyEntry extends $pb.GeneratedMessage {
   static AddressKeyEntry getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AddressKeyEntry>(create);
   static AddressKeyEntry? _defaultInstance;
 
+  /// Associated address of the entry
   @$pb.TagNumber(1)
   $core.String get address => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -101,6 +115,7 @@ class AddressKeyEntry extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAddress() => clearField(1);
 
+  /// Datastore key
   @$pb.TagNumber(2)
   $core.List<$core.int> get key => $_getN(1);
   @$pb.TagNumber(2)
@@ -111,29 +126,31 @@ class AddressKeyEntry extends $pb.GeneratedMessage {
   void clearKey() => clearField(2);
 }
 
+/// DatastoreEntry
 class DatastoreEntry extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DatastoreEntry', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'finalValue', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'candidateValue', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  DatastoreEntry._() : super();
   factory DatastoreEntry({
     $core.List<$core.int>? finalValue,
     $core.List<$core.int>? candidateValue,
   }) {
-    final _result = create();
+    final $result = create();
     if (finalValue != null) {
-      _result.finalValue = finalValue;
+      $result.finalValue = finalValue;
     }
     if (candidateValue != null) {
-      _result.candidateValue = candidateValue;
+      $result.candidateValue = candidateValue;
     }
-    return _result;
+    return $result;
   }
+  DatastoreEntry._() : super();
   factory DatastoreEntry.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DatastoreEntry.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DatastoreEntry', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'finalValue', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'candidateValue', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -143,8 +160,10 @@ class DatastoreEntry extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DatastoreEntry copyWith(void Function(DatastoreEntry) updates) => super.copyWith((message) => updates(message as DatastoreEntry)) as DatastoreEntry; // ignore: deprecated_member_use
+  DatastoreEntry copyWith(void Function(DatastoreEntry) updates) => super.copyWith((message) => updates(message as DatastoreEntry)) as DatastoreEntry;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DatastoreEntry create() => DatastoreEntry._();
   DatastoreEntry createEmptyInstance() => create();
@@ -153,6 +172,7 @@ class DatastoreEntry extends $pb.GeneratedMessage {
   static DatastoreEntry getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DatastoreEntry>(create);
   static DatastoreEntry? _defaultInstance;
 
+  /// final datastore entry value
   @$pb.TagNumber(1)
   $core.List<$core.int> get finalValue => $_getN(0);
   @$pb.TagNumber(1)
@@ -162,6 +182,7 @@ class DatastoreEntry extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFinalValue() => clearField(1);
 
+  /// candidate_value datastore entry value
   @$pb.TagNumber(2)
   $core.List<$core.int> get candidateValue => $_getN(1);
   @$pb.TagNumber(2)
@@ -172,3 +193,6 @@ class DatastoreEntry extends $pb.GeneratedMessage {
   void clearCandidateValue() => clearField(2);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

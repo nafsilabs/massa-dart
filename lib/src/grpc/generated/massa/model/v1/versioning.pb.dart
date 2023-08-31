@@ -1,43 +1,48 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: massa/model/v1/versioning.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'time.pb.dart' as $4;
-
 import 'versioning.pbenum.dart';
 
 export 'versioning.pbenum.dart';
 
+/// Entry for GetMipStatusResponse
 class MipStatusEntry extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MipStatusEntry', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOM<MipInfo>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mipInfo', subBuilder: MipInfo.create)
-    ..e<ComponentStateId>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stateId', $pb.PbFieldType.OE, defaultOrMaker: ComponentStateId.COMPONENT_STATE_ID_UNSPECIFIED, valueOf: ComponentStateId.valueOf, enumValues: ComponentStateId.values)
-    ..hasRequiredFields = false
-  ;
-
-  MipStatusEntry._() : super();
   factory MipStatusEntry({
     MipInfo? mipInfo,
     ComponentStateId? stateId,
   }) {
-    final _result = create();
+    final $result = create();
     if (mipInfo != null) {
-      _result.mipInfo = mipInfo;
+      $result.mipInfo = mipInfo;
     }
     if (stateId != null) {
-      _result.stateId = stateId;
+      $result.stateId = stateId;
     }
-    return _result;
+    return $result;
   }
+  MipStatusEntry._() : super();
   factory MipStatusEntry.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory MipStatusEntry.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MipStatusEntry', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOM<MipInfo>(1, _omitFieldNames ? '' : 'mipInfo', subBuilder: MipInfo.create)
+    ..e<ComponentStateId>(2, _omitFieldNames ? '' : 'stateId', $pb.PbFieldType.OE, defaultOrMaker: ComponentStateId.COMPONENT_STATE_ID_UNSPECIFIED, valueOf: ComponentStateId.valueOf, enumValues: ComponentStateId.values)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -47,8 +52,10 @@ class MipStatusEntry extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  MipStatusEntry copyWith(void Function(MipStatusEntry) updates) => super.copyWith((message) => updates(message as MipStatusEntry)) as MipStatusEntry; // ignore: deprecated_member_use
+  MipStatusEntry copyWith(void Function(MipStatusEntry) updates) => super.copyWith((message) => updates(message as MipStatusEntry)) as MipStatusEntry;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MipStatusEntry create() => MipStatusEntry._();
   MipStatusEntry createEmptyInstance() => create();
@@ -57,6 +64,7 @@ class MipStatusEntry extends $pb.GeneratedMessage {
   static MipStatusEntry getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MipStatusEntry>(create);
   static MipStatusEntry? _defaultInstance;
 
+  /// Mip info
   @$pb.TagNumber(1)
   MipInfo get mipInfo => $_getN(0);
   @$pb.TagNumber(1)
@@ -68,6 +76,7 @@ class MipStatusEntry extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   MipInfo ensureMipInfo() => $_ensure(0);
 
+  /// State id
   @$pb.TagNumber(2)
   ComponentStateId get stateId => $_getN(1);
   @$pb.TagNumber(2)
@@ -78,18 +87,8 @@ class MipStatusEntry extends $pb.GeneratedMessage {
   void clearStateId() => clearField(2);
 }
 
+/// MIP info (name & versions & time range for a MIP)
 class MipInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MipInfo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'version', $pb.PbFieldType.OU3)
-    ..aOM<$4.NativeTime>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'start', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timeout', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'activationDelay', subBuilder: $4.NativeTime.create)
-    ..pc<MipComponentEntry>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'components', $pb.PbFieldType.PM, subBuilder: MipComponentEntry.create)
-    ..hasRequiredFields = false
-  ;
-
-  MipInfo._() : super();
   factory MipInfo({
     $core.String? name,
     $core.int? version,
@@ -98,29 +97,41 @@ class MipInfo extends $pb.GeneratedMessage {
     $4.NativeTime? activationDelay,
     $core.Iterable<MipComponentEntry>? components,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
     if (start != null) {
-      _result.start = start;
+      $result.start = start;
     }
     if (timeout != null) {
-      _result.timeout = timeout;
+      $result.timeout = timeout;
     }
     if (activationDelay != null) {
-      _result.activationDelay = activationDelay;
+      $result.activationDelay = activationDelay;
     }
     if (components != null) {
-      _result.components.addAll(components);
+      $result.components.addAll(components);
     }
-    return _result;
+    return $result;
   }
+  MipInfo._() : super();
   factory MipInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory MipInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MipInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU3)
+    ..aOM<$4.NativeTime>(3, _omitFieldNames ? '' : 'start', subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(4, _omitFieldNames ? '' : 'timeout', subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(5, _omitFieldNames ? '' : 'activationDelay', subBuilder: $4.NativeTime.create)
+    ..pc<MipComponentEntry>(6, _omitFieldNames ? '' : 'components', $pb.PbFieldType.PM, subBuilder: MipComponentEntry.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -130,8 +141,10 @@ class MipInfo extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  MipInfo copyWith(void Function(MipInfo) updates) => super.copyWith((message) => updates(message as MipInfo)) as MipInfo; // ignore: deprecated_member_use
+  MipInfo copyWith(void Function(MipInfo) updates) => super.copyWith((message) => updates(message as MipInfo)) as MipInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MipInfo create() => MipInfo._();
   MipInfo createEmptyInstance() => create();
@@ -140,6 +153,7 @@ class MipInfo extends $pb.GeneratedMessage {
   static MipInfo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MipInfo>(create);
   static MipInfo? _defaultInstance;
 
+  /// MIP name or descriptive name
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -149,6 +163,7 @@ class MipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Network (or global) version (to be included in block header)
   @$pb.TagNumber(2)
   $core.int get version => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -158,6 +173,7 @@ class MipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
 
+  /// A timestamp at which the version gains its meaning (e.g. announced in block header)
   @$pb.TagNumber(3)
   $4.NativeTime get start => $_getN(2);
   @$pb.TagNumber(3)
@@ -169,6 +185,7 @@ class MipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $4.NativeTime ensureStart() => $_ensure(2);
 
+  /// A timestamp at the which the deployment is considered failed
   @$pb.TagNumber(4)
   $4.NativeTime get timeout => $_getN(3);
   @$pb.TagNumber(4)
@@ -180,6 +197,7 @@ class MipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $4.NativeTime ensureTimeout() => $_ensure(3);
 
+  /// Once deployment has been locked, wait for this duration before deployment is considered active
   @$pb.TagNumber(5)
   $4.NativeTime get activationDelay => $_getN(4);
   @$pb.TagNumber(5)
@@ -191,33 +209,36 @@ class MipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $4.NativeTime ensureActivationDelay() => $_ensure(4);
 
+  /// Components concerned by this versioning (e.g. a new Block version), and the associated component_version
   @$pb.TagNumber(6)
   $core.List<MipComponentEntry> get components => $_getList(5);
 }
 
+/// MipComponentEntry
 class MipComponentEntry extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MipComponentEntry', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..e<MipComponent>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind', $pb.PbFieldType.OE, defaultOrMaker: MipComponent.MIP_COMPONENT_UNSPECIFIED, valueOf: MipComponent.valueOf, enumValues: MipComponent.values)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'version', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  MipComponentEntry._() : super();
   factory MipComponentEntry({
     MipComponent? kind,
     $core.int? version,
   }) {
-    final _result = create();
+    final $result = create();
     if (kind != null) {
-      _result.kind = kind;
+      $result.kind = kind;
     }
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
-    return _result;
+    return $result;
   }
+  MipComponentEntry._() : super();
   factory MipComponentEntry.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory MipComponentEntry.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MipComponentEntry', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..e<MipComponent>(1, _omitFieldNames ? '' : 'kind', $pb.PbFieldType.OE, defaultOrMaker: MipComponent.MIP_COMPONENT_UNSPECIFIED, valueOf: MipComponent.valueOf, enumValues: MipComponent.values)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -227,8 +248,10 @@ class MipComponentEntry extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  MipComponentEntry copyWith(void Function(MipComponentEntry) updates) => super.copyWith((message) => updates(message as MipComponentEntry)) as MipComponentEntry; // ignore: deprecated_member_use
+  MipComponentEntry copyWith(void Function(MipComponentEntry) updates) => super.copyWith((message) => updates(message as MipComponentEntry)) as MipComponentEntry;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MipComponentEntry create() => MipComponentEntry._();
   MipComponentEntry createEmptyInstance() => create();
@@ -237,6 +260,7 @@ class MipComponentEntry extends $pb.GeneratedMessage {
   static MipComponentEntry getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MipComponentEntry>(create);
   static MipComponentEntry? _defaultInstance;
 
+  /// Kind
   @$pb.TagNumber(1)
   MipComponent get kind => $_getN(0);
   @$pb.TagNumber(1)
@@ -246,6 +270,7 @@ class MipComponentEntry extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKind() => clearField(1);
 
+  /// Version
   @$pb.TagNumber(2)
   $core.int get version => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -256,3 +281,6 @@ class MipComponentEntry extends $pb.GeneratedMessage {
   void clearVersion() => clearField(2);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

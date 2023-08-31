@@ -1,41 +1,46 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: abi.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'massa/model/v1/amount.pb.dart' as $2;
 import 'google/protobuf/wrappers.pb.dart' as $3;
-import 'massa/model/v1/time.pb.dart' as $4;
-import 'massa/model/v1/slot.pb.dart' as $5;
-
-import 'massa/model/v1/commons.pbenum.dart' as $6;
 import 'massa/model/v1/address.pbenum.dart' as $7;
+import 'massa/model/v1/amount.pb.dart' as $2;
+import 'massa/model/v1/commons.pbenum.dart' as $6;
+import 'massa/model/v1/slot.pb.dart' as $5;
+import 'massa/model/v1/time.pb.dart' as $4;
 
+/// Error message used in abi Response
 class Error extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Error', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'message')
-    ..hasRequiredFields = false
-  ;
-
-  Error._() : super();
   factory Error({
     $core.String? message,
   }) {
-    final _result = create();
+    final $result = create();
     if (message != null) {
-      _result.message = message;
+      $result.message = message;
     }
-    return _result;
+    return $result;
   }
+  Error._() : super();
   factory Error.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Error.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Error', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'message')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -45,8 +50,10 @@ class Error extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Error copyWith(void Function(Error) updates) => super.copyWith((message) => updates(message as Error)) as Error; // ignore: deprecated_member_use
+  Error copyWith(void Function(Error) updates) => super.copyWith((message) => updates(message as Error)) as Error;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Error create() => Error._();
   Error createEmptyInstance() => create();
@@ -55,6 +62,7 @@ class Error extends $pb.GeneratedMessage {
   static Error getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Error>(create);
   static Error? _defaultInstance;
 
+  /// a string representing the error
   @$pb.TagNumber(1)
   $core.String get message => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -65,24 +73,26 @@ class Error extends $pb.GeneratedMessage {
   void clearMessage() => clearField(1);
 }
 
+/// Create SC request
 class CreateScRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CreateScRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bytecode', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  CreateScRequest._() : super();
   factory CreateScRequest({
     $core.List<$core.int>? bytecode,
   }) {
-    final _result = create();
+    final $result = create();
     if (bytecode != null) {
-      _result.bytecode = bytecode;
+      $result.bytecode = bytecode;
     }
-    return _result;
+    return $result;
   }
+  CreateScRequest._() : super();
   factory CreateScRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CreateScRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateScRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'bytecode', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -92,8 +102,10 @@ class CreateScRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CreateScRequest copyWith(void Function(CreateScRequest) updates) => super.copyWith((message) => updates(message as CreateScRequest)) as CreateScRequest; // ignore: deprecated_member_use
+  CreateScRequest copyWith(void Function(CreateScRequest) updates) => super.copyWith((message) => updates(message as CreateScRequest)) as CreateScRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateScRequest create() => CreateScRequest._();
   CreateScRequest createEmptyInstance() => create();
@@ -102,6 +114,7 @@ class CreateScRequest extends $pb.GeneratedMessage {
   static CreateScRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateScRequest>(create);
   static CreateScRequest? _defaultInstance;
 
+  /// Bytecode is the compiled code of the smart contract
   @$pb.TagNumber(1)
   $core.List<$core.int> get bytecode => $_getN(0);
   @$pb.TagNumber(1)
@@ -112,24 +125,26 @@ class CreateScRequest extends $pb.GeneratedMessage {
   void clearBytecode() => clearField(1);
 }
 
+/// Create SC result
 class CreateScResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CreateScResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'scAddress')
-    ..hasRequiredFields = false
-  ;
-
-  CreateScResult._() : super();
   factory CreateScResult({
     $core.String? scAddress,
   }) {
-    final _result = create();
+    final $result = create();
     if (scAddress != null) {
-      _result.scAddress = scAddress;
+      $result.scAddress = scAddress;
     }
-    return _result;
+    return $result;
   }
+  CreateScResult._() : super();
   factory CreateScResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CreateScResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateScResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'scAddress')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -139,8 +154,10 @@ class CreateScResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CreateScResult copyWith(void Function(CreateScResult) updates) => super.copyWith((message) => updates(message as CreateScResult)) as CreateScResult; // ignore: deprecated_member_use
+  CreateScResult copyWith(void Function(CreateScResult) updates) => super.copyWith((message) => updates(message as CreateScResult)) as CreateScResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateScResult create() => CreateScResult._();
   CreateScResult createEmptyInstance() => create();
@@ -149,6 +166,7 @@ class CreateScResult extends $pb.GeneratedMessage {
   static CreateScResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateScResult>(create);
   static CreateScResult? _defaultInstance;
 
+  /// Address of the just created smart contract
   @$pb.TagNumber(1)
   $core.String get scAddress => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -159,39 +177,41 @@ class CreateScResult extends $pb.GeneratedMessage {
   void clearScAddress() => clearField(1);
 }
 
+/// Call SC request
 class CallRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CallRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetScAddress')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetFunctionName')
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'functionArg', $pb.PbFieldType.OY)
-    ..aOM<$2.NativeAmount>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'callCoins', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  CallRequest._() : super();
   factory CallRequest({
     $core.String? targetScAddress,
     $core.String? targetFunctionName,
     $core.List<$core.int>? functionArg,
     $2.NativeAmount? callCoins,
   }) {
-    final _result = create();
+    final $result = create();
     if (targetScAddress != null) {
-      _result.targetScAddress = targetScAddress;
+      $result.targetScAddress = targetScAddress;
     }
     if (targetFunctionName != null) {
-      _result.targetFunctionName = targetFunctionName;
+      $result.targetFunctionName = targetFunctionName;
     }
     if (functionArg != null) {
-      _result.functionArg = functionArg;
+      $result.functionArg = functionArg;
     }
     if (callCoins != null) {
-      _result.callCoins = callCoins;
+      $result.callCoins = callCoins;
     }
-    return _result;
+    return $result;
   }
+  CallRequest._() : super();
   factory CallRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CallRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CallRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'targetScAddress')
+    ..aOS(2, _omitFieldNames ? '' : 'targetFunctionName')
+    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'functionArg', $pb.PbFieldType.OY)
+    ..aOM<$2.NativeAmount>(4, _omitFieldNames ? '' : 'callCoins', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -201,8 +221,10 @@ class CallRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CallRequest copyWith(void Function(CallRequest) updates) => super.copyWith((message) => updates(message as CallRequest)) as CallRequest; // ignore: deprecated_member_use
+  CallRequest copyWith(void Function(CallRequest) updates) => super.copyWith((message) => updates(message as CallRequest)) as CallRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CallRequest create() => CallRequest._();
   CallRequest createEmptyInstance() => create();
@@ -211,6 +233,7 @@ class CallRequest extends $pb.GeneratedMessage {
   static CallRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CallRequest>(create);
   static CallRequest? _defaultInstance;
 
+  /// Address of the smart contract to call
   @$pb.TagNumber(1)
   $core.String get targetScAddress => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -220,6 +243,7 @@ class CallRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTargetScAddress() => clearField(1);
 
+  /// Function to call in the targeted smart contract
   @$pb.TagNumber(2)
   $core.String get targetFunctionName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -229,6 +253,7 @@ class CallRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTargetFunctionName() => clearField(2);
 
+  /// Argument to the function serialized in a byte array.
   @$pb.TagNumber(3)
   $core.List<$core.int> get functionArg => $_getN(2);
   @$pb.TagNumber(3)
@@ -238,6 +263,7 @@ class CallRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFunctionArg() => clearField(3);
 
+  /// call_coins is the amount of coins to pay for the call
   @$pb.TagNumber(4)
   $2.NativeAmount get callCoins => $_getN(3);
   @$pb.TagNumber(4)
@@ -250,24 +276,26 @@ class CallRequest extends $pb.GeneratedMessage {
   $2.NativeAmount ensureCallCoins() => $_ensure(3);
 }
 
+/// Call SC response
 class CallResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CallResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  CallResponse._() : super();
   factory CallResponse({
     $core.List<$core.int>? data,
   }) {
-    final _result = create();
+    final $result = create();
     if (data != null) {
-      _result.data = data;
+      $result.data = data;
     }
-    return _result;
+    return $result;
   }
+  CallResponse._() : super();
   factory CallResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CallResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CallResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -277,8 +305,10 @@ class CallResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CallResponse copyWith(void Function(CallResponse) updates) => super.copyWith((message) => updates(message as CallResponse)) as CallResponse; // ignore: deprecated_member_use
+  CallResponse copyWith(void Function(CallResponse) updates) => super.copyWith((message) => updates(message as CallResponse)) as CallResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CallResponse create() => CallResponse._();
   CallResponse createEmptyInstance() => create();
@@ -287,6 +317,7 @@ class CallResponse extends $pb.GeneratedMessage {
   static CallResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CallResponse>(create);
   static CallResponse? _defaultInstance;
 
+  /// Return_data is the return value of the function
   @$pb.TagNumber(1)
   $core.List<$core.int> get data => $_getN(0);
   @$pb.TagNumber(1)
@@ -297,34 +328,36 @@ class CallResponse extends $pb.GeneratedMessage {
   void clearData() => clearField(1);
 }
 
+/// Local execution request
 class LocalExecutionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LocalExecutionRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bytecode', $pb.PbFieldType.OY)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetFunctionName')
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'functionArg', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  LocalExecutionRequest._() : super();
   factory LocalExecutionRequest({
     $core.List<$core.int>? bytecode,
     $core.String? targetFunctionName,
     $core.List<$core.int>? functionArg,
   }) {
-    final _result = create();
+    final $result = create();
     if (bytecode != null) {
-      _result.bytecode = bytecode;
+      $result.bytecode = bytecode;
     }
     if (targetFunctionName != null) {
-      _result.targetFunctionName = targetFunctionName;
+      $result.targetFunctionName = targetFunctionName;
     }
     if (functionArg != null) {
-      _result.functionArg = functionArg;
+      $result.functionArg = functionArg;
     }
-    return _result;
+    return $result;
   }
+  LocalExecutionRequest._() : super();
   factory LocalExecutionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory LocalExecutionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LocalExecutionRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'bytecode', $pb.PbFieldType.OY)
+    ..aOS(2, _omitFieldNames ? '' : 'targetFunctionName')
+    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'functionArg', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -334,8 +367,10 @@ class LocalExecutionRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  LocalExecutionRequest copyWith(void Function(LocalExecutionRequest) updates) => super.copyWith((message) => updates(message as LocalExecutionRequest)) as LocalExecutionRequest; // ignore: deprecated_member_use
+  LocalExecutionRequest copyWith(void Function(LocalExecutionRequest) updates) => super.copyWith((message) => updates(message as LocalExecutionRequest)) as LocalExecutionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LocalExecutionRequest create() => LocalExecutionRequest._();
   LocalExecutionRequest createEmptyInstance() => create();
@@ -344,6 +379,7 @@ class LocalExecutionRequest extends $pb.GeneratedMessage {
   static LocalExecutionRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LocalExecutionRequest>(create);
   static LocalExecutionRequest? _defaultInstance;
 
+  /// Bytecode is the compiled code of the smart contract
   @$pb.TagNumber(1)
   $core.List<$core.int> get bytecode => $_getN(0);
   @$pb.TagNumber(1)
@@ -353,6 +389,7 @@ class LocalExecutionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBytecode() => clearField(1);
 
+  /// Function to call in the targeted smart contract
   @$pb.TagNumber(2)
   $core.String get targetFunctionName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -362,6 +399,7 @@ class LocalExecutionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTargetFunctionName() => clearField(2);
 
+  /// Argument to the function serialized in a byte array.
   @$pb.TagNumber(3)
   $core.List<$core.int> get functionArg => $_getN(2);
   @$pb.TagNumber(3)
@@ -372,24 +410,26 @@ class LocalExecutionRequest extends $pb.GeneratedMessage {
   void clearFunctionArg() => clearField(3);
 }
 
+/// Local call response
 class LocalExecutionResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LocalExecutionResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  LocalExecutionResponse._() : super();
   factory LocalExecutionResponse({
     $core.List<$core.int>? data,
   }) {
-    final _result = create();
+    final $result = create();
     if (data != null) {
-      _result.data = data;
+      $result.data = data;
     }
-    return _result;
+    return $result;
   }
+  LocalExecutionResponse._() : super();
   factory LocalExecutionResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory LocalExecutionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LocalExecutionResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -399,8 +439,10 @@ class LocalExecutionResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  LocalExecutionResponse copyWith(void Function(LocalExecutionResponse) updates) => super.copyWith((message) => updates(message as LocalExecutionResponse)) as LocalExecutionResponse; // ignore: deprecated_member_use
+  LocalExecutionResponse copyWith(void Function(LocalExecutionResponse) updates) => super.copyWith((message) => updates(message as LocalExecutionResponse)) as LocalExecutionResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LocalExecutionResponse create() => LocalExecutionResponse._();
   LocalExecutionResponse createEmptyInstance() => create();
@@ -409,6 +451,7 @@ class LocalExecutionResponse extends $pb.GeneratedMessage {
   static LocalExecutionResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LocalExecutionResponse>(create);
   static LocalExecutionResponse? _defaultInstance;
 
+  /// Return_data is the return value of the function
   @$pb.TagNumber(1)
   $core.List<$core.int> get data => $_getN(0);
   @$pb.TagNumber(1)
@@ -419,24 +462,26 @@ class LocalExecutionResponse extends $pb.GeneratedMessage {
   void clearData() => clearField(1);
 }
 
+/// Generate event request
 class GenerateEventRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GenerateEventRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'event', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  GenerateEventRequest._() : super();
   factory GenerateEventRequest({
     $core.List<$core.int>? event,
   }) {
-    final _result = create();
+    final $result = create();
     if (event != null) {
-      _result.event = event;
+      $result.event = event;
     }
-    return _result;
+    return $result;
   }
+  GenerateEventRequest._() : super();
   factory GenerateEventRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GenerateEventRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenerateEventRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'event', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -446,8 +491,10 @@ class GenerateEventRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GenerateEventRequest copyWith(void Function(GenerateEventRequest) updates) => super.copyWith((message) => updates(message as GenerateEventRequest)) as GenerateEventRequest; // ignore: deprecated_member_use
+  GenerateEventRequest copyWith(void Function(GenerateEventRequest) updates) => super.copyWith((message) => updates(message as GenerateEventRequest)) as GenerateEventRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GenerateEventRequest create() => GenerateEventRequest._();
   GenerateEventRequest createEmptyInstance() => create();
@@ -456,6 +503,7 @@ class GenerateEventRequest extends $pb.GeneratedMessage {
   static GenerateEventRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GenerateEventRequest>(create);
   static GenerateEventRequest? _defaultInstance;
 
+  /// Event
   @$pb.TagNumber(1)
   $core.List<$core.int> get event => $_getN(0);
   @$pb.TagNumber(1)
@@ -466,15 +514,17 @@ class GenerateEventRequest extends $pb.GeneratedMessage {
   void clearEvent() => clearField(1);
 }
 
+/// Generate event resulst
 class GenerateEventResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GenerateEventResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory GenerateEventResult() => create();
+  GenerateEventResult._() : super();
+  factory GenerateEventResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GenerateEventResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenerateEventResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  GenerateEventResult._() : super();
-  factory GenerateEventResult() => create();
-  factory GenerateEventResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GenerateEventResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -484,8 +534,10 @@ class GenerateEventResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GenerateEventResult copyWith(void Function(GenerateEventResult) updates) => super.copyWith((message) => updates(message as GenerateEventResult)) as GenerateEventResult; // ignore: deprecated_member_use
+  GenerateEventResult copyWith(void Function(GenerateEventResult) updates) => super.copyWith((message) => updates(message as GenerateEventResult)) as GenerateEventResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GenerateEventResult create() => GenerateEventResult._();
   GenerateEventResult createEmptyInstance() => create();
@@ -495,34 +547,36 @@ class GenerateEventResult extends $pb.GeneratedMessage {
   static GenerateEventResult? _defaultInstance;
 }
 
+/// Transfer coins request
 class TransferCoinsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransferCoinsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetAddress')
-    ..aOM<$2.NativeAmount>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amountToTransfer', subBuilder: $2.NativeAmount.create)
-    ..aOM<$3.StringValue>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'senderAddress', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  TransferCoinsRequest._() : super();
   factory TransferCoinsRequest({
     $core.String? targetAddress,
     $2.NativeAmount? amountToTransfer,
     $3.StringValue? senderAddress,
   }) {
-    final _result = create();
+    final $result = create();
     if (targetAddress != null) {
-      _result.targetAddress = targetAddress;
+      $result.targetAddress = targetAddress;
     }
     if (amountToTransfer != null) {
-      _result.amountToTransfer = amountToTransfer;
+      $result.amountToTransfer = amountToTransfer;
     }
     if (senderAddress != null) {
-      _result.senderAddress = senderAddress;
+      $result.senderAddress = senderAddress;
     }
-    return _result;
+    return $result;
   }
+  TransferCoinsRequest._() : super();
   factory TransferCoinsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransferCoinsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TransferCoinsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'targetAddress')
+    ..aOM<$2.NativeAmount>(2, _omitFieldNames ? '' : 'amountToTransfer', subBuilder: $2.NativeAmount.create)
+    ..aOM<$3.StringValue>(3, _omitFieldNames ? '' : 'senderAddress', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -532,8 +586,10 @@ class TransferCoinsRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TransferCoinsRequest copyWith(void Function(TransferCoinsRequest) updates) => super.copyWith((message) => updates(message as TransferCoinsRequest)) as TransferCoinsRequest; // ignore: deprecated_member_use
+  TransferCoinsRequest copyWith(void Function(TransferCoinsRequest) updates) => super.copyWith((message) => updates(message as TransferCoinsRequest)) as TransferCoinsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransferCoinsRequest create() => TransferCoinsRequest._();
   TransferCoinsRequest createEmptyInstance() => create();
@@ -542,6 +598,7 @@ class TransferCoinsRequest extends $pb.GeneratedMessage {
   static TransferCoinsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransferCoinsRequest>(create);
   static TransferCoinsRequest? _defaultInstance;
 
+  /// The address of the recipient
   @$pb.TagNumber(1)
   $core.String get targetAddress => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -551,6 +608,7 @@ class TransferCoinsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTargetAddress() => clearField(1);
 
+  /// The amount of coins to transfer
   @$pb.TagNumber(2)
   $2.NativeAmount get amountToTransfer => $_getN(1);
   @$pb.TagNumber(2)
@@ -562,6 +620,7 @@ class TransferCoinsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $2.NativeAmount ensureAmountToTransfer() => $_ensure(1);
 
+  /// The address of the sender, if none, use current address
   @$pb.TagNumber(3)
   $3.StringValue get senderAddress => $_getN(2);
   @$pb.TagNumber(3)
@@ -574,15 +633,17 @@ class TransferCoinsRequest extends $pb.GeneratedMessage {
   $3.StringValue ensureSenderAddress() => $_ensure(2);
 }
 
+/// Transfer coin result
 class TransferCoinsResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransferCoinsResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory TransferCoinsResult() => create();
+  TransferCoinsResult._() : super();
+  factory TransferCoinsResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TransferCoinsResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TransferCoinsResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  TransferCoinsResult._() : super();
-  factory TransferCoinsResult() => create();
-  factory TransferCoinsResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TransferCoinsResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -592,8 +653,10 @@ class TransferCoinsResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TransferCoinsResult copyWith(void Function(TransferCoinsResult) updates) => super.copyWith((message) => updates(message as TransferCoinsResult)) as TransferCoinsResult; // ignore: deprecated_member_use
+  TransferCoinsResult copyWith(void Function(TransferCoinsResult) updates) => super.copyWith((message) => updates(message as TransferCoinsResult)) as TransferCoinsResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransferCoinsResult create() => TransferCoinsResult._();
   TransferCoinsResult createEmptyInstance() => create();
@@ -603,29 +666,31 @@ class TransferCoinsResult extends $pb.GeneratedMessage {
   static TransferCoinsResult? _defaultInstance;
 }
 
+/// Function exists request
 class FunctionExistsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FunctionExistsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetScAddress')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'functionName')
-    ..hasRequiredFields = false
-  ;
-
-  FunctionExistsRequest._() : super();
   factory FunctionExistsRequest({
     $core.String? targetScAddress,
     $core.String? functionName,
   }) {
-    final _result = create();
+    final $result = create();
     if (targetScAddress != null) {
-      _result.targetScAddress = targetScAddress;
+      $result.targetScAddress = targetScAddress;
     }
     if (functionName != null) {
-      _result.functionName = functionName;
+      $result.functionName = functionName;
     }
-    return _result;
+    return $result;
   }
+  FunctionExistsRequest._() : super();
   factory FunctionExistsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory FunctionExistsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FunctionExistsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'targetScAddress')
+    ..aOS(2, _omitFieldNames ? '' : 'functionName')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -635,8 +700,10 @@ class FunctionExistsRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  FunctionExistsRequest copyWith(void Function(FunctionExistsRequest) updates) => super.copyWith((message) => updates(message as FunctionExistsRequest)) as FunctionExistsRequest; // ignore: deprecated_member_use
+  FunctionExistsRequest copyWith(void Function(FunctionExistsRequest) updates) => super.copyWith((message) => updates(message as FunctionExistsRequest)) as FunctionExistsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FunctionExistsRequest create() => FunctionExistsRequest._();
   FunctionExistsRequest createEmptyInstance() => create();
@@ -645,6 +712,7 @@ class FunctionExistsRequest extends $pb.GeneratedMessage {
   static FunctionExistsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FunctionExistsRequest>(create);
   static FunctionExistsRequest? _defaultInstance;
 
+  /// Address of the smart contract to call
   @$pb.TagNumber(1)
   $core.String get targetScAddress => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -654,6 +722,7 @@ class FunctionExistsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTargetScAddress() => clearField(1);
 
+  /// The name of the function to check the existance of
   @$pb.TagNumber(2)
   $core.String get functionName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -664,24 +733,26 @@ class FunctionExistsRequest extends $pb.GeneratedMessage {
   void clearFunctionName() => clearField(2);
 }
 
+/// Function exists result
 class FunctionExistsResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FunctionExistsResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'exists')
-    ..hasRequiredFields = false
-  ;
-
-  FunctionExistsResult._() : super();
   factory FunctionExistsResult({
     $core.bool? exists,
   }) {
-    final _result = create();
+    final $result = create();
     if (exists != null) {
-      _result.exists = exists;
+      $result.exists = exists;
     }
-    return _result;
+    return $result;
   }
+  FunctionExistsResult._() : super();
   factory FunctionExistsResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory FunctionExistsResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FunctionExistsResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'exists')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -691,8 +762,10 @@ class FunctionExistsResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  FunctionExistsResult copyWith(void Function(FunctionExistsResult) updates) => super.copyWith((message) => updates(message as FunctionExistsResult)) as FunctionExistsResult; // ignore: deprecated_member_use
+  FunctionExistsResult copyWith(void Function(FunctionExistsResult) updates) => super.copyWith((message) => updates(message as FunctionExistsResult)) as FunctionExistsResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FunctionExistsResult create() => FunctionExistsResult._();
   FunctionExistsResult createEmptyInstance() => create();
@@ -701,6 +774,7 @@ class FunctionExistsResult extends $pb.GeneratedMessage {
   static FunctionExistsResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FunctionExistsResult>(create);
   static FunctionExistsResult? _defaultInstance;
 
+  /// Exists is true if the function exists
   @$pb.TagNumber(1)
   $core.bool get exists => $_getBF(0);
   @$pb.TagNumber(1)
@@ -777,7 +851,268 @@ enum RespResult_Res {
   notSet
 }
 
+/// Tips to check for completeness exec:
+/// `rg message | rg "\{" | rg "Result" | wc -l`
+/// the given count should be equal to the number of messages in RespResult + 1
+/// the +1 comes from ResResult itself which is counted above
 class RespResult extends $pb.GeneratedMessage {
+  factory RespResult({
+    AddNativeAmountResult? addNativeAmountResult,
+    AddressFromPubKeyResult? addressFromPubKeyResult,
+    AppendDsValueResult? appendDsValueResult,
+    Base58CheckToBytesResult? base58CheckToBytesResult,
+    BytesToBase58CheckResult? bytesToBase58CheckResult,
+    CallerHasWriteAccessResult? callerHasWriteAccessResult,
+    CheckAddressResult? checkAddressResult,
+    CheckNativeAmountResult? checkNativeAmountResult,
+    CheckPubKeyResult? checkPubKeyResult,
+    CheckSigResult? checkSigResult,
+    CheckedAddNativeTimeResult? checkedAddNativeTimeResult,
+    CheckedDivRemNativeTimeResult? checkedDivRemNativeTimeResult,
+    CheckedScalarDivRemNativeTimeResult? checkedScalarDivRemNativeTimeResult,
+    CheckedScalarMulNativeTimeResult? checkedScalarMulNativeTimeResult,
+    CheckedSubNativeTimeResult? checkedSubNativeTimeResult,
+    CompareAddressResult? compareAddressResult,
+    CompareNativeAmountResult? compareNativeAmountResult,
+    CompareNativeTimeResult? compareNativeTimeResult,
+    ComparePubKeyResult? comparePubKeyResult,
+    CreateScResult? createScResult,
+    DeleteDsEntryResult? deleteDsEntryResult,
+    DivRemNativeAmountResult? divRemNativeAmountResult,
+    DsEntryExistsResult? dsEntryExistsResult,
+    FunctionExistsResult? functionExistsResult,
+    GenerateEventResult? generateEventResult,
+    GetAddressCategoryResult? getAddressCategoryResult,
+    GetAddressVersionResult? getAddressVersionResult,
+    GetBalanceResult? getBalanceResult,
+    GetBytecodeResult? getBytecodeResult,
+    GetCallCoinsResult? getCallCoinsResult,
+    GetCallStackResult? getCallStackResult,
+    GetCurrentSlotResult? getCurrentSlotResult,
+    GetDsKeysResult? getDsKeysResult,
+    GetDsValueResult? getDsValueResult,
+    GetNativeTimeResult? getNativeTimeResult,
+    GetOpDataResult? getOpDataResult,
+    GetOpKeysResult? getOpKeysResult,
+    GetOriginOperationIdResult? getOriginOperationIdResult,
+    GetOwnedAddressesResult? getOwnedAddressesResult,
+    GetPubKeyVersionResult? getPubKeyVersionResult,
+    GetRemainingGasResult? getRemainingGasResult,
+    GetSignatureVersionResult? getSignatureVersionResult,
+    HashBlake3Result? hashBlake3Result,
+    HashSha256Result? hashSha256Result,
+    OpEntryExistsResult? opEntryExistsResult,
+    Keccak256Result? keccak256Result,
+    LocalExecutionResponse? localExecutionResponse,
+    NativeAmountFromStringResult? nativeAmountFromStringResult,
+    NativeAmountToStringResult? nativeAmountToStringResult,
+    ScalarDivRemNativeAmountResult? scalarDivRemNativeAmountResult,
+    ScalarMulNativeAmountResult? scalarMulNativeAmountResult,
+    SendAsyncMessageResult? sendAsyncMessageResult,
+    SetBytecodeResult? setBytecodeResult,
+    SetDsValueResult? setDsValueResult,
+    SubNativeAmountResult? subNativeAmountResult,
+    TransferCoinsResult? transferCoinsResult,
+    UnsafeRandomResult? unsafeRandomResult,
+    EvmVerifySigResult? evmVerifySigResult,
+    VerifySigResult? verifySigResult,
+    EvmGetAddressFromPubkeyResult? evmGetAddressFromPubkeyResult,
+    EvmGetPubkeyFromSignatureResult? evmGetPubkeyFromSignatureResult,
+    IsAddressEoaResult? isAddressEoaResult,
+  }) {
+    final $result = create();
+    if (addNativeAmountResult != null) {
+      $result.addNativeAmountResult = addNativeAmountResult;
+    }
+    if (addressFromPubKeyResult != null) {
+      $result.addressFromPubKeyResult = addressFromPubKeyResult;
+    }
+    if (appendDsValueResult != null) {
+      $result.appendDsValueResult = appendDsValueResult;
+    }
+    if (base58CheckToBytesResult != null) {
+      $result.base58CheckToBytesResult = base58CheckToBytesResult;
+    }
+    if (bytesToBase58CheckResult != null) {
+      $result.bytesToBase58CheckResult = bytesToBase58CheckResult;
+    }
+    if (callerHasWriteAccessResult != null) {
+      $result.callerHasWriteAccessResult = callerHasWriteAccessResult;
+    }
+    if (checkAddressResult != null) {
+      $result.checkAddressResult = checkAddressResult;
+    }
+    if (checkNativeAmountResult != null) {
+      $result.checkNativeAmountResult = checkNativeAmountResult;
+    }
+    if (checkPubKeyResult != null) {
+      $result.checkPubKeyResult = checkPubKeyResult;
+    }
+    if (checkSigResult != null) {
+      $result.checkSigResult = checkSigResult;
+    }
+    if (checkedAddNativeTimeResult != null) {
+      $result.checkedAddNativeTimeResult = checkedAddNativeTimeResult;
+    }
+    if (checkedDivRemNativeTimeResult != null) {
+      $result.checkedDivRemNativeTimeResult = checkedDivRemNativeTimeResult;
+    }
+    if (checkedScalarDivRemNativeTimeResult != null) {
+      $result.checkedScalarDivRemNativeTimeResult = checkedScalarDivRemNativeTimeResult;
+    }
+    if (checkedScalarMulNativeTimeResult != null) {
+      $result.checkedScalarMulNativeTimeResult = checkedScalarMulNativeTimeResult;
+    }
+    if (checkedSubNativeTimeResult != null) {
+      $result.checkedSubNativeTimeResult = checkedSubNativeTimeResult;
+    }
+    if (compareAddressResult != null) {
+      $result.compareAddressResult = compareAddressResult;
+    }
+    if (compareNativeAmountResult != null) {
+      $result.compareNativeAmountResult = compareNativeAmountResult;
+    }
+    if (compareNativeTimeResult != null) {
+      $result.compareNativeTimeResult = compareNativeTimeResult;
+    }
+    if (comparePubKeyResult != null) {
+      $result.comparePubKeyResult = comparePubKeyResult;
+    }
+    if (createScResult != null) {
+      $result.createScResult = createScResult;
+    }
+    if (deleteDsEntryResult != null) {
+      $result.deleteDsEntryResult = deleteDsEntryResult;
+    }
+    if (divRemNativeAmountResult != null) {
+      $result.divRemNativeAmountResult = divRemNativeAmountResult;
+    }
+    if (dsEntryExistsResult != null) {
+      $result.dsEntryExistsResult = dsEntryExistsResult;
+    }
+    if (functionExistsResult != null) {
+      $result.functionExistsResult = functionExistsResult;
+    }
+    if (generateEventResult != null) {
+      $result.generateEventResult = generateEventResult;
+    }
+    if (getAddressCategoryResult != null) {
+      $result.getAddressCategoryResult = getAddressCategoryResult;
+    }
+    if (getAddressVersionResult != null) {
+      $result.getAddressVersionResult = getAddressVersionResult;
+    }
+    if (getBalanceResult != null) {
+      $result.getBalanceResult = getBalanceResult;
+    }
+    if (getBytecodeResult != null) {
+      $result.getBytecodeResult = getBytecodeResult;
+    }
+    if (getCallCoinsResult != null) {
+      $result.getCallCoinsResult = getCallCoinsResult;
+    }
+    if (getCallStackResult != null) {
+      $result.getCallStackResult = getCallStackResult;
+    }
+    if (getCurrentSlotResult != null) {
+      $result.getCurrentSlotResult = getCurrentSlotResult;
+    }
+    if (getDsKeysResult != null) {
+      $result.getDsKeysResult = getDsKeysResult;
+    }
+    if (getDsValueResult != null) {
+      $result.getDsValueResult = getDsValueResult;
+    }
+    if (getNativeTimeResult != null) {
+      $result.getNativeTimeResult = getNativeTimeResult;
+    }
+    if (getOpDataResult != null) {
+      $result.getOpDataResult = getOpDataResult;
+    }
+    if (getOpKeysResult != null) {
+      $result.getOpKeysResult = getOpKeysResult;
+    }
+    if (getOriginOperationIdResult != null) {
+      $result.getOriginOperationIdResult = getOriginOperationIdResult;
+    }
+    if (getOwnedAddressesResult != null) {
+      $result.getOwnedAddressesResult = getOwnedAddressesResult;
+    }
+    if (getPubKeyVersionResult != null) {
+      $result.getPubKeyVersionResult = getPubKeyVersionResult;
+    }
+    if (getRemainingGasResult != null) {
+      $result.getRemainingGasResult = getRemainingGasResult;
+    }
+    if (getSignatureVersionResult != null) {
+      $result.getSignatureVersionResult = getSignatureVersionResult;
+    }
+    if (hashBlake3Result != null) {
+      $result.hashBlake3Result = hashBlake3Result;
+    }
+    if (hashSha256Result != null) {
+      $result.hashSha256Result = hashSha256Result;
+    }
+    if (opEntryExistsResult != null) {
+      $result.opEntryExistsResult = opEntryExistsResult;
+    }
+    if (keccak256Result != null) {
+      $result.keccak256Result = keccak256Result;
+    }
+    if (localExecutionResponse != null) {
+      $result.localExecutionResponse = localExecutionResponse;
+    }
+    if (nativeAmountFromStringResult != null) {
+      $result.nativeAmountFromStringResult = nativeAmountFromStringResult;
+    }
+    if (nativeAmountToStringResult != null) {
+      $result.nativeAmountToStringResult = nativeAmountToStringResult;
+    }
+    if (scalarDivRemNativeAmountResult != null) {
+      $result.scalarDivRemNativeAmountResult = scalarDivRemNativeAmountResult;
+    }
+    if (scalarMulNativeAmountResult != null) {
+      $result.scalarMulNativeAmountResult = scalarMulNativeAmountResult;
+    }
+    if (sendAsyncMessageResult != null) {
+      $result.sendAsyncMessageResult = sendAsyncMessageResult;
+    }
+    if (setBytecodeResult != null) {
+      $result.setBytecodeResult = setBytecodeResult;
+    }
+    if (setDsValueResult != null) {
+      $result.setDsValueResult = setDsValueResult;
+    }
+    if (subNativeAmountResult != null) {
+      $result.subNativeAmountResult = subNativeAmountResult;
+    }
+    if (transferCoinsResult != null) {
+      $result.transferCoinsResult = transferCoinsResult;
+    }
+    if (unsafeRandomResult != null) {
+      $result.unsafeRandomResult = unsafeRandomResult;
+    }
+    if (evmVerifySigResult != null) {
+      $result.evmVerifySigResult = evmVerifySigResult;
+    }
+    if (verifySigResult != null) {
+      $result.verifySigResult = verifySigResult;
+    }
+    if (evmGetAddressFromPubkeyResult != null) {
+      $result.evmGetAddressFromPubkeyResult = evmGetAddressFromPubkeyResult;
+    }
+    if (evmGetPubkeyFromSignatureResult != null) {
+      $result.evmGetPubkeyFromSignatureResult = evmGetPubkeyFromSignatureResult;
+    }
+    if (isAddressEoaResult != null) {
+      $result.isAddressEoaResult = isAddressEoaResult;
+    }
+    return $result;
+  }
+  RespResult._() : super();
+  factory RespResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory RespResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, RespResult_Res> _RespResult_ResByTag = {
     1 : RespResult_Res.addNativeAmountResult,
     2 : RespResult_Res.addressFromPubKeyResult,
@@ -843,329 +1178,73 @@ class RespResult extends $pb.GeneratedMessage {
     62 : RespResult_Res.isAddressEoaResult,
     0 : RespResult_Res.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'RespResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RespResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62])
-    ..aOM<AddNativeAmountResult>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'addNativeAmountResult', subBuilder: AddNativeAmountResult.create)
-    ..aOM<AddressFromPubKeyResult>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'addressFromPubKeyResult', subBuilder: AddressFromPubKeyResult.create)
-    ..aOM<AppendDsValueResult>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'appendDsValueResult', subBuilder: AppendDsValueResult.create)
-    ..aOM<Base58CheckToBytesResult>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'base58CheckToBytesResult', subBuilder: Base58CheckToBytesResult.create)
-    ..aOM<BytesToBase58CheckResult>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bytesToBase58CheckResult', subBuilder: BytesToBase58CheckResult.create)
-    ..aOM<CallerHasWriteAccessResult>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'callerHasWriteAccessResult', subBuilder: CallerHasWriteAccessResult.create)
-    ..aOM<CheckAddressResult>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkAddressResult', subBuilder: CheckAddressResult.create)
-    ..aOM<CheckNativeAmountResult>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkNativeAmountResult', subBuilder: CheckNativeAmountResult.create)
-    ..aOM<CheckPubKeyResult>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkPubKeyResult', subBuilder: CheckPubKeyResult.create)
-    ..aOM<CheckSigResult>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkSigResult', subBuilder: CheckSigResult.create)
-    ..aOM<CheckedAddNativeTimeResult>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkedAddNativeTimeResult', subBuilder: CheckedAddNativeTimeResult.create)
-    ..aOM<CheckedDivRemNativeTimeResult>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkedDivRemNativeTimeResult', subBuilder: CheckedDivRemNativeTimeResult.create)
-    ..aOM<CheckedScalarDivRemNativeTimeResult>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkedScalarDivRemNativeTimeResult', subBuilder: CheckedScalarDivRemNativeTimeResult.create)
-    ..aOM<CheckedScalarMulNativeTimeResult>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkedScalarMulNativeTimeResult', subBuilder: CheckedScalarMulNativeTimeResult.create)
-    ..aOM<CheckedSubNativeTimeResult>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkedSubNativeTimeResult', subBuilder: CheckedSubNativeTimeResult.create)
-    ..aOM<CompareAddressResult>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareAddressResult', subBuilder: CompareAddressResult.create)
-    ..aOM<CompareNativeAmountResult>(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareNativeAmountResult', subBuilder: CompareNativeAmountResult.create)
-    ..aOM<CompareNativeTimeResult>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareNativeTimeResult', subBuilder: CompareNativeTimeResult.create)
-    ..aOM<ComparePubKeyResult>(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'comparePubKeyResult', subBuilder: ComparePubKeyResult.create)
-    ..aOM<CreateScResult>(20, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createScResult', subBuilder: CreateScResult.create)
-    ..aOM<DeleteDsEntryResult>(21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deleteDsEntryResult', subBuilder: DeleteDsEntryResult.create)
-    ..aOM<DivRemNativeAmountResult>(22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'divRemNativeAmountResult', subBuilder: DivRemNativeAmountResult.create)
-    ..aOM<DsEntryExistsResult>(23, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dsEntryExistsResult', subBuilder: DsEntryExistsResult.create)
-    ..aOM<FunctionExistsResult>(24, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'functionExistsResult', subBuilder: FunctionExistsResult.create)
-    ..aOM<GenerateEventResult>(25, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'generateEventResult', subBuilder: GenerateEventResult.create)
-    ..aOM<GetAddressCategoryResult>(26, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getAddressCategoryResult', subBuilder: GetAddressCategoryResult.create)
-    ..aOM<GetAddressVersionResult>(27, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getAddressVersionResult', subBuilder: GetAddressVersionResult.create)
-    ..aOM<GetBalanceResult>(28, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getBalanceResult', subBuilder: GetBalanceResult.create)
-    ..aOM<GetBytecodeResult>(29, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getBytecodeResult', subBuilder: GetBytecodeResult.create)
-    ..aOM<GetCallCoinsResult>(30, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getCallCoinsResult', subBuilder: GetCallCoinsResult.create)
-    ..aOM<GetCallStackResult>(31, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getCallStackResult', subBuilder: GetCallStackResult.create)
-    ..aOM<GetCurrentSlotResult>(32, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getCurrentSlotResult', subBuilder: GetCurrentSlotResult.create)
-    ..aOM<GetDsKeysResult>(33, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getDsKeysResult', subBuilder: GetDsKeysResult.create)
-    ..aOM<GetDsValueResult>(34, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getDsValueResult', subBuilder: GetDsValueResult.create)
-    ..aOM<GetNativeTimeResult>(35, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getNativeTimeResult', subBuilder: GetNativeTimeResult.create)
-    ..aOM<GetOpDataResult>(36, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getOpDataResult', subBuilder: GetOpDataResult.create)
-    ..aOM<GetOpKeysResult>(37, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getOpKeysResult', subBuilder: GetOpKeysResult.create)
-    ..aOM<GetOriginOperationIdResult>(38, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getOriginOperationIdResult', subBuilder: GetOriginOperationIdResult.create)
-    ..aOM<GetOwnedAddressesResult>(39, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getOwnedAddressesResult', subBuilder: GetOwnedAddressesResult.create)
-    ..aOM<GetPubKeyVersionResult>(40, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getPubKeyVersionResult', subBuilder: GetPubKeyVersionResult.create)
-    ..aOM<GetRemainingGasResult>(41, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getRemainingGasResult', subBuilder: GetRemainingGasResult.create)
-    ..aOM<GetSignatureVersionResult>(42, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'getSignatureVersionResult', subBuilder: GetSignatureVersionResult.create)
-    ..aOM<HashBlake3Result>(43, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hashBlake3Result', subBuilder: HashBlake3Result.create)
-    ..aOM<HashSha256Result>(44, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hashSha256Result', subBuilder: HashSha256Result.create)
-    ..aOM<OpEntryExistsResult>(45, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'opEntryExistsResult', subBuilder: OpEntryExistsResult.create)
-    ..aOM<Keccak256Result>(46, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'keccak256Result', subBuilder: Keccak256Result.create)
-    ..aOM<LocalExecutionResponse>(47, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'localExecutionResponse', subBuilder: LocalExecutionResponse.create)
-    ..aOM<NativeAmountFromStringResult>(48, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nativeAmountFromStringResult', subBuilder: NativeAmountFromStringResult.create)
-    ..aOM<NativeAmountToStringResult>(49, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nativeAmountToStringResult', subBuilder: NativeAmountToStringResult.create)
-    ..aOM<ScalarDivRemNativeAmountResult>(50, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'scalarDivRemNativeAmountResult', subBuilder: ScalarDivRemNativeAmountResult.create)
-    ..aOM<ScalarMulNativeAmountResult>(51, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'scalarMulNativeAmountResult', subBuilder: ScalarMulNativeAmountResult.create)
-    ..aOM<SendAsyncMessageResult>(52, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sendAsyncMessageResult', subBuilder: SendAsyncMessageResult.create)
-    ..aOM<SetBytecodeResult>(53, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'setBytecodeResult', subBuilder: SetBytecodeResult.create)
-    ..aOM<SetDsValueResult>(54, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'setDsValueResult', subBuilder: SetDsValueResult.create)
-    ..aOM<SubNativeAmountResult>(55, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'subNativeAmountResult', subBuilder: SubNativeAmountResult.create)
-    ..aOM<TransferCoinsResult>(56, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transferCoinsResult', subBuilder: TransferCoinsResult.create)
-    ..aOM<UnsafeRandomResult>(57, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unsafeRandomResult', subBuilder: UnsafeRandomResult.create)
-    ..aOM<EvmVerifySigResult>(58, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'evmVerifySigResult', subBuilder: EvmVerifySigResult.create)
-    ..aOM<VerifySigResult>(59, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'verifySigResult', subBuilder: VerifySigResult.create)
-    ..aOM<EvmGetAddressFromPubkeyResult>(60, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'evmGetAddressFromPubkeyResult', subBuilder: EvmGetAddressFromPubkeyResult.create)
-    ..aOM<EvmGetPubkeyFromSignatureResult>(61, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'evmGetPubkeyFromSignatureResult', subBuilder: EvmGetPubkeyFromSignatureResult.create)
-    ..aOM<IsAddressEoaResult>(62, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isAddressEoaResult', subBuilder: IsAddressEoaResult.create)
+    ..aOM<AddNativeAmountResult>(1, _omitFieldNames ? '' : 'addNativeAmountResult', subBuilder: AddNativeAmountResult.create)
+    ..aOM<AddressFromPubKeyResult>(2, _omitFieldNames ? '' : 'addressFromPubKeyResult', subBuilder: AddressFromPubKeyResult.create)
+    ..aOM<AppendDsValueResult>(3, _omitFieldNames ? '' : 'appendDsValueResult', subBuilder: AppendDsValueResult.create)
+    ..aOM<Base58CheckToBytesResult>(4, _omitFieldNames ? '' : 'base58CheckToBytesResult', subBuilder: Base58CheckToBytesResult.create)
+    ..aOM<BytesToBase58CheckResult>(5, _omitFieldNames ? '' : 'bytesToBase58CheckResult', subBuilder: BytesToBase58CheckResult.create)
+    ..aOM<CallerHasWriteAccessResult>(6, _omitFieldNames ? '' : 'callerHasWriteAccessResult', subBuilder: CallerHasWriteAccessResult.create)
+    ..aOM<CheckAddressResult>(7, _omitFieldNames ? '' : 'checkAddressResult', subBuilder: CheckAddressResult.create)
+    ..aOM<CheckNativeAmountResult>(8, _omitFieldNames ? '' : 'checkNativeAmountResult', subBuilder: CheckNativeAmountResult.create)
+    ..aOM<CheckPubKeyResult>(9, _omitFieldNames ? '' : 'checkPubKeyResult', subBuilder: CheckPubKeyResult.create)
+    ..aOM<CheckSigResult>(10, _omitFieldNames ? '' : 'checkSigResult', subBuilder: CheckSigResult.create)
+    ..aOM<CheckedAddNativeTimeResult>(11, _omitFieldNames ? '' : 'checkedAddNativeTimeResult', subBuilder: CheckedAddNativeTimeResult.create)
+    ..aOM<CheckedDivRemNativeTimeResult>(12, _omitFieldNames ? '' : 'checkedDivRemNativeTimeResult', subBuilder: CheckedDivRemNativeTimeResult.create)
+    ..aOM<CheckedScalarDivRemNativeTimeResult>(13, _omitFieldNames ? '' : 'checkedScalarDivRemNativeTimeResult', subBuilder: CheckedScalarDivRemNativeTimeResult.create)
+    ..aOM<CheckedScalarMulNativeTimeResult>(14, _omitFieldNames ? '' : 'checkedScalarMulNativeTimeResult', subBuilder: CheckedScalarMulNativeTimeResult.create)
+    ..aOM<CheckedSubNativeTimeResult>(15, _omitFieldNames ? '' : 'checkedSubNativeTimeResult', subBuilder: CheckedSubNativeTimeResult.create)
+    ..aOM<CompareAddressResult>(16, _omitFieldNames ? '' : 'compareAddressResult', subBuilder: CompareAddressResult.create)
+    ..aOM<CompareNativeAmountResult>(17, _omitFieldNames ? '' : 'compareNativeAmountResult', subBuilder: CompareNativeAmountResult.create)
+    ..aOM<CompareNativeTimeResult>(18, _omitFieldNames ? '' : 'compareNativeTimeResult', subBuilder: CompareNativeTimeResult.create)
+    ..aOM<ComparePubKeyResult>(19, _omitFieldNames ? '' : 'comparePubKeyResult', subBuilder: ComparePubKeyResult.create)
+    ..aOM<CreateScResult>(20, _omitFieldNames ? '' : 'createScResult', subBuilder: CreateScResult.create)
+    ..aOM<DeleteDsEntryResult>(21, _omitFieldNames ? '' : 'deleteDsEntryResult', subBuilder: DeleteDsEntryResult.create)
+    ..aOM<DivRemNativeAmountResult>(22, _omitFieldNames ? '' : 'divRemNativeAmountResult', subBuilder: DivRemNativeAmountResult.create)
+    ..aOM<DsEntryExistsResult>(23, _omitFieldNames ? '' : 'dsEntryExistsResult', subBuilder: DsEntryExistsResult.create)
+    ..aOM<FunctionExistsResult>(24, _omitFieldNames ? '' : 'functionExistsResult', subBuilder: FunctionExistsResult.create)
+    ..aOM<GenerateEventResult>(25, _omitFieldNames ? '' : 'generateEventResult', subBuilder: GenerateEventResult.create)
+    ..aOM<GetAddressCategoryResult>(26, _omitFieldNames ? '' : 'getAddressCategoryResult', subBuilder: GetAddressCategoryResult.create)
+    ..aOM<GetAddressVersionResult>(27, _omitFieldNames ? '' : 'getAddressVersionResult', subBuilder: GetAddressVersionResult.create)
+    ..aOM<GetBalanceResult>(28, _omitFieldNames ? '' : 'getBalanceResult', subBuilder: GetBalanceResult.create)
+    ..aOM<GetBytecodeResult>(29, _omitFieldNames ? '' : 'getBytecodeResult', subBuilder: GetBytecodeResult.create)
+    ..aOM<GetCallCoinsResult>(30, _omitFieldNames ? '' : 'getCallCoinsResult', subBuilder: GetCallCoinsResult.create)
+    ..aOM<GetCallStackResult>(31, _omitFieldNames ? '' : 'getCallStackResult', subBuilder: GetCallStackResult.create)
+    ..aOM<GetCurrentSlotResult>(32, _omitFieldNames ? '' : 'getCurrentSlotResult', subBuilder: GetCurrentSlotResult.create)
+    ..aOM<GetDsKeysResult>(33, _omitFieldNames ? '' : 'getDsKeysResult', subBuilder: GetDsKeysResult.create)
+    ..aOM<GetDsValueResult>(34, _omitFieldNames ? '' : 'getDsValueResult', subBuilder: GetDsValueResult.create)
+    ..aOM<GetNativeTimeResult>(35, _omitFieldNames ? '' : 'getNativeTimeResult', subBuilder: GetNativeTimeResult.create)
+    ..aOM<GetOpDataResult>(36, _omitFieldNames ? '' : 'getOpDataResult', subBuilder: GetOpDataResult.create)
+    ..aOM<GetOpKeysResult>(37, _omitFieldNames ? '' : 'getOpKeysResult', subBuilder: GetOpKeysResult.create)
+    ..aOM<GetOriginOperationIdResult>(38, _omitFieldNames ? '' : 'getOriginOperationIdResult', subBuilder: GetOriginOperationIdResult.create)
+    ..aOM<GetOwnedAddressesResult>(39, _omitFieldNames ? '' : 'getOwnedAddressesResult', subBuilder: GetOwnedAddressesResult.create)
+    ..aOM<GetPubKeyVersionResult>(40, _omitFieldNames ? '' : 'getPubKeyVersionResult', subBuilder: GetPubKeyVersionResult.create)
+    ..aOM<GetRemainingGasResult>(41, _omitFieldNames ? '' : 'getRemainingGasResult', subBuilder: GetRemainingGasResult.create)
+    ..aOM<GetSignatureVersionResult>(42, _omitFieldNames ? '' : 'getSignatureVersionResult', subBuilder: GetSignatureVersionResult.create)
+    ..aOM<HashBlake3Result>(43, _omitFieldNames ? '' : 'hashBlake3Result', subBuilder: HashBlake3Result.create)
+    ..aOM<HashSha256Result>(44, _omitFieldNames ? '' : 'hashSha256Result', subBuilder: HashSha256Result.create)
+    ..aOM<OpEntryExistsResult>(45, _omitFieldNames ? '' : 'opEntryExistsResult', subBuilder: OpEntryExistsResult.create)
+    ..aOM<Keccak256Result>(46, _omitFieldNames ? '' : 'keccak256Result', subBuilder: Keccak256Result.create)
+    ..aOM<LocalExecutionResponse>(47, _omitFieldNames ? '' : 'localExecutionResponse', subBuilder: LocalExecutionResponse.create)
+    ..aOM<NativeAmountFromStringResult>(48, _omitFieldNames ? '' : 'nativeAmountFromStringResult', subBuilder: NativeAmountFromStringResult.create)
+    ..aOM<NativeAmountToStringResult>(49, _omitFieldNames ? '' : 'nativeAmountToStringResult', subBuilder: NativeAmountToStringResult.create)
+    ..aOM<ScalarDivRemNativeAmountResult>(50, _omitFieldNames ? '' : 'scalarDivRemNativeAmountResult', subBuilder: ScalarDivRemNativeAmountResult.create)
+    ..aOM<ScalarMulNativeAmountResult>(51, _omitFieldNames ? '' : 'scalarMulNativeAmountResult', subBuilder: ScalarMulNativeAmountResult.create)
+    ..aOM<SendAsyncMessageResult>(52, _omitFieldNames ? '' : 'sendAsyncMessageResult', subBuilder: SendAsyncMessageResult.create)
+    ..aOM<SetBytecodeResult>(53, _omitFieldNames ? '' : 'setBytecodeResult', subBuilder: SetBytecodeResult.create)
+    ..aOM<SetDsValueResult>(54, _omitFieldNames ? '' : 'setDsValueResult', subBuilder: SetDsValueResult.create)
+    ..aOM<SubNativeAmountResult>(55, _omitFieldNames ? '' : 'subNativeAmountResult', subBuilder: SubNativeAmountResult.create)
+    ..aOM<TransferCoinsResult>(56, _omitFieldNames ? '' : 'transferCoinsResult', subBuilder: TransferCoinsResult.create)
+    ..aOM<UnsafeRandomResult>(57, _omitFieldNames ? '' : 'unsafeRandomResult', subBuilder: UnsafeRandomResult.create)
+    ..aOM<EvmVerifySigResult>(58, _omitFieldNames ? '' : 'evmVerifySigResult', subBuilder: EvmVerifySigResult.create)
+    ..aOM<VerifySigResult>(59, _omitFieldNames ? '' : 'verifySigResult', subBuilder: VerifySigResult.create)
+    ..aOM<EvmGetAddressFromPubkeyResult>(60, _omitFieldNames ? '' : 'evmGetAddressFromPubkeyResult', subBuilder: EvmGetAddressFromPubkeyResult.create)
+    ..aOM<EvmGetPubkeyFromSignatureResult>(61, _omitFieldNames ? '' : 'evmGetPubkeyFromSignatureResult', subBuilder: EvmGetPubkeyFromSignatureResult.create)
+    ..aOM<IsAddressEoaResult>(62, _omitFieldNames ? '' : 'isAddressEoaResult', subBuilder: IsAddressEoaResult.create)
     ..hasRequiredFields = false
   ;
 
-  RespResult._() : super();
-  factory RespResult({
-    AddNativeAmountResult? addNativeAmountResult,
-    AddressFromPubKeyResult? addressFromPubKeyResult,
-    AppendDsValueResult? appendDsValueResult,
-    Base58CheckToBytesResult? base58CheckToBytesResult,
-    BytesToBase58CheckResult? bytesToBase58CheckResult,
-    CallerHasWriteAccessResult? callerHasWriteAccessResult,
-    CheckAddressResult? checkAddressResult,
-    CheckNativeAmountResult? checkNativeAmountResult,
-    CheckPubKeyResult? checkPubKeyResult,
-    CheckSigResult? checkSigResult,
-    CheckedAddNativeTimeResult? checkedAddNativeTimeResult,
-    CheckedDivRemNativeTimeResult? checkedDivRemNativeTimeResult,
-    CheckedScalarDivRemNativeTimeResult? checkedScalarDivRemNativeTimeResult,
-    CheckedScalarMulNativeTimeResult? checkedScalarMulNativeTimeResult,
-    CheckedSubNativeTimeResult? checkedSubNativeTimeResult,
-    CompareAddressResult? compareAddressResult,
-    CompareNativeAmountResult? compareNativeAmountResult,
-    CompareNativeTimeResult? compareNativeTimeResult,
-    ComparePubKeyResult? comparePubKeyResult,
-    CreateScResult? createScResult,
-    DeleteDsEntryResult? deleteDsEntryResult,
-    DivRemNativeAmountResult? divRemNativeAmountResult,
-    DsEntryExistsResult? dsEntryExistsResult,
-    FunctionExistsResult? functionExistsResult,
-    GenerateEventResult? generateEventResult,
-    GetAddressCategoryResult? getAddressCategoryResult,
-    GetAddressVersionResult? getAddressVersionResult,
-    GetBalanceResult? getBalanceResult,
-    GetBytecodeResult? getBytecodeResult,
-    GetCallCoinsResult? getCallCoinsResult,
-    GetCallStackResult? getCallStackResult,
-    GetCurrentSlotResult? getCurrentSlotResult,
-    GetDsKeysResult? getDsKeysResult,
-    GetDsValueResult? getDsValueResult,
-    GetNativeTimeResult? getNativeTimeResult,
-    GetOpDataResult? getOpDataResult,
-    GetOpKeysResult? getOpKeysResult,
-    GetOriginOperationIdResult? getOriginOperationIdResult,
-    GetOwnedAddressesResult? getOwnedAddressesResult,
-    GetPubKeyVersionResult? getPubKeyVersionResult,
-    GetRemainingGasResult? getRemainingGasResult,
-    GetSignatureVersionResult? getSignatureVersionResult,
-    HashBlake3Result? hashBlake3Result,
-    HashSha256Result? hashSha256Result,
-    OpEntryExistsResult? opEntryExistsResult,
-    Keccak256Result? keccak256Result,
-    LocalExecutionResponse? localExecutionResponse,
-    NativeAmountFromStringResult? nativeAmountFromStringResult,
-    NativeAmountToStringResult? nativeAmountToStringResult,
-    ScalarDivRemNativeAmountResult? scalarDivRemNativeAmountResult,
-    ScalarMulNativeAmountResult? scalarMulNativeAmountResult,
-    SendAsyncMessageResult? sendAsyncMessageResult,
-    SetBytecodeResult? setBytecodeResult,
-    SetDsValueResult? setDsValueResult,
-    SubNativeAmountResult? subNativeAmountResult,
-    TransferCoinsResult? transferCoinsResult,
-    UnsafeRandomResult? unsafeRandomResult,
-    EvmVerifySigResult? evmVerifySigResult,
-    VerifySigResult? verifySigResult,
-    EvmGetAddressFromPubkeyResult? evmGetAddressFromPubkeyResult,
-    EvmGetPubkeyFromSignatureResult? evmGetPubkeyFromSignatureResult,
-    IsAddressEoaResult? isAddressEoaResult,
-  }) {
-    final _result = create();
-    if (addNativeAmountResult != null) {
-      _result.addNativeAmountResult = addNativeAmountResult;
-    }
-    if (addressFromPubKeyResult != null) {
-      _result.addressFromPubKeyResult = addressFromPubKeyResult;
-    }
-    if (appendDsValueResult != null) {
-      _result.appendDsValueResult = appendDsValueResult;
-    }
-    if (base58CheckToBytesResult != null) {
-      _result.base58CheckToBytesResult = base58CheckToBytesResult;
-    }
-    if (bytesToBase58CheckResult != null) {
-      _result.bytesToBase58CheckResult = bytesToBase58CheckResult;
-    }
-    if (callerHasWriteAccessResult != null) {
-      _result.callerHasWriteAccessResult = callerHasWriteAccessResult;
-    }
-    if (checkAddressResult != null) {
-      _result.checkAddressResult = checkAddressResult;
-    }
-    if (checkNativeAmountResult != null) {
-      _result.checkNativeAmountResult = checkNativeAmountResult;
-    }
-    if (checkPubKeyResult != null) {
-      _result.checkPubKeyResult = checkPubKeyResult;
-    }
-    if (checkSigResult != null) {
-      _result.checkSigResult = checkSigResult;
-    }
-    if (checkedAddNativeTimeResult != null) {
-      _result.checkedAddNativeTimeResult = checkedAddNativeTimeResult;
-    }
-    if (checkedDivRemNativeTimeResult != null) {
-      _result.checkedDivRemNativeTimeResult = checkedDivRemNativeTimeResult;
-    }
-    if (checkedScalarDivRemNativeTimeResult != null) {
-      _result.checkedScalarDivRemNativeTimeResult = checkedScalarDivRemNativeTimeResult;
-    }
-    if (checkedScalarMulNativeTimeResult != null) {
-      _result.checkedScalarMulNativeTimeResult = checkedScalarMulNativeTimeResult;
-    }
-    if (checkedSubNativeTimeResult != null) {
-      _result.checkedSubNativeTimeResult = checkedSubNativeTimeResult;
-    }
-    if (compareAddressResult != null) {
-      _result.compareAddressResult = compareAddressResult;
-    }
-    if (compareNativeAmountResult != null) {
-      _result.compareNativeAmountResult = compareNativeAmountResult;
-    }
-    if (compareNativeTimeResult != null) {
-      _result.compareNativeTimeResult = compareNativeTimeResult;
-    }
-    if (comparePubKeyResult != null) {
-      _result.comparePubKeyResult = comparePubKeyResult;
-    }
-    if (createScResult != null) {
-      _result.createScResult = createScResult;
-    }
-    if (deleteDsEntryResult != null) {
-      _result.deleteDsEntryResult = deleteDsEntryResult;
-    }
-    if (divRemNativeAmountResult != null) {
-      _result.divRemNativeAmountResult = divRemNativeAmountResult;
-    }
-    if (dsEntryExistsResult != null) {
-      _result.dsEntryExistsResult = dsEntryExistsResult;
-    }
-    if (functionExistsResult != null) {
-      _result.functionExistsResult = functionExistsResult;
-    }
-    if (generateEventResult != null) {
-      _result.generateEventResult = generateEventResult;
-    }
-    if (getAddressCategoryResult != null) {
-      _result.getAddressCategoryResult = getAddressCategoryResult;
-    }
-    if (getAddressVersionResult != null) {
-      _result.getAddressVersionResult = getAddressVersionResult;
-    }
-    if (getBalanceResult != null) {
-      _result.getBalanceResult = getBalanceResult;
-    }
-    if (getBytecodeResult != null) {
-      _result.getBytecodeResult = getBytecodeResult;
-    }
-    if (getCallCoinsResult != null) {
-      _result.getCallCoinsResult = getCallCoinsResult;
-    }
-    if (getCallStackResult != null) {
-      _result.getCallStackResult = getCallStackResult;
-    }
-    if (getCurrentSlotResult != null) {
-      _result.getCurrentSlotResult = getCurrentSlotResult;
-    }
-    if (getDsKeysResult != null) {
-      _result.getDsKeysResult = getDsKeysResult;
-    }
-    if (getDsValueResult != null) {
-      _result.getDsValueResult = getDsValueResult;
-    }
-    if (getNativeTimeResult != null) {
-      _result.getNativeTimeResult = getNativeTimeResult;
-    }
-    if (getOpDataResult != null) {
-      _result.getOpDataResult = getOpDataResult;
-    }
-    if (getOpKeysResult != null) {
-      _result.getOpKeysResult = getOpKeysResult;
-    }
-    if (getOriginOperationIdResult != null) {
-      _result.getOriginOperationIdResult = getOriginOperationIdResult;
-    }
-    if (getOwnedAddressesResult != null) {
-      _result.getOwnedAddressesResult = getOwnedAddressesResult;
-    }
-    if (getPubKeyVersionResult != null) {
-      _result.getPubKeyVersionResult = getPubKeyVersionResult;
-    }
-    if (getRemainingGasResult != null) {
-      _result.getRemainingGasResult = getRemainingGasResult;
-    }
-    if (getSignatureVersionResult != null) {
-      _result.getSignatureVersionResult = getSignatureVersionResult;
-    }
-    if (hashBlake3Result != null) {
-      _result.hashBlake3Result = hashBlake3Result;
-    }
-    if (hashSha256Result != null) {
-      _result.hashSha256Result = hashSha256Result;
-    }
-    if (opEntryExistsResult != null) {
-      _result.opEntryExistsResult = opEntryExistsResult;
-    }
-    if (keccak256Result != null) {
-      _result.keccak256Result = keccak256Result;
-    }
-    if (localExecutionResponse != null) {
-      _result.localExecutionResponse = localExecutionResponse;
-    }
-    if (nativeAmountFromStringResult != null) {
-      _result.nativeAmountFromStringResult = nativeAmountFromStringResult;
-    }
-    if (nativeAmountToStringResult != null) {
-      _result.nativeAmountToStringResult = nativeAmountToStringResult;
-    }
-    if (scalarDivRemNativeAmountResult != null) {
-      _result.scalarDivRemNativeAmountResult = scalarDivRemNativeAmountResult;
-    }
-    if (scalarMulNativeAmountResult != null) {
-      _result.scalarMulNativeAmountResult = scalarMulNativeAmountResult;
-    }
-    if (sendAsyncMessageResult != null) {
-      _result.sendAsyncMessageResult = sendAsyncMessageResult;
-    }
-    if (setBytecodeResult != null) {
-      _result.setBytecodeResult = setBytecodeResult;
-    }
-    if (setDsValueResult != null) {
-      _result.setDsValueResult = setDsValueResult;
-    }
-    if (subNativeAmountResult != null) {
-      _result.subNativeAmountResult = subNativeAmountResult;
-    }
-    if (transferCoinsResult != null) {
-      _result.transferCoinsResult = transferCoinsResult;
-    }
-    if (unsafeRandomResult != null) {
-      _result.unsafeRandomResult = unsafeRandomResult;
-    }
-    if (evmVerifySigResult != null) {
-      _result.evmVerifySigResult = evmVerifySigResult;
-    }
-    if (verifySigResult != null) {
-      _result.verifySigResult = verifySigResult;
-    }
-    if (evmGetAddressFromPubkeyResult != null) {
-      _result.evmGetAddressFromPubkeyResult = evmGetAddressFromPubkeyResult;
-    }
-    if (evmGetPubkeyFromSignatureResult != null) {
-      _result.evmGetPubkeyFromSignatureResult = evmGetPubkeyFromSignatureResult;
-    }
-    if (isAddressEoaResult != null) {
-      _result.isAddressEoaResult = isAddressEoaResult;
-    }
-    return _result;
-  }
-  factory RespResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory RespResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1175,8 +1254,10 @@ class RespResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  RespResult copyWith(void Function(RespResult) updates) => super.copyWith((message) => updates(message as RespResult)) as RespResult; // ignore: deprecated_member_use
+  RespResult copyWith(void Function(RespResult) updates) => super.copyWith((message) => updates(message as RespResult)) as RespResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RespResult create() => RespResult._();
   RespResult createEmptyInstance() => create();
@@ -1877,35 +1958,37 @@ enum AbiResponse_Resp {
   notSet
 }
 
+/// Generic message that encapsulate response from ABI calls.
 class AbiResponse extends $pb.GeneratedMessage {
+  factory AbiResponse({
+    RespResult? res,
+    Error? error,
+  }) {
+    final $result = create();
+    if (res != null) {
+      $result.res = res;
+    }
+    if (error != null) {
+      $result.error = error;
+    }
+    return $result;
+  }
+  AbiResponse._() : super();
+  factory AbiResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AbiResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, AbiResponse_Resp> _AbiResponse_RespByTag = {
     1 : AbiResponse_Resp.res,
     2 : AbiResponse_Resp.error,
     0 : AbiResponse_Resp.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AbiResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AbiResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<RespResult>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'res', subBuilder: RespResult.create)
-    ..aOM<Error>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'error', subBuilder: Error.create)
+    ..aOM<RespResult>(1, _omitFieldNames ? '' : 'res', subBuilder: RespResult.create)
+    ..aOM<Error>(2, _omitFieldNames ? '' : 'error', subBuilder: Error.create)
     ..hasRequiredFields = false
   ;
 
-  AbiResponse._() : super();
-  factory AbiResponse({
-    RespResult? res,
-    Error? error,
-  }) {
-    final _result = create();
-    if (res != null) {
-      _result.res = res;
-    }
-    if (error != null) {
-      _result.error = error;
-    }
-    return _result;
-  }
-  factory AbiResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AbiResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1915,8 +1998,10 @@ class AbiResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AbiResponse copyWith(void Function(AbiResponse) updates) => super.copyWith((message) => updates(message as AbiResponse)) as AbiResponse; // ignore: deprecated_member_use
+  AbiResponse copyWith(void Function(AbiResponse) updates) => super.copyWith((message) => updates(message as AbiResponse)) as AbiResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AbiResponse create() => AbiResponse._();
   AbiResponse createEmptyInstance() => create();
@@ -1928,6 +2013,7 @@ class AbiResponse extends $pb.GeneratedMessage {
   AbiResponse_Resp whichResp() => _AbiResponse_RespByTag[$_whichOneof(0)]!;
   void clearResp() => clearField($_whichOneof(0));
 
+  /// variant for success
   @$pb.TagNumber(1)
   RespResult get res => $_getN(0);
   @$pb.TagNumber(1)
@@ -1939,6 +2025,7 @@ class AbiResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   RespResult ensureRes() => $_ensure(0);
 
+  /// variant for error
   @$pb.TagNumber(2)
   Error get error => $_getN(1);
   @$pb.TagNumber(2)
@@ -1951,24 +2038,26 @@ class AbiResponse extends $pb.GeneratedMessage {
   Error ensureError() => $_ensure(1);
 }
 
+/// Amount to string request
 class NativeAmountToStringRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NativeAmountToStringRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toConvert', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  NativeAmountToStringRequest._() : super();
   factory NativeAmountToStringRequest({
     $2.NativeAmount? toConvert,
   }) {
-    final _result = create();
+    final $result = create();
     if (toConvert != null) {
-      _result.toConvert = toConvert;
+      $result.toConvert = toConvert;
     }
-    return _result;
+    return $result;
   }
+  NativeAmountToStringRequest._() : super();
   factory NativeAmountToStringRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory NativeAmountToStringRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NativeAmountToStringRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'toConvert', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1978,8 +2067,10 @@ class NativeAmountToStringRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  NativeAmountToStringRequest copyWith(void Function(NativeAmountToStringRequest) updates) => super.copyWith((message) => updates(message as NativeAmountToStringRequest)) as NativeAmountToStringRequest; // ignore: deprecated_member_use
+  NativeAmountToStringRequest copyWith(void Function(NativeAmountToStringRequest) updates) => super.copyWith((message) => updates(message as NativeAmountToStringRequest)) as NativeAmountToStringRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NativeAmountToStringRequest create() => NativeAmountToStringRequest._();
   NativeAmountToStringRequest createEmptyInstance() => create();
@@ -1988,6 +2079,7 @@ class NativeAmountToStringRequest extends $pb.GeneratedMessage {
   static NativeAmountToStringRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NativeAmountToStringRequest>(create);
   static NativeAmountToStringRequest? _defaultInstance;
 
+  /// Amount to convert to string
   @$pb.TagNumber(1)
   $2.NativeAmount get toConvert => $_getN(0);
   @$pb.TagNumber(1)
@@ -2000,24 +2092,26 @@ class NativeAmountToStringRequest extends $pb.GeneratedMessage {
   $2.NativeAmount ensureToConvert() => $_ensure(0);
 }
 
+/// Amount to string result
 class NativeAmountToStringResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NativeAmountToStringResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'convertedAmount')
-    ..hasRequiredFields = false
-  ;
-
-  NativeAmountToStringResult._() : super();
   factory NativeAmountToStringResult({
     $core.String? convertedAmount,
   }) {
-    final _result = create();
+    final $result = create();
     if (convertedAmount != null) {
-      _result.convertedAmount = convertedAmount;
+      $result.convertedAmount = convertedAmount;
     }
-    return _result;
+    return $result;
   }
+  NativeAmountToStringResult._() : super();
   factory NativeAmountToStringResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory NativeAmountToStringResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NativeAmountToStringResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'convertedAmount')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2027,8 +2121,10 @@ class NativeAmountToStringResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  NativeAmountToStringResult copyWith(void Function(NativeAmountToStringResult) updates) => super.copyWith((message) => updates(message as NativeAmountToStringResult)) as NativeAmountToStringResult; // ignore: deprecated_member_use
+  NativeAmountToStringResult copyWith(void Function(NativeAmountToStringResult) updates) => super.copyWith((message) => updates(message as NativeAmountToStringResult)) as NativeAmountToStringResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NativeAmountToStringResult create() => NativeAmountToStringResult._();
   NativeAmountToStringResult createEmptyInstance() => create();
@@ -2037,6 +2133,7 @@ class NativeAmountToStringResult extends $pb.GeneratedMessage {
   static NativeAmountToStringResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NativeAmountToStringResult>(create);
   static NativeAmountToStringResult? _defaultInstance;
 
+  /// Converted Amount
   @$pb.TagNumber(1)
   $core.String get convertedAmount => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2047,24 +2144,26 @@ class NativeAmountToStringResult extends $pb.GeneratedMessage {
   void clearConvertedAmount() => clearField(1);
 }
 
+/// Amount from string request
 class NativeAmountFromStringRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NativeAmountFromStringRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toConvert')
-    ..hasRequiredFields = false
-  ;
-
-  NativeAmountFromStringRequest._() : super();
   factory NativeAmountFromStringRequest({
     $core.String? toConvert,
   }) {
-    final _result = create();
+    final $result = create();
     if (toConvert != null) {
-      _result.toConvert = toConvert;
+      $result.toConvert = toConvert;
     }
-    return _result;
+    return $result;
   }
+  NativeAmountFromStringRequest._() : super();
   factory NativeAmountFromStringRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory NativeAmountFromStringRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NativeAmountFromStringRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'toConvert')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2074,8 +2173,10 @@ class NativeAmountFromStringRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  NativeAmountFromStringRequest copyWith(void Function(NativeAmountFromStringRequest) updates) => super.copyWith((message) => updates(message as NativeAmountFromStringRequest)) as NativeAmountFromStringRequest; // ignore: deprecated_member_use
+  NativeAmountFromStringRequest copyWith(void Function(NativeAmountFromStringRequest) updates) => super.copyWith((message) => updates(message as NativeAmountFromStringRequest)) as NativeAmountFromStringRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NativeAmountFromStringRequest create() => NativeAmountFromStringRequest._();
   NativeAmountFromStringRequest createEmptyInstance() => create();
@@ -2084,6 +2185,7 @@ class NativeAmountFromStringRequest extends $pb.GeneratedMessage {
   static NativeAmountFromStringRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NativeAmountFromStringRequest>(create);
   static NativeAmountFromStringRequest? _defaultInstance;
 
+  /// String to convert to Amount
   @$pb.TagNumber(1)
   $core.String get toConvert => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2094,24 +2196,26 @@ class NativeAmountFromStringRequest extends $pb.GeneratedMessage {
   void clearToConvert() => clearField(1);
 }
 
+/// Amount from string result
 class NativeAmountFromStringResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NativeAmountFromStringResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'convertedAmount', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  NativeAmountFromStringResult._() : super();
   factory NativeAmountFromStringResult({
     $2.NativeAmount? convertedAmount,
   }) {
-    final _result = create();
+    final $result = create();
     if (convertedAmount != null) {
-      _result.convertedAmount = convertedAmount;
+      $result.convertedAmount = convertedAmount;
     }
-    return _result;
+    return $result;
   }
+  NativeAmountFromStringResult._() : super();
   factory NativeAmountFromStringResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory NativeAmountFromStringResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NativeAmountFromStringResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'convertedAmount', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2121,8 +2225,10 @@ class NativeAmountFromStringResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  NativeAmountFromStringResult copyWith(void Function(NativeAmountFromStringResult) updates) => super.copyWith((message) => updates(message as NativeAmountFromStringResult)) as NativeAmountFromStringResult; // ignore: deprecated_member_use
+  NativeAmountFromStringResult copyWith(void Function(NativeAmountFromStringResult) updates) => super.copyWith((message) => updates(message as NativeAmountFromStringResult)) as NativeAmountFromStringResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NativeAmountFromStringResult create() => NativeAmountFromStringResult._();
   NativeAmountFromStringResult createEmptyInstance() => create();
@@ -2131,6 +2237,7 @@ class NativeAmountFromStringResult extends $pb.GeneratedMessage {
   static NativeAmountFromStringResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NativeAmountFromStringResult>(create);
   static NativeAmountFromStringResult? _defaultInstance;
 
+  /// Converted Amount
   @$pb.TagNumber(1)
   $2.NativeAmount get convertedAmount => $_getN(0);
   @$pb.TagNumber(1)
@@ -2143,24 +2250,26 @@ class NativeAmountFromStringResult extends $pb.GeneratedMessage {
   $2.NativeAmount ensureConvertedAmount() => $_ensure(0);
 }
 
+/// Check address request
 class CheckAddressRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckAddressRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toCheck')
-    ..hasRequiredFields = false
-  ;
-
-  CheckAddressRequest._() : super();
   factory CheckAddressRequest({
     $core.String? toCheck,
   }) {
-    final _result = create();
+    final $result = create();
     if (toCheck != null) {
-      _result.toCheck = toCheck;
+      $result.toCheck = toCheck;
     }
-    return _result;
+    return $result;
   }
+  CheckAddressRequest._() : super();
   factory CheckAddressRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckAddressRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckAddressRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'toCheck')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2170,8 +2279,10 @@ class CheckAddressRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckAddressRequest copyWith(void Function(CheckAddressRequest) updates) => super.copyWith((message) => updates(message as CheckAddressRequest)) as CheckAddressRequest; // ignore: deprecated_member_use
+  CheckAddressRequest copyWith(void Function(CheckAddressRequest) updates) => super.copyWith((message) => updates(message as CheckAddressRequest)) as CheckAddressRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckAddressRequest create() => CheckAddressRequest._();
   CheckAddressRequest createEmptyInstance() => create();
@@ -2180,6 +2291,7 @@ class CheckAddressRequest extends $pb.GeneratedMessage {
   static CheckAddressRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckAddressRequest>(create);
   static CheckAddressRequest? _defaultInstance;
 
+  /// Address to check
   @$pb.TagNumber(1)
   $core.String get toCheck => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2190,24 +2302,26 @@ class CheckAddressRequest extends $pb.GeneratedMessage {
   void clearToCheck() => clearField(1);
 }
 
+/// Check address result
 class CheckAddressResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckAddressResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isValid')
-    ..hasRequiredFields = false
-  ;
-
-  CheckAddressResult._() : super();
   factory CheckAddressResult({
     $core.bool? isValid,
   }) {
-    final _result = create();
+    final $result = create();
     if (isValid != null) {
-      _result.isValid = isValid;
+      $result.isValid = isValid;
     }
-    return _result;
+    return $result;
   }
+  CheckAddressResult._() : super();
   factory CheckAddressResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckAddressResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckAddressResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'isValid')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2217,8 +2331,10 @@ class CheckAddressResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckAddressResult copyWith(void Function(CheckAddressResult) updates) => super.copyWith((message) => updates(message as CheckAddressResult)) as CheckAddressResult; // ignore: deprecated_member_use
+  CheckAddressResult copyWith(void Function(CheckAddressResult) updates) => super.copyWith((message) => updates(message as CheckAddressResult)) as CheckAddressResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckAddressResult create() => CheckAddressResult._();
   CheckAddressResult createEmptyInstance() => create();
@@ -2227,6 +2343,7 @@ class CheckAddressResult extends $pb.GeneratedMessage {
   static CheckAddressResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckAddressResult>(create);
   static CheckAddressResult? _defaultInstance;
 
+  /// Is address valid
   @$pb.TagNumber(1)
   $core.bool get isValid => $_getBF(0);
   @$pb.TagNumber(1)
@@ -2237,24 +2354,26 @@ class CheckAddressResult extends $pb.GeneratedMessage {
   void clearIsValid() => clearField(1);
 }
 
+/// Check PubKey request
 class CheckPubKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckPubKeyRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toCheck')
-    ..hasRequiredFields = false
-  ;
-
-  CheckPubKeyRequest._() : super();
   factory CheckPubKeyRequest({
     $core.String? toCheck,
   }) {
-    final _result = create();
+    final $result = create();
     if (toCheck != null) {
-      _result.toCheck = toCheck;
+      $result.toCheck = toCheck;
     }
-    return _result;
+    return $result;
   }
+  CheckPubKeyRequest._() : super();
   factory CheckPubKeyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckPubKeyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckPubKeyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'toCheck')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2264,8 +2383,10 @@ class CheckPubKeyRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckPubKeyRequest copyWith(void Function(CheckPubKeyRequest) updates) => super.copyWith((message) => updates(message as CheckPubKeyRequest)) as CheckPubKeyRequest; // ignore: deprecated_member_use
+  CheckPubKeyRequest copyWith(void Function(CheckPubKeyRequest) updates) => super.copyWith((message) => updates(message as CheckPubKeyRequest)) as CheckPubKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckPubKeyRequest create() => CheckPubKeyRequest._();
   CheckPubKeyRequest createEmptyInstance() => create();
@@ -2274,6 +2395,7 @@ class CheckPubKeyRequest extends $pb.GeneratedMessage {
   static CheckPubKeyRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckPubKeyRequest>(create);
   static CheckPubKeyRequest? _defaultInstance;
 
+  /// PubKey to check
   @$pb.TagNumber(1)
   $core.String get toCheck => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2284,24 +2406,26 @@ class CheckPubKeyRequest extends $pb.GeneratedMessage {
   void clearToCheck() => clearField(1);
 }
 
+/// Check PubKey result
 class CheckPubKeyResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckPubKeyResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isValid')
-    ..hasRequiredFields = false
-  ;
-
-  CheckPubKeyResult._() : super();
   factory CheckPubKeyResult({
     $core.bool? isValid,
   }) {
-    final _result = create();
+    final $result = create();
     if (isValid != null) {
-      _result.isValid = isValid;
+      $result.isValid = isValid;
     }
-    return _result;
+    return $result;
   }
+  CheckPubKeyResult._() : super();
   factory CheckPubKeyResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckPubKeyResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckPubKeyResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'isValid')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2311,8 +2435,10 @@ class CheckPubKeyResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckPubKeyResult copyWith(void Function(CheckPubKeyResult) updates) => super.copyWith((message) => updates(message as CheckPubKeyResult)) as CheckPubKeyResult; // ignore: deprecated_member_use
+  CheckPubKeyResult copyWith(void Function(CheckPubKeyResult) updates) => super.copyWith((message) => updates(message as CheckPubKeyResult)) as CheckPubKeyResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckPubKeyResult create() => CheckPubKeyResult._();
   CheckPubKeyResult createEmptyInstance() => create();
@@ -2321,6 +2447,7 @@ class CheckPubKeyResult extends $pb.GeneratedMessage {
   static CheckPubKeyResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckPubKeyResult>(create);
   static CheckPubKeyResult? _defaultInstance;
 
+  /// Is PubKey valid
   @$pb.TagNumber(1)
   $core.bool get isValid => $_getBF(0);
   @$pb.TagNumber(1)
@@ -2331,24 +2458,26 @@ class CheckPubKeyResult extends $pb.GeneratedMessage {
   void clearIsValid() => clearField(1);
 }
 
+/// Check Sig request
 class CheckSigRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckSigRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toCheck')
-    ..hasRequiredFields = false
-  ;
-
-  CheckSigRequest._() : super();
   factory CheckSigRequest({
     $core.String? toCheck,
   }) {
-    final _result = create();
+    final $result = create();
     if (toCheck != null) {
-      _result.toCheck = toCheck;
+      $result.toCheck = toCheck;
     }
-    return _result;
+    return $result;
   }
+  CheckSigRequest._() : super();
   factory CheckSigRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckSigRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckSigRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'toCheck')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2358,8 +2487,10 @@ class CheckSigRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckSigRequest copyWith(void Function(CheckSigRequest) updates) => super.copyWith((message) => updates(message as CheckSigRequest)) as CheckSigRequest; // ignore: deprecated_member_use
+  CheckSigRequest copyWith(void Function(CheckSigRequest) updates) => super.copyWith((message) => updates(message as CheckSigRequest)) as CheckSigRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckSigRequest create() => CheckSigRequest._();
   CheckSigRequest createEmptyInstance() => create();
@@ -2368,6 +2499,7 @@ class CheckSigRequest extends $pb.GeneratedMessage {
   static CheckSigRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckSigRequest>(create);
   static CheckSigRequest? _defaultInstance;
 
+  /// Sig to check
   @$pb.TagNumber(1)
   $core.String get toCheck => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2378,24 +2510,26 @@ class CheckSigRequest extends $pb.GeneratedMessage {
   void clearToCheck() => clearField(1);
 }
 
+/// Check Sig result
 class CheckSigResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckSigResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isValid')
-    ..hasRequiredFields = false
-  ;
-
-  CheckSigResult._() : super();
   factory CheckSigResult({
     $core.bool? isValid,
   }) {
-    final _result = create();
+    final $result = create();
     if (isValid != null) {
-      _result.isValid = isValid;
+      $result.isValid = isValid;
     }
-    return _result;
+    return $result;
   }
+  CheckSigResult._() : super();
   factory CheckSigResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckSigResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckSigResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'isValid')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2405,8 +2539,10 @@ class CheckSigResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckSigResult copyWith(void Function(CheckSigResult) updates) => super.copyWith((message) => updates(message as CheckSigResult)) as CheckSigResult; // ignore: deprecated_member_use
+  CheckSigResult copyWith(void Function(CheckSigResult) updates) => super.copyWith((message) => updates(message as CheckSigResult)) as CheckSigResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckSigResult create() => CheckSigResult._();
   CheckSigResult createEmptyInstance() => create();
@@ -2415,6 +2551,7 @@ class CheckSigResult extends $pb.GeneratedMessage {
   static CheckSigResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckSigResult>(create);
   static CheckSigResult? _defaultInstance;
 
+  /// Is Sig valid
   @$pb.TagNumber(1)
   $core.bool get isValid => $_getBF(0);
   @$pb.TagNumber(1)
@@ -2425,24 +2562,26 @@ class CheckSigResult extends $pb.GeneratedMessage {
   void clearIsValid() => clearField(1);
 }
 
+/// Check Amount request
 class CheckNativeAmountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckNativeAmountRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toCheck', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  CheckNativeAmountRequest._() : super();
   factory CheckNativeAmountRequest({
     $2.NativeAmount? toCheck,
   }) {
-    final _result = create();
+    final $result = create();
     if (toCheck != null) {
-      _result.toCheck = toCheck;
+      $result.toCheck = toCheck;
     }
-    return _result;
+    return $result;
   }
+  CheckNativeAmountRequest._() : super();
   factory CheckNativeAmountRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckNativeAmountRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckNativeAmountRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'toCheck', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2452,8 +2591,10 @@ class CheckNativeAmountRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckNativeAmountRequest copyWith(void Function(CheckNativeAmountRequest) updates) => super.copyWith((message) => updates(message as CheckNativeAmountRequest)) as CheckNativeAmountRequest; // ignore: deprecated_member_use
+  CheckNativeAmountRequest copyWith(void Function(CheckNativeAmountRequest) updates) => super.copyWith((message) => updates(message as CheckNativeAmountRequest)) as CheckNativeAmountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckNativeAmountRequest create() => CheckNativeAmountRequest._();
   CheckNativeAmountRequest createEmptyInstance() => create();
@@ -2462,6 +2603,7 @@ class CheckNativeAmountRequest extends $pb.GeneratedMessage {
   static CheckNativeAmountRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckNativeAmountRequest>(create);
   static CheckNativeAmountRequest? _defaultInstance;
 
+  /// Amount to check
   @$pb.TagNumber(1)
   $2.NativeAmount get toCheck => $_getN(0);
   @$pb.TagNumber(1)
@@ -2474,24 +2616,26 @@ class CheckNativeAmountRequest extends $pb.GeneratedMessage {
   $2.NativeAmount ensureToCheck() => $_ensure(0);
 }
 
+/// Check Amount result
 class CheckNativeAmountResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckNativeAmountResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isValid')
-    ..hasRequiredFields = false
-  ;
-
-  CheckNativeAmountResult._() : super();
   factory CheckNativeAmountResult({
     $core.bool? isValid,
   }) {
-    final _result = create();
+    final $result = create();
     if (isValid != null) {
-      _result.isValid = isValid;
+      $result.isValid = isValid;
     }
-    return _result;
+    return $result;
   }
+  CheckNativeAmountResult._() : super();
   factory CheckNativeAmountResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckNativeAmountResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckNativeAmountResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'isValid')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2501,8 +2645,10 @@ class CheckNativeAmountResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckNativeAmountResult copyWith(void Function(CheckNativeAmountResult) updates) => super.copyWith((message) => updates(message as CheckNativeAmountResult)) as CheckNativeAmountResult; // ignore: deprecated_member_use
+  CheckNativeAmountResult copyWith(void Function(CheckNativeAmountResult) updates) => super.copyWith((message) => updates(message as CheckNativeAmountResult)) as CheckNativeAmountResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckNativeAmountResult create() => CheckNativeAmountResult._();
   CheckNativeAmountResult createEmptyInstance() => create();
@@ -2511,6 +2657,7 @@ class CheckNativeAmountResult extends $pb.GeneratedMessage {
   static CheckNativeAmountResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckNativeAmountResult>(create);
   static CheckNativeAmountResult? _defaultInstance;
 
+  /// Is Amount valid
   @$pb.TagNumber(1)
   $core.bool get isValid => $_getBF(0);
   @$pb.TagNumber(1)
@@ -2521,29 +2668,31 @@ class CheckNativeAmountResult extends $pb.GeneratedMessage {
   void clearIsValid() => clearField(1);
 }
 
+/// Amount addition request
 class AddNativeAmountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddNativeAmountRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount1', subBuilder: $2.NativeAmount.create)
-    ..aOM<$2.NativeAmount>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount2', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  AddNativeAmountRequest._() : super();
   factory AddNativeAmountRequest({
     $2.NativeAmount? amount1,
     $2.NativeAmount? amount2,
   }) {
-    final _result = create();
+    final $result = create();
     if (amount1 != null) {
-      _result.amount1 = amount1;
+      $result.amount1 = amount1;
     }
     if (amount2 != null) {
-      _result.amount2 = amount2;
+      $result.amount2 = amount2;
     }
-    return _result;
+    return $result;
   }
+  AddNativeAmountRequest._() : super();
   factory AddNativeAmountRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AddNativeAmountRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AddNativeAmountRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'amount1', subBuilder: $2.NativeAmount.create)
+    ..aOM<$2.NativeAmount>(2, _omitFieldNames ? '' : 'amount2', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2553,8 +2702,10 @@ class AddNativeAmountRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AddNativeAmountRequest copyWith(void Function(AddNativeAmountRequest) updates) => super.copyWith((message) => updates(message as AddNativeAmountRequest)) as AddNativeAmountRequest; // ignore: deprecated_member_use
+  AddNativeAmountRequest copyWith(void Function(AddNativeAmountRequest) updates) => super.copyWith((message) => updates(message as AddNativeAmountRequest)) as AddNativeAmountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AddNativeAmountRequest create() => AddNativeAmountRequest._();
   AddNativeAmountRequest createEmptyInstance() => create();
@@ -2563,6 +2714,7 @@ class AddNativeAmountRequest extends $pb.GeneratedMessage {
   static AddNativeAmountRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AddNativeAmountRequest>(create);
   static AddNativeAmountRequest? _defaultInstance;
 
+  /// First amount to add
   @$pb.TagNumber(1)
   $2.NativeAmount get amount1 => $_getN(0);
   @$pb.TagNumber(1)
@@ -2574,6 +2726,7 @@ class AddNativeAmountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.NativeAmount ensureAmount1() => $_ensure(0);
 
+  /// Second amount to add
   @$pb.TagNumber(2)
   $2.NativeAmount get amount2 => $_getN(1);
   @$pb.TagNumber(2)
@@ -2586,24 +2739,26 @@ class AddNativeAmountRequest extends $pb.GeneratedMessage {
   $2.NativeAmount ensureAmount2() => $_ensure(1);
 }
 
+/// Amount addition result
 class AddNativeAmountResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddNativeAmountResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sum', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  AddNativeAmountResult._() : super();
   factory AddNativeAmountResult({
     $2.NativeAmount? sum,
   }) {
-    final _result = create();
+    final $result = create();
     if (sum != null) {
-      _result.sum = sum;
+      $result.sum = sum;
     }
-    return _result;
+    return $result;
   }
+  AddNativeAmountResult._() : super();
   factory AddNativeAmountResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AddNativeAmountResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AddNativeAmountResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'sum', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2613,8 +2768,10 @@ class AddNativeAmountResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AddNativeAmountResult copyWith(void Function(AddNativeAmountResult) updates) => super.copyWith((message) => updates(message as AddNativeAmountResult)) as AddNativeAmountResult; // ignore: deprecated_member_use
+  AddNativeAmountResult copyWith(void Function(AddNativeAmountResult) updates) => super.copyWith((message) => updates(message as AddNativeAmountResult)) as AddNativeAmountResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AddNativeAmountResult create() => AddNativeAmountResult._();
   AddNativeAmountResult createEmptyInstance() => create();
@@ -2623,6 +2780,7 @@ class AddNativeAmountResult extends $pb.GeneratedMessage {
   static AddNativeAmountResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AddNativeAmountResult>(create);
   static AddNativeAmountResult? _defaultInstance;
 
+  /// Sum of amounts
   @$pb.TagNumber(1)
   $2.NativeAmount get sum => $_getN(0);
   @$pb.TagNumber(1)
@@ -2635,29 +2793,33 @@ class AddNativeAmountResult extends $pb.GeneratedMessage {
   $2.NativeAmount ensureSum() => $_ensure(0);
 }
 
+/// Amount subtraction request
+/// try to compute difference = left - right
+/// fails if right > left
 class SubNativeAmountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SubNativeAmountRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: $2.NativeAmount.create)
-    ..aOM<$2.NativeAmount>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  SubNativeAmountRequest._() : super();
   factory SubNativeAmountRequest({
     $2.NativeAmount? left,
     $2.NativeAmount? right,
   }) {
-    final _result = create();
+    final $result = create();
     if (left != null) {
-      _result.left = left;
+      $result.left = left;
     }
     if (right != null) {
-      _result.right = right;
+      $result.right = right;
     }
-    return _result;
+    return $result;
   }
+  SubNativeAmountRequest._() : super();
   factory SubNativeAmountRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SubNativeAmountRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SubNativeAmountRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'left', subBuilder: $2.NativeAmount.create)
+    ..aOM<$2.NativeAmount>(2, _omitFieldNames ? '' : 'right', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2667,8 +2829,10 @@ class SubNativeAmountRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SubNativeAmountRequest copyWith(void Function(SubNativeAmountRequest) updates) => super.copyWith((message) => updates(message as SubNativeAmountRequest)) as SubNativeAmountRequest; // ignore: deprecated_member_use
+  SubNativeAmountRequest copyWith(void Function(SubNativeAmountRequest) updates) => super.copyWith((message) => updates(message as SubNativeAmountRequest)) as SubNativeAmountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SubNativeAmountRequest create() => SubNativeAmountRequest._();
   SubNativeAmountRequest createEmptyInstance() => create();
@@ -2677,6 +2841,7 @@ class SubNativeAmountRequest extends $pb.GeneratedMessage {
   static SubNativeAmountRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SubNativeAmountRequest>(create);
   static SubNativeAmountRequest? _defaultInstance;
 
+  /// First amount to subtract from
   @$pb.TagNumber(1)
   $2.NativeAmount get left => $_getN(0);
   @$pb.TagNumber(1)
@@ -2688,6 +2853,7 @@ class SubNativeAmountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.NativeAmount ensureLeft() => $_ensure(0);
 
+  /// Second amount to subtract
   @$pb.TagNumber(2)
   $2.NativeAmount get right => $_getN(1);
   @$pb.TagNumber(2)
@@ -2700,24 +2866,26 @@ class SubNativeAmountRequest extends $pb.GeneratedMessage {
   $2.NativeAmount ensureRight() => $_ensure(1);
 }
 
+/// Amount subtraction result
 class SubNativeAmountResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SubNativeAmountResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'difference', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  SubNativeAmountResult._() : super();
   factory SubNativeAmountResult({
     $2.NativeAmount? difference,
   }) {
-    final _result = create();
+    final $result = create();
     if (difference != null) {
-      _result.difference = difference;
+      $result.difference = difference;
     }
-    return _result;
+    return $result;
   }
+  SubNativeAmountResult._() : super();
   factory SubNativeAmountResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SubNativeAmountResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SubNativeAmountResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'difference', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2727,8 +2895,10 @@ class SubNativeAmountResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SubNativeAmountResult copyWith(void Function(SubNativeAmountResult) updates) => super.copyWith((message) => updates(message as SubNativeAmountResult)) as SubNativeAmountResult; // ignore: deprecated_member_use
+  SubNativeAmountResult copyWith(void Function(SubNativeAmountResult) updates) => super.copyWith((message) => updates(message as SubNativeAmountResult)) as SubNativeAmountResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SubNativeAmountResult create() => SubNativeAmountResult._();
   SubNativeAmountResult createEmptyInstance() => create();
@@ -2737,6 +2907,7 @@ class SubNativeAmountResult extends $pb.GeneratedMessage {
   static SubNativeAmountResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SubNativeAmountResult>(create);
   static SubNativeAmountResult? _defaultInstance;
 
+  /// Difference of amounts (left - right)
   @$pb.TagNumber(1)
   $2.NativeAmount get difference => $_getN(0);
   @$pb.TagNumber(1)
@@ -2749,29 +2920,32 @@ class SubNativeAmountResult extends $pb.GeneratedMessage {
   $2.NativeAmount ensureDifference() => $_ensure(0);
 }
 
+/// Amount multiplication request
+/// Try to compute product = amount * coefficient (fail if overflow)
 class ScalarMulNativeAmountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ScalarMulNativeAmountRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', subBuilder: $2.NativeAmount.create)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'coefficient', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  ScalarMulNativeAmountRequest._() : super();
   factory ScalarMulNativeAmountRequest({
     $2.NativeAmount? amount,
     $fixnum.Int64? coefficient,
   }) {
-    final _result = create();
+    final $result = create();
     if (amount != null) {
-      _result.amount = amount;
+      $result.amount = amount;
     }
     if (coefficient != null) {
-      _result.coefficient = coefficient;
+      $result.coefficient = coefficient;
     }
-    return _result;
+    return $result;
   }
+  ScalarMulNativeAmountRequest._() : super();
   factory ScalarMulNativeAmountRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ScalarMulNativeAmountRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ScalarMulNativeAmountRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'amount', subBuilder: $2.NativeAmount.create)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'coefficient', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2781,8 +2955,10 @@ class ScalarMulNativeAmountRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ScalarMulNativeAmountRequest copyWith(void Function(ScalarMulNativeAmountRequest) updates) => super.copyWith((message) => updates(message as ScalarMulNativeAmountRequest)) as ScalarMulNativeAmountRequest; // ignore: deprecated_member_use
+  ScalarMulNativeAmountRequest copyWith(void Function(ScalarMulNativeAmountRequest) updates) => super.copyWith((message) => updates(message as ScalarMulNativeAmountRequest)) as ScalarMulNativeAmountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ScalarMulNativeAmountRequest create() => ScalarMulNativeAmountRequest._();
   ScalarMulNativeAmountRequest createEmptyInstance() => create();
@@ -2791,6 +2967,7 @@ class ScalarMulNativeAmountRequest extends $pb.GeneratedMessage {
   static ScalarMulNativeAmountRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ScalarMulNativeAmountRequest>(create);
   static ScalarMulNativeAmountRequest? _defaultInstance;
 
+  /// Amount to multiply
   @$pb.TagNumber(1)
   $2.NativeAmount get amount => $_getN(0);
   @$pb.TagNumber(1)
@@ -2802,6 +2979,7 @@ class ScalarMulNativeAmountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.NativeAmount ensureAmount() => $_ensure(0);
 
+  /// Coefficient to multiply by
   @$pb.TagNumber(2)
   $fixnum.Int64 get coefficient => $_getI64(1);
   @$pb.TagNumber(2)
@@ -2812,24 +2990,26 @@ class ScalarMulNativeAmountRequest extends $pb.GeneratedMessage {
   void clearCoefficient() => clearField(2);
 }
 
+/// Amount multiplication result
 class ScalarMulNativeAmountResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ScalarMulNativeAmountResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'product', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  ScalarMulNativeAmountResult._() : super();
   factory ScalarMulNativeAmountResult({
     $2.NativeAmount? product,
   }) {
-    final _result = create();
+    final $result = create();
     if (product != null) {
-      _result.product = product;
+      $result.product = product;
     }
-    return _result;
+    return $result;
   }
+  ScalarMulNativeAmountResult._() : super();
   factory ScalarMulNativeAmountResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ScalarMulNativeAmountResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ScalarMulNativeAmountResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'product', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2839,8 +3019,10 @@ class ScalarMulNativeAmountResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ScalarMulNativeAmountResult copyWith(void Function(ScalarMulNativeAmountResult) updates) => super.copyWith((message) => updates(message as ScalarMulNativeAmountResult)) as ScalarMulNativeAmountResult; // ignore: deprecated_member_use
+  ScalarMulNativeAmountResult copyWith(void Function(ScalarMulNativeAmountResult) updates) => super.copyWith((message) => updates(message as ScalarMulNativeAmountResult)) as ScalarMulNativeAmountResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ScalarMulNativeAmountResult create() => ScalarMulNativeAmountResult._();
   ScalarMulNativeAmountResult createEmptyInstance() => create();
@@ -2849,6 +3031,7 @@ class ScalarMulNativeAmountResult extends $pb.GeneratedMessage {
   static ScalarMulNativeAmountResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ScalarMulNativeAmountResult>(create);
   static ScalarMulNativeAmountResult? _defaultInstance;
 
+  /// Product of amount and coefficient
   @$pb.TagNumber(1)
   $2.NativeAmount get product => $_getN(0);
   @$pb.TagNumber(1)
@@ -2861,29 +3044,34 @@ class ScalarMulNativeAmountResult extends $pb.GeneratedMessage {
   $2.NativeAmount ensureProduct() => $_ensure(0);
 }
 
+/// Amount division by scalar request
+/// Try to compute quotient = dividend / divisor
+/// Fails if divisor == 0
+/// Fails if underflow
 class ScalarDivRemNativeAmountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ScalarDivRemNativeAmountRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dividend', subBuilder: $2.NativeAmount.create)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'divisor', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  ScalarDivRemNativeAmountRequest._() : super();
   factory ScalarDivRemNativeAmountRequest({
     $2.NativeAmount? dividend,
     $fixnum.Int64? divisor,
   }) {
-    final _result = create();
+    final $result = create();
     if (dividend != null) {
-      _result.dividend = dividend;
+      $result.dividend = dividend;
     }
     if (divisor != null) {
-      _result.divisor = divisor;
+      $result.divisor = divisor;
     }
-    return _result;
+    return $result;
   }
+  ScalarDivRemNativeAmountRequest._() : super();
   factory ScalarDivRemNativeAmountRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ScalarDivRemNativeAmountRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ScalarDivRemNativeAmountRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'dividend', subBuilder: $2.NativeAmount.create)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'divisor', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2893,8 +3081,10 @@ class ScalarDivRemNativeAmountRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ScalarDivRemNativeAmountRequest copyWith(void Function(ScalarDivRemNativeAmountRequest) updates) => super.copyWith((message) => updates(message as ScalarDivRemNativeAmountRequest)) as ScalarDivRemNativeAmountRequest; // ignore: deprecated_member_use
+  ScalarDivRemNativeAmountRequest copyWith(void Function(ScalarDivRemNativeAmountRequest) updates) => super.copyWith((message) => updates(message as ScalarDivRemNativeAmountRequest)) as ScalarDivRemNativeAmountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ScalarDivRemNativeAmountRequest create() => ScalarDivRemNativeAmountRequest._();
   ScalarDivRemNativeAmountRequest createEmptyInstance() => create();
@@ -2903,6 +3093,7 @@ class ScalarDivRemNativeAmountRequest extends $pb.GeneratedMessage {
   static ScalarDivRemNativeAmountRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ScalarDivRemNativeAmountRequest>(create);
   static ScalarDivRemNativeAmountRequest? _defaultInstance;
 
+  /// Amount to divide
   @$pb.TagNumber(1)
   $2.NativeAmount get dividend => $_getN(0);
   @$pb.TagNumber(1)
@@ -2914,6 +3105,7 @@ class ScalarDivRemNativeAmountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.NativeAmount ensureDividend() => $_ensure(0);
 
+  /// Divisor to divide by
   @$pb.TagNumber(2)
   $fixnum.Int64 get divisor => $_getI64(1);
   @$pb.TagNumber(2)
@@ -2924,29 +3116,31 @@ class ScalarDivRemNativeAmountRequest extends $pb.GeneratedMessage {
   void clearDivisor() => clearField(2);
 }
 
+/// Amount division by scalar result
 class ScalarDivRemNativeAmountResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ScalarDivRemNativeAmountResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quotient', subBuilder: $2.NativeAmount.create)
-    ..aOM<$2.NativeAmount>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remainder', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  ScalarDivRemNativeAmountResult._() : super();
   factory ScalarDivRemNativeAmountResult({
     $2.NativeAmount? quotient,
     $2.NativeAmount? remainder,
   }) {
-    final _result = create();
+    final $result = create();
     if (quotient != null) {
-      _result.quotient = quotient;
+      $result.quotient = quotient;
     }
     if (remainder != null) {
-      _result.remainder = remainder;
+      $result.remainder = remainder;
     }
-    return _result;
+    return $result;
   }
+  ScalarDivRemNativeAmountResult._() : super();
   factory ScalarDivRemNativeAmountResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ScalarDivRemNativeAmountResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ScalarDivRemNativeAmountResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'quotient', subBuilder: $2.NativeAmount.create)
+    ..aOM<$2.NativeAmount>(2, _omitFieldNames ? '' : 'remainder', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2956,8 +3150,10 @@ class ScalarDivRemNativeAmountResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ScalarDivRemNativeAmountResult copyWith(void Function(ScalarDivRemNativeAmountResult) updates) => super.copyWith((message) => updates(message as ScalarDivRemNativeAmountResult)) as ScalarDivRemNativeAmountResult; // ignore: deprecated_member_use
+  ScalarDivRemNativeAmountResult copyWith(void Function(ScalarDivRemNativeAmountResult) updates) => super.copyWith((message) => updates(message as ScalarDivRemNativeAmountResult)) as ScalarDivRemNativeAmountResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ScalarDivRemNativeAmountResult create() => ScalarDivRemNativeAmountResult._();
   ScalarDivRemNativeAmountResult createEmptyInstance() => create();
@@ -2966,6 +3162,7 @@ class ScalarDivRemNativeAmountResult extends $pb.GeneratedMessage {
   static ScalarDivRemNativeAmountResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ScalarDivRemNativeAmountResult>(create);
   static ScalarDivRemNativeAmountResult? _defaultInstance;
 
+  /// Quotient of amount and divisor
   @$pb.TagNumber(1)
   $2.NativeAmount get quotient => $_getN(0);
   @$pb.TagNumber(1)
@@ -2977,6 +3174,7 @@ class ScalarDivRemNativeAmountResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.NativeAmount ensureQuotient() => $_ensure(0);
 
+  /// Remainder of amount and divisor
   @$pb.TagNumber(2)
   $2.NativeAmount get remainder => $_getN(1);
   @$pb.TagNumber(2)
@@ -2989,29 +3187,31 @@ class ScalarDivRemNativeAmountResult extends $pb.GeneratedMessage {
   $2.NativeAmount ensureRemainder() => $_ensure(1);
 }
 
+/// Amount division request
 class DivRemNativeAmountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DivRemNativeAmountRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dividend', subBuilder: $2.NativeAmount.create)
-    ..aOM<$2.NativeAmount>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'divisor', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  DivRemNativeAmountRequest._() : super();
   factory DivRemNativeAmountRequest({
     $2.NativeAmount? dividend,
     $2.NativeAmount? divisor,
   }) {
-    final _result = create();
+    final $result = create();
     if (dividend != null) {
-      _result.dividend = dividend;
+      $result.dividend = dividend;
     }
     if (divisor != null) {
-      _result.divisor = divisor;
+      $result.divisor = divisor;
     }
-    return _result;
+    return $result;
   }
+  DivRemNativeAmountRequest._() : super();
   factory DivRemNativeAmountRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DivRemNativeAmountRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DivRemNativeAmountRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'dividend', subBuilder: $2.NativeAmount.create)
+    ..aOM<$2.NativeAmount>(2, _omitFieldNames ? '' : 'divisor', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3021,8 +3221,10 @@ class DivRemNativeAmountRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DivRemNativeAmountRequest copyWith(void Function(DivRemNativeAmountRequest) updates) => super.copyWith((message) => updates(message as DivRemNativeAmountRequest)) as DivRemNativeAmountRequest; // ignore: deprecated_member_use
+  DivRemNativeAmountRequest copyWith(void Function(DivRemNativeAmountRequest) updates) => super.copyWith((message) => updates(message as DivRemNativeAmountRequest)) as DivRemNativeAmountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DivRemNativeAmountRequest create() => DivRemNativeAmountRequest._();
   DivRemNativeAmountRequest createEmptyInstance() => create();
@@ -3031,6 +3233,7 @@ class DivRemNativeAmountRequest extends $pb.GeneratedMessage {
   static DivRemNativeAmountRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DivRemNativeAmountRequest>(create);
   static DivRemNativeAmountRequest? _defaultInstance;
 
+  /// Amount to divide
   @$pb.TagNumber(1)
   $2.NativeAmount get dividend => $_getN(0);
   @$pb.TagNumber(1)
@@ -3042,6 +3245,7 @@ class DivRemNativeAmountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.NativeAmount ensureDividend() => $_ensure(0);
 
+  /// Divisor to divide by
   @$pb.TagNumber(2)
   $2.NativeAmount get divisor => $_getN(1);
   @$pb.TagNumber(2)
@@ -3054,29 +3258,31 @@ class DivRemNativeAmountRequest extends $pb.GeneratedMessage {
   $2.NativeAmount ensureDivisor() => $_ensure(1);
 }
 
+/// Amount division result
 class DivRemNativeAmountResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DivRemNativeAmountResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quotient', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$2.NativeAmount>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remainder', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  DivRemNativeAmountResult._() : super();
   factory DivRemNativeAmountResult({
     $fixnum.Int64? quotient,
     $2.NativeAmount? remainder,
   }) {
-    final _result = create();
+    final $result = create();
     if (quotient != null) {
-      _result.quotient = quotient;
+      $result.quotient = quotient;
     }
     if (remainder != null) {
-      _result.remainder = remainder;
+      $result.remainder = remainder;
     }
-    return _result;
+    return $result;
   }
+  DivRemNativeAmountResult._() : super();
   factory DivRemNativeAmountResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DivRemNativeAmountResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DivRemNativeAmountResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'quotient', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$2.NativeAmount>(2, _omitFieldNames ? '' : 'remainder', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3086,8 +3292,10 @@ class DivRemNativeAmountResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DivRemNativeAmountResult copyWith(void Function(DivRemNativeAmountResult) updates) => super.copyWith((message) => updates(message as DivRemNativeAmountResult)) as DivRemNativeAmountResult; // ignore: deprecated_member_use
+  DivRemNativeAmountResult copyWith(void Function(DivRemNativeAmountResult) updates) => super.copyWith((message) => updates(message as DivRemNativeAmountResult)) as DivRemNativeAmountResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DivRemNativeAmountResult create() => DivRemNativeAmountResult._();
   DivRemNativeAmountResult createEmptyInstance() => create();
@@ -3096,6 +3304,7 @@ class DivRemNativeAmountResult extends $pb.GeneratedMessage {
   static DivRemNativeAmountResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DivRemNativeAmountResult>(create);
   static DivRemNativeAmountResult? _defaultInstance;
 
+  /// Quotient of amount and divisor
   @$pb.TagNumber(1)
   $fixnum.Int64 get quotient => $_getI64(0);
   @$pb.TagNumber(1)
@@ -3105,6 +3314,7 @@ class DivRemNativeAmountResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearQuotient() => clearField(1);
 
+  /// Remainder of amount and divisor
   @$pb.TagNumber(2)
   $2.NativeAmount get remainder => $_getN(1);
   @$pb.TagNumber(2)
@@ -3117,29 +3327,31 @@ class DivRemNativeAmountResult extends $pb.GeneratedMessage {
   $2.NativeAmount ensureRemainder() => $_ensure(1);
 }
 
+/// Time addition checked request
 class CheckedAddNativeTimeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckedAddNativeTimeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: $4.NativeTime.create)
-    ..hasRequiredFields = false
-  ;
-
-  CheckedAddNativeTimeRequest._() : super();
   factory CheckedAddNativeTimeRequest({
     $4.NativeTime? left,
     $4.NativeTime? right,
   }) {
-    final _result = create();
+    final $result = create();
     if (left != null) {
-      _result.left = left;
+      $result.left = left;
     }
     if (right != null) {
-      _result.right = right;
+      $result.right = right;
     }
-    return _result;
+    return $result;
   }
+  CheckedAddNativeTimeRequest._() : super();
   factory CheckedAddNativeTimeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckedAddNativeTimeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckedAddNativeTimeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'left', subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'right', subBuilder: $4.NativeTime.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3149,8 +3361,10 @@ class CheckedAddNativeTimeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckedAddNativeTimeRequest copyWith(void Function(CheckedAddNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CheckedAddNativeTimeRequest)) as CheckedAddNativeTimeRequest; // ignore: deprecated_member_use
+  CheckedAddNativeTimeRequest copyWith(void Function(CheckedAddNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CheckedAddNativeTimeRequest)) as CheckedAddNativeTimeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckedAddNativeTimeRequest create() => CheckedAddNativeTimeRequest._();
   CheckedAddNativeTimeRequest createEmptyInstance() => create();
@@ -3159,6 +3373,7 @@ class CheckedAddNativeTimeRequest extends $pb.GeneratedMessage {
   static CheckedAddNativeTimeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckedAddNativeTimeRequest>(create);
   static CheckedAddNativeTimeRequest? _defaultInstance;
 
+  /// First time to add
   @$pb.TagNumber(1)
   $4.NativeTime get left => $_getN(0);
   @$pb.TagNumber(1)
@@ -3170,6 +3385,7 @@ class CheckedAddNativeTimeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.NativeTime ensureLeft() => $_ensure(0);
 
+  /// Second time to add
   @$pb.TagNumber(2)
   $4.NativeTime get right => $_getN(1);
   @$pb.TagNumber(2)
@@ -3182,24 +3398,26 @@ class CheckedAddNativeTimeRequest extends $pb.GeneratedMessage {
   $4.NativeTime ensureRight() => $_ensure(1);
 }
 
+/// Time addition checked result
 class CheckedAddNativeTimeResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckedAddNativeTimeResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sum', subBuilder: $4.NativeTime.create)
-    ..hasRequiredFields = false
-  ;
-
-  CheckedAddNativeTimeResult._() : super();
   factory CheckedAddNativeTimeResult({
     $4.NativeTime? sum,
   }) {
-    final _result = create();
+    final $result = create();
     if (sum != null) {
-      _result.sum = sum;
+      $result.sum = sum;
     }
-    return _result;
+    return $result;
   }
+  CheckedAddNativeTimeResult._() : super();
   factory CheckedAddNativeTimeResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckedAddNativeTimeResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckedAddNativeTimeResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'sum', subBuilder: $4.NativeTime.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3209,8 +3427,10 @@ class CheckedAddNativeTimeResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckedAddNativeTimeResult copyWith(void Function(CheckedAddNativeTimeResult) updates) => super.copyWith((message) => updates(message as CheckedAddNativeTimeResult)) as CheckedAddNativeTimeResult; // ignore: deprecated_member_use
+  CheckedAddNativeTimeResult copyWith(void Function(CheckedAddNativeTimeResult) updates) => super.copyWith((message) => updates(message as CheckedAddNativeTimeResult)) as CheckedAddNativeTimeResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckedAddNativeTimeResult create() => CheckedAddNativeTimeResult._();
   CheckedAddNativeTimeResult createEmptyInstance() => create();
@@ -3219,6 +3439,7 @@ class CheckedAddNativeTimeResult extends $pb.GeneratedMessage {
   static CheckedAddNativeTimeResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckedAddNativeTimeResult>(create);
   static CheckedAddNativeTimeResult? _defaultInstance;
 
+  /// Sum of times
   @$pb.TagNumber(1)
   $4.NativeTime get sum => $_getN(0);
   @$pb.TagNumber(1)
@@ -3231,29 +3452,31 @@ class CheckedAddNativeTimeResult extends $pb.GeneratedMessage {
   $4.NativeTime ensureSum() => $_ensure(0);
 }
 
+/// Time subtraction checked request
 class CheckedSubNativeTimeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckedSubNativeTimeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: $4.NativeTime.create)
-    ..hasRequiredFields = false
-  ;
-
-  CheckedSubNativeTimeRequest._() : super();
   factory CheckedSubNativeTimeRequest({
     $4.NativeTime? left,
     $4.NativeTime? right,
   }) {
-    final _result = create();
+    final $result = create();
     if (left != null) {
-      _result.left = left;
+      $result.left = left;
     }
     if (right != null) {
-      _result.right = right;
+      $result.right = right;
     }
-    return _result;
+    return $result;
   }
+  CheckedSubNativeTimeRequest._() : super();
   factory CheckedSubNativeTimeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckedSubNativeTimeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckedSubNativeTimeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'left', subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'right', subBuilder: $4.NativeTime.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3263,8 +3486,10 @@ class CheckedSubNativeTimeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckedSubNativeTimeRequest copyWith(void Function(CheckedSubNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CheckedSubNativeTimeRequest)) as CheckedSubNativeTimeRequest; // ignore: deprecated_member_use
+  CheckedSubNativeTimeRequest copyWith(void Function(CheckedSubNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CheckedSubNativeTimeRequest)) as CheckedSubNativeTimeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckedSubNativeTimeRequest create() => CheckedSubNativeTimeRequest._();
   CheckedSubNativeTimeRequest createEmptyInstance() => create();
@@ -3273,6 +3498,7 @@ class CheckedSubNativeTimeRequest extends $pb.GeneratedMessage {
   static CheckedSubNativeTimeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckedSubNativeTimeRequest>(create);
   static CheckedSubNativeTimeRequest? _defaultInstance;
 
+  /// First time to subtract from
   @$pb.TagNumber(1)
   $4.NativeTime get left => $_getN(0);
   @$pb.TagNumber(1)
@@ -3284,6 +3510,7 @@ class CheckedSubNativeTimeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.NativeTime ensureLeft() => $_ensure(0);
 
+  /// Second time to subtract
   @$pb.TagNumber(2)
   $4.NativeTime get right => $_getN(1);
   @$pb.TagNumber(2)
@@ -3296,24 +3523,26 @@ class CheckedSubNativeTimeRequest extends $pb.GeneratedMessage {
   $4.NativeTime ensureRight() => $_ensure(1);
 }
 
+/// Time subtraction checked result
 class CheckedSubNativeTimeResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckedSubNativeTimeResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'difference', subBuilder: $4.NativeTime.create)
-    ..hasRequiredFields = false
-  ;
-
-  CheckedSubNativeTimeResult._() : super();
   factory CheckedSubNativeTimeResult({
     $4.NativeTime? difference,
   }) {
-    final _result = create();
+    final $result = create();
     if (difference != null) {
-      _result.difference = difference;
+      $result.difference = difference;
     }
-    return _result;
+    return $result;
   }
+  CheckedSubNativeTimeResult._() : super();
   factory CheckedSubNativeTimeResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckedSubNativeTimeResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckedSubNativeTimeResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'difference', subBuilder: $4.NativeTime.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3323,8 +3552,10 @@ class CheckedSubNativeTimeResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckedSubNativeTimeResult copyWith(void Function(CheckedSubNativeTimeResult) updates) => super.copyWith((message) => updates(message as CheckedSubNativeTimeResult)) as CheckedSubNativeTimeResult; // ignore: deprecated_member_use
+  CheckedSubNativeTimeResult copyWith(void Function(CheckedSubNativeTimeResult) updates) => super.copyWith((message) => updates(message as CheckedSubNativeTimeResult)) as CheckedSubNativeTimeResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckedSubNativeTimeResult create() => CheckedSubNativeTimeResult._();
   CheckedSubNativeTimeResult createEmptyInstance() => create();
@@ -3333,6 +3564,7 @@ class CheckedSubNativeTimeResult extends $pb.GeneratedMessage {
   static CheckedSubNativeTimeResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckedSubNativeTimeResult>(create);
   static CheckedSubNativeTimeResult? _defaultInstance;
 
+  /// Difference of times (left - right)
   @$pb.TagNumber(1)
   $4.NativeTime get difference => $_getN(0);
   @$pb.TagNumber(1)
@@ -3345,29 +3577,31 @@ class CheckedSubNativeTimeResult extends $pb.GeneratedMessage {
   $4.NativeTime ensureDifference() => $_ensure(0);
 }
 
+/// Time scalar mult checked request
 class CheckedScalarMulNativeTimeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckedScalarMulNativeTimeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'time', subBuilder: $4.NativeTime.create)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'coefficient', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  CheckedScalarMulNativeTimeRequest._() : super();
   factory CheckedScalarMulNativeTimeRequest({
     $4.NativeTime? time,
     $fixnum.Int64? coefficient,
   }) {
-    final _result = create();
+    final $result = create();
     if (time != null) {
-      _result.time = time;
+      $result.time = time;
     }
     if (coefficient != null) {
-      _result.coefficient = coefficient;
+      $result.coefficient = coefficient;
     }
-    return _result;
+    return $result;
   }
+  CheckedScalarMulNativeTimeRequest._() : super();
   factory CheckedScalarMulNativeTimeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckedScalarMulNativeTimeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckedScalarMulNativeTimeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'time', subBuilder: $4.NativeTime.create)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'coefficient', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3377,8 +3611,10 @@ class CheckedScalarMulNativeTimeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckedScalarMulNativeTimeRequest copyWith(void Function(CheckedScalarMulNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CheckedScalarMulNativeTimeRequest)) as CheckedScalarMulNativeTimeRequest; // ignore: deprecated_member_use
+  CheckedScalarMulNativeTimeRequest copyWith(void Function(CheckedScalarMulNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CheckedScalarMulNativeTimeRequest)) as CheckedScalarMulNativeTimeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckedScalarMulNativeTimeRequest create() => CheckedScalarMulNativeTimeRequest._();
   CheckedScalarMulNativeTimeRequest createEmptyInstance() => create();
@@ -3387,6 +3623,7 @@ class CheckedScalarMulNativeTimeRequest extends $pb.GeneratedMessage {
   static CheckedScalarMulNativeTimeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckedScalarMulNativeTimeRequest>(create);
   static CheckedScalarMulNativeTimeRequest? _defaultInstance;
 
+  /// Time to multiply
   @$pb.TagNumber(1)
   $4.NativeTime get time => $_getN(0);
   @$pb.TagNumber(1)
@@ -3398,6 +3635,7 @@ class CheckedScalarMulNativeTimeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.NativeTime ensureTime() => $_ensure(0);
 
+  /// Coefficient to multiply by
   @$pb.TagNumber(2)
   $fixnum.Int64 get coefficient => $_getI64(1);
   @$pb.TagNumber(2)
@@ -3408,24 +3646,26 @@ class CheckedScalarMulNativeTimeRequest extends $pb.GeneratedMessage {
   void clearCoefficient() => clearField(2);
 }
 
+/// Time scalar mult checked result
 class CheckedScalarMulNativeTimeResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckedScalarMulNativeTimeResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'product', subBuilder: $4.NativeTime.create)
-    ..hasRequiredFields = false
-  ;
-
-  CheckedScalarMulNativeTimeResult._() : super();
   factory CheckedScalarMulNativeTimeResult({
     $4.NativeTime? product,
   }) {
-    final _result = create();
+    final $result = create();
     if (product != null) {
-      _result.product = product;
+      $result.product = product;
     }
-    return _result;
+    return $result;
   }
+  CheckedScalarMulNativeTimeResult._() : super();
   factory CheckedScalarMulNativeTimeResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckedScalarMulNativeTimeResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckedScalarMulNativeTimeResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'product', subBuilder: $4.NativeTime.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3435,8 +3675,10 @@ class CheckedScalarMulNativeTimeResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckedScalarMulNativeTimeResult copyWith(void Function(CheckedScalarMulNativeTimeResult) updates) => super.copyWith((message) => updates(message as CheckedScalarMulNativeTimeResult)) as CheckedScalarMulNativeTimeResult; // ignore: deprecated_member_use
+  CheckedScalarMulNativeTimeResult copyWith(void Function(CheckedScalarMulNativeTimeResult) updates) => super.copyWith((message) => updates(message as CheckedScalarMulNativeTimeResult)) as CheckedScalarMulNativeTimeResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckedScalarMulNativeTimeResult create() => CheckedScalarMulNativeTimeResult._();
   CheckedScalarMulNativeTimeResult createEmptyInstance() => create();
@@ -3445,6 +3687,7 @@ class CheckedScalarMulNativeTimeResult extends $pb.GeneratedMessage {
   static CheckedScalarMulNativeTimeResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckedScalarMulNativeTimeResult>(create);
   static CheckedScalarMulNativeTimeResult? _defaultInstance;
 
+  /// Product of time and coefficient
   @$pb.TagNumber(1)
   $4.NativeTime get product => $_getN(0);
   @$pb.TagNumber(1)
@@ -3457,29 +3700,31 @@ class CheckedScalarMulNativeTimeResult extends $pb.GeneratedMessage {
   $4.NativeTime ensureProduct() => $_ensure(0);
 }
 
+/// Time scalar divrem checked request
 class CheckedScalarDivRemNativeTimeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckedScalarDivRemNativeTimeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dividend', subBuilder: $4.NativeTime.create)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'divisor', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  CheckedScalarDivRemNativeTimeRequest._() : super();
   factory CheckedScalarDivRemNativeTimeRequest({
     $4.NativeTime? dividend,
     $fixnum.Int64? divisor,
   }) {
-    final _result = create();
+    final $result = create();
     if (dividend != null) {
-      _result.dividend = dividend;
+      $result.dividend = dividend;
     }
     if (divisor != null) {
-      _result.divisor = divisor;
+      $result.divisor = divisor;
     }
-    return _result;
+    return $result;
   }
+  CheckedScalarDivRemNativeTimeRequest._() : super();
   factory CheckedScalarDivRemNativeTimeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckedScalarDivRemNativeTimeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckedScalarDivRemNativeTimeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'dividend', subBuilder: $4.NativeTime.create)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'divisor', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3489,8 +3734,10 @@ class CheckedScalarDivRemNativeTimeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckedScalarDivRemNativeTimeRequest copyWith(void Function(CheckedScalarDivRemNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CheckedScalarDivRemNativeTimeRequest)) as CheckedScalarDivRemNativeTimeRequest; // ignore: deprecated_member_use
+  CheckedScalarDivRemNativeTimeRequest copyWith(void Function(CheckedScalarDivRemNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CheckedScalarDivRemNativeTimeRequest)) as CheckedScalarDivRemNativeTimeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckedScalarDivRemNativeTimeRequest create() => CheckedScalarDivRemNativeTimeRequest._();
   CheckedScalarDivRemNativeTimeRequest createEmptyInstance() => create();
@@ -3499,6 +3746,7 @@ class CheckedScalarDivRemNativeTimeRequest extends $pb.GeneratedMessage {
   static CheckedScalarDivRemNativeTimeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckedScalarDivRemNativeTimeRequest>(create);
   static CheckedScalarDivRemNativeTimeRequest? _defaultInstance;
 
+  /// Time to divide
   @$pb.TagNumber(1)
   $4.NativeTime get dividend => $_getN(0);
   @$pb.TagNumber(1)
@@ -3510,6 +3758,7 @@ class CheckedScalarDivRemNativeTimeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.NativeTime ensureDividend() => $_ensure(0);
 
+  /// Divisor to divide by
   @$pb.TagNumber(2)
   $fixnum.Int64 get divisor => $_getI64(1);
   @$pb.TagNumber(2)
@@ -3520,29 +3769,31 @@ class CheckedScalarDivRemNativeTimeRequest extends $pb.GeneratedMessage {
   void clearDivisor() => clearField(2);
 }
 
+/// Time scalar divrem checked result
 class CheckedScalarDivRemNativeTimeResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckedScalarDivRemNativeTimeResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quotient', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remainder', subBuilder: $4.NativeTime.create)
-    ..hasRequiredFields = false
-  ;
-
-  CheckedScalarDivRemNativeTimeResult._() : super();
   factory CheckedScalarDivRemNativeTimeResult({
     $4.NativeTime? quotient,
     $4.NativeTime? remainder,
   }) {
-    final _result = create();
+    final $result = create();
     if (quotient != null) {
-      _result.quotient = quotient;
+      $result.quotient = quotient;
     }
     if (remainder != null) {
-      _result.remainder = remainder;
+      $result.remainder = remainder;
     }
-    return _result;
+    return $result;
   }
+  CheckedScalarDivRemNativeTimeResult._() : super();
   factory CheckedScalarDivRemNativeTimeResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckedScalarDivRemNativeTimeResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckedScalarDivRemNativeTimeResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'quotient', subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'remainder', subBuilder: $4.NativeTime.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3552,8 +3803,10 @@ class CheckedScalarDivRemNativeTimeResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckedScalarDivRemNativeTimeResult copyWith(void Function(CheckedScalarDivRemNativeTimeResult) updates) => super.copyWith((message) => updates(message as CheckedScalarDivRemNativeTimeResult)) as CheckedScalarDivRemNativeTimeResult; // ignore: deprecated_member_use
+  CheckedScalarDivRemNativeTimeResult copyWith(void Function(CheckedScalarDivRemNativeTimeResult) updates) => super.copyWith((message) => updates(message as CheckedScalarDivRemNativeTimeResult)) as CheckedScalarDivRemNativeTimeResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckedScalarDivRemNativeTimeResult create() => CheckedScalarDivRemNativeTimeResult._();
   CheckedScalarDivRemNativeTimeResult createEmptyInstance() => create();
@@ -3562,6 +3815,7 @@ class CheckedScalarDivRemNativeTimeResult extends $pb.GeneratedMessage {
   static CheckedScalarDivRemNativeTimeResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckedScalarDivRemNativeTimeResult>(create);
   static CheckedScalarDivRemNativeTimeResult? _defaultInstance;
 
+  /// Quotient of time and divisor
   @$pb.TagNumber(1)
   $4.NativeTime get quotient => $_getN(0);
   @$pb.TagNumber(1)
@@ -3573,6 +3827,7 @@ class CheckedScalarDivRemNativeTimeResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.NativeTime ensureQuotient() => $_ensure(0);
 
+  /// Remainder of time and divisor
   @$pb.TagNumber(2)
   $4.NativeTime get remainder => $_getN(1);
   @$pb.TagNumber(2)
@@ -3585,29 +3840,31 @@ class CheckedScalarDivRemNativeTimeResult extends $pb.GeneratedMessage {
   $4.NativeTime ensureRemainder() => $_ensure(1);
 }
 
+/// Time division checked request
 class CheckedDivRemNativeTimeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckedDivRemNativeTimeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dividend', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'divisor', subBuilder: $4.NativeTime.create)
-    ..hasRequiredFields = false
-  ;
-
-  CheckedDivRemNativeTimeRequest._() : super();
   factory CheckedDivRemNativeTimeRequest({
     $4.NativeTime? dividend,
     $4.NativeTime? divisor,
   }) {
-    final _result = create();
+    final $result = create();
     if (dividend != null) {
-      _result.dividend = dividend;
+      $result.dividend = dividend;
     }
     if (divisor != null) {
-      _result.divisor = divisor;
+      $result.divisor = divisor;
     }
-    return _result;
+    return $result;
   }
+  CheckedDivRemNativeTimeRequest._() : super();
   factory CheckedDivRemNativeTimeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckedDivRemNativeTimeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckedDivRemNativeTimeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'dividend', subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'divisor', subBuilder: $4.NativeTime.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3617,8 +3874,10 @@ class CheckedDivRemNativeTimeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckedDivRemNativeTimeRequest copyWith(void Function(CheckedDivRemNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CheckedDivRemNativeTimeRequest)) as CheckedDivRemNativeTimeRequest; // ignore: deprecated_member_use
+  CheckedDivRemNativeTimeRequest copyWith(void Function(CheckedDivRemNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CheckedDivRemNativeTimeRequest)) as CheckedDivRemNativeTimeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckedDivRemNativeTimeRequest create() => CheckedDivRemNativeTimeRequest._();
   CheckedDivRemNativeTimeRequest createEmptyInstance() => create();
@@ -3627,6 +3886,7 @@ class CheckedDivRemNativeTimeRequest extends $pb.GeneratedMessage {
   static CheckedDivRemNativeTimeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckedDivRemNativeTimeRequest>(create);
   static CheckedDivRemNativeTimeRequest? _defaultInstance;
 
+  /// Time to divide
   @$pb.TagNumber(1)
   $4.NativeTime get dividend => $_getN(0);
   @$pb.TagNumber(1)
@@ -3638,6 +3898,7 @@ class CheckedDivRemNativeTimeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.NativeTime ensureDividend() => $_ensure(0);
 
+  /// Divisor to divide by
   @$pb.TagNumber(2)
   $4.NativeTime get divisor => $_getN(1);
   @$pb.TagNumber(2)
@@ -3650,29 +3911,31 @@ class CheckedDivRemNativeTimeRequest extends $pb.GeneratedMessage {
   $4.NativeTime ensureDivisor() => $_ensure(1);
 }
 
+/// Time division checked result
 class CheckedDivRemNativeTimeResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CheckedDivRemNativeTimeResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quotient', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$4.NativeTime>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remainder', subBuilder: $4.NativeTime.create)
-    ..hasRequiredFields = false
-  ;
-
-  CheckedDivRemNativeTimeResult._() : super();
   factory CheckedDivRemNativeTimeResult({
     $fixnum.Int64? quotient,
     $4.NativeTime? remainder,
   }) {
-    final _result = create();
+    final $result = create();
     if (quotient != null) {
-      _result.quotient = quotient;
+      $result.quotient = quotient;
     }
     if (remainder != null) {
-      _result.remainder = remainder;
+      $result.remainder = remainder;
     }
-    return _result;
+    return $result;
   }
+  CheckedDivRemNativeTimeResult._() : super();
   factory CheckedDivRemNativeTimeResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CheckedDivRemNativeTimeResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckedDivRemNativeTimeResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'quotient', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'remainder', subBuilder: $4.NativeTime.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3682,8 +3945,10 @@ class CheckedDivRemNativeTimeResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CheckedDivRemNativeTimeResult copyWith(void Function(CheckedDivRemNativeTimeResult) updates) => super.copyWith((message) => updates(message as CheckedDivRemNativeTimeResult)) as CheckedDivRemNativeTimeResult; // ignore: deprecated_member_use
+  CheckedDivRemNativeTimeResult copyWith(void Function(CheckedDivRemNativeTimeResult) updates) => super.copyWith((message) => updates(message as CheckedDivRemNativeTimeResult)) as CheckedDivRemNativeTimeResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CheckedDivRemNativeTimeResult create() => CheckedDivRemNativeTimeResult._();
   CheckedDivRemNativeTimeResult createEmptyInstance() => create();
@@ -3692,6 +3957,7 @@ class CheckedDivRemNativeTimeResult extends $pb.GeneratedMessage {
   static CheckedDivRemNativeTimeResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckedDivRemNativeTimeResult>(create);
   static CheckedDivRemNativeTimeResult? _defaultInstance;
 
+  /// Quotient of time and divisor
   @$pb.TagNumber(1)
   $fixnum.Int64 get quotient => $_getI64(0);
   @$pb.TagNumber(1)
@@ -3701,6 +3967,7 @@ class CheckedDivRemNativeTimeResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearQuotient() => clearField(1);
 
+  /// Remainder of time and divisor
   @$pb.TagNumber(2)
   $4.NativeTime get remainder => $_getN(1);
   @$pb.TagNumber(2)
@@ -3713,29 +3980,31 @@ class CheckedDivRemNativeTimeResult extends $pb.GeneratedMessage {
   $4.NativeTime ensureRemainder() => $_ensure(1);
 }
 
+/// Time comparison request
 class CompareNativeTimeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CompareNativeTimeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: $4.NativeTime.create)
-    ..hasRequiredFields = false
-  ;
-
-  CompareNativeTimeRequest._() : super();
   factory CompareNativeTimeRequest({
     $4.NativeTime? left,
     $4.NativeTime? right,
   }) {
-    final _result = create();
+    final $result = create();
     if (left != null) {
-      _result.left = left;
+      $result.left = left;
     }
     if (right != null) {
-      _result.right = right;
+      $result.right = right;
     }
-    return _result;
+    return $result;
   }
+  CompareNativeTimeRequest._() : super();
   factory CompareNativeTimeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CompareNativeTimeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompareNativeTimeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'left', subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'right', subBuilder: $4.NativeTime.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3745,8 +4014,10 @@ class CompareNativeTimeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CompareNativeTimeRequest copyWith(void Function(CompareNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CompareNativeTimeRequest)) as CompareNativeTimeRequest; // ignore: deprecated_member_use
+  CompareNativeTimeRequest copyWith(void Function(CompareNativeTimeRequest) updates) => super.copyWith((message) => updates(message as CompareNativeTimeRequest)) as CompareNativeTimeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CompareNativeTimeRequest create() => CompareNativeTimeRequest._();
   CompareNativeTimeRequest createEmptyInstance() => create();
@@ -3755,6 +4026,7 @@ class CompareNativeTimeRequest extends $pb.GeneratedMessage {
   static CompareNativeTimeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompareNativeTimeRequest>(create);
   static CompareNativeTimeRequest? _defaultInstance;
 
+  /// First time to compare
   @$pb.TagNumber(1)
   $4.NativeTime get left => $_getN(0);
   @$pb.TagNumber(1)
@@ -3766,6 +4038,7 @@ class CompareNativeTimeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.NativeTime ensureLeft() => $_ensure(0);
 
+  /// Second time to compare
   @$pb.TagNumber(2)
   $4.NativeTime get right => $_getN(1);
   @$pb.TagNumber(2)
@@ -3778,24 +4051,26 @@ class CompareNativeTimeRequest extends $pb.GeneratedMessage {
   $4.NativeTime ensureRight() => $_ensure(1);
 }
 
+/// Time comparison result
 class CompareNativeTimeResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CompareNativeTimeResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..e<$6.ComparisonResult>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $6.ComparisonResult.COMPARISON_RESULT_UNSPECIFIED, valueOf: $6.ComparisonResult.valueOf, enumValues: $6.ComparisonResult.values)
-    ..hasRequiredFields = false
-  ;
-
-  CompareNativeTimeResult._() : super();
   factory CompareNativeTimeResult({
     $6.ComparisonResult? result,
   }) {
-    final _result = create();
+    final $result = create();
     if (result != null) {
-      _result.result = result;
+      $result.result = result;
     }
-    return _result;
+    return $result;
   }
+  CompareNativeTimeResult._() : super();
   factory CompareNativeTimeResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CompareNativeTimeResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompareNativeTimeResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..e<$6.ComparisonResult>(1, _omitFieldNames ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $6.ComparisonResult.COMPARISON_RESULT_UNSPECIFIED, valueOf: $6.ComparisonResult.valueOf, enumValues: $6.ComparisonResult.values)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3805,8 +4080,10 @@ class CompareNativeTimeResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CompareNativeTimeResult copyWith(void Function(CompareNativeTimeResult) updates) => super.copyWith((message) => updates(message as CompareNativeTimeResult)) as CompareNativeTimeResult; // ignore: deprecated_member_use
+  CompareNativeTimeResult copyWith(void Function(CompareNativeTimeResult) updates) => super.copyWith((message) => updates(message as CompareNativeTimeResult)) as CompareNativeTimeResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CompareNativeTimeResult create() => CompareNativeTimeResult._();
   CompareNativeTimeResult createEmptyInstance() => create();
@@ -3815,6 +4092,7 @@ class CompareNativeTimeResult extends $pb.GeneratedMessage {
   static CompareNativeTimeResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompareNativeTimeResult>(create);
   static CompareNativeTimeResult? _defaultInstance;
 
+  /// Comparison result
   @$pb.TagNumber(1)
   $6.ComparisonResult get result => $_getN(0);
   @$pb.TagNumber(1)
@@ -3825,29 +4103,31 @@ class CompareNativeTimeResult extends $pb.GeneratedMessage {
   void clearResult() => clearField(1);
 }
 
+/// Compare Address request
 class CompareAddressRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CompareAddressRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right')
-    ..hasRequiredFields = false
-  ;
-
-  CompareAddressRequest._() : super();
   factory CompareAddressRequest({
     $core.String? left,
     $core.String? right,
   }) {
-    final _result = create();
+    final $result = create();
     if (left != null) {
-      _result.left = left;
+      $result.left = left;
     }
     if (right != null) {
-      _result.right = right;
+      $result.right = right;
     }
-    return _result;
+    return $result;
   }
+  CompareAddressRequest._() : super();
   factory CompareAddressRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CompareAddressRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompareAddressRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'left')
+    ..aOS(2, _omitFieldNames ? '' : 'right')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3857,8 +4137,10 @@ class CompareAddressRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CompareAddressRequest copyWith(void Function(CompareAddressRequest) updates) => super.copyWith((message) => updates(message as CompareAddressRequest)) as CompareAddressRequest; // ignore: deprecated_member_use
+  CompareAddressRequest copyWith(void Function(CompareAddressRequest) updates) => super.copyWith((message) => updates(message as CompareAddressRequest)) as CompareAddressRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CompareAddressRequest create() => CompareAddressRequest._();
   CompareAddressRequest createEmptyInstance() => create();
@@ -3867,6 +4149,7 @@ class CompareAddressRequest extends $pb.GeneratedMessage {
   static CompareAddressRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompareAddressRequest>(create);
   static CompareAddressRequest? _defaultInstance;
 
+  /// First address to compare
   @$pb.TagNumber(1)
   $core.String get left => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3876,6 +4159,7 @@ class CompareAddressRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearLeft() => clearField(1);
 
+  /// Second address to compare
   @$pb.TagNumber(2)
   $core.String get right => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3886,24 +4170,26 @@ class CompareAddressRequest extends $pb.GeneratedMessage {
   void clearRight() => clearField(2);
 }
 
+/// Compare Address result
 class CompareAddressResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CompareAddressResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..e<$6.ComparisonResult>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $6.ComparisonResult.COMPARISON_RESULT_UNSPECIFIED, valueOf: $6.ComparisonResult.valueOf, enumValues: $6.ComparisonResult.values)
-    ..hasRequiredFields = false
-  ;
-
-  CompareAddressResult._() : super();
   factory CompareAddressResult({
     $6.ComparisonResult? result,
   }) {
-    final _result = create();
+    final $result = create();
     if (result != null) {
-      _result.result = result;
+      $result.result = result;
     }
-    return _result;
+    return $result;
   }
+  CompareAddressResult._() : super();
   factory CompareAddressResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CompareAddressResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompareAddressResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..e<$6.ComparisonResult>(1, _omitFieldNames ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $6.ComparisonResult.COMPARISON_RESULT_UNSPECIFIED, valueOf: $6.ComparisonResult.valueOf, enumValues: $6.ComparisonResult.values)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3913,8 +4199,10 @@ class CompareAddressResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CompareAddressResult copyWith(void Function(CompareAddressResult) updates) => super.copyWith((message) => updates(message as CompareAddressResult)) as CompareAddressResult; // ignore: deprecated_member_use
+  CompareAddressResult copyWith(void Function(CompareAddressResult) updates) => super.copyWith((message) => updates(message as CompareAddressResult)) as CompareAddressResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CompareAddressResult create() => CompareAddressResult._();
   CompareAddressResult createEmptyInstance() => create();
@@ -3923,6 +4211,7 @@ class CompareAddressResult extends $pb.GeneratedMessage {
   static CompareAddressResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompareAddressResult>(create);
   static CompareAddressResult? _defaultInstance;
 
+  /// Comparison result
   @$pb.TagNumber(1)
   $6.ComparisonResult get result => $_getN(0);
   @$pb.TagNumber(1)
@@ -3933,29 +4222,31 @@ class CompareAddressResult extends $pb.GeneratedMessage {
   void clearResult() => clearField(1);
 }
 
+/// Compare PubKey request
 class ComparePubKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ComparePubKeyRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right')
-    ..hasRequiredFields = false
-  ;
-
-  ComparePubKeyRequest._() : super();
   factory ComparePubKeyRequest({
     $core.String? left,
     $core.String? right,
   }) {
-    final _result = create();
+    final $result = create();
     if (left != null) {
-      _result.left = left;
+      $result.left = left;
     }
     if (right != null) {
-      _result.right = right;
+      $result.right = right;
     }
-    return _result;
+    return $result;
   }
+  ComparePubKeyRequest._() : super();
   factory ComparePubKeyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ComparePubKeyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ComparePubKeyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'left')
+    ..aOS(2, _omitFieldNames ? '' : 'right')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -3965,8 +4256,10 @@ class ComparePubKeyRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ComparePubKeyRequest copyWith(void Function(ComparePubKeyRequest) updates) => super.copyWith((message) => updates(message as ComparePubKeyRequest)) as ComparePubKeyRequest; // ignore: deprecated_member_use
+  ComparePubKeyRequest copyWith(void Function(ComparePubKeyRequest) updates) => super.copyWith((message) => updates(message as ComparePubKeyRequest)) as ComparePubKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ComparePubKeyRequest create() => ComparePubKeyRequest._();
   ComparePubKeyRequest createEmptyInstance() => create();
@@ -3975,6 +4268,7 @@ class ComparePubKeyRequest extends $pb.GeneratedMessage {
   static ComparePubKeyRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ComparePubKeyRequest>(create);
   static ComparePubKeyRequest? _defaultInstance;
 
+  /// First public key to compare
   @$pb.TagNumber(1)
   $core.String get left => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3984,6 +4278,7 @@ class ComparePubKeyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearLeft() => clearField(1);
 
+  /// Second public key to compare
   @$pb.TagNumber(2)
   $core.String get right => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3994,24 +4289,26 @@ class ComparePubKeyRequest extends $pb.GeneratedMessage {
   void clearRight() => clearField(2);
 }
 
+/// Compare PubKey result
 class ComparePubKeyResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ComparePubKeyResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..e<$6.ComparisonResult>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $6.ComparisonResult.COMPARISON_RESULT_UNSPECIFIED, valueOf: $6.ComparisonResult.valueOf, enumValues: $6.ComparisonResult.values)
-    ..hasRequiredFields = false
-  ;
-
-  ComparePubKeyResult._() : super();
   factory ComparePubKeyResult({
     $6.ComparisonResult? result,
   }) {
-    final _result = create();
+    final $result = create();
     if (result != null) {
-      _result.result = result;
+      $result.result = result;
     }
-    return _result;
+    return $result;
   }
+  ComparePubKeyResult._() : super();
   factory ComparePubKeyResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ComparePubKeyResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ComparePubKeyResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..e<$6.ComparisonResult>(1, _omitFieldNames ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $6.ComparisonResult.COMPARISON_RESULT_UNSPECIFIED, valueOf: $6.ComparisonResult.valueOf, enumValues: $6.ComparisonResult.values)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4021,8 +4318,10 @@ class ComparePubKeyResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ComparePubKeyResult copyWith(void Function(ComparePubKeyResult) updates) => super.copyWith((message) => updates(message as ComparePubKeyResult)) as ComparePubKeyResult; // ignore: deprecated_member_use
+  ComparePubKeyResult copyWith(void Function(ComparePubKeyResult) updates) => super.copyWith((message) => updates(message as ComparePubKeyResult)) as ComparePubKeyResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ComparePubKeyResult create() => ComparePubKeyResult._();
   ComparePubKeyResult createEmptyInstance() => create();
@@ -4031,6 +4330,7 @@ class ComparePubKeyResult extends $pb.GeneratedMessage {
   static ComparePubKeyResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ComparePubKeyResult>(create);
   static ComparePubKeyResult? _defaultInstance;
 
+  /// Comparison result
   @$pb.TagNumber(1)
   $6.ComparisonResult get result => $_getN(0);
   @$pb.TagNumber(1)
@@ -4041,34 +4341,36 @@ class ComparePubKeyResult extends $pb.GeneratedMessage {
   void clearResult() => clearField(1);
 }
 
+/// Verify Sig request
 class VerifySigRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VerifySigRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sig')
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'message', $pb.PbFieldType.OY)
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pubKey')
-    ..hasRequiredFields = false
-  ;
-
-  VerifySigRequest._() : super();
   factory VerifySigRequest({
     $core.String? sig,
     $core.List<$core.int>? message,
     $core.String? pubKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (sig != null) {
-      _result.sig = sig;
+      $result.sig = sig;
     }
     if (message != null) {
-      _result.message = message;
+      $result.message = message;
     }
     if (pubKey != null) {
-      _result.pubKey = pubKey;
+      $result.pubKey = pubKey;
     }
-    return _result;
+    return $result;
   }
+  VerifySigRequest._() : super();
   factory VerifySigRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory VerifySigRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VerifySigRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sig')
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'message', $pb.PbFieldType.OY)
+    ..aOS(3, _omitFieldNames ? '' : 'pubKey')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4078,8 +4380,10 @@ class VerifySigRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  VerifySigRequest copyWith(void Function(VerifySigRequest) updates) => super.copyWith((message) => updates(message as VerifySigRequest)) as VerifySigRequest; // ignore: deprecated_member_use
+  VerifySigRequest copyWith(void Function(VerifySigRequest) updates) => super.copyWith((message) => updates(message as VerifySigRequest)) as VerifySigRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VerifySigRequest create() => VerifySigRequest._();
   VerifySigRequest createEmptyInstance() => create();
@@ -4088,6 +4392,7 @@ class VerifySigRequest extends $pb.GeneratedMessage {
   static VerifySigRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VerifySigRequest>(create);
   static VerifySigRequest? _defaultInstance;
 
+  /// Signature to verify
   @$pb.TagNumber(1)
   $core.String get sig => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4097,6 +4402,7 @@ class VerifySigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSig() => clearField(1);
 
+  /// Message to verify
   @$pb.TagNumber(2)
   $core.List<$core.int> get message => $_getN(1);
   @$pb.TagNumber(2)
@@ -4106,6 +4412,7 @@ class VerifySigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearMessage() => clearField(2);
 
+  /// Public key to verify with
   @$pb.TagNumber(3)
   $core.String get pubKey => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4116,24 +4423,26 @@ class VerifySigRequest extends $pb.GeneratedMessage {
   void clearPubKey() => clearField(3);
 }
 
+/// Verify Sig result
 class VerifySigResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VerifySigResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVerified')
-    ..hasRequiredFields = false
-  ;
-
-  VerifySigResult._() : super();
   factory VerifySigResult({
     $core.bool? isVerified,
   }) {
-    final _result = create();
+    final $result = create();
     if (isVerified != null) {
-      _result.isVerified = isVerified;
+      $result.isVerified = isVerified;
     }
-    return _result;
+    return $result;
   }
+  VerifySigResult._() : super();
   factory VerifySigResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory VerifySigResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VerifySigResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'isVerified')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4143,8 +4452,10 @@ class VerifySigResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  VerifySigResult copyWith(void Function(VerifySigResult) updates) => super.copyWith((message) => updates(message as VerifySigResult)) as VerifySigResult; // ignore: deprecated_member_use
+  VerifySigResult copyWith(void Function(VerifySigResult) updates) => super.copyWith((message) => updates(message as VerifySigResult)) as VerifySigResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VerifySigResult create() => VerifySigResult._();
   VerifySigResult createEmptyInstance() => create();
@@ -4153,6 +4464,7 @@ class VerifySigResult extends $pb.GeneratedMessage {
   static VerifySigResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VerifySigResult>(create);
   static VerifySigResult? _defaultInstance;
 
+  /// Verification result
   @$pb.TagNumber(1)
   $core.bool get isVerified => $_getBF(0);
   @$pb.TagNumber(1)
@@ -4163,29 +4475,31 @@ class VerifySigResult extends $pb.GeneratedMessage {
   void clearIsVerified() => clearField(1);
 }
 
+/// Compare NativeAmount request
 class CompareNativeAmountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CompareNativeAmountRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: $2.NativeAmount.create)
-    ..aOM<$2.NativeAmount>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  CompareNativeAmountRequest._() : super();
   factory CompareNativeAmountRequest({
     $2.NativeAmount? left,
     $2.NativeAmount? right,
   }) {
-    final _result = create();
+    final $result = create();
     if (left != null) {
-      _result.left = left;
+      $result.left = left;
     }
     if (right != null) {
-      _result.right = right;
+      $result.right = right;
     }
-    return _result;
+    return $result;
   }
+  CompareNativeAmountRequest._() : super();
   factory CompareNativeAmountRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CompareNativeAmountRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompareNativeAmountRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'left', subBuilder: $2.NativeAmount.create)
+    ..aOM<$2.NativeAmount>(2, _omitFieldNames ? '' : 'right', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4195,8 +4509,10 @@ class CompareNativeAmountRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CompareNativeAmountRequest copyWith(void Function(CompareNativeAmountRequest) updates) => super.copyWith((message) => updates(message as CompareNativeAmountRequest)) as CompareNativeAmountRequest; // ignore: deprecated_member_use
+  CompareNativeAmountRequest copyWith(void Function(CompareNativeAmountRequest) updates) => super.copyWith((message) => updates(message as CompareNativeAmountRequest)) as CompareNativeAmountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CompareNativeAmountRequest create() => CompareNativeAmountRequest._();
   CompareNativeAmountRequest createEmptyInstance() => create();
@@ -4205,6 +4521,7 @@ class CompareNativeAmountRequest extends $pb.GeneratedMessage {
   static CompareNativeAmountRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompareNativeAmountRequest>(create);
   static CompareNativeAmountRequest? _defaultInstance;
 
+  /// First amount to compare
   @$pb.TagNumber(1)
   $2.NativeAmount get left => $_getN(0);
   @$pb.TagNumber(1)
@@ -4216,6 +4533,7 @@ class CompareNativeAmountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.NativeAmount ensureLeft() => $_ensure(0);
 
+  /// Second amount to compare
   @$pb.TagNumber(2)
   $2.NativeAmount get right => $_getN(1);
   @$pb.TagNumber(2)
@@ -4228,24 +4546,26 @@ class CompareNativeAmountRequest extends $pb.GeneratedMessage {
   $2.NativeAmount ensureRight() => $_ensure(1);
 }
 
+/// Compare NativeAmount result
 class CompareNativeAmountResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CompareNativeAmountResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..e<$6.ComparisonResult>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $6.ComparisonResult.COMPARISON_RESULT_UNSPECIFIED, valueOf: $6.ComparisonResult.valueOf, enumValues: $6.ComparisonResult.values)
-    ..hasRequiredFields = false
-  ;
-
-  CompareNativeAmountResult._() : super();
   factory CompareNativeAmountResult({
     $6.ComparisonResult? result,
   }) {
-    final _result = create();
+    final $result = create();
     if (result != null) {
-      _result.result = result;
+      $result.result = result;
     }
-    return _result;
+    return $result;
   }
+  CompareNativeAmountResult._() : super();
   factory CompareNativeAmountResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CompareNativeAmountResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompareNativeAmountResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..e<$6.ComparisonResult>(1, _omitFieldNames ? '' : 'result', $pb.PbFieldType.OE, defaultOrMaker: $6.ComparisonResult.COMPARISON_RESULT_UNSPECIFIED, valueOf: $6.ComparisonResult.valueOf, enumValues: $6.ComparisonResult.values)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4255,8 +4575,10 @@ class CompareNativeAmountResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CompareNativeAmountResult copyWith(void Function(CompareNativeAmountResult) updates) => super.copyWith((message) => updates(message as CompareNativeAmountResult)) as CompareNativeAmountResult; // ignore: deprecated_member_use
+  CompareNativeAmountResult copyWith(void Function(CompareNativeAmountResult) updates) => super.copyWith((message) => updates(message as CompareNativeAmountResult)) as CompareNativeAmountResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CompareNativeAmountResult create() => CompareNativeAmountResult._();
   CompareNativeAmountResult createEmptyInstance() => create();
@@ -4265,6 +4587,7 @@ class CompareNativeAmountResult extends $pb.GeneratedMessage {
   static CompareNativeAmountResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompareNativeAmountResult>(create);
   static CompareNativeAmountResult? _defaultInstance;
 
+  /// Comparison result
   @$pb.TagNumber(1)
   $6.ComparisonResult get result => $_getN(0);
   @$pb.TagNumber(1)
@@ -4275,24 +4598,26 @@ class CompareNativeAmountResult extends $pb.GeneratedMessage {
   void clearResult() => clearField(1);
 }
 
+/// Keccak256 hash request
 class Keccak256Request extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Keccak256Request', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  Keccak256Request._() : super();
   factory Keccak256Request({
     $core.List<$core.int>? data,
   }) {
-    final _result = create();
+    final $result = create();
     if (data != null) {
-      _result.data = data;
+      $result.data = data;
     }
-    return _result;
+    return $result;
   }
+  Keccak256Request._() : super();
   factory Keccak256Request.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Keccak256Request.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Keccak256Request', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4302,8 +4627,10 @@ class Keccak256Request extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Keccak256Request copyWith(void Function(Keccak256Request) updates) => super.copyWith((message) => updates(message as Keccak256Request)) as Keccak256Request; // ignore: deprecated_member_use
+  Keccak256Request copyWith(void Function(Keccak256Request) updates) => super.copyWith((message) => updates(message as Keccak256Request)) as Keccak256Request;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Keccak256Request create() => Keccak256Request._();
   Keccak256Request createEmptyInstance() => create();
@@ -4312,6 +4639,7 @@ class Keccak256Request extends $pb.GeneratedMessage {
   static Keccak256Request getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Keccak256Request>(create);
   static Keccak256Request? _defaultInstance;
 
+  /// Data to hash
   @$pb.TagNumber(1)
   $core.List<$core.int> get data => $_getN(0);
   @$pb.TagNumber(1)
@@ -4322,24 +4650,26 @@ class Keccak256Request extends $pb.GeneratedMessage {
   void clearData() => clearField(1);
 }
 
+/// Keccak256 hash result
 class Keccak256Result extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Keccak256Result', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hash', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  Keccak256Result._() : super();
   factory Keccak256Result({
     $core.List<$core.int>? hash,
   }) {
-    final _result = create();
+    final $result = create();
     if (hash != null) {
-      _result.hash = hash;
+      $result.hash = hash;
     }
-    return _result;
+    return $result;
   }
+  Keccak256Result._() : super();
   factory Keccak256Result.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Keccak256Result.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Keccak256Result', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'hash', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4349,8 +4679,10 @@ class Keccak256Result extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Keccak256Result copyWith(void Function(Keccak256Result) updates) => super.copyWith((message) => updates(message as Keccak256Result)) as Keccak256Result; // ignore: deprecated_member_use
+  Keccak256Result copyWith(void Function(Keccak256Result) updates) => super.copyWith((message) => updates(message as Keccak256Result)) as Keccak256Result;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Keccak256Result create() => Keccak256Result._();
   Keccak256Result createEmptyInstance() => create();
@@ -4359,6 +4691,7 @@ class Keccak256Result extends $pb.GeneratedMessage {
   static Keccak256Result getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Keccak256Result>(create);
   static Keccak256Result? _defaultInstance;
 
+  /// Hash of data
   @$pb.TagNumber(1)
   $core.List<$core.int> get hash => $_getN(0);
   @$pb.TagNumber(1)
@@ -4369,34 +4702,36 @@ class Keccak256Result extends $pb.GeneratedMessage {
   void clearHash() => clearField(1);
 }
 
+/// EVM signature verification request
 class EvmVerifySigRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EvmVerifySigRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sig', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'message', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pubKey', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  EvmVerifySigRequest._() : super();
   factory EvmVerifySigRequest({
     $core.List<$core.int>? sig,
     $core.List<$core.int>? message,
     $core.List<$core.int>? pubKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (sig != null) {
-      _result.sig = sig;
+      $result.sig = sig;
     }
     if (message != null) {
-      _result.message = message;
+      $result.message = message;
     }
     if (pubKey != null) {
-      _result.pubKey = pubKey;
+      $result.pubKey = pubKey;
     }
-    return _result;
+    return $result;
   }
+  EvmVerifySigRequest._() : super();
   factory EvmVerifySigRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EvmVerifySigRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EvmVerifySigRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'sig', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'message', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'pubKey', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4406,8 +4741,10 @@ class EvmVerifySigRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  EvmVerifySigRequest copyWith(void Function(EvmVerifySigRequest) updates) => super.copyWith((message) => updates(message as EvmVerifySigRequest)) as EvmVerifySigRequest; // ignore: deprecated_member_use
+  EvmVerifySigRequest copyWith(void Function(EvmVerifySigRequest) updates) => super.copyWith((message) => updates(message as EvmVerifySigRequest)) as EvmVerifySigRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EvmVerifySigRequest create() => EvmVerifySigRequest._();
   EvmVerifySigRequest createEmptyInstance() => create();
@@ -4416,6 +4753,7 @@ class EvmVerifySigRequest extends $pb.GeneratedMessage {
   static EvmVerifySigRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EvmVerifySigRequest>(create);
   static EvmVerifySigRequest? _defaultInstance;
 
+  /// Signature to verify
   @$pb.TagNumber(1)
   $core.List<$core.int> get sig => $_getN(0);
   @$pb.TagNumber(1)
@@ -4425,6 +4763,7 @@ class EvmVerifySigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSig() => clearField(1);
 
+  /// Message to verify
   @$pb.TagNumber(2)
   $core.List<$core.int> get message => $_getN(1);
   @$pb.TagNumber(2)
@@ -4434,6 +4773,7 @@ class EvmVerifySigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearMessage() => clearField(2);
 
+  /// Public key to verify with
   @$pb.TagNumber(3)
   $core.List<$core.int> get pubKey => $_getN(2);
   @$pb.TagNumber(3)
@@ -4444,24 +4784,26 @@ class EvmVerifySigRequest extends $pb.GeneratedMessage {
   void clearPubKey() => clearField(3);
 }
 
+/// EVM signature verification result
 class EvmVerifySigResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EvmVerifySigResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isVerified')
-    ..hasRequiredFields = false
-  ;
-
-  EvmVerifySigResult._() : super();
   factory EvmVerifySigResult({
     $core.bool? isVerified,
   }) {
-    final _result = create();
+    final $result = create();
     if (isVerified != null) {
-      _result.isVerified = isVerified;
+      $result.isVerified = isVerified;
     }
-    return _result;
+    return $result;
   }
+  EvmVerifySigResult._() : super();
   factory EvmVerifySigResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EvmVerifySigResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EvmVerifySigResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'isVerified')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4471,8 +4813,10 @@ class EvmVerifySigResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  EvmVerifySigResult copyWith(void Function(EvmVerifySigResult) updates) => super.copyWith((message) => updates(message as EvmVerifySigResult)) as EvmVerifySigResult; // ignore: deprecated_member_use
+  EvmVerifySigResult copyWith(void Function(EvmVerifySigResult) updates) => super.copyWith((message) => updates(message as EvmVerifySigResult)) as EvmVerifySigResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EvmVerifySigResult create() => EvmVerifySigResult._();
   EvmVerifySigResult createEmptyInstance() => create();
@@ -4481,6 +4825,7 @@ class EvmVerifySigResult extends $pb.GeneratedMessage {
   static EvmVerifySigResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EvmVerifySigResult>(create);
   static EvmVerifySigResult? _defaultInstance;
 
+  /// Verification result
   @$pb.TagNumber(1)
   $core.bool get isVerified => $_getBF(0);
   @$pb.TagNumber(1)
@@ -4491,24 +4836,26 @@ class EvmVerifySigResult extends $pb.GeneratedMessage {
   void clearIsVerified() => clearField(1);
 }
 
+/// EVM get address from public key request
 class EvmGetAddressFromPubkeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EvmGetAddressFromPubkeyRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pubKey', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  EvmGetAddressFromPubkeyRequest._() : super();
   factory EvmGetAddressFromPubkeyRequest({
     $core.List<$core.int>? pubKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (pubKey != null) {
-      _result.pubKey = pubKey;
+      $result.pubKey = pubKey;
     }
-    return _result;
+    return $result;
   }
+  EvmGetAddressFromPubkeyRequest._() : super();
   factory EvmGetAddressFromPubkeyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EvmGetAddressFromPubkeyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EvmGetAddressFromPubkeyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'pubKey', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4518,8 +4865,10 @@ class EvmGetAddressFromPubkeyRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  EvmGetAddressFromPubkeyRequest copyWith(void Function(EvmGetAddressFromPubkeyRequest) updates) => super.copyWith((message) => updates(message as EvmGetAddressFromPubkeyRequest)) as EvmGetAddressFromPubkeyRequest; // ignore: deprecated_member_use
+  EvmGetAddressFromPubkeyRequest copyWith(void Function(EvmGetAddressFromPubkeyRequest) updates) => super.copyWith((message) => updates(message as EvmGetAddressFromPubkeyRequest)) as EvmGetAddressFromPubkeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EvmGetAddressFromPubkeyRequest create() => EvmGetAddressFromPubkeyRequest._();
   EvmGetAddressFromPubkeyRequest createEmptyInstance() => create();
@@ -4528,6 +4877,7 @@ class EvmGetAddressFromPubkeyRequest extends $pb.GeneratedMessage {
   static EvmGetAddressFromPubkeyRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EvmGetAddressFromPubkeyRequest>(create);
   static EvmGetAddressFromPubkeyRequest? _defaultInstance;
 
+  /// Public key to get address from
   @$pb.TagNumber(1)
   $core.List<$core.int> get pubKey => $_getN(0);
   @$pb.TagNumber(1)
@@ -4538,24 +4888,26 @@ class EvmGetAddressFromPubkeyRequest extends $pb.GeneratedMessage {
   void clearPubKey() => clearField(1);
 }
 
+/// EVM get address from public key result
 class EvmGetAddressFromPubkeyResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EvmGetAddressFromPubkeyResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  EvmGetAddressFromPubkeyResult._() : super();
   factory EvmGetAddressFromPubkeyResult({
     $core.List<$core.int>? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  EvmGetAddressFromPubkeyResult._() : super();
   factory EvmGetAddressFromPubkeyResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EvmGetAddressFromPubkeyResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EvmGetAddressFromPubkeyResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'address', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4565,8 +4917,10 @@ class EvmGetAddressFromPubkeyResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  EvmGetAddressFromPubkeyResult copyWith(void Function(EvmGetAddressFromPubkeyResult) updates) => super.copyWith((message) => updates(message as EvmGetAddressFromPubkeyResult)) as EvmGetAddressFromPubkeyResult; // ignore: deprecated_member_use
+  EvmGetAddressFromPubkeyResult copyWith(void Function(EvmGetAddressFromPubkeyResult) updates) => super.copyWith((message) => updates(message as EvmGetAddressFromPubkeyResult)) as EvmGetAddressFromPubkeyResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EvmGetAddressFromPubkeyResult create() => EvmGetAddressFromPubkeyResult._();
   EvmGetAddressFromPubkeyResult createEmptyInstance() => create();
@@ -4575,6 +4929,7 @@ class EvmGetAddressFromPubkeyResult extends $pb.GeneratedMessage {
   static EvmGetAddressFromPubkeyResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EvmGetAddressFromPubkeyResult>(create);
   static EvmGetAddressFromPubkeyResult? _defaultInstance;
 
+  /// Address
   @$pb.TagNumber(1)
   $core.List<$core.int> get address => $_getN(0);
   @$pb.TagNumber(1)
@@ -4585,29 +4940,31 @@ class EvmGetAddressFromPubkeyResult extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 }
 
+/// EVM get public key from signature request
 class EvmGetPubkeyFromSignatureRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EvmGetPubkeyFromSignatureRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hash', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sig', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  EvmGetPubkeyFromSignatureRequest._() : super();
   factory EvmGetPubkeyFromSignatureRequest({
     $core.List<$core.int>? hash,
     $core.List<$core.int>? sig,
   }) {
-    final _result = create();
+    final $result = create();
     if (hash != null) {
-      _result.hash = hash;
+      $result.hash = hash;
     }
     if (sig != null) {
-      _result.sig = sig;
+      $result.sig = sig;
     }
-    return _result;
+    return $result;
   }
+  EvmGetPubkeyFromSignatureRequest._() : super();
   factory EvmGetPubkeyFromSignatureRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EvmGetPubkeyFromSignatureRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EvmGetPubkeyFromSignatureRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'hash', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'sig', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4617,8 +4974,10 @@ class EvmGetPubkeyFromSignatureRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  EvmGetPubkeyFromSignatureRequest copyWith(void Function(EvmGetPubkeyFromSignatureRequest) updates) => super.copyWith((message) => updates(message as EvmGetPubkeyFromSignatureRequest)) as EvmGetPubkeyFromSignatureRequest; // ignore: deprecated_member_use
+  EvmGetPubkeyFromSignatureRequest copyWith(void Function(EvmGetPubkeyFromSignatureRequest) updates) => super.copyWith((message) => updates(message as EvmGetPubkeyFromSignatureRequest)) as EvmGetPubkeyFromSignatureRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EvmGetPubkeyFromSignatureRequest create() => EvmGetPubkeyFromSignatureRequest._();
   EvmGetPubkeyFromSignatureRequest createEmptyInstance() => create();
@@ -4627,6 +4986,7 @@ class EvmGetPubkeyFromSignatureRequest extends $pb.GeneratedMessage {
   static EvmGetPubkeyFromSignatureRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EvmGetPubkeyFromSignatureRequest>(create);
   static EvmGetPubkeyFromSignatureRequest? _defaultInstance;
 
+  /// Signed hash to verify
   @$pb.TagNumber(1)
   $core.List<$core.int> get hash => $_getN(0);
   @$pb.TagNumber(1)
@@ -4636,6 +4996,7 @@ class EvmGetPubkeyFromSignatureRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHash() => clearField(1);
 
+  /// Signature to verify
   @$pb.TagNumber(2)
   $core.List<$core.int> get sig => $_getN(1);
   @$pb.TagNumber(2)
@@ -4646,24 +5007,26 @@ class EvmGetPubkeyFromSignatureRequest extends $pb.GeneratedMessage {
   void clearSig() => clearField(2);
 }
 
+/// EVM get public key from signature result
 class EvmGetPubkeyFromSignatureResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EvmGetPubkeyFromSignatureResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pubKey', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  EvmGetPubkeyFromSignatureResult._() : super();
   factory EvmGetPubkeyFromSignatureResult({
     $core.List<$core.int>? pubKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (pubKey != null) {
-      _result.pubKey = pubKey;
+      $result.pubKey = pubKey;
     }
-    return _result;
+    return $result;
   }
+  EvmGetPubkeyFromSignatureResult._() : super();
   factory EvmGetPubkeyFromSignatureResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EvmGetPubkeyFromSignatureResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EvmGetPubkeyFromSignatureResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'pubKey', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4673,8 +5036,10 @@ class EvmGetPubkeyFromSignatureResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  EvmGetPubkeyFromSignatureResult copyWith(void Function(EvmGetPubkeyFromSignatureResult) updates) => super.copyWith((message) => updates(message as EvmGetPubkeyFromSignatureResult)) as EvmGetPubkeyFromSignatureResult; // ignore: deprecated_member_use
+  EvmGetPubkeyFromSignatureResult copyWith(void Function(EvmGetPubkeyFromSignatureResult) updates) => super.copyWith((message) => updates(message as EvmGetPubkeyFromSignatureResult)) as EvmGetPubkeyFromSignatureResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EvmGetPubkeyFromSignatureResult create() => EvmGetPubkeyFromSignatureResult._();
   EvmGetPubkeyFromSignatureResult createEmptyInstance() => create();
@@ -4683,6 +5048,7 @@ class EvmGetPubkeyFromSignatureResult extends $pb.GeneratedMessage {
   static EvmGetPubkeyFromSignatureResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EvmGetPubkeyFromSignatureResult>(create);
   static EvmGetPubkeyFromSignatureResult? _defaultInstance;
 
+  /// Public key
   @$pb.TagNumber(1)
   $core.List<$core.int> get pubKey => $_getN(0);
   @$pb.TagNumber(1)
@@ -4693,24 +5059,26 @@ class EvmGetPubkeyFromSignatureResult extends $pb.GeneratedMessage {
   void clearPubKey() => clearField(1);
 }
 
+/// Is address EOA request
 class IsAddressEoaRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'IsAddressEoaRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address')
-    ..hasRequiredFields = false
-  ;
-
-  IsAddressEoaRequest._() : super();
   factory IsAddressEoaRequest({
     $core.String? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  IsAddressEoaRequest._() : super();
   factory IsAddressEoaRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory IsAddressEoaRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IsAddressEoaRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'address')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4720,8 +5088,10 @@ class IsAddressEoaRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  IsAddressEoaRequest copyWith(void Function(IsAddressEoaRequest) updates) => super.copyWith((message) => updates(message as IsAddressEoaRequest)) as IsAddressEoaRequest; // ignore: deprecated_member_use
+  IsAddressEoaRequest copyWith(void Function(IsAddressEoaRequest) updates) => super.copyWith((message) => updates(message as IsAddressEoaRequest)) as IsAddressEoaRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IsAddressEoaRequest create() => IsAddressEoaRequest._();
   IsAddressEoaRequest createEmptyInstance() => create();
@@ -4730,6 +5100,7 @@ class IsAddressEoaRequest extends $pb.GeneratedMessage {
   static IsAddressEoaRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IsAddressEoaRequest>(create);
   static IsAddressEoaRequest? _defaultInstance;
 
+  /// Address to check
   @$pb.TagNumber(1)
   $core.String get address => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4740,24 +5111,26 @@ class IsAddressEoaRequest extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 }
 
+/// Is address EOA result
 class IsAddressEoaResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'IsAddressEoaResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isEoa')
-    ..hasRequiredFields = false
-  ;
-
-  IsAddressEoaResult._() : super();
   factory IsAddressEoaResult({
     $core.bool? isEoa,
   }) {
-    final _result = create();
+    final $result = create();
     if (isEoa != null) {
-      _result.isEoa = isEoa;
+      $result.isEoa = isEoa;
     }
-    return _result;
+    return $result;
   }
+  IsAddressEoaResult._() : super();
   factory IsAddressEoaResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory IsAddressEoaResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IsAddressEoaResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'isEoa')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4767,8 +5140,10 @@ class IsAddressEoaResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  IsAddressEoaResult copyWith(void Function(IsAddressEoaResult) updates) => super.copyWith((message) => updates(message as IsAddressEoaResult)) as IsAddressEoaResult; // ignore: deprecated_member_use
+  IsAddressEoaResult copyWith(void Function(IsAddressEoaResult) updates) => super.copyWith((message) => updates(message as IsAddressEoaResult)) as IsAddressEoaResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IsAddressEoaResult create() => IsAddressEoaResult._();
   IsAddressEoaResult createEmptyInstance() => create();
@@ -4777,6 +5152,7 @@ class IsAddressEoaResult extends $pb.GeneratedMessage {
   static IsAddressEoaResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IsAddressEoaResult>(create);
   static IsAddressEoaResult? _defaultInstance;
 
+  /// Is address EOA
   @$pb.TagNumber(1)
   $core.bool get isEoa => $_getBF(0);
   @$pb.TagNumber(1)
@@ -4787,24 +5163,26 @@ class IsAddressEoaResult extends $pb.GeneratedMessage {
   void clearIsEoa() => clearField(1);
 }
 
+/// Blake3 hash request
 class HashBlake3Request extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'HashBlake3Request', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  HashBlake3Request._() : super();
   factory HashBlake3Request({
     $core.List<$core.int>? data,
   }) {
-    final _result = create();
+    final $result = create();
     if (data != null) {
-      _result.data = data;
+      $result.data = data;
     }
-    return _result;
+    return $result;
   }
+  HashBlake3Request._() : super();
   factory HashBlake3Request.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory HashBlake3Request.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HashBlake3Request', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4814,8 +5192,10 @@ class HashBlake3Request extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  HashBlake3Request copyWith(void Function(HashBlake3Request) updates) => super.copyWith((message) => updates(message as HashBlake3Request)) as HashBlake3Request; // ignore: deprecated_member_use
+  HashBlake3Request copyWith(void Function(HashBlake3Request) updates) => super.copyWith((message) => updates(message as HashBlake3Request)) as HashBlake3Request;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HashBlake3Request create() => HashBlake3Request._();
   HashBlake3Request createEmptyInstance() => create();
@@ -4824,6 +5204,7 @@ class HashBlake3Request extends $pb.GeneratedMessage {
   static HashBlake3Request getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HashBlake3Request>(create);
   static HashBlake3Request? _defaultInstance;
 
+  /// Data to hash
   @$pb.TagNumber(1)
   $core.List<$core.int> get data => $_getN(0);
   @$pb.TagNumber(1)
@@ -4834,24 +5215,26 @@ class HashBlake3Request extends $pb.GeneratedMessage {
   void clearData() => clearField(1);
 }
 
+/// Blake3 hash result
 class HashBlake3Result extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'HashBlake3Result', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hash', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  HashBlake3Result._() : super();
   factory HashBlake3Result({
     $core.List<$core.int>? hash,
   }) {
-    final _result = create();
+    final $result = create();
     if (hash != null) {
-      _result.hash = hash;
+      $result.hash = hash;
     }
-    return _result;
+    return $result;
   }
+  HashBlake3Result._() : super();
   factory HashBlake3Result.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory HashBlake3Result.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HashBlake3Result', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'hash', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4861,8 +5244,10 @@ class HashBlake3Result extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  HashBlake3Result copyWith(void Function(HashBlake3Result) updates) => super.copyWith((message) => updates(message as HashBlake3Result)) as HashBlake3Result; // ignore: deprecated_member_use
+  HashBlake3Result copyWith(void Function(HashBlake3Result) updates) => super.copyWith((message) => updates(message as HashBlake3Result)) as HashBlake3Result;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HashBlake3Result create() => HashBlake3Result._();
   HashBlake3Result createEmptyInstance() => create();
@@ -4871,6 +5256,7 @@ class HashBlake3Result extends $pb.GeneratedMessage {
   static HashBlake3Result getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HashBlake3Result>(create);
   static HashBlake3Result? _defaultInstance;
 
+  /// Hash of data
   @$pb.TagNumber(1)
   $core.List<$core.int> get hash => $_getN(0);
   @$pb.TagNumber(1)
@@ -4881,29 +5267,31 @@ class HashBlake3Result extends $pb.GeneratedMessage {
   void clearHash() => clearField(1);
 }
 
+/// Get keys request
 class GetDsKeysRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetDsKeysRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prefix', $pb.PbFieldType.OY)
-    ..aOM<$3.StringValue>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  GetDsKeysRequest._() : super();
   factory GetDsKeysRequest({
     $core.List<$core.int>? prefix,
     $3.StringValue? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (prefix != null) {
-      _result.prefix = prefix;
+      $result.prefix = prefix;
     }
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  GetDsKeysRequest._() : super();
   factory GetDsKeysRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetDsKeysRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDsKeysRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'prefix', $pb.PbFieldType.OY)
+    ..aOM<$3.StringValue>(2, _omitFieldNames ? '' : 'address', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4913,8 +5301,10 @@ class GetDsKeysRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetDsKeysRequest copyWith(void Function(GetDsKeysRequest) updates) => super.copyWith((message) => updates(message as GetDsKeysRequest)) as GetDsKeysRequest; // ignore: deprecated_member_use
+  GetDsKeysRequest copyWith(void Function(GetDsKeysRequest) updates) => super.copyWith((message) => updates(message as GetDsKeysRequest)) as GetDsKeysRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetDsKeysRequest create() => GetDsKeysRequest._();
   GetDsKeysRequest createEmptyInstance() => create();
@@ -4923,6 +5313,7 @@ class GetDsKeysRequest extends $pb.GeneratedMessage {
   static GetDsKeysRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDsKeysRequest>(create);
   static GetDsKeysRequest? _defaultInstance;
 
+  /// keys prefix
   @$pb.TagNumber(1)
   $core.List<$core.int> get prefix => $_getN(0);
   @$pb.TagNumber(1)
@@ -4932,6 +5323,7 @@ class GetDsKeysRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPrefix() => clearField(1);
 
+  /// Address to get keys for
   @$pb.TagNumber(2)
   $3.StringValue get address => $_getN(1);
   @$pb.TagNumber(2)
@@ -4944,24 +5336,26 @@ class GetDsKeysRequest extends $pb.GeneratedMessage {
   $3.StringValue ensureAddress() => $_ensure(1);
 }
 
+/// Get keys result
 class GetDsKeysResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetDsKeysResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..p<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'keys', $pb.PbFieldType.PY)
-    ..hasRequiredFields = false
-  ;
-
-  GetDsKeysResult._() : super();
   factory GetDsKeysResult({
     $core.Iterable<$core.List<$core.int>>? keys,
   }) {
-    final _result = create();
+    final $result = create();
     if (keys != null) {
-      _result.keys.addAll(keys);
+      $result.keys.addAll(keys);
     }
-    return _result;
+    return $result;
   }
+  GetDsKeysResult._() : super();
   factory GetDsKeysResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetDsKeysResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDsKeysResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..p<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'keys', $pb.PbFieldType.PY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -4971,8 +5365,10 @@ class GetDsKeysResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetDsKeysResult copyWith(void Function(GetDsKeysResult) updates) => super.copyWith((message) => updates(message as GetDsKeysResult)) as GetDsKeysResult; // ignore: deprecated_member_use
+  GetDsKeysResult copyWith(void Function(GetDsKeysResult) updates) => super.copyWith((message) => updates(message as GetDsKeysResult)) as GetDsKeysResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetDsKeysResult create() => GetDsKeysResult._();
   GetDsKeysResult createEmptyInstance() => create();
@@ -4981,38 +5377,41 @@ class GetDsKeysResult extends $pb.GeneratedMessage {
   static GetDsKeysResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDsKeysResult>(create);
   static GetDsKeysResult? _defaultInstance;
 
+  /// keys
   @$pb.TagNumber(1)
   $core.List<$core.List<$core.int>> get keys => $_getList(0);
 }
 
+/// Set data store value request
 class SetDsValueRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetDsValueRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'key', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..aOM<$3.StringValue>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  SetDsValueRequest._() : super();
   factory SetDsValueRequest({
     $core.List<$core.int>? key,
     $core.List<$core.int>? value,
     $3.StringValue? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  SetDsValueRequest._() : super();
   factory SetDsValueRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SetDsValueRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetDsValueRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'key', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..aOM<$3.StringValue>(3, _omitFieldNames ? '' : 'address', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5022,8 +5421,10 @@ class SetDsValueRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetDsValueRequest copyWith(void Function(SetDsValueRequest) updates) => super.copyWith((message) => updates(message as SetDsValueRequest)) as SetDsValueRequest; // ignore: deprecated_member_use
+  SetDsValueRequest copyWith(void Function(SetDsValueRequest) updates) => super.copyWith((message) => updates(message as SetDsValueRequest)) as SetDsValueRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetDsValueRequest create() => SetDsValueRequest._();
   SetDsValueRequest createEmptyInstance() => create();
@@ -5032,6 +5433,7 @@ class SetDsValueRequest extends $pb.GeneratedMessage {
   static SetDsValueRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetDsValueRequest>(create);
   static SetDsValueRequest? _defaultInstance;
 
+  /// key
   @$pb.TagNumber(1)
   $core.List<$core.int> get key => $_getN(0);
   @$pb.TagNumber(1)
@@ -5041,6 +5443,7 @@ class SetDsValueRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  /// value
   @$pb.TagNumber(2)
   $core.List<$core.int> get value => $_getN(1);
   @$pb.TagNumber(2)
@@ -5050,6 +5453,7 @@ class SetDsValueRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 
+  /// Address to set data for, if none, use current address
   @$pb.TagNumber(3)
   $3.StringValue get address => $_getN(2);
   @$pb.TagNumber(3)
@@ -5062,15 +5466,17 @@ class SetDsValueRequest extends $pb.GeneratedMessage {
   $3.StringValue ensureAddress() => $_ensure(2);
 }
 
+/// Set data store value result
 class SetDsValueResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetDsValueResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory SetDsValueResult() => create();
+  SetDsValueResult._() : super();
+  factory SetDsValueResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetDsValueResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetDsValueResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  SetDsValueResult._() : super();
-  factory SetDsValueResult() => create();
-  factory SetDsValueResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetDsValueResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5080,8 +5486,10 @@ class SetDsValueResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetDsValueResult copyWith(void Function(SetDsValueResult) updates) => super.copyWith((message) => updates(message as SetDsValueResult)) as SetDsValueResult; // ignore: deprecated_member_use
+  SetDsValueResult copyWith(void Function(SetDsValueResult) updates) => super.copyWith((message) => updates(message as SetDsValueResult)) as SetDsValueResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetDsValueResult create() => SetDsValueResult._();
   SetDsValueResult createEmptyInstance() => create();
@@ -5091,34 +5499,36 @@ class SetDsValueResult extends $pb.GeneratedMessage {
   static SetDsValueResult? _defaultInstance;
 }
 
+/// Append data request
 class AppendDsValueRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AppendDsValueRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'key', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..aOM<$3.StringValue>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  AppendDsValueRequest._() : super();
   factory AppendDsValueRequest({
     $core.List<$core.int>? key,
     $core.List<$core.int>? value,
     $3.StringValue? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  AppendDsValueRequest._() : super();
   factory AppendDsValueRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AppendDsValueRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AppendDsValueRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'key', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..aOM<$3.StringValue>(3, _omitFieldNames ? '' : 'address', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5128,8 +5538,10 @@ class AppendDsValueRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AppendDsValueRequest copyWith(void Function(AppendDsValueRequest) updates) => super.copyWith((message) => updates(message as AppendDsValueRequest)) as AppendDsValueRequest; // ignore: deprecated_member_use
+  AppendDsValueRequest copyWith(void Function(AppendDsValueRequest) updates) => super.copyWith((message) => updates(message as AppendDsValueRequest)) as AppendDsValueRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AppendDsValueRequest create() => AppendDsValueRequest._();
   AppendDsValueRequest createEmptyInstance() => create();
@@ -5138,6 +5550,7 @@ class AppendDsValueRequest extends $pb.GeneratedMessage {
   static AppendDsValueRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AppendDsValueRequest>(create);
   static AppendDsValueRequest? _defaultInstance;
 
+  /// key
   @$pb.TagNumber(1)
   $core.List<$core.int> get key => $_getN(0);
   @$pb.TagNumber(1)
@@ -5147,6 +5560,7 @@ class AppendDsValueRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  /// value
   @$pb.TagNumber(2)
   $core.List<$core.int> get value => $_getN(1);
   @$pb.TagNumber(2)
@@ -5156,6 +5570,7 @@ class AppendDsValueRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 
+  /// Address to append data for, if none, use current address
   @$pb.TagNumber(3)
   $3.StringValue get address => $_getN(2);
   @$pb.TagNumber(3)
@@ -5168,15 +5583,17 @@ class AppendDsValueRequest extends $pb.GeneratedMessage {
   $3.StringValue ensureAddress() => $_ensure(2);
 }
 
+/// Append data result
 class AppendDsValueResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AppendDsValueResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory AppendDsValueResult() => create();
+  AppendDsValueResult._() : super();
+  factory AppendDsValueResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AppendDsValueResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AppendDsValueResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  AppendDsValueResult._() : super();
-  factory AppendDsValueResult() => create();
-  factory AppendDsValueResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AppendDsValueResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5186,8 +5603,10 @@ class AppendDsValueResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AppendDsValueResult copyWith(void Function(AppendDsValueResult) updates) => super.copyWith((message) => updates(message as AppendDsValueResult)) as AppendDsValueResult; // ignore: deprecated_member_use
+  AppendDsValueResult copyWith(void Function(AppendDsValueResult) updates) => super.copyWith((message) => updates(message as AppendDsValueResult)) as AppendDsValueResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AppendDsValueResult create() => AppendDsValueResult._();
   AppendDsValueResult createEmptyInstance() => create();
@@ -5197,29 +5616,31 @@ class AppendDsValueResult extends $pb.GeneratedMessage {
   static AppendDsValueResult? _defaultInstance;
 }
 
+/// Get data request
 class GetDsValueRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetDsValueRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'key', $pb.PbFieldType.OY)
-    ..aOM<$3.StringValue>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  GetDsValueRequest._() : super();
   factory GetDsValueRequest({
     $core.List<$core.int>? key,
     $3.StringValue? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  GetDsValueRequest._() : super();
   factory GetDsValueRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetDsValueRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDsValueRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'key', $pb.PbFieldType.OY)
+    ..aOM<$3.StringValue>(2, _omitFieldNames ? '' : 'address', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5229,8 +5650,10 @@ class GetDsValueRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetDsValueRequest copyWith(void Function(GetDsValueRequest) updates) => super.copyWith((message) => updates(message as GetDsValueRequest)) as GetDsValueRequest; // ignore: deprecated_member_use
+  GetDsValueRequest copyWith(void Function(GetDsValueRequest) updates) => super.copyWith((message) => updates(message as GetDsValueRequest)) as GetDsValueRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetDsValueRequest create() => GetDsValueRequest._();
   GetDsValueRequest createEmptyInstance() => create();
@@ -5239,6 +5662,7 @@ class GetDsValueRequest extends $pb.GeneratedMessage {
   static GetDsValueRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDsValueRequest>(create);
   static GetDsValueRequest? _defaultInstance;
 
+  /// key
   @$pb.TagNumber(1)
   $core.List<$core.int> get key => $_getN(0);
   @$pb.TagNumber(1)
@@ -5248,6 +5672,7 @@ class GetDsValueRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  /// Address to get data for, if none, use current address
   @$pb.TagNumber(2)
   $3.StringValue get address => $_getN(1);
   @$pb.TagNumber(2)
@@ -5260,24 +5685,26 @@ class GetDsValueRequest extends $pb.GeneratedMessage {
   $3.StringValue ensureAddress() => $_ensure(1);
 }
 
+/// Get data result
 class GetDsValueResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetDsValueResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  GetDsValueResult._() : super();
   factory GetDsValueResult({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  GetDsValueResult._() : super();
   factory GetDsValueResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetDsValueResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDsValueResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5287,8 +5714,10 @@ class GetDsValueResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetDsValueResult copyWith(void Function(GetDsValueResult) updates) => super.copyWith((message) => updates(message as GetDsValueResult)) as GetDsValueResult; // ignore: deprecated_member_use
+  GetDsValueResult copyWith(void Function(GetDsValueResult) updates) => super.copyWith((message) => updates(message as GetDsValueResult)) as GetDsValueResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetDsValueResult create() => GetDsValueResult._();
   GetDsValueResult createEmptyInstance() => create();
@@ -5297,6 +5726,7 @@ class GetDsValueResult extends $pb.GeneratedMessage {
   static GetDsValueResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDsValueResult>(create);
   static GetDsValueResult? _defaultInstance;
 
+  /// value
   @$pb.TagNumber(1)
   $core.List<$core.int> get value => $_getN(0);
   @$pb.TagNumber(1)
@@ -5307,29 +5737,31 @@ class GetDsValueResult extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+/// Delete data store entry request
 class DeleteDsEntryRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DeleteDsEntryRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'key', $pb.PbFieldType.OY)
-    ..aOM<$3.StringValue>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  DeleteDsEntryRequest._() : super();
   factory DeleteDsEntryRequest({
     $core.List<$core.int>? key,
     $3.StringValue? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  DeleteDsEntryRequest._() : super();
   factory DeleteDsEntryRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DeleteDsEntryRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DeleteDsEntryRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'key', $pb.PbFieldType.OY)
+    ..aOM<$3.StringValue>(2, _omitFieldNames ? '' : 'address', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5339,8 +5771,10 @@ class DeleteDsEntryRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DeleteDsEntryRequest copyWith(void Function(DeleteDsEntryRequest) updates) => super.copyWith((message) => updates(message as DeleteDsEntryRequest)) as DeleteDsEntryRequest; // ignore: deprecated_member_use
+  DeleteDsEntryRequest copyWith(void Function(DeleteDsEntryRequest) updates) => super.copyWith((message) => updates(message as DeleteDsEntryRequest)) as DeleteDsEntryRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteDsEntryRequest create() => DeleteDsEntryRequest._();
   DeleteDsEntryRequest createEmptyInstance() => create();
@@ -5349,6 +5783,7 @@ class DeleteDsEntryRequest extends $pb.GeneratedMessage {
   static DeleteDsEntryRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeleteDsEntryRequest>(create);
   static DeleteDsEntryRequest? _defaultInstance;
 
+  /// key
   @$pb.TagNumber(1)
   $core.List<$core.int> get key => $_getN(0);
   @$pb.TagNumber(1)
@@ -5358,6 +5793,7 @@ class DeleteDsEntryRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  /// Address to delete data for, if none, use current address
   @$pb.TagNumber(2)
   $3.StringValue get address => $_getN(1);
   @$pb.TagNumber(2)
@@ -5370,15 +5806,17 @@ class DeleteDsEntryRequest extends $pb.GeneratedMessage {
   $3.StringValue ensureAddress() => $_ensure(1);
 }
 
+/// Delete data store entry result
 class DeleteDsEntryResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DeleteDsEntryResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory DeleteDsEntryResult() => create();
+  DeleteDsEntryResult._() : super();
+  factory DeleteDsEntryResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DeleteDsEntryResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DeleteDsEntryResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  DeleteDsEntryResult._() : super();
-  factory DeleteDsEntryResult() => create();
-  factory DeleteDsEntryResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DeleteDsEntryResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5388,8 +5826,10 @@ class DeleteDsEntryResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DeleteDsEntryResult copyWith(void Function(DeleteDsEntryResult) updates) => super.copyWith((message) => updates(message as DeleteDsEntryResult)) as DeleteDsEntryResult; // ignore: deprecated_member_use
+  DeleteDsEntryResult copyWith(void Function(DeleteDsEntryResult) updates) => super.copyWith((message) => updates(message as DeleteDsEntryResult)) as DeleteDsEntryResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteDsEntryResult create() => DeleteDsEntryResult._();
   DeleteDsEntryResult createEmptyInstance() => create();
@@ -5399,29 +5839,31 @@ class DeleteDsEntryResult extends $pb.GeneratedMessage {
   static DeleteDsEntryResult? _defaultInstance;
 }
 
+/// Data store entry exists request
 class DsEntryExistsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DsEntryExistsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'key', $pb.PbFieldType.OY)
-    ..aOM<$3.StringValue>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  DsEntryExistsRequest._() : super();
   factory DsEntryExistsRequest({
     $core.List<$core.int>? key,
     $3.StringValue? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  DsEntryExistsRequest._() : super();
   factory DsEntryExistsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DsEntryExistsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DsEntryExistsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'key', $pb.PbFieldType.OY)
+    ..aOM<$3.StringValue>(2, _omitFieldNames ? '' : 'address', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5431,8 +5873,10 @@ class DsEntryExistsRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DsEntryExistsRequest copyWith(void Function(DsEntryExistsRequest) updates) => super.copyWith((message) => updates(message as DsEntryExistsRequest)) as DsEntryExistsRequest; // ignore: deprecated_member_use
+  DsEntryExistsRequest copyWith(void Function(DsEntryExistsRequest) updates) => super.copyWith((message) => updates(message as DsEntryExistsRequest)) as DsEntryExistsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DsEntryExistsRequest create() => DsEntryExistsRequest._();
   DsEntryExistsRequest createEmptyInstance() => create();
@@ -5441,6 +5885,7 @@ class DsEntryExistsRequest extends $pb.GeneratedMessage {
   static DsEntryExistsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DsEntryExistsRequest>(create);
   static DsEntryExistsRequest? _defaultInstance;
 
+  /// key
   @$pb.TagNumber(1)
   $core.List<$core.int> get key => $_getN(0);
   @$pb.TagNumber(1)
@@ -5450,6 +5895,7 @@ class DsEntryExistsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  /// Address to check data for, if none, use current address
   @$pb.TagNumber(2)
   $3.StringValue get address => $_getN(1);
   @$pb.TagNumber(2)
@@ -5462,24 +5908,26 @@ class DsEntryExistsRequest extends $pb.GeneratedMessage {
   $3.StringValue ensureAddress() => $_ensure(1);
 }
 
+/// Data store entry exists result
 class DsEntryExistsResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DsEntryExistsResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasData')
-    ..hasRequiredFields = false
-  ;
-
-  DsEntryExistsResult._() : super();
   factory DsEntryExistsResult({
     $core.bool? hasData,
   }) {
-    final _result = create();
+    final $result = create();
     if (hasData != null) {
-      _result.hasData = hasData;
+      $result.hasData = hasData;
     }
-    return _result;
+    return $result;
   }
+  DsEntryExistsResult._() : super();
   factory DsEntryExistsResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DsEntryExistsResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DsEntryExistsResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'hasData')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5489,8 +5937,10 @@ class DsEntryExistsResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DsEntryExistsResult copyWith(void Function(DsEntryExistsResult) updates) => super.copyWith((message) => updates(message as DsEntryExistsResult)) as DsEntryExistsResult; // ignore: deprecated_member_use
+  DsEntryExistsResult copyWith(void Function(DsEntryExistsResult) updates) => super.copyWith((message) => updates(message as DsEntryExistsResult)) as DsEntryExistsResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DsEntryExistsResult create() => DsEntryExistsResult._();
   DsEntryExistsResult createEmptyInstance() => create();
@@ -5499,6 +5949,7 @@ class DsEntryExistsResult extends $pb.GeneratedMessage {
   static DsEntryExistsResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DsEntryExistsResult>(create);
   static DsEntryExistsResult? _defaultInstance;
 
+  /// has data
   @$pb.TagNumber(1)
   $core.bool get hasData => $_getBF(0);
   @$pb.TagNumber(1)
@@ -5509,15 +5960,17 @@ class DsEntryExistsResult extends $pb.GeneratedMessage {
   void clearHasData() => clearField(1);
 }
 
+/// Get owned addresses request
 class GetOwnedAddressesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetOwnedAddressesRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory GetOwnedAddressesRequest() => create();
+  GetOwnedAddressesRequest._() : super();
+  factory GetOwnedAddressesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetOwnedAddressesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetOwnedAddressesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  GetOwnedAddressesRequest._() : super();
-  factory GetOwnedAddressesRequest() => create();
-  factory GetOwnedAddressesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetOwnedAddressesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5527,8 +5980,10 @@ class GetOwnedAddressesRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetOwnedAddressesRequest copyWith(void Function(GetOwnedAddressesRequest) updates) => super.copyWith((message) => updates(message as GetOwnedAddressesRequest)) as GetOwnedAddressesRequest; // ignore: deprecated_member_use
+  GetOwnedAddressesRequest copyWith(void Function(GetOwnedAddressesRequest) updates) => super.copyWith((message) => updates(message as GetOwnedAddressesRequest)) as GetOwnedAddressesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOwnedAddressesRequest create() => GetOwnedAddressesRequest._();
   GetOwnedAddressesRequest createEmptyInstance() => create();
@@ -5538,24 +5993,26 @@ class GetOwnedAddressesRequest extends $pb.GeneratedMessage {
   static GetOwnedAddressesRequest? _defaultInstance;
 }
 
+/// Get owned addresses result
 class GetOwnedAddressesResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetOwnedAddressesResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..pPS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'addresses')
-    ..hasRequiredFields = false
-  ;
-
-  GetOwnedAddressesResult._() : super();
   factory GetOwnedAddressesResult({
     $core.Iterable<$core.String>? addresses,
   }) {
-    final _result = create();
+    final $result = create();
     if (addresses != null) {
-      _result.addresses.addAll(addresses);
+      $result.addresses.addAll(addresses);
     }
-    return _result;
+    return $result;
   }
+  GetOwnedAddressesResult._() : super();
   factory GetOwnedAddressesResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetOwnedAddressesResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetOwnedAddressesResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'addresses')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5565,8 +6022,10 @@ class GetOwnedAddressesResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetOwnedAddressesResult copyWith(void Function(GetOwnedAddressesResult) updates) => super.copyWith((message) => updates(message as GetOwnedAddressesResult)) as GetOwnedAddressesResult; // ignore: deprecated_member_use
+  GetOwnedAddressesResult copyWith(void Function(GetOwnedAddressesResult) updates) => super.copyWith((message) => updates(message as GetOwnedAddressesResult)) as GetOwnedAddressesResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOwnedAddressesResult create() => GetOwnedAddressesResult._();
   GetOwnedAddressesResult createEmptyInstance() => create();
@@ -5575,19 +6034,22 @@ class GetOwnedAddressesResult extends $pb.GeneratedMessage {
   static GetOwnedAddressesResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetOwnedAddressesResult>(create);
   static GetOwnedAddressesResult? _defaultInstance;
 
+  /// owned addresses
   @$pb.TagNumber(1)
   $core.List<$core.String> get addresses => $_getList(0);
 }
 
+/// Get call stack request
 class GetCallStackRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetCallStackRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory GetCallStackRequest() => create();
+  GetCallStackRequest._() : super();
+  factory GetCallStackRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetCallStackRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetCallStackRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  GetCallStackRequest._() : super();
-  factory GetCallStackRequest() => create();
-  factory GetCallStackRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetCallStackRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5597,8 +6059,10 @@ class GetCallStackRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetCallStackRequest copyWith(void Function(GetCallStackRequest) updates) => super.copyWith((message) => updates(message as GetCallStackRequest)) as GetCallStackRequest; // ignore: deprecated_member_use
+  GetCallStackRequest copyWith(void Function(GetCallStackRequest) updates) => super.copyWith((message) => updates(message as GetCallStackRequest)) as GetCallStackRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetCallStackRequest create() => GetCallStackRequest._();
   GetCallStackRequest createEmptyInstance() => create();
@@ -5608,24 +6072,26 @@ class GetCallStackRequest extends $pb.GeneratedMessage {
   static GetCallStackRequest? _defaultInstance;
 }
 
+/// Get call stack result
 class GetCallStackResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetCallStackResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..pPS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'calls')
-    ..hasRequiredFields = false
-  ;
-
-  GetCallStackResult._() : super();
   factory GetCallStackResult({
     $core.Iterable<$core.String>? calls,
   }) {
-    final _result = create();
+    final $result = create();
     if (calls != null) {
-      _result.calls.addAll(calls);
+      $result.calls.addAll(calls);
     }
-    return _result;
+    return $result;
   }
+  GetCallStackResult._() : super();
   factory GetCallStackResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetCallStackResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetCallStackResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'calls')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5635,8 +6101,10 @@ class GetCallStackResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetCallStackResult copyWith(void Function(GetCallStackResult) updates) => super.copyWith((message) => updates(message as GetCallStackResult)) as GetCallStackResult; // ignore: deprecated_member_use
+  GetCallStackResult copyWith(void Function(GetCallStackResult) updates) => super.copyWith((message) => updates(message as GetCallStackResult)) as GetCallStackResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetCallStackResult create() => GetCallStackResult._();
   GetCallStackResult createEmptyInstance() => create();
@@ -5645,28 +6113,31 @@ class GetCallStackResult extends $pb.GeneratedMessage {
   static GetCallStackResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetCallStackResult>(create);
   static GetCallStackResult? _defaultInstance;
 
+  /// call stack
   @$pb.TagNumber(1)
   $core.List<$core.String> get calls => $_getList(0);
 }
 
+/// Address from public key request
 class AddressFromPubKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddressFromPubKeyRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pubKey')
-    ..hasRequiredFields = false
-  ;
-
-  AddressFromPubKeyRequest._() : super();
   factory AddressFromPubKeyRequest({
     $core.String? pubKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (pubKey != null) {
-      _result.pubKey = pubKey;
+      $result.pubKey = pubKey;
     }
-    return _result;
+    return $result;
   }
+  AddressFromPubKeyRequest._() : super();
   factory AddressFromPubKeyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AddressFromPubKeyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AddressFromPubKeyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'pubKey')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5676,8 +6147,10 @@ class AddressFromPubKeyRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AddressFromPubKeyRequest copyWith(void Function(AddressFromPubKeyRequest) updates) => super.copyWith((message) => updates(message as AddressFromPubKeyRequest)) as AddressFromPubKeyRequest; // ignore: deprecated_member_use
+  AddressFromPubKeyRequest copyWith(void Function(AddressFromPubKeyRequest) updates) => super.copyWith((message) => updates(message as AddressFromPubKeyRequest)) as AddressFromPubKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AddressFromPubKeyRequest create() => AddressFromPubKeyRequest._();
   AddressFromPubKeyRequest createEmptyInstance() => create();
@@ -5686,6 +6159,7 @@ class AddressFromPubKeyRequest extends $pb.GeneratedMessage {
   static AddressFromPubKeyRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AddressFromPubKeyRequest>(create);
   static AddressFromPubKeyRequest? _defaultInstance;
 
+  /// Native public key
   @$pb.TagNumber(1)
   $core.String get pubKey => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5696,24 +6170,26 @@ class AddressFromPubKeyRequest extends $pb.GeneratedMessage {
   void clearPubKey() => clearField(1);
 }
 
+/// Address from public key result
 class AddressFromPubKeyResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddressFromPubKeyResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address')
-    ..hasRequiredFields = false
-  ;
-
-  AddressFromPubKeyResult._() : super();
   factory AddressFromPubKeyResult({
     $core.String? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  AddressFromPubKeyResult._() : super();
   factory AddressFromPubKeyResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AddressFromPubKeyResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AddressFromPubKeyResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'address')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5723,8 +6199,10 @@ class AddressFromPubKeyResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AddressFromPubKeyResult copyWith(void Function(AddressFromPubKeyResult) updates) => super.copyWith((message) => updates(message as AddressFromPubKeyResult)) as AddressFromPubKeyResult; // ignore: deprecated_member_use
+  AddressFromPubKeyResult copyWith(void Function(AddressFromPubKeyResult) updates) => super.copyWith((message) => updates(message as AddressFromPubKeyResult)) as AddressFromPubKeyResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AddressFromPubKeyResult create() => AddressFromPubKeyResult._();
   AddressFromPubKeyResult createEmptyInstance() => create();
@@ -5733,6 +6211,7 @@ class AddressFromPubKeyResult extends $pb.GeneratedMessage {
   static AddressFromPubKeyResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AddressFromPubKeyResult>(create);
   static AddressFromPubKeyResult? _defaultInstance;
 
+  /// Address
   @$pb.TagNumber(1)
   $core.String get address => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5743,24 +6222,26 @@ class AddressFromPubKeyResult extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 }
 
+/// Unsafe random request
 class UnsafeRandomRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UnsafeRandomRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'numBytes', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  UnsafeRandomRequest._() : super();
   factory UnsafeRandomRequest({
     $core.int? numBytes,
   }) {
-    final _result = create();
+    final $result = create();
     if (numBytes != null) {
-      _result.numBytes = numBytes;
+      $result.numBytes = numBytes;
     }
-    return _result;
+    return $result;
   }
+  UnsafeRandomRequest._() : super();
   factory UnsafeRandomRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory UnsafeRandomRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UnsafeRandomRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'numBytes', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5770,8 +6251,10 @@ class UnsafeRandomRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  UnsafeRandomRequest copyWith(void Function(UnsafeRandomRequest) updates) => super.copyWith((message) => updates(message as UnsafeRandomRequest)) as UnsafeRandomRequest; // ignore: deprecated_member_use
+  UnsafeRandomRequest copyWith(void Function(UnsafeRandomRequest) updates) => super.copyWith((message) => updates(message as UnsafeRandomRequest)) as UnsafeRandomRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UnsafeRandomRequest create() => UnsafeRandomRequest._();
   UnsafeRandomRequest createEmptyInstance() => create();
@@ -5790,24 +6273,26 @@ class UnsafeRandomRequest extends $pb.GeneratedMessage {
   void clearNumBytes() => clearField(2);
 }
 
+/// Unsafe random result
 class UnsafeRandomResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UnsafeRandomResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'randomBytes', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  UnsafeRandomResult._() : super();
   factory UnsafeRandomResult({
     $core.List<$core.int>? randomBytes,
   }) {
-    final _result = create();
+    final $result = create();
     if (randomBytes != null) {
-      _result.randomBytes = randomBytes;
+      $result.randomBytes = randomBytes;
     }
-    return _result;
+    return $result;
   }
+  UnsafeRandomResult._() : super();
   factory UnsafeRandomResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory UnsafeRandomResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UnsafeRandomResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'randomBytes', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5817,8 +6302,10 @@ class UnsafeRandomResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  UnsafeRandomResult copyWith(void Function(UnsafeRandomResult) updates) => super.copyWith((message) => updates(message as UnsafeRandomResult)) as UnsafeRandomResult; // ignore: deprecated_member_use
+  UnsafeRandomResult copyWith(void Function(UnsafeRandomResult) updates) => super.copyWith((message) => updates(message as UnsafeRandomResult)) as UnsafeRandomResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UnsafeRandomResult create() => UnsafeRandomResult._();
   UnsafeRandomResult createEmptyInstance() => create();
@@ -5827,6 +6314,7 @@ class UnsafeRandomResult extends $pb.GeneratedMessage {
   static UnsafeRandomResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnsafeRandomResult>(create);
   static UnsafeRandomResult? _defaultInstance;
 
+  /// Random bytes generated
   @$pb.TagNumber(1)
   $core.List<$core.int> get randomBytes => $_getN(0);
   @$pb.TagNumber(1)
@@ -5837,29 +6325,31 @@ class UnsafeRandomResult extends $pb.GeneratedMessage {
   void clearRandomBytes() => clearField(1);
 }
 
+/// Send async message request filter
 class SendAsyncMessageFilter extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SendAsyncMessageFilter', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetAddress')
-    ..aOM<$3.BytesValue>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetKey', subBuilder: $3.BytesValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  SendAsyncMessageFilter._() : super();
   factory SendAsyncMessageFilter({
     $core.String? targetAddress,
     $3.BytesValue? targetKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (targetAddress != null) {
-      _result.targetAddress = targetAddress;
+      $result.targetAddress = targetAddress;
     }
     if (targetKey != null) {
-      _result.targetKey = targetKey;
+      $result.targetKey = targetKey;
     }
-    return _result;
+    return $result;
   }
+  SendAsyncMessageFilter._() : super();
   factory SendAsyncMessageFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SendAsyncMessageFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendAsyncMessageFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'targetAddress')
+    ..aOM<$3.BytesValue>(2, _omitFieldNames ? '' : 'targetKey', subBuilder: $3.BytesValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5869,8 +6359,10 @@ class SendAsyncMessageFilter extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SendAsyncMessageFilter copyWith(void Function(SendAsyncMessageFilter) updates) => super.copyWith((message) => updates(message as SendAsyncMessageFilter)) as SendAsyncMessageFilter; // ignore: deprecated_member_use
+  SendAsyncMessageFilter copyWith(void Function(SendAsyncMessageFilter) updates) => super.copyWith((message) => updates(message as SendAsyncMessageFilter)) as SendAsyncMessageFilter;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SendAsyncMessageFilter create() => SendAsyncMessageFilter._();
   SendAsyncMessageFilter createEmptyInstance() => create();
@@ -5879,6 +6371,7 @@ class SendAsyncMessageFilter extends $pb.GeneratedMessage {
   static SendAsyncMessageFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendAsyncMessageFilter>(create);
   static SendAsyncMessageFilter? _defaultInstance;
 
+  /// Target address
   @$pb.TagNumber(1)
   $core.String get targetAddress => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5888,6 +6381,7 @@ class SendAsyncMessageFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTargetAddress() => clearField(1);
 
+  /// Target key
   @$pb.TagNumber(2)
   $3.BytesValue get targetKey => $_getN(1);
   @$pb.TagNumber(2)
@@ -5900,21 +6394,8 @@ class SendAsyncMessageFilter extends $pb.GeneratedMessage {
   $3.BytesValue ensureTargetKey() => $_ensure(1);
 }
 
+/// Send async message request
 class SendAsyncMessageRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SendAsyncMessageRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetAddress')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetHandler')
-    ..aOM<$5.Slot>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validityStart', subBuilder: $5.Slot.create)
-    ..aOM<$5.Slot>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validityEnd', subBuilder: $5.Slot.create)
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'executionGas', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rawFee', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rawCoins', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.List<$core.int>>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', $pb.PbFieldType.OY)
-    ..aOM<SendAsyncMessageFilter>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'filter', subBuilder: SendAsyncMessageFilter.create)
-    ..hasRequiredFields = false
-  ;
-
-  SendAsyncMessageRequest._() : super();
   factory SendAsyncMessageRequest({
     $core.String? targetAddress,
     $core.String? targetHandler,
@@ -5926,38 +6407,53 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
     $core.List<$core.int>? data,
     SendAsyncMessageFilter? filter,
   }) {
-    final _result = create();
+    final $result = create();
     if (targetAddress != null) {
-      _result.targetAddress = targetAddress;
+      $result.targetAddress = targetAddress;
     }
     if (targetHandler != null) {
-      _result.targetHandler = targetHandler;
+      $result.targetHandler = targetHandler;
     }
     if (validityStart != null) {
-      _result.validityStart = validityStart;
+      $result.validityStart = validityStart;
     }
     if (validityEnd != null) {
-      _result.validityEnd = validityEnd;
+      $result.validityEnd = validityEnd;
     }
     if (executionGas != null) {
-      _result.executionGas = executionGas;
+      $result.executionGas = executionGas;
     }
     if (rawFee != null) {
-      _result.rawFee = rawFee;
+      $result.rawFee = rawFee;
     }
     if (rawCoins != null) {
-      _result.rawCoins = rawCoins;
+      $result.rawCoins = rawCoins;
     }
     if (data != null) {
-      _result.data = data;
+      $result.data = data;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
-    return _result;
+    return $result;
   }
+  SendAsyncMessageRequest._() : super();
   factory SendAsyncMessageRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SendAsyncMessageRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendAsyncMessageRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'targetAddress')
+    ..aOS(2, _omitFieldNames ? '' : 'targetHandler')
+    ..aOM<$5.Slot>(3, _omitFieldNames ? '' : 'validityStart', subBuilder: $5.Slot.create)
+    ..aOM<$5.Slot>(4, _omitFieldNames ? '' : 'validityEnd', subBuilder: $5.Slot.create)
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'executionGas', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'rawFee', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(7, _omitFieldNames ? '' : 'rawCoins', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.List<$core.int>>(8, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
+    ..aOM<SendAsyncMessageFilter>(9, _omitFieldNames ? '' : 'filter', subBuilder: SendAsyncMessageFilter.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -5967,8 +6463,10 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SendAsyncMessageRequest copyWith(void Function(SendAsyncMessageRequest) updates) => super.copyWith((message) => updates(message as SendAsyncMessageRequest)) as SendAsyncMessageRequest; // ignore: deprecated_member_use
+  SendAsyncMessageRequest copyWith(void Function(SendAsyncMessageRequest) updates) => super.copyWith((message) => updates(message as SendAsyncMessageRequest)) as SendAsyncMessageRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SendAsyncMessageRequest create() => SendAsyncMessageRequest._();
   SendAsyncMessageRequest createEmptyInstance() => create();
@@ -5977,6 +6475,7 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   static SendAsyncMessageRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendAsyncMessageRequest>(create);
   static SendAsyncMessageRequest? _defaultInstance;
 
+  /// Target address
   @$pb.TagNumber(1)
   $core.String get targetAddress => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5986,6 +6485,7 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTargetAddress() => clearField(1);
 
+  /// Target handler (function name)
   @$pb.TagNumber(2)
   $core.String get targetHandler => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5995,6 +6495,7 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTargetHandler() => clearField(2);
 
+  /// Start slot for the message execution
   @$pb.TagNumber(3)
   $5.Slot get validityStart => $_getN(2);
   @$pb.TagNumber(3)
@@ -6006,6 +6507,7 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $5.Slot ensureValidityStart() => $_ensure(2);
 
+  /// End slot for the message execution
   @$pb.TagNumber(4)
   $5.Slot get validityEnd => $_getN(3);
   @$pb.TagNumber(4)
@@ -6017,6 +6519,7 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $5.Slot ensureValidityEnd() => $_ensure(3);
 
+  /// Gas given for the execution
   @$pb.TagNumber(5)
   $fixnum.Int64 get executionGas => $_getI64(4);
   @$pb.TagNumber(5)
@@ -6026,6 +6529,7 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearExecutionGas() => clearField(5);
 
+  /// Message fee
   @$pb.TagNumber(6)
   $fixnum.Int64 get rawFee => $_getI64(5);
   @$pb.TagNumber(6)
@@ -6035,6 +6539,7 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearRawFee() => clearField(6);
 
+  /// Coins sent to the execution context
   @$pb.TagNumber(7)
   $fixnum.Int64 get rawCoins => $_getI64(6);
   @$pb.TagNumber(7)
@@ -6044,6 +6549,7 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearRawCoins() => clearField(7);
 
+  /// Message data
   @$pb.TagNumber(8)
   $core.List<$core.int> get data => $_getN(7);
   @$pb.TagNumber(8)
@@ -6053,6 +6559,7 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearData() => clearField(8);
 
+  /// Filter for the message
   @$pb.TagNumber(9)
   SendAsyncMessageFilter get filter => $_getN(8);
   @$pb.TagNumber(9)
@@ -6065,15 +6572,17 @@ class SendAsyncMessageRequest extends $pb.GeneratedMessage {
   SendAsyncMessageFilter ensureFilter() => $_ensure(8);
 }
 
+/// Send async message result
 class SendAsyncMessageResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SendAsyncMessageResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory SendAsyncMessageResult() => create();
+  SendAsyncMessageResult._() : super();
+  factory SendAsyncMessageResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SendAsyncMessageResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendAsyncMessageResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  SendAsyncMessageResult._() : super();
-  factory SendAsyncMessageResult() => create();
-  factory SendAsyncMessageResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SendAsyncMessageResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6083,8 +6592,10 @@ class SendAsyncMessageResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SendAsyncMessageResult copyWith(void Function(SendAsyncMessageResult) updates) => super.copyWith((message) => updates(message as SendAsyncMessageResult)) as SendAsyncMessageResult; // ignore: deprecated_member_use
+  SendAsyncMessageResult copyWith(void Function(SendAsyncMessageResult) updates) => super.copyWith((message) => updates(message as SendAsyncMessageResult)) as SendAsyncMessageResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SendAsyncMessageResult create() => SendAsyncMessageResult._();
   SendAsyncMessageResult createEmptyInstance() => create();
@@ -6094,15 +6605,17 @@ class SendAsyncMessageResult extends $pb.GeneratedMessage {
   static SendAsyncMessageResult? _defaultInstance;
 }
 
+/// Get origin operation id request
 class GetOriginOperationIdRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetOriginOperationIdRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory GetOriginOperationIdRequest() => create();
+  GetOriginOperationIdRequest._() : super();
+  factory GetOriginOperationIdRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetOriginOperationIdRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetOriginOperationIdRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  GetOriginOperationIdRequest._() : super();
-  factory GetOriginOperationIdRequest() => create();
-  factory GetOriginOperationIdRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetOriginOperationIdRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6112,8 +6625,10 @@ class GetOriginOperationIdRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetOriginOperationIdRequest copyWith(void Function(GetOriginOperationIdRequest) updates) => super.copyWith((message) => updates(message as GetOriginOperationIdRequest)) as GetOriginOperationIdRequest; // ignore: deprecated_member_use
+  GetOriginOperationIdRequest copyWith(void Function(GetOriginOperationIdRequest) updates) => super.copyWith((message) => updates(message as GetOriginOperationIdRequest)) as GetOriginOperationIdRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOriginOperationIdRequest create() => GetOriginOperationIdRequest._();
   GetOriginOperationIdRequest createEmptyInstance() => create();
@@ -6123,24 +6638,26 @@ class GetOriginOperationIdRequest extends $pb.GeneratedMessage {
   static GetOriginOperationIdRequest? _defaultInstance;
 }
 
+/// Get origin operation id result
 class GetOriginOperationIdResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetOriginOperationIdResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$3.StringValue>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operationId', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  GetOriginOperationIdResult._() : super();
   factory GetOriginOperationIdResult({
     $3.StringValue? operationId,
   }) {
-    final _result = create();
+    final $result = create();
     if (operationId != null) {
-      _result.operationId = operationId;
+      $result.operationId = operationId;
     }
-    return _result;
+    return $result;
   }
+  GetOriginOperationIdResult._() : super();
   factory GetOriginOperationIdResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetOriginOperationIdResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetOriginOperationIdResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$3.StringValue>(1, _omitFieldNames ? '' : 'operationId', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6150,8 +6667,10 @@ class GetOriginOperationIdResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetOriginOperationIdResult copyWith(void Function(GetOriginOperationIdResult) updates) => super.copyWith((message) => updates(message as GetOriginOperationIdResult)) as GetOriginOperationIdResult; // ignore: deprecated_member_use
+  GetOriginOperationIdResult copyWith(void Function(GetOriginOperationIdResult) updates) => super.copyWith((message) => updates(message as GetOriginOperationIdResult)) as GetOriginOperationIdResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOriginOperationIdResult create() => GetOriginOperationIdResult._();
   GetOriginOperationIdResult createEmptyInstance() => create();
@@ -6172,15 +6691,17 @@ class GetOriginOperationIdResult extends $pb.GeneratedMessage {
   $3.StringValue ensureOperationId() => $_ensure(0);
 }
 
+/// Get native time request
 class GetNativeTimeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetNativeTimeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory GetNativeTimeRequest() => create();
+  GetNativeTimeRequest._() : super();
+  factory GetNativeTimeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetNativeTimeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetNativeTimeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  GetNativeTimeRequest._() : super();
-  factory GetNativeTimeRequest() => create();
-  factory GetNativeTimeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetNativeTimeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6190,8 +6711,10 @@ class GetNativeTimeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetNativeTimeRequest copyWith(void Function(GetNativeTimeRequest) updates) => super.copyWith((message) => updates(message as GetNativeTimeRequest)) as GetNativeTimeRequest; // ignore: deprecated_member_use
+  GetNativeTimeRequest copyWith(void Function(GetNativeTimeRequest) updates) => super.copyWith((message) => updates(message as GetNativeTimeRequest)) as GetNativeTimeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetNativeTimeRequest create() => GetNativeTimeRequest._();
   GetNativeTimeRequest createEmptyInstance() => create();
@@ -6201,24 +6724,26 @@ class GetNativeTimeRequest extends $pb.GeneratedMessage {
   static GetNativeTimeRequest? _defaultInstance;
 }
 
+/// Get native time result
 class GetNativeTimeResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetNativeTimeResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'time', subBuilder: $4.NativeTime.create)
-    ..hasRequiredFields = false
-  ;
-
-  GetNativeTimeResult._() : super();
   factory GetNativeTimeResult({
     $4.NativeTime? time,
   }) {
-    final _result = create();
+    final $result = create();
     if (time != null) {
-      _result.time = time;
+      $result.time = time;
     }
-    return _result;
+    return $result;
   }
+  GetNativeTimeResult._() : super();
   factory GetNativeTimeResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetNativeTimeResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetNativeTimeResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'time', subBuilder: $4.NativeTime.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6228,8 +6753,10 @@ class GetNativeTimeResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetNativeTimeResult copyWith(void Function(GetNativeTimeResult) updates) => super.copyWith((message) => updates(message as GetNativeTimeResult)) as GetNativeTimeResult; // ignore: deprecated_member_use
+  GetNativeTimeResult copyWith(void Function(GetNativeTimeResult) updates) => super.copyWith((message) => updates(message as GetNativeTimeResult)) as GetNativeTimeResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetNativeTimeResult create() => GetNativeTimeResult._();
   GetNativeTimeResult createEmptyInstance() => create();
@@ -6238,6 +6765,7 @@ class GetNativeTimeResult extends $pb.GeneratedMessage {
   static GetNativeTimeResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetNativeTimeResult>(create);
   static GetNativeTimeResult? _defaultInstance;
 
+  /// Native time
   @$pb.TagNumber(1)
   $4.NativeTime get time => $_getN(0);
   @$pb.TagNumber(1)
@@ -6250,15 +6778,17 @@ class GetNativeTimeResult extends $pb.GeneratedMessage {
   $4.NativeTime ensureTime() => $_ensure(0);
 }
 
+/// Get current slot request
 class GetCurrentSlotRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetCurrentSlotRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory GetCurrentSlotRequest() => create();
+  GetCurrentSlotRequest._() : super();
+  factory GetCurrentSlotRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetCurrentSlotRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetCurrentSlotRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  GetCurrentSlotRequest._() : super();
-  factory GetCurrentSlotRequest() => create();
-  factory GetCurrentSlotRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetCurrentSlotRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6268,8 +6798,10 @@ class GetCurrentSlotRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetCurrentSlotRequest copyWith(void Function(GetCurrentSlotRequest) updates) => super.copyWith((message) => updates(message as GetCurrentSlotRequest)) as GetCurrentSlotRequest; // ignore: deprecated_member_use
+  GetCurrentSlotRequest copyWith(void Function(GetCurrentSlotRequest) updates) => super.copyWith((message) => updates(message as GetCurrentSlotRequest)) as GetCurrentSlotRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetCurrentSlotRequest create() => GetCurrentSlotRequest._();
   GetCurrentSlotRequest createEmptyInstance() => create();
@@ -6279,24 +6811,26 @@ class GetCurrentSlotRequest extends $pb.GeneratedMessage {
   static GetCurrentSlotRequest? _defaultInstance;
 }
 
+/// Get current slot result
 class GetCurrentSlotResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetCurrentSlotResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$5.Slot>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', subBuilder: $5.Slot.create)
-    ..hasRequiredFields = false
-  ;
-
-  GetCurrentSlotResult._() : super();
   factory GetCurrentSlotResult({
     $5.Slot? slot,
   }) {
-    final _result = create();
+    final $result = create();
     if (slot != null) {
-      _result.slot = slot;
+      $result.slot = slot;
     }
-    return _result;
+    return $result;
   }
+  GetCurrentSlotResult._() : super();
   factory GetCurrentSlotResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetCurrentSlotResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetCurrentSlotResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$5.Slot>(1, _omitFieldNames ? '' : 'slot', subBuilder: $5.Slot.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6306,8 +6840,10 @@ class GetCurrentSlotResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetCurrentSlotResult copyWith(void Function(GetCurrentSlotResult) updates) => super.copyWith((message) => updates(message as GetCurrentSlotResult)) as GetCurrentSlotResult; // ignore: deprecated_member_use
+  GetCurrentSlotResult copyWith(void Function(GetCurrentSlotResult) updates) => super.copyWith((message) => updates(message as GetCurrentSlotResult)) as GetCurrentSlotResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetCurrentSlotResult create() => GetCurrentSlotResult._();
   GetCurrentSlotResult createEmptyInstance() => create();
@@ -6316,6 +6852,7 @@ class GetCurrentSlotResult extends $pb.GeneratedMessage {
   static GetCurrentSlotResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetCurrentSlotResult>(create);
   static GetCurrentSlotResult? _defaultInstance;
 
+  /// Current slot
   @$pb.TagNumber(1)
   $5.Slot get slot => $_getN(0);
   @$pb.TagNumber(1)
@@ -6328,29 +6865,31 @@ class GetCurrentSlotResult extends $pb.GeneratedMessage {
   $5.Slot ensureSlot() => $_ensure(0);
 }
 
+/// Set bytecode request
 class SetBytecodeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetBytecodeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bytecode', $pb.PbFieldType.OY)
-    ..aOM<$3.StringValue>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  SetBytecodeRequest._() : super();
   factory SetBytecodeRequest({
     $core.List<$core.int>? bytecode,
     $3.StringValue? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (bytecode != null) {
-      _result.bytecode = bytecode;
+      $result.bytecode = bytecode;
     }
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  SetBytecodeRequest._() : super();
   factory SetBytecodeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SetBytecodeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetBytecodeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'bytecode', $pb.PbFieldType.OY)
+    ..aOM<$3.StringValue>(2, _omitFieldNames ? '' : 'address', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6360,8 +6899,10 @@ class SetBytecodeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetBytecodeRequest copyWith(void Function(SetBytecodeRequest) updates) => super.copyWith((message) => updates(message as SetBytecodeRequest)) as SetBytecodeRequest; // ignore: deprecated_member_use
+  SetBytecodeRequest copyWith(void Function(SetBytecodeRequest) updates) => super.copyWith((message) => updates(message as SetBytecodeRequest)) as SetBytecodeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetBytecodeRequest create() => SetBytecodeRequest._();
   SetBytecodeRequest createEmptyInstance() => create();
@@ -6370,6 +6911,7 @@ class SetBytecodeRequest extends $pb.GeneratedMessage {
   static SetBytecodeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetBytecodeRequest>(create);
   static SetBytecodeRequest? _defaultInstance;
 
+  /// Bytecode
   @$pb.TagNumber(1)
   $core.List<$core.int> get bytecode => $_getN(0);
   @$pb.TagNumber(1)
@@ -6379,6 +6921,7 @@ class SetBytecodeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBytecode() => clearField(1);
 
+  /// Address to set bytecode for, if none, use current address
   @$pb.TagNumber(2)
   $3.StringValue get address => $_getN(1);
   @$pb.TagNumber(2)
@@ -6391,15 +6934,17 @@ class SetBytecodeRequest extends $pb.GeneratedMessage {
   $3.StringValue ensureAddress() => $_ensure(1);
 }
 
+/// Set bytecode result
 class SetBytecodeResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SetBytecodeResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory SetBytecodeResult() => create();
+  SetBytecodeResult._() : super();
+  factory SetBytecodeResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetBytecodeResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetBytecodeResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  SetBytecodeResult._() : super();
-  factory SetBytecodeResult() => create();
-  factory SetBytecodeResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SetBytecodeResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6409,8 +6954,10 @@ class SetBytecodeResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SetBytecodeResult copyWith(void Function(SetBytecodeResult) updates) => super.copyWith((message) => updates(message as SetBytecodeResult)) as SetBytecodeResult; // ignore: deprecated_member_use
+  SetBytecodeResult copyWith(void Function(SetBytecodeResult) updates) => super.copyWith((message) => updates(message as SetBytecodeResult)) as SetBytecodeResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SetBytecodeResult create() => SetBytecodeResult._();
   SetBytecodeResult createEmptyInstance() => create();
@@ -6420,24 +6967,26 @@ class SetBytecodeResult extends $pb.GeneratedMessage {
   static SetBytecodeResult? _defaultInstance;
 }
 
+/// Get bytecode request
 class GetBytecodeRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetBytecodeRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$3.StringValue>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  GetBytecodeRequest._() : super();
   factory GetBytecodeRequest({
     $3.StringValue? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  GetBytecodeRequest._() : super();
   factory GetBytecodeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetBytecodeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetBytecodeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$3.StringValue>(1, _omitFieldNames ? '' : 'address', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6447,8 +6996,10 @@ class GetBytecodeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetBytecodeRequest copyWith(void Function(GetBytecodeRequest) updates) => super.copyWith((message) => updates(message as GetBytecodeRequest)) as GetBytecodeRequest; // ignore: deprecated_member_use
+  GetBytecodeRequest copyWith(void Function(GetBytecodeRequest) updates) => super.copyWith((message) => updates(message as GetBytecodeRequest)) as GetBytecodeRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetBytecodeRequest create() => GetBytecodeRequest._();
   GetBytecodeRequest createEmptyInstance() => create();
@@ -6457,6 +7008,7 @@ class GetBytecodeRequest extends $pb.GeneratedMessage {
   static GetBytecodeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetBytecodeRequest>(create);
   static GetBytecodeRequest? _defaultInstance;
 
+  /// Address to get bytecode for, if none, use current address
   @$pb.TagNumber(1)
   $3.StringValue get address => $_getN(0);
   @$pb.TagNumber(1)
@@ -6469,24 +7021,26 @@ class GetBytecodeRequest extends $pb.GeneratedMessage {
   $3.StringValue ensureAddress() => $_ensure(0);
 }
 
+/// Get bytecode result
 class GetBytecodeResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetBytecodeResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bytecode', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  GetBytecodeResult._() : super();
   factory GetBytecodeResult({
     $core.List<$core.int>? bytecode,
   }) {
-    final _result = create();
+    final $result = create();
     if (bytecode != null) {
-      _result.bytecode = bytecode;
+      $result.bytecode = bytecode;
     }
-    return _result;
+    return $result;
   }
+  GetBytecodeResult._() : super();
   factory GetBytecodeResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetBytecodeResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetBytecodeResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'bytecode', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6496,8 +7050,10 @@ class GetBytecodeResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetBytecodeResult copyWith(void Function(GetBytecodeResult) updates) => super.copyWith((message) => updates(message as GetBytecodeResult)) as GetBytecodeResult; // ignore: deprecated_member_use
+  GetBytecodeResult copyWith(void Function(GetBytecodeResult) updates) => super.copyWith((message) => updates(message as GetBytecodeResult)) as GetBytecodeResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetBytecodeResult create() => GetBytecodeResult._();
   GetBytecodeResult createEmptyInstance() => create();
@@ -6506,6 +7062,7 @@ class GetBytecodeResult extends $pb.GeneratedMessage {
   static GetBytecodeResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetBytecodeResult>(create);
   static GetBytecodeResult? _defaultInstance;
 
+  /// Bytecode
   @$pb.TagNumber(1)
   $core.List<$core.int> get bytecode => $_getN(0);
   @$pb.TagNumber(1)
@@ -6516,15 +7073,17 @@ class GetBytecodeResult extends $pb.GeneratedMessage {
   void clearBytecode() => clearField(1);
 }
 
+/// Caller has write access request
 class CallerHasWriteAccessRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CallerHasWriteAccessRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory CallerHasWriteAccessRequest() => create();
+  CallerHasWriteAccessRequest._() : super();
+  factory CallerHasWriteAccessRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CallerHasWriteAccessRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CallerHasWriteAccessRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  CallerHasWriteAccessRequest._() : super();
-  factory CallerHasWriteAccessRequest() => create();
-  factory CallerHasWriteAccessRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CallerHasWriteAccessRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6534,8 +7093,10 @@ class CallerHasWriteAccessRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CallerHasWriteAccessRequest copyWith(void Function(CallerHasWriteAccessRequest) updates) => super.copyWith((message) => updates(message as CallerHasWriteAccessRequest)) as CallerHasWriteAccessRequest; // ignore: deprecated_member_use
+  CallerHasWriteAccessRequest copyWith(void Function(CallerHasWriteAccessRequest) updates) => super.copyWith((message) => updates(message as CallerHasWriteAccessRequest)) as CallerHasWriteAccessRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CallerHasWriteAccessRequest create() => CallerHasWriteAccessRequest._();
   CallerHasWriteAccessRequest createEmptyInstance() => create();
@@ -6545,24 +7106,26 @@ class CallerHasWriteAccessRequest extends $pb.GeneratedMessage {
   static CallerHasWriteAccessRequest? _defaultInstance;
 }
 
+/// Caller has write access result
 class CallerHasWriteAccessResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CallerHasWriteAccessResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasWriteAccess')
-    ..hasRequiredFields = false
-  ;
-
-  CallerHasWriteAccessResult._() : super();
   factory CallerHasWriteAccessResult({
     $core.bool? hasWriteAccess,
   }) {
-    final _result = create();
+    final $result = create();
     if (hasWriteAccess != null) {
-      _result.hasWriteAccess = hasWriteAccess;
+      $result.hasWriteAccess = hasWriteAccess;
     }
-    return _result;
+    return $result;
   }
+  CallerHasWriteAccessResult._() : super();
   factory CallerHasWriteAccessResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CallerHasWriteAccessResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CallerHasWriteAccessResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'hasWriteAccess')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6572,8 +7135,10 @@ class CallerHasWriteAccessResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CallerHasWriteAccessResult copyWith(void Function(CallerHasWriteAccessResult) updates) => super.copyWith((message) => updates(message as CallerHasWriteAccessResult)) as CallerHasWriteAccessResult; // ignore: deprecated_member_use
+  CallerHasWriteAccessResult copyWith(void Function(CallerHasWriteAccessResult) updates) => super.copyWith((message) => updates(message as CallerHasWriteAccessResult)) as CallerHasWriteAccessResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CallerHasWriteAccessResult create() => CallerHasWriteAccessResult._();
   CallerHasWriteAccessResult createEmptyInstance() => create();
@@ -6582,6 +7147,7 @@ class CallerHasWriteAccessResult extends $pb.GeneratedMessage {
   static CallerHasWriteAccessResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CallerHasWriteAccessResult>(create);
   static CallerHasWriteAccessResult? _defaultInstance;
 
+  /// Caller has write access
   @$pb.TagNumber(1)
   $core.bool get hasWriteAccess => $_getBF(0);
   @$pb.TagNumber(1)
@@ -6592,24 +7158,26 @@ class CallerHasWriteAccessResult extends $pb.GeneratedMessage {
   void clearHasWriteAccess() => clearField(1);
 }
 
+/// Hash sha256 request
 class HashSha256Request extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'HashSha256Request', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  HashSha256Request._() : super();
   factory HashSha256Request({
     $core.List<$core.int>? data,
   }) {
-    final _result = create();
+    final $result = create();
     if (data != null) {
-      _result.data = data;
+      $result.data = data;
     }
-    return _result;
+    return $result;
   }
+  HashSha256Request._() : super();
   factory HashSha256Request.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory HashSha256Request.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HashSha256Request', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6619,8 +7187,10 @@ class HashSha256Request extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  HashSha256Request copyWith(void Function(HashSha256Request) updates) => super.copyWith((message) => updates(message as HashSha256Request)) as HashSha256Request; // ignore: deprecated_member_use
+  HashSha256Request copyWith(void Function(HashSha256Request) updates) => super.copyWith((message) => updates(message as HashSha256Request)) as HashSha256Request;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HashSha256Request create() => HashSha256Request._();
   HashSha256Request createEmptyInstance() => create();
@@ -6629,6 +7199,7 @@ class HashSha256Request extends $pb.GeneratedMessage {
   static HashSha256Request getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HashSha256Request>(create);
   static HashSha256Request? _defaultInstance;
 
+  /// data
   @$pb.TagNumber(1)
   $core.List<$core.int> get data => $_getN(0);
   @$pb.TagNumber(1)
@@ -6639,24 +7210,26 @@ class HashSha256Request extends $pb.GeneratedMessage {
   void clearData() => clearField(1);
 }
 
+/// Hash sha256 result
 class HashSha256Result extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'HashSha256Result', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hash', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  HashSha256Result._() : super();
   factory HashSha256Result({
     $core.List<$core.int>? hash,
   }) {
-    final _result = create();
+    final $result = create();
     if (hash != null) {
-      _result.hash = hash;
+      $result.hash = hash;
     }
-    return _result;
+    return $result;
   }
+  HashSha256Result._() : super();
   factory HashSha256Result.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory HashSha256Result.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HashSha256Result', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'hash', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6666,8 +7239,10 @@ class HashSha256Result extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  HashSha256Result copyWith(void Function(HashSha256Result) updates) => super.copyWith((message) => updates(message as HashSha256Result)) as HashSha256Result; // ignore: deprecated_member_use
+  HashSha256Result copyWith(void Function(HashSha256Result) updates) => super.copyWith((message) => updates(message as HashSha256Result)) as HashSha256Result;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HashSha256Result create() => HashSha256Result._();
   HashSha256Result createEmptyInstance() => create();
@@ -6676,6 +7251,7 @@ class HashSha256Result extends $pb.GeneratedMessage {
   static HashSha256Result getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HashSha256Result>(create);
   static HashSha256Result? _defaultInstance;
 
+  /// hash
   @$pb.TagNumber(1)
   $core.List<$core.int> get hash => $_getN(0);
   @$pb.TagNumber(1)
@@ -6686,24 +7262,26 @@ class HashSha256Result extends $pb.GeneratedMessage {
   void clearHash() => clearField(1);
 }
 
+/// Get op data request
 class GetOpDataRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetOpDataRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'key', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  GetOpDataRequest._() : super();
   factory GetOpDataRequest({
     $core.List<$core.int>? key,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
-    return _result;
+    return $result;
   }
+  GetOpDataRequest._() : super();
   factory GetOpDataRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetOpDataRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetOpDataRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'key', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6713,8 +7291,10 @@ class GetOpDataRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetOpDataRequest copyWith(void Function(GetOpDataRequest) updates) => super.copyWith((message) => updates(message as GetOpDataRequest)) as GetOpDataRequest; // ignore: deprecated_member_use
+  GetOpDataRequest copyWith(void Function(GetOpDataRequest) updates) => super.copyWith((message) => updates(message as GetOpDataRequest)) as GetOpDataRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOpDataRequest create() => GetOpDataRequest._();
   GetOpDataRequest createEmptyInstance() => create();
@@ -6723,6 +7303,7 @@ class GetOpDataRequest extends $pb.GeneratedMessage {
   static GetOpDataRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetOpDataRequest>(create);
   static GetOpDataRequest? _defaultInstance;
 
+  /// key
   @$pb.TagNumber(1)
   $core.List<$core.int> get key => $_getN(0);
   @$pb.TagNumber(1)
@@ -6733,24 +7314,26 @@ class GetOpDataRequest extends $pb.GeneratedMessage {
   void clearKey() => clearField(1);
 }
 
+/// Get op data result
 class GetOpDataResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetOpDataResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  GetOpDataResult._() : super();
   factory GetOpDataResult({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  GetOpDataResult._() : super();
   factory GetOpDataResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetOpDataResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetOpDataResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6760,8 +7343,10 @@ class GetOpDataResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetOpDataResult copyWith(void Function(GetOpDataResult) updates) => super.copyWith((message) => updates(message as GetOpDataResult)) as GetOpDataResult; // ignore: deprecated_member_use
+  GetOpDataResult copyWith(void Function(GetOpDataResult) updates) => super.copyWith((message) => updates(message as GetOpDataResult)) as GetOpDataResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOpDataResult create() => GetOpDataResult._();
   GetOpDataResult createEmptyInstance() => create();
@@ -6770,6 +7355,7 @@ class GetOpDataResult extends $pb.GeneratedMessage {
   static GetOpDataResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetOpDataResult>(create);
   static GetOpDataResult? _defaultInstance;
 
+  /// value
   @$pb.TagNumber(1)
   $core.List<$core.int> get value => $_getN(0);
   @$pb.TagNumber(1)
@@ -6780,24 +7366,26 @@ class GetOpDataResult extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+/// Op entry exists request
 class OpEntryExistsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OpEntryExistsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'key', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  OpEntryExistsRequest._() : super();
   factory OpEntryExistsRequest({
     $core.List<$core.int>? key,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
-    return _result;
+    return $result;
   }
+  OpEntryExistsRequest._() : super();
   factory OpEntryExistsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory OpEntryExistsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OpEntryExistsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'key', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6807,8 +7395,10 @@ class OpEntryExistsRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  OpEntryExistsRequest copyWith(void Function(OpEntryExistsRequest) updates) => super.copyWith((message) => updates(message as OpEntryExistsRequest)) as OpEntryExistsRequest; // ignore: deprecated_member_use
+  OpEntryExistsRequest copyWith(void Function(OpEntryExistsRequest) updates) => super.copyWith((message) => updates(message as OpEntryExistsRequest)) as OpEntryExistsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OpEntryExistsRequest create() => OpEntryExistsRequest._();
   OpEntryExistsRequest createEmptyInstance() => create();
@@ -6817,6 +7407,7 @@ class OpEntryExistsRequest extends $pb.GeneratedMessage {
   static OpEntryExistsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OpEntryExistsRequest>(create);
   static OpEntryExistsRequest? _defaultInstance;
 
+  /// key
   @$pb.TagNumber(1)
   $core.List<$core.int> get key => $_getN(0);
   @$pb.TagNumber(1)
@@ -6827,24 +7418,26 @@ class OpEntryExistsRequest extends $pb.GeneratedMessage {
   void clearKey() => clearField(1);
 }
 
+/// Op entry exists result
 class OpEntryExistsResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OpEntryExistsResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasKey')
-    ..hasRequiredFields = false
-  ;
-
-  OpEntryExistsResult._() : super();
   factory OpEntryExistsResult({
     $core.bool? hasKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (hasKey != null) {
-      _result.hasKey = hasKey;
+      $result.hasKey = hasKey;
     }
-    return _result;
+    return $result;
   }
+  OpEntryExistsResult._() : super();
   factory OpEntryExistsResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory OpEntryExistsResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OpEntryExistsResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'hasKey')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6854,8 +7447,10 @@ class OpEntryExistsResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  OpEntryExistsResult copyWith(void Function(OpEntryExistsResult) updates) => super.copyWith((message) => updates(message as OpEntryExistsResult)) as OpEntryExistsResult; // ignore: deprecated_member_use
+  OpEntryExistsResult copyWith(void Function(OpEntryExistsResult) updates) => super.copyWith((message) => updates(message as OpEntryExistsResult)) as OpEntryExistsResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OpEntryExistsResult create() => OpEntryExistsResult._();
   OpEntryExistsResult createEmptyInstance() => create();
@@ -6864,6 +7459,7 @@ class OpEntryExistsResult extends $pb.GeneratedMessage {
   static OpEntryExistsResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OpEntryExistsResult>(create);
   static OpEntryExistsResult? _defaultInstance;
 
+  /// has key
   @$pb.TagNumber(1)
   $core.bool get hasKey => $_getBF(0);
   @$pb.TagNumber(1)
@@ -6874,24 +7470,26 @@ class OpEntryExistsResult extends $pb.GeneratedMessage {
   void clearHasKey() => clearField(1);
 }
 
+/// Get op keys request
 class GetOpKeysRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetOpKeysRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'prefix', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  GetOpKeysRequest._() : super();
   factory GetOpKeysRequest({
     $core.List<$core.int>? prefix,
   }) {
-    final _result = create();
+    final $result = create();
     if (prefix != null) {
-      _result.prefix = prefix;
+      $result.prefix = prefix;
     }
-    return _result;
+    return $result;
   }
+  GetOpKeysRequest._() : super();
   factory GetOpKeysRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetOpKeysRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetOpKeysRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'prefix', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6901,8 +7499,10 @@ class GetOpKeysRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetOpKeysRequest copyWith(void Function(GetOpKeysRequest) updates) => super.copyWith((message) => updates(message as GetOpKeysRequest)) as GetOpKeysRequest; // ignore: deprecated_member_use
+  GetOpKeysRequest copyWith(void Function(GetOpKeysRequest) updates) => super.copyWith((message) => updates(message as GetOpKeysRequest)) as GetOpKeysRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOpKeysRequest create() => GetOpKeysRequest._();
   GetOpKeysRequest createEmptyInstance() => create();
@@ -6911,6 +7511,7 @@ class GetOpKeysRequest extends $pb.GeneratedMessage {
   static GetOpKeysRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetOpKeysRequest>(create);
   static GetOpKeysRequest? _defaultInstance;
 
+  /// keys prefix
   @$pb.TagNumber(1)
   $core.List<$core.int> get prefix => $_getN(0);
   @$pb.TagNumber(1)
@@ -6921,24 +7522,26 @@ class GetOpKeysRequest extends $pb.GeneratedMessage {
   void clearPrefix() => clearField(1);
 }
 
+/// Get op keys result
 class GetOpKeysResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetOpKeysResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..p<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'keys', $pb.PbFieldType.PY)
-    ..hasRequiredFields = false
-  ;
-
-  GetOpKeysResult._() : super();
   factory GetOpKeysResult({
     $core.Iterable<$core.List<$core.int>>? keys,
   }) {
-    final _result = create();
+    final $result = create();
     if (keys != null) {
-      _result.keys.addAll(keys);
+      $result.keys.addAll(keys);
     }
-    return _result;
+    return $result;
   }
+  GetOpKeysResult._() : super();
   factory GetOpKeysResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetOpKeysResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetOpKeysResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..p<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'keys', $pb.PbFieldType.PY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6948,8 +7551,10 @@ class GetOpKeysResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetOpKeysResult copyWith(void Function(GetOpKeysResult) updates) => super.copyWith((message) => updates(message as GetOpKeysResult)) as GetOpKeysResult; // ignore: deprecated_member_use
+  GetOpKeysResult copyWith(void Function(GetOpKeysResult) updates) => super.copyWith((message) => updates(message as GetOpKeysResult)) as GetOpKeysResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetOpKeysResult create() => GetOpKeysResult._();
   GetOpKeysResult createEmptyInstance() => create();
@@ -6958,19 +7563,22 @@ class GetOpKeysResult extends $pb.GeneratedMessage {
   static GetOpKeysResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetOpKeysResult>(create);
   static GetOpKeysResult? _defaultInstance;
 
+  /// keys
   @$pb.TagNumber(1)
   $core.List<$core.List<$core.int>> get keys => $_getList(0);
 }
 
+/// Get remaining gas request
 class GetRemainingGasRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetRemainingGasRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory GetRemainingGasRequest() => create();
+  GetRemainingGasRequest._() : super();
+  factory GetRemainingGasRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetRemainingGasRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetRemainingGasRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  GetRemainingGasRequest._() : super();
-  factory GetRemainingGasRequest() => create();
-  factory GetRemainingGasRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetRemainingGasRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -6980,8 +7588,10 @@ class GetRemainingGasRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetRemainingGasRequest copyWith(void Function(GetRemainingGasRequest) updates) => super.copyWith((message) => updates(message as GetRemainingGasRequest)) as GetRemainingGasRequest; // ignore: deprecated_member_use
+  GetRemainingGasRequest copyWith(void Function(GetRemainingGasRequest) updates) => super.copyWith((message) => updates(message as GetRemainingGasRequest)) as GetRemainingGasRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetRemainingGasRequest create() => GetRemainingGasRequest._();
   GetRemainingGasRequest createEmptyInstance() => create();
@@ -6991,24 +7601,26 @@ class GetRemainingGasRequest extends $pb.GeneratedMessage {
   static GetRemainingGasRequest? _defaultInstance;
 }
 
+/// Get remaining gas result
 class GetRemainingGasResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetRemainingGasResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remainingGas', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  GetRemainingGasResult._() : super();
   factory GetRemainingGasResult({
     $fixnum.Int64? remainingGas,
   }) {
-    final _result = create();
+    final $result = create();
     if (remainingGas != null) {
-      _result.remainingGas = remainingGas;
+      $result.remainingGas = remainingGas;
     }
-    return _result;
+    return $result;
   }
+  GetRemainingGasResult._() : super();
   factory GetRemainingGasResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetRemainingGasResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetRemainingGasResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'remainingGas', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7018,8 +7630,10 @@ class GetRemainingGasResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetRemainingGasResult copyWith(void Function(GetRemainingGasResult) updates) => super.copyWith((message) => updates(message as GetRemainingGasResult)) as GetRemainingGasResult; // ignore: deprecated_member_use
+  GetRemainingGasResult copyWith(void Function(GetRemainingGasResult) updates) => super.copyWith((message) => updates(message as GetRemainingGasResult)) as GetRemainingGasResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetRemainingGasResult create() => GetRemainingGasResult._();
   GetRemainingGasResult createEmptyInstance() => create();
@@ -7028,6 +7642,7 @@ class GetRemainingGasResult extends $pb.GeneratedMessage {
   static GetRemainingGasResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetRemainingGasResult>(create);
   static GetRemainingGasResult? _defaultInstance;
 
+  /// remaining gas
   @$pb.TagNumber(1)
   $fixnum.Int64 get remainingGas => $_getI64(0);
   @$pb.TagNumber(1)
@@ -7038,24 +7653,26 @@ class GetRemainingGasResult extends $pb.GeneratedMessage {
   void clearRemainingGas() => clearField(1);
 }
 
+/// Get balance request
 class GetBalanceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetBalanceRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$3.StringValue>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $3.StringValue.create)
-    ..hasRequiredFields = false
-  ;
-
-  GetBalanceRequest._() : super();
   factory GetBalanceRequest({
     $3.StringValue? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  GetBalanceRequest._() : super();
   factory GetBalanceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetBalanceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetBalanceRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$3.StringValue>(1, _omitFieldNames ? '' : 'address', subBuilder: $3.StringValue.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7065,8 +7682,10 @@ class GetBalanceRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetBalanceRequest copyWith(void Function(GetBalanceRequest) updates) => super.copyWith((message) => updates(message as GetBalanceRequest)) as GetBalanceRequest; // ignore: deprecated_member_use
+  GetBalanceRequest copyWith(void Function(GetBalanceRequest) updates) => super.copyWith((message) => updates(message as GetBalanceRequest)) as GetBalanceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetBalanceRequest create() => GetBalanceRequest._();
   GetBalanceRequest createEmptyInstance() => create();
@@ -7075,6 +7694,7 @@ class GetBalanceRequest extends $pb.GeneratedMessage {
   static GetBalanceRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetBalanceRequest>(create);
   static GetBalanceRequest? _defaultInstance;
 
+  /// Address to get balance for, if none, use current address
   @$pb.TagNumber(1)
   $3.StringValue get address => $_getN(0);
   @$pb.TagNumber(1)
@@ -7087,24 +7707,26 @@ class GetBalanceRequest extends $pb.GeneratedMessage {
   $3.StringValue ensureAddress() => $_ensure(0);
 }
 
+/// Get balance result
 class GetBalanceResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetBalanceResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'balance', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  GetBalanceResult._() : super();
   factory GetBalanceResult({
     $2.NativeAmount? balance,
   }) {
-    final _result = create();
+    final $result = create();
     if (balance != null) {
-      _result.balance = balance;
+      $result.balance = balance;
     }
-    return _result;
+    return $result;
   }
+  GetBalanceResult._() : super();
   factory GetBalanceResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetBalanceResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetBalanceResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'balance', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7114,8 +7736,10 @@ class GetBalanceResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetBalanceResult copyWith(void Function(GetBalanceResult) updates) => super.copyWith((message) => updates(message as GetBalanceResult)) as GetBalanceResult; // ignore: deprecated_member_use
+  GetBalanceResult copyWith(void Function(GetBalanceResult) updates) => super.copyWith((message) => updates(message as GetBalanceResult)) as GetBalanceResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetBalanceResult create() => GetBalanceResult._();
   GetBalanceResult createEmptyInstance() => create();
@@ -7124,6 +7748,7 @@ class GetBalanceResult extends $pb.GeneratedMessage {
   static GetBalanceResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetBalanceResult>(create);
   static GetBalanceResult? _defaultInstance;
 
+  /// balance
   @$pb.TagNumber(1)
   $2.NativeAmount get balance => $_getN(0);
   @$pb.TagNumber(1)
@@ -7136,15 +7761,17 @@ class GetBalanceResult extends $pb.GeneratedMessage {
   $2.NativeAmount ensureBalance() => $_ensure(0);
 }
 
+/// Get call coins request
 class GetCallCoinsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetCallCoinsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+  factory GetCallCoinsRequest() => create();
+  GetCallCoinsRequest._() : super();
+  factory GetCallCoinsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetCallCoinsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetCallCoinsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  GetCallCoinsRequest._() : super();
-  factory GetCallCoinsRequest() => create();
-  factory GetCallCoinsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetCallCoinsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7154,8 +7781,10 @@ class GetCallCoinsRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetCallCoinsRequest copyWith(void Function(GetCallCoinsRequest) updates) => super.copyWith((message) => updates(message as GetCallCoinsRequest)) as GetCallCoinsRequest; // ignore: deprecated_member_use
+  GetCallCoinsRequest copyWith(void Function(GetCallCoinsRequest) updates) => super.copyWith((message) => updates(message as GetCallCoinsRequest)) as GetCallCoinsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetCallCoinsRequest create() => GetCallCoinsRequest._();
   GetCallCoinsRequest createEmptyInstance() => create();
@@ -7165,24 +7794,26 @@ class GetCallCoinsRequest extends $pb.GeneratedMessage {
   static GetCallCoinsRequest? _defaultInstance;
 }
 
+/// Get call coins result
 class GetCallCoinsResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetCallCoinsResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOM<$2.NativeAmount>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'coins', subBuilder: $2.NativeAmount.create)
-    ..hasRequiredFields = false
-  ;
-
-  GetCallCoinsResult._() : super();
   factory GetCallCoinsResult({
     $2.NativeAmount? coins,
   }) {
-    final _result = create();
+    final $result = create();
     if (coins != null) {
-      _result.coins = coins;
+      $result.coins = coins;
     }
-    return _result;
+    return $result;
   }
+  GetCallCoinsResult._() : super();
   factory GetCallCoinsResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetCallCoinsResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetCallCoinsResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOM<$2.NativeAmount>(1, _omitFieldNames ? '' : 'coins', subBuilder: $2.NativeAmount.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7192,8 +7823,10 @@ class GetCallCoinsResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetCallCoinsResult copyWith(void Function(GetCallCoinsResult) updates) => super.copyWith((message) => updates(message as GetCallCoinsResult)) as GetCallCoinsResult; // ignore: deprecated_member_use
+  GetCallCoinsResult copyWith(void Function(GetCallCoinsResult) updates) => super.copyWith((message) => updates(message as GetCallCoinsResult)) as GetCallCoinsResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetCallCoinsResult create() => GetCallCoinsResult._();
   GetCallCoinsResult createEmptyInstance() => create();
@@ -7202,6 +7835,7 @@ class GetCallCoinsResult extends $pb.GeneratedMessage {
   static GetCallCoinsResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetCallCoinsResult>(create);
   static GetCallCoinsResult? _defaultInstance;
 
+  /// coins
   @$pb.TagNumber(1)
   $2.NativeAmount get coins => $_getN(0);
   @$pb.TagNumber(1)
@@ -7214,24 +7848,26 @@ class GetCallCoinsResult extends $pb.GeneratedMessage {
   $2.NativeAmount ensureCoins() => $_ensure(0);
 }
 
+/// Get the version of the address request
 class GetAddressVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetAddressVersionRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address')
-    ..hasRequiredFields = false
-  ;
-
-  GetAddressVersionRequest._() : super();
   factory GetAddressVersionRequest({
     $core.String? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  GetAddressVersionRequest._() : super();
   factory GetAddressVersionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetAddressVersionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetAddressVersionRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'address')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7241,8 +7877,10 @@ class GetAddressVersionRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetAddressVersionRequest copyWith(void Function(GetAddressVersionRequest) updates) => super.copyWith((message) => updates(message as GetAddressVersionRequest)) as GetAddressVersionRequest; // ignore: deprecated_member_use
+  GetAddressVersionRequest copyWith(void Function(GetAddressVersionRequest) updates) => super.copyWith((message) => updates(message as GetAddressVersionRequest)) as GetAddressVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAddressVersionRequest create() => GetAddressVersionRequest._();
   GetAddressVersionRequest createEmptyInstance() => create();
@@ -7261,24 +7899,26 @@ class GetAddressVersionRequest extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 }
 
+/// Get the version of the address result
 class GetAddressVersionResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetAddressVersionResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'version', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  GetAddressVersionResult._() : super();
   factory GetAddressVersionResult({
     $fixnum.Int64? version,
   }) {
-    final _result = create();
+    final $result = create();
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
-    return _result;
+    return $result;
   }
+  GetAddressVersionResult._() : super();
   factory GetAddressVersionResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetAddressVersionResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetAddressVersionResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7288,8 +7928,10 @@ class GetAddressVersionResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetAddressVersionResult copyWith(void Function(GetAddressVersionResult) updates) => super.copyWith((message) => updates(message as GetAddressVersionResult)) as GetAddressVersionResult; // ignore: deprecated_member_use
+  GetAddressVersionResult copyWith(void Function(GetAddressVersionResult) updates) => super.copyWith((message) => updates(message as GetAddressVersionResult)) as GetAddressVersionResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAddressVersionResult create() => GetAddressVersionResult._();
   GetAddressVersionResult createEmptyInstance() => create();
@@ -7308,24 +7950,26 @@ class GetAddressVersionResult extends $pb.GeneratedMessage {
   void clearVersion() => clearField(1);
 }
 
+/// Get the category of the address request
 class GetAddressCategoryRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetAddressCategoryRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address')
-    ..hasRequiredFields = false
-  ;
-
-  GetAddressCategoryRequest._() : super();
   factory GetAddressCategoryRequest({
     $core.String? address,
   }) {
-    final _result = create();
+    final $result = create();
     if (address != null) {
-      _result.address = address;
+      $result.address = address;
     }
-    return _result;
+    return $result;
   }
+  GetAddressCategoryRequest._() : super();
   factory GetAddressCategoryRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetAddressCategoryRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetAddressCategoryRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'address')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7335,8 +7979,10 @@ class GetAddressCategoryRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetAddressCategoryRequest copyWith(void Function(GetAddressCategoryRequest) updates) => super.copyWith((message) => updates(message as GetAddressCategoryRequest)) as GetAddressCategoryRequest; // ignore: deprecated_member_use
+  GetAddressCategoryRequest copyWith(void Function(GetAddressCategoryRequest) updates) => super.copyWith((message) => updates(message as GetAddressCategoryRequest)) as GetAddressCategoryRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAddressCategoryRequest create() => GetAddressCategoryRequest._();
   GetAddressCategoryRequest createEmptyInstance() => create();
@@ -7355,24 +8001,26 @@ class GetAddressCategoryRequest extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 }
 
+/// Get the category of the address result
 class GetAddressCategoryResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetAddressCategoryResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..e<$7.AddressCategory>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'category', $pb.PbFieldType.OE, defaultOrMaker: $7.AddressCategory.ADDRESS_CATEGORY_UNSPECIFIED, valueOf: $7.AddressCategory.valueOf, enumValues: $7.AddressCategory.values)
-    ..hasRequiredFields = false
-  ;
-
-  GetAddressCategoryResult._() : super();
   factory GetAddressCategoryResult({
     $7.AddressCategory? category,
   }) {
-    final _result = create();
+    final $result = create();
     if (category != null) {
-      _result.category = category;
+      $result.category = category;
     }
-    return _result;
+    return $result;
   }
+  GetAddressCategoryResult._() : super();
   factory GetAddressCategoryResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetAddressCategoryResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetAddressCategoryResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..e<$7.AddressCategory>(1, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE, defaultOrMaker: $7.AddressCategory.ADDRESS_CATEGORY_UNSPECIFIED, valueOf: $7.AddressCategory.valueOf, enumValues: $7.AddressCategory.values)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7382,8 +8030,10 @@ class GetAddressCategoryResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetAddressCategoryResult copyWith(void Function(GetAddressCategoryResult) updates) => super.copyWith((message) => updates(message as GetAddressCategoryResult)) as GetAddressCategoryResult; // ignore: deprecated_member_use
+  GetAddressCategoryResult copyWith(void Function(GetAddressCategoryResult) updates) => super.copyWith((message) => updates(message as GetAddressCategoryResult)) as GetAddressCategoryResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAddressCategoryResult create() => GetAddressCategoryResult._();
   GetAddressCategoryResult createEmptyInstance() => create();
@@ -7402,24 +8052,26 @@ class GetAddressCategoryResult extends $pb.GeneratedMessage {
   void clearCategory() => clearField(1);
 }
 
+/// Get the version of the public key request
 class GetPubKeyVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetPubKeyVersionRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pubKey')
-    ..hasRequiredFields = false
-  ;
-
-  GetPubKeyVersionRequest._() : super();
   factory GetPubKeyVersionRequest({
     $core.String? pubKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (pubKey != null) {
-      _result.pubKey = pubKey;
+      $result.pubKey = pubKey;
     }
-    return _result;
+    return $result;
   }
+  GetPubKeyVersionRequest._() : super();
   factory GetPubKeyVersionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetPubKeyVersionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetPubKeyVersionRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'pubKey')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7429,8 +8081,10 @@ class GetPubKeyVersionRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetPubKeyVersionRequest copyWith(void Function(GetPubKeyVersionRequest) updates) => super.copyWith((message) => updates(message as GetPubKeyVersionRequest)) as GetPubKeyVersionRequest; // ignore: deprecated_member_use
+  GetPubKeyVersionRequest copyWith(void Function(GetPubKeyVersionRequest) updates) => super.copyWith((message) => updates(message as GetPubKeyVersionRequest)) as GetPubKeyVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetPubKeyVersionRequest create() => GetPubKeyVersionRequest._();
   GetPubKeyVersionRequest createEmptyInstance() => create();
@@ -7449,24 +8103,26 @@ class GetPubKeyVersionRequest extends $pb.GeneratedMessage {
   void clearPubKey() => clearField(1);
 }
 
+/// Get the version of the public key result
 class GetPubKeyVersionResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetPubKeyVersionResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'version', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  GetPubKeyVersionResult._() : super();
   factory GetPubKeyVersionResult({
     $fixnum.Int64? version,
   }) {
-    final _result = create();
+    final $result = create();
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
-    return _result;
+    return $result;
   }
+  GetPubKeyVersionResult._() : super();
   factory GetPubKeyVersionResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetPubKeyVersionResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetPubKeyVersionResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7476,8 +8132,10 @@ class GetPubKeyVersionResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetPubKeyVersionResult copyWith(void Function(GetPubKeyVersionResult) updates) => super.copyWith((message) => updates(message as GetPubKeyVersionResult)) as GetPubKeyVersionResult; // ignore: deprecated_member_use
+  GetPubKeyVersionResult copyWith(void Function(GetPubKeyVersionResult) updates) => super.copyWith((message) => updates(message as GetPubKeyVersionResult)) as GetPubKeyVersionResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetPubKeyVersionResult create() => GetPubKeyVersionResult._();
   GetPubKeyVersionResult createEmptyInstance() => create();
@@ -7496,24 +8154,26 @@ class GetPubKeyVersionResult extends $pb.GeneratedMessage {
   void clearVersion() => clearField(1);
 }
 
+/// Get the version of the signature request
 class GetSignatureVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetSignatureVersionRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature')
-    ..hasRequiredFields = false
-  ;
-
-  GetSignatureVersionRequest._() : super();
   factory GetSignatureVersionRequest({
     $core.String? signature,
   }) {
-    final _result = create();
+    final $result = create();
     if (signature != null) {
-      _result.signature = signature;
+      $result.signature = signature;
     }
-    return _result;
+    return $result;
   }
+  GetSignatureVersionRequest._() : super();
   factory GetSignatureVersionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetSignatureVersionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSignatureVersionRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'signature')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7523,8 +8183,10 @@ class GetSignatureVersionRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetSignatureVersionRequest copyWith(void Function(GetSignatureVersionRequest) updates) => super.copyWith((message) => updates(message as GetSignatureVersionRequest)) as GetSignatureVersionRequest; // ignore: deprecated_member_use
+  GetSignatureVersionRequest copyWith(void Function(GetSignatureVersionRequest) updates) => super.copyWith((message) => updates(message as GetSignatureVersionRequest)) as GetSignatureVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetSignatureVersionRequest create() => GetSignatureVersionRequest._();
   GetSignatureVersionRequest createEmptyInstance() => create();
@@ -7543,24 +8205,26 @@ class GetSignatureVersionRequest extends $pb.GeneratedMessage {
   void clearSignature() => clearField(1);
 }
 
+/// Get the version of the signature result
 class GetSignatureVersionResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetSignatureVersionResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'version', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  GetSignatureVersionResult._() : super();
   factory GetSignatureVersionResult({
     $fixnum.Int64? version,
   }) {
-    final _result = create();
+    final $result = create();
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
-    return _result;
+    return $result;
   }
+  GetSignatureVersionResult._() : super();
   factory GetSignatureVersionResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetSignatureVersionResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSignatureVersionResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7570,8 +8234,10 @@ class GetSignatureVersionResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetSignatureVersionResult copyWith(void Function(GetSignatureVersionResult) updates) => super.copyWith((message) => updates(message as GetSignatureVersionResult)) as GetSignatureVersionResult; // ignore: deprecated_member_use
+  GetSignatureVersionResult copyWith(void Function(GetSignatureVersionResult) updates) => super.copyWith((message) => updates(message as GetSignatureVersionResult)) as GetSignatureVersionResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetSignatureVersionResult create() => GetSignatureVersionResult._();
   GetSignatureVersionResult createEmptyInstance() => create();
@@ -7590,24 +8256,26 @@ class GetSignatureVersionResult extends $pb.GeneratedMessage {
   void clearVersion() => clearField(1);
 }
 
+/// bytes to base58 request
 class BytesToBase58CheckRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BytesToBase58CheckRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bytes', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  BytesToBase58CheckRequest._() : super();
   factory BytesToBase58CheckRequest({
     $core.List<$core.int>? bytes,
   }) {
-    final _result = create();
+    final $result = create();
     if (bytes != null) {
-      _result.bytes = bytes;
+      $result.bytes = bytes;
     }
-    return _result;
+    return $result;
   }
+  BytesToBase58CheckRequest._() : super();
   factory BytesToBase58CheckRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BytesToBase58CheckRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BytesToBase58CheckRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'bytes', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7617,8 +8285,10 @@ class BytesToBase58CheckRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  BytesToBase58CheckRequest copyWith(void Function(BytesToBase58CheckRequest) updates) => super.copyWith((message) => updates(message as BytesToBase58CheckRequest)) as BytesToBase58CheckRequest; // ignore: deprecated_member_use
+  BytesToBase58CheckRequest copyWith(void Function(BytesToBase58CheckRequest) updates) => super.copyWith((message) => updates(message as BytesToBase58CheckRequest)) as BytesToBase58CheckRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BytesToBase58CheckRequest create() => BytesToBase58CheckRequest._();
   BytesToBase58CheckRequest createEmptyInstance() => create();
@@ -7637,24 +8307,26 @@ class BytesToBase58CheckRequest extends $pb.GeneratedMessage {
   void clearBytes() => clearField(1);
 }
 
+/// bytes to base58 result
 class BytesToBase58CheckResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BytesToBase58CheckResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'base58Check')
-    ..hasRequiredFields = false
-  ;
-
-  BytesToBase58CheckResult._() : super();
   factory BytesToBase58CheckResult({
     $core.String? base58Check,
   }) {
-    final _result = create();
+    final $result = create();
     if (base58Check != null) {
-      _result.base58Check = base58Check;
+      $result.base58Check = base58Check;
     }
-    return _result;
+    return $result;
   }
+  BytesToBase58CheckResult._() : super();
   factory BytesToBase58CheckResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BytesToBase58CheckResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BytesToBase58CheckResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'base58Check')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7664,8 +8336,10 @@ class BytesToBase58CheckResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  BytesToBase58CheckResult copyWith(void Function(BytesToBase58CheckResult) updates) => super.copyWith((message) => updates(message as BytesToBase58CheckResult)) as BytesToBase58CheckResult; // ignore: deprecated_member_use
+  BytesToBase58CheckResult copyWith(void Function(BytesToBase58CheckResult) updates) => super.copyWith((message) => updates(message as BytesToBase58CheckResult)) as BytesToBase58CheckResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BytesToBase58CheckResult create() => BytesToBase58CheckResult._();
   BytesToBase58CheckResult createEmptyInstance() => create();
@@ -7684,24 +8358,26 @@ class BytesToBase58CheckResult extends $pb.GeneratedMessage {
   void clearBase58Check() => clearField(1);
 }
 
+/// base58 to bytes request
 class Base58CheckToBytesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Base58CheckToBytesRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'base58Check')
-    ..hasRequiredFields = false
-  ;
-
-  Base58CheckToBytesRequest._() : super();
   factory Base58CheckToBytesRequest({
     $core.String? base58Check,
   }) {
-    final _result = create();
+    final $result = create();
     if (base58Check != null) {
-      _result.base58Check = base58Check;
+      $result.base58Check = base58Check;
     }
-    return _result;
+    return $result;
   }
+  Base58CheckToBytesRequest._() : super();
   factory Base58CheckToBytesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Base58CheckToBytesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Base58CheckToBytesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'base58Check')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7711,8 +8387,10 @@ class Base58CheckToBytesRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Base58CheckToBytesRequest copyWith(void Function(Base58CheckToBytesRequest) updates) => super.copyWith((message) => updates(message as Base58CheckToBytesRequest)) as Base58CheckToBytesRequest; // ignore: deprecated_member_use
+  Base58CheckToBytesRequest copyWith(void Function(Base58CheckToBytesRequest) updates) => super.copyWith((message) => updates(message as Base58CheckToBytesRequest)) as Base58CheckToBytesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Base58CheckToBytesRequest create() => Base58CheckToBytesRequest._();
   Base58CheckToBytesRequest createEmptyInstance() => create();
@@ -7731,24 +8409,26 @@ class Base58CheckToBytesRequest extends $pb.GeneratedMessage {
   void clearBase58Check() => clearField(1);
 }
 
+/// base58 to bytes result
 class Base58CheckToBytesResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Base58CheckToBytesResult', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.abi.v1'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bytes', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  Base58CheckToBytesResult._() : super();
   factory Base58CheckToBytesResult({
     $core.List<$core.int>? bytes,
   }) {
-    final _result = create();
+    final $result = create();
     if (bytes != null) {
-      _result.bytes = bytes;
+      $result.bytes = bytes;
     }
-    return _result;
+    return $result;
   }
+  Base58CheckToBytesResult._() : super();
   factory Base58CheckToBytesResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Base58CheckToBytesResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Base58CheckToBytesResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.abi.v1'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'bytes', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -7758,8 +8438,10 @@ class Base58CheckToBytesResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Base58CheckToBytesResult copyWith(void Function(Base58CheckToBytesResult) updates) => super.copyWith((message) => updates(message as Base58CheckToBytesResult)) as Base58CheckToBytesResult; // ignore: deprecated_member_use
+  Base58CheckToBytesResult copyWith(void Function(Base58CheckToBytesResult) updates) => super.copyWith((message) => updates(message as Base58CheckToBytesResult)) as Base58CheckToBytesResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Base58CheckToBytesResult create() => Base58CheckToBytesResult._();
   Base58CheckToBytesResult createEmptyInstance() => create();
@@ -7778,3 +8460,6 @@ class Base58CheckToBytesResult extends $pb.GeneratedMessage {
   void clearBytes() => clearField(1);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: massa/model/v1/endorsement.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -12,34 +16,36 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'slot.pb.dart' as $5;
 
+/// An endorsement, as sent in the network
 class Endorsement extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Endorsement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOM<$5.Slot>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', subBuilder: $5.Slot.create)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'index', $pb.PbFieldType.OU3)
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endorsedBlock')
-    ..hasRequiredFields = false
-  ;
-
-  Endorsement._() : super();
   factory Endorsement({
     $5.Slot? slot,
     $core.int? index,
     $core.String? endorsedBlock,
   }) {
-    final _result = create();
+    final $result = create();
     if (slot != null) {
-      _result.slot = slot;
+      $result.slot = slot;
     }
     if (index != null) {
-      _result.index = index;
+      $result.index = index;
     }
     if (endorsedBlock != null) {
-      _result.endorsedBlock = endorsedBlock;
+      $result.endorsedBlock = endorsedBlock;
     }
-    return _result;
+    return $result;
   }
+  Endorsement._() : super();
   factory Endorsement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Endorsement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Endorsement', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOM<$5.Slot>(1, _omitFieldNames ? '' : 'slot', subBuilder: $5.Slot.create)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
+    ..aOS(3, _omitFieldNames ? '' : 'endorsedBlock')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -49,8 +55,10 @@ class Endorsement extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Endorsement copyWith(void Function(Endorsement) updates) => super.copyWith((message) => updates(message as Endorsement)) as Endorsement; // ignore: deprecated_member_use
+  Endorsement copyWith(void Function(Endorsement) updates) => super.copyWith((message) => updates(message as Endorsement)) as Endorsement;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Endorsement create() => Endorsement._();
   Endorsement createEmptyInstance() => create();
@@ -59,6 +67,7 @@ class Endorsement extends $pb.GeneratedMessage {
   static Endorsement getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Endorsement>(create);
   static Endorsement? _defaultInstance;
 
+  /// Slot in which the endorsement can be included
   @$pb.TagNumber(1)
   $5.Slot get slot => $_getN(0);
   @$pb.TagNumber(1)
@@ -70,6 +79,7 @@ class Endorsement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $5.Slot ensureSlot() => $_ensure(0);
 
+  /// Endorsement index inside the including block
   @$pb.TagNumber(2)
   $core.int get index => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -79,6 +89,8 @@ class Endorsement extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIndex() => clearField(2);
 
+  /// Hash of endorsed block
+  /// This is the parent in thread `self.slot.thread` of the block in which the endorsement is included
   @$pb.TagNumber(3)
   $core.String get endorsedBlock => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -89,18 +101,8 @@ class Endorsement extends $pb.GeneratedMessage {
   void clearEndorsedBlock() => clearField(3);
 }
 
+/// Signed endorsement
 class SignedEndorsement extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignedEndorsement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOM<Endorsement>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'content', subBuilder: Endorsement.create)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentCreatorPubKey')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'contentCreatorAddress')
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'secureHash')
-    ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'serializedSize', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  SignedEndorsement._() : super();
   factory SignedEndorsement({
     Endorsement? content,
     $core.String? signature,
@@ -109,29 +111,41 @@ class SignedEndorsement extends $pb.GeneratedMessage {
     $core.String? secureHash,
     $fixnum.Int64? serializedSize,
   }) {
-    final _result = create();
+    final $result = create();
     if (content != null) {
-      _result.content = content;
+      $result.content = content;
     }
     if (signature != null) {
-      _result.signature = signature;
+      $result.signature = signature;
     }
     if (contentCreatorPubKey != null) {
-      _result.contentCreatorPubKey = contentCreatorPubKey;
+      $result.contentCreatorPubKey = contentCreatorPubKey;
     }
     if (contentCreatorAddress != null) {
-      _result.contentCreatorAddress = contentCreatorAddress;
+      $result.contentCreatorAddress = contentCreatorAddress;
     }
     if (secureHash != null) {
-      _result.secureHash = secureHash;
+      $result.secureHash = secureHash;
     }
     if (serializedSize != null) {
-      _result.serializedSize = serializedSize;
+      $result.serializedSize = serializedSize;
     }
-    return _result;
+    return $result;
   }
+  SignedEndorsement._() : super();
   factory SignedEndorsement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SignedEndorsement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SignedEndorsement', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOM<Endorsement>(1, _omitFieldNames ? '' : 'content', subBuilder: Endorsement.create)
+    ..aOS(2, _omitFieldNames ? '' : 'signature')
+    ..aOS(3, _omitFieldNames ? '' : 'contentCreatorPubKey')
+    ..aOS(4, _omitFieldNames ? '' : 'contentCreatorAddress')
+    ..aOS(5, _omitFieldNames ? '' : 'secureHash')
+    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'serializedSize', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -141,8 +155,10 @@ class SignedEndorsement extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SignedEndorsement copyWith(void Function(SignedEndorsement) updates) => super.copyWith((message) => updates(message as SignedEndorsement)) as SignedEndorsement; // ignore: deprecated_member_use
+  SignedEndorsement copyWith(void Function(SignedEndorsement) updates) => super.copyWith((message) => updates(message as SignedEndorsement)) as SignedEndorsement;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SignedEndorsement create() => SignedEndorsement._();
   SignedEndorsement createEmptyInstance() => create();
@@ -151,6 +167,7 @@ class SignedEndorsement extends $pb.GeneratedMessage {
   static SignedEndorsement getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SignedEndorsement>(create);
   static SignedEndorsement? _defaultInstance;
 
+  /// Endorsement
   @$pb.TagNumber(1)
   Endorsement get content => $_getN(0);
   @$pb.TagNumber(1)
@@ -162,6 +179,7 @@ class SignedEndorsement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Endorsement ensureContent() => $_ensure(0);
 
+  /// A cryptographically generated value using `serialized_data` and a public key.
   @$pb.TagNumber(2)
   $core.String get signature => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -171,6 +189,7 @@ class SignedEndorsement extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearSignature() => clearField(2);
 
+  /// The public-key component used in the generation of the signature
   @$pb.TagNumber(3)
   $core.String get contentCreatorPubKey => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -180,6 +199,7 @@ class SignedEndorsement extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearContentCreatorPubKey() => clearField(3);
 
+  /// Derived from the same public key used to generate the signature
   @$pb.TagNumber(4)
   $core.String get contentCreatorAddress => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -189,6 +209,7 @@ class SignedEndorsement extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearContentCreatorAddress() => clearField(4);
 
+  /// A secure hash of the non-malleable contents of a deterministic binary representation of the block header
   @$pb.TagNumber(5)
   $core.String get secureHash => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -198,6 +219,7 @@ class SignedEndorsement extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearSecureHash() => clearField(5);
 
+  /// The size of the serialized endorsement in bytes
   @$pb.TagNumber(6)
   $fixnum.Int64 get serializedSize => $_getI64(5);
   @$pb.TagNumber(6)
@@ -208,24 +230,26 @@ class SignedEndorsement extends $pb.GeneratedMessage {
   void clearSerializedSize() => clearField(6);
 }
 
+/// EndorsementIds holds endorsements ids
 class EndorsementIds extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EndorsementIds', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..pPS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endorsementIds')
-    ..hasRequiredFields = false
-  ;
-
-  EndorsementIds._() : super();
   factory EndorsementIds({
     $core.Iterable<$core.String>? endorsementIds,
   }) {
-    final _result = create();
+    final $result = create();
     if (endorsementIds != null) {
-      _result.endorsementIds.addAll(endorsementIds);
+      $result.endorsementIds.addAll(endorsementIds);
     }
-    return _result;
+    return $result;
   }
+  EndorsementIds._() : super();
   factory EndorsementIds.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EndorsementIds.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EndorsementIds', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'endorsementIds')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -235,8 +259,10 @@ class EndorsementIds extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  EndorsementIds copyWith(void Function(EndorsementIds) updates) => super.copyWith((message) => updates(message as EndorsementIds)) as EndorsementIds; // ignore: deprecated_member_use
+  EndorsementIds copyWith(void Function(EndorsementIds) updates) => super.copyWith((message) => updates(message as EndorsementIds)) as EndorsementIds;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EndorsementIds create() => EndorsementIds._();
   EndorsementIds createEmptyInstance() => create();
@@ -245,43 +271,46 @@ class EndorsementIds extends $pb.GeneratedMessage {
   static EndorsementIds getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EndorsementIds>(create);
   static EndorsementIds? _defaultInstance;
 
+  /// Endorsements ids
   @$pb.TagNumber(1)
   $core.List<$core.String> get endorsementIds => $_getList(0);
 }
 
+/// A wrapper around an endorsement with its metadata
 class EndorsementWrapper extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EndorsementWrapper', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inPool')
-    ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inBlocks')
-    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFinal')
-    ..aOM<SignedEndorsement>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endorsement', subBuilder: SignedEndorsement.create)
-    ..hasRequiredFields = false
-  ;
-
-  EndorsementWrapper._() : super();
   factory EndorsementWrapper({
     $core.bool? inPool,
     $core.Iterable<$core.String>? inBlocks,
     $core.bool? isFinal,
     SignedEndorsement? endorsement,
   }) {
-    final _result = create();
+    final $result = create();
     if (inPool != null) {
-      _result.inPool = inPool;
+      $result.inPool = inPool;
     }
     if (inBlocks != null) {
-      _result.inBlocks.addAll(inBlocks);
+      $result.inBlocks.addAll(inBlocks);
     }
     if (isFinal != null) {
-      _result.isFinal = isFinal;
+      $result.isFinal = isFinal;
     }
     if (endorsement != null) {
-      _result.endorsement = endorsement;
+      $result.endorsement = endorsement;
     }
-    return _result;
+    return $result;
   }
+  EndorsementWrapper._() : super();
   factory EndorsementWrapper.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EndorsementWrapper.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EndorsementWrapper', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'inPool')
+    ..pPS(2, _omitFieldNames ? '' : 'inBlocks')
+    ..aOB(3, _omitFieldNames ? '' : 'isFinal')
+    ..aOM<SignedEndorsement>(4, _omitFieldNames ? '' : 'endorsement', subBuilder: SignedEndorsement.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -291,8 +320,10 @@ class EndorsementWrapper extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  EndorsementWrapper copyWith(void Function(EndorsementWrapper) updates) => super.copyWith((message) => updates(message as EndorsementWrapper)) as EndorsementWrapper; // ignore: deprecated_member_use
+  EndorsementWrapper copyWith(void Function(EndorsementWrapper) updates) => super.copyWith((message) => updates(message as EndorsementWrapper)) as EndorsementWrapper;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EndorsementWrapper create() => EndorsementWrapper._();
   EndorsementWrapper createEmptyInstance() => create();
@@ -301,6 +332,7 @@ class EndorsementWrapper extends $pb.GeneratedMessage {
   static EndorsementWrapper getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EndorsementWrapper>(create);
   static EndorsementWrapper? _defaultInstance;
 
+  /// Whether the endorsement is still in pool
   @$pb.TagNumber(1)
   $core.bool get inPool => $_getBF(0);
   @$pb.TagNumber(1)
@@ -310,9 +342,12 @@ class EndorsementWrapper extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearInPool() => clearField(1);
 
+  /// The endorsement appears in `in_blocks`
+  /// If it appears in multiple blocks, these blocks are in different cliques
   @$pb.TagNumber(2)
   $core.List<$core.String> get inBlocks => $_getList(1);
 
+  /// Whether the the endorsement is final (for example in a final block)
   @$pb.TagNumber(3)
   $core.bool get isFinal => $_getBF(2);
   @$pb.TagNumber(3)
@@ -322,6 +357,7 @@ class EndorsementWrapper extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearIsFinal() => clearField(3);
 
+  /// The endorsement itself
   @$pb.TagNumber(4)
   SignedEndorsement get endorsement => $_getN(3);
   @$pb.TagNumber(4)
@@ -334,39 +370,41 @@ class EndorsementWrapper extends $pb.GeneratedMessage {
   SignedEndorsement ensureEndorsement() => $_ensure(3);
 }
 
+/// Informations about an endorsement with its metadata
 class EndorsementInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EndorsementInfo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endorsementId')
-    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inPool')
-    ..pPS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inBlocks')
-    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isFinal')
-    ..hasRequiredFields = false
-  ;
-
-  EndorsementInfo._() : super();
   factory EndorsementInfo({
     $core.String? endorsementId,
     $core.bool? inPool,
     $core.Iterable<$core.String>? inBlocks,
     $core.bool? isFinal,
   }) {
-    final _result = create();
+    final $result = create();
     if (endorsementId != null) {
-      _result.endorsementId = endorsementId;
+      $result.endorsementId = endorsementId;
     }
     if (inPool != null) {
-      _result.inPool = inPool;
+      $result.inPool = inPool;
     }
     if (inBlocks != null) {
-      _result.inBlocks.addAll(inBlocks);
+      $result.inBlocks.addAll(inBlocks);
     }
     if (isFinal != null) {
-      _result.isFinal = isFinal;
+      $result.isFinal = isFinal;
     }
-    return _result;
+    return $result;
   }
+  EndorsementInfo._() : super();
   factory EndorsementInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EndorsementInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EndorsementInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'endorsementId')
+    ..aOB(2, _omitFieldNames ? '' : 'inPool')
+    ..pPS(3, _omitFieldNames ? '' : 'inBlocks')
+    ..aOB(4, _omitFieldNames ? '' : 'isFinal')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -376,8 +414,10 @@ class EndorsementInfo extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  EndorsementInfo copyWith(void Function(EndorsementInfo) updates) => super.copyWith((message) => updates(message as EndorsementInfo)) as EndorsementInfo; // ignore: deprecated_member_use
+  EndorsementInfo copyWith(void Function(EndorsementInfo) updates) => super.copyWith((message) => updates(message as EndorsementInfo)) as EndorsementInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EndorsementInfo create() => EndorsementInfo._();
   EndorsementInfo createEmptyInstance() => create();
@@ -386,6 +426,7 @@ class EndorsementInfo extends $pb.GeneratedMessage {
   static EndorsementInfo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EndorsementInfo>(create);
   static EndorsementInfo? _defaultInstance;
 
+  /// The endorsement id
   @$pb.TagNumber(1)
   $core.String get endorsementId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -395,6 +436,7 @@ class EndorsementInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEndorsementId() => clearField(1);
 
+  /// Whether the endorsement is still in pool
   @$pb.TagNumber(2)
   $core.bool get inPool => $_getBF(1);
   @$pb.TagNumber(2)
@@ -404,9 +446,12 @@ class EndorsementInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearInPool() => clearField(2);
 
+  /// The endorsement appears in `in_blocks`
+  /// If it appears in multiple blocks, these blocks are in different cliques
   @$pb.TagNumber(3)
   $core.List<$core.String> get inBlocks => $_getList(2);
 
+  /// Whether the the endorsement is final (for example in a final block)
   @$pb.TagNumber(4)
   $core.bool get isFinal => $_getBF(3);
   @$pb.TagNumber(4)
@@ -417,3 +462,6 @@ class EndorsementInfo extends $pb.GeneratedMessage {
   void clearIsFinal() => clearField(4);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

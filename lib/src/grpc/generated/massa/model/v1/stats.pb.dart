@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: massa/model/v1/stats.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -12,17 +16,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'time.pb.dart' as $4;
 
+/// Consensus statistics
 class ConsensusStats extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ConsensusStats', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startTimespan', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endTimespan', subBuilder: $4.NativeTime.create)
-    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'finalBlockCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staleBlockCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cliqueCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  ConsensusStats._() : super();
   factory ConsensusStats({
     $4.NativeTime? startTimespan,
     $4.NativeTime? endTimespan,
@@ -30,26 +25,37 @@ class ConsensusStats extends $pb.GeneratedMessage {
     $fixnum.Int64? staleBlockCount,
     $fixnum.Int64? cliqueCount,
   }) {
-    final _result = create();
+    final $result = create();
     if (startTimespan != null) {
-      _result.startTimespan = startTimespan;
+      $result.startTimespan = startTimespan;
     }
     if (endTimespan != null) {
-      _result.endTimespan = endTimespan;
+      $result.endTimespan = endTimespan;
     }
     if (finalBlockCount != null) {
-      _result.finalBlockCount = finalBlockCount;
+      $result.finalBlockCount = finalBlockCount;
     }
     if (staleBlockCount != null) {
-      _result.staleBlockCount = staleBlockCount;
+      $result.staleBlockCount = staleBlockCount;
     }
     if (cliqueCount != null) {
-      _result.cliqueCount = cliqueCount;
+      $result.cliqueCount = cliqueCount;
     }
-    return _result;
+    return $result;
   }
+  ConsensusStats._() : super();
   factory ConsensusStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ConsensusStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConsensusStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'startTimespan', subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'endTimespan', subBuilder: $4.NativeTime.create)
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'finalBlockCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'staleBlockCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'cliqueCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -59,8 +65,10 @@ class ConsensusStats extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ConsensusStats copyWith(void Function(ConsensusStats) updates) => super.copyWith((message) => updates(message as ConsensusStats)) as ConsensusStats; // ignore: deprecated_member_use
+  ConsensusStats copyWith(void Function(ConsensusStats) updates) => super.copyWith((message) => updates(message as ConsensusStats)) as ConsensusStats;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ConsensusStats create() => ConsensusStats._();
   ConsensusStats createEmptyInstance() => create();
@@ -69,6 +77,7 @@ class ConsensusStats extends $pb.GeneratedMessage {
   static ConsensusStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConsensusStats>(create);
   static ConsensusStats? _defaultInstance;
 
+  /// Start of the time span for stats
   @$pb.TagNumber(1)
   $4.NativeTime get startTimespan => $_getN(0);
   @$pb.TagNumber(1)
@@ -80,6 +89,7 @@ class ConsensusStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.NativeTime ensureStartTimespan() => $_ensure(0);
 
+  /// End of the time span for stats
   @$pb.TagNumber(2)
   $4.NativeTime get endTimespan => $_getN(1);
   @$pb.TagNumber(2)
@@ -91,6 +101,7 @@ class ConsensusStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $4.NativeTime ensureEndTimespan() => $_ensure(1);
 
+  /// Number of final blocks
   @$pb.TagNumber(3)
   $fixnum.Int64 get finalBlockCount => $_getI64(2);
   @$pb.TagNumber(3)
@@ -100,6 +111,7 @@ class ConsensusStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFinalBlockCount() => clearField(3);
 
+  /// Number of stale blocks in memory
   @$pb.TagNumber(4)
   $fixnum.Int64 get staleBlockCount => $_getI64(3);
   @$pb.TagNumber(4)
@@ -109,6 +121,7 @@ class ConsensusStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearStaleBlockCount() => clearField(4);
 
+  /// Number of actives cliques
   @$pb.TagNumber(5)
   $fixnum.Int64 get cliqueCount => $_getI64(4);
   @$pb.TagNumber(5)
@@ -119,29 +132,31 @@ class ConsensusStats extends $pb.GeneratedMessage {
   void clearCliqueCount() => clearField(5);
 }
 
+/// Pool statistics
 class PoolStats extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PoolStats', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endorsementsCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operationsCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  PoolStats._() : super();
   factory PoolStats({
     $fixnum.Int64? endorsementsCount,
     $fixnum.Int64? operationsCount,
   }) {
-    final _result = create();
+    final $result = create();
     if (endorsementsCount != null) {
-      _result.endorsementsCount = endorsementsCount;
+      $result.endorsementsCount = endorsementsCount;
     }
     if (operationsCount != null) {
-      _result.operationsCount = operationsCount;
+      $result.operationsCount = operationsCount;
     }
-    return _result;
+    return $result;
   }
+  PoolStats._() : super();
   factory PoolStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory PoolStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PoolStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'endorsementsCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'operationsCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -151,8 +166,10 @@ class PoolStats extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  PoolStats copyWith(void Function(PoolStats) updates) => super.copyWith((message) => updates(message as PoolStats)) as PoolStats; // ignore: deprecated_member_use
+  PoolStats copyWith(void Function(PoolStats) updates) => super.copyWith((message) => updates(message as PoolStats)) as PoolStats;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PoolStats create() => PoolStats._();
   PoolStats createEmptyInstance() => create();
@@ -161,6 +178,7 @@ class PoolStats extends $pb.GeneratedMessage {
   static PoolStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PoolStats>(create);
   static PoolStats? _defaultInstance;
 
+  /// Endorsements
   @$pb.TagNumber(1)
   $fixnum.Int64 get endorsementsCount => $_getI64(0);
   @$pb.TagNumber(1)
@@ -170,6 +188,7 @@ class PoolStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEndorsementsCount() => clearField(1);
 
+  /// Operations
   @$pb.TagNumber(2)
   $fixnum.Int64 get operationsCount => $_getI64(1);
   @$pb.TagNumber(2)
@@ -180,17 +199,8 @@ class PoolStats extends $pb.GeneratedMessage {
   void clearOperationsCount() => clearField(2);
 }
 
+/// Network statistics
 class NetworkStats extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NetworkStats', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inConnectionCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outConnectionCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'knownPeerCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bannedPeerCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'activeNodeCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  NetworkStats._() : super();
   factory NetworkStats({
     $fixnum.Int64? inConnectionCount,
     $fixnum.Int64? outConnectionCount,
@@ -198,26 +208,37 @@ class NetworkStats extends $pb.GeneratedMessage {
     $fixnum.Int64? bannedPeerCount,
     $fixnum.Int64? activeNodeCount,
   }) {
-    final _result = create();
+    final $result = create();
     if (inConnectionCount != null) {
-      _result.inConnectionCount = inConnectionCount;
+      $result.inConnectionCount = inConnectionCount;
     }
     if (outConnectionCount != null) {
-      _result.outConnectionCount = outConnectionCount;
+      $result.outConnectionCount = outConnectionCount;
     }
     if (knownPeerCount != null) {
-      _result.knownPeerCount = knownPeerCount;
+      $result.knownPeerCount = knownPeerCount;
     }
     if (bannedPeerCount != null) {
-      _result.bannedPeerCount = bannedPeerCount;
+      $result.bannedPeerCount = bannedPeerCount;
     }
     if (activeNodeCount != null) {
-      _result.activeNodeCount = activeNodeCount;
+      $result.activeNodeCount = activeNodeCount;
     }
-    return _result;
+    return $result;
   }
+  NetworkStats._() : super();
   factory NetworkStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory NetworkStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NetworkStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'inConnectionCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'outConnectionCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'knownPeerCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'bannedPeerCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'activeNodeCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -227,8 +248,10 @@ class NetworkStats extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  NetworkStats copyWith(void Function(NetworkStats) updates) => super.copyWith((message) => updates(message as NetworkStats)) as NetworkStats; // ignore: deprecated_member_use
+  NetworkStats copyWith(void Function(NetworkStats) updates) => super.copyWith((message) => updates(message as NetworkStats)) as NetworkStats;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NetworkStats create() => NetworkStats._();
   NetworkStats createEmptyInstance() => create();
@@ -237,6 +260,7 @@ class NetworkStats extends $pb.GeneratedMessage {
   static NetworkStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NetworkStats>(create);
   static NetworkStats? _defaultInstance;
 
+  /// In connections count
   @$pb.TagNumber(1)
   $fixnum.Int64 get inConnectionCount => $_getI64(0);
   @$pb.TagNumber(1)
@@ -246,6 +270,7 @@ class NetworkStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearInConnectionCount() => clearField(1);
 
+  /// Out connections count
   @$pb.TagNumber(2)
   $fixnum.Int64 get outConnectionCount => $_getI64(1);
   @$pb.TagNumber(2)
@@ -255,6 +280,7 @@ class NetworkStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearOutConnectionCount() => clearField(2);
 
+  /// Total known peers count
   @$pb.TagNumber(3)
   $fixnum.Int64 get knownPeerCount => $_getI64(2);
   @$pb.TagNumber(3)
@@ -264,6 +290,7 @@ class NetworkStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearKnownPeerCount() => clearField(3);
 
+  /// Banned node count
   @$pb.TagNumber(4)
   $fixnum.Int64 get bannedPeerCount => $_getI64(3);
   @$pb.TagNumber(4)
@@ -273,6 +300,7 @@ class NetworkStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearBannedPeerCount() => clearField(4);
 
+  /// Active node count
   @$pb.TagNumber(5)
   $fixnum.Int64 get activeNodeCount => $_getI64(4);
   @$pb.TagNumber(5)
@@ -283,39 +311,41 @@ class NetworkStats extends $pb.GeneratedMessage {
   void clearActiveNodeCount() => clearField(5);
 }
 
+/// Execution statistics
 class ExecutionStats extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ExecutionStats', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timeWindowStart', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timeWindowEnd', subBuilder: $4.NativeTime.create)
-    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'finalBlockCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'finalExecutedOperationsCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  ExecutionStats._() : super();
   factory ExecutionStats({
     $4.NativeTime? timeWindowStart,
     $4.NativeTime? timeWindowEnd,
     $fixnum.Int64? finalBlockCount,
     $fixnum.Int64? finalExecutedOperationsCount,
   }) {
-    final _result = create();
+    final $result = create();
     if (timeWindowStart != null) {
-      _result.timeWindowStart = timeWindowStart;
+      $result.timeWindowStart = timeWindowStart;
     }
     if (timeWindowEnd != null) {
-      _result.timeWindowEnd = timeWindowEnd;
+      $result.timeWindowEnd = timeWindowEnd;
     }
     if (finalBlockCount != null) {
-      _result.finalBlockCount = finalBlockCount;
+      $result.finalBlockCount = finalBlockCount;
     }
     if (finalExecutedOperationsCount != null) {
-      _result.finalExecutedOperationsCount = finalExecutedOperationsCount;
+      $result.finalExecutedOperationsCount = finalExecutedOperationsCount;
     }
-    return _result;
+    return $result;
   }
+  ExecutionStats._() : super();
   factory ExecutionStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ExecutionStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ExecutionStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'timeWindowStart', subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'timeWindowEnd', subBuilder: $4.NativeTime.create)
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'finalBlockCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'finalExecutedOperationsCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -325,8 +355,10 @@ class ExecutionStats extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ExecutionStats copyWith(void Function(ExecutionStats) updates) => super.copyWith((message) => updates(message as ExecutionStats)) as ExecutionStats; // ignore: deprecated_member_use
+  ExecutionStats copyWith(void Function(ExecutionStats) updates) => super.copyWith((message) => updates(message as ExecutionStats)) as ExecutionStats;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExecutionStats create() => ExecutionStats._();
   ExecutionStats createEmptyInstance() => create();
@@ -335,6 +367,7 @@ class ExecutionStats extends $pb.GeneratedMessage {
   static ExecutionStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ExecutionStats>(create);
   static ExecutionStats? _defaultInstance;
 
+  /// Time window start
   @$pb.TagNumber(1)
   $4.NativeTime get timeWindowStart => $_getN(0);
   @$pb.TagNumber(1)
@@ -346,6 +379,7 @@ class ExecutionStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.NativeTime ensureTimeWindowStart() => $_ensure(0);
 
+  /// Time window end
   @$pb.TagNumber(2)
   $4.NativeTime get timeWindowEnd => $_getN(1);
   @$pb.TagNumber(2)
@@ -357,6 +391,7 @@ class ExecutionStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $4.NativeTime ensureTimeWindowEnd() => $_ensure(1);
 
+  /// Number of final blocks in the time window
   @$pb.TagNumber(3)
   $fixnum.Int64 get finalBlockCount => $_getI64(2);
   @$pb.TagNumber(3)
@@ -366,6 +401,7 @@ class ExecutionStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFinalBlockCount() => clearField(3);
 
+  /// Number of final executed operations in the time window
   @$pb.TagNumber(4)
   $fixnum.Int64 get finalExecutedOperationsCount => $_getI64(3);
   @$pb.TagNumber(4)
@@ -376,3 +412,6 @@ class ExecutionStats extends $pb.GeneratedMessage {
   void clearFinalExecutedOperationsCount() => clearField(4);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

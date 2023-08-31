@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: massa/model/v1/denunciation.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -17,35 +21,37 @@ enum DenunciationIndex_Entry {
   notSet
 }
 
+/// Index for Denunciations in collections (e.g. like a HashMap...)
 class DenunciationIndex extends $pb.GeneratedMessage {
+  factory DenunciationIndex({
+    DenunciationBlockHeader? blockHeader,
+    DenunciationEndorsement? endorsement,
+  }) {
+    final $result = create();
+    if (blockHeader != null) {
+      $result.blockHeader = blockHeader;
+    }
+    if (endorsement != null) {
+      $result.endorsement = endorsement;
+    }
+    return $result;
+  }
+  DenunciationIndex._() : super();
+  factory DenunciationIndex.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DenunciationIndex.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, DenunciationIndex_Entry> _DenunciationIndex_EntryByTag = {
     1 : DenunciationIndex_Entry.blockHeader,
     2 : DenunciationIndex_Entry.endorsement,
     0 : DenunciationIndex_Entry.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DenunciationIndex', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DenunciationIndex', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<DenunciationBlockHeader>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockHeader', subBuilder: DenunciationBlockHeader.create)
-    ..aOM<DenunciationEndorsement>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endorsement', subBuilder: DenunciationEndorsement.create)
+    ..aOM<DenunciationBlockHeader>(1, _omitFieldNames ? '' : 'blockHeader', subBuilder: DenunciationBlockHeader.create)
+    ..aOM<DenunciationEndorsement>(2, _omitFieldNames ? '' : 'endorsement', subBuilder: DenunciationEndorsement.create)
     ..hasRequiredFields = false
   ;
 
-  DenunciationIndex._() : super();
-  factory DenunciationIndex({
-    DenunciationBlockHeader? blockHeader,
-    DenunciationEndorsement? endorsement,
-  }) {
-    final _result = create();
-    if (blockHeader != null) {
-      _result.blockHeader = blockHeader;
-    }
-    if (endorsement != null) {
-      _result.endorsement = endorsement;
-    }
-    return _result;
-  }
-  factory DenunciationIndex.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DenunciationIndex.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -55,8 +61,10 @@ class DenunciationIndex extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DenunciationIndex copyWith(void Function(DenunciationIndex) updates) => super.copyWith((message) => updates(message as DenunciationIndex)) as DenunciationIndex; // ignore: deprecated_member_use
+  DenunciationIndex copyWith(void Function(DenunciationIndex) updates) => super.copyWith((message) => updates(message as DenunciationIndex)) as DenunciationIndex;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DenunciationIndex create() => DenunciationIndex._();
   DenunciationIndex createEmptyInstance() => create();
@@ -68,6 +76,7 @@ class DenunciationIndex extends $pb.GeneratedMessage {
   DenunciationIndex_Entry whichEntry() => _DenunciationIndex_EntryByTag[$_whichOneof(0)]!;
   void clearEntry() => clearField($_whichOneof(0));
 
+  /// Denunciation block header
   @$pb.TagNumber(1)
   DenunciationBlockHeader get blockHeader => $_getN(0);
   @$pb.TagNumber(1)
@@ -79,6 +88,7 @@ class DenunciationIndex extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   DenunciationBlockHeader ensureBlockHeader() => $_ensure(0);
 
+  /// Denunciation endorsement
   @$pb.TagNumber(2)
   DenunciationEndorsement get endorsement => $_getN(1);
   @$pb.TagNumber(2)
@@ -91,24 +101,26 @@ class DenunciationIndex extends $pb.GeneratedMessage {
   DenunciationEndorsement ensureEndorsement() => $_ensure(1);
 }
 
+/// Variant for Block header denunciation index
 class DenunciationBlockHeader extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DenunciationBlockHeader', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOM<$5.Slot>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', subBuilder: $5.Slot.create)
-    ..hasRequiredFields = false
-  ;
-
-  DenunciationBlockHeader._() : super();
   factory DenunciationBlockHeader({
     $5.Slot? slot,
   }) {
-    final _result = create();
+    final $result = create();
     if (slot != null) {
-      _result.slot = slot;
+      $result.slot = slot;
     }
-    return _result;
+    return $result;
   }
+  DenunciationBlockHeader._() : super();
   factory DenunciationBlockHeader.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DenunciationBlockHeader.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DenunciationBlockHeader', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOM<$5.Slot>(1, _omitFieldNames ? '' : 'slot', subBuilder: $5.Slot.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -118,8 +130,10 @@ class DenunciationBlockHeader extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DenunciationBlockHeader copyWith(void Function(DenunciationBlockHeader) updates) => super.copyWith((message) => updates(message as DenunciationBlockHeader)) as DenunciationBlockHeader; // ignore: deprecated_member_use
+  DenunciationBlockHeader copyWith(void Function(DenunciationBlockHeader) updates) => super.copyWith((message) => updates(message as DenunciationBlockHeader)) as DenunciationBlockHeader;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DenunciationBlockHeader create() => DenunciationBlockHeader._();
   DenunciationBlockHeader createEmptyInstance() => create();
@@ -128,6 +142,7 @@ class DenunciationBlockHeader extends $pb.GeneratedMessage {
   static DenunciationBlockHeader getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DenunciationBlockHeader>(create);
   static DenunciationBlockHeader? _defaultInstance;
 
+  /// Denounciation slot
   @$pb.TagNumber(1)
   $5.Slot get slot => $_getN(0);
   @$pb.TagNumber(1)
@@ -140,29 +155,31 @@ class DenunciationBlockHeader extends $pb.GeneratedMessage {
   $5.Slot ensureSlot() => $_ensure(0);
 }
 
+/// Variant for Endorsement denunciation index
 class DenunciationEndorsement extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DenunciationEndorsement', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOM<$5.Slot>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', subBuilder: $5.Slot.create)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'index', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  DenunciationEndorsement._() : super();
   factory DenunciationEndorsement({
     $5.Slot? slot,
     $core.int? index,
   }) {
-    final _result = create();
+    final $result = create();
     if (slot != null) {
-      _result.slot = slot;
+      $result.slot = slot;
     }
     if (index != null) {
-      _result.index = index;
+      $result.index = index;
     }
-    return _result;
+    return $result;
   }
+  DenunciationEndorsement._() : super();
   factory DenunciationEndorsement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DenunciationEndorsement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DenunciationEndorsement', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+    ..aOM<$5.Slot>(1, _omitFieldNames ? '' : 'slot', subBuilder: $5.Slot.create)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -172,8 +189,10 @@ class DenunciationEndorsement extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DenunciationEndorsement copyWith(void Function(DenunciationEndorsement) updates) => super.copyWith((message) => updates(message as DenunciationEndorsement)) as DenunciationEndorsement; // ignore: deprecated_member_use
+  DenunciationEndorsement copyWith(void Function(DenunciationEndorsement) updates) => super.copyWith((message) => updates(message as DenunciationEndorsement)) as DenunciationEndorsement;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DenunciationEndorsement create() => DenunciationEndorsement._();
   DenunciationEndorsement createEmptyInstance() => create();
@@ -182,6 +201,7 @@ class DenunciationEndorsement extends $pb.GeneratedMessage {
   static DenunciationEndorsement getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DenunciationEndorsement>(create);
   static DenunciationEndorsement? _defaultInstance;
 
+  /// Denounciation slot
   @$pb.TagNumber(1)
   $5.Slot get slot => $_getN(0);
   @$pb.TagNumber(1)
@@ -193,6 +213,7 @@ class DenunciationEndorsement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $5.Slot ensureSlot() => $_ensure(0);
 
+  /// Denounciation index
   @$pb.TagNumber(2)
   $core.int get index => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -203,3 +224,6 @@ class DenunciationEndorsement extends $pb.GeneratedMessage {
   void clearIndex() => clearField(2);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

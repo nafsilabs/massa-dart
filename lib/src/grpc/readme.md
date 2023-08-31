@@ -1,5 +1,7 @@
 # GRPC code generation
 
+First activate the plugin by running this command `dart pub global activate protoc_plugin`
+
 Run the following command to generate the grpc codes
 ```
 protoc \

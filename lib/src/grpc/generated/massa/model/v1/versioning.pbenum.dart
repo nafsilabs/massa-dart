@@ -1,22 +1,27 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: massa/model/v1/versioning.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// State machine for a Versioning component that tracks the deployment state
 class ComponentStateId extends $pb.ProtobufEnum {
-  static const ComponentStateId COMPONENT_STATE_ID_UNSPECIFIED = ComponentStateId._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'COMPONENT_STATE_ID_UNSPECIFIED');
-  static const ComponentStateId COMPONENT_STATE_ID_ERROR = ComponentStateId._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'COMPONENT_STATE_ID_ERROR');
-  static const ComponentStateId COMPONENT_STATE_ID_DEFINED = ComponentStateId._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'COMPONENT_STATE_ID_DEFINED');
-  static const ComponentStateId COMPONENT_STATE_ID_STARTED = ComponentStateId._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'COMPONENT_STATE_ID_STARTED');
-  static const ComponentStateId COMPONENT_STATE_ID_LOCKEDIN = ComponentStateId._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'COMPONENT_STATE_ID_LOCKEDIN');
-  static const ComponentStateId COMPONENT_STATE_ID_ACTIVE = ComponentStateId._(5, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'COMPONENT_STATE_ID_ACTIVE');
-  static const ComponentStateId COMPONENT_STATE_ID_FAILED = ComponentStateId._(6, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'COMPONENT_STATE_ID_FAILED');
+  static const ComponentStateId COMPONENT_STATE_ID_UNSPECIFIED = ComponentStateId._(0, _omitEnumNames ? '' : 'COMPONENT_STATE_ID_UNSPECIFIED');
+  static const ComponentStateId COMPONENT_STATE_ID_ERROR = ComponentStateId._(1, _omitEnumNames ? '' : 'COMPONENT_STATE_ID_ERROR');
+  static const ComponentStateId COMPONENT_STATE_ID_DEFINED = ComponentStateId._(2, _omitEnumNames ? '' : 'COMPONENT_STATE_ID_DEFINED');
+  static const ComponentStateId COMPONENT_STATE_ID_STARTED = ComponentStateId._(3, _omitEnumNames ? '' : 'COMPONENT_STATE_ID_STARTED');
+  static const ComponentStateId COMPONENT_STATE_ID_LOCKEDIN = ComponentStateId._(4, _omitEnumNames ? '' : 'COMPONENT_STATE_ID_LOCKEDIN');
+  static const ComponentStateId COMPONENT_STATE_ID_ACTIVE = ComponentStateId._(5, _omitEnumNames ? '' : 'COMPONENT_STATE_ID_ACTIVE');
+  static const ComponentStateId COMPONENT_STATE_ID_FAILED = ComponentStateId._(6, _omitEnumNames ? '' : 'COMPONENT_STATE_ID_FAILED');
 
   static const $core.List<ComponentStateId> values = <ComponentStateId> [
     COMPONENT_STATE_ID_UNSPECIFIED,
@@ -34,10 +39,11 @@ class ComponentStateId extends $pb.ProtobufEnum {
   const ComponentStateId._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Versioning component enum
 class MipComponent extends $pb.ProtobufEnum {
-  static const MipComponent MIP_COMPONENT_UNSPECIFIED = MipComponent._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'MIP_COMPONENT_UNSPECIFIED');
-  static const MipComponent MIP_COMPONENT_ADDRESS = MipComponent._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'MIP_COMPONENT_ADDRESS');
-  static const MipComponent MIP_COMPONENT_KEYPAIR = MipComponent._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'MIP_COMPONENT_KEYPAIR');
+  static const MipComponent MIP_COMPONENT_UNSPECIFIED = MipComponent._(0, _omitEnumNames ? '' : 'MIP_COMPONENT_UNSPECIFIED');
+  static const MipComponent MIP_COMPONENT_ADDRESS = MipComponent._(1, _omitEnumNames ? '' : 'MIP_COMPONENT_ADDRESS');
+  static const MipComponent MIP_COMPONENT_KEYPAIR = MipComponent._(2, _omitEnumNames ? '' : 'MIP_COMPONENT_KEYPAIR');
 
   static const $core.List<MipComponent> values = <MipComponent> [
     MIP_COMPONENT_UNSPECIFIED,
@@ -51,3 +57,5 @@ class MipComponent extends $pb.ProtobufEnum {
   const MipComponent._($core.int v, $core.String n) : super(v, n);
 }
 
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
