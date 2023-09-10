@@ -1,3 +1,6 @@
+## 1.6.0
+
+ - **FEAT**: improved grpc support as of Testnet 26.1.
 ## 1.5.1
 
  - **FIX**: dart pub compliance.

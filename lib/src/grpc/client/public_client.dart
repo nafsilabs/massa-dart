@@ -3,18 +3,14 @@ import 'dart:typed_data';
 import 'package:fixnum/fixnum.dart';
 import 'package:grpc/grpc.dart';
 import 'package:massa/src/grpc/generated/google/protobuf/wrappers.pb.dart';
-import 'package:massa/src/grpc/generated/massa/model/v1/amount.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/block.pb.dart';
-import 'package:massa/src/grpc/generated/massa/model/v1/commons.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/endorsement.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/execution.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/node.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/operation.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/staker.pb.dart';
 import 'package:massa/src/grpc/generated/public.pbgrpc.dart';
-import 'package:massa/src/grpc/send_operations/send_operations.dart';
 import 'package:massa/src/helpers/helpers.dart';
-import 'package:massa/src/models/operation_types.dart';
 
 class GRPCPublicClient {
   late String host; //host ip address
