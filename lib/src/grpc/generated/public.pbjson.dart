@@ -18,8 +18,14 @@ const ExecutionQueryExecutionStatus$json = {
   '1': 'ExecutionQueryExecutionStatus',
   '2': [
     {'1': 'EXECUTION_QUERY_EXECUTION_STATUS_UNSPECIFIED', '2': 0},
-    {'1': 'EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_SUCCESS', '2': 1},
-    {'1': 'EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_FAILURE', '2': 2},
+    {
+      '1': 'EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_SUCCESS',
+      '2': 1
+    },
+    {
+      '1': 'EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_FAILURE',
+      '2': 2
+    },
     {'1': 'EXECUTION_QUERY_EXECUTION_STATUS_EXECUTABLE_OR_EXPIRED', '2': 3},
   ],
 };
@@ -37,27 +43,43 @@ final $typed_data.Uint8List executionQueryExecutionStatusDescriptor = $convert.b
 const ExecuteReadOnlyCallRequest$json = {
   '1': 'ExecuteReadOnlyCallRequest',
   '2': [
-    {'1': 'call', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.ReadOnlyExecutionCall', '10': 'call'},
+    {
+      '1': 'call',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.ReadOnlyExecutionCall',
+      '10': 'call'
+    },
   ],
 };
 
 /// Descriptor for `ExecuteReadOnlyCallRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List executeReadOnlyCallRequestDescriptor = $convert.base64Decode(
-    'ChpFeGVjdXRlUmVhZE9ubHlDYWxsUmVxdWVzdBI5CgRjYWxsGAEgASgLMiUubWFzc2EubW9kZW'
-    'wudjEuUmVhZE9ubHlFeGVjdXRpb25DYWxsUgRjYWxs');
+final $typed_data.Uint8List executeReadOnlyCallRequestDescriptor =
+    $convert.base64Decode(
+        'ChpFeGVjdXRlUmVhZE9ubHlDYWxsUmVxdWVzdBI5CgRjYWxsGAEgASgLMiUubWFzc2EubW9kZW'
+        'wudjEuUmVhZE9ubHlFeGVjdXRpb25DYWxsUgRjYWxs');
 
 @$core.Deprecated('Use executeReadOnlyCallResponseDescriptor instead')
 const ExecuteReadOnlyCallResponse$json = {
   '1': 'ExecuteReadOnlyCallResponse',
   '2': [
-    {'1': 'output', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.ReadOnlyExecutionOutput', '10': 'output'},
+    {
+      '1': 'output',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.ReadOnlyExecutionOutput',
+      '10': 'output'
+    },
   ],
 };
 
 /// Descriptor for `ExecuteReadOnlyCallResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List executeReadOnlyCallResponseDescriptor = $convert.base64Decode(
-    'ChtFeGVjdXRlUmVhZE9ubHlDYWxsUmVzcG9uc2USPwoGb3V0cHV0GAEgASgLMicubWFzc2EubW'
-    '9kZWwudjEuUmVhZE9ubHlFeGVjdXRpb25PdXRwdXRSBm91dHB1dA==');
+final $typed_data.Uint8List executeReadOnlyCallResponseDescriptor =
+    $convert.base64Decode(
+        'ChtFeGVjdXRlUmVhZE9ubHlDYWxsUmVzcG9uc2USPwoGb3V0cHV0GAEgASgLMicubWFzc2EubW'
+        '9kZWwudjEuUmVhZE9ubHlFeGVjdXRpb25PdXRwdXRSBm91dHB1dA==');
 
 @$core.Deprecated('Use getBlocksRequestDescriptor instead')
 const GetBlocksRequest$json = {
@@ -75,7 +97,14 @@ final $typed_data.Uint8List getBlocksRequestDescriptor = $convert.base64Decode(
 const GetBlocksResponse$json = {
   '1': 'GetBlocksResponse',
   '2': [
-    {'1': 'wrapped_blocks', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.BlockWrapper', '10': 'wrappedBlocks'},
+    {
+      '1': 'wrapped_blocks',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.BlockWrapper',
+      '10': 'wrappedBlocks'
+    },
   ],
 };
 
@@ -88,20 +117,36 @@ final $typed_data.Uint8List getBlocksResponseDescriptor = $convert.base64Decode(
 const GetDatastoreEntriesRequest$json = {
   '1': 'GetDatastoreEntriesRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.GetDatastoreEntryFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.GetDatastoreEntryFilter',
+      '10': 'filters'
+    },
   ],
 };
 
 /// Descriptor for `GetDatastoreEntriesRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getDatastoreEntriesRequestDescriptor = $convert.base64Decode(
-    'ChpHZXREYXRhc3RvcmVFbnRyaWVzUmVxdWVzdBI/CgdmaWx0ZXJzGAEgAygLMiUubWFzc2EuYX'
-    'BpLnYxLkdldERhdGFzdG9yZUVudHJ5RmlsdGVyUgdmaWx0ZXJz');
+final $typed_data.Uint8List getDatastoreEntriesRequestDescriptor =
+    $convert.base64Decode(
+        'ChpHZXREYXRhc3RvcmVFbnRyaWVzUmVxdWVzdBI/CgdmaWx0ZXJzGAEgAygLMiUubWFzc2EuYX'
+        'BpLnYxLkdldERhdGFzdG9yZUVudHJ5RmlsdGVyUgdmaWx0ZXJz');
 
 @$core.Deprecated('Use getDatastoreEntryFilterDescriptor instead')
 const GetDatastoreEntryFilter$json = {
   '1': 'GetDatastoreEntryFilter',
   '2': [
-    {'1': 'address_key', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.AddressKeyEntry', '9': 0, '10': 'addressKey'},
+    {
+      '1': 'address_key',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.AddressKeyEntry',
+      '9': 0,
+      '10': 'addressKey'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -109,22 +154,31 @@ const GetDatastoreEntryFilter$json = {
 };
 
 /// Descriptor for `GetDatastoreEntryFilter`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getDatastoreEntryFilterDescriptor = $convert.base64Decode(
-    'ChdHZXREYXRhc3RvcmVFbnRyeUZpbHRlchJCCgthZGRyZXNzX2tleRgBIAEoCzIfLm1hc3NhLm'
-    '1vZGVsLnYxLkFkZHJlc3NLZXlFbnRyeUgAUgphZGRyZXNzS2V5QggKBmZpbHRlcg==');
+final $typed_data.Uint8List getDatastoreEntryFilterDescriptor =
+    $convert.base64Decode(
+        'ChdHZXREYXRhc3RvcmVFbnRyeUZpbHRlchJCCgthZGRyZXNzX2tleRgBIAEoCzIfLm1hc3NhLm'
+        '1vZGVsLnYxLkFkZHJlc3NLZXlFbnRyeUgAUgphZGRyZXNzS2V5QggKBmZpbHRlcg==');
 
 @$core.Deprecated('Use getDatastoreEntriesResponseDescriptor instead')
 const GetDatastoreEntriesResponse$json = {
   '1': 'GetDatastoreEntriesResponse',
   '2': [
-    {'1': 'datastore_entries', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.DatastoreEntry', '10': 'datastoreEntries'},
+    {
+      '1': 'datastore_entries',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.DatastoreEntry',
+      '10': 'datastoreEntries'
+    },
   ],
 };
 
 /// Descriptor for `GetDatastoreEntriesResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getDatastoreEntriesResponseDescriptor = $convert.base64Decode(
-    'ChtHZXREYXRhc3RvcmVFbnRyaWVzUmVzcG9uc2USSwoRZGF0YXN0b3JlX2VudHJpZXMYASADKA'
-    'syHi5tYXNzYS5tb2RlbC52MS5EYXRhc3RvcmVFbnRyeVIQZGF0YXN0b3JlRW50cmllcw==');
+final $typed_data.Uint8List getDatastoreEntriesResponseDescriptor =
+    $convert.base64Decode(
+        'ChtHZXREYXRhc3RvcmVFbnRyaWVzUmVzcG9uc2USSwoRZGF0YXN0b3JlX2VudHJpZXMYASADKA'
+        'syHi5tYXNzYS5tb2RlbC52MS5EYXRhc3RvcmVFbnRyeVIQZGF0YXN0b3JlRW50cmllcw==');
 
 @$core.Deprecated('Use getEndorsementsRequestDescriptor instead')
 const GetEndorsementsRequest$json = {
@@ -135,15 +189,23 @@ const GetEndorsementsRequest$json = {
 };
 
 /// Descriptor for `GetEndorsementsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getEndorsementsRequestDescriptor = $convert.base64Decode(
-    'ChZHZXRFbmRvcnNlbWVudHNSZXF1ZXN0EicKD2VuZG9yc2VtZW50X2lkcxgBIAMoCVIOZW5kb3'
-    'JzZW1lbnRJZHM=');
+final $typed_data.Uint8List getEndorsementsRequestDescriptor =
+    $convert.base64Decode(
+        'ChZHZXRFbmRvcnNlbWVudHNSZXF1ZXN0EicKD2VuZG9yc2VtZW50X2lkcxgBIAMoCVIOZW5kb3'
+        'JzZW1lbnRJZHM=');
 
 @$core.Deprecated('Use getEndorsementsResponseDescriptor instead')
 const GetEndorsementsResponse$json = {
   '1': 'GetEndorsementsResponse',
   '2': [
-    {'1': 'wrapped_endorsements', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.EndorsementWrapper', '10': 'wrappedEndorsements'},
+    {
+      '1': 'wrapped_endorsements',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.EndorsementWrapper',
+      '10': 'wrappedEndorsements'
+    },
   ],
 };
 
@@ -159,21 +221,29 @@ const GetNextBlockBestParentsRequest$json = {
 };
 
 /// Descriptor for `GetNextBlockBestParentsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getNextBlockBestParentsRequestDescriptor = $convert.base64Decode(
-    'Ch5HZXROZXh0QmxvY2tCZXN0UGFyZW50c1JlcXVlc3Q=');
+final $typed_data.Uint8List getNextBlockBestParentsRequestDescriptor =
+    $convert.base64Decode('Ch5HZXROZXh0QmxvY2tCZXN0UGFyZW50c1JlcXVlc3Q=');
 
 @$core.Deprecated('Use getNextBlockBestParentsResponseDescriptor instead')
 const GetNextBlockBestParentsResponse$json = {
   '1': 'GetNextBlockBestParentsResponse',
   '2': [
-    {'1': 'block_parents', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.BlockParent', '10': 'blockParents'},
+    {
+      '1': 'block_parents',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.BlockParent',
+      '10': 'blockParents'
+    },
   ],
 };
 
 /// Descriptor for `GetNextBlockBestParentsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getNextBlockBestParentsResponseDescriptor = $convert.base64Decode(
-    'Ch9HZXROZXh0QmxvY2tCZXN0UGFyZW50c1Jlc3BvbnNlEkAKDWJsb2NrX3BhcmVudHMYASADKA'
-    'syGy5tYXNzYS5tb2RlbC52MS5CbG9ja1BhcmVudFIMYmxvY2tQYXJlbnRz');
+final $typed_data.Uint8List getNextBlockBestParentsResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9HZXROZXh0QmxvY2tCZXN0UGFyZW50c1Jlc3BvbnNlEkAKDWJsb2NrX3BhcmVudHMYASADKA'
+        'syGy5tYXNzYS5tb2RlbC52MS5CbG9ja1BhcmVudFIMYmxvY2tQYXJlbnRz');
 
 @$core.Deprecated('Use getOperationsRequestDescriptor instead')
 const GetOperationsRequest$json = {
@@ -192,7 +262,14 @@ final $typed_data.Uint8List getOperationsRequestDescriptor = $convert.base64Deco
 const GetOperationsResponse$json = {
   '1': 'GetOperationsResponse',
   '2': [
-    {'1': 'wrapped_operations', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.OperationWrapper', '10': 'wrappedOperations'},
+    {
+      '1': 'wrapped_operations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.OperationWrapper',
+      '10': 'wrappedOperations'
+    },
   ],
 };
 
@@ -205,25 +282,70 @@ final $typed_data.Uint8List getOperationsResponseDescriptor = $convert.base64Dec
 const GetScExecutionEventsRequest$json = {
   '1': 'GetScExecutionEventsRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.ScExecutionEventsFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.ScExecutionEventsFilter',
+      '10': 'filters'
+    },
   ],
 };
 
 /// Descriptor for `GetScExecutionEventsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getScExecutionEventsRequestDescriptor = $convert.base64Decode(
-    'ChtHZXRTY0V4ZWN1dGlvbkV2ZW50c1JlcXVlc3QSPwoHZmlsdGVycxgBIAMoCzIlLm1hc3NhLm'
-    'FwaS52MS5TY0V4ZWN1dGlvbkV2ZW50c0ZpbHRlclIHZmlsdGVycw==');
+final $typed_data.Uint8List getScExecutionEventsRequestDescriptor =
+    $convert.base64Decode(
+        'ChtHZXRTY0V4ZWN1dGlvbkV2ZW50c1JlcXVlc3QSPwoHZmlsdGVycxgBIAMoCzIlLm1hc3NhLm'
+        'FwaS52MS5TY0V4ZWN1dGlvbkV2ZW50c0ZpbHRlclIHZmlsdGVycw==');
 
 @$core.Deprecated('Use scExecutionEventsFilterDescriptor instead')
 const ScExecutionEventsFilter$json = {
   '1': 'ScExecutionEventsFilter',
   '2': [
-    {'1': 'slot_range', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SlotRange', '9': 0, '10': 'slotRange'},
-    {'1': 'caller_address', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'callerAddress'},
-    {'1': 'emitter_address', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'emitterAddress'},
-    {'1': 'original_operation_id', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'originalOperationId'},
+    {
+      '1': 'slot_range',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SlotRange',
+      '9': 0,
+      '10': 'slotRange'
+    },
+    {
+      '1': 'caller_address',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'callerAddress'
+    },
+    {
+      '1': 'emitter_address',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'emitterAddress'
+    },
+    {
+      '1': 'original_operation_id',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'originalOperationId'
+    },
     {'1': 'is_failure', '3': 5, '4': 1, '5': 8, '9': 0, '10': 'isFailure'},
-    {'1': 'status', '3': 6, '4': 1, '5': 14, '6': '.massa.model.v1.ScExecutionEventStatus', '9': 0, '10': 'status'},
+    {
+      '1': 'status',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.ScExecutionEventStatus',
+      '9': 0,
+      '10': 'status'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -243,14 +365,22 @@ final $typed_data.Uint8List scExecutionEventsFilterDescriptor = $convert.base64D
 const GetScExecutionEventsResponse$json = {
   '1': 'GetScExecutionEventsResponse',
   '2': [
-    {'1': 'events', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.ScExecutionEvent', '10': 'events'},
+    {
+      '1': 'events',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.ScExecutionEvent',
+      '10': 'events'
+    },
   ],
 };
 
 /// Descriptor for `GetScExecutionEventsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getScExecutionEventsResponseDescriptor = $convert.base64Decode(
-    'ChxHZXRTY0V4ZWN1dGlvbkV2ZW50c1Jlc3BvbnNlEjgKBmV2ZW50cxgBIAMoCzIgLm1hc3NhLm'
-    '1vZGVsLnYxLlNjRXhlY3V0aW9uRXZlbnRSBmV2ZW50cw==');
+final $typed_data.Uint8List getScExecutionEventsResponseDescriptor =
+    $convert.base64Decode(
+        'ChxHZXRTY0V4ZWN1dGlvbkV2ZW50c1Jlc3BvbnNlEjgKBmV2ZW50cxgBIAMoCzIgLm1hc3NhLm'
+        '1vZGVsLnYxLlNjRXhlY3V0aW9uRXZlbnRSBmV2ZW50cw==');
 
 @$core.Deprecated('Use getStatusRequestDescriptor instead')
 const GetStatusRequest$json = {
@@ -258,14 +388,21 @@ const GetStatusRequest$json = {
 };
 
 /// Descriptor for `GetStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getStatusRequestDescriptor = $convert.base64Decode(
-    'ChBHZXRTdGF0dXNSZXF1ZXN0');
+final $typed_data.Uint8List getStatusRequestDescriptor =
+    $convert.base64Decode('ChBHZXRTdGF0dXNSZXF1ZXN0');
 
 @$core.Deprecated('Use getStatusResponseDescriptor instead')
 const GetStatusResponse$json = {
   '1': 'GetStatusResponse',
   '2': [
-    {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.PublicStatus', '10': 'status'},
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.PublicStatus',
+      '10': 'status'
+    },
   ],
 };
 
@@ -278,21 +415,45 @@ final $typed_data.Uint8List getStatusResponseDescriptor = $convert.base64Decode(
 const GetSelectorDrawsRequest$json = {
   '1': 'GetSelectorDrawsRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.SelectorDrawsFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.SelectorDrawsFilter',
+      '10': 'filters'
+    },
   ],
 };
 
 /// Descriptor for `GetSelectorDrawsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getSelectorDrawsRequestDescriptor = $convert.base64Decode(
-    'ChdHZXRTZWxlY3RvckRyYXdzUmVxdWVzdBI7CgdmaWx0ZXJzGAEgAygLMiEubWFzc2EuYXBpLn'
-    'YxLlNlbGVjdG9yRHJhd3NGaWx0ZXJSB2ZpbHRlcnM=');
+final $typed_data.Uint8List getSelectorDrawsRequestDescriptor =
+    $convert.base64Decode(
+        'ChdHZXRTZWxlY3RvckRyYXdzUmVxdWVzdBI7CgdmaWx0ZXJzGAEgAygLMiEubWFzc2EuYXBpLn'
+        'YxLlNlbGVjdG9yRHJhd3NGaWx0ZXJSB2ZpbHRlcnM=');
 
 @$core.Deprecated('Use selectorDrawsFilterDescriptor instead')
 const SelectorDrawsFilter$json = {
   '1': 'SelectorDrawsFilter',
   '2': [
-    {'1': 'addresses', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
-    {'1': 'slot_range', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.SlotRange', '9': 0, '10': 'slotRange'},
+    {
+      '1': 'addresses',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Addresses',
+      '9': 0,
+      '10': 'addresses'
+    },
+    {
+      '1': 'slot_range',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SlotRange',
+      '9': 0,
+      '10': 'slotRange'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -309,20 +470,35 @@ final $typed_data.Uint8List selectorDrawsFilterDescriptor = $convert.base64Decod
 const GetSelectorDrawsResponse$json = {
   '1': 'GetSelectorDrawsResponse',
   '2': [
-    {'1': 'draws', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.SlotDraw', '10': 'draws'},
+    {
+      '1': 'draws',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.SlotDraw',
+      '10': 'draws'
+    },
   ],
 };
 
 /// Descriptor for `GetSelectorDrawsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getSelectorDrawsResponseDescriptor = $convert.base64Decode(
-    'ChhHZXRTZWxlY3RvckRyYXdzUmVzcG9uc2USLgoFZHJhd3MYASADKAsyGC5tYXNzYS5tb2RlbC'
-    '52MS5TbG90RHJhd1IFZHJhd3M=');
+final $typed_data.Uint8List getSelectorDrawsResponseDescriptor =
+    $convert.base64Decode(
+        'ChhHZXRTZWxlY3RvckRyYXdzUmVzcG9uc2USLgoFZHJhd3MYASADKAsyGC5tYXNzYS5tb2RlbC'
+        '52MS5TbG90RHJhd1IFZHJhd3M=');
 
 @$core.Deprecated('Use getStakersRequestDescriptor instead')
 const GetStakersRequest$json = {
   '1': 'GetStakersRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.StakersFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.StakersFilter',
+      '10': 'filters'
+    },
   ],
 };
 
@@ -353,7 +529,14 @@ final $typed_data.Uint8List stakersFilterDescriptor = $convert.base64Decode(
 const GetStakersResponse$json = {
   '1': 'GetStakersResponse',
   '2': [
-    {'1': 'stakers', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.StakerEntry', '10': 'stakers'},
+    {
+      '1': 'stakers',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.StakerEntry',
+      '10': 'stakers'
+    },
   ],
 };
 
@@ -368,8 +551,8 @@ const GetTransactionsThroughputRequest$json = {
 };
 
 /// Descriptor for `GetTransactionsThroughputRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getTransactionsThroughputRequestDescriptor = $convert.base64Decode(
-    'CiBHZXRUcmFuc2FjdGlvbnNUaHJvdWdocHV0UmVxdWVzdA==');
+final $typed_data.Uint8List getTransactionsThroughputRequestDescriptor =
+    $convert.base64Decode('CiBHZXRUcmFuc2FjdGlvbnNUaHJvdWdocHV0UmVxdWVzdA==');
 
 @$core.Deprecated('Use getTransactionsThroughputResponseDescriptor instead')
 const GetTransactionsThroughputResponse$json = {
@@ -380,15 +563,23 @@ const GetTransactionsThroughputResponse$json = {
 };
 
 /// Descriptor for `GetTransactionsThroughputResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getTransactionsThroughputResponseDescriptor = $convert.base64Decode(
-    'CiFHZXRUcmFuc2FjdGlvbnNUaHJvdWdocHV0UmVzcG9uc2USHgoKdGhyb3VnaHB1dBgBIAEoDV'
-    'IKdGhyb3VnaHB1dA==');
+final $typed_data.Uint8List getTransactionsThroughputResponseDescriptor =
+    $convert.base64Decode(
+        'CiFHZXRUcmFuc2FjdGlvbnNUaHJvdWdocHV0UmVzcG9uc2USHgoKdGhyb3VnaHB1dBgBIAEoDV'
+        'IKdGhyb3VnaHB1dA==');
 
 @$core.Deprecated('Use queryStateRequestDescriptor instead')
 const QueryStateRequest$json = {
   '1': 'QueryStateRequest',
   '2': [
-    {'1': 'queries', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.ExecutionQueryRequestItem', '10': 'queries'},
+    {
+      '1': 'queries',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutionQueryRequestItem',
+      '10': 'queries'
+    },
   ],
 };
 
@@ -401,26 +592,186 @@ final $typed_data.Uint8List queryStateRequestDescriptor = $convert.base64Decode(
 const ExecutionQueryRequestItem$json = {
   '1': 'ExecutionQueryRequestItem',
   '2': [
-    {'1': 'address_exists_candidate', '3': 1, '4': 1, '5': 11, '6': '.massa.api.v1.AddressExistsCandidate', '9': 0, '10': 'addressExistsCandidate'},
-    {'1': 'address_exists_final', '3': 2, '4': 1, '5': 11, '6': '.massa.api.v1.AddressExistsFinal', '9': 0, '10': 'addressExistsFinal'},
-    {'1': 'address_balance_candidate', '3': 3, '4': 1, '5': 11, '6': '.massa.api.v1.AddressBalanceCandidate', '9': 0, '10': 'addressBalanceCandidate'},
-    {'1': 'address_balance_final', '3': 4, '4': 1, '5': 11, '6': '.massa.api.v1.AddressBalanceFinal', '9': 0, '10': 'addressBalanceFinal'},
-    {'1': 'address_bytecode_candidate', '3': 5, '4': 1, '5': 11, '6': '.massa.api.v1.AddressBytecodeCandidate', '9': 0, '10': 'addressBytecodeCandidate'},
-    {'1': 'address_bytecode_final', '3': 6, '4': 1, '5': 11, '6': '.massa.api.v1.AddressBytecodeFinal', '9': 0, '10': 'addressBytecodeFinal'},
-    {'1': 'address_datastore_keys_candidate', '3': 7, '4': 1, '5': 11, '6': '.massa.api.v1.AddressDatastoreKeysCandidate', '9': 0, '10': 'addressDatastoreKeysCandidate'},
-    {'1': 'address_datastore_keys_final', '3': 8, '4': 1, '5': 11, '6': '.massa.api.v1.AddressDatastoreKeysFinal', '9': 0, '10': 'addressDatastoreKeysFinal'},
-    {'1': 'address_datastore_value_candidate', '3': 9, '4': 1, '5': 11, '6': '.massa.api.v1.AddressDatastoreValueCandidate', '9': 0, '10': 'addressDatastoreValueCandidate'},
-    {'1': 'address_datastore_value_final', '3': 10, '4': 1, '5': 11, '6': '.massa.api.v1.AddressDatastoreValueFinal', '9': 0, '10': 'addressDatastoreValueFinal'},
-    {'1': 'op_execution_status_candidate', '3': 11, '4': 1, '5': 11, '6': '.massa.api.v1.OpExecutionStatusCandidate', '9': 0, '10': 'opExecutionStatusCandidate'},
-    {'1': 'op_execution_status_final', '3': 12, '4': 1, '5': 11, '6': '.massa.api.v1.OpExecutionStatusFinal', '9': 0, '10': 'opExecutionStatusFinal'},
-    {'1': 'denunciation_execution_status_candidate', '3': 13, '4': 1, '5': 11, '6': '.massa.api.v1.DenunciationExecutionStatusCandidate', '9': 0, '10': 'denunciationExecutionStatusCandidate'},
-    {'1': 'denunciation_execution_status_final', '3': 14, '4': 1, '5': 11, '6': '.massa.api.v1.DenunciationExecutionStatusFinal', '9': 0, '10': 'denunciationExecutionStatusFinal'},
-    {'1': 'address_rolls_candidate', '3': 15, '4': 1, '5': 11, '6': '.massa.api.v1.AddressRollsCandidate', '9': 0, '10': 'addressRollsCandidate'},
-    {'1': 'address_rolls_final', '3': 16, '4': 1, '5': 11, '6': '.massa.api.v1.AddressRollsFinal', '9': 0, '10': 'addressRollsFinal'},
-    {'1': 'address_deferred_credits_candidate', '3': 17, '4': 1, '5': 11, '6': '.massa.api.v1.AddressDeferredCreditsCandidate', '9': 0, '10': 'addressDeferredCreditsCandidate'},
-    {'1': 'address_deferred_credits_final', '3': 18, '4': 1, '5': 11, '6': '.massa.api.v1.AddressDeferredCreditsFinal', '9': 0, '10': 'addressDeferredCreditsFinal'},
-    {'1': 'cycle_infos', '3': 19, '4': 1, '5': 11, '6': '.massa.api.v1.CycleInfos', '9': 0, '10': 'cycleInfos'},
-    {'1': 'events', '3': 20, '4': 1, '5': 11, '6': '.massa.api.v1.Events', '9': 0, '10': 'events'},
+    {
+      '1': 'address_exists_candidate',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressExistsCandidate',
+      '9': 0,
+      '10': 'addressExistsCandidate'
+    },
+    {
+      '1': 'address_exists_final',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressExistsFinal',
+      '9': 0,
+      '10': 'addressExistsFinal'
+    },
+    {
+      '1': 'address_balance_candidate',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressBalanceCandidate',
+      '9': 0,
+      '10': 'addressBalanceCandidate'
+    },
+    {
+      '1': 'address_balance_final',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressBalanceFinal',
+      '9': 0,
+      '10': 'addressBalanceFinal'
+    },
+    {
+      '1': 'address_bytecode_candidate',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressBytecodeCandidate',
+      '9': 0,
+      '10': 'addressBytecodeCandidate'
+    },
+    {
+      '1': 'address_bytecode_final',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressBytecodeFinal',
+      '9': 0,
+      '10': 'addressBytecodeFinal'
+    },
+    {
+      '1': 'address_datastore_keys_candidate',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressDatastoreKeysCandidate',
+      '9': 0,
+      '10': 'addressDatastoreKeysCandidate'
+    },
+    {
+      '1': 'address_datastore_keys_final',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressDatastoreKeysFinal',
+      '9': 0,
+      '10': 'addressDatastoreKeysFinal'
+    },
+    {
+      '1': 'address_datastore_value_candidate',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressDatastoreValueCandidate',
+      '9': 0,
+      '10': 'addressDatastoreValueCandidate'
+    },
+    {
+      '1': 'address_datastore_value_final',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressDatastoreValueFinal',
+      '9': 0,
+      '10': 'addressDatastoreValueFinal'
+    },
+    {
+      '1': 'op_execution_status_candidate',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.OpExecutionStatusCandidate',
+      '9': 0,
+      '10': 'opExecutionStatusCandidate'
+    },
+    {
+      '1': 'op_execution_status_final',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.OpExecutionStatusFinal',
+      '9': 0,
+      '10': 'opExecutionStatusFinal'
+    },
+    {
+      '1': 'denunciation_execution_status_candidate',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.DenunciationExecutionStatusCandidate',
+      '9': 0,
+      '10': 'denunciationExecutionStatusCandidate'
+    },
+    {
+      '1': 'denunciation_execution_status_final',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.DenunciationExecutionStatusFinal',
+      '9': 0,
+      '10': 'denunciationExecutionStatusFinal'
+    },
+    {
+      '1': 'address_rolls_candidate',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressRollsCandidate',
+      '9': 0,
+      '10': 'addressRollsCandidate'
+    },
+    {
+      '1': 'address_rolls_final',
+      '3': 16,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressRollsFinal',
+      '9': 0,
+      '10': 'addressRollsFinal'
+    },
+    {
+      '1': 'address_deferred_credits_candidate',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressDeferredCreditsCandidate',
+      '9': 0,
+      '10': 'addressDeferredCreditsCandidate'
+    },
+    {
+      '1': 'address_deferred_credits_final',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AddressDeferredCreditsFinal',
+      '9': 0,
+      '10': 'addressDeferredCreditsFinal'
+    },
+    {
+      '1': 'cycle_infos',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.CycleInfos',
+      '9': 0,
+      '10': 'cycleInfos'
+    },
+    {
+      '1': 'events',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.Events',
+      '9': 0,
+      '10': 'events'
+    },
   ],
   '8': [
     {'1': 'request_item'},
@@ -477,8 +828,9 @@ const AddressExistsCandidate$json = {
 };
 
 /// Descriptor for `AddressExistsCandidate`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressExistsCandidateDescriptor = $convert.base64Decode(
-    'ChZBZGRyZXNzRXhpc3RzQ2FuZGlkYXRlEhgKB2FkZHJlc3MYASABKAlSB2FkZHJlc3M=');
+final $typed_data.Uint8List addressExistsCandidateDescriptor =
+    $convert.base64Decode(
+        'ChZBZGRyZXNzRXhpc3RzQ2FuZGlkYXRlEhgKB2FkZHJlc3MYASABKAlSB2FkZHJlc3M=');
 
 @$core.Deprecated('Use addressExistsFinalDescriptor instead')
 const AddressExistsFinal$json = {
@@ -489,8 +841,9 @@ const AddressExistsFinal$json = {
 };
 
 /// Descriptor for `AddressExistsFinal`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressExistsFinalDescriptor = $convert.base64Decode(
-    'ChJBZGRyZXNzRXhpc3RzRmluYWwSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw==');
+final $typed_data.Uint8List addressExistsFinalDescriptor =
+    $convert.base64Decode(
+        'ChJBZGRyZXNzRXhpc3RzRmluYWwSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw==');
 
 @$core.Deprecated('Use addressBalanceCandidateDescriptor instead')
 const AddressBalanceCandidate$json = {
@@ -501,8 +854,9 @@ const AddressBalanceCandidate$json = {
 };
 
 /// Descriptor for `AddressBalanceCandidate`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressBalanceCandidateDescriptor = $convert.base64Decode(
-    'ChdBZGRyZXNzQmFsYW5jZUNhbmRpZGF0ZRIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNz');
+final $typed_data.Uint8List addressBalanceCandidateDescriptor =
+    $convert.base64Decode(
+        'ChdBZGRyZXNzQmFsYW5jZUNhbmRpZGF0ZRIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNz');
 
 @$core.Deprecated('Use addressBalanceFinalDescriptor instead')
 const AddressBalanceFinal$json = {
@@ -513,8 +867,9 @@ const AddressBalanceFinal$json = {
 };
 
 /// Descriptor for `AddressBalanceFinal`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressBalanceFinalDescriptor = $convert.base64Decode(
-    'ChNBZGRyZXNzQmFsYW5jZUZpbmFsEhgKB2FkZHJlc3MYASABKAlSB2FkZHJlc3M=');
+final $typed_data.Uint8List addressBalanceFinalDescriptor =
+    $convert.base64Decode(
+        'ChNBZGRyZXNzQmFsYW5jZUZpbmFsEhgKB2FkZHJlc3MYASABKAlSB2FkZHJlc3M=');
 
 @$core.Deprecated('Use addressBytecodeCandidateDescriptor instead')
 const AddressBytecodeCandidate$json = {
@@ -525,8 +880,9 @@ const AddressBytecodeCandidate$json = {
 };
 
 /// Descriptor for `AddressBytecodeCandidate`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressBytecodeCandidateDescriptor = $convert.base64Decode(
-    'ChhBZGRyZXNzQnl0ZWNvZGVDYW5kaWRhdGUSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw==');
+final $typed_data.Uint8List addressBytecodeCandidateDescriptor =
+    $convert.base64Decode(
+        'ChhBZGRyZXNzQnl0ZWNvZGVDYW5kaWRhdGUSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw==');
 
 @$core.Deprecated('Use addressBytecodeFinalDescriptor instead')
 const AddressBytecodeFinal$json = {
@@ -537,8 +893,9 @@ const AddressBytecodeFinal$json = {
 };
 
 /// Descriptor for `AddressBytecodeFinal`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressBytecodeFinalDescriptor = $convert.base64Decode(
-    'ChRBZGRyZXNzQnl0ZWNvZGVGaW5hbBIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNz');
+final $typed_data.Uint8List addressBytecodeFinalDescriptor =
+    $convert.base64Decode(
+        'ChRBZGRyZXNzQnl0ZWNvZGVGaW5hbBIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNz');
 
 @$core.Deprecated('Use addressDatastoreKeysCandidateDescriptor instead')
 const AddressDatastoreKeysCandidate$json = {
@@ -550,9 +907,10 @@ const AddressDatastoreKeysCandidate$json = {
 };
 
 /// Descriptor for `AddressDatastoreKeysCandidate`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressDatastoreKeysCandidateDescriptor = $convert.base64Decode(
-    'Ch1BZGRyZXNzRGF0YXN0b3JlS2V5c0NhbmRpZGF0ZRIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZX'
-    'NzEhYKBnByZWZpeBgCIAEoDFIGcHJlZml4');
+final $typed_data.Uint8List addressDatastoreKeysCandidateDescriptor =
+    $convert.base64Decode(
+        'Ch1BZGRyZXNzRGF0YXN0b3JlS2V5c0NhbmRpZGF0ZRIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZX'
+        'NzEhYKBnByZWZpeBgCIAEoDFIGcHJlZml4');
 
 @$core.Deprecated('Use addressDatastoreKeysFinalDescriptor instead')
 const AddressDatastoreKeysFinal$json = {
@@ -564,9 +922,10 @@ const AddressDatastoreKeysFinal$json = {
 };
 
 /// Descriptor for `AddressDatastoreKeysFinal`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressDatastoreKeysFinalDescriptor = $convert.base64Decode(
-    'ChlBZGRyZXNzRGF0YXN0b3JlS2V5c0ZpbmFsEhgKB2FkZHJlc3MYASABKAlSB2FkZHJlc3MSFg'
-    'oGcHJlZml4GAIgASgMUgZwcmVmaXg=');
+final $typed_data.Uint8List addressDatastoreKeysFinalDescriptor =
+    $convert.base64Decode(
+        'ChlBZGRyZXNzRGF0YXN0b3JlS2V5c0ZpbmFsEhgKB2FkZHJlc3MYASABKAlSB2FkZHJlc3MSFg'
+        'oGcHJlZml4GAIgASgMUgZwcmVmaXg=');
 
 @$core.Deprecated('Use addressDatastoreValueCandidateDescriptor instead')
 const AddressDatastoreValueCandidate$json = {
@@ -578,9 +937,10 @@ const AddressDatastoreValueCandidate$json = {
 };
 
 /// Descriptor for `AddressDatastoreValueCandidate`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressDatastoreValueCandidateDescriptor = $convert.base64Decode(
-    'Ch5BZGRyZXNzRGF0YXN0b3JlVmFsdWVDYW5kaWRhdGUSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcm'
-    'VzcxIQCgNrZXkYAiABKAxSA2tleQ==');
+final $typed_data.Uint8List addressDatastoreValueCandidateDescriptor =
+    $convert.base64Decode(
+        'Ch5BZGRyZXNzRGF0YXN0b3JlVmFsdWVDYW5kaWRhdGUSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcm'
+        'VzcxIQCgNrZXkYAiABKAxSA2tleQ==');
 
 @$core.Deprecated('Use addressDatastoreValueFinalDescriptor instead')
 const AddressDatastoreValueFinal$json = {
@@ -592,9 +952,10 @@ const AddressDatastoreValueFinal$json = {
 };
 
 /// Descriptor for `AddressDatastoreValueFinal`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressDatastoreValueFinalDescriptor = $convert.base64Decode(
-    'ChpBZGRyZXNzRGF0YXN0b3JlVmFsdWVGaW5hbBIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNzEh'
-    'AKA2tleRgCIAEoDFIDa2V5');
+final $typed_data.Uint8List addressDatastoreValueFinalDescriptor =
+    $convert.base64Decode(
+        'ChpBZGRyZXNzRGF0YXN0b3JlVmFsdWVGaW5hbBIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNzEh'
+        'AKA2tleRgCIAEoDFIDa2V5');
 
 @$core.Deprecated('Use opExecutionStatusCandidateDescriptor instead')
 const OpExecutionStatusCandidate$json = {
@@ -605,9 +966,10 @@ const OpExecutionStatusCandidate$json = {
 };
 
 /// Descriptor for `OpExecutionStatusCandidate`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List opExecutionStatusCandidateDescriptor = $convert.base64Decode(
-    'ChpPcEV4ZWN1dGlvblN0YXR1c0NhbmRpZGF0ZRIhCgxvcGVyYXRpb25faWQYASABKAlSC29wZX'
-    'JhdGlvbklk');
+final $typed_data.Uint8List opExecutionStatusCandidateDescriptor =
+    $convert.base64Decode(
+        'ChpPcEV4ZWN1dGlvblN0YXR1c0NhbmRpZGF0ZRIhCgxvcGVyYXRpb25faWQYASABKAlSC29wZX'
+        'JhdGlvbklk');
 
 @$core.Deprecated('Use opExecutionStatusFinalDescriptor instead')
 const OpExecutionStatusFinal$json = {
@@ -618,37 +980,54 @@ const OpExecutionStatusFinal$json = {
 };
 
 /// Descriptor for `OpExecutionStatusFinal`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List opExecutionStatusFinalDescriptor = $convert.base64Decode(
-    'ChZPcEV4ZWN1dGlvblN0YXR1c0ZpbmFsEiEKDG9wZXJhdGlvbl9pZBgBIAEoCVILb3BlcmF0aW'
-    '9uSWQ=');
+final $typed_data.Uint8List opExecutionStatusFinalDescriptor =
+    $convert.base64Decode(
+        'ChZPcEV4ZWN1dGlvblN0YXR1c0ZpbmFsEiEKDG9wZXJhdGlvbl9pZBgBIAEoCVILb3BlcmF0aW'
+        '9uSWQ=');
 
 @$core.Deprecated('Use denunciationExecutionStatusCandidateDescriptor instead')
 const DenunciationExecutionStatusCandidate$json = {
   '1': 'DenunciationExecutionStatusCandidate',
   '2': [
-    {'1': 'denunciation_index', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.DenunciationIndex', '10': 'denunciationIndex'},
+    {
+      '1': 'denunciation_index',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.DenunciationIndex',
+      '10': 'denunciationIndex'
+    },
   ],
 };
 
 /// Descriptor for `DenunciationExecutionStatusCandidate`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List denunciationExecutionStatusCandidateDescriptor = $convert.base64Decode(
-    'CiREZW51bmNpYXRpb25FeGVjdXRpb25TdGF0dXNDYW5kaWRhdGUSUAoSZGVudW5jaWF0aW9uX2'
-    'luZGV4GAEgASgLMiEubWFzc2EubW9kZWwudjEuRGVudW5jaWF0aW9uSW5kZXhSEWRlbnVuY2lh'
-    'dGlvbkluZGV4');
+final $typed_data.Uint8List denunciationExecutionStatusCandidateDescriptor =
+    $convert.base64Decode(
+        'CiREZW51bmNpYXRpb25FeGVjdXRpb25TdGF0dXNDYW5kaWRhdGUSUAoSZGVudW5jaWF0aW9uX2'
+        'luZGV4GAEgASgLMiEubWFzc2EubW9kZWwudjEuRGVudW5jaWF0aW9uSW5kZXhSEWRlbnVuY2lh'
+        'dGlvbkluZGV4');
 
 @$core.Deprecated('Use denunciationExecutionStatusFinalDescriptor instead')
 const DenunciationExecutionStatusFinal$json = {
   '1': 'DenunciationExecutionStatusFinal',
   '2': [
-    {'1': 'denunciation_index', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.DenunciationIndex', '10': 'denunciationIndex'},
+    {
+      '1': 'denunciation_index',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.DenunciationIndex',
+      '10': 'denunciationIndex'
+    },
   ],
 };
 
 /// Descriptor for `DenunciationExecutionStatusFinal`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List denunciationExecutionStatusFinalDescriptor = $convert.base64Decode(
-    'CiBEZW51bmNpYXRpb25FeGVjdXRpb25TdGF0dXNGaW5hbBJQChJkZW51bmNpYXRpb25faW5kZX'
-    'gYASABKAsyIS5tYXNzYS5tb2RlbC52MS5EZW51bmNpYXRpb25JbmRleFIRZGVudW5jaWF0aW9u'
-    'SW5kZXg=');
+final $typed_data.Uint8List denunciationExecutionStatusFinalDescriptor =
+    $convert.base64Decode(
+        'CiBEZW51bmNpYXRpb25FeGVjdXRpb25TdGF0dXNGaW5hbBJQChJkZW51bmNpYXRpb25faW5kZX'
+        'gYASABKAsyIS5tYXNzYS5tb2RlbC52MS5EZW51bmNpYXRpb25JbmRleFIRZGVudW5jaWF0aW9u'
+        'SW5kZXg=');
 
 @$core.Deprecated('Use addressRollsCandidateDescriptor instead')
 const AddressRollsCandidate$json = {
@@ -659,8 +1038,9 @@ const AddressRollsCandidate$json = {
 };
 
 /// Descriptor for `AddressRollsCandidate`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressRollsCandidateDescriptor = $convert.base64Decode(
-    'ChVBZGRyZXNzUm9sbHNDYW5kaWRhdGUSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw==');
+final $typed_data.Uint8List addressRollsCandidateDescriptor =
+    $convert.base64Decode(
+        'ChVBZGRyZXNzUm9sbHNDYW5kaWRhdGUSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw==');
 
 @$core.Deprecated('Use addressRollsFinalDescriptor instead')
 const AddressRollsFinal$json = {
@@ -683,9 +1063,10 @@ const AddressDeferredCreditsCandidate$json = {
 };
 
 /// Descriptor for `AddressDeferredCreditsCandidate`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressDeferredCreditsCandidateDescriptor = $convert.base64Decode(
-    'Ch9BZGRyZXNzRGVmZXJyZWRDcmVkaXRzQ2FuZGlkYXRlEhgKB2FkZHJlc3MYASABKAlSB2FkZH'
-    'Jlc3M=');
+final $typed_data.Uint8List addressDeferredCreditsCandidateDescriptor =
+    $convert.base64Decode(
+        'Ch9BZGRyZXNzRGVmZXJyZWRDcmVkaXRzQ2FuZGlkYXRlEhgKB2FkZHJlc3MYASABKAlSB2FkZH'
+        'Jlc3M=');
 
 @$core.Deprecated('Use addressDeferredCreditsFinalDescriptor instead')
 const AddressDeferredCreditsFinal$json = {
@@ -696,16 +1077,23 @@ const AddressDeferredCreditsFinal$json = {
 };
 
 /// Descriptor for `AddressDeferredCreditsFinal`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressDeferredCreditsFinalDescriptor = $convert.base64Decode(
-    'ChtBZGRyZXNzRGVmZXJyZWRDcmVkaXRzRmluYWwSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw'
-    '==');
+final $typed_data.Uint8List addressDeferredCreditsFinalDescriptor =
+    $convert.base64Decode(
+        'ChtBZGRyZXNzRGVmZXJyZWRDcmVkaXRzRmluYWwSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw'
+        '==');
 
 @$core.Deprecated('Use cycleInfosDescriptor instead')
 const CycleInfos$json = {
   '1': 'CycleInfos',
   '2': [
     {'1': 'cycle', '3': 1, '4': 1, '5': 4, '10': 'cycle'},
-    {'1': 'restrict_to_addresses', '3': 2, '4': 3, '5': 9, '10': 'restrictToAddresses'},
+    {
+      '1': 'restrict_to_addresses',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '10': 'restrictToAddresses'
+    },
   ],
 };
 
@@ -718,7 +1106,14 @@ final $typed_data.Uint8List cycleInfosDescriptor = $convert.base64Decode(
 const Events$json = {
   '1': 'Events',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.ScExecutionEventsFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.ScExecutionEventsFilter',
+      '10': 'filters'
+    },
   ],
 };
 
@@ -731,10 +1126,37 @@ final $typed_data.Uint8List eventsDescriptor = $convert.base64Decode(
 const QueryStateResponse$json = {
   '1': 'QueryStateResponse',
   '2': [
-    {'1': 'final_cursor', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'finalCursor'},
-    {'1': 'candidate_cursor', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'candidateCursor'},
-    {'1': 'final_state_fingerprint', '3': 3, '4': 1, '5': 9, '10': 'finalStateFingerprint'},
-    {'1': 'responses', '3': 4, '4': 3, '5': 11, '6': '.massa.api.v1.ExecutionQueryResponse', '10': 'responses'},
+    {
+      '1': 'final_cursor',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'finalCursor'
+    },
+    {
+      '1': 'candidate_cursor',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'candidateCursor'
+    },
+    {
+      '1': 'final_state_fingerprint',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'finalStateFingerprint'
+    },
+    {
+      '1': 'responses',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutionQueryResponse',
+      '10': 'responses'
+    },
   ],
 };
 
@@ -750,8 +1172,24 @@ final $typed_data.Uint8List queryStateResponseDescriptor = $convert.base64Decode
 const ExecutionQueryResponse$json = {
   '1': 'ExecutionQueryResponse',
   '2': [
-    {'1': 'result', '3': 1, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutionQueryResponseItem', '9': 0, '10': 'result'},
-    {'1': 'error', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Error', '9': 0, '10': 'error'},
+    {
+      '1': 'result',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutionQueryResponseItem',
+      '9': 0,
+      '10': 'result'
+    },
+    {
+      '1': 'error',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Error',
+      '9': 0,
+      '10': 'error'
+    },
   ],
   '8': [
     {'1': 'response'},
@@ -770,13 +1208,61 @@ const ExecutionQueryResponseItem$json = {
   '2': [
     {'1': 'boolean', '3': 1, '4': 1, '5': 8, '9': 0, '10': 'boolean'},
     {'1': 'roll_count', '3': 2, '4': 1, '5': 4, '9': 0, '10': 'rollCount'},
-    {'1': 'amount', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '9': 0, '10': 'amount'},
+    {
+      '1': 'amount',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '9': 0,
+      '10': 'amount'
+    },
     {'1': 'bytes', '3': 4, '4': 1, '5': 12, '9': 0, '10': 'bytes'},
-    {'1': 'vec_bytes', '3': 5, '4': 1, '5': 11, '6': '.massa.model.v1.ArrayOfBytesWrapper', '9': 0, '10': 'vecBytes'},
-    {'1': 'deferred_credits', '3': 6, '4': 1, '5': 11, '6': '.massa.api.v1.DeferredCreditsEntryWrapper', '9': 0, '10': 'deferredCredits'},
-    {'1': 'execution_status', '3': 7, '4': 1, '5': 14, '6': '.massa.api.v1.ExecutionQueryExecutionStatus', '9': 0, '10': 'executionStatus'},
-    {'1': 'cycle_infos', '3': 8, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutionQueryCycleInfos', '9': 0, '10': 'cycleInfos'},
-    {'1': 'events', '3': 9, '4': 1, '5': 11, '6': '.massa.api.v1.ScOutputEventsWrapper', '9': 0, '10': 'events'},
+    {
+      '1': 'vec_bytes',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.ArrayOfBytesWrapper',
+      '9': 0,
+      '10': 'vecBytes'
+    },
+    {
+      '1': 'deferred_credits',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.DeferredCreditsEntryWrapper',
+      '9': 0,
+      '10': 'deferredCredits'
+    },
+    {
+      '1': 'execution_status',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.api.v1.ExecutionQueryExecutionStatus',
+      '9': 0,
+      '10': 'executionStatus'
+    },
+    {
+      '1': 'cycle_infos',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutionQueryCycleInfos',
+      '9': 0,
+      '10': 'cycleInfos'
+    },
+    {
+      '1': 'events',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.ScOutputEventsWrapper',
+      '9': 0,
+      '10': 'events'
+    },
   ],
   '8': [
     {'1': 'response_item'},
@@ -801,21 +1287,43 @@ final $typed_data.Uint8List executionQueryResponseItemDescriptor = $convert.base
 const DeferredCreditsEntryWrapper$json = {
   '1': 'DeferredCreditsEntryWrapper',
   '2': [
-    {'1': 'entries', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.DeferredCreditsEntry', '10': 'entries'},
+    {
+      '1': 'entries',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.DeferredCreditsEntry',
+      '10': 'entries'
+    },
   ],
 };
 
 /// Descriptor for `DeferredCreditsEntryWrapper`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List deferredCreditsEntryWrapperDescriptor = $convert.base64Decode(
-    'ChtEZWZlcnJlZENyZWRpdHNFbnRyeVdyYXBwZXISPAoHZW50cmllcxgBIAMoCzIiLm1hc3NhLm'
-    'FwaS52MS5EZWZlcnJlZENyZWRpdHNFbnRyeVIHZW50cmllcw==');
+final $typed_data.Uint8List deferredCreditsEntryWrapperDescriptor =
+    $convert.base64Decode(
+        'ChtEZWZlcnJlZENyZWRpdHNFbnRyeVdyYXBwZXISPAoHZW50cmllcxgBIAMoCzIiLm1hc3NhLm'
+        'FwaS52MS5EZWZlcnJlZENyZWRpdHNFbnRyeVIHZW50cmllcw==');
 
 @$core.Deprecated('Use deferredCreditsEntryDescriptor instead')
 const DeferredCreditsEntry$json = {
   '1': 'DeferredCreditsEntry',
   '2': [
-    {'1': 'slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
-    {'1': 'amount', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'amount'},
+    {
+      '1': 'slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
+    {
+      '1': 'amount',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'amount'
+    },
   ],
 };
 
@@ -831,7 +1339,14 @@ const ExecutionQueryCycleInfos$json = {
   '2': [
     {'1': 'cycle', '3': 1, '4': 1, '5': 4, '10': 'cycle'},
     {'1': 'is_final', '3': 2, '4': 1, '5': 8, '10': 'isFinal'},
-    {'1': 'staker_infos', '3': 3, '4': 3, '5': 11, '6': '.massa.api.v1.ExecutionQueryStakerInfoEntry', '10': 'stakerInfos'},
+    {
+      '1': 'staker_infos',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutionQueryStakerInfoEntry',
+      '10': 'stakerInfos'
+    },
   ],
 };
 
@@ -846,22 +1361,37 @@ const ExecutionQueryStakerInfoEntry$json = {
   '1': 'ExecutionQueryStakerInfoEntry',
   '2': [
     {'1': 'address', '3': 1, '4': 1, '5': 9, '10': 'address'},
-    {'1': 'info', '3': 2, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutionQueryStakerInfo', '10': 'info'},
+    {
+      '1': 'info',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutionQueryStakerInfo',
+      '10': 'info'
+    },
   ],
 };
 
 /// Descriptor for `ExecutionQueryStakerInfoEntry`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List executionQueryStakerInfoEntryDescriptor = $convert.base64Decode(
-    'Ch1FeGVjdXRpb25RdWVyeVN0YWtlckluZm9FbnRyeRIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZX'
-    'NzEjoKBGluZm8YAiABKAsyJi5tYXNzYS5hcGkudjEuRXhlY3V0aW9uUXVlcnlTdGFrZXJJbmZv'
-    'UgRpbmZv');
+final $typed_data.Uint8List executionQueryStakerInfoEntryDescriptor =
+    $convert.base64Decode(
+        'Ch1FeGVjdXRpb25RdWVyeVN0YWtlckluZm9FbnRyeRIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZX'
+        'NzEjoKBGluZm8YAiABKAsyJi5tYXNzYS5hcGkudjEuRXhlY3V0aW9uUXVlcnlTdGFrZXJJbmZv'
+        'UgRpbmZv');
 
 @$core.Deprecated('Use executionQueryStakerInfoDescriptor instead')
 const ExecutionQueryStakerInfo$json = {
   '1': 'ExecutionQueryStakerInfo',
   '2': [
     {'1': 'active_rolls', '3': 1, '4': 1, '5': 4, '10': 'activeRolls'},
-    {'1': 'production_stats', '3': 2, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutionQueryStakerInfoProductionStatsEntry', '10': 'productionStats'},
+    {
+      '1': 'production_stats',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutionQueryStakerInfoProductionStatsEntry',
+      '10': 'productionStats'
+    },
   ],
 };
 
@@ -871,41 +1401,72 @@ final $typed_data.Uint8List executionQueryStakerInfoDescriptor = $convert.base64
     'VSb2xscxJlChBwcm9kdWN0aW9uX3N0YXRzGAIgASgLMjoubWFzc2EuYXBpLnYxLkV4ZWN1dGlv'
     'blF1ZXJ5U3Rha2VySW5mb1Byb2R1Y3Rpb25TdGF0c0VudHJ5Ug9wcm9kdWN0aW9uU3RhdHM=');
 
-@$core.Deprecated('Use executionQueryStakerInfoProductionStatsEntryDescriptor instead')
+@$core.Deprecated(
+    'Use executionQueryStakerInfoProductionStatsEntryDescriptor instead')
 const ExecutionQueryStakerInfoProductionStatsEntry$json = {
   '1': 'ExecutionQueryStakerInfoProductionStatsEntry',
   '2': [
     {'1': 'address', '3': 1, '4': 1, '5': 9, '10': 'address'},
-    {'1': 'stats', '3': 2, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutionQueryStakerInfoProductionStats', '10': 'stats'},
+    {
+      '1': 'stats',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutionQueryStakerInfoProductionStats',
+      '10': 'stats'
+    },
   ],
 };
 
 /// Descriptor for `ExecutionQueryStakerInfoProductionStatsEntry`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List executionQueryStakerInfoProductionStatsEntryDescriptor = $convert.base64Decode(
-    'CixFeGVjdXRpb25RdWVyeVN0YWtlckluZm9Qcm9kdWN0aW9uU3RhdHNFbnRyeRIYCgdhZGRyZX'
-    'NzGAEgASgJUgdhZGRyZXNzEksKBXN0YXRzGAIgASgLMjUubWFzc2EuYXBpLnYxLkV4ZWN1dGlv'
-    'blF1ZXJ5U3Rha2VySW5mb1Byb2R1Y3Rpb25TdGF0c1IFc3RhdHM=');
+final $typed_data.Uint8List
+    executionQueryStakerInfoProductionStatsEntryDescriptor =
+    $convert.base64Decode(
+        'CixFeGVjdXRpb25RdWVyeVN0YWtlckluZm9Qcm9kdWN0aW9uU3RhdHNFbnRyeRIYCgdhZGRyZX'
+        'NzGAEgASgJUgdhZGRyZXNzEksKBXN0YXRzGAIgASgLMjUubWFzc2EuYXBpLnYxLkV4ZWN1dGlv'
+        'blF1ZXJ5U3Rha2VySW5mb1Byb2R1Y3Rpb25TdGF0c1IFc3RhdHM=');
 
-@$core.Deprecated('Use executionQueryStakerInfoProductionStatsDescriptor instead')
+@$core
+    .Deprecated('Use executionQueryStakerInfoProductionStatsDescriptor instead')
 const ExecutionQueryStakerInfoProductionStats$json = {
   '1': 'ExecutionQueryStakerInfoProductionStats',
   '2': [
-    {'1': 'block_success_count', '3': 1, '4': 1, '5': 4, '10': 'blockSuccessCount'},
-    {'1': 'block_failure_count', '3': 2, '4': 1, '5': 4, '10': 'blockFailureCount'},
+    {
+      '1': 'block_success_count',
+      '3': 1,
+      '4': 1,
+      '5': 4,
+      '10': 'blockSuccessCount'
+    },
+    {
+      '1': 'block_failure_count',
+      '3': 2,
+      '4': 1,
+      '5': 4,
+      '10': 'blockFailureCount'
+    },
   ],
 };
 
 /// Descriptor for `ExecutionQueryStakerInfoProductionStats`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List executionQueryStakerInfoProductionStatsDescriptor = $convert.base64Decode(
-    'CidFeGVjdXRpb25RdWVyeVN0YWtlckluZm9Qcm9kdWN0aW9uU3RhdHMSLgoTYmxvY2tfc3VjY2'
-    'Vzc19jb3VudBgBIAEoBFIRYmxvY2tTdWNjZXNzQ291bnQSLgoTYmxvY2tfZmFpbHVyZV9jb3Vu'
-    'dBgCIAEoBFIRYmxvY2tGYWlsdXJlQ291bnQ=');
+final $typed_data.Uint8List executionQueryStakerInfoProductionStatsDescriptor =
+    $convert.base64Decode(
+        'CidFeGVjdXRpb25RdWVyeVN0YWtlckluZm9Qcm9kdWN0aW9uU3RhdHMSLgoTYmxvY2tfc3VjY2'
+        'Vzc19jb3VudBgBIAEoBFIRYmxvY2tTdWNjZXNzQ291bnQSLgoTYmxvY2tfZmFpbHVyZV9jb3Vu'
+        'dBgCIAEoBFIRYmxvY2tGYWlsdXJlQ291bnQ=');
 
 @$core.Deprecated('Use scOutputEventsWrapperDescriptor instead')
 const ScOutputEventsWrapper$json = {
   '1': 'ScOutputEventsWrapper',
   '2': [
-    {'1': 'events', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.ScExecutionEvent', '10': 'events'},
+    {
+      '1': 'events',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.ScExecutionEvent',
+      '10': 'events'
+    },
   ],
 };
 
@@ -918,7 +1479,14 @@ final $typed_data.Uint8List scOutputEventsWrapperDescriptor = $convert.base64Dec
 const NewBlocksRequest$json = {
   '1': 'NewBlocksRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.NewBlocksFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.NewBlocksFilter',
+      '10': 'filters'
+    },
   ],
 };
 
@@ -931,9 +1499,33 @@ final $typed_data.Uint8List newBlocksRequestDescriptor = $convert.base64Decode(
 const NewBlocksFilter$json = {
   '1': 'NewBlocksFilter',
   '2': [
-    {'1': 'block_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.BlockIds', '9': 0, '10': 'blockIds'},
-    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
-    {'1': 'slot_range', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.SlotRange', '9': 0, '10': 'slotRange'},
+    {
+      '1': 'block_ids',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.BlockIds',
+      '9': 0,
+      '10': 'blockIds'
+    },
+    {
+      '1': 'addresses',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Addresses',
+      '9': 0,
+      '10': 'addresses'
+    },
+    {
+      '1': 'slot_range',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SlotRange',
+      '9': 0,
+      '10': 'slotRange'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -951,7 +1543,14 @@ final $typed_data.Uint8List newBlocksFilterDescriptor = $convert.base64Decode(
 const NewBlocksResponse$json = {
   '1': 'NewBlocksResponse',
   '2': [
-    {'1': 'signed_block', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SignedBlock', '10': 'signedBlock'},
+    {
+      '1': 'signed_block',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SignedBlock',
+      '10': 'signedBlock'
+    },
   ],
 };
 
@@ -964,22 +1563,54 @@ final $typed_data.Uint8List newBlocksResponseDescriptor = $convert.base64Decode(
 const NewEndorsementsRequest$json = {
   '1': 'NewEndorsementsRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.NewEndorsementsFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.NewEndorsementsFilter',
+      '10': 'filters'
+    },
   ],
 };
 
 /// Descriptor for `NewEndorsementsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List newEndorsementsRequestDescriptor = $convert.base64Decode(
-    'ChZOZXdFbmRvcnNlbWVudHNSZXF1ZXN0Ej0KB2ZpbHRlcnMYASADKAsyIy5tYXNzYS5hcGkudj'
-    'EuTmV3RW5kb3JzZW1lbnRzRmlsdGVyUgdmaWx0ZXJz');
+final $typed_data.Uint8List newEndorsementsRequestDescriptor =
+    $convert.base64Decode(
+        'ChZOZXdFbmRvcnNlbWVudHNSZXF1ZXN0Ej0KB2ZpbHRlcnMYASADKAsyIy5tYXNzYS5hcGkudj'
+        'EuTmV3RW5kb3JzZW1lbnRzRmlsdGVyUgdmaWx0ZXJz');
 
 @$core.Deprecated('Use newEndorsementsFilterDescriptor instead')
 const NewEndorsementsFilter$json = {
   '1': 'NewEndorsementsFilter',
   '2': [
-    {'1': 'endorsement_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.EndorsementIds', '9': 0, '10': 'endorsementIds'},
-    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
-    {'1': 'block_ids', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.BlockIds', '9': 0, '10': 'blockIds'},
+    {
+      '1': 'endorsement_ids',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.EndorsementIds',
+      '9': 0,
+      '10': 'endorsementIds'
+    },
+    {
+      '1': 'addresses',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Addresses',
+      '9': 0,
+      '10': 'addresses'
+    },
+    {
+      '1': 'block_ids',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.BlockIds',
+      '9': 0,
+      '10': 'blockIds'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -998,7 +1629,14 @@ final $typed_data.Uint8List newEndorsementsFilterDescriptor = $convert.base64Dec
 const NewEndorsementsResponse$json = {
   '1': 'NewEndorsementsResponse',
   '2': [
-    {'1': 'signed_endorsement', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SignedEndorsement', '10': 'signedEndorsement'},
+    {
+      '1': 'signed_endorsement',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SignedEndorsement',
+      '10': 'signedEndorsement'
+    },
   ],
 };
 
@@ -1011,22 +1649,54 @@ final $typed_data.Uint8List newEndorsementsResponseDescriptor = $convert.base64D
 const NewFilledBlocksRequest$json = {
   '1': 'NewFilledBlocksRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.NewBlocksFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.NewBlocksFilter',
+      '10': 'filters'
+    },
   ],
 };
 
 /// Descriptor for `NewFilledBlocksRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List newFilledBlocksRequestDescriptor = $convert.base64Decode(
-    'ChZOZXdGaWxsZWRCbG9ja3NSZXF1ZXN0EjcKB2ZpbHRlcnMYASADKAsyHS5tYXNzYS5hcGkudj'
-    'EuTmV3QmxvY2tzRmlsdGVyUgdmaWx0ZXJz');
+final $typed_data.Uint8List newFilledBlocksRequestDescriptor =
+    $convert.base64Decode(
+        'ChZOZXdGaWxsZWRCbG9ja3NSZXF1ZXN0EjcKB2ZpbHRlcnMYASADKAsyHS5tYXNzYS5hcGkudj'
+        'EuTmV3QmxvY2tzRmlsdGVyUgdmaWx0ZXJz');
 
 @$core.Deprecated('Use newFilledBlocksFilterDescriptor instead')
 const NewFilledBlocksFilter$json = {
   '1': 'NewFilledBlocksFilter',
   '2': [
-    {'1': 'block_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.BlockIds', '9': 0, '10': 'blockIds'},
-    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
-    {'1': 'slot_range', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.SlotRange', '9': 0, '10': 'slotRange'},
+    {
+      '1': 'block_ids',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.BlockIds',
+      '9': 0,
+      '10': 'blockIds'
+    },
+    {
+      '1': 'addresses',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Addresses',
+      '9': 0,
+      '10': 'addresses'
+    },
+    {
+      '1': 'slot_range',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SlotRange',
+      '9': 0,
+      '10': 'slotRange'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -1044,20 +1714,35 @@ final $typed_data.Uint8List newFilledBlocksFilterDescriptor = $convert.base64Dec
 const NewFilledBlocksResponse$json = {
   '1': 'NewFilledBlocksResponse',
   '2': [
-    {'1': 'filled_block', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.FilledBlock', '10': 'filledBlock'},
+    {
+      '1': 'filled_block',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.FilledBlock',
+      '10': 'filledBlock'
+    },
   ],
 };
 
 /// Descriptor for `NewFilledBlocksResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List newFilledBlocksResponseDescriptor = $convert.base64Decode(
-    'ChdOZXdGaWxsZWRCbG9ja3NSZXNwb25zZRI+CgxmaWxsZWRfYmxvY2sYASABKAsyGy5tYXNzYS'
-    '5tb2RlbC52MS5GaWxsZWRCbG9ja1ILZmlsbGVkQmxvY2s=');
+final $typed_data.Uint8List newFilledBlocksResponseDescriptor =
+    $convert.base64Decode(
+        'ChdOZXdGaWxsZWRCbG9ja3NSZXNwb25zZRI+CgxmaWxsZWRfYmxvY2sYASABKAsyGy5tYXNzYS'
+        '5tb2RlbC52MS5GaWxsZWRCbG9ja1ILZmlsbGVkQmxvY2s=');
 
 @$core.Deprecated('Use newOperationsRequestDescriptor instead')
 const NewOperationsRequest$json = {
   '1': 'NewOperationsRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.NewOperationsFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.NewOperationsFilter',
+      '10': 'filters'
+    },
   ],
 };
 
@@ -1070,9 +1755,33 @@ final $typed_data.Uint8List newOperationsRequestDescriptor = $convert.base64Deco
 const NewOperationsFilter$json = {
   '1': 'NewOperationsFilter',
   '2': [
-    {'1': 'operation_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.OperationIds', '9': 0, '10': 'operationIds'},
-    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
-    {'1': 'operation_types', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.OpTypes', '9': 0, '10': 'operationTypes'},
+    {
+      '1': 'operation_ids',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.OperationIds',
+      '9': 0,
+      '10': 'operationIds'
+    },
+    {
+      '1': 'addresses',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Addresses',
+      '9': 0,
+      '10': 'addresses'
+    },
+    {
+      '1': 'operation_types',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.OpTypes',
+      '9': 0,
+      '10': 'operationTypes'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -1091,7 +1800,14 @@ final $typed_data.Uint8List newOperationsFilterDescriptor = $convert.base64Decod
 const NewOperationsResponse$json = {
   '1': 'NewOperationsResponse',
   '2': [
-    {'1': 'signed_operation', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SignedOperation', '10': 'signedOperation'},
+    {
+      '1': 'signed_operation',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SignedOperation',
+      '10': 'signedOperation'
+    },
   ],
 };
 
@@ -1104,26 +1820,90 @@ final $typed_data.Uint8List newOperationsResponseDescriptor = $convert.base64Dec
 const NewSlotExecutionOutputsRequest$json = {
   '1': 'NewSlotExecutionOutputsRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.NewSlotExecutionOutputsFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.NewSlotExecutionOutputsFilter',
+      '10': 'filters'
+    },
   ],
 };
 
 /// Descriptor for `NewSlotExecutionOutputsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List newSlotExecutionOutputsRequestDescriptor = $convert.base64Decode(
-    'Ch5OZXdTbG90RXhlY3V0aW9uT3V0cHV0c1JlcXVlc3QSRQoHZmlsdGVycxgBIAMoCzIrLm1hc3'
-    'NhLmFwaS52MS5OZXdTbG90RXhlY3V0aW9uT3V0cHV0c0ZpbHRlclIHZmlsdGVycw==');
+final $typed_data.Uint8List newSlotExecutionOutputsRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5OZXdTbG90RXhlY3V0aW9uT3V0cHV0c1JlcXVlc3QSRQoHZmlsdGVycxgBIAMoCzIrLm1hc3'
+        'NhLmFwaS52MS5OZXdTbG90RXhlY3V0aW9uT3V0cHV0c0ZpbHRlclIHZmlsdGVycw==');
 
 @$core.Deprecated('Use newSlotExecutionOutputsFilterDescriptor instead')
 const NewSlotExecutionOutputsFilter$json = {
   '1': 'NewSlotExecutionOutputsFilter',
   '2': [
-    {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.ExecutionOutputStatus', '9': 0, '10': 'status'},
-    {'1': 'slot_range', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.SlotRange', '9': 0, '10': 'slotRange'},
-    {'1': 'async_pool_changes_filter', '3': 3, '4': 1, '5': 11, '6': '.massa.api.v1.AsyncPoolChangesFilter', '9': 0, '10': 'asyncPoolChangesFilter'},
-    {'1': 'executed_denounciation_filter', '3': 4, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutedDenounciationFilter', '9': 0, '10': 'executedDenounciationFilter'},
-    {'1': 'event_filter', '3': 5, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutionEventFilter', '9': 0, '10': 'eventFilter'},
-    {'1': 'executed_ops_changes_filter', '3': 6, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutedOpsChangesFilter', '9': 0, '10': 'executedOpsChangesFilter'},
-    {'1': 'ledger_changes_filter', '3': 7, '4': 1, '5': 11, '6': '.massa.api.v1.LedgerChangesFilter', '9': 0, '10': 'ledgerChangesFilter'},
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.ExecutionOutputStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'slot_range',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SlotRange',
+      '9': 0,
+      '10': 'slotRange'
+    },
+    {
+      '1': 'async_pool_changes_filter',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.AsyncPoolChangesFilter',
+      '9': 0,
+      '10': 'asyncPoolChangesFilter'
+    },
+    {
+      '1': 'executed_denounciation_filter',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutedDenounciationFilter',
+      '9': 0,
+      '10': 'executedDenounciationFilter'
+    },
+    {
+      '1': 'event_filter',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutionEventFilter',
+      '9': 0,
+      '10': 'eventFilter'
+    },
+    {
+      '1': 'executed_ops_changes_filter',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.ExecutedOpsChangesFilter',
+      '9': 0,
+      '10': 'executedOpsChangesFilter'
+    },
+    {
+      '1': 'ledger_changes_filter',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.api.v1.LedgerChangesFilter',
+      '9': 0,
+      '10': 'ledgerChangesFilter'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -1149,12 +1929,49 @@ final $typed_data.Uint8List newSlotExecutionOutputsFilterDescriptor = $convert.b
 const AsyncPoolChangesFilter$json = {
   '1': 'AsyncPoolChangesFilter',
   '2': [
-    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
-    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.massa.model.v1.AsyncPoolChangeType', '9': 0, '10': 'type'},
+    {
+      '1': 'none',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'none'
+    },
+    {
+      '1': 'type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.AsyncPoolChangeType',
+      '9': 0,
+      '10': 'type'
+    },
     {'1': 'handler', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'handler'},
-    {'1': 'destination_address', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'destinationAddress'},
-    {'1': 'emitter_address', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'emitterAddress'},
-    {'1': 'can_be_executed', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'canBeExecuted'},
+    {
+      '1': 'destination_address',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'destinationAddress'
+    },
+    {
+      '1': 'emitter_address',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'emitterAddress'
+    },
+    {
+      '1': 'can_be_executed',
+      '3': 6,
+      '4': 1,
+      '5': 8,
+      '9': 0,
+      '10': 'canBeExecuted'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -1174,7 +1991,15 @@ final $typed_data.Uint8List asyncPoolChangesFilterDescriptor = $convert.base64De
 const PosChangesFilter$json = {
   '1': 'PosChangesFilter',
   '2': [
-    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
+    {
+      '1': 'none',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'none'
+    },
     {'1': 'address', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'address'},
   ],
   '8': [
@@ -1191,10 +2016,39 @@ final $typed_data.Uint8List posChangesFilterDescriptor = $convert.base64Decode(
 const ExecutionEventFilter$json = {
   '1': 'ExecutionEventFilter',
   '2': [
-    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
-    {'1': 'caller_address', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'callerAddress'},
-    {'1': 'emitter_address', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'emitterAddress'},
-    {'1': 'original_operation_id', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'originalOperationId'},
+    {
+      '1': 'none',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'none'
+    },
+    {
+      '1': 'caller_address',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'callerAddress'
+    },
+    {
+      '1': 'emitter_address',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'emitterAddress'
+    },
+    {
+      '1': 'original_operation_id',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'originalOperationId'
+    },
     {'1': 'is_failure', '3': 5, '4': 1, '5': 8, '9': 0, '10': 'isFailure'},
   ],
   '8': [
@@ -1214,7 +2068,15 @@ final $typed_data.Uint8List executionEventFilterDescriptor = $convert.base64Deco
 const ExecutedOpsChangesFilter$json = {
   '1': 'ExecutedOpsChangesFilter',
   '2': [
-    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
+    {
+      '1': 'none',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'none'
+    },
     {'1': 'operation_id', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'operationId'},
   ],
   '8': [
@@ -1232,7 +2094,15 @@ final $typed_data.Uint8List executedOpsChangesFilterDescriptor = $convert.base64
 const ExecutedDenounciationFilter$json = {
   '1': 'ExecutedDenounciationFilter',
   '2': [
-    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
+    {
+      '1': 'none',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'none'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -1240,15 +2110,24 @@ const ExecutedDenounciationFilter$json = {
 };
 
 /// Descriptor for `ExecutedDenounciationFilter`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List executedDenounciationFilterDescriptor = $convert.base64Decode(
-    'ChtFeGVjdXRlZERlbm91bmNpYXRpb25GaWx0ZXISKwoEbm9uZRgBIAEoCzIVLm1hc3NhLm1vZG'
-    'VsLnYxLkVtcHR5SABSBG5vbmVCCAoGZmlsdGVy');
+final $typed_data.Uint8List executedDenounciationFilterDescriptor =
+    $convert.base64Decode(
+        'ChtFeGVjdXRlZERlbm91bmNpYXRpb25GaWx0ZXISKwoEbm9uZRgBIAEoCzIVLm1hc3NhLm1vZG'
+        'VsLnYxLkVtcHR5SABSBG5vbmVCCAoGZmlsdGVy');
 
 @$core.Deprecated('Use ledgerChangesFilterDescriptor instead')
 const LedgerChangesFilter$json = {
   '1': 'LedgerChangesFilter',
   '2': [
-    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
+    {
+      '1': 'none',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'none'
+    },
     {'1': 'address', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'address'},
   ],
   '8': [
@@ -1265,14 +2144,22 @@ final $typed_data.Uint8List ledgerChangesFilterDescriptor = $convert.base64Decod
 const NewSlotExecutionOutputsResponse$json = {
   '1': 'NewSlotExecutionOutputsResponse',
   '2': [
-    {'1': 'output', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SlotExecutionOutput', '10': 'output'},
+    {
+      '1': 'output',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SlotExecutionOutput',
+      '10': 'output'
+    },
   ],
 };
 
 /// Descriptor for `NewSlotExecutionOutputsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List newSlotExecutionOutputsResponseDescriptor = $convert.base64Decode(
-    'Ch9OZXdTbG90RXhlY3V0aW9uT3V0cHV0c1Jlc3BvbnNlEjsKBm91dHB1dBgBIAEoCzIjLm1hc3'
-    'NhLm1vZGVsLnYxLlNsb3RFeGVjdXRpb25PdXRwdXRSBm91dHB1dA==');
+final $typed_data.Uint8List newSlotExecutionOutputsResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9OZXdTbG90RXhlY3V0aW9uT3V0cHV0c1Jlc3BvbnNlEjsKBm91dHB1dBgBIAEoCzIjLm1hc3'
+        'NhLm1vZGVsLnYxLlNsb3RFeGVjdXRpb25PdXRwdXRSBm91dHB1dA==');
 
 @$core.Deprecated('Use sendBlocksRequestDescriptor instead')
 const SendBlocksRequest$json = {
@@ -1283,15 +2170,23 @@ const SendBlocksRequest$json = {
 };
 
 /// Descriptor for `SendBlocksRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List sendBlocksRequestDescriptor = $convert.base64Decode(
-    'ChFTZW5kQmxvY2tzUmVxdWVzdBIUCgVibG9jaxgBIAEoDFIFYmxvY2s=');
+final $typed_data.Uint8List sendBlocksRequestDescriptor = $convert
+    .base64Decode('ChFTZW5kQmxvY2tzUmVxdWVzdBIUCgVibG9jaxgBIAEoDFIFYmxvY2s=');
 
 @$core.Deprecated('Use sendBlocksResponseDescriptor instead')
 const SendBlocksResponse$json = {
   '1': 'SendBlocksResponse',
   '2': [
     {'1': 'block_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'blockId'},
-    {'1': 'error', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Error', '9': 0, '10': 'error'},
+    {
+      '1': 'error',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Error',
+      '9': 0,
+      '10': 'error'
+    },
   ],
   '8': [
     {'1': 'result'},
@@ -1312,16 +2207,33 @@ const SendEndorsementsRequest$json = {
 };
 
 /// Descriptor for `SendEndorsementsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List sendEndorsementsRequestDescriptor = $convert.base64Decode(
-    'ChdTZW5kRW5kb3JzZW1lbnRzUmVxdWVzdBIiCgxlbmRvcnNlbWVudHMYASADKAxSDGVuZG9yc2'
-    'VtZW50cw==');
+final $typed_data.Uint8List sendEndorsementsRequestDescriptor =
+    $convert.base64Decode(
+        'ChdTZW5kRW5kb3JzZW1lbnRzUmVxdWVzdBIiCgxlbmRvcnNlbWVudHMYASADKAxSDGVuZG9yc2'
+        'VtZW50cw==');
 
 @$core.Deprecated('Use sendEndorsementsResponseDescriptor instead')
 const SendEndorsementsResponse$json = {
   '1': 'SendEndorsementsResponse',
   '2': [
-    {'1': 'endorsement_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.EndorsementIds', '9': 0, '10': 'endorsementIds'},
-    {'1': 'error', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Error', '9': 0, '10': 'error'},
+    {
+      '1': 'endorsement_ids',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.EndorsementIds',
+      '9': 0,
+      '10': 'endorsementIds'
+    },
+    {
+      '1': 'error',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Error',
+      '9': 0,
+      '10': 'error'
+    },
   ],
   '8': [
     {'1': 'result'},
@@ -1351,8 +2263,24 @@ final $typed_data.Uint8List sendOperationsRequestDescriptor = $convert.base64Dec
 const SendOperationsResponse$json = {
   '1': 'SendOperationsResponse',
   '2': [
-    {'1': 'operation_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.OperationIds', '9': 0, '10': 'operationIds'},
-    {'1': 'error', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Error', '9': 0, '10': 'error'},
+    {
+      '1': 'operation_ids',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.OperationIds',
+      '9': 0,
+      '10': 'operationIds'
+    },
+    {
+      '1': 'error',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Error',
+      '9': 0,
+      '10': 'error'
+    },
   ],
   '8': [
     {'1': 'result'},
@@ -1369,14 +2297,22 @@ final $typed_data.Uint8List sendOperationsResponseDescriptor = $convert.base64De
 const TransactionsThroughputRequest$json = {
   '1': 'TransactionsThroughputRequest',
   '2': [
-    {'1': 'interval', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.UInt64Value', '10': 'interval'},
+    {
+      '1': 'interval',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.UInt64Value',
+      '10': 'interval'
+    },
   ],
 };
 
 /// Descriptor for `TransactionsThroughputRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List transactionsThroughputRequestDescriptor = $convert.base64Decode(
-    'Ch1UcmFuc2FjdGlvbnNUaHJvdWdocHV0UmVxdWVzdBI4CghpbnRlcnZhbBgBIAEoCzIcLmdvb2'
-    'dsZS5wcm90b2J1Zi5VSW50NjRWYWx1ZVIIaW50ZXJ2YWw=');
+final $typed_data.Uint8List transactionsThroughputRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1UcmFuc2FjdGlvbnNUaHJvdWdocHV0UmVxdWVzdBI4CghpbnRlcnZhbBgBIAEoCzIcLmdvb2'
+        'dsZS5wcm90b2J1Zi5VSW50NjRWYWx1ZVIIaW50ZXJ2YWw=');
 
 @$core.Deprecated('Use transactionsThroughputResponseDescriptor instead')
 const TransactionsThroughputResponse$json = {
@@ -1387,15 +2323,23 @@ const TransactionsThroughputResponse$json = {
 };
 
 /// Descriptor for `TransactionsThroughputResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List transactionsThroughputResponseDescriptor = $convert.base64Decode(
-    'Ch5UcmFuc2FjdGlvbnNUaHJvdWdocHV0UmVzcG9uc2USHgoKdGhyb3VnaHB1dBgBIAEoDVIKdG'
-    'hyb3VnaHB1dA==');
+final $typed_data.Uint8List transactionsThroughputResponseDescriptor =
+    $convert.base64Decode(
+        'Ch5UcmFuc2FjdGlvbnNUaHJvdWdocHV0UmVzcG9uc2USHgoKdGhyb3VnaHB1dBgBIAEoDVIKdG'
+        'hyb3VnaHB1dA==');
 
 @$core.Deprecated('Use searchBlocksRequestDescriptor instead')
 const SearchBlocksRequest$json = {
   '1': 'SearchBlocksRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.SearchBlocksFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.SearchBlocksFilter',
+      '10': 'filters'
+    },
   ],
 };
 
@@ -1408,9 +2352,33 @@ final $typed_data.Uint8List searchBlocksRequestDescriptor = $convert.base64Decod
 const SearchBlocksFilter$json = {
   '1': 'SearchBlocksFilter',
   '2': [
-    {'1': 'block_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.BlockIds', '9': 0, '10': 'blockIds'},
-    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
-    {'1': 'slot_range', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.SlotRange', '9': 0, '10': 'slotRange'},
+    {
+      '1': 'block_ids',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.BlockIds',
+      '9': 0,
+      '10': 'blockIds'
+    },
+    {
+      '1': 'addresses',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Addresses',
+      '9': 0,
+      '10': 'addresses'
+    },
+    {
+      '1': 'slot_range',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SlotRange',
+      '9': 0,
+      '10': 'slotRange'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -1428,7 +2396,14 @@ final $typed_data.Uint8List searchBlocksFilterDescriptor = $convert.base64Decode
 const SearchBlocksResponse$json = {
   '1': 'SearchBlocksResponse',
   '2': [
-    {'1': 'block_infos', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.BlockInfo', '10': 'blockInfos'},
+    {
+      '1': 'block_infos',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.BlockInfo',
+      '10': 'blockInfos'
+    },
   ],
 };
 
@@ -1441,22 +2416,54 @@ final $typed_data.Uint8List searchBlocksResponseDescriptor = $convert.base64Deco
 const SearchEndorsementsRequest$json = {
   '1': 'SearchEndorsementsRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.SearchEndorsementsFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.SearchEndorsementsFilter',
+      '10': 'filters'
+    },
   ],
 };
 
 /// Descriptor for `SearchEndorsementsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List searchEndorsementsRequestDescriptor = $convert.base64Decode(
-    'ChlTZWFyY2hFbmRvcnNlbWVudHNSZXF1ZXN0EkAKB2ZpbHRlcnMYASADKAsyJi5tYXNzYS5hcG'
-    'kudjEuU2VhcmNoRW5kb3JzZW1lbnRzRmlsdGVyUgdmaWx0ZXJz');
+final $typed_data.Uint8List searchEndorsementsRequestDescriptor =
+    $convert.base64Decode(
+        'ChlTZWFyY2hFbmRvcnNlbWVudHNSZXF1ZXN0EkAKB2ZpbHRlcnMYASADKAsyJi5tYXNzYS5hcG'
+        'kudjEuU2VhcmNoRW5kb3JzZW1lbnRzRmlsdGVyUgdmaWx0ZXJz');
 
 @$core.Deprecated('Use searchEndorsementsFilterDescriptor instead')
 const SearchEndorsementsFilter$json = {
   '1': 'SearchEndorsementsFilter',
   '2': [
-    {'1': 'endorsement_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.EndorsementIds', '9': 0, '10': 'endorsementIds'},
-    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
-    {'1': 'block_ids', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.BlockIds', '9': 0, '10': 'blockIds'},
+    {
+      '1': 'endorsement_ids',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.EndorsementIds',
+      '9': 0,
+      '10': 'endorsementIds'
+    },
+    {
+      '1': 'addresses',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Addresses',
+      '9': 0,
+      '10': 'addresses'
+    },
+    {
+      '1': 'block_ids',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.BlockIds',
+      '9': 0,
+      '10': 'blockIds'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -1475,34 +2482,66 @@ final $typed_data.Uint8List searchEndorsementsFilterDescriptor = $convert.base64
 const SearchEndorsementsResponse$json = {
   '1': 'SearchEndorsementsResponse',
   '2': [
-    {'1': 'endorsement_infos', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.EndorsementInfo', '10': 'endorsementInfos'},
+    {
+      '1': 'endorsement_infos',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.EndorsementInfo',
+      '10': 'endorsementInfos'
+    },
   ],
 };
 
 /// Descriptor for `SearchEndorsementsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List searchEndorsementsResponseDescriptor = $convert.base64Decode(
-    'ChpTZWFyY2hFbmRvcnNlbWVudHNSZXNwb25zZRJMChFlbmRvcnNlbWVudF9pbmZvcxgBIAMoCz'
-    'IfLm1hc3NhLm1vZGVsLnYxLkVuZG9yc2VtZW50SW5mb1IQZW5kb3JzZW1lbnRJbmZvcw==');
+final $typed_data.Uint8List searchEndorsementsResponseDescriptor =
+    $convert.base64Decode(
+        'ChpTZWFyY2hFbmRvcnNlbWVudHNSZXNwb25zZRJMChFlbmRvcnNlbWVudF9pbmZvcxgBIAMoCz'
+        'IfLm1hc3NhLm1vZGVsLnYxLkVuZG9yc2VtZW50SW5mb1IQZW5kb3JzZW1lbnRJbmZvcw==');
 
 @$core.Deprecated('Use searchOperationsRequestDescriptor instead')
 const SearchOperationsRequest$json = {
   '1': 'SearchOperationsRequest',
   '2': [
-    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.SearchOperationsFilter', '10': 'filters'},
+    {
+      '1': 'filters',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.api.v1.SearchOperationsFilter',
+      '10': 'filters'
+    },
   ],
 };
 
 /// Descriptor for `SearchOperationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List searchOperationsRequestDescriptor = $convert.base64Decode(
-    'ChdTZWFyY2hPcGVyYXRpb25zUmVxdWVzdBI+CgdmaWx0ZXJzGAEgAygLMiQubWFzc2EuYXBpLn'
-    'YxLlNlYXJjaE9wZXJhdGlvbnNGaWx0ZXJSB2ZpbHRlcnM=');
+final $typed_data.Uint8List searchOperationsRequestDescriptor =
+    $convert.base64Decode(
+        'ChdTZWFyY2hPcGVyYXRpb25zUmVxdWVzdBI+CgdmaWx0ZXJzGAEgAygLMiQubWFzc2EuYXBpLn'
+        'YxLlNlYXJjaE9wZXJhdGlvbnNGaWx0ZXJSB2ZpbHRlcnM=');
 
 @$core.Deprecated('Use searchOperationsFilterDescriptor instead')
 const SearchOperationsFilter$json = {
   '1': 'SearchOperationsFilter',
   '2': [
-    {'1': 'operation_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.OperationIds', '9': 0, '10': 'operationIds'},
-    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
+    {
+      '1': 'operation_ids',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.OperationIds',
+      '9': 0,
+      '10': 'operationIds'
+    },
+    {
+      '1': 'addresses',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Addresses',
+      '9': 0,
+      '10': 'addresses'
+    },
   ],
   '8': [
     {'1': 'filter'},
@@ -1519,12 +2558,19 @@ final $typed_data.Uint8List searchOperationsFilterDescriptor = $convert.base64De
 const SearchOperationsResponse$json = {
   '1': 'SearchOperationsResponse',
   '2': [
-    {'1': 'operation_infos', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.OperationInfo', '10': 'operationInfos'},
+    {
+      '1': 'operation_infos',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.OperationInfo',
+      '10': 'operationInfos'
+    },
   ],
 };
 
 /// Descriptor for `SearchOperationsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List searchOperationsResponseDescriptor = $convert.base64Decode(
-    'ChhTZWFyY2hPcGVyYXRpb25zUmVzcG9uc2USRgoPb3BlcmF0aW9uX2luZm9zGAEgAygLMh0ubW'
-    'Fzc2EubW9kZWwudjEuT3BlcmF0aW9uSW5mb1IOb3BlcmF0aW9uSW5mb3M=');
-
+final $typed_data.Uint8List searchOperationsResponseDescriptor =
+    $convert.base64Decode(
+        'ChhTZWFyY2hPcGVyYXRpb25zUmVzcG9uc2USRgoPb3BlcmF0aW9uX2luZm9zGAEgAygLMh0ubW'
+        'Fzc2EubW9kZWwudjEuT3BlcmF0aW9uSW5mb1IOb3BlcmF0aW9uSW5mb3M=');

@@ -22,8 +22,8 @@ const Error$json = {
 };
 
 /// Descriptor for `Error`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List errorDescriptor = $convert.base64Decode(
-    'CgVFcnJvchIYCgdtZXNzYWdlGAEgASgJUgdtZXNzYWdl');
+final $typed_data.Uint8List errorDescriptor =
+    $convert.base64Decode('CgVFcnJvchIYCgdtZXNzYWdlGAEgASgJUgdtZXNzYWdl');
 
 @$core.Deprecated('Use createScRequestDescriptor instead')
 const CreateScRequest$json = {
@@ -54,9 +54,22 @@ const CallRequest$json = {
   '1': 'CallRequest',
   '2': [
     {'1': 'target_sc_address', '3': 1, '4': 1, '5': 9, '10': 'targetScAddress'},
-    {'1': 'target_function_name', '3': 2, '4': 1, '5': 9, '10': 'targetFunctionName'},
+    {
+      '1': 'target_function_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'targetFunctionName'
+    },
     {'1': 'function_arg', '3': 3, '4': 1, '5': 12, '10': 'functionArg'},
-    {'1': 'call_coins', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'callCoins'},
+    {
+      '1': 'call_coins',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'callCoins'
+    },
   ],
 };
 
@@ -76,15 +89,21 @@ const CallResponse$json = {
 };
 
 /// Descriptor for `CallResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List callResponseDescriptor = $convert.base64Decode(
-    'CgxDYWxsUmVzcG9uc2USEgoEZGF0YRgBIAEoDFIEZGF0YQ==');
+final $typed_data.Uint8List callResponseDescriptor =
+    $convert.base64Decode('CgxDYWxsUmVzcG9uc2USEgoEZGF0YRgBIAEoDFIEZGF0YQ==');
 
 @$core.Deprecated('Use localExecutionRequestDescriptor instead')
 const LocalExecutionRequest$json = {
   '1': 'LocalExecutionRequest',
   '2': [
     {'1': 'bytecode', '3': 1, '4': 1, '5': 12, '10': 'bytecode'},
-    {'1': 'target_function_name', '3': 2, '4': 1, '5': 9, '10': 'targetFunctionName'},
+    {
+      '1': 'target_function_name',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'targetFunctionName'
+    },
     {'1': 'function_arg', '3': 3, '4': 1, '5': 12, '10': 'functionArg'},
   ],
 };
@@ -104,8 +123,9 @@ const LocalExecutionResponse$json = {
 };
 
 /// Descriptor for `LocalExecutionResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List localExecutionResponseDescriptor = $convert.base64Decode(
-    'ChZMb2NhbEV4ZWN1dGlvblJlc3BvbnNlEhIKBGRhdGEYASABKAxSBGRhdGE=');
+final $typed_data.Uint8List localExecutionResponseDescriptor =
+    $convert.base64Decode(
+        'ChZMb2NhbEV4ZWN1dGlvblJlc3BvbnNlEhIKBGRhdGEYASABKAxSBGRhdGE=');
 
 @$core.Deprecated('Use generateEventRequestDescriptor instead')
 const GenerateEventRequest$json = {
@@ -116,8 +136,9 @@ const GenerateEventRequest$json = {
 };
 
 /// Descriptor for `GenerateEventRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List generateEventRequestDescriptor = $convert.base64Decode(
-    'ChRHZW5lcmF0ZUV2ZW50UmVxdWVzdBIUCgVldmVudBgBIAEoDFIFZXZlbnQ=');
+final $typed_data.Uint8List generateEventRequestDescriptor =
+    $convert.base64Decode(
+        'ChRHZW5lcmF0ZUV2ZW50UmVxdWVzdBIUCgVldmVudBgBIAEoDFIFZXZlbnQ=');
 
 @$core.Deprecated('Use generateEventResultDescriptor instead')
 const GenerateEventResult$json = {
@@ -125,16 +146,32 @@ const GenerateEventResult$json = {
 };
 
 /// Descriptor for `GenerateEventResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List generateEventResultDescriptor = $convert.base64Decode(
-    'ChNHZW5lcmF0ZUV2ZW50UmVzdWx0');
+final $typed_data.Uint8List generateEventResultDescriptor =
+    $convert.base64Decode('ChNHZW5lcmF0ZUV2ZW50UmVzdWx0');
 
 @$core.Deprecated('Use transferCoinsRequestDescriptor instead')
 const TransferCoinsRequest$json = {
   '1': 'TransferCoinsRequest',
   '2': [
     {'1': 'target_address', '3': 1, '4': 1, '5': 9, '10': 'targetAddress'},
-    {'1': 'amount_to_transfer', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'amountToTransfer'},
-    {'1': 'sender_address', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'senderAddress', '17': true},
+    {
+      '1': 'amount_to_transfer',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'amountToTransfer'
+    },
+    {
+      '1': 'sender_address',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'senderAddress',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_sender_address'},
@@ -155,8 +192,8 @@ const TransferCoinsResult$json = {
 };
 
 /// Descriptor for `TransferCoinsResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List transferCoinsResultDescriptor = $convert.base64Decode(
-    'ChNUcmFuc2ZlckNvaW5zUmVzdWx0');
+final $typed_data.Uint8List transferCoinsResultDescriptor =
+    $convert.base64Decode('ChNUcmFuc2ZlckNvaW5zUmVzdWx0');
 
 @$core.Deprecated('Use functionExistsRequestDescriptor instead')
 const FunctionExistsRequest$json = {
@@ -181,75 +218,572 @@ const FunctionExistsResult$json = {
 };
 
 /// Descriptor for `FunctionExistsResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List functionExistsResultDescriptor = $convert.base64Decode(
-    'ChRGdW5jdGlvbkV4aXN0c1Jlc3VsdBIWCgZleGlzdHMYASABKAhSBmV4aXN0cw==');
+final $typed_data.Uint8List functionExistsResultDescriptor =
+    $convert.base64Decode(
+        'ChRGdW5jdGlvbkV4aXN0c1Jlc3VsdBIWCgZleGlzdHMYASABKAhSBmV4aXN0cw==');
 
 @$core.Deprecated('Use respResultDescriptor instead')
 const RespResult$json = {
   '1': 'RespResult',
   '2': [
-    {'1': 'add_native_amount_result', '3': 1, '4': 1, '5': 11, '6': '.massa.abi.v1.AddNativeAmountResult', '9': 0, '10': 'addNativeAmountResult'},
-    {'1': 'address_from_pub_key_result', '3': 2, '4': 1, '5': 11, '6': '.massa.abi.v1.AddressFromPubKeyResult', '9': 0, '10': 'addressFromPubKeyResult'},
-    {'1': 'append_ds_value_result', '3': 3, '4': 1, '5': 11, '6': '.massa.abi.v1.AppendDsValueResult', '9': 0, '10': 'appendDsValueResult'},
-    {'1': 'base58_check_to_bytes_result', '3': 4, '4': 1, '5': 11, '6': '.massa.abi.v1.Base58CheckToBytesResult', '9': 0, '10': 'base58CheckToBytesResult'},
-    {'1': 'bytes_to_base58_check_result', '3': 5, '4': 1, '5': 11, '6': '.massa.abi.v1.BytesToBase58CheckResult', '9': 0, '10': 'bytesToBase58CheckResult'},
-    {'1': 'caller_has_write_access_result', '3': 6, '4': 1, '5': 11, '6': '.massa.abi.v1.CallerHasWriteAccessResult', '9': 0, '10': 'callerHasWriteAccessResult'},
-    {'1': 'check_address_result', '3': 7, '4': 1, '5': 11, '6': '.massa.abi.v1.CheckAddressResult', '9': 0, '10': 'checkAddressResult'},
-    {'1': 'check_native_amount_result', '3': 8, '4': 1, '5': 11, '6': '.massa.abi.v1.CheckNativeAmountResult', '9': 0, '10': 'checkNativeAmountResult'},
-    {'1': 'check_pub_key_result', '3': 9, '4': 1, '5': 11, '6': '.massa.abi.v1.CheckPubKeyResult', '9': 0, '10': 'checkPubKeyResult'},
-    {'1': 'check_sig_result', '3': 10, '4': 1, '5': 11, '6': '.massa.abi.v1.CheckSigResult', '9': 0, '10': 'checkSigResult'},
-    {'1': 'checked_add_native_time_result', '3': 11, '4': 1, '5': 11, '6': '.massa.abi.v1.CheckedAddNativeTimeResult', '9': 0, '10': 'checkedAddNativeTimeResult'},
-    {'1': 'checked_div_rem_native_time_result', '3': 12, '4': 1, '5': 11, '6': '.massa.abi.v1.CheckedDivRemNativeTimeResult', '9': 0, '10': 'checkedDivRemNativeTimeResult'},
-    {'1': 'checked_scalar_div_rem_native_time_result', '3': 13, '4': 1, '5': 11, '6': '.massa.abi.v1.CheckedScalarDivRemNativeTimeResult', '9': 0, '10': 'checkedScalarDivRemNativeTimeResult'},
-    {'1': 'checked_scalar_mul_native_time_result', '3': 14, '4': 1, '5': 11, '6': '.massa.abi.v1.CheckedScalarMulNativeTimeResult', '9': 0, '10': 'checkedScalarMulNativeTimeResult'},
-    {'1': 'checked_sub_native_time_result', '3': 15, '4': 1, '5': 11, '6': '.massa.abi.v1.CheckedSubNativeTimeResult', '9': 0, '10': 'checkedSubNativeTimeResult'},
-    {'1': 'compare_address_result', '3': 16, '4': 1, '5': 11, '6': '.massa.abi.v1.CompareAddressResult', '9': 0, '10': 'compareAddressResult'},
-    {'1': 'compare_native_amount_result', '3': 17, '4': 1, '5': 11, '6': '.massa.abi.v1.CompareNativeAmountResult', '9': 0, '10': 'compareNativeAmountResult'},
-    {'1': 'compare_native_time_result', '3': 18, '4': 1, '5': 11, '6': '.massa.abi.v1.CompareNativeTimeResult', '9': 0, '10': 'compareNativeTimeResult'},
-    {'1': 'compare_pub_key_result', '3': 19, '4': 1, '5': 11, '6': '.massa.abi.v1.ComparePubKeyResult', '9': 0, '10': 'comparePubKeyResult'},
-    {'1': 'create_sc_result', '3': 20, '4': 1, '5': 11, '6': '.massa.abi.v1.CreateScResult', '9': 0, '10': 'createScResult'},
-    {'1': 'delete_ds_entry_result', '3': 21, '4': 1, '5': 11, '6': '.massa.abi.v1.DeleteDsEntryResult', '9': 0, '10': 'deleteDsEntryResult'},
-    {'1': 'div_rem_native_amount_result', '3': 22, '4': 1, '5': 11, '6': '.massa.abi.v1.DivRemNativeAmountResult', '9': 0, '10': 'divRemNativeAmountResult'},
-    {'1': 'ds_entry_exists_result', '3': 23, '4': 1, '5': 11, '6': '.massa.abi.v1.DsEntryExistsResult', '9': 0, '10': 'dsEntryExistsResult'},
-    {'1': 'function_exists_result', '3': 24, '4': 1, '5': 11, '6': '.massa.abi.v1.FunctionExistsResult', '9': 0, '10': 'functionExistsResult'},
-    {'1': 'generate_event_result', '3': 25, '4': 1, '5': 11, '6': '.massa.abi.v1.GenerateEventResult', '9': 0, '10': 'generateEventResult'},
-    {'1': 'get_address_category_result', '3': 26, '4': 1, '5': 11, '6': '.massa.abi.v1.GetAddressCategoryResult', '9': 0, '10': 'getAddressCategoryResult'},
-    {'1': 'get_address_version_result', '3': 27, '4': 1, '5': 11, '6': '.massa.abi.v1.GetAddressVersionResult', '9': 0, '10': 'getAddressVersionResult'},
-    {'1': 'get_balance_result', '3': 28, '4': 1, '5': 11, '6': '.massa.abi.v1.GetBalanceResult', '9': 0, '10': 'getBalanceResult'},
-    {'1': 'get_bytecode_result', '3': 29, '4': 1, '5': 11, '6': '.massa.abi.v1.GetBytecodeResult', '9': 0, '10': 'getBytecodeResult'},
-    {'1': 'get_call_coins_result', '3': 30, '4': 1, '5': 11, '6': '.massa.abi.v1.GetCallCoinsResult', '9': 0, '10': 'getCallCoinsResult'},
-    {'1': 'get_call_stack_result', '3': 31, '4': 1, '5': 11, '6': '.massa.abi.v1.GetCallStackResult', '9': 0, '10': 'getCallStackResult'},
-    {'1': 'get_current_slot_result', '3': 32, '4': 1, '5': 11, '6': '.massa.abi.v1.GetCurrentSlotResult', '9': 0, '10': 'getCurrentSlotResult'},
-    {'1': 'get_ds_keys_result', '3': 33, '4': 1, '5': 11, '6': '.massa.abi.v1.GetDsKeysResult', '9': 0, '10': 'getDsKeysResult'},
-    {'1': 'get_ds_value_result', '3': 34, '4': 1, '5': 11, '6': '.massa.abi.v1.GetDsValueResult', '9': 0, '10': 'getDsValueResult'},
-    {'1': 'get_native_time_result', '3': 35, '4': 1, '5': 11, '6': '.massa.abi.v1.GetNativeTimeResult', '9': 0, '10': 'getNativeTimeResult'},
-    {'1': 'get_op_data_result', '3': 36, '4': 1, '5': 11, '6': '.massa.abi.v1.GetOpDataResult', '9': 0, '10': 'getOpDataResult'},
-    {'1': 'get_op_keys_result', '3': 37, '4': 1, '5': 11, '6': '.massa.abi.v1.GetOpKeysResult', '9': 0, '10': 'getOpKeysResult'},
-    {'1': 'get_origin_operation_id_result', '3': 38, '4': 1, '5': 11, '6': '.massa.abi.v1.GetOriginOperationIdResult', '9': 0, '10': 'getOriginOperationIdResult'},
-    {'1': 'get_owned_addresses_result', '3': 39, '4': 1, '5': 11, '6': '.massa.abi.v1.GetOwnedAddressesResult', '9': 0, '10': 'getOwnedAddressesResult'},
-    {'1': 'get_pub_key_version_result', '3': 40, '4': 1, '5': 11, '6': '.massa.abi.v1.GetPubKeyVersionResult', '9': 0, '10': 'getPubKeyVersionResult'},
-    {'1': 'get_remaining_gas_result', '3': 41, '4': 1, '5': 11, '6': '.massa.abi.v1.GetRemainingGasResult', '9': 0, '10': 'getRemainingGasResult'},
-    {'1': 'get_signature_version_result', '3': 42, '4': 1, '5': 11, '6': '.massa.abi.v1.GetSignatureVersionResult', '9': 0, '10': 'getSignatureVersionResult'},
-    {'1': 'hash_blake3_result', '3': 43, '4': 1, '5': 11, '6': '.massa.abi.v1.HashBlake3Result', '9': 0, '10': 'hashBlake3Result'},
-    {'1': 'hash_sha256_result', '3': 44, '4': 1, '5': 11, '6': '.massa.abi.v1.HashSha256Result', '9': 0, '10': 'hashSha256Result'},
-    {'1': 'op_entry_exists_result', '3': 45, '4': 1, '5': 11, '6': '.massa.abi.v1.OpEntryExistsResult', '9': 0, '10': 'opEntryExistsResult'},
-    {'1': 'keccak256_result', '3': 46, '4': 1, '5': 11, '6': '.massa.abi.v1.Keccak256Result', '9': 0, '10': 'keccak256Result'},
-    {'1': 'local_execution_response', '3': 47, '4': 1, '5': 11, '6': '.massa.abi.v1.LocalExecutionResponse', '9': 0, '10': 'localExecutionResponse'},
-    {'1': 'native_amount_from_string_result', '3': 48, '4': 1, '5': 11, '6': '.massa.abi.v1.NativeAmountFromStringResult', '9': 0, '10': 'nativeAmountFromStringResult'},
-    {'1': 'native_amount_to_string_result', '3': 49, '4': 1, '5': 11, '6': '.massa.abi.v1.NativeAmountToStringResult', '9': 0, '10': 'nativeAmountToStringResult'},
-    {'1': 'scalar_div_rem_native_amount_result', '3': 50, '4': 1, '5': 11, '6': '.massa.abi.v1.ScalarDivRemNativeAmountResult', '9': 0, '10': 'scalarDivRemNativeAmountResult'},
-    {'1': 'scalar_mul_native_amount_result', '3': 51, '4': 1, '5': 11, '6': '.massa.abi.v1.ScalarMulNativeAmountResult', '9': 0, '10': 'scalarMulNativeAmountResult'},
-    {'1': 'send_async_message_result', '3': 52, '4': 1, '5': 11, '6': '.massa.abi.v1.SendAsyncMessageResult', '9': 0, '10': 'sendAsyncMessageResult'},
-    {'1': 'set_bytecode_result', '3': 53, '4': 1, '5': 11, '6': '.massa.abi.v1.SetBytecodeResult', '9': 0, '10': 'setBytecodeResult'},
-    {'1': 'set_ds_value_result', '3': 54, '4': 1, '5': 11, '6': '.massa.abi.v1.SetDsValueResult', '9': 0, '10': 'setDsValueResult'},
-    {'1': 'sub_native_amount_result', '3': 55, '4': 1, '5': 11, '6': '.massa.abi.v1.SubNativeAmountResult', '9': 0, '10': 'subNativeAmountResult'},
-    {'1': 'transfer_coins_result', '3': 56, '4': 1, '5': 11, '6': '.massa.abi.v1.TransferCoinsResult', '9': 0, '10': 'transferCoinsResult'},
-    {'1': 'unsafe_random_result', '3': 57, '4': 1, '5': 11, '6': '.massa.abi.v1.UnsafeRandomResult', '9': 0, '10': 'unsafeRandomResult'},
-    {'1': 'evm_verify_sig_result', '3': 58, '4': 1, '5': 11, '6': '.massa.abi.v1.EvmVerifySigResult', '9': 0, '10': 'evmVerifySigResult'},
-    {'1': 'verify_sig_result', '3': 59, '4': 1, '5': 11, '6': '.massa.abi.v1.VerifySigResult', '9': 0, '10': 'verifySigResult'},
-    {'1': 'evm_get_address_from_pubkey_result', '3': 60, '4': 1, '5': 11, '6': '.massa.abi.v1.EvmGetAddressFromPubkeyResult', '9': 0, '10': 'evmGetAddressFromPubkeyResult'},
-    {'1': 'evm_get_pubkey_from_signature_result', '3': 61, '4': 1, '5': 11, '6': '.massa.abi.v1.EvmGetPubkeyFromSignatureResult', '9': 0, '10': 'evmGetPubkeyFromSignatureResult'},
-    {'1': 'is_address_eoa_result', '3': 62, '4': 1, '5': 11, '6': '.massa.abi.v1.IsAddressEoaResult', '9': 0, '10': 'isAddressEoaResult'},
+    {
+      '1': 'add_native_amount_result',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.AddNativeAmountResult',
+      '9': 0,
+      '10': 'addNativeAmountResult'
+    },
+    {
+      '1': 'address_from_pub_key_result',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.AddressFromPubKeyResult',
+      '9': 0,
+      '10': 'addressFromPubKeyResult'
+    },
+    {
+      '1': 'append_ds_value_result',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.AppendDsValueResult',
+      '9': 0,
+      '10': 'appendDsValueResult'
+    },
+    {
+      '1': 'base58_check_to_bytes_result',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.Base58CheckToBytesResult',
+      '9': 0,
+      '10': 'base58CheckToBytesResult'
+    },
+    {
+      '1': 'bytes_to_base58_check_result',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.BytesToBase58CheckResult',
+      '9': 0,
+      '10': 'bytesToBase58CheckResult'
+    },
+    {
+      '1': 'caller_has_write_access_result',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CallerHasWriteAccessResult',
+      '9': 0,
+      '10': 'callerHasWriteAccessResult'
+    },
+    {
+      '1': 'check_address_result',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CheckAddressResult',
+      '9': 0,
+      '10': 'checkAddressResult'
+    },
+    {
+      '1': 'check_native_amount_result',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CheckNativeAmountResult',
+      '9': 0,
+      '10': 'checkNativeAmountResult'
+    },
+    {
+      '1': 'check_pub_key_result',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CheckPubKeyResult',
+      '9': 0,
+      '10': 'checkPubKeyResult'
+    },
+    {
+      '1': 'check_sig_result',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CheckSigResult',
+      '9': 0,
+      '10': 'checkSigResult'
+    },
+    {
+      '1': 'checked_add_native_time_result',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CheckedAddNativeTimeResult',
+      '9': 0,
+      '10': 'checkedAddNativeTimeResult'
+    },
+    {
+      '1': 'checked_div_rem_native_time_result',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CheckedDivRemNativeTimeResult',
+      '9': 0,
+      '10': 'checkedDivRemNativeTimeResult'
+    },
+    {
+      '1': 'checked_scalar_div_rem_native_time_result',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CheckedScalarDivRemNativeTimeResult',
+      '9': 0,
+      '10': 'checkedScalarDivRemNativeTimeResult'
+    },
+    {
+      '1': 'checked_scalar_mul_native_time_result',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CheckedScalarMulNativeTimeResult',
+      '9': 0,
+      '10': 'checkedScalarMulNativeTimeResult'
+    },
+    {
+      '1': 'checked_sub_native_time_result',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CheckedSubNativeTimeResult',
+      '9': 0,
+      '10': 'checkedSubNativeTimeResult'
+    },
+    {
+      '1': 'compare_address_result',
+      '3': 16,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CompareAddressResult',
+      '9': 0,
+      '10': 'compareAddressResult'
+    },
+    {
+      '1': 'compare_native_amount_result',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CompareNativeAmountResult',
+      '9': 0,
+      '10': 'compareNativeAmountResult'
+    },
+    {
+      '1': 'compare_native_time_result',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CompareNativeTimeResult',
+      '9': 0,
+      '10': 'compareNativeTimeResult'
+    },
+    {
+      '1': 'compare_pub_key_result',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.ComparePubKeyResult',
+      '9': 0,
+      '10': 'comparePubKeyResult'
+    },
+    {
+      '1': 'create_sc_result',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.CreateScResult',
+      '9': 0,
+      '10': 'createScResult'
+    },
+    {
+      '1': 'delete_ds_entry_result',
+      '3': 21,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.DeleteDsEntryResult',
+      '9': 0,
+      '10': 'deleteDsEntryResult'
+    },
+    {
+      '1': 'div_rem_native_amount_result',
+      '3': 22,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.DivRemNativeAmountResult',
+      '9': 0,
+      '10': 'divRemNativeAmountResult'
+    },
+    {
+      '1': 'ds_entry_exists_result',
+      '3': 23,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.DsEntryExistsResult',
+      '9': 0,
+      '10': 'dsEntryExistsResult'
+    },
+    {
+      '1': 'function_exists_result',
+      '3': 24,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.FunctionExistsResult',
+      '9': 0,
+      '10': 'functionExistsResult'
+    },
+    {
+      '1': 'generate_event_result',
+      '3': 25,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GenerateEventResult',
+      '9': 0,
+      '10': 'generateEventResult'
+    },
+    {
+      '1': 'get_address_category_result',
+      '3': 26,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetAddressCategoryResult',
+      '9': 0,
+      '10': 'getAddressCategoryResult'
+    },
+    {
+      '1': 'get_address_version_result',
+      '3': 27,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetAddressVersionResult',
+      '9': 0,
+      '10': 'getAddressVersionResult'
+    },
+    {
+      '1': 'get_balance_result',
+      '3': 28,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetBalanceResult',
+      '9': 0,
+      '10': 'getBalanceResult'
+    },
+    {
+      '1': 'get_bytecode_result',
+      '3': 29,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetBytecodeResult',
+      '9': 0,
+      '10': 'getBytecodeResult'
+    },
+    {
+      '1': 'get_call_coins_result',
+      '3': 30,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetCallCoinsResult',
+      '9': 0,
+      '10': 'getCallCoinsResult'
+    },
+    {
+      '1': 'get_call_stack_result',
+      '3': 31,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetCallStackResult',
+      '9': 0,
+      '10': 'getCallStackResult'
+    },
+    {
+      '1': 'get_current_slot_result',
+      '3': 32,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetCurrentSlotResult',
+      '9': 0,
+      '10': 'getCurrentSlotResult'
+    },
+    {
+      '1': 'get_ds_keys_result',
+      '3': 33,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetDsKeysResult',
+      '9': 0,
+      '10': 'getDsKeysResult'
+    },
+    {
+      '1': 'get_ds_value_result',
+      '3': 34,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetDsValueResult',
+      '9': 0,
+      '10': 'getDsValueResult'
+    },
+    {
+      '1': 'get_native_time_result',
+      '3': 35,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetNativeTimeResult',
+      '9': 0,
+      '10': 'getNativeTimeResult'
+    },
+    {
+      '1': 'get_op_data_result',
+      '3': 36,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetOpDataResult',
+      '9': 0,
+      '10': 'getOpDataResult'
+    },
+    {
+      '1': 'get_op_keys_result',
+      '3': 37,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetOpKeysResult',
+      '9': 0,
+      '10': 'getOpKeysResult'
+    },
+    {
+      '1': 'get_origin_operation_id_result',
+      '3': 38,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetOriginOperationIdResult',
+      '9': 0,
+      '10': 'getOriginOperationIdResult'
+    },
+    {
+      '1': 'get_owned_addresses_result',
+      '3': 39,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetOwnedAddressesResult',
+      '9': 0,
+      '10': 'getOwnedAddressesResult'
+    },
+    {
+      '1': 'get_pub_key_version_result',
+      '3': 40,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetPubKeyVersionResult',
+      '9': 0,
+      '10': 'getPubKeyVersionResult'
+    },
+    {
+      '1': 'get_remaining_gas_result',
+      '3': 41,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetRemainingGasResult',
+      '9': 0,
+      '10': 'getRemainingGasResult'
+    },
+    {
+      '1': 'get_signature_version_result',
+      '3': 42,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.GetSignatureVersionResult',
+      '9': 0,
+      '10': 'getSignatureVersionResult'
+    },
+    {
+      '1': 'hash_blake3_result',
+      '3': 43,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.HashBlake3Result',
+      '9': 0,
+      '10': 'hashBlake3Result'
+    },
+    {
+      '1': 'hash_sha256_result',
+      '3': 44,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.HashSha256Result',
+      '9': 0,
+      '10': 'hashSha256Result'
+    },
+    {
+      '1': 'op_entry_exists_result',
+      '3': 45,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.OpEntryExistsResult',
+      '9': 0,
+      '10': 'opEntryExistsResult'
+    },
+    {
+      '1': 'keccak256_result',
+      '3': 46,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.Keccak256Result',
+      '9': 0,
+      '10': 'keccak256Result'
+    },
+    {
+      '1': 'local_execution_response',
+      '3': 47,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.LocalExecutionResponse',
+      '9': 0,
+      '10': 'localExecutionResponse'
+    },
+    {
+      '1': 'native_amount_from_string_result',
+      '3': 48,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.NativeAmountFromStringResult',
+      '9': 0,
+      '10': 'nativeAmountFromStringResult'
+    },
+    {
+      '1': 'native_amount_to_string_result',
+      '3': 49,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.NativeAmountToStringResult',
+      '9': 0,
+      '10': 'nativeAmountToStringResult'
+    },
+    {
+      '1': 'scalar_div_rem_native_amount_result',
+      '3': 50,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.ScalarDivRemNativeAmountResult',
+      '9': 0,
+      '10': 'scalarDivRemNativeAmountResult'
+    },
+    {
+      '1': 'scalar_mul_native_amount_result',
+      '3': 51,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.ScalarMulNativeAmountResult',
+      '9': 0,
+      '10': 'scalarMulNativeAmountResult'
+    },
+    {
+      '1': 'send_async_message_result',
+      '3': 52,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.SendAsyncMessageResult',
+      '9': 0,
+      '10': 'sendAsyncMessageResult'
+    },
+    {
+      '1': 'set_bytecode_result',
+      '3': 53,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.SetBytecodeResult',
+      '9': 0,
+      '10': 'setBytecodeResult'
+    },
+    {
+      '1': 'set_ds_value_result',
+      '3': 54,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.SetDsValueResult',
+      '9': 0,
+      '10': 'setDsValueResult'
+    },
+    {
+      '1': 'sub_native_amount_result',
+      '3': 55,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.SubNativeAmountResult',
+      '9': 0,
+      '10': 'subNativeAmountResult'
+    },
+    {
+      '1': 'transfer_coins_result',
+      '3': 56,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.TransferCoinsResult',
+      '9': 0,
+      '10': 'transferCoinsResult'
+    },
+    {
+      '1': 'unsafe_random_result',
+      '3': 57,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.UnsafeRandomResult',
+      '9': 0,
+      '10': 'unsafeRandomResult'
+    },
+    {
+      '1': 'evm_verify_sig_result',
+      '3': 58,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.EvmVerifySigResult',
+      '9': 0,
+      '10': 'evmVerifySigResult'
+    },
+    {
+      '1': 'verify_sig_result',
+      '3': 59,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.VerifySigResult',
+      '9': 0,
+      '10': 'verifySigResult'
+    },
+    {
+      '1': 'evm_get_address_from_pubkey_result',
+      '3': 60,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.EvmGetAddressFromPubkeyResult',
+      '9': 0,
+      '10': 'evmGetAddressFromPubkeyResult'
+    },
+    {
+      '1': 'evm_get_pubkey_from_signature_result',
+      '3': 61,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.EvmGetPubkeyFromSignatureResult',
+      '9': 0,
+      '10': 'evmGetPubkeyFromSignatureResult'
+    },
+    {
+      '1': 'is_address_eoa_result',
+      '3': 62,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.IsAddressEoaResult',
+      '9': 0,
+      '10': 'isAddressEoaResult'
+    },
   ],
   '8': [
     {'1': 'res'},
@@ -372,8 +906,24 @@ final $typed_data.Uint8List respResultDescriptor = $convert.base64Decode(
 const AbiResponse$json = {
   '1': 'AbiResponse',
   '2': [
-    {'1': 'res', '3': 1, '4': 1, '5': 11, '6': '.massa.abi.v1.RespResult', '9': 0, '10': 'res'},
-    {'1': 'error', '3': 2, '4': 1, '5': 11, '6': '.massa.abi.v1.Error', '9': 0, '10': 'error'},
+    {
+      '1': 'res',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.RespResult',
+      '9': 0,
+      '10': 'res'
+    },
+    {
+      '1': 'error',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.Error',
+      '9': 0,
+      '10': 'error'
+    },
   ],
   '8': [
     {'1': 'resp'},
@@ -390,14 +940,22 @@ final $typed_data.Uint8List abiResponseDescriptor = $convert.base64Decode(
 const NativeAmountToStringRequest$json = {
   '1': 'NativeAmountToStringRequest',
   '2': [
-    {'1': 'to_convert', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'toConvert'},
+    {
+      '1': 'to_convert',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'toConvert'
+    },
   ],
 };
 
 /// Descriptor for `NativeAmountToStringRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List nativeAmountToStringRequestDescriptor = $convert.base64Decode(
-    'ChtOYXRpdmVBbW91bnRUb1N0cmluZ1JlcXVlc3QSOwoKdG9fY29udmVydBgBIAEoCzIcLm1hc3'
-    'NhLm1vZGVsLnYxLk5hdGl2ZUFtb3VudFIJdG9Db252ZXJ0');
+final $typed_data.Uint8List nativeAmountToStringRequestDescriptor =
+    $convert.base64Decode(
+        'ChtOYXRpdmVBbW91bnRUb1N0cmluZ1JlcXVlc3QSOwoKdG9fY29udmVydBgBIAEoCzIcLm1hc3'
+        'NhLm1vZGVsLnYxLk5hdGl2ZUFtb3VudFIJdG9Db252ZXJ0');
 
 @$core.Deprecated('Use nativeAmountToStringResultDescriptor instead')
 const NativeAmountToStringResult$json = {
@@ -408,9 +966,10 @@ const NativeAmountToStringResult$json = {
 };
 
 /// Descriptor for `NativeAmountToStringResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List nativeAmountToStringResultDescriptor = $convert.base64Decode(
-    'ChpOYXRpdmVBbW91bnRUb1N0cmluZ1Jlc3VsdBIpChBjb252ZXJ0ZWRfYW1vdW50GAEgASgJUg'
-    '9jb252ZXJ0ZWRBbW91bnQ=');
+final $typed_data.Uint8List nativeAmountToStringResultDescriptor =
+    $convert.base64Decode(
+        'ChpOYXRpdmVBbW91bnRUb1N0cmluZ1Jlc3VsdBIpChBjb252ZXJ0ZWRfYW1vdW50GAEgASgJUg'
+        '9jb252ZXJ0ZWRBbW91bnQ=');
 
 @$core.Deprecated('Use nativeAmountFromStringRequestDescriptor instead')
 const NativeAmountFromStringRequest$json = {
@@ -421,22 +980,31 @@ const NativeAmountFromStringRequest$json = {
 };
 
 /// Descriptor for `NativeAmountFromStringRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List nativeAmountFromStringRequestDescriptor = $convert.base64Decode(
-    'Ch1OYXRpdmVBbW91bnRGcm9tU3RyaW5nUmVxdWVzdBIdCgp0b19jb252ZXJ0GAEgASgJUgl0b0'
-    'NvbnZlcnQ=');
+final $typed_data.Uint8List nativeAmountFromStringRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1OYXRpdmVBbW91bnRGcm9tU3RyaW5nUmVxdWVzdBIdCgp0b19jb252ZXJ0GAEgASgJUgl0b0'
+        'NvbnZlcnQ=');
 
 @$core.Deprecated('Use nativeAmountFromStringResultDescriptor instead')
 const NativeAmountFromStringResult$json = {
   '1': 'NativeAmountFromStringResult',
   '2': [
-    {'1': 'converted_amount', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'convertedAmount'},
+    {
+      '1': 'converted_amount',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'convertedAmount'
+    },
   ],
 };
 
 /// Descriptor for `NativeAmountFromStringResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List nativeAmountFromStringResultDescriptor = $convert.base64Decode(
-    'ChxOYXRpdmVBbW91bnRGcm9tU3RyaW5nUmVzdWx0EkcKEGNvbnZlcnRlZF9hbW91bnQYASABKA'
-    'syHC5tYXNzYS5tb2RlbC52MS5OYXRpdmVBbW91bnRSD2NvbnZlcnRlZEFtb3VudA==');
+final $typed_data.Uint8List nativeAmountFromStringResultDescriptor =
+    $convert.base64Decode(
+        'ChxOYXRpdmVBbW91bnRGcm9tU3RyaW5nUmVzdWx0EkcKEGNvbnZlcnRlZF9hbW91bnQYASABKA'
+        'syHC5tYXNzYS5tb2RlbC52MS5OYXRpdmVBbW91bnRSD2NvbnZlcnRlZEFtb3VudA==');
 
 @$core.Deprecated('Use checkAddressRequestDescriptor instead')
 const CheckAddressRequest$json = {
@@ -447,8 +1015,9 @@ const CheckAddressRequest$json = {
 };
 
 /// Descriptor for `CheckAddressRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkAddressRequestDescriptor = $convert.base64Decode(
-    'ChNDaGVja0FkZHJlc3NSZXF1ZXN0EhkKCHRvX2NoZWNrGAEgASgJUgd0b0NoZWNr');
+final $typed_data.Uint8List checkAddressRequestDescriptor =
+    $convert.base64Decode(
+        'ChNDaGVja0FkZHJlc3NSZXF1ZXN0EhkKCHRvX2NoZWNrGAEgASgJUgd0b0NoZWNr');
 
 @$core.Deprecated('Use checkAddressResultDescriptor instead')
 const CheckAddressResult$json = {
@@ -459,8 +1028,9 @@ const CheckAddressResult$json = {
 };
 
 /// Descriptor for `CheckAddressResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkAddressResultDescriptor = $convert.base64Decode(
-    'ChJDaGVja0FkZHJlc3NSZXN1bHQSGQoIaXNfdmFsaWQYASABKAhSB2lzVmFsaWQ=');
+final $typed_data.Uint8List checkAddressResultDescriptor =
+    $convert.base64Decode(
+        'ChJDaGVja0FkZHJlc3NSZXN1bHQSGQoIaXNfdmFsaWQYASABKAhSB2lzVmFsaWQ=');
 
 @$core.Deprecated('Use checkPubKeyRequestDescriptor instead')
 const CheckPubKeyRequest$json = {
@@ -471,8 +1041,9 @@ const CheckPubKeyRequest$json = {
 };
 
 /// Descriptor for `CheckPubKeyRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkPubKeyRequestDescriptor = $convert.base64Decode(
-    'ChJDaGVja1B1YktleVJlcXVlc3QSGQoIdG9fY2hlY2sYASABKAlSB3RvQ2hlY2s=');
+final $typed_data.Uint8List checkPubKeyRequestDescriptor =
+    $convert.base64Decode(
+        'ChJDaGVja1B1YktleVJlcXVlc3QSGQoIdG9fY2hlY2sYASABKAlSB3RvQ2hlY2s=');
 
 @$core.Deprecated('Use checkPubKeyResultDescriptor instead')
 const CheckPubKeyResult$json = {
@@ -514,14 +1085,22 @@ final $typed_data.Uint8List checkSigResultDescriptor = $convert.base64Decode(
 const CheckNativeAmountRequest$json = {
   '1': 'CheckNativeAmountRequest',
   '2': [
-    {'1': 'to_check', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'toCheck'},
+    {
+      '1': 'to_check',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'toCheck'
+    },
   ],
 };
 
 /// Descriptor for `CheckNativeAmountRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkNativeAmountRequestDescriptor = $convert.base64Decode(
-    'ChhDaGVja05hdGl2ZUFtb3VudFJlcXVlc3QSNwoIdG9fY2hlY2sYASABKAsyHC5tYXNzYS5tb2'
-    'RlbC52MS5OYXRpdmVBbW91bnRSB3RvQ2hlY2s=');
+final $typed_data.Uint8List checkNativeAmountRequestDescriptor =
+    $convert.base64Decode(
+        'ChhDaGVja05hdGl2ZUFtb3VudFJlcXVlc3QSNwoIdG9fY2hlY2sYASABKAsyHC5tYXNzYS5tb2'
+        'RlbC52MS5OYXRpdmVBbW91bnRSB3RvQ2hlY2s=');
 
 @$core.Deprecated('Use checkNativeAmountResultDescriptor instead')
 const CheckNativeAmountResult$json = {
@@ -532,15 +1111,30 @@ const CheckNativeAmountResult$json = {
 };
 
 /// Descriptor for `CheckNativeAmountResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkNativeAmountResultDescriptor = $convert.base64Decode(
-    'ChdDaGVja05hdGl2ZUFtb3VudFJlc3VsdBIZCghpc192YWxpZBgBIAEoCFIHaXNWYWxpZA==');
+final $typed_data.Uint8List checkNativeAmountResultDescriptor =
+    $convert.base64Decode(
+        'ChdDaGVja05hdGl2ZUFtb3VudFJlc3VsdBIZCghpc192YWxpZBgBIAEoCFIHaXNWYWxpZA==');
 
 @$core.Deprecated('Use addNativeAmountRequestDescriptor instead')
 const AddNativeAmountRequest$json = {
   '1': 'AddNativeAmountRequest',
   '2': [
-    {'1': 'amount1', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'amount1'},
-    {'1': 'amount2', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'amount2'},
+    {
+      '1': 'amount1',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'amount1'
+    },
+    {
+      '1': 'amount2',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'amount2'
+    },
   ],
 };
 
@@ -554,7 +1148,14 @@ final $typed_data.Uint8List addNativeAmountRequestDescriptor = $convert.base64De
 const AddNativeAmountResult$json = {
   '1': 'AddNativeAmountResult',
   '2': [
-    {'1': 'sum', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'sum'},
+    {
+      '1': 'sum',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'sum'
+    },
   ],
 };
 
@@ -567,8 +1168,22 @@ final $typed_data.Uint8List addNativeAmountResultDescriptor = $convert.base64Dec
 const SubNativeAmountRequest$json = {
   '1': 'SubNativeAmountRequest',
   '2': [
-    {'1': 'left', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'left'},
-    {'1': 'right', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'right'},
+    {
+      '1': 'left',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'left'
+    },
+    {
+      '1': 'right',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'right'
+    },
   ],
 };
 
@@ -582,7 +1197,14 @@ final $typed_data.Uint8List subNativeAmountRequestDescriptor = $convert.base64De
 const SubNativeAmountResult$json = {
   '1': 'SubNativeAmountResult',
   '2': [
-    {'1': 'difference', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'difference'},
+    {
+      '1': 'difference',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'difference'
+    },
   ],
 };
 
@@ -595,66 +1217,119 @@ final $typed_data.Uint8List subNativeAmountResultDescriptor = $convert.base64Dec
 const ScalarMulNativeAmountRequest$json = {
   '1': 'ScalarMulNativeAmountRequest',
   '2': [
-    {'1': 'amount', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'amount'},
+    {
+      '1': 'amount',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'amount'
+    },
     {'1': 'coefficient', '3': 2, '4': 1, '5': 4, '10': 'coefficient'},
   ],
 };
 
 /// Descriptor for `ScalarMulNativeAmountRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List scalarMulNativeAmountRequestDescriptor = $convert.base64Decode(
-    'ChxTY2FsYXJNdWxOYXRpdmVBbW91bnRSZXF1ZXN0EjQKBmFtb3VudBgBIAEoCzIcLm1hc3NhLm'
-    '1vZGVsLnYxLk5hdGl2ZUFtb3VudFIGYW1vdW50EiAKC2NvZWZmaWNpZW50GAIgASgEUgtjb2Vm'
-    'ZmljaWVudA==');
+final $typed_data.Uint8List scalarMulNativeAmountRequestDescriptor =
+    $convert.base64Decode(
+        'ChxTY2FsYXJNdWxOYXRpdmVBbW91bnRSZXF1ZXN0EjQKBmFtb3VudBgBIAEoCzIcLm1hc3NhLm'
+        '1vZGVsLnYxLk5hdGl2ZUFtb3VudFIGYW1vdW50EiAKC2NvZWZmaWNpZW50GAIgASgEUgtjb2Vm'
+        'ZmljaWVudA==');
 
 @$core.Deprecated('Use scalarMulNativeAmountResultDescriptor instead')
 const ScalarMulNativeAmountResult$json = {
   '1': 'ScalarMulNativeAmountResult',
   '2': [
-    {'1': 'product', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'product'},
+    {
+      '1': 'product',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'product'
+    },
   ],
 };
 
 /// Descriptor for `ScalarMulNativeAmountResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List scalarMulNativeAmountResultDescriptor = $convert.base64Decode(
-    'ChtTY2FsYXJNdWxOYXRpdmVBbW91bnRSZXN1bHQSNgoHcHJvZHVjdBgBIAEoCzIcLm1hc3NhLm'
-    '1vZGVsLnYxLk5hdGl2ZUFtb3VudFIHcHJvZHVjdA==');
+final $typed_data.Uint8List scalarMulNativeAmountResultDescriptor =
+    $convert.base64Decode(
+        'ChtTY2FsYXJNdWxOYXRpdmVBbW91bnRSZXN1bHQSNgoHcHJvZHVjdBgBIAEoCzIcLm1hc3NhLm'
+        '1vZGVsLnYxLk5hdGl2ZUFtb3VudFIHcHJvZHVjdA==');
 
 @$core.Deprecated('Use scalarDivRemNativeAmountRequestDescriptor instead')
 const ScalarDivRemNativeAmountRequest$json = {
   '1': 'ScalarDivRemNativeAmountRequest',
   '2': [
-    {'1': 'dividend', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'dividend'},
+    {
+      '1': 'dividend',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'dividend'
+    },
     {'1': 'divisor', '3': 2, '4': 1, '5': 4, '10': 'divisor'},
   ],
 };
 
 /// Descriptor for `ScalarDivRemNativeAmountRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List scalarDivRemNativeAmountRequestDescriptor = $convert.base64Decode(
-    'Ch9TY2FsYXJEaXZSZW1OYXRpdmVBbW91bnRSZXF1ZXN0EjgKCGRpdmlkZW5kGAEgASgLMhwubW'
-    'Fzc2EubW9kZWwudjEuTmF0aXZlQW1vdW50UghkaXZpZGVuZBIYCgdkaXZpc29yGAIgASgEUgdk'
-    'aXZpc29y');
+final $typed_data.Uint8List scalarDivRemNativeAmountRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9TY2FsYXJEaXZSZW1OYXRpdmVBbW91bnRSZXF1ZXN0EjgKCGRpdmlkZW5kGAEgASgLMhwubW'
+        'Fzc2EubW9kZWwudjEuTmF0aXZlQW1vdW50UghkaXZpZGVuZBIYCgdkaXZpc29yGAIgASgEUgdk'
+        'aXZpc29y');
 
 @$core.Deprecated('Use scalarDivRemNativeAmountResultDescriptor instead')
 const ScalarDivRemNativeAmountResult$json = {
   '1': 'ScalarDivRemNativeAmountResult',
   '2': [
-    {'1': 'quotient', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'quotient'},
-    {'1': 'remainder', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'remainder'},
+    {
+      '1': 'quotient',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'quotient'
+    },
+    {
+      '1': 'remainder',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'remainder'
+    },
   ],
 };
 
 /// Descriptor for `ScalarDivRemNativeAmountResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List scalarDivRemNativeAmountResultDescriptor = $convert.base64Decode(
-    'Ch5TY2FsYXJEaXZSZW1OYXRpdmVBbW91bnRSZXN1bHQSOAoIcXVvdGllbnQYASABKAsyHC5tYX'
-    'NzYS5tb2RlbC52MS5OYXRpdmVBbW91bnRSCHF1b3RpZW50EjoKCXJlbWFpbmRlchgCIAEoCzIc'
-    'Lm1hc3NhLm1vZGVsLnYxLk5hdGl2ZUFtb3VudFIJcmVtYWluZGVy');
+final $typed_data.Uint8List scalarDivRemNativeAmountResultDescriptor =
+    $convert.base64Decode(
+        'Ch5TY2FsYXJEaXZSZW1OYXRpdmVBbW91bnRSZXN1bHQSOAoIcXVvdGllbnQYASABKAsyHC5tYX'
+        'NzYS5tb2RlbC52MS5OYXRpdmVBbW91bnRSCHF1b3RpZW50EjoKCXJlbWFpbmRlchgCIAEoCzIc'
+        'Lm1hc3NhLm1vZGVsLnYxLk5hdGl2ZUFtb3VudFIJcmVtYWluZGVy');
 
 @$core.Deprecated('Use divRemNativeAmountRequestDescriptor instead')
 const DivRemNativeAmountRequest$json = {
   '1': 'DivRemNativeAmountRequest',
   '2': [
-    {'1': 'dividend', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'dividend'},
-    {'1': 'divisor', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'divisor'},
+    {
+      '1': 'dividend',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'dividend'
+    },
+    {
+      '1': 'divisor',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'divisor'
+    },
   ],
 };
 
@@ -669,7 +1344,14 @@ const DivRemNativeAmountResult$json = {
   '1': 'DivRemNativeAmountResult',
   '2': [
     {'1': 'quotient', '3': 1, '4': 1, '5': 4, '10': 'quotient'},
-    {'1': 'remainder', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'remainder'},
+    {
+      '1': 'remainder',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'remainder'
+    },
   ],
 };
 
@@ -683,152 +1365,274 @@ final $typed_data.Uint8List divRemNativeAmountResultDescriptor = $convert.base64
 const CheckedAddNativeTimeRequest$json = {
   '1': 'CheckedAddNativeTimeRequest',
   '2': [
-    {'1': 'left', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'left'},
-    {'1': 'right', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'right'},
+    {
+      '1': 'left',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'left'
+    },
+    {
+      '1': 'right',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'right'
+    },
   ],
 };
 
 /// Descriptor for `CheckedAddNativeTimeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkedAddNativeTimeRequestDescriptor = $convert.base64Decode(
-    'ChtDaGVja2VkQWRkTmF0aXZlVGltZVJlcXVlc3QSLgoEbGVmdBgBIAEoCzIaLm1hc3NhLm1vZG'
-    'VsLnYxLk5hdGl2ZVRpbWVSBGxlZnQSMAoFcmlnaHQYAiABKAsyGi5tYXNzYS5tb2RlbC52MS5O'
-    'YXRpdmVUaW1lUgVyaWdodA==');
+final $typed_data.Uint8List checkedAddNativeTimeRequestDescriptor =
+    $convert.base64Decode(
+        'ChtDaGVja2VkQWRkTmF0aXZlVGltZVJlcXVlc3QSLgoEbGVmdBgBIAEoCzIaLm1hc3NhLm1vZG'
+        'VsLnYxLk5hdGl2ZVRpbWVSBGxlZnQSMAoFcmlnaHQYAiABKAsyGi5tYXNzYS5tb2RlbC52MS5O'
+        'YXRpdmVUaW1lUgVyaWdodA==');
 
 @$core.Deprecated('Use checkedAddNativeTimeResultDescriptor instead')
 const CheckedAddNativeTimeResult$json = {
   '1': 'CheckedAddNativeTimeResult',
   '2': [
-    {'1': 'sum', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'sum'},
+    {
+      '1': 'sum',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'sum'
+    },
   ],
 };
 
 /// Descriptor for `CheckedAddNativeTimeResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkedAddNativeTimeResultDescriptor = $convert.base64Decode(
-    'ChpDaGVja2VkQWRkTmF0aXZlVGltZVJlc3VsdBIsCgNzdW0YASABKAsyGi5tYXNzYS5tb2RlbC'
-    '52MS5OYXRpdmVUaW1lUgNzdW0=');
+final $typed_data.Uint8List checkedAddNativeTimeResultDescriptor =
+    $convert.base64Decode(
+        'ChpDaGVja2VkQWRkTmF0aXZlVGltZVJlc3VsdBIsCgNzdW0YASABKAsyGi5tYXNzYS5tb2RlbC'
+        '52MS5OYXRpdmVUaW1lUgNzdW0=');
 
 @$core.Deprecated('Use checkedSubNativeTimeRequestDescriptor instead')
 const CheckedSubNativeTimeRequest$json = {
   '1': 'CheckedSubNativeTimeRequest',
   '2': [
-    {'1': 'left', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'left'},
-    {'1': 'right', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'right'},
+    {
+      '1': 'left',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'left'
+    },
+    {
+      '1': 'right',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'right'
+    },
   ],
 };
 
 /// Descriptor for `CheckedSubNativeTimeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkedSubNativeTimeRequestDescriptor = $convert.base64Decode(
-    'ChtDaGVja2VkU3ViTmF0aXZlVGltZVJlcXVlc3QSLgoEbGVmdBgBIAEoCzIaLm1hc3NhLm1vZG'
-    'VsLnYxLk5hdGl2ZVRpbWVSBGxlZnQSMAoFcmlnaHQYAiABKAsyGi5tYXNzYS5tb2RlbC52MS5O'
-    'YXRpdmVUaW1lUgVyaWdodA==');
+final $typed_data.Uint8List checkedSubNativeTimeRequestDescriptor =
+    $convert.base64Decode(
+        'ChtDaGVja2VkU3ViTmF0aXZlVGltZVJlcXVlc3QSLgoEbGVmdBgBIAEoCzIaLm1hc3NhLm1vZG'
+        'VsLnYxLk5hdGl2ZVRpbWVSBGxlZnQSMAoFcmlnaHQYAiABKAsyGi5tYXNzYS5tb2RlbC52MS5O'
+        'YXRpdmVUaW1lUgVyaWdodA==');
 
 @$core.Deprecated('Use checkedSubNativeTimeResultDescriptor instead')
 const CheckedSubNativeTimeResult$json = {
   '1': 'CheckedSubNativeTimeResult',
   '2': [
-    {'1': 'difference', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'difference'},
+    {
+      '1': 'difference',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'difference'
+    },
   ],
 };
 
 /// Descriptor for `CheckedSubNativeTimeResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkedSubNativeTimeResultDescriptor = $convert.base64Decode(
-    'ChpDaGVja2VkU3ViTmF0aXZlVGltZVJlc3VsdBI6CgpkaWZmZXJlbmNlGAEgASgLMhoubWFzc2'
-    'EubW9kZWwudjEuTmF0aXZlVGltZVIKZGlmZmVyZW5jZQ==');
+final $typed_data.Uint8List checkedSubNativeTimeResultDescriptor =
+    $convert.base64Decode(
+        'ChpDaGVja2VkU3ViTmF0aXZlVGltZVJlc3VsdBI6CgpkaWZmZXJlbmNlGAEgASgLMhoubWFzc2'
+        'EubW9kZWwudjEuTmF0aXZlVGltZVIKZGlmZmVyZW5jZQ==');
 
 @$core.Deprecated('Use checkedScalarMulNativeTimeRequestDescriptor instead')
 const CheckedScalarMulNativeTimeRequest$json = {
   '1': 'CheckedScalarMulNativeTimeRequest',
   '2': [
-    {'1': 'time', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'time'},
+    {
+      '1': 'time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'time'
+    },
     {'1': 'coefficient', '3': 2, '4': 1, '5': 4, '10': 'coefficient'},
   ],
 };
 
 /// Descriptor for `CheckedScalarMulNativeTimeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkedScalarMulNativeTimeRequestDescriptor = $convert.base64Decode(
-    'CiFDaGVja2VkU2NhbGFyTXVsTmF0aXZlVGltZVJlcXVlc3QSLgoEdGltZRgBIAEoCzIaLm1hc3'
-    'NhLm1vZGVsLnYxLk5hdGl2ZVRpbWVSBHRpbWUSIAoLY29lZmZpY2llbnQYAiABKARSC2NvZWZm'
-    'aWNpZW50');
+final $typed_data.Uint8List checkedScalarMulNativeTimeRequestDescriptor =
+    $convert.base64Decode(
+        'CiFDaGVja2VkU2NhbGFyTXVsTmF0aXZlVGltZVJlcXVlc3QSLgoEdGltZRgBIAEoCzIaLm1hc3'
+        'NhLm1vZGVsLnYxLk5hdGl2ZVRpbWVSBHRpbWUSIAoLY29lZmZpY2llbnQYAiABKARSC2NvZWZm'
+        'aWNpZW50');
 
 @$core.Deprecated('Use checkedScalarMulNativeTimeResultDescriptor instead')
 const CheckedScalarMulNativeTimeResult$json = {
   '1': 'CheckedScalarMulNativeTimeResult',
   '2': [
-    {'1': 'product', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'product'},
+    {
+      '1': 'product',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'product'
+    },
   ],
 };
 
 /// Descriptor for `CheckedScalarMulNativeTimeResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkedScalarMulNativeTimeResultDescriptor = $convert.base64Decode(
-    'CiBDaGVja2VkU2NhbGFyTXVsTmF0aXZlVGltZVJlc3VsdBI0Cgdwcm9kdWN0GAEgASgLMhoubW'
-    'Fzc2EubW9kZWwudjEuTmF0aXZlVGltZVIHcHJvZHVjdA==');
+final $typed_data.Uint8List checkedScalarMulNativeTimeResultDescriptor =
+    $convert.base64Decode(
+        'CiBDaGVja2VkU2NhbGFyTXVsTmF0aXZlVGltZVJlc3VsdBI0Cgdwcm9kdWN0GAEgASgLMhoubW'
+        'Fzc2EubW9kZWwudjEuTmF0aXZlVGltZVIHcHJvZHVjdA==');
 
 @$core.Deprecated('Use checkedScalarDivRemNativeTimeRequestDescriptor instead')
 const CheckedScalarDivRemNativeTimeRequest$json = {
   '1': 'CheckedScalarDivRemNativeTimeRequest',
   '2': [
-    {'1': 'dividend', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'dividend'},
+    {
+      '1': 'dividend',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'dividend'
+    },
     {'1': 'divisor', '3': 2, '4': 1, '5': 4, '10': 'divisor'},
   ],
 };
 
 /// Descriptor for `CheckedScalarDivRemNativeTimeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkedScalarDivRemNativeTimeRequestDescriptor = $convert.base64Decode(
-    'CiRDaGVja2VkU2NhbGFyRGl2UmVtTmF0aXZlVGltZVJlcXVlc3QSNgoIZGl2aWRlbmQYASABKA'
-    'syGi5tYXNzYS5tb2RlbC52MS5OYXRpdmVUaW1lUghkaXZpZGVuZBIYCgdkaXZpc29yGAIgASgE'
-    'UgdkaXZpc29y');
+final $typed_data.Uint8List checkedScalarDivRemNativeTimeRequestDescriptor =
+    $convert.base64Decode(
+        'CiRDaGVja2VkU2NhbGFyRGl2UmVtTmF0aXZlVGltZVJlcXVlc3QSNgoIZGl2aWRlbmQYASABKA'
+        'syGi5tYXNzYS5tb2RlbC52MS5OYXRpdmVUaW1lUghkaXZpZGVuZBIYCgdkaXZpc29yGAIgASgE'
+        'UgdkaXZpc29y');
 
 @$core.Deprecated('Use checkedScalarDivRemNativeTimeResultDescriptor instead')
 const CheckedScalarDivRemNativeTimeResult$json = {
   '1': 'CheckedScalarDivRemNativeTimeResult',
   '2': [
-    {'1': 'quotient', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'quotient'},
-    {'1': 'remainder', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'remainder'},
+    {
+      '1': 'quotient',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'quotient'
+    },
+    {
+      '1': 'remainder',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'remainder'
+    },
   ],
 };
 
 /// Descriptor for `CheckedScalarDivRemNativeTimeResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkedScalarDivRemNativeTimeResultDescriptor = $convert.base64Decode(
-    'CiNDaGVja2VkU2NhbGFyRGl2UmVtTmF0aXZlVGltZVJlc3VsdBI2CghxdW90aWVudBgBIAEoCz'
-    'IaLm1hc3NhLm1vZGVsLnYxLk5hdGl2ZVRpbWVSCHF1b3RpZW50EjgKCXJlbWFpbmRlchgCIAEo'
-    'CzIaLm1hc3NhLm1vZGVsLnYxLk5hdGl2ZVRpbWVSCXJlbWFpbmRlcg==');
+final $typed_data.Uint8List checkedScalarDivRemNativeTimeResultDescriptor =
+    $convert.base64Decode(
+        'CiNDaGVja2VkU2NhbGFyRGl2UmVtTmF0aXZlVGltZVJlc3VsdBI2CghxdW90aWVudBgBIAEoCz'
+        'IaLm1hc3NhLm1vZGVsLnYxLk5hdGl2ZVRpbWVSCHF1b3RpZW50EjgKCXJlbWFpbmRlchgCIAEo'
+        'CzIaLm1hc3NhLm1vZGVsLnYxLk5hdGl2ZVRpbWVSCXJlbWFpbmRlcg==');
 
 @$core.Deprecated('Use checkedDivRemNativeTimeRequestDescriptor instead')
 const CheckedDivRemNativeTimeRequest$json = {
   '1': 'CheckedDivRemNativeTimeRequest',
   '2': [
-    {'1': 'dividend', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'dividend'},
-    {'1': 'divisor', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'divisor'},
+    {
+      '1': 'dividend',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'dividend'
+    },
+    {
+      '1': 'divisor',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'divisor'
+    },
   ],
 };
 
 /// Descriptor for `CheckedDivRemNativeTimeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkedDivRemNativeTimeRequestDescriptor = $convert.base64Decode(
-    'Ch5DaGVja2VkRGl2UmVtTmF0aXZlVGltZVJlcXVlc3QSNgoIZGl2aWRlbmQYASABKAsyGi5tYX'
-    'NzYS5tb2RlbC52MS5OYXRpdmVUaW1lUghkaXZpZGVuZBI0CgdkaXZpc29yGAIgASgLMhoubWFz'
-    'c2EubW9kZWwudjEuTmF0aXZlVGltZVIHZGl2aXNvcg==');
+final $typed_data.Uint8List checkedDivRemNativeTimeRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5DaGVja2VkRGl2UmVtTmF0aXZlVGltZVJlcXVlc3QSNgoIZGl2aWRlbmQYASABKAsyGi5tYX'
+        'NzYS5tb2RlbC52MS5OYXRpdmVUaW1lUghkaXZpZGVuZBI0CgdkaXZpc29yGAIgASgLMhoubWFz'
+        'c2EubW9kZWwudjEuTmF0aXZlVGltZVIHZGl2aXNvcg==');
 
 @$core.Deprecated('Use checkedDivRemNativeTimeResultDescriptor instead')
 const CheckedDivRemNativeTimeResult$json = {
   '1': 'CheckedDivRemNativeTimeResult',
   '2': [
     {'1': 'quotient', '3': 1, '4': 1, '5': 4, '10': 'quotient'},
-    {'1': 'remainder', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'remainder'},
+    {
+      '1': 'remainder',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'remainder'
+    },
   ],
 };
 
 /// Descriptor for `CheckedDivRemNativeTimeResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkedDivRemNativeTimeResultDescriptor = $convert.base64Decode(
-    'Ch1DaGVja2VkRGl2UmVtTmF0aXZlVGltZVJlc3VsdBIaCghxdW90aWVudBgBIAEoBFIIcXVvdG'
-    'llbnQSOAoJcmVtYWluZGVyGAIgASgLMhoubWFzc2EubW9kZWwudjEuTmF0aXZlVGltZVIJcmVt'
-    'YWluZGVy');
+final $typed_data.Uint8List checkedDivRemNativeTimeResultDescriptor =
+    $convert.base64Decode(
+        'Ch1DaGVja2VkRGl2UmVtTmF0aXZlVGltZVJlc3VsdBIaCghxdW90aWVudBgBIAEoBFIIcXVvdG'
+        'llbnQSOAoJcmVtYWluZGVyGAIgASgLMhoubWFzc2EubW9kZWwudjEuTmF0aXZlVGltZVIJcmVt'
+        'YWluZGVy');
 
 @$core.Deprecated('Use compareNativeTimeRequestDescriptor instead')
 const CompareNativeTimeRequest$json = {
   '1': 'CompareNativeTimeRequest',
   '2': [
-    {'1': 'left', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'left'},
-    {'1': 'right', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'right'},
+    {
+      '1': 'left',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'left'
+    },
+    {
+      '1': 'right',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'right'
+    },
   ],
 };
 
@@ -842,14 +1646,22 @@ final $typed_data.Uint8List compareNativeTimeRequestDescriptor = $convert.base64
 const CompareNativeTimeResult$json = {
   '1': 'CompareNativeTimeResult',
   '2': [
-    {'1': 'result', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.ComparisonResult', '10': 'result'},
+    {
+      '1': 'result',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.ComparisonResult',
+      '10': 'result'
+    },
   ],
 };
 
 /// Descriptor for `CompareNativeTimeResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List compareNativeTimeResultDescriptor = $convert.base64Decode(
-    'ChdDb21wYXJlTmF0aXZlVGltZVJlc3VsdBI4CgZyZXN1bHQYASABKA4yIC5tYXNzYS5tb2RlbC'
-    '52MS5Db21wYXJpc29uUmVzdWx0UgZyZXN1bHQ=');
+final $typed_data.Uint8List compareNativeTimeResultDescriptor =
+    $convert.base64Decode(
+        'ChdDb21wYXJlTmF0aXZlVGltZVJlc3VsdBI4CgZyZXN1bHQYASABKA4yIC5tYXNzYS5tb2RlbC'
+        '52MS5Db21wYXJpc29uUmVzdWx0UgZyZXN1bHQ=');
 
 @$core.Deprecated('Use compareAddressRequestDescriptor instead')
 const CompareAddressRequest$json = {
@@ -869,7 +1681,14 @@ final $typed_data.Uint8List compareAddressRequestDescriptor = $convert.base64Dec
 const CompareAddressResult$json = {
   '1': 'CompareAddressResult',
   '2': [
-    {'1': 'result', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.ComparisonResult', '10': 'result'},
+    {
+      '1': 'result',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.ComparisonResult',
+      '10': 'result'
+    },
   ],
 };
 
@@ -896,7 +1715,14 @@ final $typed_data.Uint8List comparePubKeyRequestDescriptor = $convert.base64Deco
 const ComparePubKeyResult$json = {
   '1': 'ComparePubKeyResult',
   '2': [
-    {'1': 'result', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.ComparisonResult', '10': 'result'},
+    {
+      '1': 'result',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.ComparisonResult',
+      '10': 'result'
+    },
   ],
 };
 
@@ -936,29 +1762,52 @@ final $typed_data.Uint8List verifySigResultDescriptor = $convert.base64Decode(
 const CompareNativeAmountRequest$json = {
   '1': 'CompareNativeAmountRequest',
   '2': [
-    {'1': 'left', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'left'},
-    {'1': 'right', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'right'},
+    {
+      '1': 'left',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'left'
+    },
+    {
+      '1': 'right',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'right'
+    },
   ],
 };
 
 /// Descriptor for `CompareNativeAmountRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List compareNativeAmountRequestDescriptor = $convert.base64Decode(
-    'ChpDb21wYXJlTmF0aXZlQW1vdW50UmVxdWVzdBIwCgRsZWZ0GAEgASgLMhwubWFzc2EubW9kZW'
-    'wudjEuTmF0aXZlQW1vdW50UgRsZWZ0EjIKBXJpZ2h0GAIgASgLMhwubWFzc2EubW9kZWwudjEu'
-    'TmF0aXZlQW1vdW50UgVyaWdodA==');
+final $typed_data.Uint8List compareNativeAmountRequestDescriptor =
+    $convert.base64Decode(
+        'ChpDb21wYXJlTmF0aXZlQW1vdW50UmVxdWVzdBIwCgRsZWZ0GAEgASgLMhwubWFzc2EubW9kZW'
+        'wudjEuTmF0aXZlQW1vdW50UgRsZWZ0EjIKBXJpZ2h0GAIgASgLMhwubWFzc2EubW9kZWwudjEu'
+        'TmF0aXZlQW1vdW50UgVyaWdodA==');
 
 @$core.Deprecated('Use compareNativeAmountResultDescriptor instead')
 const CompareNativeAmountResult$json = {
   '1': 'CompareNativeAmountResult',
   '2': [
-    {'1': 'result', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.ComparisonResult', '10': 'result'},
+    {
+      '1': 'result',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.ComparisonResult',
+      '10': 'result'
+    },
   ],
 };
 
 /// Descriptor for `CompareNativeAmountResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List compareNativeAmountResultDescriptor = $convert.base64Decode(
-    'ChlDb21wYXJlTmF0aXZlQW1vdW50UmVzdWx0EjgKBnJlc3VsdBgBIAEoDjIgLm1hc3NhLm1vZG'
-    'VsLnYxLkNvbXBhcmlzb25SZXN1bHRSBnJlc3VsdA==');
+final $typed_data.Uint8List compareNativeAmountResultDescriptor =
+    $convert.base64Decode(
+        'ChlDb21wYXJlTmF0aXZlQW1vdW50UmVzdWx0EjgKBnJlc3VsdBgBIAEoDjIgLm1hc3NhLm1vZG'
+        'VsLnYxLkNvbXBhcmlzb25SZXN1bHRSBnJlc3VsdA==');
 
 @$core.Deprecated('Use keccak256RequestDescriptor instead')
 const Keccak256Request$json = {
@@ -969,8 +1818,8 @@ const Keccak256Request$json = {
 };
 
 /// Descriptor for `Keccak256Request`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List keccak256RequestDescriptor = $convert.base64Decode(
-    'ChBLZWNjYWsyNTZSZXF1ZXN0EhIKBGRhdGEYASABKAxSBGRhdGE=');
+final $typed_data.Uint8List keccak256RequestDescriptor = $convert
+    .base64Decode('ChBLZWNjYWsyNTZSZXF1ZXN0EhIKBGRhdGEYASABKAxSBGRhdGE=');
 
 @$core.Deprecated('Use keccak256ResultDescriptor instead')
 const Keccak256Result$json = {
@@ -981,8 +1830,8 @@ const Keccak256Result$json = {
 };
 
 /// Descriptor for `Keccak256Result`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List keccak256ResultDescriptor = $convert.base64Decode(
-    'Cg9LZWNjYWsyNTZSZXN1bHQSEgoEaGFzaBgBIAEoDFIEaGFzaA==');
+final $typed_data.Uint8List keccak256ResultDescriptor = $convert
+    .base64Decode('Cg9LZWNjYWsyNTZSZXN1bHQSEgoEaGFzaBgBIAEoDFIEaGFzaA==');
 
 @$core.Deprecated('Use evmVerifySigRequestDescriptor instead')
 const EvmVerifySigRequest$json = {
@@ -1020,9 +1869,10 @@ const EvmGetAddressFromPubkeyRequest$json = {
 };
 
 /// Descriptor for `EvmGetAddressFromPubkeyRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List evmGetAddressFromPubkeyRequestDescriptor = $convert.base64Decode(
-    'Ch5Fdm1HZXRBZGRyZXNzRnJvbVB1YmtleVJlcXVlc3QSFwoHcHViX2tleRgBIAEoDFIGcHViS2'
-    'V5');
+final $typed_data.Uint8List evmGetAddressFromPubkeyRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5Fdm1HZXRBZGRyZXNzRnJvbVB1YmtleVJlcXVlc3QSFwoHcHViX2tleRgBIAEoDFIGcHViS2'
+        'V5');
 
 @$core.Deprecated('Use evmGetAddressFromPubkeyResultDescriptor instead')
 const EvmGetAddressFromPubkeyResult$json = {
@@ -1033,9 +1883,10 @@ const EvmGetAddressFromPubkeyResult$json = {
 };
 
 /// Descriptor for `EvmGetAddressFromPubkeyResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List evmGetAddressFromPubkeyResultDescriptor = $convert.base64Decode(
-    'Ch1Fdm1HZXRBZGRyZXNzRnJvbVB1YmtleVJlc3VsdBIYCgdhZGRyZXNzGAEgASgMUgdhZGRyZX'
-    'Nz');
+final $typed_data.Uint8List evmGetAddressFromPubkeyResultDescriptor =
+    $convert.base64Decode(
+        'Ch1Fdm1HZXRBZGRyZXNzRnJvbVB1YmtleVJlc3VsdBIYCgdhZGRyZXNzGAEgASgMUgdhZGRyZX'
+        'Nz');
 
 @$core.Deprecated('Use evmGetPubkeyFromSignatureRequestDescriptor instead')
 const EvmGetPubkeyFromSignatureRequest$json = {
@@ -1047,9 +1898,10 @@ const EvmGetPubkeyFromSignatureRequest$json = {
 };
 
 /// Descriptor for `EvmGetPubkeyFromSignatureRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List evmGetPubkeyFromSignatureRequestDescriptor = $convert.base64Decode(
-    'CiBFdm1HZXRQdWJrZXlGcm9tU2lnbmF0dXJlUmVxdWVzdBISCgRoYXNoGAEgASgMUgRoYXNoEh'
-    'AKA3NpZxgCIAEoDFIDc2ln');
+final $typed_data.Uint8List evmGetPubkeyFromSignatureRequestDescriptor =
+    $convert.base64Decode(
+        'CiBFdm1HZXRQdWJrZXlGcm9tU2lnbmF0dXJlUmVxdWVzdBISCgRoYXNoGAEgASgMUgRoYXNoEh'
+        'AKA3NpZxgCIAEoDFIDc2ln');
 
 @$core.Deprecated('Use evmGetPubkeyFromSignatureResultDescriptor instead')
 const EvmGetPubkeyFromSignatureResult$json = {
@@ -1060,9 +1912,10 @@ const EvmGetPubkeyFromSignatureResult$json = {
 };
 
 /// Descriptor for `EvmGetPubkeyFromSignatureResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List evmGetPubkeyFromSignatureResultDescriptor = $convert.base64Decode(
-    'Ch9Fdm1HZXRQdWJrZXlGcm9tU2lnbmF0dXJlUmVzdWx0EhcKB3B1Yl9rZXkYASABKAxSBnB1Yk'
-    'tleQ==');
+final $typed_data.Uint8List evmGetPubkeyFromSignatureResultDescriptor =
+    $convert.base64Decode(
+        'Ch9Fdm1HZXRQdWJrZXlGcm9tU2lnbmF0dXJlUmVzdWx0EhcKB3B1Yl9rZXkYASABKAxSBnB1Yk'
+        'tleQ==');
 
 @$core.Deprecated('Use isAddressEoaRequestDescriptor instead')
 const IsAddressEoaRequest$json = {
@@ -1073,8 +1926,9 @@ const IsAddressEoaRequest$json = {
 };
 
 /// Descriptor for `IsAddressEoaRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List isAddressEoaRequestDescriptor = $convert.base64Decode(
-    'ChNJc0FkZHJlc3NFb2FSZXF1ZXN0EhgKB2FkZHJlc3MYASABKAlSB2FkZHJlc3M=');
+final $typed_data.Uint8List isAddressEoaRequestDescriptor =
+    $convert.base64Decode(
+        'ChNJc0FkZHJlc3NFb2FSZXF1ZXN0EhgKB2FkZHJlc3MYASABKAlSB2FkZHJlc3M=');
 
 @$core.Deprecated('Use isAddressEoaResultDescriptor instead')
 const IsAddressEoaResult$json = {
@@ -1085,8 +1939,9 @@ const IsAddressEoaResult$json = {
 };
 
 /// Descriptor for `IsAddressEoaResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List isAddressEoaResultDescriptor = $convert.base64Decode(
-    'ChJJc0FkZHJlc3NFb2FSZXN1bHQSFQoGaXNfZW9hGAEgASgIUgVpc0VvYQ==');
+final $typed_data.Uint8List isAddressEoaResultDescriptor =
+    $convert.base64Decode(
+        'ChJJc0FkZHJlc3NFb2FSZXN1bHQSFQoGaXNfZW9hGAEgASgIUgVpc0VvYQ==');
 
 @$core.Deprecated('Use hashBlake3RequestDescriptor instead')
 const HashBlake3Request$json = {
@@ -1097,8 +1952,8 @@ const HashBlake3Request$json = {
 };
 
 /// Descriptor for `HashBlake3Request`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List hashBlake3RequestDescriptor = $convert.base64Decode(
-    'ChFIYXNoQmxha2UzUmVxdWVzdBISCgRkYXRhGAEgASgMUgRkYXRh');
+final $typed_data.Uint8List hashBlake3RequestDescriptor = $convert
+    .base64Decode('ChFIYXNoQmxha2UzUmVxdWVzdBISCgRkYXRhGAEgASgMUgRkYXRh');
 
 @$core.Deprecated('Use hashBlake3ResultDescriptor instead')
 const HashBlake3Result$json = {
@@ -1109,15 +1964,24 @@ const HashBlake3Result$json = {
 };
 
 /// Descriptor for `HashBlake3Result`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List hashBlake3ResultDescriptor = $convert.base64Decode(
-    'ChBIYXNoQmxha2UzUmVzdWx0EhIKBGhhc2gYASABKAxSBGhhc2g=');
+final $typed_data.Uint8List hashBlake3ResultDescriptor = $convert
+    .base64Decode('ChBIYXNoQmxha2UzUmVzdWx0EhIKBGhhc2gYASABKAxSBGhhc2g=');
 
 @$core.Deprecated('Use getDsKeysRequestDescriptor instead')
 const GetDsKeysRequest$json = {
   '1': 'GetDsKeysRequest',
   '2': [
     {'1': 'prefix', '3': 1, '4': 1, '5': 12, '10': 'prefix'},
-    {'1': 'address', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'address', '17': true},
+    {
+      '1': 'address',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'address',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_address'},
@@ -1139,8 +2003,8 @@ const GetDsKeysResult$json = {
 };
 
 /// Descriptor for `GetDsKeysResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getDsKeysResultDescriptor = $convert.base64Decode(
-    'Cg9HZXREc0tleXNSZXN1bHQSEgoEa2V5cxgBIAMoDFIEa2V5cw==');
+final $typed_data.Uint8List getDsKeysResultDescriptor = $convert
+    .base64Decode('Cg9HZXREc0tleXNSZXN1bHQSEgoEa2V5cxgBIAMoDFIEa2V5cw==');
 
 @$core.Deprecated('Use setDsValueRequestDescriptor instead')
 const SetDsValueRequest$json = {
@@ -1148,7 +2012,16 @@ const SetDsValueRequest$json = {
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 12, '10': 'key'},
     {'1': 'value', '3': 2, '4': 1, '5': 12, '10': 'value'},
-    {'1': 'address', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'address', '17': true},
+    {
+      '1': 'address',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'address',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_address'},
@@ -1167,8 +2040,8 @@ const SetDsValueResult$json = {
 };
 
 /// Descriptor for `SetDsValueResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setDsValueResultDescriptor = $convert.base64Decode(
-    'ChBTZXREc1ZhbHVlUmVzdWx0');
+final $typed_data.Uint8List setDsValueResultDescriptor =
+    $convert.base64Decode('ChBTZXREc1ZhbHVlUmVzdWx0');
 
 @$core.Deprecated('Use appendDsValueRequestDescriptor instead')
 const AppendDsValueRequest$json = {
@@ -1176,7 +2049,16 @@ const AppendDsValueRequest$json = {
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 12, '10': 'key'},
     {'1': 'value', '3': 2, '4': 1, '5': 12, '10': 'value'},
-    {'1': 'address', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'address', '17': true},
+    {
+      '1': 'address',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'address',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_address'},
@@ -1195,15 +2077,24 @@ const AppendDsValueResult$json = {
 };
 
 /// Descriptor for `AppendDsValueResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List appendDsValueResultDescriptor = $convert.base64Decode(
-    'ChNBcHBlbmREc1ZhbHVlUmVzdWx0');
+final $typed_data.Uint8List appendDsValueResultDescriptor =
+    $convert.base64Decode('ChNBcHBlbmREc1ZhbHVlUmVzdWx0');
 
 @$core.Deprecated('Use getDsValueRequestDescriptor instead')
 const GetDsValueRequest$json = {
   '1': 'GetDsValueRequest',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 12, '10': 'key'},
-    {'1': 'address', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'address', '17': true},
+    {
+      '1': 'address',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'address',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_address'},
@@ -1224,15 +2115,24 @@ const GetDsValueResult$json = {
 };
 
 /// Descriptor for `GetDsValueResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getDsValueResultDescriptor = $convert.base64Decode(
-    'ChBHZXREc1ZhbHVlUmVzdWx0EhQKBXZhbHVlGAEgASgMUgV2YWx1ZQ==');
+final $typed_data.Uint8List getDsValueResultDescriptor = $convert
+    .base64Decode('ChBHZXREc1ZhbHVlUmVzdWx0EhQKBXZhbHVlGAEgASgMUgV2YWx1ZQ==');
 
 @$core.Deprecated('Use deleteDsEntryRequestDescriptor instead')
 const DeleteDsEntryRequest$json = {
   '1': 'DeleteDsEntryRequest',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 12, '10': 'key'},
-    {'1': 'address', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'address', '17': true},
+    {
+      '1': 'address',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'address',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_address'},
@@ -1251,15 +2151,24 @@ const DeleteDsEntryResult$json = {
 };
 
 /// Descriptor for `DeleteDsEntryResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List deleteDsEntryResultDescriptor = $convert.base64Decode(
-    'ChNEZWxldGVEc0VudHJ5UmVzdWx0');
+final $typed_data.Uint8List deleteDsEntryResultDescriptor =
+    $convert.base64Decode('ChNEZWxldGVEc0VudHJ5UmVzdWx0');
 
 @$core.Deprecated('Use dsEntryExistsRequestDescriptor instead')
 const DsEntryExistsRequest$json = {
   '1': 'DsEntryExistsRequest',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 12, '10': 'key'},
-    {'1': 'address', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'address', '17': true},
+    {
+      '1': 'address',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'address',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_address'},
@@ -1281,8 +2190,9 @@ const DsEntryExistsResult$json = {
 };
 
 /// Descriptor for `DsEntryExistsResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List dsEntryExistsResultDescriptor = $convert.base64Decode(
-    'ChNEc0VudHJ5RXhpc3RzUmVzdWx0EhkKCGhhc19kYXRhGAEgASgIUgdoYXNEYXRh');
+final $typed_data.Uint8List dsEntryExistsResultDescriptor =
+    $convert.base64Decode(
+        'ChNEc0VudHJ5RXhpc3RzUmVzdWx0EhkKCGhhc19kYXRhGAEgASgIUgdoYXNEYXRh');
 
 @$core.Deprecated('Use getOwnedAddressesRequestDescriptor instead')
 const GetOwnedAddressesRequest$json = {
@@ -1290,8 +2200,8 @@ const GetOwnedAddressesRequest$json = {
 };
 
 /// Descriptor for `GetOwnedAddressesRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getOwnedAddressesRequestDescriptor = $convert.base64Decode(
-    'ChhHZXRPd25lZEFkZHJlc3Nlc1JlcXVlc3Q=');
+final $typed_data.Uint8List getOwnedAddressesRequestDescriptor =
+    $convert.base64Decode('ChhHZXRPd25lZEFkZHJlc3Nlc1JlcXVlc3Q=');
 
 @$core.Deprecated('Use getOwnedAddressesResultDescriptor instead')
 const GetOwnedAddressesResult$json = {
@@ -1302,9 +2212,10 @@ const GetOwnedAddressesResult$json = {
 };
 
 /// Descriptor for `GetOwnedAddressesResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getOwnedAddressesResultDescriptor = $convert.base64Decode(
-    'ChdHZXRPd25lZEFkZHJlc3Nlc1Jlc3VsdBIcCglhZGRyZXNzZXMYASADKAlSCWFkZHJlc3Nlcw'
-    '==');
+final $typed_data.Uint8List getOwnedAddressesResultDescriptor =
+    $convert.base64Decode(
+        'ChdHZXRPd25lZEFkZHJlc3Nlc1Jlc3VsdBIcCglhZGRyZXNzZXMYASADKAlSCWFkZHJlc3Nlcw'
+        '==');
 
 @$core.Deprecated('Use getCallStackRequestDescriptor instead')
 const GetCallStackRequest$json = {
@@ -1312,8 +2223,8 @@ const GetCallStackRequest$json = {
 };
 
 /// Descriptor for `GetCallStackRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getCallStackRequestDescriptor = $convert.base64Decode(
-    'ChNHZXRDYWxsU3RhY2tSZXF1ZXN0');
+final $typed_data.Uint8List getCallStackRequestDescriptor =
+    $convert.base64Decode('ChNHZXRDYWxsU3RhY2tSZXF1ZXN0');
 
 @$core.Deprecated('Use getCallStackResultDescriptor instead')
 const GetCallStackResult$json = {
@@ -1324,8 +2235,8 @@ const GetCallStackResult$json = {
 };
 
 /// Descriptor for `GetCallStackResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getCallStackResultDescriptor = $convert.base64Decode(
-    'ChJHZXRDYWxsU3RhY2tSZXN1bHQSFAoFY2FsbHMYASADKAlSBWNhbGxz');
+final $typed_data.Uint8List getCallStackResultDescriptor = $convert
+    .base64Decode('ChJHZXRDYWxsU3RhY2tSZXN1bHQSFAoFY2FsbHMYASADKAlSBWNhbGxz');
 
 @$core.Deprecated('Use addressFromPubKeyRequestDescriptor instead')
 const AddressFromPubKeyRequest$json = {
@@ -1336,8 +2247,9 @@ const AddressFromPubKeyRequest$json = {
 };
 
 /// Descriptor for `AddressFromPubKeyRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressFromPubKeyRequestDescriptor = $convert.base64Decode(
-    'ChhBZGRyZXNzRnJvbVB1YktleVJlcXVlc3QSFwoHcHViX2tleRgBIAEoCVIGcHViS2V5');
+final $typed_data.Uint8List addressFromPubKeyRequestDescriptor =
+    $convert.base64Decode(
+        'ChhBZGRyZXNzRnJvbVB1YktleVJlcXVlc3QSFwoHcHViX2tleRgBIAEoCVIGcHViS2V5');
 
 @$core.Deprecated('Use addressFromPubKeyResultDescriptor instead')
 const AddressFromPubKeyResult$json = {
@@ -1348,8 +2260,9 @@ const AddressFromPubKeyResult$json = {
 };
 
 /// Descriptor for `AddressFromPubKeyResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressFromPubKeyResultDescriptor = $convert.base64Decode(
-    'ChdBZGRyZXNzRnJvbVB1YktleVJlc3VsdBIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNz');
+final $typed_data.Uint8List addressFromPubKeyResultDescriptor =
+    $convert.base64Decode(
+        'ChdBZGRyZXNzRnJvbVB1YktleVJlc3VsdBIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNz');
 
 @$core.Deprecated('Use unsafeRandomRequestDescriptor instead')
 const UnsafeRandomRequest$json = {
@@ -1360,8 +2273,9 @@ const UnsafeRandomRequest$json = {
 };
 
 /// Descriptor for `UnsafeRandomRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List unsafeRandomRequestDescriptor = $convert.base64Decode(
-    'ChNVbnNhZmVSYW5kb21SZXF1ZXN0EhsKCW51bV9ieXRlcxgCIAEoDVIIbnVtQnl0ZXM=');
+final $typed_data.Uint8List unsafeRandomRequestDescriptor =
+    $convert.base64Decode(
+        'ChNVbnNhZmVSYW5kb21SZXF1ZXN0EhsKCW51bV9ieXRlcxgCIAEoDVIIbnVtQnl0ZXM=');
 
 @$core.Deprecated('Use unsafeRandomResultDescriptor instead')
 const UnsafeRandomResult$json = {
@@ -1381,7 +2295,14 @@ const SendAsyncMessageFilter$json = {
   '1': 'SendAsyncMessageFilter',
   '2': [
     {'1': 'target_address', '3': 1, '4': 1, '5': 9, '10': 'targetAddress'},
-    {'1': 'target_key', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.BytesValue', '10': 'targetKey'},
+    {
+      '1': 'target_key',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BytesValue',
+      '10': 'targetKey'
+    },
   ],
 };
 
@@ -1397,13 +2318,34 @@ const SendAsyncMessageRequest$json = {
   '2': [
     {'1': 'target_address', '3': 1, '4': 1, '5': 9, '10': 'targetAddress'},
     {'1': 'target_handler', '3': 2, '4': 1, '5': 9, '10': 'targetHandler'},
-    {'1': 'validity_start', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'validityStart'},
-    {'1': 'validity_end', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'validityEnd'},
+    {
+      '1': 'validity_start',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'validityStart'
+    },
+    {
+      '1': 'validity_end',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'validityEnd'
+    },
     {'1': 'execution_gas', '3': 5, '4': 1, '5': 4, '10': 'executionGas'},
     {'1': 'raw_fee', '3': 6, '4': 1, '5': 4, '10': 'rawFee'},
     {'1': 'raw_coins', '3': 7, '4': 1, '5': 4, '10': 'rawCoins'},
     {'1': 'data', '3': 8, '4': 1, '5': 12, '10': 'data'},
-    {'1': 'filter', '3': 9, '4': 1, '5': 11, '6': '.massa.abi.v1.SendAsyncMessageFilter', '10': 'filter'},
+    {
+      '1': 'filter',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.abi.v1.SendAsyncMessageFilter',
+      '10': 'filter'
+    },
   ],
 };
 
@@ -1424,8 +2366,8 @@ const SendAsyncMessageResult$json = {
 };
 
 /// Descriptor for `SendAsyncMessageResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List sendAsyncMessageResultDescriptor = $convert.base64Decode(
-    'ChZTZW5kQXN5bmNNZXNzYWdlUmVzdWx0');
+final $typed_data.Uint8List sendAsyncMessageResultDescriptor =
+    $convert.base64Decode('ChZTZW5kQXN5bmNNZXNzYWdlUmVzdWx0');
 
 @$core.Deprecated('Use getOriginOperationIdRequestDescriptor instead')
 const GetOriginOperationIdRequest$json = {
@@ -1433,14 +2375,23 @@ const GetOriginOperationIdRequest$json = {
 };
 
 /// Descriptor for `GetOriginOperationIdRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getOriginOperationIdRequestDescriptor = $convert.base64Decode(
-    'ChtHZXRPcmlnaW5PcGVyYXRpb25JZFJlcXVlc3Q=');
+final $typed_data.Uint8List getOriginOperationIdRequestDescriptor =
+    $convert.base64Decode('ChtHZXRPcmlnaW5PcGVyYXRpb25JZFJlcXVlc3Q=');
 
 @$core.Deprecated('Use getOriginOperationIdResultDescriptor instead')
 const GetOriginOperationIdResult$json = {
   '1': 'GetOriginOperationIdResult',
   '2': [
-    {'1': 'operation_id', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'operationId', '17': true},
+    {
+      '1': 'operation_id',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'operationId',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_operation_id'},
@@ -1448,10 +2399,11 @@ const GetOriginOperationIdResult$json = {
 };
 
 /// Descriptor for `GetOriginOperationIdResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getOriginOperationIdResultDescriptor = $convert.base64Decode(
-    'ChpHZXRPcmlnaW5PcGVyYXRpb25JZFJlc3VsdBJECgxvcGVyYXRpb25faWQYASABKAsyHC5nb2'
-    '9nbGUucHJvdG9idWYuU3RyaW5nVmFsdWVIAFILb3BlcmF0aW9uSWSIAQFCDwoNX29wZXJhdGlv'
-    'bl9pZA==');
+final $typed_data.Uint8List getOriginOperationIdResultDescriptor =
+    $convert.base64Decode(
+        'ChpHZXRPcmlnaW5PcGVyYXRpb25JZFJlc3VsdBJECgxvcGVyYXRpb25faWQYASABKAsyHC5nb2'
+        '9nbGUucHJvdG9idWYuU3RyaW5nVmFsdWVIAFILb3BlcmF0aW9uSWSIAQFCDwoNX29wZXJhdGlv'
+        'bl9pZA==');
 
 @$core.Deprecated('Use getNativeTimeRequestDescriptor instead')
 const GetNativeTimeRequest$json = {
@@ -1459,14 +2411,21 @@ const GetNativeTimeRequest$json = {
 };
 
 /// Descriptor for `GetNativeTimeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getNativeTimeRequestDescriptor = $convert.base64Decode(
-    'ChRHZXROYXRpdmVUaW1lUmVxdWVzdA==');
+final $typed_data.Uint8List getNativeTimeRequestDescriptor =
+    $convert.base64Decode('ChRHZXROYXRpdmVUaW1lUmVxdWVzdA==');
 
 @$core.Deprecated('Use getNativeTimeResultDescriptor instead')
 const GetNativeTimeResult$json = {
   '1': 'GetNativeTimeResult',
   '2': [
-    {'1': 'time', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'time'},
+    {
+      '1': 'time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'time'
+    },
   ],
 };
 
@@ -1481,14 +2440,21 @@ const GetCurrentSlotRequest$json = {
 };
 
 /// Descriptor for `GetCurrentSlotRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getCurrentSlotRequestDescriptor = $convert.base64Decode(
-    'ChVHZXRDdXJyZW50U2xvdFJlcXVlc3Q=');
+final $typed_data.Uint8List getCurrentSlotRequestDescriptor =
+    $convert.base64Decode('ChVHZXRDdXJyZW50U2xvdFJlcXVlc3Q=');
 
 @$core.Deprecated('Use getCurrentSlotResultDescriptor instead')
 const GetCurrentSlotResult$json = {
   '1': 'GetCurrentSlotResult',
   '2': [
-    {'1': 'slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
+    {
+      '1': 'slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
   ],
 };
 
@@ -1502,7 +2468,16 @@ const SetBytecodeRequest$json = {
   '1': 'SetBytecodeRequest',
   '2': [
     {'1': 'bytecode', '3': 1, '4': 1, '5': 12, '10': 'bytecode'},
-    {'1': 'address', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'address', '17': true},
+    {
+      '1': 'address',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'address',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_address'},
@@ -1521,14 +2496,23 @@ const SetBytecodeResult$json = {
 };
 
 /// Descriptor for `SetBytecodeResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setBytecodeResultDescriptor = $convert.base64Decode(
-    'ChFTZXRCeXRlY29kZVJlc3VsdA==');
+final $typed_data.Uint8List setBytecodeResultDescriptor =
+    $convert.base64Decode('ChFTZXRCeXRlY29kZVJlc3VsdA==');
 
 @$core.Deprecated('Use getBytecodeRequestDescriptor instead')
 const GetBytecodeRequest$json = {
   '1': 'GetBytecodeRequest',
   '2': [
-    {'1': 'address', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'address', '17': true},
+    {
+      '1': 'address',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'address',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_address'},
@@ -1558,8 +2542,8 @@ const CallerHasWriteAccessRequest$json = {
 };
 
 /// Descriptor for `CallerHasWriteAccessRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List callerHasWriteAccessRequestDescriptor = $convert.base64Decode(
-    'ChtDYWxsZXJIYXNXcml0ZUFjY2Vzc1JlcXVlc3Q=');
+final $typed_data.Uint8List callerHasWriteAccessRequestDescriptor =
+    $convert.base64Decode('ChtDYWxsZXJIYXNXcml0ZUFjY2Vzc1JlcXVlc3Q=');
 
 @$core.Deprecated('Use callerHasWriteAccessResultDescriptor instead')
 const CallerHasWriteAccessResult$json = {
@@ -1570,9 +2554,10 @@ const CallerHasWriteAccessResult$json = {
 };
 
 /// Descriptor for `CallerHasWriteAccessResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List callerHasWriteAccessResultDescriptor = $convert.base64Decode(
-    'ChpDYWxsZXJIYXNXcml0ZUFjY2Vzc1Jlc3VsdBIoChBoYXNfd3JpdGVfYWNjZXNzGAEgASgIUg'
-    '5oYXNXcml0ZUFjY2Vzcw==');
+final $typed_data.Uint8List callerHasWriteAccessResultDescriptor =
+    $convert.base64Decode(
+        'ChpDYWxsZXJIYXNXcml0ZUFjY2Vzc1Jlc3VsdBIoChBoYXNfd3JpdGVfYWNjZXNzGAEgASgIUg'
+        '5oYXNXcml0ZUFjY2Vzcw==');
 
 @$core.Deprecated('Use hashSha256RequestDescriptor instead')
 const HashSha256Request$json = {
@@ -1583,8 +2568,8 @@ const HashSha256Request$json = {
 };
 
 /// Descriptor for `HashSha256Request`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List hashSha256RequestDescriptor = $convert.base64Decode(
-    'ChFIYXNoU2hhMjU2UmVxdWVzdBISCgRkYXRhGAEgASgMUgRkYXRh');
+final $typed_data.Uint8List hashSha256RequestDescriptor = $convert
+    .base64Decode('ChFIYXNoU2hhMjU2UmVxdWVzdBISCgRkYXRhGAEgASgMUgRkYXRh');
 
 @$core.Deprecated('Use hashSha256ResultDescriptor instead')
 const HashSha256Result$json = {
@@ -1595,8 +2580,8 @@ const HashSha256Result$json = {
 };
 
 /// Descriptor for `HashSha256Result`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List hashSha256ResultDescriptor = $convert.base64Decode(
-    'ChBIYXNoU2hhMjU2UmVzdWx0EhIKBGhhc2gYASABKAxSBGhhc2g=');
+final $typed_data.Uint8List hashSha256ResultDescriptor = $convert
+    .base64Decode('ChBIYXNoU2hhMjU2UmVzdWx0EhIKBGhhc2gYASABKAxSBGhhc2g=');
 
 @$core.Deprecated('Use getOpDataRequestDescriptor instead')
 const GetOpDataRequest$json = {
@@ -1607,8 +2592,8 @@ const GetOpDataRequest$json = {
 };
 
 /// Descriptor for `GetOpDataRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getOpDataRequestDescriptor = $convert.base64Decode(
-    'ChBHZXRPcERhdGFSZXF1ZXN0EhAKA2tleRgBIAEoDFIDa2V5');
+final $typed_data.Uint8List getOpDataRequestDescriptor =
+    $convert.base64Decode('ChBHZXRPcERhdGFSZXF1ZXN0EhAKA2tleRgBIAEoDFIDa2V5');
 
 @$core.Deprecated('Use getOpDataResultDescriptor instead')
 const GetOpDataResult$json = {
@@ -1619,8 +2604,8 @@ const GetOpDataResult$json = {
 };
 
 /// Descriptor for `GetOpDataResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getOpDataResultDescriptor = $convert.base64Decode(
-    'Cg9HZXRPcERhdGFSZXN1bHQSFAoFdmFsdWUYASABKAxSBXZhbHVl');
+final $typed_data.Uint8List getOpDataResultDescriptor = $convert
+    .base64Decode('Cg9HZXRPcERhdGFSZXN1bHQSFAoFdmFsdWUYASABKAxSBXZhbHVl');
 
 @$core.Deprecated('Use opEntryExistsRequestDescriptor instead')
 const OpEntryExistsRequest$json = {
@@ -1631,8 +2616,8 @@ const OpEntryExistsRequest$json = {
 };
 
 /// Descriptor for `OpEntryExistsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List opEntryExistsRequestDescriptor = $convert.base64Decode(
-    'ChRPcEVudHJ5RXhpc3RzUmVxdWVzdBIQCgNrZXkYASABKAxSA2tleQ==');
+final $typed_data.Uint8List opEntryExistsRequestDescriptor = $convert
+    .base64Decode('ChRPcEVudHJ5RXhpc3RzUmVxdWVzdBIQCgNrZXkYASABKAxSA2tleQ==');
 
 @$core.Deprecated('Use opEntryExistsResultDescriptor instead')
 const OpEntryExistsResult$json = {
@@ -1643,8 +2628,9 @@ const OpEntryExistsResult$json = {
 };
 
 /// Descriptor for `OpEntryExistsResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List opEntryExistsResultDescriptor = $convert.base64Decode(
-    'ChNPcEVudHJ5RXhpc3RzUmVzdWx0EhcKB2hhc19rZXkYASABKAhSBmhhc0tleQ==');
+final $typed_data.Uint8List opEntryExistsResultDescriptor =
+    $convert.base64Decode(
+        'ChNPcEVudHJ5RXhpc3RzUmVzdWx0EhcKB2hhc19rZXkYASABKAhSBmhhc0tleQ==');
 
 @$core.Deprecated('Use getOpKeysRequestDescriptor instead')
 const GetOpKeysRequest$json = {
@@ -1655,8 +2641,8 @@ const GetOpKeysRequest$json = {
 };
 
 /// Descriptor for `GetOpKeysRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getOpKeysRequestDescriptor = $convert.base64Decode(
-    'ChBHZXRPcEtleXNSZXF1ZXN0EhYKBnByZWZpeBgBIAEoDFIGcHJlZml4');
+final $typed_data.Uint8List getOpKeysRequestDescriptor = $convert
+    .base64Decode('ChBHZXRPcEtleXNSZXF1ZXN0EhYKBnByZWZpeBgBIAEoDFIGcHJlZml4');
 
 @$core.Deprecated('Use getOpKeysResultDescriptor instead')
 const GetOpKeysResult$json = {
@@ -1667,8 +2653,8 @@ const GetOpKeysResult$json = {
 };
 
 /// Descriptor for `GetOpKeysResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getOpKeysResultDescriptor = $convert.base64Decode(
-    'Cg9HZXRPcEtleXNSZXN1bHQSEgoEa2V5cxgBIAMoDFIEa2V5cw==');
+final $typed_data.Uint8List getOpKeysResultDescriptor = $convert
+    .base64Decode('Cg9HZXRPcEtleXNSZXN1bHQSEgoEa2V5cxgBIAMoDFIEa2V5cw==');
 
 @$core.Deprecated('Use getRemainingGasRequestDescriptor instead')
 const GetRemainingGasRequest$json = {
@@ -1676,8 +2662,8 @@ const GetRemainingGasRequest$json = {
 };
 
 /// Descriptor for `GetRemainingGasRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getRemainingGasRequestDescriptor = $convert.base64Decode(
-    'ChZHZXRSZW1haW5pbmdHYXNSZXF1ZXN0');
+final $typed_data.Uint8List getRemainingGasRequestDescriptor =
+    $convert.base64Decode('ChZHZXRSZW1haW5pbmdHYXNSZXF1ZXN0');
 
 @$core.Deprecated('Use getRemainingGasResultDescriptor instead')
 const GetRemainingGasResult$json = {
@@ -1696,7 +2682,16 @@ final $typed_data.Uint8List getRemainingGasResultDescriptor = $convert.base64Dec
 const GetBalanceRequest$json = {
   '1': 'GetBalanceRequest',
   '2': [
-    {'1': 'address', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'address', '17': true},
+    {
+      '1': 'address',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'address',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_address'},
@@ -1712,7 +2707,14 @@ final $typed_data.Uint8List getBalanceRequestDescriptor = $convert.base64Decode(
 const GetBalanceResult$json = {
   '1': 'GetBalanceResult',
   '2': [
-    {'1': 'balance', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'balance'},
+    {
+      '1': 'balance',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'balance'
+    },
   ],
 };
 
@@ -1727,14 +2729,21 @@ const GetCallCoinsRequest$json = {
 };
 
 /// Descriptor for `GetCallCoinsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getCallCoinsRequestDescriptor = $convert.base64Decode(
-    'ChNHZXRDYWxsQ29pbnNSZXF1ZXN0');
+final $typed_data.Uint8List getCallCoinsRequestDescriptor =
+    $convert.base64Decode('ChNHZXRDYWxsQ29pbnNSZXF1ZXN0');
 
 @$core.Deprecated('Use getCallCoinsResultDescriptor instead')
 const GetCallCoinsResult$json = {
   '1': 'GetCallCoinsResult',
   '2': [
-    {'1': 'coins', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'coins'},
+    {
+      '1': 'coins',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'coins'
+    },
   ],
 };
 
@@ -1752,8 +2761,9 @@ const GetAddressVersionRequest$json = {
 };
 
 /// Descriptor for `GetAddressVersionRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getAddressVersionRequestDescriptor = $convert.base64Decode(
-    'ChhHZXRBZGRyZXNzVmVyc2lvblJlcXVlc3QSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw==');
+final $typed_data.Uint8List getAddressVersionRequestDescriptor =
+    $convert.base64Decode(
+        'ChhHZXRBZGRyZXNzVmVyc2lvblJlcXVlc3QSGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw==');
 
 @$core.Deprecated('Use getAddressVersionResultDescriptor instead')
 const GetAddressVersionResult$json = {
@@ -1764,8 +2774,9 @@ const GetAddressVersionResult$json = {
 };
 
 /// Descriptor for `GetAddressVersionResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getAddressVersionResultDescriptor = $convert.base64Decode(
-    'ChdHZXRBZGRyZXNzVmVyc2lvblJlc3VsdBIYCgd2ZXJzaW9uGAEgASgEUgd2ZXJzaW9u');
+final $typed_data.Uint8List getAddressVersionResultDescriptor =
+    $convert.base64Decode(
+        'ChdHZXRBZGRyZXNzVmVyc2lvblJlc3VsdBIYCgd2ZXJzaW9uGAEgASgEUgd2ZXJzaW9u');
 
 @$core.Deprecated('Use getAddressCategoryRequestDescriptor instead')
 const GetAddressCategoryRequest$json = {
@@ -1776,21 +2787,30 @@ const GetAddressCategoryRequest$json = {
 };
 
 /// Descriptor for `GetAddressCategoryRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getAddressCategoryRequestDescriptor = $convert.base64Decode(
-    'ChlHZXRBZGRyZXNzQ2F0ZWdvcnlSZXF1ZXN0EhgKB2FkZHJlc3MYASABKAlSB2FkZHJlc3M=');
+final $typed_data.Uint8List getAddressCategoryRequestDescriptor =
+    $convert.base64Decode(
+        'ChlHZXRBZGRyZXNzQ2F0ZWdvcnlSZXF1ZXN0EhgKB2FkZHJlc3MYASABKAlSB2FkZHJlc3M=');
 
 @$core.Deprecated('Use getAddressCategoryResultDescriptor instead')
 const GetAddressCategoryResult$json = {
   '1': 'GetAddressCategoryResult',
   '2': [
-    {'1': 'category', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.AddressCategory', '10': 'category'},
+    {
+      '1': 'category',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.AddressCategory',
+      '10': 'category'
+    },
   ],
 };
 
 /// Descriptor for `GetAddressCategoryResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getAddressCategoryResultDescriptor = $convert.base64Decode(
-    'ChhHZXRBZGRyZXNzQ2F0ZWdvcnlSZXN1bHQSOwoIY2F0ZWdvcnkYASABKA4yHy5tYXNzYS5tb2'
-    'RlbC52MS5BZGRyZXNzQ2F0ZWdvcnlSCGNhdGVnb3J5');
+final $typed_data.Uint8List getAddressCategoryResultDescriptor =
+    $convert.base64Decode(
+        'ChhHZXRBZGRyZXNzQ2F0ZWdvcnlSZXN1bHQSOwoIY2F0ZWdvcnkYASABKA4yHy5tYXNzYS5tb2'
+        'RlbC52MS5BZGRyZXNzQ2F0ZWdvcnlSCGNhdGVnb3J5');
 
 @$core.Deprecated('Use getPubKeyVersionRequestDescriptor instead')
 const GetPubKeyVersionRequest$json = {
@@ -1801,8 +2821,9 @@ const GetPubKeyVersionRequest$json = {
 };
 
 /// Descriptor for `GetPubKeyVersionRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getPubKeyVersionRequestDescriptor = $convert.base64Decode(
-    'ChdHZXRQdWJLZXlWZXJzaW9uUmVxdWVzdBIXCgdwdWJfa2V5GAEgASgJUgZwdWJLZXk=');
+final $typed_data.Uint8List getPubKeyVersionRequestDescriptor =
+    $convert.base64Decode(
+        'ChdHZXRQdWJLZXlWZXJzaW9uUmVxdWVzdBIXCgdwdWJfa2V5GAEgASgJUgZwdWJLZXk=');
 
 @$core.Deprecated('Use getPubKeyVersionResultDescriptor instead')
 const GetPubKeyVersionResult$json = {
@@ -1813,8 +2834,9 @@ const GetPubKeyVersionResult$json = {
 };
 
 /// Descriptor for `GetPubKeyVersionResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getPubKeyVersionResultDescriptor = $convert.base64Decode(
-    'ChZHZXRQdWJLZXlWZXJzaW9uUmVzdWx0EhgKB3ZlcnNpb24YASABKARSB3ZlcnNpb24=');
+final $typed_data.Uint8List getPubKeyVersionResultDescriptor =
+    $convert.base64Decode(
+        'ChZHZXRQdWJLZXlWZXJzaW9uUmVzdWx0EhgKB3ZlcnNpb24YASABKARSB3ZlcnNpb24=');
 
 @$core.Deprecated('Use getSignatureVersionRequestDescriptor instead')
 const GetSignatureVersionRequest$json = {
@@ -1825,9 +2847,10 @@ const GetSignatureVersionRequest$json = {
 };
 
 /// Descriptor for `GetSignatureVersionRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getSignatureVersionRequestDescriptor = $convert.base64Decode(
-    'ChpHZXRTaWduYXR1cmVWZXJzaW9uUmVxdWVzdBIcCglzaWduYXR1cmUYASABKAlSCXNpZ25hdH'
-    'VyZQ==');
+final $typed_data.Uint8List getSignatureVersionRequestDescriptor =
+    $convert.base64Decode(
+        'ChpHZXRTaWduYXR1cmVWZXJzaW9uUmVxdWVzdBIcCglzaWduYXR1cmUYASABKAlSCXNpZ25hdH'
+        'VyZQ==');
 
 @$core.Deprecated('Use getSignatureVersionResultDescriptor instead')
 const GetSignatureVersionResult$json = {
@@ -1838,8 +2861,9 @@ const GetSignatureVersionResult$json = {
 };
 
 /// Descriptor for `GetSignatureVersionResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getSignatureVersionResultDescriptor = $convert.base64Decode(
-    'ChlHZXRTaWduYXR1cmVWZXJzaW9uUmVzdWx0EhgKB3ZlcnNpb24YASABKARSB3ZlcnNpb24=');
+final $typed_data.Uint8List getSignatureVersionResultDescriptor =
+    $convert.base64Decode(
+        'ChlHZXRTaWduYXR1cmVWZXJzaW9uUmVzdWx0EhgKB3ZlcnNpb24YASABKARSB3ZlcnNpb24=');
 
 @$core.Deprecated('Use bytesToBase58CheckRequestDescriptor instead')
 const BytesToBase58CheckRequest$json = {
@@ -1850,8 +2874,9 @@ const BytesToBase58CheckRequest$json = {
 };
 
 /// Descriptor for `BytesToBase58CheckRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List bytesToBase58CheckRequestDescriptor = $convert.base64Decode(
-    'ChlCeXRlc1RvQmFzZTU4Q2hlY2tSZXF1ZXN0EhQKBWJ5dGVzGAEgASgMUgVieXRlcw==');
+final $typed_data.Uint8List bytesToBase58CheckRequestDescriptor =
+    $convert.base64Decode(
+        'ChlCeXRlc1RvQmFzZTU4Q2hlY2tSZXF1ZXN0EhQKBWJ5dGVzGAEgASgMUgVieXRlcw==');
 
 @$core.Deprecated('Use bytesToBase58CheckResultDescriptor instead')
 const BytesToBase58CheckResult$json = {
@@ -1862,9 +2887,10 @@ const BytesToBase58CheckResult$json = {
 };
 
 /// Descriptor for `BytesToBase58CheckResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List bytesToBase58CheckResultDescriptor = $convert.base64Decode(
-    'ChhCeXRlc1RvQmFzZTU4Q2hlY2tSZXN1bHQSIQoMYmFzZTU4X2NoZWNrGAEgASgJUgtiYXNlNT'
-    'hDaGVjaw==');
+final $typed_data.Uint8List bytesToBase58CheckResultDescriptor =
+    $convert.base64Decode(
+        'ChhCeXRlc1RvQmFzZTU4Q2hlY2tSZXN1bHQSIQoMYmFzZTU4X2NoZWNrGAEgASgJUgtiYXNlNT'
+        'hDaGVjaw==');
 
 @$core.Deprecated('Use base58CheckToBytesRequestDescriptor instead')
 const Base58CheckToBytesRequest$json = {
@@ -1875,9 +2901,10 @@ const Base58CheckToBytesRequest$json = {
 };
 
 /// Descriptor for `Base58CheckToBytesRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List base58CheckToBytesRequestDescriptor = $convert.base64Decode(
-    'ChlCYXNlNThDaGVja1RvQnl0ZXNSZXF1ZXN0EiEKDGJhc2U1OF9jaGVjaxgBIAEoCVILYmFzZT'
-    'U4Q2hlY2s=');
+final $typed_data.Uint8List base58CheckToBytesRequestDescriptor =
+    $convert.base64Decode(
+        'ChlCYXNlNThDaGVja1RvQnl0ZXNSZXF1ZXN0EiEKDGJhc2U1OF9jaGVjaxgBIAEoCVILYmFzZT'
+        'U4Q2hlY2s=');
 
 @$core.Deprecated('Use base58CheckToBytesResultDescriptor instead')
 const Base58CheckToBytesResult$json = {
@@ -1888,6 +2915,6 @@ const Base58CheckToBytesResult$json = {
 };
 
 /// Descriptor for `Base58CheckToBytesResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List base58CheckToBytesResultDescriptor = $convert.base64Decode(
-    'ChhCYXNlNThDaGVja1RvQnl0ZXNSZXN1bHQSFAoFYnl0ZXMYASABKAxSBWJ5dGVz');
-
+final $typed_data.Uint8List base58CheckToBytesResultDescriptor =
+    $convert.base64Decode(
+        'ChhCYXNlNThDaGVja1RvQnl0ZXNSZXN1bHQSFAoFYnl0ZXMYASABKAxSBWJ5dGVz');

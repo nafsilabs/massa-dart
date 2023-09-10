@@ -17,9 +17,30 @@ import 'dart:typed_data' as $typed_data;
 const SlotDraw$json = {
   '1': 'SlotDraw',
   '2': [
-    {'1': 'slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
-    {'1': 'block_producer', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'blockProducer'},
-    {'1': 'endorsement_draws', '3': 3, '4': 3, '5': 11, '6': '.massa.model.v1.EndorsementDraw', '10': 'endorsementDraws'},
+    {
+      '1': 'slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
+    {
+      '1': 'block_producer',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'blockProducer'
+    },
+    {
+      '1': 'endorsement_draws',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.EndorsementDraw',
+      '10': 'endorsementDraws'
+    },
   ],
 };
 
@@ -43,4 +64,3 @@ const EndorsementDraw$json = {
 final $typed_data.Uint8List endorsementDrawDescriptor = $convert.base64Decode(
     'Cg9FbmRvcnNlbWVudERyYXcSFAoFaW5kZXgYASABKARSBWluZGV4EhoKCHByb2R1Y2VyGAIgAS'
     'gJUghwcm9kdWNlcg==');
-

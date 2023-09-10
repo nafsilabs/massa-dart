@@ -15,23 +15,47 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 /// Execution status of an operation or denunciation
 class ExecutionQueryExecutionStatus extends $pb.ProtobufEnum {
-  static const ExecutionQueryExecutionStatus EXECUTION_QUERY_EXECUTION_STATUS_UNSPECIFIED = ExecutionQueryExecutionStatus._(0, _omitEnumNames ? '' : 'EXECUTION_QUERY_EXECUTION_STATUS_UNSPECIFIED');
-  static const ExecutionQueryExecutionStatus EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_SUCCESS = ExecutionQueryExecutionStatus._(1, _omitEnumNames ? '' : 'EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_SUCCESS');
-  static const ExecutionQueryExecutionStatus EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_FAILURE = ExecutionQueryExecutionStatus._(2, _omitEnumNames ? '' : 'EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_FAILURE');
-  static const ExecutionQueryExecutionStatus EXECUTION_QUERY_EXECUTION_STATUS_EXECUTABLE_OR_EXPIRED = ExecutionQueryExecutionStatus._(3, _omitEnumNames ? '' : 'EXECUTION_QUERY_EXECUTION_STATUS_EXECUTABLE_OR_EXPIRED');
+  static const ExecutionQueryExecutionStatus
+      EXECUTION_QUERY_EXECUTION_STATUS_UNSPECIFIED =
+      ExecutionQueryExecutionStatus._(0,
+          _omitEnumNames ? '' : 'EXECUTION_QUERY_EXECUTION_STATUS_UNSPECIFIED');
+  static const ExecutionQueryExecutionStatus
+      EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_SUCCESS =
+      ExecutionQueryExecutionStatus._(
+          1,
+          _omitEnumNames
+              ? ''
+              : 'EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_SUCCESS');
+  static const ExecutionQueryExecutionStatus
+      EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_FAILURE =
+      ExecutionQueryExecutionStatus._(
+          2,
+          _omitEnumNames
+              ? ''
+              : 'EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_FAILURE');
+  static const ExecutionQueryExecutionStatus
+      EXECUTION_QUERY_EXECUTION_STATUS_EXECUTABLE_OR_EXPIRED =
+      ExecutionQueryExecutionStatus._(
+          3,
+          _omitEnumNames
+              ? ''
+              : 'EXECUTION_QUERY_EXECUTION_STATUS_EXECUTABLE_OR_EXPIRED');
 
-  static const $core.List<ExecutionQueryExecutionStatus> values = <ExecutionQueryExecutionStatus> [
+  static const $core.List<ExecutionQueryExecutionStatus> values =
+      <ExecutionQueryExecutionStatus>[
     EXECUTION_QUERY_EXECUTION_STATUS_UNSPECIFIED,
     EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_SUCCESS,
     EXECUTION_QUERY_EXECUTION_STATUS_ALREADY_EXECUTED_WITH_FAILURE,
     EXECUTION_QUERY_EXECUTION_STATUS_EXECUTABLE_OR_EXPIRED,
   ];
 
-  static final $core.Map<$core.int, ExecutionQueryExecutionStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ExecutionQueryExecutionStatus? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, ExecutionQueryExecutionStatus> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ExecutionQueryExecutionStatus? valueOf($core.int value) =>
+      _byValue[value];
 
-  const ExecutionQueryExecutionStatus._($core.int v, $core.String n) : super(v, n);
+  const ExecutionQueryExecutionStatus._($core.int v, $core.String n)
+      : super(v, n);
 }
-
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

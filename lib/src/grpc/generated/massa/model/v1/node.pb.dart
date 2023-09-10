@@ -94,39 +94,58 @@ class NodeStatus extends $pb.GeneratedMessage {
     return $result;
   }
   NodeStatus._() : super();
-  factory NodeStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NodeStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory NodeStatus.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodeStatus.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NodeStatus', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NodeStatus',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'nodeId')
     ..aOS(2, _omitFieldNames ? '' : 'nodeIp')
     ..aOS(3, _omitFieldNames ? '' : 'version')
-    ..aOM<$4.NativeTime>(4, _omitFieldNames ? '' : 'currentTime', subBuilder: $4.NativeTime.create)
-    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'currentCycle', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$4.NativeTime>(6, _omitFieldNames ? '' : 'currentCycleTime', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(7, _omitFieldNames ? '' : 'nextCycleTime', subBuilder: $4.NativeTime.create)
-    ..pc<ConnectedNode>(8, _omitFieldNames ? '' : 'connectedNodes', $pb.PbFieldType.PM, subBuilder: ConnectedNode.create)
-    ..aOM<$5.Slot>(9, _omitFieldNames ? '' : 'lastExecutedFinalSlot', subBuilder: $5.Slot.create)
-    ..aOM<$5.Slot>(10, _omitFieldNames ? '' : 'lastExecutedSpeculativeSlot', subBuilder: $5.Slot.create)
+    ..aOM<$4.NativeTime>(4, _omitFieldNames ? '' : 'currentTime',
+        subBuilder: $4.NativeTime.create)
+    ..a<$fixnum.Int64>(
+        5, _omitFieldNames ? '' : 'currentCycle', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$4.NativeTime>(6, _omitFieldNames ? '' : 'currentCycleTime',
+        subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(7, _omitFieldNames ? '' : 'nextCycleTime',
+        subBuilder: $4.NativeTime.create)
+    ..pc<ConnectedNode>(
+        8, _omitFieldNames ? '' : 'connectedNodes', $pb.PbFieldType.PM,
+        subBuilder: ConnectedNode.create)
+    ..aOM<$5.Slot>(9, _omitFieldNames ? '' : 'lastExecutedFinalSlot',
+        subBuilder: $5.Slot.create)
+    ..aOM<$5.Slot>(10, _omitFieldNames ? '' : 'lastExecutedSpeculativeSlot',
+        subBuilder: $5.Slot.create)
     ..aOS(11, _omitFieldNames ? '' : 'finalStateFingerprint')
-    ..aOM<$9.ConsensusStats>(12, _omitFieldNames ? '' : 'consensusStats', subBuilder: $9.ConsensusStats.create)
-    ..aOM<$9.PoolStats>(13, _omitFieldNames ? '' : 'poolStats', subBuilder: $9.PoolStats.create)
-    ..aOM<$9.NetworkStats>(14, _omitFieldNames ? '' : 'networkStats', subBuilder: $9.NetworkStats.create)
-    ..aOM<$9.ExecutionStats>(15, _omitFieldNames ? '' : 'executionStats', subBuilder: $9.ExecutionStats.create)
-    ..aOM<CompactConfig>(16, _omitFieldNames ? '' : 'config', subBuilder: CompactConfig.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$9.ConsensusStats>(12, _omitFieldNames ? '' : 'consensusStats',
+        subBuilder: $9.ConsensusStats.create)
+    ..aOM<$9.PoolStats>(13, _omitFieldNames ? '' : 'poolStats',
+        subBuilder: $9.PoolStats.create)
+    ..aOM<$9.NetworkStats>(14, _omitFieldNames ? '' : 'networkStats',
+        subBuilder: $9.NetworkStats.create)
+    ..aOM<$9.ExecutionStats>(15, _omitFieldNames ? '' : 'executionStats',
+        subBuilder: $9.ExecutionStats.create)
+    ..aOM<CompactConfig>(16, _omitFieldNames ? '' : 'config',
+        subBuilder: CompactConfig.create)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   NodeStatus clone() => NodeStatus()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  NodeStatus copyWith(void Function(NodeStatus) updates) => super.copyWith((message) => updates(message as NodeStatus)) as NodeStatus;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NodeStatus copyWith(void Function(NodeStatus) updates) =>
+      super.copyWith((message) => updates(message as NodeStatus)) as NodeStatus;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -135,14 +154,18 @@ class NodeStatus extends $pb.GeneratedMessage {
   NodeStatus createEmptyInstance() => create();
   static $pb.PbList<NodeStatus> createRepeated() => $pb.PbList<NodeStatus>();
   @$core.pragma('dart2js:noInline')
-  static NodeStatus getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NodeStatus>(create);
+  static NodeStatus getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NodeStatus>(create);
   static NodeStatus? _defaultInstance;
 
   /// Our node id
   @$pb.TagNumber(1)
   $core.String get nodeId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set nodeId($core.String v) { $_setString(0, v); }
+  set nodeId($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasNodeId() => $_has(0);
   @$pb.TagNumber(1)
@@ -152,7 +175,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nodeIp => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nodeIp($core.String v) { $_setString(1, v); }
+  set nodeIp($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasNodeIp() => $_has(1);
   @$pb.TagNumber(2)
@@ -162,7 +188,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get version => $_getSZ(2);
   @$pb.TagNumber(3)
-  set version($core.String v) { $_setString(2, v); }
+  set version($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasVersion() => $_has(2);
   @$pb.TagNumber(3)
@@ -172,7 +201,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $4.NativeTime get currentTime => $_getN(3);
   @$pb.TagNumber(4)
-  set currentTime($4.NativeTime v) { setField(4, v); }
+  set currentTime($4.NativeTime v) {
+    setField(4, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasCurrentTime() => $_has(3);
   @$pb.TagNumber(4)
@@ -184,7 +216,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $fixnum.Int64 get currentCycle => $_getI64(4);
   @$pb.TagNumber(5)
-  set currentCycle($fixnum.Int64 v) { $_setInt64(4, v); }
+  set currentCycle($fixnum.Int64 v) {
+    $_setInt64(4, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasCurrentCycle() => $_has(4);
   @$pb.TagNumber(5)
@@ -194,7 +229,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $4.NativeTime get currentCycleTime => $_getN(5);
   @$pb.TagNumber(6)
-  set currentCycleTime($4.NativeTime v) { setField(6, v); }
+  set currentCycleTime($4.NativeTime v) {
+    setField(6, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasCurrentCycleTime() => $_has(5);
   @$pb.TagNumber(6)
@@ -206,7 +244,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $4.NativeTime get nextCycleTime => $_getN(6);
   @$pb.TagNumber(7)
-  set nextCycleTime($4.NativeTime v) { setField(7, v); }
+  set nextCycleTime($4.NativeTime v) {
+    setField(7, v);
+  }
+
   @$pb.TagNumber(7)
   $core.bool hasNextCycleTime() => $_has(6);
   @$pb.TagNumber(7)
@@ -222,7 +263,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $5.Slot get lastExecutedFinalSlot => $_getN(8);
   @$pb.TagNumber(9)
-  set lastExecutedFinalSlot($5.Slot v) { setField(9, v); }
+  set lastExecutedFinalSlot($5.Slot v) {
+    setField(9, v);
+  }
+
   @$pb.TagNumber(9)
   $core.bool hasLastExecutedFinalSlot() => $_has(8);
   @$pb.TagNumber(9)
@@ -234,7 +278,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $5.Slot get lastExecutedSpeculativeSlot => $_getN(9);
   @$pb.TagNumber(10)
-  set lastExecutedSpeculativeSlot($5.Slot v) { setField(10, v); }
+  set lastExecutedSpeculativeSlot($5.Slot v) {
+    setField(10, v);
+  }
+
   @$pb.TagNumber(10)
   $core.bool hasLastExecutedSpeculativeSlot() => $_has(9);
   @$pb.TagNumber(10)
@@ -246,7 +293,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $core.String get finalStateFingerprint => $_getSZ(10);
   @$pb.TagNumber(11)
-  set finalStateFingerprint($core.String v) { $_setString(10, v); }
+  set finalStateFingerprint($core.String v) {
+    $_setString(10, v);
+  }
+
   @$pb.TagNumber(11)
   $core.bool hasFinalStateFingerprint() => $_has(10);
   @$pb.TagNumber(11)
@@ -256,7 +306,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $9.ConsensusStats get consensusStats => $_getN(11);
   @$pb.TagNumber(12)
-  set consensusStats($9.ConsensusStats v) { setField(12, v); }
+  set consensusStats($9.ConsensusStats v) {
+    setField(12, v);
+  }
+
   @$pb.TagNumber(12)
   $core.bool hasConsensusStats() => $_has(11);
   @$pb.TagNumber(12)
@@ -268,7 +321,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $9.PoolStats get poolStats => $_getN(12);
   @$pb.TagNumber(13)
-  set poolStats($9.PoolStats v) { setField(13, v); }
+  set poolStats($9.PoolStats v) {
+    setField(13, v);
+  }
+
   @$pb.TagNumber(13)
   $core.bool hasPoolStats() => $_has(12);
   @$pb.TagNumber(13)
@@ -280,7 +336,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $9.NetworkStats get networkStats => $_getN(13);
   @$pb.TagNumber(14)
-  set networkStats($9.NetworkStats v) { setField(14, v); }
+  set networkStats($9.NetworkStats v) {
+    setField(14, v);
+  }
+
   @$pb.TagNumber(14)
   $core.bool hasNetworkStats() => $_has(13);
   @$pb.TagNumber(14)
@@ -292,7 +351,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $9.ExecutionStats get executionStats => $_getN(14);
   @$pb.TagNumber(15)
-  set executionStats($9.ExecutionStats v) { setField(15, v); }
+  set executionStats($9.ExecutionStats v) {
+    setField(15, v);
+  }
+
   @$pb.TagNumber(15)
   $core.bool hasExecutionStats() => $_has(14);
   @$pb.TagNumber(15)
@@ -304,7 +366,10 @@ class NodeStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   CompactConfig get config => $_getN(15);
   @$pb.TagNumber(16)
-  set config(CompactConfig v) { setField(16, v); }
+  set config(CompactConfig v) {
+    setField(16, v);
+  }
+
   @$pb.TagNumber(16)
   $core.bool hasConfig() => $_has(15);
   @$pb.TagNumber(16)
@@ -333,42 +398,57 @@ class ConnectedNode extends $pb.GeneratedMessage {
     return $result;
   }
   ConnectedNode._() : super();
-  factory ConnectedNode.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ConnectedNode.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ConnectedNode.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConnectedNode.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConnectedNode', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ConnectedNode',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'nodeId')
     ..aOS(2, _omitFieldNames ? '' : 'nodeIp')
-    ..e<ConnectionType>(3, _omitFieldNames ? '' : 'connectionType', $pb.PbFieldType.OE, defaultOrMaker: ConnectionType.CONNECTION_TYPE_UNSPECIFIED, valueOf: ConnectionType.valueOf, enumValues: ConnectionType.values)
-    ..hasRequiredFields = false
-  ;
+    ..e<ConnectionType>(
+        3, _omitFieldNames ? '' : 'connectionType', $pb.PbFieldType.OE,
+        defaultOrMaker: ConnectionType.CONNECTION_TYPE_UNSPECIFIED,
+        valueOf: ConnectionType.valueOf,
+        enumValues: ConnectionType.values)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ConnectedNode clone() => ConnectedNode()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ConnectedNode copyWith(void Function(ConnectedNode) updates) => super.copyWith((message) => updates(message as ConnectedNode)) as ConnectedNode;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ConnectedNode copyWith(void Function(ConnectedNode) updates) =>
+      super.copyWith((message) => updates(message as ConnectedNode))
+          as ConnectedNode;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConnectedNode create() => ConnectedNode._();
   ConnectedNode createEmptyInstance() => create();
-  static $pb.PbList<ConnectedNode> createRepeated() => $pb.PbList<ConnectedNode>();
+  static $pb.PbList<ConnectedNode> createRepeated() =>
+      $pb.PbList<ConnectedNode>();
   @$core.pragma('dart2js:noInline')
-  static ConnectedNode getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConnectedNode>(create);
+  static ConnectedNode getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConnectedNode>(create);
   static ConnectedNode? _defaultInstance;
 
   /// Node id
   @$pb.TagNumber(1)
   $core.String get nodeId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set nodeId($core.String v) { $_setString(0, v); }
+  set nodeId($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasNodeId() => $_has(0);
   @$pb.TagNumber(1)
@@ -378,7 +458,10 @@ class ConnectedNode extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nodeIp => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nodeIp($core.String v) { $_setString(1, v); }
+  set nodeIp($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasNodeIp() => $_has(1);
   @$pb.TagNumber(2)
@@ -388,7 +471,10 @@ class ConnectedNode extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ConnectionType get connectionType => $_getN(2);
   @$pb.TagNumber(3)
-  set connectionType(ConnectionType v) { setField(3, v); }
+  set connectionType(ConnectionType v) {
+    setField(3, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasConnectionType() => $_has(2);
   @$pb.TagNumber(3)
@@ -443,49 +529,71 @@ class CompactConfig extends $pb.GeneratedMessage {
     return $result;
   }
   CompactConfig._() : super();
-  factory CompactConfig.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CompactConfig.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory CompactConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CompactConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompactConfig', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'genesisTimestamp', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'endTimestamp', subBuilder: $4.NativeTime.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CompactConfig',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'genesisTimestamp',
+        subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'endTimestamp',
+        subBuilder: $4.NativeTime.create)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'threadCount', $pb.PbFieldType.OU3)
-    ..aOM<$4.NativeTime>(4, _omitFieldNames ? '' : 't0', subBuilder: $4.NativeTime.create)
-    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'deltaF0', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'operationValidityPeriods', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(7, _omitFieldNames ? '' : 'periodsPerCycle', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$2.NativeAmount>(8, _omitFieldNames ? '' : 'blockReward', subBuilder: $2.NativeAmount.create)
-    ..aOM<$2.NativeAmount>(9, _omitFieldNames ? '' : 'rollPrice', subBuilder: $2.NativeAmount.create)
-    ..a<$core.int>(10, _omitFieldNames ? '' : 'maxBlockSize', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$4.NativeTime>(4, _omitFieldNames ? '' : 't0',
+        subBuilder: $4.NativeTime.create)
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'deltaF0', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'operationValidityPeriods',
+        $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(
+        7, _omitFieldNames ? '' : 'periodsPerCycle', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$2.NativeAmount>(8, _omitFieldNames ? '' : 'blockReward',
+        subBuilder: $2.NativeAmount.create)
+    ..aOM<$2.NativeAmount>(9, _omitFieldNames ? '' : 'rollPrice',
+        subBuilder: $2.NativeAmount.create)
+    ..a<$core.int>(
+        10, _omitFieldNames ? '' : 'maxBlockSize', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   CompactConfig clone() => CompactConfig()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  CompactConfig copyWith(void Function(CompactConfig) updates) => super.copyWith((message) => updates(message as CompactConfig)) as CompactConfig;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CompactConfig copyWith(void Function(CompactConfig) updates) =>
+      super.copyWith((message) => updates(message as CompactConfig))
+          as CompactConfig;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CompactConfig create() => CompactConfig._();
   CompactConfig createEmptyInstance() => create();
-  static $pb.PbList<CompactConfig> createRepeated() => $pb.PbList<CompactConfig>();
+  static $pb.PbList<CompactConfig> createRepeated() =>
+      $pb.PbList<CompactConfig>();
   @$core.pragma('dart2js:noInline')
-  static CompactConfig getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompactConfig>(create);
+  static CompactConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CompactConfig>(create);
   static CompactConfig? _defaultInstance;
 
   /// Time in milliseconds when the blockclique started.
   @$pb.TagNumber(1)
   $4.NativeTime get genesisTimestamp => $_getN(0);
   @$pb.TagNumber(1)
-  set genesisTimestamp($4.NativeTime v) { setField(1, v); }
+  set genesisTimestamp($4.NativeTime v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasGenesisTimestamp() => $_has(0);
   @$pb.TagNumber(1)
@@ -497,7 +605,10 @@ class CompactConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $4.NativeTime get endTimestamp => $_getN(1);
   @$pb.TagNumber(2)
-  set endTimestamp($4.NativeTime v) { setField(2, v); }
+  set endTimestamp($4.NativeTime v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasEndTimestamp() => $_has(1);
   @$pb.TagNumber(2)
@@ -509,7 +620,10 @@ class CompactConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get threadCount => $_getIZ(2);
   @$pb.TagNumber(3)
-  set threadCount($core.int v) { $_setUnsignedInt32(2, v); }
+  set threadCount($core.int v) {
+    $_setUnsignedInt32(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasThreadCount() => $_has(2);
   @$pb.TagNumber(3)
@@ -519,7 +633,10 @@ class CompactConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $4.NativeTime get t0 => $_getN(3);
   @$pb.TagNumber(4)
-  set t0($4.NativeTime v) { setField(4, v); }
+  set t0($4.NativeTime v) {
+    setField(4, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasT0() => $_has(3);
   @$pb.TagNumber(4)
@@ -531,7 +648,10 @@ class CompactConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $fixnum.Int64 get deltaF0 => $_getI64(4);
   @$pb.TagNumber(5)
-  set deltaF0($fixnum.Int64 v) { $_setInt64(4, v); }
+  set deltaF0($fixnum.Int64 v) {
+    $_setInt64(4, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasDeltaF0() => $_has(4);
   @$pb.TagNumber(5)
@@ -541,7 +661,10 @@ class CompactConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $fixnum.Int64 get operationValidityPeriods => $_getI64(5);
   @$pb.TagNumber(6)
-  set operationValidityPeriods($fixnum.Int64 v) { $_setInt64(5, v); }
+  set operationValidityPeriods($fixnum.Int64 v) {
+    $_setInt64(5, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasOperationValidityPeriods() => $_has(5);
   @$pb.TagNumber(6)
@@ -551,7 +674,10 @@ class CompactConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $fixnum.Int64 get periodsPerCycle => $_getI64(6);
   @$pb.TagNumber(7)
-  set periodsPerCycle($fixnum.Int64 v) { $_setInt64(6, v); }
+  set periodsPerCycle($fixnum.Int64 v) {
+    $_setInt64(6, v);
+  }
+
   @$pb.TagNumber(7)
   $core.bool hasPeriodsPerCycle() => $_has(6);
   @$pb.TagNumber(7)
@@ -561,7 +687,10 @@ class CompactConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $2.NativeAmount get blockReward => $_getN(7);
   @$pb.TagNumber(8)
-  set blockReward($2.NativeAmount v) { setField(8, v); }
+  set blockReward($2.NativeAmount v) {
+    setField(8, v);
+  }
+
   @$pb.TagNumber(8)
   $core.bool hasBlockReward() => $_has(7);
   @$pb.TagNumber(8)
@@ -573,7 +702,10 @@ class CompactConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $2.NativeAmount get rollPrice => $_getN(8);
   @$pb.TagNumber(9)
-  set rollPrice($2.NativeAmount v) { setField(9, v); }
+  set rollPrice($2.NativeAmount v) {
+    setField(9, v);
+  }
+
   @$pb.TagNumber(9)
   $core.bool hasRollPrice() => $_has(8);
   @$pb.TagNumber(9)
@@ -585,7 +717,10 @@ class CompactConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.int get maxBlockSize => $_getIZ(9);
   @$pb.TagNumber(10)
-  set maxBlockSize($core.int v) { $_setUnsignedInt32(9, v); }
+  set maxBlockSize($core.int v) {
+    $_setUnsignedInt32(9, v);
+  }
+
   @$pb.TagNumber(10)
   $core.bool hasMaxBlockSize() => $_has(9);
   @$pb.TagNumber(10)
@@ -640,49 +775,68 @@ class PublicStatus extends $pb.GeneratedMessage {
     return $result;
   }
   PublicStatus._() : super();
-  factory PublicStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PublicStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory PublicStatus.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PublicStatus.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PublicStatus', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PublicStatus',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'nodeId')
     ..aOS(3, _omitFieldNames ? '' : 'version')
-    ..aOM<$4.NativeTime>(4, _omitFieldNames ? '' : 'currentTime', subBuilder: $4.NativeTime.create)
-    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'currentCycle', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$4.NativeTime>(6, _omitFieldNames ? '' : 'currentCycleTime', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(7, _omitFieldNames ? '' : 'nextCycleTime', subBuilder: $4.NativeTime.create)
-    ..aOM<$5.Slot>(8, _omitFieldNames ? '' : 'lastExecutedFinalSlot', subBuilder: $5.Slot.create)
-    ..aOM<$5.Slot>(9, _omitFieldNames ? '' : 'lastExecutedSpeculativeSlot', subBuilder: $5.Slot.create)
+    ..aOM<$4.NativeTime>(4, _omitFieldNames ? '' : 'currentTime',
+        subBuilder: $4.NativeTime.create)
+    ..a<$fixnum.Int64>(
+        5, _omitFieldNames ? '' : 'currentCycle', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$4.NativeTime>(6, _omitFieldNames ? '' : 'currentCycleTime',
+        subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(7, _omitFieldNames ? '' : 'nextCycleTime',
+        subBuilder: $4.NativeTime.create)
+    ..aOM<$5.Slot>(8, _omitFieldNames ? '' : 'lastExecutedFinalSlot',
+        subBuilder: $5.Slot.create)
+    ..aOM<$5.Slot>(9, _omitFieldNames ? '' : 'lastExecutedSpeculativeSlot',
+        subBuilder: $5.Slot.create)
     ..aOS(10, _omitFieldNames ? '' : 'finalStateFingerprint')
-    ..aOM<CompactConfig>(11, _omitFieldNames ? '' : 'config', subBuilder: CompactConfig.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<CompactConfig>(11, _omitFieldNames ? '' : 'config',
+        subBuilder: CompactConfig.create)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   PublicStatus clone() => PublicStatus()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  PublicStatus copyWith(void Function(PublicStatus) updates) => super.copyWith((message) => updates(message as PublicStatus)) as PublicStatus;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PublicStatus copyWith(void Function(PublicStatus) updates) =>
+      super.copyWith((message) => updates(message as PublicStatus))
+          as PublicStatus;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PublicStatus create() => PublicStatus._();
   PublicStatus createEmptyInstance() => create();
-  static $pb.PbList<PublicStatus> createRepeated() => $pb.PbList<PublicStatus>();
+  static $pb.PbList<PublicStatus> createRepeated() =>
+      $pb.PbList<PublicStatus>();
   @$core.pragma('dart2js:noInline')
-  static PublicStatus getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PublicStatus>(create);
+  static PublicStatus getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PublicStatus>(create);
   static PublicStatus? _defaultInstance;
 
   /// Our node id
   @$pb.TagNumber(1)
   $core.String get nodeId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set nodeId($core.String v) { $_setString(0, v); }
+  set nodeId($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasNodeId() => $_has(0);
   @$pb.TagNumber(1)
@@ -692,7 +846,10 @@ class PublicStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get version => $_getSZ(1);
   @$pb.TagNumber(3)
-  set version($core.String v) { $_setString(1, v); }
+  set version($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasVersion() => $_has(1);
   @$pb.TagNumber(3)
@@ -702,7 +859,10 @@ class PublicStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $4.NativeTime get currentTime => $_getN(2);
   @$pb.TagNumber(4)
-  set currentTime($4.NativeTime v) { setField(4, v); }
+  set currentTime($4.NativeTime v) {
+    setField(4, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasCurrentTime() => $_has(2);
   @$pb.TagNumber(4)
@@ -714,7 +874,10 @@ class PublicStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $fixnum.Int64 get currentCycle => $_getI64(3);
   @$pb.TagNumber(5)
-  set currentCycle($fixnum.Int64 v) { $_setInt64(3, v); }
+  set currentCycle($fixnum.Int64 v) {
+    $_setInt64(3, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasCurrentCycle() => $_has(3);
   @$pb.TagNumber(5)
@@ -724,7 +887,10 @@ class PublicStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $4.NativeTime get currentCycleTime => $_getN(4);
   @$pb.TagNumber(6)
-  set currentCycleTime($4.NativeTime v) { setField(6, v); }
+  set currentCycleTime($4.NativeTime v) {
+    setField(6, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasCurrentCycleTime() => $_has(4);
   @$pb.TagNumber(6)
@@ -736,7 +902,10 @@ class PublicStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $4.NativeTime get nextCycleTime => $_getN(5);
   @$pb.TagNumber(7)
-  set nextCycleTime($4.NativeTime v) { setField(7, v); }
+  set nextCycleTime($4.NativeTime v) {
+    setField(7, v);
+  }
+
   @$pb.TagNumber(7)
   $core.bool hasNextCycleTime() => $_has(5);
   @$pb.TagNumber(7)
@@ -748,7 +917,10 @@ class PublicStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $5.Slot get lastExecutedFinalSlot => $_getN(6);
   @$pb.TagNumber(8)
-  set lastExecutedFinalSlot($5.Slot v) { setField(8, v); }
+  set lastExecutedFinalSlot($5.Slot v) {
+    setField(8, v);
+  }
+
   @$pb.TagNumber(8)
   $core.bool hasLastExecutedFinalSlot() => $_has(6);
   @$pb.TagNumber(8)
@@ -760,7 +932,10 @@ class PublicStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $5.Slot get lastExecutedSpeculativeSlot => $_getN(7);
   @$pb.TagNumber(9)
-  set lastExecutedSpeculativeSlot($5.Slot v) { setField(9, v); }
+  set lastExecutedSpeculativeSlot($5.Slot v) {
+    setField(9, v);
+  }
+
   @$pb.TagNumber(9)
   $core.bool hasLastExecutedSpeculativeSlot() => $_has(7);
   @$pb.TagNumber(9)
@@ -772,7 +947,10 @@ class PublicStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.String get finalStateFingerprint => $_getSZ(8);
   @$pb.TagNumber(10)
-  set finalStateFingerprint($core.String v) { $_setString(8, v); }
+  set finalStateFingerprint($core.String v) {
+    $_setString(8, v);
+  }
+
   @$pb.TagNumber(10)
   $core.bool hasFinalStateFingerprint() => $_has(8);
   @$pb.TagNumber(10)
@@ -782,7 +960,10 @@ class PublicStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   CompactConfig get config => $_getN(9);
   @$pb.TagNumber(11)
-  set config(CompactConfig v) { setField(11, v); }
+  set config(CompactConfig v) {
+    setField(11, v);
+  }
+
   @$pb.TagNumber(11)
   $core.bool hasConfig() => $_has(9);
   @$pb.TagNumber(11)
@@ -791,6 +972,6 @@ class PublicStatus extends $pb.GeneratedMessage {
   CompactConfig ensureConfig() => $_ensure(9);
 }
 
-
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

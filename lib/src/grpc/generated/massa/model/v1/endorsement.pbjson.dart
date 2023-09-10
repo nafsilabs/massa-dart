@@ -17,7 +17,14 @@ import 'dart:typed_data' as $typed_data;
 const Endorsement$json = {
   '1': 'Endorsement',
   '2': [
-    {'1': 'slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
+    {
+      '1': 'slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
     {'1': 'index', '3': 2, '4': 1, '5': 13, '10': 'index'},
     {'1': 'endorsed_block', '3': 3, '4': 1, '5': 9, '10': 'endorsedBlock'},
   ],
@@ -33,10 +40,29 @@ final $typed_data.Uint8List endorsementDescriptor = $convert.base64Decode(
 const SignedEndorsement$json = {
   '1': 'SignedEndorsement',
   '2': [
-    {'1': 'content', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Endorsement', '10': 'content'},
+    {
+      '1': 'content',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Endorsement',
+      '10': 'content'
+    },
     {'1': 'signature', '3': 2, '4': 1, '5': 9, '10': 'signature'},
-    {'1': 'content_creator_pub_key', '3': 3, '4': 1, '5': 9, '10': 'contentCreatorPubKey'},
-    {'1': 'content_creator_address', '3': 4, '4': 1, '5': 9, '10': 'contentCreatorAddress'},
+    {
+      '1': 'content_creator_pub_key',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'contentCreatorPubKey'
+    },
+    {
+      '1': 'content_creator_address',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'contentCreatorAddress'
+    },
     {'1': 'secure_hash', '3': 5, '4': 1, '5': 9, '10': 'secureHash'},
     {'1': 'serialized_size', '3': 6, '4': 1, '5': 4, '10': 'serializedSize'},
   ],
@@ -71,7 +97,14 @@ const EndorsementWrapper$json = {
     {'1': 'in_pool', '3': 1, '4': 1, '5': 8, '10': 'inPool'},
     {'1': 'in_blocks', '3': 2, '4': 3, '5': 9, '10': 'inBlocks'},
     {'1': 'is_final', '3': 3, '4': 1, '5': 8, '10': 'isFinal'},
-    {'1': 'endorsement', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.SignedEndorsement', '10': 'endorsement'},
+    {
+      '1': 'endorsement',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SignedEndorsement',
+      '10': 'endorsement'
+    },
   ],
 };
 
@@ -98,4 +131,3 @@ final $typed_data.Uint8List endorsementInfoDescriptor = $convert.base64Decode(
     'Cg9FbmRvcnNlbWVudEluZm8SJQoOZW5kb3JzZW1lbnRfaWQYASABKAlSDWVuZG9yc2VtZW50SW'
     'QSFwoHaW5fcG9vbBgCIAEoCFIGaW5Qb29sEhsKCWluX2Jsb2NrcxgDIAMoCVIIaW5CbG9ja3MS'
     'GQoIaXNfZmluYWwYBCABKAhSB2lzRmluYWw=');
-

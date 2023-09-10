@@ -44,44 +44,63 @@ class ConsensusStats extends $pb.GeneratedMessage {
     return $result;
   }
   ConsensusStats._() : super();
-  factory ConsensusStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ConsensusStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ConsensusStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConsensusStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConsensusStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'startTimespan', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'endTimespan', subBuilder: $4.NativeTime.create)
-    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'finalBlockCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'staleBlockCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'cliqueCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ConsensusStats',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'startTimespan',
+        subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'endTimespan',
+        subBuilder: $4.NativeTime.create)
+    ..a<$fixnum.Int64>(
+        3, _omitFieldNames ? '' : 'finalBlockCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(
+        4, _omitFieldNames ? '' : 'staleBlockCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(
+        5, _omitFieldNames ? '' : 'cliqueCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ConsensusStats clone() => ConsensusStats()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ConsensusStats copyWith(void Function(ConsensusStats) updates) => super.copyWith((message) => updates(message as ConsensusStats)) as ConsensusStats;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ConsensusStats copyWith(void Function(ConsensusStats) updates) =>
+      super.copyWith((message) => updates(message as ConsensusStats))
+          as ConsensusStats;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConsensusStats create() => ConsensusStats._();
   ConsensusStats createEmptyInstance() => create();
-  static $pb.PbList<ConsensusStats> createRepeated() => $pb.PbList<ConsensusStats>();
+  static $pb.PbList<ConsensusStats> createRepeated() =>
+      $pb.PbList<ConsensusStats>();
   @$core.pragma('dart2js:noInline')
-  static ConsensusStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConsensusStats>(create);
+  static ConsensusStats getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConsensusStats>(create);
   static ConsensusStats? _defaultInstance;
 
   /// Start of the time span for stats
   @$pb.TagNumber(1)
   $4.NativeTime get startTimespan => $_getN(0);
   @$pb.TagNumber(1)
-  set startTimespan($4.NativeTime v) { setField(1, v); }
+  set startTimespan($4.NativeTime v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasStartTimespan() => $_has(0);
   @$pb.TagNumber(1)
@@ -93,7 +112,10 @@ class ConsensusStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $4.NativeTime get endTimespan => $_getN(1);
   @$pb.TagNumber(2)
-  set endTimespan($4.NativeTime v) { setField(2, v); }
+  set endTimespan($4.NativeTime v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasEndTimespan() => $_has(1);
   @$pb.TagNumber(2)
@@ -105,7 +127,10 @@ class ConsensusStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $fixnum.Int64 get finalBlockCount => $_getI64(2);
   @$pb.TagNumber(3)
-  set finalBlockCount($fixnum.Int64 v) { $_setInt64(2, v); }
+  set finalBlockCount($fixnum.Int64 v) {
+    $_setInt64(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasFinalBlockCount() => $_has(2);
   @$pb.TagNumber(3)
@@ -115,7 +140,10 @@ class ConsensusStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $fixnum.Int64 get staleBlockCount => $_getI64(3);
   @$pb.TagNumber(4)
-  set staleBlockCount($fixnum.Int64 v) { $_setInt64(3, v); }
+  set staleBlockCount($fixnum.Int64 v) {
+    $_setInt64(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasStaleBlockCount() => $_has(3);
   @$pb.TagNumber(4)
@@ -125,7 +153,10 @@ class ConsensusStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $fixnum.Int64 get cliqueCount => $_getI64(4);
   @$pb.TagNumber(5)
-  set cliqueCount($fixnum.Int64 v) { $_setInt64(4, v); }
+  set cliqueCount($fixnum.Int64 v) {
+    $_setInt64(4, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasCliqueCount() => $_has(4);
   @$pb.TagNumber(5)
@@ -148,25 +179,34 @@ class PoolStats extends $pb.GeneratedMessage {
     return $result;
   }
   PoolStats._() : super();
-  factory PoolStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PoolStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory PoolStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PoolStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PoolStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'endorsementsCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'operationsCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PoolStats',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..a<$fixnum.Int64>(
+        1, _omitFieldNames ? '' : 'endorsementsCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(
+        2, _omitFieldNames ? '' : 'operationsCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   PoolStats clone() => PoolStats()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  PoolStats copyWith(void Function(PoolStats) updates) => super.copyWith((message) => updates(message as PoolStats)) as PoolStats;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PoolStats copyWith(void Function(PoolStats) updates) =>
+      super.copyWith((message) => updates(message as PoolStats)) as PoolStats;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -175,14 +215,18 @@ class PoolStats extends $pb.GeneratedMessage {
   PoolStats createEmptyInstance() => create();
   static $pb.PbList<PoolStats> createRepeated() => $pb.PbList<PoolStats>();
   @$core.pragma('dart2js:noInline')
-  static PoolStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PoolStats>(create);
+  static PoolStats getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PoolStats>(create);
   static PoolStats? _defaultInstance;
 
   /// Endorsements
   @$pb.TagNumber(1)
   $fixnum.Int64 get endorsementsCount => $_getI64(0);
   @$pb.TagNumber(1)
-  set endorsementsCount($fixnum.Int64 v) { $_setInt64(0, v); }
+  set endorsementsCount($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasEndorsementsCount() => $_has(0);
   @$pb.TagNumber(1)
@@ -192,7 +236,10 @@ class PoolStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $fixnum.Int64 get operationsCount => $_getI64(1);
   @$pb.TagNumber(2)
-  set operationsCount($fixnum.Int64 v) { $_setInt64(1, v); }
+  set operationsCount($fixnum.Int64 v) {
+    $_setInt64(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasOperationsCount() => $_has(1);
   @$pb.TagNumber(2)
@@ -227,44 +274,65 @@ class NetworkStats extends $pb.GeneratedMessage {
     return $result;
   }
   NetworkStats._() : super();
-  factory NetworkStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NetworkStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory NetworkStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NetworkStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NetworkStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'inConnectionCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'outConnectionCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'knownPeerCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'bannedPeerCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'activeNodeCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NetworkStats',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..a<$fixnum.Int64>(
+        1, _omitFieldNames ? '' : 'inConnectionCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(
+        2, _omitFieldNames ? '' : 'outConnectionCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(
+        3, _omitFieldNames ? '' : 'knownPeerCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(
+        4, _omitFieldNames ? '' : 'bannedPeerCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(
+        5, _omitFieldNames ? '' : 'activeNodeCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   NetworkStats clone() => NetworkStats()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  NetworkStats copyWith(void Function(NetworkStats) updates) => super.copyWith((message) => updates(message as NetworkStats)) as NetworkStats;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NetworkStats copyWith(void Function(NetworkStats) updates) =>
+      super.copyWith((message) => updates(message as NetworkStats))
+          as NetworkStats;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static NetworkStats create() => NetworkStats._();
   NetworkStats createEmptyInstance() => create();
-  static $pb.PbList<NetworkStats> createRepeated() => $pb.PbList<NetworkStats>();
+  static $pb.PbList<NetworkStats> createRepeated() =>
+      $pb.PbList<NetworkStats>();
   @$core.pragma('dart2js:noInline')
-  static NetworkStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NetworkStats>(create);
+  static NetworkStats getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NetworkStats>(create);
   static NetworkStats? _defaultInstance;
 
   /// In connections count
   @$pb.TagNumber(1)
   $fixnum.Int64 get inConnectionCount => $_getI64(0);
   @$pb.TagNumber(1)
-  set inConnectionCount($fixnum.Int64 v) { $_setInt64(0, v); }
+  set inConnectionCount($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasInConnectionCount() => $_has(0);
   @$pb.TagNumber(1)
@@ -274,7 +342,10 @@ class NetworkStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $fixnum.Int64 get outConnectionCount => $_getI64(1);
   @$pb.TagNumber(2)
-  set outConnectionCount($fixnum.Int64 v) { $_setInt64(1, v); }
+  set outConnectionCount($fixnum.Int64 v) {
+    $_setInt64(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasOutConnectionCount() => $_has(1);
   @$pb.TagNumber(2)
@@ -284,7 +355,10 @@ class NetworkStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $fixnum.Int64 get knownPeerCount => $_getI64(2);
   @$pb.TagNumber(3)
-  set knownPeerCount($fixnum.Int64 v) { $_setInt64(2, v); }
+  set knownPeerCount($fixnum.Int64 v) {
+    $_setInt64(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasKnownPeerCount() => $_has(2);
   @$pb.TagNumber(3)
@@ -294,7 +368,10 @@ class NetworkStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $fixnum.Int64 get bannedPeerCount => $_getI64(3);
   @$pb.TagNumber(4)
-  set bannedPeerCount($fixnum.Int64 v) { $_setInt64(3, v); }
+  set bannedPeerCount($fixnum.Int64 v) {
+    $_setInt64(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasBannedPeerCount() => $_has(3);
   @$pb.TagNumber(4)
@@ -304,7 +381,10 @@ class NetworkStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $fixnum.Int64 get activeNodeCount => $_getI64(4);
   @$pb.TagNumber(5)
-  set activeNodeCount($fixnum.Int64 v) { $_setInt64(4, v); }
+  set activeNodeCount($fixnum.Int64 v) {
+    $_setInt64(4, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasActiveNodeCount() => $_has(4);
   @$pb.TagNumber(5)
@@ -335,43 +415,60 @@ class ExecutionStats extends $pb.GeneratedMessage {
     return $result;
   }
   ExecutionStats._() : super();
-  factory ExecutionStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ExecutionStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ExecutionStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExecutionStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ExecutionStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'timeWindowStart', subBuilder: $4.NativeTime.create)
-    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'timeWindowEnd', subBuilder: $4.NativeTime.create)
-    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'finalBlockCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'finalExecutedOperationsCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExecutionStats',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.NativeTime>(1, _omitFieldNames ? '' : 'timeWindowStart',
+        subBuilder: $4.NativeTime.create)
+    ..aOM<$4.NativeTime>(2, _omitFieldNames ? '' : 'timeWindowEnd',
+        subBuilder: $4.NativeTime.create)
+    ..a<$fixnum.Int64>(
+        3, _omitFieldNames ? '' : 'finalBlockCount', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'finalExecutedOperationsCount',
+        $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ExecutionStats clone() => ExecutionStats()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ExecutionStats copyWith(void Function(ExecutionStats) updates) => super.copyWith((message) => updates(message as ExecutionStats)) as ExecutionStats;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ExecutionStats copyWith(void Function(ExecutionStats) updates) =>
+      super.copyWith((message) => updates(message as ExecutionStats))
+          as ExecutionStats;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ExecutionStats create() => ExecutionStats._();
   ExecutionStats createEmptyInstance() => create();
-  static $pb.PbList<ExecutionStats> createRepeated() => $pb.PbList<ExecutionStats>();
+  static $pb.PbList<ExecutionStats> createRepeated() =>
+      $pb.PbList<ExecutionStats>();
   @$core.pragma('dart2js:noInline')
-  static ExecutionStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ExecutionStats>(create);
+  static ExecutionStats getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExecutionStats>(create);
   static ExecutionStats? _defaultInstance;
 
   /// Time window start
   @$pb.TagNumber(1)
   $4.NativeTime get timeWindowStart => $_getN(0);
   @$pb.TagNumber(1)
-  set timeWindowStart($4.NativeTime v) { setField(1, v); }
+  set timeWindowStart($4.NativeTime v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasTimeWindowStart() => $_has(0);
   @$pb.TagNumber(1)
@@ -383,7 +480,10 @@ class ExecutionStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $4.NativeTime get timeWindowEnd => $_getN(1);
   @$pb.TagNumber(2)
-  set timeWindowEnd($4.NativeTime v) { setField(2, v); }
+  set timeWindowEnd($4.NativeTime v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasTimeWindowEnd() => $_has(1);
   @$pb.TagNumber(2)
@@ -395,7 +495,10 @@ class ExecutionStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $fixnum.Int64 get finalBlockCount => $_getI64(2);
   @$pb.TagNumber(3)
-  set finalBlockCount($fixnum.Int64 v) { $_setInt64(2, v); }
+  set finalBlockCount($fixnum.Int64 v) {
+    $_setInt64(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasFinalBlockCount() => $_has(2);
   @$pb.TagNumber(3)
@@ -405,13 +508,16 @@ class ExecutionStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $fixnum.Int64 get finalExecutedOperationsCount => $_getI64(3);
   @$pb.TagNumber(4)
-  set finalExecutedOperationsCount($fixnum.Int64 v) { $_setInt64(3, v); }
+  set finalExecutedOperationsCount($fixnum.Int64 v) {
+    $_setInt64(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasFinalExecutedOperationsCount() => $_has(3);
   @$pb.TagNumber(4)
   void clearFinalExecutedOperationsCount() => clearField(4);
 }
 
-
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

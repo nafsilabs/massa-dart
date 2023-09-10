@@ -36,9 +36,23 @@ final $typed_data.Uint8List opTypeDescriptor = $convert.base64Decode(
 const Operation$json = {
   '1': 'Operation',
   '2': [
-    {'1': 'fee', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'fee'},
+    {
+      '1': 'fee',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'fee'
+    },
     {'1': 'expire_period', '3': 2, '4': 1, '5': 4, '10': 'expirePeriod'},
-    {'1': 'op', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.OperationType', '10': 'op'},
+    {
+      '1': 'op',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.OperationType',
+      '10': 'op'
+    },
   ],
 };
 
@@ -52,11 +66,51 @@ final $typed_data.Uint8List operationDescriptor = $convert.base64Decode(
 const OperationType$json = {
   '1': 'OperationType',
   '2': [
-    {'1': 'transaction', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Transaction', '9': 0, '10': 'transaction'},
-    {'1': 'roll_buy', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.RollBuy', '9': 0, '10': 'rollBuy'},
-    {'1': 'roll_sell', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.RollSell', '9': 0, '10': 'rollSell'},
-    {'1': 'execut_sc', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.ExecuteSC', '9': 0, '10': 'executSc'},
-    {'1': 'call_sc', '3': 5, '4': 1, '5': 11, '6': '.massa.model.v1.CallSC', '9': 0, '10': 'callSc'},
+    {
+      '1': 'transaction',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Transaction',
+      '9': 0,
+      '10': 'transaction'
+    },
+    {
+      '1': 'roll_buy',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.RollBuy',
+      '9': 0,
+      '10': 'rollBuy'
+    },
+    {
+      '1': 'roll_sell',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.RollSell',
+      '9': 0,
+      '10': 'rollSell'
+    },
+    {
+      '1': 'execut_sc',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.ExecuteSC',
+      '9': 0,
+      '10': 'executSc'
+    },
+    {
+      '1': 'call_sc',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.CallSC',
+      '9': 0,
+      '10': 'callSc'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -76,8 +130,21 @@ final $typed_data.Uint8List operationTypeDescriptor = $convert.base64Decode(
 const Transaction$json = {
   '1': 'Transaction',
   '2': [
-    {'1': 'recipient_address', '3': 1, '4': 1, '5': 9, '10': 'recipientAddress'},
-    {'1': 'amount', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'amount'},
+    {
+      '1': 'recipient_address',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'recipientAddress'
+    },
+    {
+      '1': 'amount',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'amount'
+    },
   ],
 };
 
@@ -96,8 +163,8 @@ const RollBuy$json = {
 };
 
 /// Descriptor for `RollBuy`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List rollBuyDescriptor = $convert.base64Decode(
-    'CgdSb2xsQnV5Eh0KCnJvbGxfY291bnQYASABKARSCXJvbGxDb3VudA==');
+final $typed_data.Uint8List rollBuyDescriptor = $convert
+    .base64Decode('CgdSb2xsQnV5Eh0KCnJvbGxfY291bnQYASABKARSCXJvbGxDb3VudA==');
 
 @$core.Deprecated('Use rollSellDescriptor instead')
 const RollSell$json = {
@@ -108,8 +175,8 @@ const RollSell$json = {
 };
 
 /// Descriptor for `RollSell`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List rollSellDescriptor = $convert.base64Decode(
-    'CghSb2xsU2VsbBIdCgpyb2xsX2NvdW50GAEgASgEUglyb2xsQ291bnQ=');
+final $typed_data.Uint8List rollSellDescriptor = $convert
+    .base64Decode('CghSb2xsU2VsbBIdCgpyb2xsX2NvdW50GAEgASgEUglyb2xsQ291bnQ=');
 
 @$core.Deprecated('Use executeSCDescriptor instead')
 const ExecuteSC$json = {
@@ -118,7 +185,14 @@ const ExecuteSC$json = {
     {'1': 'data', '3': 1, '4': 1, '5': 12, '10': 'data'},
     {'1': 'max_coins', '3': 2, '4': 1, '5': 4, '10': 'maxCoins'},
     {'1': 'max_gas', '3': 3, '4': 1, '5': 4, '10': 'maxGas'},
-    {'1': 'datastore', '3': 4, '4': 3, '5': 11, '6': '.massa.model.v1.BytesMapFieldEntry', '10': 'datastore'},
+    {
+      '1': 'datastore',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.BytesMapFieldEntry',
+      '10': 'datastore'
+    },
   ],
 };
 
@@ -136,7 +210,14 @@ const CallSC$json = {
     {'1': 'target_function', '3': 2, '4': 1, '5': 9, '10': 'targetFunction'},
     {'1': 'parameter', '3': 3, '4': 1, '5': 12, '10': 'parameter'},
     {'1': 'max_gas', '3': 4, '4': 1, '5': 4, '10': 'maxGas'},
-    {'1': 'coins', '3': 5, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'coins'},
+    {
+      '1': 'coins',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'coins'
+    },
   ],
 };
 
@@ -151,10 +232,29 @@ final $typed_data.Uint8List callSCDescriptor = $convert.base64Decode(
 const SignedOperation$json = {
   '1': 'SignedOperation',
   '2': [
-    {'1': 'content', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Operation', '10': 'content'},
+    {
+      '1': 'content',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Operation',
+      '10': 'content'
+    },
     {'1': 'signature', '3': 2, '4': 1, '5': 9, '10': 'signature'},
-    {'1': 'content_creator_pub_key', '3': 3, '4': 1, '5': 9, '10': 'contentCreatorPubKey'},
-    {'1': 'content_creator_address', '3': 4, '4': 1, '5': 9, '10': 'contentCreatorAddress'},
+    {
+      '1': 'content_creator_pub_key',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'contentCreatorPubKey'
+    },
+    {
+      '1': 'content_creator_address',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'contentCreatorAddress'
+    },
     {'1': 'secure_hash', '3': 5, '4': 1, '5': 9, '10': 'secureHash'},
     {'1': 'serialized_size', '3': 6, '4': 1, '5': 4, '10': 'serializedSize'},
   ],
@@ -175,7 +275,14 @@ const OperationWrapper$json = {
   '2': [
     {'1': 'block_ids', '3': 1, '4': 3, '5': 9, '10': 'blockIds'},
     {'1': 'thread', '3': 2, '4': 1, '5': 13, '10': 'thread'},
-    {'1': 'operation', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.SignedOperation', '10': 'operation'},
+    {
+      '1': 'operation',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SignedOperation',
+      '10': 'operation'
+    },
   ],
 };
 
@@ -216,7 +323,14 @@ final $typed_data.Uint8List operationIdsDescriptor = $convert.base64Decode(
 const OpTypes$json = {
   '1': 'OpTypes',
   '2': [
-    {'1': 'op_types', '3': 1, '4': 3, '5': 14, '6': '.massa.model.v1.OpType', '10': 'opTypes'},
+    {
+      '1': 'op_types',
+      '3': 1,
+      '4': 3,
+      '5': 14,
+      '6': '.massa.model.v1.OpType',
+      '10': 'opTypes'
+    },
   ],
 };
 
@@ -224,4 +338,3 @@ const OpTypes$json = {
 final $typed_data.Uint8List opTypesDescriptor = $convert.base64Decode(
     'CgdPcFR5cGVzEjEKCG9wX3R5cGVzGAEgAygOMhYubWFzc2EubW9kZWwudjEuT3BUeXBlUgdvcF'
     'R5cGVz');
-

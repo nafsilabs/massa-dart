@@ -49,8 +49,8 @@ const Empty$json = {
 };
 
 /// Descriptor for `Empty`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List emptyDescriptor = $convert.base64Decode(
-    'CgVFbXB0eQ==');
+final $typed_data.Uint8List emptyDescriptor =
+    $convert.base64Decode('CgVFbXB0eQ==');
 
 @$core.Deprecated('Use bytesMapFieldEntryDescriptor instead')
 const BytesMapFieldEntry$json = {
@@ -75,8 +75,9 @@ const ArrayOfBytesWrapper$json = {
 };
 
 /// Descriptor for `ArrayOfBytesWrapper`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List arrayOfBytesWrapperDescriptor = $convert.base64Decode(
-    'ChNBcnJheU9mQnl0ZXNXcmFwcGVyEhQKBWl0ZW1zGAEgAygMUgVpdGVtcw==');
+final $typed_data.Uint8List arrayOfBytesWrapperDescriptor =
+    $convert.base64Decode(
+        'ChNBcnJheU9mQnl0ZXNXcmFwcGVyEhQKBWl0ZW1zGAEgAygMUgVpdGVtcw==');
 
 @$core.Deprecated('Use keyPairDescriptor instead')
 const KeyPair$json = {
@@ -91,4 +92,3 @@ const KeyPair$json = {
 final $typed_data.Uint8List keyPairDescriptor = $convert.base64Decode(
     'CgdLZXlQYWlyEh0KCnB1YmxpY19rZXkYASABKAlSCXB1YmxpY0tleRIdCgpzZWNyZXRfa2V5GA'
     'IgASgJUglzZWNyZXRLZXk=');
-

@@ -31,41 +31,54 @@ class NativeAmount extends $pb.GeneratedMessage {
     return $result;
   }
   NativeAmount._() : super();
-  factory NativeAmount.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NativeAmount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory NativeAmount.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NativeAmount.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NativeAmount', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'mantissa', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NativeAmount',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..a<$fixnum.Int64>(
+        1, _omitFieldNames ? '' : 'mantissa', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'scale', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   NativeAmount clone() => NativeAmount()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  NativeAmount copyWith(void Function(NativeAmount) updates) => super.copyWith((message) => updates(message as NativeAmount)) as NativeAmount;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NativeAmount copyWith(void Function(NativeAmount) updates) =>
+      super.copyWith((message) => updates(message as NativeAmount))
+          as NativeAmount;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static NativeAmount create() => NativeAmount._();
   NativeAmount createEmptyInstance() => create();
-  static $pb.PbList<NativeAmount> createRepeated() => $pb.PbList<NativeAmount>();
+  static $pb.PbList<NativeAmount> createRepeated() =>
+      $pb.PbList<NativeAmount>();
   @$core.pragma('dart2js:noInline')
-  static NativeAmount getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NativeAmount>(create);
+  static NativeAmount getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NativeAmount>(create);
   static NativeAmount? _defaultInstance;
 
   /// Mantissa
   @$pb.TagNumber(1)
   $fixnum.Int64 get mantissa => $_getI64(0);
   @$pb.TagNumber(1)
-  set mantissa($fixnum.Int64 v) { $_setInt64(0, v); }
+  set mantissa($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasMantissa() => $_has(0);
   @$pb.TagNumber(1)
@@ -75,13 +88,16 @@ class NativeAmount extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get scale => $_getIZ(1);
   @$pb.TagNumber(2)
-  set scale($core.int v) { $_setUnsignedInt32(1, v); }
+  set scale($core.int v) {
+    $_setUnsignedInt32(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasScale() => $_has(1);
   @$pb.TagNumber(2)
   void clearScale() => clearField(2);
 }
 
-
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

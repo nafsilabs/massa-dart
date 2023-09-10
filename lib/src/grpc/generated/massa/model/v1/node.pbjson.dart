@@ -35,19 +35,102 @@ const NodeStatus$json = {
     {'1': 'node_id', '3': 1, '4': 1, '5': 9, '10': 'nodeId'},
     {'1': 'node_ip', '3': 2, '4': 1, '5': 9, '10': 'nodeIp'},
     {'1': 'version', '3': 3, '4': 1, '5': 9, '10': 'version'},
-    {'1': 'current_time', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'currentTime'},
+    {
+      '1': 'current_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'currentTime'
+    },
     {'1': 'current_cycle', '3': 5, '4': 1, '5': 4, '10': 'currentCycle'},
-    {'1': 'current_cycle_time', '3': 6, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'currentCycleTime'},
-    {'1': 'next_cycle_time', '3': 7, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'nextCycleTime'},
-    {'1': 'connected_nodes', '3': 8, '4': 3, '5': 11, '6': '.massa.model.v1.ConnectedNode', '10': 'connectedNodes'},
-    {'1': 'last_executed_final_slot', '3': 9, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'lastExecutedFinalSlot'},
-    {'1': 'last_executed_speculative_slot', '3': 10, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'lastExecutedSpeculativeSlot'},
-    {'1': 'final_state_fingerprint', '3': 11, '4': 1, '5': 9, '10': 'finalStateFingerprint'},
-    {'1': 'consensus_stats', '3': 12, '4': 1, '5': 11, '6': '.massa.model.v1.ConsensusStats', '10': 'consensusStats'},
-    {'1': 'pool_stats', '3': 13, '4': 1, '5': 11, '6': '.massa.model.v1.PoolStats', '10': 'poolStats'},
-    {'1': 'network_stats', '3': 14, '4': 1, '5': 11, '6': '.massa.model.v1.NetworkStats', '10': 'networkStats'},
-    {'1': 'execution_stats', '3': 15, '4': 1, '5': 11, '6': '.massa.model.v1.ExecutionStats', '10': 'executionStats'},
-    {'1': 'config', '3': 16, '4': 1, '5': 11, '6': '.massa.model.v1.CompactConfig', '10': 'config'},
+    {
+      '1': 'current_cycle_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'currentCycleTime'
+    },
+    {
+      '1': 'next_cycle_time',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'nextCycleTime'
+    },
+    {
+      '1': 'connected_nodes',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.ConnectedNode',
+      '10': 'connectedNodes'
+    },
+    {
+      '1': 'last_executed_final_slot',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'lastExecutedFinalSlot'
+    },
+    {
+      '1': 'last_executed_speculative_slot',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'lastExecutedSpeculativeSlot'
+    },
+    {
+      '1': 'final_state_fingerprint',
+      '3': 11,
+      '4': 1,
+      '5': 9,
+      '10': 'finalStateFingerprint'
+    },
+    {
+      '1': 'consensus_stats',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.ConsensusStats',
+      '10': 'consensusStats'
+    },
+    {
+      '1': 'pool_stats',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.PoolStats',
+      '10': 'poolStats'
+    },
+    {
+      '1': 'network_stats',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NetworkStats',
+      '10': 'networkStats'
+    },
+    {
+      '1': 'execution_stats',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.ExecutionStats',
+      '10': 'executionStats'
+    },
+    {
+      '1': 'config',
+      '3': 16,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.CompactConfig',
+      '10': 'config'
+    },
   ],
 };
 
@@ -78,7 +161,14 @@ const ConnectedNode$json = {
   '2': [
     {'1': 'node_id', '3': 1, '4': 1, '5': 9, '10': 'nodeId'},
     {'1': 'node_ip', '3': 2, '4': 1, '5': 9, '10': 'nodeIp'},
-    {'1': 'connection_type', '3': 3, '4': 1, '5': 14, '6': '.massa.model.v1.ConnectionType', '10': 'connectionType'},
+    {
+      '1': 'connection_type',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.ConnectionType',
+      '10': 'connectionType'
+    },
   ],
 };
 
@@ -92,15 +182,56 @@ final $typed_data.Uint8List connectedNodeDescriptor = $convert.base64Decode(
 const CompactConfig$json = {
   '1': 'CompactConfig',
   '2': [
-    {'1': 'genesis_timestamp', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'genesisTimestamp'},
-    {'1': 'end_timestamp', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'endTimestamp'},
+    {
+      '1': 'genesis_timestamp',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'genesisTimestamp'
+    },
+    {
+      '1': 'end_timestamp',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'endTimestamp'
+    },
     {'1': 'thread_count', '3': 3, '4': 1, '5': 13, '10': 'threadCount'},
-    {'1': 't0', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 't0'},
+    {
+      '1': 't0',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 't0'
+    },
     {'1': 'delta_f0', '3': 5, '4': 1, '5': 4, '10': 'deltaF0'},
-    {'1': 'operation_validity_periods', '3': 6, '4': 1, '5': 4, '10': 'operationValidityPeriods'},
+    {
+      '1': 'operation_validity_periods',
+      '3': 6,
+      '4': 1,
+      '5': 4,
+      '10': 'operationValidityPeriods'
+    },
     {'1': 'periods_per_cycle', '3': 7, '4': 1, '5': 4, '10': 'periodsPerCycle'},
-    {'1': 'block_reward', '3': 8, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'blockReward'},
-    {'1': 'roll_price', '3': 9, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'rollPrice'},
+    {
+      '1': 'block_reward',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'blockReward'
+    },
+    {
+      '1': 'roll_price',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'rollPrice'
+    },
     {'1': 'max_block_size', '3': 10, '4': 1, '5': 13, '10': 'maxBlockSize'},
   ],
 };
@@ -124,14 +255,62 @@ const PublicStatus$json = {
   '2': [
     {'1': 'node_id', '3': 1, '4': 1, '5': 9, '10': 'nodeId'},
     {'1': 'version', '3': 3, '4': 1, '5': 9, '10': 'version'},
-    {'1': 'current_time', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'currentTime'},
+    {
+      '1': 'current_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'currentTime'
+    },
     {'1': 'current_cycle', '3': 5, '4': 1, '5': 4, '10': 'currentCycle'},
-    {'1': 'current_cycle_time', '3': 6, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'currentCycleTime'},
-    {'1': 'next_cycle_time', '3': 7, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'nextCycleTime'},
-    {'1': 'last_executed_final_slot', '3': 8, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'lastExecutedFinalSlot'},
-    {'1': 'last_executed_speculative_slot', '3': 9, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'lastExecutedSpeculativeSlot'},
-    {'1': 'final_state_fingerprint', '3': 10, '4': 1, '5': 9, '10': 'finalStateFingerprint'},
-    {'1': 'config', '3': 11, '4': 1, '5': 11, '6': '.massa.model.v1.CompactConfig', '10': 'config'},
+    {
+      '1': 'current_cycle_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'currentCycleTime'
+    },
+    {
+      '1': 'next_cycle_time',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'nextCycleTime'
+    },
+    {
+      '1': 'last_executed_final_slot',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'lastExecutedFinalSlot'
+    },
+    {
+      '1': 'last_executed_speculative_slot',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'lastExecutedSpeculativeSlot'
+    },
+    {
+      '1': 'final_state_fingerprint',
+      '3': 10,
+      '4': 1,
+      '5': 9,
+      '10': 'finalStateFingerprint'
+    },
+    {
+      '1': 'config',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.CompactConfig',
+      '10': 'config'
+    },
   ],
 };
 
@@ -148,4 +327,3 @@ final $typed_data.Uint8List publicStatusDescriptor = $convert.base64Decode(
     'U2xvdFIbbGFzdEV4ZWN1dGVkU3BlY3VsYXRpdmVTbG90EjYKF2ZpbmFsX3N0YXRlX2Zpbmdlcn'
     'ByaW50GAogASgJUhVmaW5hbFN0YXRlRmluZ2VycHJpbnQSNQoGY29uZmlnGAsgASgLMh0ubWFz'
     'c2EubW9kZWwudjEuQ29tcGFjdENvbmZpZ1IGY29uZmln');
-

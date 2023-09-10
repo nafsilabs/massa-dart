@@ -33,7 +33,14 @@ final $typed_data.Uint8List addressCategoryDescriptor = $convert.base64Decode(
 const NativeAddress$json = {
   '1': 'NativeAddress',
   '2': [
-    {'1': 'category', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.AddressCategory', '10': 'category'},
+    {
+      '1': 'category',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.AddressCategory',
+      '10': 'category'
+    },
     {'1': 'version', '3': 2, '4': 1, '5': 4, '10': 'version'},
     {'1': 'content', '3': 3, '4': 1, '5': 12, '10': 'content'},
   ],
@@ -54,6 +61,5 @@ const Addresses$json = {
 };
 
 /// Descriptor for `Addresses`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addressesDescriptor = $convert.base64Decode(
-    'CglBZGRyZXNzZXMSHAoJYWRkcmVzc2VzGAEgAygJUglhZGRyZXNzZXM=');
-
+final $typed_data.Uint8List addressesDescriptor = $convert
+    .base64Decode('CglBZGRyZXNzZXMSHAoJYWRkcmVzc2VzGAEgAygJUglhZGRyZXNzZXM=');

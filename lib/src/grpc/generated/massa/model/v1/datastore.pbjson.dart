@@ -17,7 +17,14 @@ import 'dart:typed_data' as $typed_data;
 const AddressKeysEntries$json = {
   '1': 'AddressKeysEntries',
   '2': [
-    {'1': 'address_key_entries', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.AddressKeyEntry', '10': 'addressKeyEntries'},
+    {
+      '1': 'address_key_entries',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.AddressKeyEntry',
+      '10': 'addressKeyEntries'
+    },
   ],
 };
 
@@ -53,4 +60,3 @@ const DatastoreEntry$json = {
 final $typed_data.Uint8List datastoreEntryDescriptor = $convert.base64Decode(
     'Cg5EYXRhc3RvcmVFbnRyeRIfCgtmaW5hbF92YWx1ZRgBIAEoDFIKZmluYWxWYWx1ZRInCg9jYW'
     '5kaWRhdGVfdmFsdWUYAiABKAxSDmNhbmRpZGF0ZVZhbHVl');
-

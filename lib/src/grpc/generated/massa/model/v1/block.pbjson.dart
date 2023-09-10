@@ -36,7 +36,14 @@ final $typed_data.Uint8List blockStatusDescriptor = $convert.base64Decode(
 const Block$json = {
   '1': 'Block',
   '2': [
-    {'1': 'header', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SignedBlockHeader', '10': 'header'},
+    {
+      '1': 'header',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SignedBlockHeader',
+      '10': 'header'
+    },
     {'1': 'operations', '3': 2, '4': 3, '5': 9, '10': 'operations'},
   ],
 };
@@ -50,8 +57,22 @@ final $typed_data.Uint8List blockDescriptor = $convert.base64Decode(
 const FilledBlock$json = {
   '1': 'FilledBlock',
   '2': [
-    {'1': 'header', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SignedBlockHeader', '10': 'header'},
-    {'1': 'operations', '3': 2, '4': 3, '5': 11, '6': '.massa.model.v1.FilledOperationEntry', '10': 'operations'},
+    {
+      '1': 'header',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SignedBlockHeader',
+      '10': 'header'
+    },
+    {
+      '1': 'operations',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.FilledOperationEntry',
+      '10': 'operations'
+    },
   ],
 };
 
@@ -66,11 +87,32 @@ const BlockHeader$json = {
   '1': 'BlockHeader',
   '2': [
     {'1': 'current_version', '3': 1, '4': 1, '5': 13, '10': 'currentVersion'},
-    {'1': 'announced_version', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.UInt32Value', '10': 'announcedVersion'},
-    {'1': 'slot', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
+    {
+      '1': 'announced_version',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.UInt32Value',
+      '10': 'announcedVersion'
+    },
+    {
+      '1': 'slot',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
     {'1': 'parents', '3': 4, '4': 3, '5': 9, '10': 'parents'},
     {'1': 'operations_hash', '3': 5, '4': 1, '5': 9, '10': 'operationsHash'},
-    {'1': 'endorsements', '3': 6, '4': 3, '5': 11, '6': '.massa.model.v1.SignedEndorsement', '10': 'endorsements'},
+    {
+      '1': 'endorsements',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.SignedEndorsement',
+      '10': 'endorsements'
+    },
   ],
 };
 
@@ -88,7 +130,14 @@ const FilledOperationEntry$json = {
   '1': 'FilledOperationEntry',
   '2': [
     {'1': 'operation_id', '3': 1, '4': 1, '5': 9, '10': 'operationId'},
-    {'1': 'operation', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.SignedOperation', '10': 'operation'},
+    {
+      '1': 'operation',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SignedOperation',
+      '10': 'operation'
+    },
   ],
 };
 
@@ -102,10 +151,29 @@ final $typed_data.Uint8List filledOperationEntryDescriptor = $convert.base64Deco
 const SignedBlock$json = {
   '1': 'SignedBlock',
   '2': [
-    {'1': 'content', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Block', '10': 'content'},
+    {
+      '1': 'content',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Block',
+      '10': 'content'
+    },
     {'1': 'signature', '3': 2, '4': 1, '5': 9, '10': 'signature'},
-    {'1': 'content_creator_pub_key', '3': 3, '4': 1, '5': 9, '10': 'contentCreatorPubKey'},
-    {'1': 'content_creator_address', '3': 4, '4': 1, '5': 9, '10': 'contentCreatorAddress'},
+    {
+      '1': 'content_creator_pub_key',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'contentCreatorPubKey'
+    },
+    {
+      '1': 'content_creator_address',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'contentCreatorAddress'
+    },
     {'1': 'secure_hash', '3': 5, '4': 1, '5': 9, '10': 'secureHash'},
     {'1': 'serialized_size', '3': 6, '4': 1, '5': 4, '10': 'serializedSize'},
   ],
@@ -124,10 +192,29 @@ final $typed_data.Uint8List signedBlockDescriptor = $convert.base64Decode(
 const SignedBlockHeader$json = {
   '1': 'SignedBlockHeader',
   '2': [
-    {'1': 'content', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.BlockHeader', '10': 'content'},
+    {
+      '1': 'content',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.BlockHeader',
+      '10': 'content'
+    },
     {'1': 'signature', '3': 2, '4': 1, '5': 9, '10': 'signature'},
-    {'1': 'content_creator_pub_key', '3': 3, '4': 1, '5': 9, '10': 'contentCreatorPubKey'},
-    {'1': 'content_creator_address', '3': 4, '4': 1, '5': 9, '10': 'contentCreatorAddress'},
+    {
+      '1': 'content_creator_pub_key',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'contentCreatorPubKey'
+    },
+    {
+      '1': 'content_creator_address',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '10': 'contentCreatorAddress'
+    },
     {'1': 'secure_hash', '3': 5, '4': 1, '5': 9, '10': 'secureHash'},
     {'1': 'serialized_size', '3': 6, '4': 1, '5': 4, '10': 'serializedSize'},
   ],
@@ -146,8 +233,22 @@ final $typed_data.Uint8List signedBlockHeaderDescriptor = $convert.base64Decode(
 const BlockWrapper$json = {
   '1': 'BlockWrapper',
   '2': [
-    {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.BlockStatus', '10': 'status'},
-    {'1': 'block', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Block', '10': 'block'},
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.BlockStatus',
+      '10': 'status'
+    },
+    {
+      '1': 'block',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Block',
+      '10': 'block'
+    },
   ],
 };
 
@@ -162,7 +263,14 @@ const BlockInfo$json = {
   '1': 'BlockInfo',
   '2': [
     {'1': 'block_id', '3': 1, '4': 1, '5': 9, '10': 'blockId'},
-    {'1': 'status', '3': 2, '4': 1, '5': 14, '6': '.massa.model.v1.BlockStatus', '10': 'status'},
+    {
+      '1': 'status',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.BlockStatus',
+      '10': 'status'
+    },
   ],
 };
 
@@ -180,8 +288,8 @@ const BlockIds$json = {
 };
 
 /// Descriptor for `BlockIds`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List blockIdsDescriptor = $convert.base64Decode(
-    'CghCbG9ja0lkcxIbCglibG9ja19pZHMYASADKAlSCGJsb2NrSWRz');
+final $typed_data.Uint8List blockIdsDescriptor = $convert
+    .base64Decode('CghCbG9ja0lkcxIbCglibG9ja19pZHMYASADKAlSCGJsb2NrSWRz');
 
 @$core.Deprecated('Use blockParentDescriptor instead')
 const BlockParent$json = {
@@ -196,4 +304,3 @@ const BlockParent$json = {
 final $typed_data.Uint8List blockParentDescriptor = $convert.base64Decode(
     'CgtCbG9ja1BhcmVudBIZCghibG9ja19pZBgBIAEoCVIHYmxvY2tJZBIWCgZwZXJpb2QYAiABKA'
     'RSBnBlcmlvZA==');
-

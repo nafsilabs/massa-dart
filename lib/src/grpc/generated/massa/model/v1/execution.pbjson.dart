@@ -103,8 +103,22 @@ final $typed_data.Uint8List ledgerChangeTypeDescriptor = $convert.base64Decode(
 const SlotExecutionOutput$json = {
   '1': 'SlotExecutionOutput',
   '2': [
-    {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.ExecutionOutputStatus', '10': 'status'},
-    {'1': 'execution_output', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.ExecutionOutput', '10': 'executionOutput'},
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.ExecutionOutputStatus',
+      '10': 'status'
+    },
+    {
+      '1': 'execution_output',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.ExecutionOutput',
+      '10': 'executionOutput'
+    },
   ],
 };
 
@@ -118,23 +132,59 @@ final $typed_data.Uint8List slotExecutionOutputDescriptor = $convert.base64Decod
 const FinalizedExecutionOutput$json = {
   '1': 'FinalizedExecutionOutput',
   '2': [
-    {'1': 'slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
+    {
+      '1': 'slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
   ],
 };
 
 /// Descriptor for `FinalizedExecutionOutput`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List finalizedExecutionOutputDescriptor = $convert.base64Decode(
-    'ChhGaW5hbGl6ZWRFeGVjdXRpb25PdXRwdXQSKAoEc2xvdBgBIAEoCzIULm1hc3NhLm1vZGVsLn'
-    'YxLlNsb3RSBHNsb3Q=');
+final $typed_data.Uint8List finalizedExecutionOutputDescriptor =
+    $convert.base64Decode(
+        'ChhGaW5hbGl6ZWRFeGVjdXRpb25PdXRwdXQSKAoEc2xvdBgBIAEoCzIULm1hc3NhLm1vZGVsLn'
+        'YxLlNsb3RSBHNsb3Q=');
 
 @$core.Deprecated('Use executionOutputDescriptor instead')
 const ExecutionOutput$json = {
   '1': 'ExecutionOutput',
   '2': [
-    {'1': 'slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
-    {'1': 'block_id', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'blockId'},
-    {'1': 'events', '3': 3, '4': 3, '5': 11, '6': '.massa.model.v1.ScExecutionEvent', '10': 'events'},
-    {'1': 'state_changes', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.StateChanges', '10': 'stateChanges'},
+    {
+      '1': 'slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
+    {
+      '1': 'block_id',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'blockId'
+    },
+    {
+      '1': 'events',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.ScExecutionEvent',
+      '10': 'events'
+    },
+    {
+      '1': 'state_changes',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.StateChanges',
+      '10': 'stateChanges'
+    },
   ],
 };
 
@@ -150,7 +200,14 @@ final $typed_data.Uint8List executionOutputDescriptor = $convert.base64Decode(
 const ScExecutionEvent$json = {
   '1': 'ScExecutionEvent',
   '2': [
-    {'1': 'context', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.ScExecutionEventContext', '10': 'context'},
+    {
+      '1': 'context',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.ScExecutionEventContext',
+      '10': 'context'
+    },
     {'1': 'data', '3': 2, '4': 1, '5': 12, '10': 'data'},
   ],
 };
@@ -164,13 +221,41 @@ final $typed_data.Uint8List scExecutionEventDescriptor = $convert.base64Decode(
 const ScExecutionEventContext$json = {
   '1': 'ScExecutionEventContext',
   '2': [
-    {'1': 'origin_slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'originSlot'},
-    {'1': 'block_id', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'blockId'},
+    {
+      '1': 'origin_slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'originSlot'
+    },
+    {
+      '1': 'block_id',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'blockId'
+    },
     {'1': 'index_in_slot', '3': 3, '4': 1, '5': 4, '10': 'indexInSlot'},
     {'1': 'call_stack', '3': 4, '4': 3, '5': 9, '10': 'callStack'},
-    {'1': 'origin_operation_id', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'originOperationId'},
+    {
+      '1': 'origin_operation_id',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'originOperationId'
+    },
     {'1': 'is_failure', '3': 6, '4': 1, '5': 8, '10': 'isFailure'},
-    {'1': 'status', '3': 7, '4': 1, '5': 14, '6': '.massa.model.v1.ScExecutionEventStatus', '10': 'status'},
+    {
+      '1': 'status',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.ScExecutionEventStatus',
+      '10': 'status'
+    },
   ],
 };
 
@@ -188,24 +273,67 @@ final $typed_data.Uint8List scExecutionEventContextDescriptor = $convert.base64D
 const ScExecutionEventsStatus$json = {
   '1': 'ScExecutionEventsStatus',
   '2': [
-    {'1': 'status', '3': 1, '4': 3, '5': 14, '6': '.massa.model.v1.ScExecutionEventStatus', '10': 'status'},
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 3,
+      '5': 14,
+      '6': '.massa.model.v1.ScExecutionEventStatus',
+      '10': 'status'
+    },
   ],
 };
 
 /// Descriptor for `ScExecutionEventsStatus`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List scExecutionEventsStatusDescriptor = $convert.base64Decode(
-    'ChdTY0V4ZWN1dGlvbkV2ZW50c1N0YXR1cxI+CgZzdGF0dXMYASADKA4yJi5tYXNzYS5tb2RlbC'
-    '52MS5TY0V4ZWN1dGlvbkV2ZW50U3RhdHVzUgZzdGF0dXM=');
+final $typed_data.Uint8List scExecutionEventsStatusDescriptor =
+    $convert.base64Decode(
+        'ChdTY0V4ZWN1dGlvbkV2ZW50c1N0YXR1cxI+CgZzdGF0dXMYASADKA4yJi5tYXNzYS5tb2RlbC'
+        '52MS5TY0V4ZWN1dGlvbkV2ZW50U3RhdHVzUgZzdGF0dXM=');
 
 @$core.Deprecated('Use stateChangesDescriptor instead')
 const StateChanges$json = {
   '1': 'StateChanges',
   '2': [
-    {'1': 'ledger_changes', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.LedgerChangeEntry', '10': 'ledgerChanges'},
-    {'1': 'async_pool_changes', '3': 2, '4': 3, '5': 11, '6': '.massa.model.v1.AsyncPoolChangeEntry', '10': 'asyncPoolChanges'},
-    {'1': 'executed_ops_changes', '3': 4, '4': 3, '5': 11, '6': '.massa.model.v1.ExecutedOpsChangeEntry', '10': 'executedOpsChanges'},
-    {'1': 'executed_denunciations_changes', '3': 5, '4': 3, '5': 11, '6': '.massa.model.v1.DenunciationIndex', '10': 'executedDenunciationsChanges'},
-    {'1': 'execution_trail_hash_change', '3': 6, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepString', '10': 'executionTrailHashChange'},
+    {
+      '1': 'ledger_changes',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.LedgerChangeEntry',
+      '10': 'ledgerChanges'
+    },
+    {
+      '1': 'async_pool_changes',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.AsyncPoolChangeEntry',
+      '10': 'asyncPoolChanges'
+    },
+    {
+      '1': 'executed_ops_changes',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.ExecutedOpsChangeEntry',
+      '10': 'executedOpsChanges'
+    },
+    {
+      '1': 'executed_denunciations_changes',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.DenunciationIndex',
+      '10': 'executedDenunciationsChanges'
+    },
+    {
+      '1': 'execution_trail_hash_change',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepString',
+      '10': 'executionTrailHashChange'
+    },
   ],
 };
 
@@ -226,7 +354,14 @@ const ExecutedOpsChangeEntry$json = {
   '1': 'ExecutedOpsChangeEntry',
   '2': [
     {'1': 'operation_id', '3': 1, '4': 1, '5': 9, '10': 'operationId'},
-    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.ExecutedOpsChangeValue', '10': 'value'},
+    {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.ExecutedOpsChangeValue',
+      '10': 'value'
+    },
   ],
 };
 
@@ -240,8 +375,22 @@ final $typed_data.Uint8List executedOpsChangeEntryDescriptor = $convert.base64De
 const ExecutedOpsChangeValue$json = {
   '1': 'ExecutedOpsChangeValue',
   '2': [
-    {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.OperationExecutionStatus', '10': 'status'},
-    {'1': 'slot', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.OperationExecutionStatus',
+      '10': 'status'
+    },
+    {
+      '1': 'slot',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
   ],
 };
 
@@ -256,7 +405,14 @@ const AsyncPoolChangeEntry$json = {
   '1': 'AsyncPoolChangeEntry',
   '2': [
     {'1': 'async_message_id', '3': 1, '4': 1, '5': 9, '10': 'asyncMessageId'},
-    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.AsyncPoolChangeValue', '10': 'value'},
+    {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.AsyncPoolChangeValue',
+      '10': 'value'
+    },
   ],
 };
 
@@ -270,9 +426,32 @@ final $typed_data.Uint8List asyncPoolChangeEntryDescriptor = $convert.base64Deco
 const AsyncPoolChangeValue$json = {
   '1': 'AsyncPoolChangeValue',
   '2': [
-    {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.AsyncPoolChangeType', '10': 'type'},
-    {'1': 'created_message', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.AsyncMessage', '9': 0, '10': 'createdMessage'},
-    {'1': 'updated_message', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.AsyncMessageUpdate', '9': 0, '10': 'updatedMessage'},
+    {
+      '1': 'type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.AsyncPoolChangeType',
+      '10': 'type'
+    },
+    {
+      '1': 'created_message',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.AsyncMessage',
+      '9': 0,
+      '10': 'createdMessage'
+    },
+    {
+      '1': 'updated_message',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.AsyncMessageUpdate',
+      '9': 0,
+      '10': 'updatedMessage'
+    },
   ],
   '8': [
     {'1': 'message'},
@@ -291,18 +470,60 @@ final $typed_data.Uint8List asyncPoolChangeValueDescriptor = $convert.base64Deco
 const AsyncMessage$json = {
   '1': 'AsyncMessage',
   '2': [
-    {'1': 'emission_slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'emissionSlot'},
+    {
+      '1': 'emission_slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'emissionSlot'
+    },
     {'1': 'emission_index', '3': 2, '4': 1, '5': 4, '10': 'emissionIndex'},
     {'1': 'sender', '3': 3, '4': 1, '5': 9, '10': 'sender'},
     {'1': 'destination', '3': 4, '4': 1, '5': 9, '10': 'destination'},
     {'1': 'handler', '3': 5, '4': 1, '5': 9, '10': 'handler'},
     {'1': 'max_gas', '3': 6, '4': 1, '5': 4, '10': 'maxGas'},
-    {'1': 'fee', '3': 7, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'fee'},
-    {'1': 'coins', '3': 8, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'coins'},
-    {'1': 'validity_start', '3': 9, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'validityStart'},
-    {'1': 'validity_end', '3': 10, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'validityEnd'},
+    {
+      '1': 'fee',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'fee'
+    },
+    {
+      '1': 'coins',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'coins'
+    },
+    {
+      '1': 'validity_start',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'validityStart'
+    },
+    {
+      '1': 'validity_end',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'validityEnd'
+    },
     {'1': 'data', '3': 11, '4': 1, '5': 12, '10': 'data'},
-    {'1': 'trigger', '3': 12, '4': 1, '5': 11, '6': '.massa.model.v1.AsyncMessageTrigger', '10': 'trigger'},
+    {
+      '1': 'trigger',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.AsyncMessageTrigger',
+      '10': 'trigger'
+    },
     {'1': 'can_be_executed', '3': 13, '4': 1, '5': 8, '10': 'canBeExecuted'},
   ],
 };
@@ -325,19 +546,110 @@ final $typed_data.Uint8List asyncMessageDescriptor = $convert.base64Decode(
 const AsyncMessageUpdate$json = {
   '1': 'AsyncMessageUpdate',
   '2': [
-    {'1': 'emission_slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepSlot', '10': 'emissionSlot'},
-    {'1': 'emission_index', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepUint64', '10': 'emissionIndex'},
-    {'1': 'sender', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepString', '10': 'sender'},
-    {'1': 'destination', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepString', '10': 'destination'},
-    {'1': 'handler', '3': 5, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepString', '10': 'handler'},
-    {'1': 'max_gas', '3': 6, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepUint64', '10': 'maxGas'},
-    {'1': 'fee', '3': 7, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepUint64', '10': 'fee'},
-    {'1': 'coins', '3': 8, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepUint64', '10': 'coins'},
-    {'1': 'validity_start', '3': 9, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepSlot', '10': 'validityStart'},
-    {'1': 'validity_end', '3': 10, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepSlot', '10': 'validityEnd'},
-    {'1': 'data', '3': 11, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepBytes', '10': 'data'},
-    {'1': 'trigger', '3': 12, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepAsyncMessageTrigger', '10': 'trigger'},
-    {'1': 'can_be_executed', '3': 13, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepBool', '10': 'canBeExecuted'},
+    {
+      '1': 'emission_slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepSlot',
+      '10': 'emissionSlot'
+    },
+    {
+      '1': 'emission_index',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepUint64',
+      '10': 'emissionIndex'
+    },
+    {
+      '1': 'sender',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepString',
+      '10': 'sender'
+    },
+    {
+      '1': 'destination',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepString',
+      '10': 'destination'
+    },
+    {
+      '1': 'handler',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepString',
+      '10': 'handler'
+    },
+    {
+      '1': 'max_gas',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepUint64',
+      '10': 'maxGas'
+    },
+    {
+      '1': 'fee',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepUint64',
+      '10': 'fee'
+    },
+    {
+      '1': 'coins',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepUint64',
+      '10': 'coins'
+    },
+    {
+      '1': 'validity_start',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepSlot',
+      '10': 'validityStart'
+    },
+    {
+      '1': 'validity_end',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepSlot',
+      '10': 'validityEnd'
+    },
+    {
+      '1': 'data',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepBytes',
+      '10': 'data'
+    },
+    {
+      '1': 'trigger',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepAsyncMessageTrigger',
+      '10': 'trigger'
+    },
+    {
+      '1': 'can_be_executed',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepBool',
+      '10': 'canBeExecuted'
+    },
   ],
 };
 
@@ -364,8 +676,24 @@ final $typed_data.Uint8List asyncMessageUpdateDescriptor = $convert.base64Decode
 const SetOrKeepSlot$json = {
   '1': 'SetOrKeepSlot',
   '2': [
-    {'1': 'set', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '9': 0, '10': 'set'},
-    {'1': 'keep', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'keep'},
+    {
+      '1': 'set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '9': 0,
+      '10': 'set'
+    },
+    {
+      '1': 'keep',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'keep'
+    },
   ],
   '8': [
     {'1': 'change'},
@@ -382,8 +710,24 @@ final $typed_data.Uint8List setOrKeepSlotDescriptor = $convert.base64Decode(
 const SetOrKeepUint64$json = {
   '1': 'SetOrKeepUint64',
   '2': [
-    {'1': 'set', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.UInt64Value', '9': 0, '10': 'set'},
-    {'1': 'keep', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'keep'},
+    {
+      '1': 'set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.UInt64Value',
+      '9': 0,
+      '10': 'set'
+    },
+    {
+      '1': 'keep',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'keep'
+    },
   ],
   '8': [
     {'1': 'change'},
@@ -400,8 +744,24 @@ final $typed_data.Uint8List setOrKeepUint64Descriptor = $convert.base64Decode(
 const SetOrKeepString$json = {
   '1': 'SetOrKeepString',
   '2': [
-    {'1': 'set', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '9': 0, '10': 'set'},
-    {'1': 'keep', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'keep'},
+    {
+      '1': 'set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '9': 0,
+      '10': 'set'
+    },
+    {
+      '1': 'keep',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'keep'
+    },
   ],
   '8': [
     {'1': 'change'},
@@ -418,8 +778,24 @@ final $typed_data.Uint8List setOrKeepStringDescriptor = $convert.base64Decode(
 const SetOrKeepBytes$json = {
   '1': 'SetOrKeepBytes',
   '2': [
-    {'1': 'set', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.BytesValue', '9': 0, '10': 'set'},
-    {'1': 'keep', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'keep'},
+    {
+      '1': 'set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BytesValue',
+      '9': 0,
+      '10': 'set'
+    },
+    {
+      '1': 'keep',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'keep'
+    },
   ],
   '8': [
     {'1': 'change'},
@@ -436,8 +812,24 @@ final $typed_data.Uint8List setOrKeepBytesDescriptor = $convert.base64Decode(
 const SetOrKeepBool$json = {
   '1': 'SetOrKeepBool',
   '2': [
-    {'1': 'set', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.BoolValue', '9': 0, '10': 'set'},
-    {'1': 'keep', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'keep'},
+    {
+      '1': 'set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '9': 0,
+      '10': 'set'
+    },
+    {
+      '1': 'keep',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'keep'
+    },
   ],
   '8': [
     {'1': 'change'},
@@ -454,8 +846,24 @@ final $typed_data.Uint8List setOrKeepBoolDescriptor = $convert.base64Decode(
 const SetOrKeepAsyncMessageTrigger$json = {
   '1': 'SetOrKeepAsyncMessageTrigger',
   '2': [
-    {'1': 'set', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.AsyncMessageTrigger', '9': 0, '10': 'set'},
-    {'1': 'keep', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'keep'},
+    {
+      '1': 'set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.AsyncMessageTrigger',
+      '9': 0,
+      '10': 'set'
+    },
+    {
+      '1': 'keep',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'keep'
+    },
   ],
   '8': [
     {'1': 'change'},
@@ -463,17 +871,25 @@ const SetOrKeepAsyncMessageTrigger$json = {
 };
 
 /// Descriptor for `SetOrKeepAsyncMessageTrigger`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setOrKeepAsyncMessageTriggerDescriptor = $convert.base64Decode(
-    'ChxTZXRPcktlZXBBc3luY01lc3NhZ2VUcmlnZ2VyEjcKA3NldBgBIAEoCzIjLm1hc3NhLm1vZG'
-    'VsLnYxLkFzeW5jTWVzc2FnZVRyaWdnZXJIAFIDc2V0EisKBGtlZXAYAiABKAsyFS5tYXNzYS5t'
-    'b2RlbC52MS5FbXB0eUgAUgRrZWVwQggKBmNoYW5nZQ==');
+final $typed_data.Uint8List setOrKeepAsyncMessageTriggerDescriptor =
+    $convert.base64Decode(
+        'ChxTZXRPcktlZXBBc3luY01lc3NhZ2VUcmlnZ2VyEjcKA3NldBgBIAEoCzIjLm1hc3NhLm1vZG'
+        'VsLnYxLkFzeW5jTWVzc2FnZVRyaWdnZXJIAFIDc2V0EisKBGtlZXAYAiABKAsyFS5tYXNzYS5t'
+        'b2RlbC52MS5FbXB0eUgAUgRrZWVwQggKBmNoYW5nZQ==');
 
 @$core.Deprecated('Use asyncMessageTriggerDescriptor instead')
 const AsyncMessageTrigger$json = {
   '1': 'AsyncMessageTrigger',
   '2': [
     {'1': 'address', '3': 1, '4': 1, '5': 9, '10': 'address'},
-    {'1': 'datastore_key', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.BytesValue', '10': 'datastoreKey'},
+    {
+      '1': 'datastore_key',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BytesValue',
+      '10': 'datastoreKey'
+    },
   ],
 };
 
@@ -488,7 +904,14 @@ const LedgerChangeEntry$json = {
   '1': 'LedgerChangeEntry',
   '2': [
     {'1': 'address', '3': 1, '4': 1, '5': 9, '10': 'address'},
-    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.LedgerChangeValue', '10': 'value'},
+    {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.LedgerChangeValue',
+      '10': 'value'
+    },
   ],
 };
 
@@ -501,9 +924,32 @@ final $typed_data.Uint8List ledgerChangeEntryDescriptor = $convert.base64Decode(
 const LedgerChangeValue$json = {
   '1': 'LedgerChangeValue',
   '2': [
-    {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.LedgerChangeType', '10': 'type'},
-    {'1': 'created_entry', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.LedgerEntry', '9': 0, '10': 'createdEntry'},
-    {'1': 'updated_entry', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.LedgerEntryUpdate', '9': 0, '10': 'updatedEntry'},
+    {
+      '1': 'type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.LedgerChangeType',
+      '10': 'type'
+    },
+    {
+      '1': 'created_entry',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.LedgerEntry',
+      '9': 0,
+      '10': 'createdEntry'
+    },
+    {
+      '1': 'updated_entry',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.LedgerEntryUpdate',
+      '9': 0,
+      '10': 'updatedEntry'
+    },
   ],
   '8': [
     {'1': 'entry'},
@@ -522,9 +968,23 @@ final $typed_data.Uint8List ledgerChangeValueDescriptor = $convert.base64Decode(
 const LedgerEntry$json = {
   '1': 'LedgerEntry',
   '2': [
-    {'1': 'balance', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'balance'},
+    {
+      '1': 'balance',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'balance'
+    },
     {'1': 'bytecode', '3': 2, '4': 1, '5': 12, '10': 'bytecode'},
-    {'1': 'datastore', '3': 3, '4': 3, '5': 11, '6': '.massa.model.v1.BytesMapFieldEntry', '10': 'datastore'},
+    {
+      '1': 'datastore',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.BytesMapFieldEntry',
+      '10': 'datastore'
+    },
   ],
 };
 
@@ -538,9 +998,30 @@ final $typed_data.Uint8List ledgerEntryDescriptor = $convert.base64Decode(
 const LedgerEntryUpdate$json = {
   '1': 'LedgerEntryUpdate',
   '2': [
-    {'1': 'balance', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepBalance', '10': 'balance'},
-    {'1': 'bytecode', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepBytes', '10': 'bytecode'},
-    {'1': 'datastore', '3': 3, '4': 3, '5': 11, '6': '.massa.model.v1.SetOrDeleteDatastoreEntry', '10': 'datastore'},
+    {
+      '1': 'balance',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepBalance',
+      '10': 'balance'
+    },
+    {
+      '1': 'bytecode',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrKeepBytes',
+      '10': 'bytecode'
+    },
+    {
+      '1': 'datastore',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.SetOrDeleteDatastoreEntry',
+      '10': 'datastore'
+    },
   ],
 };
 
@@ -555,8 +1036,24 @@ final $typed_data.Uint8List ledgerEntryUpdateDescriptor = $convert.base64Decode(
 const SetOrKeepBalance$json = {
   '1': 'SetOrKeepBalance',
   '2': [
-    {'1': 'set', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '9': 0, '10': 'set'},
-    {'1': 'keep', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'keep'},
+    {
+      '1': 'set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '9': 0,
+      '10': 'set'
+    },
+    {
+      '1': 'keep',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'keep'
+    },
   ],
   '8': [
     {'1': 'change'},
@@ -573,8 +1070,24 @@ final $typed_data.Uint8List setOrKeepBalanceDescriptor = $convert.base64Decode(
 const SetOrDeleteDatastoreEntry$json = {
   '1': 'SetOrDeleteDatastoreEntry',
   '2': [
-    {'1': 'set', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.BytesMapFieldEntry', '9': 0, '10': 'set'},
-    {'1': 'delete', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'delete'},
+    {
+      '1': 'set',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.BytesMapFieldEntry',
+      '9': 0,
+      '10': 'set'
+    },
+    {
+      '1': 'delete',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Empty',
+      '9': 0,
+      '10': 'delete'
+    },
   ],
   '8': [
     {'1': 'change'},
@@ -592,10 +1105,40 @@ const ReadOnlyExecutionCall$json = {
   '1': 'ReadOnlyExecutionCall',
   '2': [
     {'1': 'max_gas', '3': 1, '4': 1, '5': 4, '10': 'maxGas'},
-    {'1': 'call_stack', '3': 2, '4': 3, '5': 11, '6': '.massa.model.v1.ExecutionStackElement', '10': 'callStack'},
-    {'1': 'bytecode_call', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.BytecodeExecution', '9': 0, '10': 'bytecodeCall'},
-    {'1': 'function_call', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.FunctionCall', '9': 0, '10': 'functionCall'},
-    {'1': 'caller_address', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.StringValue', '10': 'callerAddress'},
+    {
+      '1': 'call_stack',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.ExecutionStackElement',
+      '10': 'callStack'
+    },
+    {
+      '1': 'bytecode_call',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.BytecodeExecution',
+      '9': 0,
+      '10': 'bytecodeCall'
+    },
+    {
+      '1': 'function_call',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.FunctionCall',
+      '9': 0,
+      '10': 'functionCall'
+    },
+    {
+      '1': 'caller_address',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'callerAddress'
+    },
     {'1': 'is_final', '3': 6, '4': 1, '5': 8, '10': 'isFinal'},
   ],
   '8': [
@@ -618,7 +1161,13 @@ const BytecodeExecution$json = {
   '1': 'BytecodeExecution',
   '2': [
     {'1': 'bytecode', '3': 1, '4': 1, '5': 12, '10': 'bytecode'},
-    {'1': 'operation_datastore', '3': 2, '4': 1, '5': 12, '10': 'operationDatastore'},
+    {
+      '1': 'operation_datastore',
+      '3': 2,
+      '4': 1,
+      '5': 12,
+      '10': 'operationDatastore'
+    },
   ],
 };
 
@@ -647,7 +1196,14 @@ final $typed_data.Uint8List functionCallDescriptor = $convert.base64Decode(
 const ReadOnlyExecutionOutput$json = {
   '1': 'ReadOnlyExecutionOutput',
   '2': [
-    {'1': 'out', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.ExecutionOutput', '10': 'out'},
+    {
+      '1': 'out',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.ExecutionOutput',
+      '10': 'out'
+    },
     {'1': 'used_gas', '3': 2, '4': 1, '5': 4, '10': 'usedGas'},
     {'1': 'call_result', '3': 3, '4': 1, '5': 12, '10': 'callResult'},
   ],
@@ -664,9 +1220,23 @@ const ExecutionStackElement$json = {
   '1': 'ExecutionStackElement',
   '2': [
     {'1': 'address', '3': 1, '4': 1, '5': 9, '10': 'address'},
-    {'1': 'coins', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeAmount', '10': 'coins'},
+    {
+      '1': 'coins',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeAmount',
+      '10': 'coins'
+    },
     {'1': 'owned_addresses', '3': 3, '4': 3, '5': 9, '10': 'ownedAddresses'},
-    {'1': 'operation_datastore', '3': 4, '4': 3, '5': 11, '6': '.massa.model.v1.BytesMapFieldEntry', '10': 'operationDatastore'},
+    {
+      '1': 'operation_datastore',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.BytesMapFieldEntry',
+      '10': 'operationDatastore'
+    },
   ],
 };
 
@@ -677,4 +1247,3 @@ final $typed_data.Uint8List executionStackElementDescriptor = $convert.base64Dec
     'YWRkcmVzc2VzGAMgAygJUg5vd25lZEFkZHJlc3NlcxJTChNvcGVyYXRpb25fZGF0YXN0b3JlGA'
     'QgAygLMiIubWFzc2EubW9kZWwudjEuQnl0ZXNNYXBGaWVsZEVudHJ5UhJvcGVyYXRpb25EYXRh'
     'c3RvcmU=');
-
