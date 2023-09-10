@@ -89,6 +89,19 @@ class KeyPair {
     return base58Encode(versionedSignature);
   }
 
+  /// Signs the message using ed25519 private key
+  Future<Uint8List> versionedSign(Uint8List message) async {
+    final hash = blake3Hash(message);
+    final keyPair =
+        await Ed25519().newKeyPairFromSeed(List.from(privateKey.bytes));
+    final signature = await Ed25519().sign(List.from(hash), keyPair: keyPair);
+    final versionedSignature = concat([
+      Uint8List.fromList([keyPairVersion]),
+      Uint8List.fromList(signature.bytes)
+    ]);
+    return versionedSignature;
+  }
+
   /// Verify the signature
   Future<bool> verify(String message, String signatureString) async {
     final keyPair =

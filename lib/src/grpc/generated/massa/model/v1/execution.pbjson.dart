@@ -205,6 +205,7 @@ const StateChanges$json = {
     {'1': 'async_pool_changes', '3': 2, '4': 3, '5': 11, '6': '.massa.model.v1.AsyncPoolChangeEntry', '10': 'asyncPoolChanges'},
     {'1': 'executed_ops_changes', '3': 4, '4': 3, '5': 11, '6': '.massa.model.v1.ExecutedOpsChangeEntry', '10': 'executedOpsChanges'},
     {'1': 'executed_denunciations_changes', '3': 5, '4': 3, '5': 11, '6': '.massa.model.v1.DenunciationIndex', '10': 'executedDenunciationsChanges'},
+    {'1': 'execution_trail_hash_change', '3': 6, '4': 1, '5': 11, '6': '.massa.model.v1.SetOrKeepString', '10': 'executionTrailHashChange'},
   ],
 };
 
@@ -216,7 +217,9 @@ final $typed_data.Uint8List stateChangesDescriptor = $convert.base64Decode(
     'hhbmdlcxJYChRleGVjdXRlZF9vcHNfY2hhbmdlcxgEIAMoCzImLm1hc3NhLm1vZGVsLnYxLkV4'
     'ZWN1dGVkT3BzQ2hhbmdlRW50cnlSEmV4ZWN1dGVkT3BzQ2hhbmdlcxJnCh5leGVjdXRlZF9kZW'
     '51bmNpYXRpb25zX2NoYW5nZXMYBSADKAsyIS5tYXNzYS5tb2RlbC52MS5EZW51bmNpYXRpb25J'
-    'bmRleFIcZXhlY3V0ZWREZW51bmNpYXRpb25zQ2hhbmdlcw==');
+    'bmRleFIcZXhlY3V0ZWREZW51bmNpYXRpb25zQ2hhbmdlcxJeChtleGVjdXRpb25fdHJhaWxfaG'
+    'FzaF9jaGFuZ2UYBiABKAsyHy5tYXNzYS5tb2RlbC52MS5TZXRPcktlZXBTdHJpbmdSGGV4ZWN1'
+    'dGlvblRyYWlsSGFzaENoYW5nZQ==');
 
 @$core.Deprecated('Use executedOpsChangeEntryDescriptor instead')
 const ExecutedOpsChangeEntry$json = {

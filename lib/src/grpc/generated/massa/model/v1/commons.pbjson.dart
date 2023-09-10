@@ -78,26 +78,6 @@ const ArrayOfBytesWrapper$json = {
 final $typed_data.Uint8List arrayOfBytesWrapperDescriptor = $convert.base64Decode(
     'ChNBcnJheU9mQnl0ZXNXcmFwcGVyEhQKBWl0ZW1zGAEgAygMUgVpdGVtcw==');
 
-@$core.Deprecated('Use secureShareDescriptor instead')
-const SecureShare$json = {
-  '1': 'SecureShare',
-  '2': [
-    {'1': 'serialized_data', '3': 1, '4': 1, '5': 12, '10': 'serializedData'},
-    {'1': 'signature', '3': 2, '4': 1, '5': 9, '10': 'signature'},
-    {'1': 'content_creator_pub_key', '3': 3, '4': 1, '5': 9, '10': 'contentCreatorPubKey'},
-    {'1': 'content_creator_address', '3': 4, '4': 1, '5': 9, '10': 'contentCreatorAddress'},
-    {'1': 'secure_hash', '3': 5, '4': 1, '5': 9, '10': 'secureHash'},
-  ],
-};
-
-/// Descriptor for `SecureShare`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List secureShareDescriptor = $convert.base64Decode(
-    'CgtTZWN1cmVTaGFyZRInCg9zZXJpYWxpemVkX2RhdGEYASABKAxSDnNlcmlhbGl6ZWREYXRhEh'
-    'wKCXNpZ25hdHVyZRgCIAEoCVIJc2lnbmF0dXJlEjUKF2NvbnRlbnRfY3JlYXRvcl9wdWJfa2V5'
-    'GAMgASgJUhRjb250ZW50Q3JlYXRvclB1YktleRI2Chdjb250ZW50X2NyZWF0b3JfYWRkcmVzcx'
-    'gEIAEoCVIVY29udGVudENyZWF0b3JBZGRyZXNzEh8KC3NlY3VyZV9oYXNoGAUgASgJUgpzZWN1'
-    'cmVIYXNo');
-
 @$core.Deprecated('Use keyPairDescriptor instead')
 const KeyPair$json = {
   '1': 'KeyPair',

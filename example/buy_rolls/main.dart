@@ -14,10 +14,10 @@ void main(List<String> args) async {
 
   final expirePeriod = status.lastExecutedFinalSlot.period +
       status.config.operationValidityPeriods;
-  final operations = await buyRoles(account!, 1, 0.1, expirePeriod.toInt());
+  final operation = await buyRoles(account!, 1, 0.1, expirePeriod.toInt());
   //final operations = await sellRoles(account!, 1, 0.1, expirePeriod.toInt());
 
-  await for (final resp in grpc.sendOperations([operations])) {
+  await for (final resp in grpc.sendOperations([operation])) {
     print('operation ids = ${resp.toString()}');
     break;
   }

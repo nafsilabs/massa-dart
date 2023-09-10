@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:fixnum/fixnum.dart';
 import 'package:grpc/grpc.dart';
 import 'package:massa/src/grpc/generated/google/protobuf/wrappers.pb.dart';
+import 'package:massa/src/grpc/generated/massa/model/v1/amount.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/block.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/commons.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/endorsement.pb.dart';
@@ -11,7 +12,9 @@ import 'package:massa/src/grpc/generated/massa/model/v1/node.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/operation.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/staker.pb.dart';
 import 'package:massa/src/grpc/generated/public.pbgrpc.dart';
+import 'package:massa/src/grpc/send_operations/send_operations.dart';
 import 'package:massa/src/helpers/helpers.dart';
+import 'package:massa/src/models/operation_types.dart';
 
 class GRPCPublicClient {
   late String host; //host ip address
@@ -316,13 +319,10 @@ class GRPCPublicClient {
   }
 
   /// stream send blocks
-  Stream<String> sendBlocks(List<SecureShare> blocks) async* {
+  Stream<String> sendBlocks(Uint8List blocks) async* {
     final requestStream = StreamController<SendBlocksRequest>();
-
-    for (var block in blocks) {
-      final req = SendBlocksRequest(block: block);
-      requestStream.add(req);
-    }
+    final req = SendBlocksRequest(block: blocks);
+    requestStream.add(req);
 
     final response = publicServiceClient.sendBlocks(
       requestStream.stream.map((request) => request),
@@ -340,7 +340,7 @@ class GRPCPublicClient {
   }
 
   /// stream send endorsements
-  Stream<List<String>> sendEndorsements(List<SecureShare> endorsements) async* {
+  Stream<List<String>> sendEndorsements(List<Uint8List> endorsements) async* {
     final requestStream = StreamController<SendEndorsementsRequest>();
     final req = SendEndorsementsRequest(endorsements: endorsements);
     requestStream.add(req);
@@ -360,7 +360,7 @@ class GRPCPublicClient {
   }
 
   /// stream send endorsements
-  Stream<List<String>> sendOperations(List<SecureShare> operations) async* {
+  Stream<List<String>> sendOperations(List<Uint8List> operations) async* {
     final requestStream = StreamController<SendOperationsRequest>();
     final req = SendOperationsRequest(operations: operations);
     requestStream.add(req);
@@ -368,6 +368,7 @@ class GRPCPublicClient {
       requestStream.stream.map((request) => request),
       options: CallOptions(),
     );
+
     try {
       await for (final resp in response) {
         yield resp.operationIds.operationIds;

@@ -35,7 +35,6 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [x] sendOperations
 - [x] transactionThroughput
 
-
 ### GRPC Private API (node_ip:33038)
 - [x] addToBootstrapBlacklist
 - [x] addToBootstrapWhitelist
@@ -97,9 +96,8 @@ You can get more information about massa by visiting the links below.
 ### Links
 - [Massa: Massa main website](https://massa.net)
 - [Testnet: Massa testnet](https://massa.net/testnet)
+- [Massa Documentation: Valuable massa documentation](https://docs.massa.net/)
 - [Massa Github: Massa official github repository](https://github.com/massalabs)
-- [Massa API: Massa official api documentation](https://docs.massa.net/en/latest/technical-doc/api.html)
-- [Massa OpenRPC: Massa official openrpc](https://docs.massa.net/en/latest/technical-doc/api.html)
 - [Massa Web3: massa-dart will have similar functionalities as massa-web3](https://github.com/massalabs/massa-web3)
 
 ### Support

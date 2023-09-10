@@ -333,7 +333,7 @@ class GetDatastoreEntryFilter extends $pb.GeneratedMessage {
   GetDatastoreEntryFilter_Filter whichFilter() => _GetDatastoreEntryFilter_FilterByTag[$_whichOneof(0)]!;
   void clearFilter() => clearField($_whichOneof(0));
 
-  /// One of this (address-key) pairs
+  /// One of these (address-key) pairs
   @$pb.TagNumber(1)
   $17.AddressKeyEntry get addressKey => $_getN(0);
   @$pb.TagNumber(1)
@@ -3928,12 +3928,21 @@ class ScOutputEventsWrapper extends $pb.GeneratedMessage {
 
 /// NewBlocksRequest holds request for NewBlocks
 class NewBlocksRequest extends $pb.GeneratedMessage {
-  factory NewBlocksRequest() => create();
+  factory NewBlocksRequest({
+    $core.Iterable<NewBlocksFilter>? filters,
+  }) {
+    final $result = create();
+    if (filters != null) {
+      $result.filters.addAll(filters);
+    }
+    return $result;
+  }
   NewBlocksRequest._() : super();
   factory NewBlocksRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory NewBlocksRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewBlocksRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..pc<NewBlocksFilter>(1, _omitFieldNames ? '' : 'filters', $pb.PbFieldType.PM, subBuilder: NewBlocksFilter.create)
     ..hasRequiredFields = false
   ;
 
@@ -3957,6 +3966,115 @@ class NewBlocksRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static NewBlocksRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewBlocksRequest>(create);
   static NewBlocksRequest? _defaultInstance;
+
+  /// Returns all the blocks that verify all the filters
+  @$pb.TagNumber(1)
+  $core.List<NewBlocksFilter> get filters => $_getList(0);
+}
+
+enum NewBlocksFilter_Filter {
+  blockIds, 
+  addresses, 
+  slotRange, 
+  notSet
+}
+
+/// NewBlocks Filter
+class NewBlocksFilter extends $pb.GeneratedMessage {
+  factory NewBlocksFilter({
+    $16.BlockIds? blockIds,
+    $7.Addresses? addresses,
+    $5.SlotRange? slotRange,
+  }) {
+    final $result = create();
+    if (blockIds != null) {
+      $result.blockIds = blockIds;
+    }
+    if (addresses != null) {
+      $result.addresses = addresses;
+    }
+    if (slotRange != null) {
+      $result.slotRange = slotRange;
+    }
+    return $result;
+  }
+  NewBlocksFilter._() : super();
+  factory NewBlocksFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory NewBlocksFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, NewBlocksFilter_Filter> _NewBlocksFilter_FilterByTag = {
+    1 : NewBlocksFilter_Filter.blockIds,
+    2 : NewBlocksFilter_Filter.addresses,
+    3 : NewBlocksFilter_Filter.slotRange,
+    0 : NewBlocksFilter_Filter.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewBlocksFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3])
+    ..aOM<$16.BlockIds>(1, _omitFieldNames ? '' : 'blockIds', subBuilder: $16.BlockIds.create)
+    ..aOM<$7.Addresses>(2, _omitFieldNames ? '' : 'addresses', subBuilder: $7.Addresses.create)
+    ..aOM<$5.SlotRange>(3, _omitFieldNames ? '' : 'slotRange', subBuilder: $5.SlotRange.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  NewBlocksFilter clone() => NewBlocksFilter()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  NewBlocksFilter copyWith(void Function(NewBlocksFilter) updates) => super.copyWith((message) => updates(message as NewBlocksFilter)) as NewBlocksFilter;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static NewBlocksFilter create() => NewBlocksFilter._();
+  NewBlocksFilter createEmptyInstance() => create();
+  static $pb.PbList<NewBlocksFilter> createRepeated() => $pb.PbList<NewBlocksFilter>();
+  @$core.pragma('dart2js:noInline')
+  static NewBlocksFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewBlocksFilter>(create);
+  static NewBlocksFilter? _defaultInstance;
+
+  NewBlocksFilter_Filter whichFilter() => _NewBlocksFilter_FilterByTag[$_whichOneof(0)]!;
+  void clearFilter() => clearField($_whichOneof(0));
+
+  /// One of these block ids
+  @$pb.TagNumber(1)
+  $16.BlockIds get blockIds => $_getN(0);
+  @$pb.TagNumber(1)
+  set blockIds($16.BlockIds v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasBlockIds() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBlockIds() => clearField(1);
+  @$pb.TagNumber(1)
+  $16.BlockIds ensureBlockIds() => $_ensure(0);
+
+  /// One of these creator addresses
+  @$pb.TagNumber(2)
+  $7.Addresses get addresses => $_getN(1);
+  @$pb.TagNumber(2)
+  set addresses($7.Addresses v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAddresses() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAddresses() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Addresses ensureAddresses() => $_ensure(1);
+
+  /// One of these slot ranges (inclusive)
+  @$pb.TagNumber(3)
+  $5.SlotRange get slotRange => $_getN(2);
+  @$pb.TagNumber(3)
+  set slotRange($5.SlotRange v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSlotRange() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSlotRange() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.SlotRange ensureSlotRange() => $_ensure(2);
 }
 
 /// NewBlocksResponse holds response from NewBlocks
@@ -4013,101 +4131,23 @@ class NewBlocksResponse extends $pb.GeneratedMessage {
   $16.SignedBlock ensureSignedBlock() => $_ensure(0);
 }
 
-/// NewBlocksHeadersRequest holds request for NewBlocksHeaders
-class NewBlocksHeadersRequest extends $pb.GeneratedMessage {
-  factory NewBlocksHeadersRequest() => create();
-  NewBlocksHeadersRequest._() : super();
-  factory NewBlocksHeadersRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NewBlocksHeadersRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewBlocksHeadersRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  NewBlocksHeadersRequest clone() => NewBlocksHeadersRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  NewBlocksHeadersRequest copyWith(void Function(NewBlocksHeadersRequest) updates) => super.copyWith((message) => updates(message as NewBlocksHeadersRequest)) as NewBlocksHeadersRequest;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static NewBlocksHeadersRequest create() => NewBlocksHeadersRequest._();
-  NewBlocksHeadersRequest createEmptyInstance() => create();
-  static $pb.PbList<NewBlocksHeadersRequest> createRepeated() => $pb.PbList<NewBlocksHeadersRequest>();
-  @$core.pragma('dart2js:noInline')
-  static NewBlocksHeadersRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewBlocksHeadersRequest>(create);
-  static NewBlocksHeadersRequest? _defaultInstance;
-}
-
-/// NewBlocksHeadersResponse holds response from NewBlocksHeaders
-class NewBlocksHeadersResponse extends $pb.GeneratedMessage {
-  factory NewBlocksHeadersResponse({
-    $16.SignedBlockHeader? signedBlockHeader,
+/// NewEndorsementsRequest holds request for NewEndorsements
+class NewEndorsementsRequest extends $pb.GeneratedMessage {
+  factory NewEndorsementsRequest({
+    $core.Iterable<NewEndorsementsFilter>? filters,
   }) {
     final $result = create();
-    if (signedBlockHeader != null) {
-      $result.signedBlockHeader = signedBlockHeader;
+    if (filters != null) {
+      $result.filters.addAll(filters);
     }
     return $result;
   }
-  NewBlocksHeadersResponse._() : super();
-  factory NewBlocksHeadersResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NewBlocksHeadersResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewBlocksHeadersResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
-    ..aOM<$16.SignedBlockHeader>(1, _omitFieldNames ? '' : 'signedBlockHeader', subBuilder: $16.SignedBlockHeader.create)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  NewBlocksHeadersResponse clone() => NewBlocksHeadersResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  NewBlocksHeadersResponse copyWith(void Function(NewBlocksHeadersResponse) updates) => super.copyWith((message) => updates(message as NewBlocksHeadersResponse)) as NewBlocksHeadersResponse;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static NewBlocksHeadersResponse create() => NewBlocksHeadersResponse._();
-  NewBlocksHeadersResponse createEmptyInstance() => create();
-  static $pb.PbList<NewBlocksHeadersResponse> createRepeated() => $pb.PbList<NewBlocksHeadersResponse>();
-  @$core.pragma('dart2js:noInline')
-  static NewBlocksHeadersResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewBlocksHeadersResponse>(create);
-  static NewBlocksHeadersResponse? _defaultInstance;
-
-  /// Signed block header
-  @$pb.TagNumber(1)
-  $16.SignedBlockHeader get signedBlockHeader => $_getN(0);
-  @$pb.TagNumber(1)
-  set signedBlockHeader($16.SignedBlockHeader v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasSignedBlockHeader() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearSignedBlockHeader() => clearField(1);
-  @$pb.TagNumber(1)
-  $16.SignedBlockHeader ensureSignedBlockHeader() => $_ensure(0);
-}
-
-/// NewEndorsementsRequest holds request for NewEndorsements
-class NewEndorsementsRequest extends $pb.GeneratedMessage {
-  factory NewEndorsementsRequest() => create();
   NewEndorsementsRequest._() : super();
   factory NewEndorsementsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory NewEndorsementsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewEndorsementsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..pc<NewEndorsementsFilter>(1, _omitFieldNames ? '' : 'filters', $pb.PbFieldType.PM, subBuilder: NewEndorsementsFilter.create)
     ..hasRequiredFields = false
   ;
 
@@ -4131,6 +4171,115 @@ class NewEndorsementsRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static NewEndorsementsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewEndorsementsRequest>(create);
   static NewEndorsementsRequest? _defaultInstance;
+
+  /// Returns all the endorsements that verify all the filters
+  @$pb.TagNumber(1)
+  $core.List<NewEndorsementsFilter> get filters => $_getList(0);
+}
+
+enum NewEndorsementsFilter_Filter {
+  endorsementIds, 
+  addresses, 
+  blockIds, 
+  notSet
+}
+
+/// NewEndorsements Filter
+class NewEndorsementsFilter extends $pb.GeneratedMessage {
+  factory NewEndorsementsFilter({
+    $12.EndorsementIds? endorsementIds,
+    $7.Addresses? addresses,
+    $16.BlockIds? blockIds,
+  }) {
+    final $result = create();
+    if (endorsementIds != null) {
+      $result.endorsementIds = endorsementIds;
+    }
+    if (addresses != null) {
+      $result.addresses = addresses;
+    }
+    if (blockIds != null) {
+      $result.blockIds = blockIds;
+    }
+    return $result;
+  }
+  NewEndorsementsFilter._() : super();
+  factory NewEndorsementsFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory NewEndorsementsFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, NewEndorsementsFilter_Filter> _NewEndorsementsFilter_FilterByTag = {
+    1 : NewEndorsementsFilter_Filter.endorsementIds,
+    2 : NewEndorsementsFilter_Filter.addresses,
+    3 : NewEndorsementsFilter_Filter.blockIds,
+    0 : NewEndorsementsFilter_Filter.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewEndorsementsFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3])
+    ..aOM<$12.EndorsementIds>(1, _omitFieldNames ? '' : 'endorsementIds', subBuilder: $12.EndorsementIds.create)
+    ..aOM<$7.Addresses>(2, _omitFieldNames ? '' : 'addresses', subBuilder: $7.Addresses.create)
+    ..aOM<$16.BlockIds>(3, _omitFieldNames ? '' : 'blockIds', subBuilder: $16.BlockIds.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  NewEndorsementsFilter clone() => NewEndorsementsFilter()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  NewEndorsementsFilter copyWith(void Function(NewEndorsementsFilter) updates) => super.copyWith((message) => updates(message as NewEndorsementsFilter)) as NewEndorsementsFilter;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static NewEndorsementsFilter create() => NewEndorsementsFilter._();
+  NewEndorsementsFilter createEmptyInstance() => create();
+  static $pb.PbList<NewEndorsementsFilter> createRepeated() => $pb.PbList<NewEndorsementsFilter>();
+  @$core.pragma('dart2js:noInline')
+  static NewEndorsementsFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewEndorsementsFilter>(create);
+  static NewEndorsementsFilter? _defaultInstance;
+
+  NewEndorsementsFilter_Filter whichFilter() => _NewEndorsementsFilter_FilterByTag[$_whichOneof(0)]!;
+  void clearFilter() => clearField($_whichOneof(0));
+
+  /// One of these endorsement ids
+  @$pb.TagNumber(1)
+  $12.EndorsementIds get endorsementIds => $_getN(0);
+  @$pb.TagNumber(1)
+  set endorsementIds($12.EndorsementIds v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasEndorsementIds() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEndorsementIds() => clearField(1);
+  @$pb.TagNumber(1)
+  $12.EndorsementIds ensureEndorsementIds() => $_ensure(0);
+
+  /// One of these creator addresses
+  @$pb.TagNumber(2)
+  $7.Addresses get addresses => $_getN(1);
+  @$pb.TagNumber(2)
+  set addresses($7.Addresses v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAddresses() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAddresses() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Addresses ensureAddresses() => $_ensure(1);
+
+  /// One of these block ids
+  @$pb.TagNumber(3)
+  $16.BlockIds get blockIds => $_getN(2);
+  @$pb.TagNumber(3)
+  set blockIds($16.BlockIds v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasBlockIds() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBlockIds() => clearField(3);
+  @$pb.TagNumber(3)
+  $16.BlockIds ensureBlockIds() => $_ensure(2);
 }
 
 /// NewEndorsementsResponse holds response from NewEndorsements
@@ -4189,12 +4338,21 @@ class NewEndorsementsResponse extends $pb.GeneratedMessage {
 
 /// NewFilledBlocksRequest holds request for NewFilledBlocks
 class NewFilledBlocksRequest extends $pb.GeneratedMessage {
-  factory NewFilledBlocksRequest() => create();
+  factory NewFilledBlocksRequest({
+    $core.Iterable<NewBlocksFilter>? filters,
+  }) {
+    final $result = create();
+    if (filters != null) {
+      $result.filters.addAll(filters);
+    }
+    return $result;
+  }
   NewFilledBlocksRequest._() : super();
   factory NewFilledBlocksRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory NewFilledBlocksRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewFilledBlocksRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..pc<NewBlocksFilter>(1, _omitFieldNames ? '' : 'filters', $pb.PbFieldType.PM, subBuilder: NewBlocksFilter.create)
     ..hasRequiredFields = false
   ;
 
@@ -4218,6 +4376,115 @@ class NewFilledBlocksRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static NewFilledBlocksRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewFilledBlocksRequest>(create);
   static NewFilledBlocksRequest? _defaultInstance;
+
+  /// Returns all the blocks that verify one of the filters
+  @$pb.TagNumber(1)
+  $core.List<NewBlocksFilter> get filters => $_getList(0);
+}
+
+enum NewFilledBlocksFilter_Filter {
+  blockIds, 
+  addresses, 
+  slotRange, 
+  notSet
+}
+
+/// NewFilledBlocks Filter
+class NewFilledBlocksFilter extends $pb.GeneratedMessage {
+  factory NewFilledBlocksFilter({
+    $16.BlockIds? blockIds,
+    $7.Addresses? addresses,
+    $5.SlotRange? slotRange,
+  }) {
+    final $result = create();
+    if (blockIds != null) {
+      $result.blockIds = blockIds;
+    }
+    if (addresses != null) {
+      $result.addresses = addresses;
+    }
+    if (slotRange != null) {
+      $result.slotRange = slotRange;
+    }
+    return $result;
+  }
+  NewFilledBlocksFilter._() : super();
+  factory NewFilledBlocksFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory NewFilledBlocksFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, NewFilledBlocksFilter_Filter> _NewFilledBlocksFilter_FilterByTag = {
+    1 : NewFilledBlocksFilter_Filter.blockIds,
+    2 : NewFilledBlocksFilter_Filter.addresses,
+    3 : NewFilledBlocksFilter_Filter.slotRange,
+    0 : NewFilledBlocksFilter_Filter.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewFilledBlocksFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3])
+    ..aOM<$16.BlockIds>(1, _omitFieldNames ? '' : 'blockIds', subBuilder: $16.BlockIds.create)
+    ..aOM<$7.Addresses>(2, _omitFieldNames ? '' : 'addresses', subBuilder: $7.Addresses.create)
+    ..aOM<$5.SlotRange>(3, _omitFieldNames ? '' : 'slotRange', subBuilder: $5.SlotRange.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  NewFilledBlocksFilter clone() => NewFilledBlocksFilter()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  NewFilledBlocksFilter copyWith(void Function(NewFilledBlocksFilter) updates) => super.copyWith((message) => updates(message as NewFilledBlocksFilter)) as NewFilledBlocksFilter;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static NewFilledBlocksFilter create() => NewFilledBlocksFilter._();
+  NewFilledBlocksFilter createEmptyInstance() => create();
+  static $pb.PbList<NewFilledBlocksFilter> createRepeated() => $pb.PbList<NewFilledBlocksFilter>();
+  @$core.pragma('dart2js:noInline')
+  static NewFilledBlocksFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewFilledBlocksFilter>(create);
+  static NewFilledBlocksFilter? _defaultInstance;
+
+  NewFilledBlocksFilter_Filter whichFilter() => _NewFilledBlocksFilter_FilterByTag[$_whichOneof(0)]!;
+  void clearFilter() => clearField($_whichOneof(0));
+
+  /// One of these block ids
+  @$pb.TagNumber(1)
+  $16.BlockIds get blockIds => $_getN(0);
+  @$pb.TagNumber(1)
+  set blockIds($16.BlockIds v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasBlockIds() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearBlockIds() => clearField(1);
+  @$pb.TagNumber(1)
+  $16.BlockIds ensureBlockIds() => $_ensure(0);
+
+  /// One of these creator addresses
+  @$pb.TagNumber(2)
+  $7.Addresses get addresses => $_getN(1);
+  @$pb.TagNumber(2)
+  set addresses($7.Addresses v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAddresses() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAddresses() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Addresses ensureAddresses() => $_ensure(1);
+
+  /// One of these slot ranges (inclusive)
+  @$pb.TagNumber(3)
+  $5.SlotRange get slotRange => $_getN(2);
+  @$pb.TagNumber(3)
+  set slotRange($5.SlotRange v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSlotRange() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSlotRange() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.SlotRange ensureSlotRange() => $_ensure(2);
 }
 
 /// NewFilledBlocksResponse holds response from NewFilledBlocks
@@ -4320,12 +4587,27 @@ class NewOperationsRequest extends $pb.GeneratedMessage {
   $core.List<NewOperationsFilter> get filters => $_getList(0);
 }
 
+enum NewOperationsFilter_Filter {
+  operationIds, 
+  addresses, 
+  operationTypes, 
+  notSet
+}
+
 /// NewOperations Filter
 class NewOperationsFilter extends $pb.GeneratedMessage {
   factory NewOperationsFilter({
+    $13.OperationIds? operationIds,
+    $7.Addresses? addresses,
     $13.OpTypes? operationTypes,
   }) {
     final $result = create();
+    if (operationIds != null) {
+      $result.operationIds = operationIds;
+    }
+    if (addresses != null) {
+      $result.addresses = addresses;
+    }
     if (operationTypes != null) {
       $result.operationTypes = operationTypes;
     }
@@ -4335,8 +4617,17 @@ class NewOperationsFilter extends $pb.GeneratedMessage {
   factory NewOperationsFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory NewOperationsFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
+  static const $core.Map<$core.int, NewOperationsFilter_Filter> _NewOperationsFilter_FilterByTag = {
+    1 : NewOperationsFilter_Filter.operationIds,
+    2 : NewOperationsFilter_Filter.addresses,
+    3 : NewOperationsFilter_Filter.operationTypes,
+    0 : NewOperationsFilter_Filter.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewOperationsFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
-    ..aOM<$13.OpTypes>(2, _omitFieldNames ? '' : 'operationTypes', subBuilder: $13.OpTypes.create)
+    ..oo(0, [1, 2, 3])
+    ..aOM<$13.OperationIds>(1, _omitFieldNames ? '' : 'operationIds', subBuilder: $13.OperationIds.create)
+    ..aOM<$7.Addresses>(2, _omitFieldNames ? '' : 'addresses', subBuilder: $7.Addresses.create)
+    ..aOM<$13.OpTypes>(3, _omitFieldNames ? '' : 'operationTypes', subBuilder: $13.OpTypes.create)
     ..hasRequiredFields = false
   ;
 
@@ -4361,17 +4652,44 @@ class NewOperationsFilter extends $pb.GeneratedMessage {
   static NewOperationsFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewOperationsFilter>(create);
   static NewOperationsFilter? _defaultInstance;
 
-  /// Filter
+  NewOperationsFilter_Filter whichFilter() => _NewOperationsFilter_FilterByTag[$_whichOneof(0)]!;
+  void clearFilter() => clearField($_whichOneof(0));
+
+  /// One of the operation ids
+  @$pb.TagNumber(1)
+  $13.OperationIds get operationIds => $_getN(0);
+  @$pb.TagNumber(1)
+  set operationIds($13.OperationIds v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasOperationIds() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearOperationIds() => clearField(1);
+  @$pb.TagNumber(1)
+  $13.OperationIds ensureOperationIds() => $_ensure(0);
+
+  /// One of these creator addresses
   @$pb.TagNumber(2)
-  $13.OpTypes get operationTypes => $_getN(0);
+  $7.Addresses get addresses => $_getN(1);
   @$pb.TagNumber(2)
-  set operationTypes($13.OpTypes v) { setField(2, v); }
+  set addresses($7.Addresses v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasOperationTypes() => $_has(0);
+  $core.bool hasAddresses() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOperationTypes() => clearField(2);
+  void clearAddresses() => clearField(2);
   @$pb.TagNumber(2)
-  $13.OpTypes ensureOperationTypes() => $_ensure(0);
+  $7.Addresses ensureAddresses() => $_ensure(1);
+
+  /// One of the operation types
+  @$pb.TagNumber(3)
+  $13.OpTypes get operationTypes => $_getN(2);
+  @$pb.TagNumber(3)
+  set operationTypes($13.OpTypes v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasOperationTypes() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearOperationTypes() => clearField(3);
+  @$pb.TagNumber(3)
+  $13.OpTypes ensureOperationTypes() => $_ensure(2);
 }
 
 /// NewOperationsResponse holds response from NewOperations
@@ -4476,6 +4794,12 @@ class NewSlotExecutionOutputsRequest extends $pb.GeneratedMessage {
 
 enum NewSlotExecutionOutputsFilter_Filter {
   status, 
+  slotRange, 
+  asyncPoolChangesFilter, 
+  executedDenounciationFilter, 
+  eventFilter, 
+  executedOpsChangesFilter, 
+  ledgerChangesFilter, 
   notSet
 }
 
@@ -4483,10 +4807,34 @@ enum NewSlotExecutionOutputsFilter_Filter {
 class NewSlotExecutionOutputsFilter extends $pb.GeneratedMessage {
   factory NewSlotExecutionOutputsFilter({
     $15.ExecutionOutputStatus? status,
+    $5.SlotRange? slotRange,
+    AsyncPoolChangesFilter? asyncPoolChangesFilter,
+    ExecutedDenounciationFilter? executedDenounciationFilter,
+    ExecutionEventFilter? eventFilter,
+    ExecutedOpsChangesFilter? executedOpsChangesFilter,
+    LedgerChangesFilter? ledgerChangesFilter,
   }) {
     final $result = create();
     if (status != null) {
       $result.status = status;
+    }
+    if (slotRange != null) {
+      $result.slotRange = slotRange;
+    }
+    if (asyncPoolChangesFilter != null) {
+      $result.asyncPoolChangesFilter = asyncPoolChangesFilter;
+    }
+    if (executedDenounciationFilter != null) {
+      $result.executedDenounciationFilter = executedDenounciationFilter;
+    }
+    if (eventFilter != null) {
+      $result.eventFilter = eventFilter;
+    }
+    if (executedOpsChangesFilter != null) {
+      $result.executedOpsChangesFilter = executedOpsChangesFilter;
+    }
+    if (ledgerChangesFilter != null) {
+      $result.ledgerChangesFilter = ledgerChangesFilter;
     }
     return $result;
   }
@@ -4496,11 +4844,23 @@ class NewSlotExecutionOutputsFilter extends $pb.GeneratedMessage {
 
   static const $core.Map<$core.int, NewSlotExecutionOutputsFilter_Filter> _NewSlotExecutionOutputsFilter_FilterByTag = {
     1 : NewSlotExecutionOutputsFilter_Filter.status,
+    2 : NewSlotExecutionOutputsFilter_Filter.slotRange,
+    3 : NewSlotExecutionOutputsFilter_Filter.asyncPoolChangesFilter,
+    4 : NewSlotExecutionOutputsFilter_Filter.executedDenounciationFilter,
+    5 : NewSlotExecutionOutputsFilter_Filter.eventFilter,
+    6 : NewSlotExecutionOutputsFilter_Filter.executedOpsChangesFilter,
+    7 : NewSlotExecutionOutputsFilter_Filter.ledgerChangesFilter,
     0 : NewSlotExecutionOutputsFilter_Filter.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewSlotExecutionOutputsFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
-    ..oo(0, [1])
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7])
     ..e<$15.ExecutionOutputStatus>(1, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $15.ExecutionOutputStatus.EXECUTION_OUTPUT_STATUS_UNSPECIFIED, valueOf: $15.ExecutionOutputStatus.valueOf, enumValues: $15.ExecutionOutputStatus.values)
+    ..aOM<$5.SlotRange>(2, _omitFieldNames ? '' : 'slotRange', subBuilder: $5.SlotRange.create)
+    ..aOM<AsyncPoolChangesFilter>(3, _omitFieldNames ? '' : 'asyncPoolChangesFilter', subBuilder: AsyncPoolChangesFilter.create)
+    ..aOM<ExecutedDenounciationFilter>(4, _omitFieldNames ? '' : 'executedDenounciationFilter', subBuilder: ExecutedDenounciationFilter.create)
+    ..aOM<ExecutionEventFilter>(5, _omitFieldNames ? '' : 'eventFilter', subBuilder: ExecutionEventFilter.create)
+    ..aOM<ExecutedOpsChangesFilter>(6, _omitFieldNames ? '' : 'executedOpsChangesFilter', subBuilder: ExecutedOpsChangesFilter.create)
+    ..aOM<LedgerChangesFilter>(7, _omitFieldNames ? '' : 'ledgerChangesFilter', subBuilder: LedgerChangesFilter.create)
     ..hasRequiredFields = false
   ;
 
@@ -4537,6 +4897,685 @@ class NewSlotExecutionOutputsFilter extends $pb.GeneratedMessage {
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
+
+  /// Slot range
+  @$pb.TagNumber(2)
+  $5.SlotRange get slotRange => $_getN(1);
+  @$pb.TagNumber(2)
+  set slotRange($5.SlotRange v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSlotRange() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSlotRange() => clearField(2);
+  @$pb.TagNumber(2)
+  $5.SlotRange ensureSlotRange() => $_ensure(1);
+
+  /// AsyncPoolChangesFilter
+  @$pb.TagNumber(3)
+  AsyncPoolChangesFilter get asyncPoolChangesFilter => $_getN(2);
+  @$pb.TagNumber(3)
+  set asyncPoolChangesFilter(AsyncPoolChangesFilter v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasAsyncPoolChangesFilter() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAsyncPoolChangesFilter() => clearField(3);
+  @$pb.TagNumber(3)
+  AsyncPoolChangesFilter ensureAsyncPoolChangesFilter() => $_ensure(2);
+
+  /// ExecutedDenounciationFilter
+  @$pb.TagNumber(4)
+  ExecutedDenounciationFilter get executedDenounciationFilter => $_getN(3);
+  @$pb.TagNumber(4)
+  set executedDenounciationFilter(ExecutedDenounciationFilter v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasExecutedDenounciationFilter() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearExecutedDenounciationFilter() => clearField(4);
+  @$pb.TagNumber(4)
+  ExecutedDenounciationFilter ensureExecutedDenounciationFilter() => $_ensure(3);
+
+  /// Execution event filter
+  @$pb.TagNumber(5)
+  ExecutionEventFilter get eventFilter => $_getN(4);
+  @$pb.TagNumber(5)
+  set eventFilter(ExecutionEventFilter v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasEventFilter() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEventFilter() => clearField(5);
+  @$pb.TagNumber(5)
+  ExecutionEventFilter ensureEventFilter() => $_ensure(4);
+
+  /// ExecutedOpsChangesFilter
+  @$pb.TagNumber(6)
+  ExecutedOpsChangesFilter get executedOpsChangesFilter => $_getN(5);
+  @$pb.TagNumber(6)
+  set executedOpsChangesFilter(ExecutedOpsChangesFilter v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasExecutedOpsChangesFilter() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearExecutedOpsChangesFilter() => clearField(6);
+  @$pb.TagNumber(6)
+  ExecutedOpsChangesFilter ensureExecutedOpsChangesFilter() => $_ensure(5);
+
+  /// LedgerChangesFilter
+  @$pb.TagNumber(7)
+  LedgerChangesFilter get ledgerChangesFilter => $_getN(6);
+  @$pb.TagNumber(7)
+  set ledgerChangesFilter(LedgerChangesFilter v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasLedgerChangesFilter() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearLedgerChangesFilter() => clearField(7);
+  @$pb.TagNumber(7)
+  LedgerChangesFilter ensureLedgerChangesFilter() => $_ensure(6);
+}
+
+enum AsyncPoolChangesFilter_Filter {
+  none, 
+  type, 
+  handler, 
+  destinationAddress, 
+  emitterAddress, 
+  canBeExecuted, 
+  notSet
+}
+
+/// AsyncPoolChangesFilter
+class AsyncPoolChangesFilter extends $pb.GeneratedMessage {
+  factory AsyncPoolChangesFilter({
+    $6.Empty? none,
+    $15.AsyncPoolChangeType? type,
+    $core.String? handler,
+    $core.String? destinationAddress,
+    $core.String? emitterAddress,
+    $core.bool? canBeExecuted,
+  }) {
+    final $result = create();
+    if (none != null) {
+      $result.none = none;
+    }
+    if (type != null) {
+      $result.type = type;
+    }
+    if (handler != null) {
+      $result.handler = handler;
+    }
+    if (destinationAddress != null) {
+      $result.destinationAddress = destinationAddress;
+    }
+    if (emitterAddress != null) {
+      $result.emitterAddress = emitterAddress;
+    }
+    if (canBeExecuted != null) {
+      $result.canBeExecuted = canBeExecuted;
+    }
+    return $result;
+  }
+  AsyncPoolChangesFilter._() : super();
+  factory AsyncPoolChangesFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AsyncPoolChangesFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, AsyncPoolChangesFilter_Filter> _AsyncPoolChangesFilter_FilterByTag = {
+    1 : AsyncPoolChangesFilter_Filter.none,
+    2 : AsyncPoolChangesFilter_Filter.type,
+    3 : AsyncPoolChangesFilter_Filter.handler,
+    4 : AsyncPoolChangesFilter_Filter.destinationAddress,
+    5 : AsyncPoolChangesFilter_Filter.emitterAddress,
+    6 : AsyncPoolChangesFilter_Filter.canBeExecuted,
+    0 : AsyncPoolChangesFilter_Filter.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AsyncPoolChangesFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3, 4, 5, 6])
+    ..aOM<$6.Empty>(1, _omitFieldNames ? '' : 'none', subBuilder: $6.Empty.create)
+    ..e<$15.AsyncPoolChangeType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $15.AsyncPoolChangeType.ASYNC_POOL_CHANGE_TYPE_UNSPECIFIED, valueOf: $15.AsyncPoolChangeType.valueOf, enumValues: $15.AsyncPoolChangeType.values)
+    ..aOS(3, _omitFieldNames ? '' : 'handler')
+    ..aOS(4, _omitFieldNames ? '' : 'destinationAddress')
+    ..aOS(5, _omitFieldNames ? '' : 'emitterAddress')
+    ..aOB(6, _omitFieldNames ? '' : 'canBeExecuted')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AsyncPoolChangesFilter clone() => AsyncPoolChangesFilter()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AsyncPoolChangesFilter copyWith(void Function(AsyncPoolChangesFilter) updates) => super.copyWith((message) => updates(message as AsyncPoolChangesFilter)) as AsyncPoolChangesFilter;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AsyncPoolChangesFilter create() => AsyncPoolChangesFilter._();
+  AsyncPoolChangesFilter createEmptyInstance() => create();
+  static $pb.PbList<AsyncPoolChangesFilter> createRepeated() => $pb.PbList<AsyncPoolChangesFilter>();
+  @$core.pragma('dart2js:noInline')
+  static AsyncPoolChangesFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AsyncPoolChangesFilter>(create);
+  static AsyncPoolChangesFilter? _defaultInstance;
+
+  AsyncPoolChangesFilter_Filter whichFilter() => _AsyncPoolChangesFilter_FilterByTag[$_whichOneof(0)]!;
+  void clearFilter() => clearField($_whichOneof(0));
+
+  /// Do not return any message
+  @$pb.TagNumber(1)
+  $6.Empty get none => $_getN(0);
+  @$pb.TagNumber(1)
+  set none($6.Empty v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNone() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNone() => clearField(1);
+  @$pb.TagNumber(1)
+  $6.Empty ensureNone() => $_ensure(0);
+
+  /// The type of the change
+  @$pb.TagNumber(2)
+  $15.AsyncPoolChangeType get type => $_getN(1);
+  @$pb.TagNumber(2)
+  set type($15.AsyncPoolChangeType v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearType() => clearField(2);
+
+  /// The handler function name within the destination address bytecode
+  @$pb.TagNumber(3)
+  $core.String get handler => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set handler($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasHandler() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearHandler() => clearField(3);
+
+  /// The address towards which the message is being sent
+  @$pb.TagNumber(4)
+  $core.String get destinationAddress => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set destinationAddress($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasDestinationAddress() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDestinationAddress() => clearField(4);
+
+  /// The address that sent the message
+  @$pb.TagNumber(5)
+  $core.String get emitterAddress => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set emitterAddress($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasEmitterAddress() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEmitterAddress() => clearField(5);
+
+  /// Boolean that determine if the message can be executed. For messages without filter this boolean is always true.
+  /// For messages with filter, this boolean is true if the filter has been matched between `validity_start` and current slot.
+  @$pb.TagNumber(6)
+  $core.bool get canBeExecuted => $_getBF(5);
+  @$pb.TagNumber(6)
+  set canBeExecuted($core.bool v) { $_setBool(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasCanBeExecuted() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearCanBeExecuted() => clearField(6);
+}
+
+enum PosChangesFilter_Filter {
+  none, 
+  address, 
+  notSet
+}
+
+/// PosChangesFilter
+class PosChangesFilter extends $pb.GeneratedMessage {
+  factory PosChangesFilter({
+    $6.Empty? none,
+    $core.String? address,
+  }) {
+    final $result = create();
+    if (none != null) {
+      $result.none = none;
+    }
+    if (address != null) {
+      $result.address = address;
+    }
+    return $result;
+  }
+  PosChangesFilter._() : super();
+  factory PosChangesFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PosChangesFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, PosChangesFilter_Filter> _PosChangesFilter_FilterByTag = {
+    1 : PosChangesFilter_Filter.none,
+    2 : PosChangesFilter_Filter.address,
+    0 : PosChangesFilter_Filter.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PosChangesFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aOM<$6.Empty>(1, _omitFieldNames ? '' : 'none', subBuilder: $6.Empty.create)
+    ..aOS(2, _omitFieldNames ? '' : 'address')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PosChangesFilter clone() => PosChangesFilter()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PosChangesFilter copyWith(void Function(PosChangesFilter) updates) => super.copyWith((message) => updates(message as PosChangesFilter)) as PosChangesFilter;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static PosChangesFilter create() => PosChangesFilter._();
+  PosChangesFilter createEmptyInstance() => create();
+  static $pb.PbList<PosChangesFilter> createRepeated() => $pb.PbList<PosChangesFilter>();
+  @$core.pragma('dart2js:noInline')
+  static PosChangesFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PosChangesFilter>(create);
+  static PosChangesFilter? _defaultInstance;
+
+  PosChangesFilter_Filter whichFilter() => _PosChangesFilter_FilterByTag[$_whichOneof(0)]!;
+  void clearFilter() => clearField($_whichOneof(0));
+
+  /// Do not return any message
+  @$pb.TagNumber(1)
+  $6.Empty get none => $_getN(0);
+  @$pb.TagNumber(1)
+  set none($6.Empty v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNone() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNone() => clearField(1);
+  @$pb.TagNumber(1)
+  $6.Empty ensureNone() => $_ensure(0);
+
+  /// Address for which we have roll changes
+  @$pb.TagNumber(2)
+  $core.String get address => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set address($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAddress() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAddress() => clearField(2);
+}
+
+enum ExecutionEventFilter_Filter {
+  none, 
+  callerAddress, 
+  emitterAddress, 
+  originalOperationId, 
+  isFailure, 
+  notSet
+}
+
+/// ExecutionEventFilter
+class ExecutionEventFilter extends $pb.GeneratedMessage {
+  factory ExecutionEventFilter({
+    $6.Empty? none,
+    $core.String? callerAddress,
+    $core.String? emitterAddress,
+    $core.String? originalOperationId,
+    $core.bool? isFailure,
+  }) {
+    final $result = create();
+    if (none != null) {
+      $result.none = none;
+    }
+    if (callerAddress != null) {
+      $result.callerAddress = callerAddress;
+    }
+    if (emitterAddress != null) {
+      $result.emitterAddress = emitterAddress;
+    }
+    if (originalOperationId != null) {
+      $result.originalOperationId = originalOperationId;
+    }
+    if (isFailure != null) {
+      $result.isFailure = isFailure;
+    }
+    return $result;
+  }
+  ExecutionEventFilter._() : super();
+  factory ExecutionEventFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ExecutionEventFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, ExecutionEventFilter_Filter> _ExecutionEventFilter_FilterByTag = {
+    1 : ExecutionEventFilter_Filter.none,
+    2 : ExecutionEventFilter_Filter.callerAddress,
+    3 : ExecutionEventFilter_Filter.emitterAddress,
+    4 : ExecutionEventFilter_Filter.originalOperationId,
+    5 : ExecutionEventFilter_Filter.isFailure,
+    0 : ExecutionEventFilter_Filter.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ExecutionEventFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3, 4, 5])
+    ..aOM<$6.Empty>(1, _omitFieldNames ? '' : 'none', subBuilder: $6.Empty.create)
+    ..aOS(2, _omitFieldNames ? '' : 'callerAddress')
+    ..aOS(3, _omitFieldNames ? '' : 'emitterAddress')
+    ..aOS(4, _omitFieldNames ? '' : 'originalOperationId')
+    ..aOB(5, _omitFieldNames ? '' : 'isFailure')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ExecutionEventFilter clone() => ExecutionEventFilter()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ExecutionEventFilter copyWith(void Function(ExecutionEventFilter) updates) => super.copyWith((message) => updates(message as ExecutionEventFilter)) as ExecutionEventFilter;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ExecutionEventFilter create() => ExecutionEventFilter._();
+  ExecutionEventFilter createEmptyInstance() => create();
+  static $pb.PbList<ExecutionEventFilter> createRepeated() => $pb.PbList<ExecutionEventFilter>();
+  @$core.pragma('dart2js:noInline')
+  static ExecutionEventFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ExecutionEventFilter>(create);
+  static ExecutionEventFilter? _defaultInstance;
+
+  ExecutionEventFilter_Filter whichFilter() => _ExecutionEventFilter_FilterByTag[$_whichOneof(0)]!;
+  void clearFilter() => clearField($_whichOneof(0));
+
+  /// Do not return any message
+  @$pb.TagNumber(1)
+  $6.Empty get none => $_getN(0);
+  @$pb.TagNumber(1)
+  set none($6.Empty v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNone() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNone() => clearField(1);
+  @$pb.TagNumber(1)
+  $6.Empty ensureNone() => $_ensure(0);
+
+  /// Caller address
+  @$pb.TagNumber(2)
+  $core.String get callerAddress => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set callerAddress($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasCallerAddress() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCallerAddress() => clearField(2);
+
+  /// Emitter address
+  @$pb.TagNumber(3)
+  $core.String get emitterAddress => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set emitterAddress($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasEmitterAddress() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEmitterAddress() => clearField(3);
+
+  /// Original operation id
+  @$pb.TagNumber(4)
+  $core.String get originalOperationId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set originalOperationId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasOriginalOperationId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearOriginalOperationId() => clearField(4);
+
+  /// Whether the event is a failure
+  @$pb.TagNumber(5)
+  $core.bool get isFailure => $_getBF(4);
+  @$pb.TagNumber(5)
+  set isFailure($core.bool v) { $_setBool(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasIsFailure() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIsFailure() => clearField(5);
+}
+
+enum ExecutedOpsChangesFilter_Filter {
+  none, 
+  operationId, 
+  notSet
+}
+
+/// ExecutedOpsChangesFilter
+class ExecutedOpsChangesFilter extends $pb.GeneratedMessage {
+  factory ExecutedOpsChangesFilter({
+    $6.Empty? none,
+    $core.String? operationId,
+  }) {
+    final $result = create();
+    if (none != null) {
+      $result.none = none;
+    }
+    if (operationId != null) {
+      $result.operationId = operationId;
+    }
+    return $result;
+  }
+  ExecutedOpsChangesFilter._() : super();
+  factory ExecutedOpsChangesFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ExecutedOpsChangesFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, ExecutedOpsChangesFilter_Filter> _ExecutedOpsChangesFilter_FilterByTag = {
+    1 : ExecutedOpsChangesFilter_Filter.none,
+    2 : ExecutedOpsChangesFilter_Filter.operationId,
+    0 : ExecutedOpsChangesFilter_Filter.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ExecutedOpsChangesFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aOM<$6.Empty>(1, _omitFieldNames ? '' : 'none', subBuilder: $6.Empty.create)
+    ..aOS(2, _omitFieldNames ? '' : 'operationId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ExecutedOpsChangesFilter clone() => ExecutedOpsChangesFilter()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ExecutedOpsChangesFilter copyWith(void Function(ExecutedOpsChangesFilter) updates) => super.copyWith((message) => updates(message as ExecutedOpsChangesFilter)) as ExecutedOpsChangesFilter;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ExecutedOpsChangesFilter create() => ExecutedOpsChangesFilter._();
+  ExecutedOpsChangesFilter createEmptyInstance() => create();
+  static $pb.PbList<ExecutedOpsChangesFilter> createRepeated() => $pb.PbList<ExecutedOpsChangesFilter>();
+  @$core.pragma('dart2js:noInline')
+  static ExecutedOpsChangesFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ExecutedOpsChangesFilter>(create);
+  static ExecutedOpsChangesFilter? _defaultInstance;
+
+  ExecutedOpsChangesFilter_Filter whichFilter() => _ExecutedOpsChangesFilter_FilterByTag[$_whichOneof(0)]!;
+  void clearFilter() => clearField($_whichOneof(0));
+
+  /// Do not return any message
+  @$pb.TagNumber(1)
+  $6.Empty get none => $_getN(0);
+  @$pb.TagNumber(1)
+  set none($6.Empty v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNone() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNone() => clearField(1);
+  @$pb.TagNumber(1)
+  $6.Empty ensureNone() => $_ensure(0);
+
+  /// Operation id
+  @$pb.TagNumber(2)
+  $core.String get operationId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set operationId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasOperationId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOperationId() => clearField(2);
+}
+
+enum ExecutedDenounciationFilter_Filter {
+  none, 
+  notSet
+}
+
+/// ExecutedDenounciationFilter
+class ExecutedDenounciationFilter extends $pb.GeneratedMessage {
+  factory ExecutedDenounciationFilter({
+    $6.Empty? none,
+  }) {
+    final $result = create();
+    if (none != null) {
+      $result.none = none;
+    }
+    return $result;
+  }
+  ExecutedDenounciationFilter._() : super();
+  factory ExecutedDenounciationFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ExecutedDenounciationFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, ExecutedDenounciationFilter_Filter> _ExecutedDenounciationFilter_FilterByTag = {
+    1 : ExecutedDenounciationFilter_Filter.none,
+    0 : ExecutedDenounciationFilter_Filter.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ExecutedDenounciationFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<$6.Empty>(1, _omitFieldNames ? '' : 'none', subBuilder: $6.Empty.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ExecutedDenounciationFilter clone() => ExecutedDenounciationFilter()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ExecutedDenounciationFilter copyWith(void Function(ExecutedDenounciationFilter) updates) => super.copyWith((message) => updates(message as ExecutedDenounciationFilter)) as ExecutedDenounciationFilter;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ExecutedDenounciationFilter create() => ExecutedDenounciationFilter._();
+  ExecutedDenounciationFilter createEmptyInstance() => create();
+  static $pb.PbList<ExecutedDenounciationFilter> createRepeated() => $pb.PbList<ExecutedDenounciationFilter>();
+  @$core.pragma('dart2js:noInline')
+  static ExecutedDenounciationFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ExecutedDenounciationFilter>(create);
+  static ExecutedDenounciationFilter? _defaultInstance;
+
+  ExecutedDenounciationFilter_Filter whichFilter() => _ExecutedDenounciationFilter_FilterByTag[$_whichOneof(0)]!;
+  void clearFilter() => clearField($_whichOneof(0));
+
+  /// Do not return any message
+  @$pb.TagNumber(1)
+  $6.Empty get none => $_getN(0);
+  @$pb.TagNumber(1)
+  set none($6.Empty v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNone() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNone() => clearField(1);
+  @$pb.TagNumber(1)
+  $6.Empty ensureNone() => $_ensure(0);
+}
+
+enum LedgerChangesFilter_Filter {
+  none, 
+  address, 
+  notSet
+}
+
+/// LedgerChangesFilter
+class LedgerChangesFilter extends $pb.GeneratedMessage {
+  factory LedgerChangesFilter({
+    $6.Empty? none,
+    $core.String? address,
+  }) {
+    final $result = create();
+    if (none != null) {
+      $result.none = none;
+    }
+    if (address != null) {
+      $result.address = address;
+    }
+    return $result;
+  }
+  LedgerChangesFilter._() : super();
+  factory LedgerChangesFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory LedgerChangesFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, LedgerChangesFilter_Filter> _LedgerChangesFilter_FilterByTag = {
+    1 : LedgerChangesFilter_Filter.none,
+    2 : LedgerChangesFilter_Filter.address,
+    0 : LedgerChangesFilter_Filter.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LedgerChangesFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aOM<$6.Empty>(1, _omitFieldNames ? '' : 'none', subBuilder: $6.Empty.create)
+    ..aOS(2, _omitFieldNames ? '' : 'address')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  LedgerChangesFilter clone() => LedgerChangesFilter()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  LedgerChangesFilter copyWith(void Function(LedgerChangesFilter) updates) => super.copyWith((message) => updates(message as LedgerChangesFilter)) as LedgerChangesFilter;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static LedgerChangesFilter create() => LedgerChangesFilter._();
+  LedgerChangesFilter createEmptyInstance() => create();
+  static $pb.PbList<LedgerChangesFilter> createRepeated() => $pb.PbList<LedgerChangesFilter>();
+  @$core.pragma('dart2js:noInline')
+  static LedgerChangesFilter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LedgerChangesFilter>(create);
+  static LedgerChangesFilter? _defaultInstance;
+
+  LedgerChangesFilter_Filter whichFilter() => _LedgerChangesFilter_FilterByTag[$_whichOneof(0)]!;
+  void clearFilter() => clearField($_whichOneof(0));
+
+  /// Do not return any message
+  @$pb.TagNumber(1)
+  $6.Empty get none => $_getN(0);
+  @$pb.TagNumber(1)
+  set none($6.Empty v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNone() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNone() => clearField(1);
+  @$pb.TagNumber(1)
+  $6.Empty ensureNone() => $_ensure(0);
+
+  /// Address for which we have ledger changes
+  @$pb.TagNumber(2)
+  $core.String get address => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set address($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAddress() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAddress() => clearField(2);
 }
 
 /// NewSlotExecutionOutputsResponse holds response from NewSlotExecutionOutputs
@@ -4596,7 +5635,7 @@ class NewSlotExecutionOutputsResponse extends $pb.GeneratedMessage {
 /// SendBlocksRequest holds parameters to SendBlocks
 class SendBlocksRequest extends $pb.GeneratedMessage {
   factory SendBlocksRequest({
-    $6.SecureShare? block,
+    $core.List<$core.int>? block,
   }) {
     final $result = create();
     if (block != null) {
@@ -4609,7 +5648,7 @@ class SendBlocksRequest extends $pb.GeneratedMessage {
   factory SendBlocksRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendBlocksRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
-    ..aOM<$6.SecureShare>(1, _omitFieldNames ? '' : 'block', subBuilder: $6.SecureShare.create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'block', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -4636,15 +5675,13 @@ class SendBlocksRequest extends $pb.GeneratedMessage {
 
   /// Secure shared block
   @$pb.TagNumber(1)
-  $6.SecureShare get block => $_getN(0);
+  $core.List<$core.int> get block => $_getN(0);
   @$pb.TagNumber(1)
-  set block($6.SecureShare v) { setField(1, v); }
+  set block($core.List<$core.int> v) { $_setBytes(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlock() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlock() => clearField(1);
-  @$pb.TagNumber(1)
-  $6.SecureShare ensureBlock() => $_ensure(0);
 }
 
 enum SendBlocksResponse_Result {
@@ -4734,7 +5771,7 @@ class SendBlocksResponse extends $pb.GeneratedMessage {
 /// SendEndorsementsRequest holds parameters to SendEndorsements
 class SendEndorsementsRequest extends $pb.GeneratedMessage {
   factory SendEndorsementsRequest({
-    $core.Iterable<$6.SecureShare>? endorsements,
+    $core.Iterable<$core.List<$core.int>>? endorsements,
   }) {
     final $result = create();
     if (endorsements != null) {
@@ -4747,7 +5784,7 @@ class SendEndorsementsRequest extends $pb.GeneratedMessage {
   factory SendEndorsementsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendEndorsementsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
-    ..pc<$6.SecureShare>(1, _omitFieldNames ? '' : 'endorsements', $pb.PbFieldType.PM, subBuilder: $6.SecureShare.create)
+    ..p<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'endorsements', $pb.PbFieldType.PY)
     ..hasRequiredFields = false
   ;
 
@@ -4774,7 +5811,7 @@ class SendEndorsementsRequest extends $pb.GeneratedMessage {
 
   /// Secure shared endorsements
   @$pb.TagNumber(1)
-  $core.List<$6.SecureShare> get endorsements => $_getList(0);
+  $core.List<$core.List<$core.int>> get endorsements => $_getList(0);
 }
 
 enum SendEndorsementsResponse_Result {
@@ -4866,7 +5903,7 @@ class SendEndorsementsResponse extends $pb.GeneratedMessage {
 /// SendOperationsRequest holds parameters to SendOperations
 class SendOperationsRequest extends $pb.GeneratedMessage {
   factory SendOperationsRequest({
-    $core.Iterable<$6.SecureShare>? operations,
+    $core.Iterable<$core.List<$core.int>>? operations,
   }) {
     final $result = create();
     if (operations != null) {
@@ -4879,7 +5916,7 @@ class SendOperationsRequest extends $pb.GeneratedMessage {
   factory SendOperationsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendOperationsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
-    ..pc<$6.SecureShare>(1, _omitFieldNames ? '' : 'operations', $pb.PbFieldType.PM, subBuilder: $6.SecureShare.create)
+    ..p<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'operations', $pb.PbFieldType.PY)
     ..hasRequiredFields = false
   ;
 
@@ -4906,7 +5943,7 @@ class SendOperationsRequest extends $pb.GeneratedMessage {
 
   /// Secured shared operations
   @$pb.TagNumber(1)
-  $core.List<$6.SecureShare> get operations => $_getList(0);
+  $core.List<$core.List<$core.int>> get operations => $_getList(0);
 }
 
 enum SendOperationsResponse_Result {
@@ -5215,7 +6252,7 @@ class SearchBlocksFilter extends $pb.GeneratedMessage {
   SearchBlocksFilter_Filter whichFilter() => _SearchBlocksFilter_FilterByTag[$_whichOneof(0)]!;
   void clearFilter() => clearField($_whichOneof(0));
 
-  /// One of this block ids
+  /// One of these block ids
   @$pb.TagNumber(1)
   $16.BlockIds get blockIds => $_getN(0);
   @$pb.TagNumber(1)
@@ -5227,7 +6264,7 @@ class SearchBlocksFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $16.BlockIds ensureBlockIds() => $_ensure(0);
 
-  /// One of this creator addresses
+  /// One of these creator addresses
   @$pb.TagNumber(2)
   $7.Addresses get addresses => $_getN(1);
   @$pb.TagNumber(2)
@@ -5239,7 +6276,7 @@ class SearchBlocksFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.Addresses ensureAddresses() => $_ensure(1);
 
-  /// One of this slot ranges (inclusive)
+  /// One of these slot ranges (inclusive)
   @$pb.TagNumber(3)
   $5.SlotRange get slotRange => $_getN(2);
   @$pb.TagNumber(3)
@@ -5412,7 +6449,7 @@ class SearchEndorsementsFilter extends $pb.GeneratedMessage {
   SearchEndorsementsFilter_Filter whichFilter() => _SearchEndorsementsFilter_FilterByTag[$_whichOneof(0)]!;
   void clearFilter() => clearField($_whichOneof(0));
 
-  /// One of this endorsement ids
+  /// One of these endorsement ids
   @$pb.TagNumber(1)
   $12.EndorsementIds get endorsementIds => $_getN(0);
   @$pb.TagNumber(1)
@@ -5424,7 +6461,7 @@ class SearchEndorsementsFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $12.EndorsementIds ensureEndorsementIds() => $_ensure(0);
 
-  /// One of this creator addresses
+  /// One of these creator addresses
   @$pb.TagNumber(2)
   $7.Addresses get addresses => $_getN(1);
   @$pb.TagNumber(2)
@@ -5436,7 +6473,7 @@ class SearchEndorsementsFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.Addresses ensureAddresses() => $_ensure(1);
 
-  /// One of this block ids
+  /// One of these block ids
   @$pb.TagNumber(3)
   $16.BlockIds get blockIds => $_getN(2);
   @$pb.TagNumber(3)
@@ -5543,7 +6580,7 @@ class SearchOperationsRequest extends $pb.GeneratedMessage {
 
 enum SearchOperationsFilter_Filter {
   operationIds, 
-  operationTypes, 
+  addresses, 
   notSet
 }
 
@@ -5551,14 +6588,14 @@ enum SearchOperationsFilter_Filter {
 class SearchOperationsFilter extends $pb.GeneratedMessage {
   factory SearchOperationsFilter({
     $13.OperationIds? operationIds,
-    $13.OpTypes? operationTypes,
+    $7.Addresses? addresses,
   }) {
     final $result = create();
     if (operationIds != null) {
       $result.operationIds = operationIds;
     }
-    if (operationTypes != null) {
-      $result.operationTypes = operationTypes;
+    if (addresses != null) {
+      $result.addresses = addresses;
     }
     return $result;
   }
@@ -5568,13 +6605,13 @@ class SearchOperationsFilter extends $pb.GeneratedMessage {
 
   static const $core.Map<$core.int, SearchOperationsFilter_Filter> _SearchOperationsFilter_FilterByTag = {
     1 : SearchOperationsFilter_Filter.operationIds,
-    2 : SearchOperationsFilter_Filter.operationTypes,
+    2 : SearchOperationsFilter_Filter.addresses,
     0 : SearchOperationsFilter_Filter.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SearchOperationsFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.api.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aOM<$13.OperationIds>(1, _omitFieldNames ? '' : 'operationIds', subBuilder: $13.OperationIds.create)
-    ..aOM<$13.OpTypes>(2, _omitFieldNames ? '' : 'operationTypes', subBuilder: $13.OpTypes.create)
+    ..aOM<$7.Addresses>(2, _omitFieldNames ? '' : 'addresses', subBuilder: $7.Addresses.create)
     ..hasRequiredFields = false
   ;
 
@@ -5614,17 +6651,17 @@ class SearchOperationsFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $13.OperationIds ensureOperationIds() => $_ensure(0);
 
-  /// One of the operation types
+  /// One of these creator addresses
   @$pb.TagNumber(2)
-  $13.OpTypes get operationTypes => $_getN(1);
+  $7.Addresses get addresses => $_getN(1);
   @$pb.TagNumber(2)
-  set operationTypes($13.OpTypes v) { setField(2, v); }
+  set addresses($7.Addresses v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasOperationTypes() => $_has(1);
+  $core.bool hasAddresses() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOperationTypes() => clearField(2);
+  void clearAddresses() => clearField(2);
   @$pb.TagNumber(2)
-  $13.OpTypes ensureOperationTypes() => $_ensure(1);
+  $7.Addresses ensureAddresses() => $_ensure(1);
 }
 
 /// SearchOperationsResponse holds response from SearchOperations

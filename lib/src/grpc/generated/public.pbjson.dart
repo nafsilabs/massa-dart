@@ -917,11 +917,35 @@ final $typed_data.Uint8List scOutputEventsWrapperDescriptor = $convert.base64Dec
 @$core.Deprecated('Use newBlocksRequestDescriptor instead')
 const NewBlocksRequest$json = {
   '1': 'NewBlocksRequest',
+  '2': [
+    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.NewBlocksFilter', '10': 'filters'},
+  ],
 };
 
 /// Descriptor for `NewBlocksRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List newBlocksRequestDescriptor = $convert.base64Decode(
-    'ChBOZXdCbG9ja3NSZXF1ZXN0');
+    'ChBOZXdCbG9ja3NSZXF1ZXN0EjcKB2ZpbHRlcnMYASADKAsyHS5tYXNzYS5hcGkudjEuTmV3Qm'
+    'xvY2tzRmlsdGVyUgdmaWx0ZXJz');
+
+@$core.Deprecated('Use newBlocksFilterDescriptor instead')
+const NewBlocksFilter$json = {
+  '1': 'NewBlocksFilter',
+  '2': [
+    {'1': 'block_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.BlockIds', '9': 0, '10': 'blockIds'},
+    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
+    {'1': 'slot_range', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.SlotRange', '9': 0, '10': 'slotRange'},
+  ],
+  '8': [
+    {'1': 'filter'},
+  ],
+};
+
+/// Descriptor for `NewBlocksFilter`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List newBlocksFilterDescriptor = $convert.base64Decode(
+    'Cg9OZXdCbG9ja3NGaWx0ZXISNwoJYmxvY2tfaWRzGAEgASgLMhgubWFzc2EubW9kZWwudjEuQm'
+    'xvY2tJZHNIAFIIYmxvY2tJZHMSOQoJYWRkcmVzc2VzGAIgASgLMhkubWFzc2EubW9kZWwudjEu'
+    'QWRkcmVzc2VzSABSCWFkZHJlc3NlcxI6CgpzbG90X3JhbmdlGAMgASgLMhkubWFzc2EubW9kZW'
+    'wudjEuU2xvdFJhbmdlSABSCXNsb3RSYW5nZUIICgZmaWx0ZXI=');
 
 @$core.Deprecated('Use newBlocksResponseDescriptor instead')
 const NewBlocksResponse$json = {
@@ -936,36 +960,39 @@ final $typed_data.Uint8List newBlocksResponseDescriptor = $convert.base64Decode(
     'ChFOZXdCbG9ja3NSZXNwb25zZRI+CgxzaWduZWRfYmxvY2sYASABKAsyGy5tYXNzYS5tb2RlbC'
     '52MS5TaWduZWRCbG9ja1ILc2lnbmVkQmxvY2s=');
 
-@$core.Deprecated('Use newBlocksHeadersRequestDescriptor instead')
-const NewBlocksHeadersRequest$json = {
-  '1': 'NewBlocksHeadersRequest',
-};
-
-/// Descriptor for `NewBlocksHeadersRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List newBlocksHeadersRequestDescriptor = $convert.base64Decode(
-    'ChdOZXdCbG9ja3NIZWFkZXJzUmVxdWVzdA==');
-
-@$core.Deprecated('Use newBlocksHeadersResponseDescriptor instead')
-const NewBlocksHeadersResponse$json = {
-  '1': 'NewBlocksHeadersResponse',
-  '2': [
-    {'1': 'signed_block_header', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SignedBlockHeader', '10': 'signedBlockHeader'},
-  ],
-};
-
-/// Descriptor for `NewBlocksHeadersResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List newBlocksHeadersResponseDescriptor = $convert.base64Decode(
-    'ChhOZXdCbG9ja3NIZWFkZXJzUmVzcG9uc2USUQoTc2lnbmVkX2Jsb2NrX2hlYWRlchgBIAEoCz'
-    'IhLm1hc3NhLm1vZGVsLnYxLlNpZ25lZEJsb2NrSGVhZGVyUhFzaWduZWRCbG9ja0hlYWRlcg==');
-
 @$core.Deprecated('Use newEndorsementsRequestDescriptor instead')
 const NewEndorsementsRequest$json = {
   '1': 'NewEndorsementsRequest',
+  '2': [
+    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.NewEndorsementsFilter', '10': 'filters'},
+  ],
 };
 
 /// Descriptor for `NewEndorsementsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List newEndorsementsRequestDescriptor = $convert.base64Decode(
-    'ChZOZXdFbmRvcnNlbWVudHNSZXF1ZXN0');
+    'ChZOZXdFbmRvcnNlbWVudHNSZXF1ZXN0Ej0KB2ZpbHRlcnMYASADKAsyIy5tYXNzYS5hcGkudj'
+    'EuTmV3RW5kb3JzZW1lbnRzRmlsdGVyUgdmaWx0ZXJz');
+
+@$core.Deprecated('Use newEndorsementsFilterDescriptor instead')
+const NewEndorsementsFilter$json = {
+  '1': 'NewEndorsementsFilter',
+  '2': [
+    {'1': 'endorsement_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.EndorsementIds', '9': 0, '10': 'endorsementIds'},
+    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
+    {'1': 'block_ids', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.BlockIds', '9': 0, '10': 'blockIds'},
+  ],
+  '8': [
+    {'1': 'filter'},
+  ],
+};
+
+/// Descriptor for `NewEndorsementsFilter`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List newEndorsementsFilterDescriptor = $convert.base64Decode(
+    'ChVOZXdFbmRvcnNlbWVudHNGaWx0ZXISSQoPZW5kb3JzZW1lbnRfaWRzGAEgASgLMh4ubWFzc2'
+    'EubW9kZWwudjEuRW5kb3JzZW1lbnRJZHNIAFIOZW5kb3JzZW1lbnRJZHMSOQoJYWRkcmVzc2Vz'
+    'GAIgASgLMhkubWFzc2EubW9kZWwudjEuQWRkcmVzc2VzSABSCWFkZHJlc3NlcxI3CglibG9ja1'
+    '9pZHMYAyABKAsyGC5tYXNzYS5tb2RlbC52MS5CbG9ja0lkc0gAUghibG9ja0lkc0IICgZmaWx0'
+    'ZXI=');
 
 @$core.Deprecated('Use newEndorsementsResponseDescriptor instead')
 const NewEndorsementsResponse$json = {
@@ -983,11 +1010,35 @@ final $typed_data.Uint8List newEndorsementsResponseDescriptor = $convert.base64D
 @$core.Deprecated('Use newFilledBlocksRequestDescriptor instead')
 const NewFilledBlocksRequest$json = {
   '1': 'NewFilledBlocksRequest',
+  '2': [
+    {'1': 'filters', '3': 1, '4': 3, '5': 11, '6': '.massa.api.v1.NewBlocksFilter', '10': 'filters'},
+  ],
 };
 
 /// Descriptor for `NewFilledBlocksRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List newFilledBlocksRequestDescriptor = $convert.base64Decode(
-    'ChZOZXdGaWxsZWRCbG9ja3NSZXF1ZXN0');
+    'ChZOZXdGaWxsZWRCbG9ja3NSZXF1ZXN0EjcKB2ZpbHRlcnMYASADKAsyHS5tYXNzYS5hcGkudj'
+    'EuTmV3QmxvY2tzRmlsdGVyUgdmaWx0ZXJz');
+
+@$core.Deprecated('Use newFilledBlocksFilterDescriptor instead')
+const NewFilledBlocksFilter$json = {
+  '1': 'NewFilledBlocksFilter',
+  '2': [
+    {'1': 'block_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.BlockIds', '9': 0, '10': 'blockIds'},
+    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
+    {'1': 'slot_range', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.SlotRange', '9': 0, '10': 'slotRange'},
+  ],
+  '8': [
+    {'1': 'filter'},
+  ],
+};
+
+/// Descriptor for `NewFilledBlocksFilter`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List newFilledBlocksFilterDescriptor = $convert.base64Decode(
+    'ChVOZXdGaWxsZWRCbG9ja3NGaWx0ZXISNwoJYmxvY2tfaWRzGAEgASgLMhgubWFzc2EubW9kZW'
+    'wudjEuQmxvY2tJZHNIAFIIYmxvY2tJZHMSOQoJYWRkcmVzc2VzGAIgASgLMhkubWFzc2EubW9k'
+    'ZWwudjEuQWRkcmVzc2VzSABSCWFkZHJlc3NlcxI6CgpzbG90X3JhbmdlGAMgASgLMhkubWFzc2'
+    'EubW9kZWwudjEuU2xvdFJhbmdlSABSCXNsb3RSYW5nZUIICgZmaWx0ZXI=');
 
 @$core.Deprecated('Use newFilledBlocksResponseDescriptor instead')
 const NewFilledBlocksResponse$json = {
@@ -1019,14 +1070,22 @@ final $typed_data.Uint8List newOperationsRequestDescriptor = $convert.base64Deco
 const NewOperationsFilter$json = {
   '1': 'NewOperationsFilter',
   '2': [
-    {'1': 'operation_types', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.OpTypes', '10': 'operationTypes'},
+    {'1': 'operation_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.OperationIds', '9': 0, '10': 'operationIds'},
+    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
+    {'1': 'operation_types', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.OpTypes', '9': 0, '10': 'operationTypes'},
+  ],
+  '8': [
+    {'1': 'filter'},
   ],
 };
 
 /// Descriptor for `NewOperationsFilter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List newOperationsFilterDescriptor = $convert.base64Decode(
-    'ChNOZXdPcGVyYXRpb25zRmlsdGVyEkAKD29wZXJhdGlvbl90eXBlcxgCIAEoCzIXLm1hc3NhLm'
-    '1vZGVsLnYxLk9wVHlwZXNSDm9wZXJhdGlvblR5cGVz');
+    'ChNOZXdPcGVyYXRpb25zRmlsdGVyEkMKDW9wZXJhdGlvbl9pZHMYASABKAsyHC5tYXNzYS5tb2'
+    'RlbC52MS5PcGVyYXRpb25JZHNIAFIMb3BlcmF0aW9uSWRzEjkKCWFkZHJlc3NlcxgCIAEoCzIZ'
+    'Lm1hc3NhLm1vZGVsLnYxLkFkZHJlc3Nlc0gAUglhZGRyZXNzZXMSQgoPb3BlcmF0aW9uX3R5cG'
+    'VzGAMgASgLMhcubWFzc2EubW9kZWwudjEuT3BUeXBlc0gAUg5vcGVyYXRpb25UeXBlc0IICgZm'
+    'aWx0ZXI=');
 
 @$core.Deprecated('Use newOperationsResponseDescriptor instead')
 const NewOperationsResponse$json = {
@@ -1059,6 +1118,12 @@ const NewSlotExecutionOutputsFilter$json = {
   '1': 'NewSlotExecutionOutputsFilter',
   '2': [
     {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.ExecutionOutputStatus', '9': 0, '10': 'status'},
+    {'1': 'slot_range', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.SlotRange', '9': 0, '10': 'slotRange'},
+    {'1': 'async_pool_changes_filter', '3': 3, '4': 1, '5': 11, '6': '.massa.api.v1.AsyncPoolChangesFilter', '9': 0, '10': 'asyncPoolChangesFilter'},
+    {'1': 'executed_denounciation_filter', '3': 4, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutedDenounciationFilter', '9': 0, '10': 'executedDenounciationFilter'},
+    {'1': 'event_filter', '3': 5, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutionEventFilter', '9': 0, '10': 'eventFilter'},
+    {'1': 'executed_ops_changes_filter', '3': 6, '4': 1, '5': 11, '6': '.massa.api.v1.ExecutedOpsChangesFilter', '9': 0, '10': 'executedOpsChangesFilter'},
+    {'1': 'ledger_changes_filter', '3': 7, '4': 1, '5': 11, '6': '.massa.api.v1.LedgerChangesFilter', '9': 0, '10': 'ledgerChangesFilter'},
   ],
   '8': [
     {'1': 'filter'},
@@ -1068,7 +1133,133 @@ const NewSlotExecutionOutputsFilter$json = {
 /// Descriptor for `NewSlotExecutionOutputsFilter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List newSlotExecutionOutputsFilterDescriptor = $convert.base64Decode(
     'Ch1OZXdTbG90RXhlY3V0aW9uT3V0cHV0c0ZpbHRlchI/CgZzdGF0dXMYASABKA4yJS5tYXNzYS'
-    '5tb2RlbC52MS5FeGVjdXRpb25PdXRwdXRTdGF0dXNIAFIGc3RhdHVzQggKBmZpbHRlcg==');
+    '5tb2RlbC52MS5FeGVjdXRpb25PdXRwdXRTdGF0dXNIAFIGc3RhdHVzEjoKCnNsb3RfcmFuZ2UY'
+    'AiABKAsyGS5tYXNzYS5tb2RlbC52MS5TbG90UmFuZ2VIAFIJc2xvdFJhbmdlEmEKGWFzeW5jX3'
+    'Bvb2xfY2hhbmdlc19maWx0ZXIYAyABKAsyJC5tYXNzYS5hcGkudjEuQXN5bmNQb29sQ2hhbmdl'
+    'c0ZpbHRlckgAUhZhc3luY1Bvb2xDaGFuZ2VzRmlsdGVyEm8KHWV4ZWN1dGVkX2Rlbm91bmNpYX'
+    'Rpb25fZmlsdGVyGAQgASgLMikubWFzc2EuYXBpLnYxLkV4ZWN1dGVkRGVub3VuY2lhdGlvbkZp'
+    'bHRlckgAUhtleGVjdXRlZERlbm91bmNpYXRpb25GaWx0ZXISRwoMZXZlbnRfZmlsdGVyGAUgAS'
+    'gLMiIubWFzc2EuYXBpLnYxLkV4ZWN1dGlvbkV2ZW50RmlsdGVySABSC2V2ZW50RmlsdGVyEmcK'
+    'G2V4ZWN1dGVkX29wc19jaGFuZ2VzX2ZpbHRlchgGIAEoCzImLm1hc3NhLmFwaS52MS5FeGVjdX'
+    'RlZE9wc0NoYW5nZXNGaWx0ZXJIAFIYZXhlY3V0ZWRPcHNDaGFuZ2VzRmlsdGVyElcKFWxlZGdl'
+    'cl9jaGFuZ2VzX2ZpbHRlchgHIAEoCzIhLm1hc3NhLmFwaS52MS5MZWRnZXJDaGFuZ2VzRmlsdG'
+    'VySABSE2xlZGdlckNoYW5nZXNGaWx0ZXJCCAoGZmlsdGVy');
+
+@$core.Deprecated('Use asyncPoolChangesFilterDescriptor instead')
+const AsyncPoolChangesFilter$json = {
+  '1': 'AsyncPoolChangesFilter',
+  '2': [
+    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
+    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.massa.model.v1.AsyncPoolChangeType', '9': 0, '10': 'type'},
+    {'1': 'handler', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'handler'},
+    {'1': 'destination_address', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'destinationAddress'},
+    {'1': 'emitter_address', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'emitterAddress'},
+    {'1': 'can_be_executed', '3': 6, '4': 1, '5': 8, '9': 0, '10': 'canBeExecuted'},
+  ],
+  '8': [
+    {'1': 'filter'},
+  ],
+};
+
+/// Descriptor for `AsyncPoolChangesFilter`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List asyncPoolChangesFilterDescriptor = $convert.base64Decode(
+    'ChZBc3luY1Bvb2xDaGFuZ2VzRmlsdGVyEisKBG5vbmUYASABKAsyFS5tYXNzYS5tb2RlbC52MS'
+    '5FbXB0eUgAUgRub25lEjkKBHR5cGUYAiABKA4yIy5tYXNzYS5tb2RlbC52MS5Bc3luY1Bvb2xD'
+    'aGFuZ2VUeXBlSABSBHR5cGUSGgoHaGFuZGxlchgDIAEoCUgAUgdoYW5kbGVyEjEKE2Rlc3Rpbm'
+    'F0aW9uX2FkZHJlc3MYBCABKAlIAFISZGVzdGluYXRpb25BZGRyZXNzEikKD2VtaXR0ZXJfYWRk'
+    'cmVzcxgFIAEoCUgAUg5lbWl0dGVyQWRkcmVzcxIoCg9jYW5fYmVfZXhlY3V0ZWQYBiABKAhIAF'
+    'INY2FuQmVFeGVjdXRlZEIICgZmaWx0ZXI=');
+
+@$core.Deprecated('Use posChangesFilterDescriptor instead')
+const PosChangesFilter$json = {
+  '1': 'PosChangesFilter',
+  '2': [
+    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
+    {'1': 'address', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'address'},
+  ],
+  '8': [
+    {'1': 'filter'},
+  ],
+};
+
+/// Descriptor for `PosChangesFilter`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List posChangesFilterDescriptor = $convert.base64Decode(
+    'ChBQb3NDaGFuZ2VzRmlsdGVyEisKBG5vbmUYASABKAsyFS5tYXNzYS5tb2RlbC52MS5FbXB0eU'
+    'gAUgRub25lEhoKB2FkZHJlc3MYAiABKAlIAFIHYWRkcmVzc0IICgZmaWx0ZXI=');
+
+@$core.Deprecated('Use executionEventFilterDescriptor instead')
+const ExecutionEventFilter$json = {
+  '1': 'ExecutionEventFilter',
+  '2': [
+    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
+    {'1': 'caller_address', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'callerAddress'},
+    {'1': 'emitter_address', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'emitterAddress'},
+    {'1': 'original_operation_id', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'originalOperationId'},
+    {'1': 'is_failure', '3': 5, '4': 1, '5': 8, '9': 0, '10': 'isFailure'},
+  ],
+  '8': [
+    {'1': 'filter'},
+  ],
+};
+
+/// Descriptor for `ExecutionEventFilter`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List executionEventFilterDescriptor = $convert.base64Decode(
+    'ChRFeGVjdXRpb25FdmVudEZpbHRlchIrCgRub25lGAEgASgLMhUubWFzc2EubW9kZWwudjEuRW'
+    '1wdHlIAFIEbm9uZRInCg5jYWxsZXJfYWRkcmVzcxgCIAEoCUgAUg1jYWxsZXJBZGRyZXNzEikK'
+    'D2VtaXR0ZXJfYWRkcmVzcxgDIAEoCUgAUg5lbWl0dGVyQWRkcmVzcxI0ChVvcmlnaW5hbF9vcG'
+    'VyYXRpb25faWQYBCABKAlIAFITb3JpZ2luYWxPcGVyYXRpb25JZBIfCgppc19mYWlsdXJlGAUg'
+    'ASgISABSCWlzRmFpbHVyZUIICgZmaWx0ZXI=');
+
+@$core.Deprecated('Use executedOpsChangesFilterDescriptor instead')
+const ExecutedOpsChangesFilter$json = {
+  '1': 'ExecutedOpsChangesFilter',
+  '2': [
+    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
+    {'1': 'operation_id', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'operationId'},
+  ],
+  '8': [
+    {'1': 'filter'},
+  ],
+};
+
+/// Descriptor for `ExecutedOpsChangesFilter`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List executedOpsChangesFilterDescriptor = $convert.base64Decode(
+    'ChhFeGVjdXRlZE9wc0NoYW5nZXNGaWx0ZXISKwoEbm9uZRgBIAEoCzIVLm1hc3NhLm1vZGVsLn'
+    'YxLkVtcHR5SABSBG5vbmUSIwoMb3BlcmF0aW9uX2lkGAIgASgJSABSC29wZXJhdGlvbklkQggK'
+    'BmZpbHRlcg==');
+
+@$core.Deprecated('Use executedDenounciationFilterDescriptor instead')
+const ExecutedDenounciationFilter$json = {
+  '1': 'ExecutedDenounciationFilter',
+  '2': [
+    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
+  ],
+  '8': [
+    {'1': 'filter'},
+  ],
+};
+
+/// Descriptor for `ExecutedDenounciationFilter`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List executedDenounciationFilterDescriptor = $convert.base64Decode(
+    'ChtFeGVjdXRlZERlbm91bmNpYXRpb25GaWx0ZXISKwoEbm9uZRgBIAEoCzIVLm1hc3NhLm1vZG'
+    'VsLnYxLkVtcHR5SABSBG5vbmVCCAoGZmlsdGVy');
+
+@$core.Deprecated('Use ledgerChangesFilterDescriptor instead')
+const LedgerChangesFilter$json = {
+  '1': 'LedgerChangesFilter',
+  '2': [
+    {'1': 'none', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Empty', '9': 0, '10': 'none'},
+    {'1': 'address', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'address'},
+  ],
+  '8': [
+    {'1': 'filter'},
+  ],
+};
+
+/// Descriptor for `LedgerChangesFilter`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List ledgerChangesFilterDescriptor = $convert.base64Decode(
+    'ChNMZWRnZXJDaGFuZ2VzRmlsdGVyEisKBG5vbmUYASABKAsyFS5tYXNzYS5tb2RlbC52MS5FbX'
+    'B0eUgAUgRub25lEhoKB2FkZHJlc3MYAiABKAlIAFIHYWRkcmVzc0IICgZmaWx0ZXI=');
 
 @$core.Deprecated('Use newSlotExecutionOutputsResponseDescriptor instead')
 const NewSlotExecutionOutputsResponse$json = {
@@ -1087,14 +1278,13 @@ final $typed_data.Uint8List newSlotExecutionOutputsResponseDescriptor = $convert
 const SendBlocksRequest$json = {
   '1': 'SendBlocksRequest',
   '2': [
-    {'1': 'block', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.SecureShare', '10': 'block'},
+    {'1': 'block', '3': 1, '4': 1, '5': 12, '10': 'block'},
   ],
 };
 
 /// Descriptor for `SendBlocksRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sendBlocksRequestDescriptor = $convert.base64Decode(
-    'ChFTZW5kQmxvY2tzUmVxdWVzdBIxCgVibG9jaxgBIAEoCzIbLm1hc3NhLm1vZGVsLnYxLlNlY3'
-    'VyZVNoYXJlUgVibG9jaw==');
+    'ChFTZW5kQmxvY2tzUmVxdWVzdBIUCgVibG9jaxgBIAEoDFIFYmxvY2s=');
 
 @$core.Deprecated('Use sendBlocksResponseDescriptor instead')
 const SendBlocksResponse$json = {
@@ -1117,14 +1307,14 @@ final $typed_data.Uint8List sendBlocksResponseDescriptor = $convert.base64Decode
 const SendEndorsementsRequest$json = {
   '1': 'SendEndorsementsRequest',
   '2': [
-    {'1': 'endorsements', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.SecureShare', '10': 'endorsements'},
+    {'1': 'endorsements', '3': 1, '4': 3, '5': 12, '10': 'endorsements'},
   ],
 };
 
 /// Descriptor for `SendEndorsementsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sendEndorsementsRequestDescriptor = $convert.base64Decode(
-    'ChdTZW5kRW5kb3JzZW1lbnRzUmVxdWVzdBI/CgxlbmRvcnNlbWVudHMYASADKAsyGy5tYXNzYS'
-    '5tb2RlbC52MS5TZWN1cmVTaGFyZVIMZW5kb3JzZW1lbnRz');
+    'ChdTZW5kRW5kb3JzZW1lbnRzUmVxdWVzdBIiCgxlbmRvcnNlbWVudHMYASADKAxSDGVuZG9yc2'
+    'VtZW50cw==');
 
 @$core.Deprecated('Use sendEndorsementsResponseDescriptor instead')
 const SendEndorsementsResponse$json = {
@@ -1148,14 +1338,14 @@ final $typed_data.Uint8List sendEndorsementsResponseDescriptor = $convert.base64
 const SendOperationsRequest$json = {
   '1': 'SendOperationsRequest',
   '2': [
-    {'1': 'operations', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.SecureShare', '10': 'operations'},
+    {'1': 'operations', '3': 1, '4': 3, '5': 12, '10': 'operations'},
   ],
 };
 
 /// Descriptor for `SendOperationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sendOperationsRequestDescriptor = $convert.base64Decode(
-    'ChVTZW5kT3BlcmF0aW9uc1JlcXVlc3QSOwoKb3BlcmF0aW9ucxgBIAMoCzIbLm1hc3NhLm1vZG'
-    'VsLnYxLlNlY3VyZVNoYXJlUgpvcGVyYXRpb25z');
+    'ChVTZW5kT3BlcmF0aW9uc1JlcXVlc3QSHgoKb3BlcmF0aW9ucxgBIAMoDFIKb3BlcmF0aW9ucw'
+    '==');
 
 @$core.Deprecated('Use sendOperationsResponseDescriptor instead')
 const SendOperationsResponse$json = {
@@ -1312,7 +1502,7 @@ const SearchOperationsFilter$json = {
   '1': 'SearchOperationsFilter',
   '2': [
     {'1': 'operation_ids', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.OperationIds', '9': 0, '10': 'operationIds'},
-    {'1': 'operation_types', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.OpTypes', '9': 0, '10': 'operationTypes'},
+    {'1': 'addresses', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Addresses', '9': 0, '10': 'addresses'},
   ],
   '8': [
     {'1': 'filter'},
@@ -1322,9 +1512,8 @@ const SearchOperationsFilter$json = {
 /// Descriptor for `SearchOperationsFilter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List searchOperationsFilterDescriptor = $convert.base64Decode(
     'ChZTZWFyY2hPcGVyYXRpb25zRmlsdGVyEkMKDW9wZXJhdGlvbl9pZHMYASABKAsyHC5tYXNzYS'
-    '5tb2RlbC52MS5PcGVyYXRpb25JZHNIAFIMb3BlcmF0aW9uSWRzEkIKD29wZXJhdGlvbl90eXBl'
-    'cxgCIAEoCzIXLm1hc3NhLm1vZGVsLnYxLk9wVHlwZXNIAFIOb3BlcmF0aW9uVHlwZXNCCAoGZm'
-    'lsdGVy');
+    '5tb2RlbC52MS5PcGVyYXRpb25JZHNIAFIMb3BlcmF0aW9uSWRzEjkKCWFkZHJlc3NlcxgCIAEo'
+    'CzIZLm1hc3NhLm1vZGVsLnYxLkFkZHJlc3Nlc0gAUglhZGRyZXNzZXNCCAoGZmlsdGVy');
 
 @$core.Deprecated('Use searchOperationsResponseDescriptor instead')
 const SearchOperationsResponse$json = {

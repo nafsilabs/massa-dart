@@ -507,6 +507,7 @@ class StateChanges extends $pb.GeneratedMessage {
     $core.Iterable<AsyncPoolChangeEntry>? asyncPoolChanges,
     $core.Iterable<ExecutedOpsChangeEntry>? executedOpsChanges,
     $core.Iterable<$14.DenunciationIndex>? executedDenunciationsChanges,
+    SetOrKeepString? executionTrailHashChange,
   }) {
     final $result = create();
     if (ledgerChanges != null) {
@@ -521,6 +522,9 @@ class StateChanges extends $pb.GeneratedMessage {
     if (executedDenunciationsChanges != null) {
       $result.executedDenunciationsChanges.addAll(executedDenunciationsChanges);
     }
+    if (executionTrailHashChange != null) {
+      $result.executionTrailHashChange = executionTrailHashChange;
+    }
     return $result;
   }
   StateChanges._() : super();
@@ -532,6 +536,7 @@ class StateChanges extends $pb.GeneratedMessage {
     ..pc<AsyncPoolChangeEntry>(2, _omitFieldNames ? '' : 'asyncPoolChanges', $pb.PbFieldType.PM, subBuilder: AsyncPoolChangeEntry.create)
     ..pc<ExecutedOpsChangeEntry>(4, _omitFieldNames ? '' : 'executedOpsChanges', $pb.PbFieldType.PM, subBuilder: ExecutedOpsChangeEntry.create)
     ..pc<$14.DenunciationIndex>(5, _omitFieldNames ? '' : 'executedDenunciationsChanges', $pb.PbFieldType.PM, subBuilder: $14.DenunciationIndex.create)
+    ..aOM<SetOrKeepString>(6, _omitFieldNames ? '' : 'executionTrailHashChange', subBuilder: SetOrKeepString.create)
     ..hasRequiredFields = false
   ;
 
@@ -571,6 +576,18 @@ class StateChanges extends $pb.GeneratedMessage {
   /// Executed denunciations changes
   @$pb.TagNumber(5)
   $core.List<$14.DenunciationIndex> get executedDenunciationsChanges => $_getList(3);
+
+  /// Execution trail hash change
+  @$pb.TagNumber(6)
+  SetOrKeepString get executionTrailHashChange => $_getN(4);
+  @$pb.TagNumber(6)
+  set executionTrailHashChange(SetOrKeepString v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasExecutionTrailHashChange() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearExecutionTrailHashChange() => clearField(6);
+  @$pb.TagNumber(6)
+  SetOrKeepString ensureExecutionTrailHashChange() => $_ensure(4);
 }
 
 /// ExecutedOpsChangeEntry
