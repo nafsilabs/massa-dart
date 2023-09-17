@@ -17,6 +17,7 @@ Future<void> main() async {
   final q3 = ExecutionQueryRequestItem(
     addressRollsFinal: AddressRollsFinal(address: c.address),
   );
+  
   var state = await grpc.queryState(queries: [q1, q2, q3]);
   print(state.toString());
 

@@ -35,7 +35,7 @@ void main() async {
   var count = 0;
   await for (final resp in grpc.sendOperations([operation])) {
     print('operation ids = ${resp.toString()}');
-    final opID = resp[0];
+    final opID = resp.operationIds.operationIds[0];
     while (true) {
       count++;
       final filter = ScExecutionEventsFilter(originalOperationId: opID);

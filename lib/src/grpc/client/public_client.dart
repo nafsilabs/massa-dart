@@ -198,6 +198,22 @@ class GRPCPublicClient {
     }
   }
 
+  /// Search Operations
+  Future<SearchOperationsResponse> searchOperations(
+      List<SearchOperationsFilter> filters) async {
+    try {
+      final request = SearchOperationsRequest(filters: filters);
+      final response = await publicServiceClient.searchOperations(
+        request,
+        options: CallOptions(),
+      );
+      print(response.toProto3Json());
+      return response;
+    } catch (e) {
+      throw 'error getting search operation: $e';
+    }
+  }
+
   /// Query state
   Future<QueryStateResponse> queryState(
       {List<ExecutionQueryRequestItem>? queries}) async {
@@ -291,7 +307,7 @@ class GRPCPublicClient {
     }
   }
 
-  /// stream new slot execution outps
+  /// stream new slot execution outputs
   Stream<SlotExecutionOutput> newSlotExecutionOutputs(
       {List<NewSlotExecutionOutputsFilter>? filters}) async* {
     final requestStream = StreamController<NewSlotExecutionOutputsRequest>();
@@ -356,7 +372,8 @@ class GRPCPublicClient {
   }
 
   /// stream send endorsements
-  Stream<List<String>> sendOperations(List<Uint8List> operations) async* {
+  Stream<SendOperationsResponse> sendOperations(
+      List<Uint8List> operations) async* {
     final requestStream = StreamController<SendOperationsRequest>();
     final req = SendOperationsRequest(operations: operations);
     requestStream.add(req);
@@ -367,7 +384,7 @@ class GRPCPublicClient {
 
     try {
       await for (final resp in response) {
-        yield resp.operationIds.operationIds;
+        yield resp;
       }
     } catch (e) {
       throw 'error streaming operation status: $e';

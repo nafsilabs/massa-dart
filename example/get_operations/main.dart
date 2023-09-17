@@ -7,7 +7,7 @@ import '../constants.dart' as c;
 Future<void> main() async {
   var grpc = GRPCPublicClient(c.ipAddress, c.port);
 
-  const opID = 'O12JDY8wgMMsbdPYrqgPGt3HgVd9J4xiN3b8bTNA7mtM8nQttsxE';
+  const opID = 'O121oEfQJFtNsErkpBQv6vE2CPCnrZWHbLwWFZMmQtSWoY13JEqW';
   var op = await grpc.getOperations([opID]);
   print(op.toString());
   grpc.close();

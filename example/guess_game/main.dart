@@ -25,7 +25,7 @@ void main() async {
       Uint8List.fromList([]), 0.1, 0.1, 1, expirePeriod.toInt());
   await for (final resp in grpc.sendOperations([operation])) {
     //await Future.delayed(const Duration(seconds: 1), () {});
-    final opID = resp[0];
+    final opID = resp.operationIds.operationIds[0];
     while (true) {
       final filter = ScExecutionEventsFilter(originalOperationId: opID);
       final event = await grpc.getScExecutionEvents([filter]);
@@ -56,7 +56,7 @@ void main() async {
         0.1, 0.1, 1, expirePeriod.toInt());
     var dataString = '';
     await for (final resp in grpc.sendOperations([operation])) {
-      final opID = resp[0];
+      final opID = resp.operationIds.operationIds[0];
       while (true) {
         final filter = ScExecutionEventsFilter(originalOperationId: opID);
         final event = await grpc.getScExecutionEvents([filter]);

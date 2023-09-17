@@ -30,7 +30,7 @@ void main() async {
 
   await for (final resp in grpc.sendOperations([operation])) {
     print('operation ids = ${resp.toString()}');
-    final opID = resp[0];
+    final opID = resp.operationIds.operationIds[0];
     var count = 0;
     while (true) {
       count++;
