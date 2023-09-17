@@ -5,6 +5,7 @@ import 'dart:typed_data';
 import 'package:massa/massa.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/execution.pb.dart';
 import 'package:massa/src/grpc/generated/public.pbgrpc.dart';
+import 'package:massa/src/helpers/contract_parameters.dart';
 import 'package:massa/src/helpers/helpers.dart';
 import '../constants.dart' as c;
 
@@ -25,18 +26,12 @@ void main() async {
 
   int age = 40;
 
-  final params = concat([
-    Uint32List.fromList([name.length]).buffer.asUint8List(),
-    Uint8List.fromList(name.codeUnits),
-    Uint32List.fromList([age]).buffer.asUint8List(),
-  ]);
+  final params = SmartContractParameters();
+  params.addString(name);
+  params.addU32(age);
 
-  print('params: $params');
-  //97, 108, 105, 99, 101, 30
-  //5, 0, 0, 0, 97, 108, 105, 99, 101, 30, 0, 0, 0
-
-  final operation = await callSC(account!, contractAddress, 'changeAge', params,
-      0.1, 0.1, 10, expirePeriod.toInt());
+  final operation = await callSC(account!, contractAddress, 'changeAge',
+      params.getBytes(), 0.1, 0.1, 10, expirePeriod.toInt());
   var count = 0;
   await for (final resp in grpc.sendOperations([operation])) {
     print('operation ids = ${resp.toString()}');

@@ -9,7 +9,7 @@ void main() async {
   const ipAddress = 'test.massa.net';
   const port = 33037;
   var grpc = GRPCPublicClient(ipAddress, port);
-  final stakers = await grpc.getStakers(limit: Int64(10));
+  final stakers = await grpc.getStakers(minRolls: Int64(10), maxRolls: Int64(50));
   if (stakers.isEmpty) {
     print('No stakers found');
     return;

@@ -3,7 +3,7 @@
 import 'dart:typed_data';
 
 import 'package:massa/massa.dart';
-import 'package:massa/src/helpers/helpers.dart';
+import 'package:massa/src/helpers/contract_parameters.dart';
 import '../constants.dart' as c;
 
 void main() async {
@@ -16,12 +16,11 @@ void main() async {
   var account = wallet.getAccount(c.address);
   print(account.toString());
 
-  final params = concat([
-    Uint32List.fromList([message.length]).buffer.asUint8List(),
-    Uint8List.fromList(message.codeUnits),
-  ]);
+  final params = SmartContractParameters();
+  params.addString(message);
+
   final response = await grpc.executeReadOnlyCall(
-      0.5, contractAddress, 'getAge', params,
+      0.5, contractAddress, 'getAge', params.getBytes(),
       callerAddress: c.address);
   final dataResult = Uint8List.fromList(response.callResult)
       .buffer

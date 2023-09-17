@@ -16,8 +16,9 @@ void main() async {
   final expirePeriod = status.lastExecutedFinalSlot.period +
       status.config.operationValidityPeriods;
 
+const reciepientAddress ='AU12BR6bGpZg5YKhgoxnGhz17UUjB5NmnXnCX3FmfhPjpfLwzsQLa';
   final tx = await sendTransaction(
-      account!, c.recipientAddress, 10.5, 0.1, expirePeriod.toInt());
+      account!, reciepientAddress, 300, 0.1, expirePeriod.toInt());
   await for (final resp in grpc.sendOperations([tx])) {
     print('operation ids = ${resp.toString()}');
     break;
