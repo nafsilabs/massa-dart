@@ -53,6 +53,7 @@ class SmartContractParameters {
     }
     _byteData.add(data);
   }
+  
 
   Uint8List getBytes() => _byteData.toBytes();
 }
