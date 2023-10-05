@@ -59,8 +59,15 @@ This package will allows you to interact with massa blockchain using the folloiw
 
 ## Getting started
 
-Check usage in `/example` folder.
-For some examples, you need to privide correct grpc address and port as well as address with balance.
+Check usage in `/example` folder to test some examples:
+To run the examples, follow the following steps:
+1. Navigate to the example folder and open `constants.dart`.
+2. Replace grpc address and port, e.g address: test.massa.net', grpc port: 33037. Note this information may be changed as Massa Blockchain Technology development progresses. Check the correct information on [Massa Documentation Website](https://docs.massa.net). Further note that, testnet or buildernet must be active for some examples to work, depending on your grpc configuration.
+3. Generate private key and address using Massa Station, Bearby, or by running the test in the section below. Please do not use your massa mainnet address for testing purposes.
+4. Request test tokens from massa discord server.
+5. To run a specific example, navigate to the given folder, and run the command `dart run example_filename.dart`
+
+NOTE that all examples are tested and working with TESTNET 26.1 and gRPC TEST26.
 
 ## Testing
 To run the test cases, navigate to the project root folder and run `dart test`
