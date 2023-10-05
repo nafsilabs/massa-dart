@@ -59,7 +59,13 @@ This package will allows you to interact with massa blockchain using the folloiw
 
 ## Getting started
 
-Check usage in `/test` folder.
+Check usage in `/example` folder.
+For some examples, you need to privide correct grpc address and port as well as address with balance.
+
+## Testing
+To run the test cases, navigate to the project root folder and run `dart test`
+You need to have flutter/dart sdk installed in your machine.
+Please note that for grpc test, you need to configure grpc address and port. For some test, e.g getOperation test, you need to provide correct operation. Without proding correct information, grpc test will likely fail.
 
 ## Usage
 
@@ -99,6 +105,7 @@ You can get more information about massa by visiting the links below.
 - [Massa Documentation: Valuable massa documentation](https://docs.massa.net/)
 - [Massa Github: Massa official github repository](https://github.com/massalabs)
 - [Massa Web3: massa-dart will have similar functionalities as massa-web3](https://github.com/massalabs/massa-web3)
+- [Massa Dart SDK documentation](https://pub.dev/documentation/massa/latest/massa/massa-library.html)
 
 ### Support
 This project is supported by [massa](https://massa.net)

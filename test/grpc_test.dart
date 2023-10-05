@@ -7,7 +7,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('GRPC Test: ', () {
-    const ipAddress = '65.109.11.208'; //'test.massa.net';
+    const ipAddress = 'test.massa.net';
     const port = 33037;
     final grpc = GRPCPublicClient(ipAddress, port);
 
@@ -18,26 +18,23 @@ void main() {
 
     test('query state', () async {
       final q1 = ExecutionQueryRequestItem(
-        addressBalanceFinal: AddressBalanceFinal(
-            address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
+        addressBalanceFinal: AddressBalanceFinal(address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
         /* addressRollsFinal: AddressRollsFinal(
             address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),*/
       );
 
       final q2 = ExecutionQueryRequestItem(
-        addressBalanceCandidate: AddressBalanceCandidate(
-            address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
+        addressBalanceCandidate:
+            AddressBalanceCandidate(address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
       );
       final q3 = ExecutionQueryRequestItem(
-        addressRollsFinal: AddressRollsFinal(
-            address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
+        addressRollsFinal: AddressRollsFinal(address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
       );
       var state = await grpc.queryState(queries: [q1, q2, q3]);
       print(state.toString());
     });
     test('get stakers', () async {
-      var stakers =
-          await grpc.getStakers(minRolls: Int64(10), limit: Int64(10));
+      var stakers = await grpc.getStakers(minRolls: Int64(10), limit: Int64(10));
       print(stakers.toString());
     });
 
@@ -46,19 +43,11 @@ void main() {
       print('throughput = $tx transactions/second');
     });
 
-    /*test('get transaction throughupt', () async {
+    test('get transaction throughupt', () async {
       final tx = grpc.transactionThroughput(interval: 5);
       await for (var t in tx) {
-        print('transaction is ${t.throughput}');
+        print('transaction is ${t}');
       }
-    });*/
-
-    /*test('get block parrents', () async {
-      var parents = await grpc.getNextBlockBestParent();
-      print(parents!.toProto3Json());
-    });*/
-    /* test('shut down connection', () async {
-      await grpc.shutDown();
-    });*/
+    });
   });
 }
