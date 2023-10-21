@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:massa/src/crypto/varuint.dart';
-import 'package:massa/src/grpc/send_operations/base_send_operation.dart';
+import 'package:massa/src/send_operations/base_send_operation.dart';
 import 'package:massa/src/helpers/helpers.dart';
 
 /// Execute smart contract class extends send operation base class
