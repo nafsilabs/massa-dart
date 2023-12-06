@@ -3,5 +3,6 @@ export 'models/models.dart';
 export 'wallet/wallet.dart';
 export 'wallet/account.dart';
 export 'grpc/grpc.dart';
+export 'jsonrpc/jsonrpc.dart';
 export 'helpers/helpers.dart';
 export 'helpers/contract_parameters.dart';

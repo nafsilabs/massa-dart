@@ -8,7 +8,7 @@ void main() {
   group('Wallet test: ', () {
     const secret = 'S12PJ6nGwP9nZFfRiCct9DdAne9EDBrH1cLBvBUU8uAVXUfG4ANG';
     final wallet = Wallet();
-    //wallet.newAccount(AddressType.user);
+    wallet.newAccount(AddressType.user);
     wallet.addAccountFromSecretKey(secret, AddressType.user);
     //wallet.addAccountFromSecretKey(secret2, AddressType.user);
     test('list accounts', () async {

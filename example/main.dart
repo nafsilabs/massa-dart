@@ -2,14 +2,13 @@
 
 import 'package:fixnum/fixnum.dart';
 import 'package:massa/massa.dart';
+import 'constants.dart' as c;
 
 /// This example shows how to use massa library, e.g for listing stakers
 
 void main() async {
-  const ipAddress = 'test.massa.net';
-  const port = 33037;
-  var grpc = GRPCPublicClient(ipAddress, port);
-  final stakers = await grpc.getStakers(minRolls: Int64(10), maxRolls: Int64(50));
+  var grpc = GRPCPublicClient(c.ipAddress, c.port);
+  final stakers = await grpc.getStakers(minRolls: Int64(10));
   if (stakers.isEmpty) {
     print('No stakers found');
     return;
