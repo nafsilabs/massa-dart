@@ -9,9 +9,8 @@ import '../constants.dart' as c;
 Future<void> main() async {
   var grpc = GRPCPublicClient(c.ipAddress, c.port);
 
-  const opID = 'O1JHKJR6MrU1HnXQ83SwcaheGfqmrd7CHRnt3smD7BDVMhk42cC';
-  final searchFilter =
-      SearchOperationsFilter(operationIds: OperationIds(operationIds: [opID]));
+  const opID = 'O1WrvKt2EbXRzg2Vi2NTEUSnm4bCNwjPRk4YkrRRggjcQyopr8';
+  final searchFilter = SearchOperationsFilter(operationIds: OperationIds(operationIds: [opID]));
   var op = await grpc.searchOperations([searchFilter]);
   print(op.toProto3Json());
   grpc.close();
