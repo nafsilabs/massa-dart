@@ -7,7 +7,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('GRPC Test: ', () {
-    const ipAddress = 'test.massa.net';
+    const ipAddress = 'buildnet.massa.net';
     const port = 33037;
     final grpc = GRPCPublicClient(ipAddress, port);
 

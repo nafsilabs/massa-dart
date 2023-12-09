@@ -1,3 +1,7 @@
+## 1.7.0
+
+ - **FEAT**: Improved examples and aadded DEVNET 27.3 support.
+
 ## 1.6.1
 
  - **FIX**: export some functions and classes.
