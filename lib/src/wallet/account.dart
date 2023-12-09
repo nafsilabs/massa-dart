@@ -22,6 +22,6 @@ class Account {
   /// Returns account details as string
   @override
   String toString() {
-    return 'secret key: ${keyPair.privateKey.toString()}\npublic key: ${keyPair.publicKey.toString()}\naddress:    ${address()}, \nthread:     ${keyPair.thread()}\nbalance: ${balance.toString()}\n';
+    return 'secret key: ${keyPair.privateKey.toString()}\npublic key: ${keyPair.publicKey.toString()}\naddress:    ${address()}, \nthread:     ${keyPair.thread()}\n';
   }
 }

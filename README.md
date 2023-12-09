@@ -57,52 +57,6 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [x] unbanNodesByIds
 - [x] unbanNodesByIps
 
-This package also allows you to interact with massa blockchain using the folloiwng public and privated  jsonrpc methods.
-
-### JSONRPC Public API (node_ip:33035)
-- [ ] execute_read_only_bytecode
-- [ ] execute_read_only_call
-- [x] get_addresses
-- [x] get_blocks
-- [x] get_blockclique_block_by_slot
-- [x] get_cliques
-- [ ] get_datastore_entries
-- [ ] get_datastore_entry
-- [x] get_endorsements
-- [ ] get_filtered_sc_output_event
-- [x] get_graph_interval
-- [x] get_operations
-- [x] get_stakers
-- [x] get_status
-- [x] send_operations - send transaction
-- [x] send_operations - buy rolls
-- [x] send_operations - sell rolls
-- [x] send_operations - execute smart contract
-- [ ] send_operations - call smart contract
-
-### JSONRPC Private API (node_ip:33034)
-- [ ] add_staking_secret_keys
-- [ ] get_staking_addresses
-- [ ] node_add_to_bootstrap_blacklist
-- [ ] node_add_to_bootstrap_whitelist
-- [ ] node_add_to_peers_whitelist
-- [ ] node_ban_by_id
-- [ ] node_ban_by_ip
-- [ ] node_bootstrap_blacklist
-- [ ] node_bootstrap_whitelist
-- [ ] node_bootstrap_whitelist_allow_all
-- [ ] node_peers_whitelist
-- [ ] node_remove_from_bootstrap_blacklist
-- [ ] node_remove_from_bootstrap_whitelist
-- [ ] node_remove_from_peers_whitelist
-- [ ] node_remove_from_whitelist
-- [ ] remove_staking_addresses
-- [ ] node_sign_message
-- [ ] stop_node
-- [ ] node_unban_by_id
-- [ ] node_unban_by_ip
-- [ ] node_whitelist
-
 ## Getting started
 
 Check usage in `/example` folder to test some examples:
@@ -113,7 +67,7 @@ To run the examples, follow the following steps:
 4. Request test tokens from massa discord server.
 5. To run a specific example, navigate to the given folder, and run the command `dart run example_filename.dart`
 
-NOTE that all examples are tested and working with TESTNET 26.1 and gRPC TEST26.
+NOTE that all examples are tested and working with MASSA DEVNET 27.3.
 
 ## Testing
 To run the test cases, navigate to the project root folder and run `dart test`
@@ -124,12 +78,14 @@ Please note that for grpc test, you need to configure grpc address and port. For
 
 View more examples in `/example` folder. 
 
+NOTE: For smart contract examples, all the smart contracts are already deployed on the buildnet, so you do not need to deploy them.
+
 The example below shows how to get list of stakers
 ```dart
 import 'package:massa/massa.dart';
 
 Future<void> main() async {
-  const ipAddress = 'test.massa.net';
+  const ipAddress = 'buildnet.massa.net';
   const port = 33037;
   var grpc = GRPCPublicClient(ipAddress, port);
   final stakers = await grpc.getStakers(limit: Int64(10));
@@ -154,7 +110,10 @@ Future<void> main() async {
 You can get more information about massa by visiting the links below.
 ### Links
 - [Massa: Massa main website](https://massa.net)
+- [Massa Foundation website](https://massa.foundation)
 - [Testnet: Massa testnet](https://massa.net/testnet)
+- [Massa buildnet](https://buildnet.massa.net)
+- [Massa station](https://station.massa.net/)
 - [Massa Documentation: Valuable massa documentation](https://docs.massa.net/)
 - [Massa Github: Massa official github repository](https://github.com/massalabs)
 - [Massa Web3: massa-dart will have similar functionalities as massa-web3](https://github.com/massalabs/massa-web3)

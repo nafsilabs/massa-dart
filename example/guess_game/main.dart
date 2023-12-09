@@ -9,7 +9,7 @@ import '../constants.dart' as c;
 
 void main() async {
   var grpc = GRPCPublicClient(c.ipAddress, c.port);
-  const contractAddress = 'AS125rGH1Yj2YQsXv2TSZVwUWuxtMXaSp2fM8mQ49TejbVG4oPVQz';
+  const contractAddress = 'AS1xAVG3CJcSYUM7Qt7AyYBzv6QrZYRKTrRFQnuQqZXesQikUxdd';
   final wallet = Wallet();
   await wallet.addAccountFromSecretKey(c.secret, AddressType.user);
   var account = wallet.getAccount(c.address);
@@ -18,7 +18,8 @@ void main() async {
   final status = await grpc.getStatus();
   final expirePeriod = status.lastExecutedFinalSlot.period + status.config.operationValidityPeriods;
 
-  final operation = await callSC(account!, contractAddress, 'start', Uint8List.fromList([]), 0.1, 0.1, 1, expirePeriod.toInt());
+  final operation =
+      await callSC(account!, contractAddress, 'start', Uint8List.fromList([]), 0.1, 0.1, 1, expirePeriod.toInt());
   await for (final resp in grpc.sendOperations([operation])) {
     //await Future.delayed(const Duration(seconds: 1), () {});
     final opID = resp.operationIds.operationIds[0];
