@@ -45,8 +45,13 @@ void main() {
 
     test('get transaction throughupt', () async {
       final tx = grpc.transactionThroughput(interval: 5);
+      var i = 0;
       await for (var t in tx) {
+        i++;
         print('transaction is ${t}');
+        if (i > 4) {
+          break;
+        }
       }
     });
   });

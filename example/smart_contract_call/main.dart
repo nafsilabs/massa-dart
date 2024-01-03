@@ -6,14 +6,16 @@ import 'dart:typed_data';
 import 'package:massa/massa.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/execution.pb.dart';
 import 'package:massa/src/grpc/generated/public.pbgrpc.dart';
+import 'package:massa/src/wallet/network_types.dart';
 import '../constants.dart' as c;
 
 void main() async {
   var grpc = GRPCPublicClient(c.ipAddress, c.port);
-  const contractAddress = 'AS1ycNRch5R9iFL8JYsxswahseNdgEwaF2eBoekG7NFexDBp4Ciw';
+  const contractAddress = 'AS12cdcRczrDe3TxeGqQU6TFWVuYnVN4SeSvJdQNvEvHZ2YwMafFa';
   const name = 'alice';
   final wallet = Wallet();
-  await wallet.addAccountFromSecretKey(c.secret, AddressType.user);
+  const networkType = NetworkType.BUILDNET;
+  await wallet.addAccountFromSecretKey(c.secret, AddressType.user, networkType);
   var account = wallet.getAccount(c.address);
   print(account.toString());
 

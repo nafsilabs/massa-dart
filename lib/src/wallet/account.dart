@@ -1,12 +1,14 @@
 import 'package:massa/src/crypto/key_pair.dart';
 import 'package:massa/src/models/balance.dart';
+import 'package:massa/src/wallet/network_types.dart';
 
 /// Account class holds keypair, balance, address and address types
 class Account {
   late final KeyPair keyPair;
   late final AddressType addressType;
+  late final NetworkType networkType;
   Balance balance = Balance(0, 0, 0, 0);
-  Account(this.keyPair, this.addressType);
+  Account(this.keyPair, this.addressType, this.networkType);
 
   /// Get account address by passing the address type
   String address() {

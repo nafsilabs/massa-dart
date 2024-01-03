@@ -5,13 +5,15 @@ import 'dart:typed_data';
 
 import 'package:massa/massa.dart';
 import 'package:massa/src/grpc/generated/public.pb.dart';
+import 'package:massa/src/wallet/network_types.dart';
 import '../constants.dart' as c;
 
 void main() async {
   var grpc = GRPCPublicClient(c.ipAddress, c.port);
-  const contractAddress = 'AS1xAVG3CJcSYUM7Qt7AyYBzv6QrZYRKTrRFQnuQqZXesQikUxdd';
+  const contractAddress = 'AS12JzAc9MBtgAfyRb1zjpJfoEfWUFCkrjCP6C6hbXgXFpfPQmjMT';
   final wallet = Wallet();
-  await wallet.addAccountFromSecretKey(c.secret, AddressType.user);
+  const networkType = NetworkType.BUILDNET;
+  await wallet.addAccountFromSecretKey(c.secret, AddressType.user, networkType);
   var account = wallet.getAccount(c.address);
 
 //start game

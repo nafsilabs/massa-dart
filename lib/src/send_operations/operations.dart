@@ -15,7 +15,8 @@ Future<Uint8List> sendTransaction(
   final tx = SendTransaction(amount: amount, fee: fee, recipientAddress: recipientAddress, expirePeriod: expirePeriod);
   var txCompactData = tx.compact();
 
-  final signatureData = concat([getBytesPublicKeyVersioned(account.publicKey()), txCompactData]);
+  final signatureData =
+      concat([account.networkType.serialise(), getBytesPublicKeyVersioned(account.publicKey()), txCompactData]);
   final signature = await account.keyPair.versionedSign(signatureData);
 
   return concat([signature, getBytesPublicKeyVersioned(account.publicKey()), txCompactData]);
@@ -25,7 +26,8 @@ Future<Uint8List> sendTransaction(
 Future<Uint8List> buyRoles(Account account, int rollCount, double fee, int expirePeriod) async {
   final rolls = BuyRolls(rollCount: rollCount, fee: fee, expirePeriod: expirePeriod);
   final rollsCompactData = rolls.compact();
-  final signatureData = concat([getBytesPublicKeyVersioned(account.publicKey()), rollsCompactData]);
+  final signatureData =
+      concat([account.networkType.serialise(), getBytesPublicKeyVersioned(account.publicKey()), rollsCompactData]);
   final signature = await account.keyPair.versionedSign(signatureData);
 
   return concat([signature, getBytesPublicKeyVersioned(account.publicKey()), rollsCompactData]);
@@ -34,7 +36,8 @@ Future<Uint8List> buyRoles(Account account, int rollCount, double fee, int expir
 Future<Uint8List> sellRoles(Account account, int rollCount, double fee, int expirePeriod) async {
   final rolls = SellRolls(rollCount: rollCount, fee: fee, expirePeriod: expirePeriod);
   final rollsCompactData = rolls.compact();
-  final signatureData = concat([getBytesPublicKeyVersioned(account.publicKey()), rollsCompactData]);
+  final signatureData =
+      concat([account.networkType.serialise(), getBytesPublicKeyVersioned(account.publicKey()), rollsCompactData]);
   final signature = await account.keyPair.versionedSign(signatureData);
 
   return concat([signature, getBytesPublicKeyVersioned(account.publicKey()), rollsCompactData]);
@@ -55,7 +58,8 @@ Future<Uint8List> executeSC(
     expirePeriod: expirePeriod,
   );
   final scCompactData = sc.compact();
-  final signatureData = concat([getBytesPublicKeyVersioned(account.publicKey()), scCompactData]);
+  final signatureData =
+      concat([account.networkType.serialise(), getBytesPublicKeyVersioned(account.publicKey()), scCompactData]);
   final signature = await account.keyPair.versionedSign(signatureData);
 
   return concat([signature, getBytesPublicKeyVersioned(account.publicKey()), scCompactData]);
@@ -82,7 +86,8 @@ Future<Uint8List> callSC(
     expirePeriod: expirePeriod,
   );
   final scCompactData = sc.compact();
-  final signatureData = concat([getBytesPublicKeyVersioned(account.publicKey()), scCompactData]);
+  final signatureData =
+      concat([account.networkType.serialise(), getBytesPublicKeyVersioned(account.publicKey()), scCompactData]);
   final signature = await account.keyPair.versionedSign(signatureData);
 
   return concat([signature, getBytesPublicKeyVersioned(account.publicKey()), scCompactData]);

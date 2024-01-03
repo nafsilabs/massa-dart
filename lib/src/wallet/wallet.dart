@@ -1,6 +1,7 @@
 import 'package:massa/massa.dart';
 import 'package:massa/src/models/balance.dart';
 import 'package:massa/src/wallet/account.dart';
+import 'package:massa/src/wallet/network_types.dart';
 
 class Wallet {
   Balance totalBalance = Balance(0, 0, 0, 0);
@@ -11,10 +12,9 @@ class Wallet {
   }
 
   /// Add account into the wallet from secret key
-  Future<void> addAccountFromSecretKey(
-      String secret, AddressType addressType) async {
+  Future<void> addAccountFromSecretKey(String secret, AddressType addressType, NetworkType networkType) async {
     var keyPair = await keyPairFromSecret(secret);
-    var account = Account(keyPair, addressType);
+    var account = Account(keyPair, addressType, networkType);
     _addAccount(account);
   }
 
@@ -28,9 +28,9 @@ class Wallet {
   }
 
 // Creates a new account and add it into the wallet
-  Future<void> newAccount(AddressType addressType) async {
+  Future<void> newAccount(AddressType addressType, NetworkType networkType) async {
     var keyPair = await generateKeyPair();
-    var account = Account(keyPair, addressType);
+    var account = Account(keyPair, addressType, networkType);
     _addAccount(account);
   }
 
