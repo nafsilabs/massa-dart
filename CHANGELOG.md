@@ -1,3 +1,7 @@
+## 1.8.0
+
+ - **FEAT**: Improved the sdk to support chainid and other features  and added DEVNET 28.2 support.
+
 ## 1.7.0
 
  - **FEAT**: Improved examples and aadded DEVNET 27.3 support.
