@@ -1,3 +1,7 @@
+## 1.8.1
+
+ - **FEAT**: Improved the support of JSONRPC.
+
 ## 1.8.0
 
  - **FEAT**: Improved the sdk to support chainid and other features  and added DEVNET 28.2 support.
