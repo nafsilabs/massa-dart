@@ -18,6 +18,7 @@ class Status {
     required this.networkStats,
     required this.executionStats,
     required this.config,
+    required this.chainID,
   });
   late final String nodeId;
   late final String nodeIp;
@@ -34,6 +35,7 @@ class Status {
   late final NetworkStats networkStats;
   late final ExecutionStats executionStats;
   late final Config config;
+  late final int chainID;
 
   /// Decode status
   Status.decode(Map<String, dynamic> json) {
@@ -52,6 +54,7 @@ class Status {
     networkStats = NetworkStats.decode(json['network_stats']);
     executionStats = ExecutionStats.decode(json['execution_stats']);
     config = Config.decode(json['config']);
+    chainID = json['chain_id'];
   }
 
   /// Encode status
@@ -72,6 +75,7 @@ class Status {
     data['network_stats'] = networkStats.encode();
     data['execution_stats'] = executionStats.encode();
     data['config'] = config.encode();
+    data['chain_id'] = chainID;
     return data;
   }
 }
@@ -223,7 +227,7 @@ class Config {
     required this.maxBlockSize,
   });
   late final int genesisTimestamp;
-  late final int endTimestamp;
+  int? endTimestamp;
   late final int threadCount;
   late final int t0;
   late final int deltaF0;

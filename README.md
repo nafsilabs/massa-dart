@@ -11,7 +11,7 @@ It uses PROOF OF STAKE consensus mechanism to ensures full participation, protec
 ## Introduction
 Massa-dart is an SDK that is able to connect your Dart and Flutter applications to the Massa blockchain, create wallet, send transactions, and work with smart contracts.
 ## Features
-This package will allows you to interact with massa blockchain using the folloiwng public and privated  grpc methods.
+This package will allows you to interact with massa blockchain using the folloiwng public and privated  grpc and jsonrpc methods.
 
 ### GRPC Public API (node_ip:33037)
 - [x] executeReadOnlyCall
@@ -56,6 +56,28 @@ This package will allows you to interact with massa blockchain using the folloiw
 - [x] shutdownGracefully
 - [x] unbanNodesByIds
 - [x] unbanNodesByIps
+
+### JSONRPC Public API (node_ip:33035)
+- [ ] execute_read_only_bytecode
+- [ ] execute_read_only_call
+- [x] get_addresses
+- [x] get_blocks
+- [x] get_blockclique_block_by_slot
+- [x] get_cliques
+- [ ] get_datastore_entries
+- [ ] get_datastore_entry
+- [x] get_endorsements
+- [ ] get_filtered_sc_output_event
+- [x] get_graph_interval
+- [x] get_operations
+- [x] get_stakers
+- [x] get_status
+- [x] send_operations - send transaction
+- [x] send_operations - buy rolls
+- [x] send_operations - sell rolls
+- [x] send_operations - execute smart contract
+- [ ] send_operations - call smart contract
+
 
 ## Getting started
 

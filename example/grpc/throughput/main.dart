@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:massa/massa.dart';
-import '../constants.dart';
+import '../../constants.dart';
 
 void main() async {
   var grpc = GRPCPublicClient(ipAddress, port);

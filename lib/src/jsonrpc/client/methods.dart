@@ -3,7 +3,8 @@ class RequestMethod {
   //public api
   static const executeReadOnlyBytecode = 'execute_read_only_bytecode';
   static const executeReadOnlyCall = 'execute_read_only_call';
-  static const getAddress = 'get_addresses';
+  static const getAddresses = 'get_addresses';
+  static const getAddressesByecode = 'get_addresses_bytecode';
   static const getBlocks = 'get_blocks';
   static const getBlockcliqueBlockBySlot = 'get_blockclique_block_by_slot';
   static const getCliques = 'get_cliques';

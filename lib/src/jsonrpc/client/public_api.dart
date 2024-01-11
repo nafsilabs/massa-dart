@@ -41,7 +41,7 @@ class JsonrpcPublicApi {
   Future<List<Address>?> getAddresses(List<String> addresses) async {
     var params = [addresses];
     try {
-      var response = await client.post(RequestMethod.getAddress, params: params);
+      var response = await client.post(RequestMethod.getAddresses, params: params);
       List<Address> addressInfos = [];
       var data = List<dynamic>.from(response['result']);
 
@@ -160,15 +160,15 @@ class JsonrpcPublicApi {
     var params = [ops];
     try {
       var response = await client.post(RequestMethod.getOperations, params: params);
-
-      // print('operation: $response');
       var data = List<dynamic>.from(response['result']);
       if (data.isEmpty) {
         return null;
       }
+
       List<Operation> operations = [];
       for (var operation in data) {
-        operations.add(Operation.decode(operation));
+        var dec = Operation.decode(operation);
+        operations.add(dec);
       }
       return operations;
     } catch (e) {
@@ -205,6 +205,7 @@ class JsonrpcPublicApi {
 
     try {
       var response = await client.post(RequestMethod.sendOperations, params: [params]);
+      print(response);
       return response['result'][0];
     } catch (e) {
       return null;

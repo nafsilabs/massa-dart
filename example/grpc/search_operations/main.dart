@@ -3,7 +3,7 @@
 import 'package:massa/massa.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/operation.pb.dart';
 import 'package:massa/src/grpc/generated/public.pbgrpc.dart';
-import '../constants.dart' as c;
+import '../../constants.dart' as c;
 
 /// This example shows how to use the massa package to querry various data from massa blochchain
 Future<void> main() async {

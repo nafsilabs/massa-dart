@@ -2,8 +2,8 @@
     "openrpc": "1.2.4",
     "info": {
         "title": "Massa OpenRPC Specification",
-        "version": "TEST.26.1",
-        "description": "Massa OpenRPC Specification document. Find more information on https://docs.massa.net/en/latest/technical-doc/api.html",
+        "version": "MAIN.1.0",
+        "description": "Massa OpenRPC Specification document. Find more information on https://docs.massa.net/docs/build/api/jsonrpc",
         "termsOfService": "https://open-rpc.org",
         "contact": {
             "name": "Massa Team",
@@ -128,6 +128,39 @@
             ],
             "params": [
                 {
+                    "name": "address filter",
+                    "description": "Need to provide at least one valid address filter",
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AddressFilter"
+                        }
+                    },
+                    "required": true
+                }
+            ],
+            "result": {
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "name": "Addresses bytecode array"
+            },
+            "name": "get_addresses_bytecode",
+            "summary": "Returns the bytecode of the given addresses.",
+            "description": "Returns the bytecode of the given addresses."
+        },
+        {
+            "tags": [
+                {
+                    "name": "public",
+                    "description": "Massa public api"
+                }
+            ],
+            "params": [
+                {
                     "name": "blockId",
                     "description": "Need to provide at least one valid block id",
                     "schema": {
@@ -197,7 +230,7 @@
             },
             "name": "get_cliques",
             "summary": "Get cliques",
-            "description": "Returns informations about cliques."
+            "description": "Returns information about cliques."
         },
         {
             "tags": [
@@ -1373,6 +1406,20 @@
             "Address": {
                 "description": "Address",
                 "type": "string"
+            },
+            "AddressFilter": {
+                "description": "Address filter",
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "$ref": "#/components/schemas/Address",
+                        "description": "The address"
+                    },
+                    "is_final": {
+                        "type": "boolean",
+                        "description": "true means final, false means candidate"
+                    }
+                }
             },
             "AddressInfo": {
                 "title": "AddressInfo",
@@ -3118,6 +3165,22 @@
             }
         },
         "contentDescriptors": {
+            "Address": {
+                "name": "Address",
+                "summary": "Address",
+                "description": "A Address object",
+                "schema": {
+                    "$ref": "#/components/schemas/Address"
+                }
+            },
+            "AddressFilter": {
+                "name": "AddressFilter",
+                "summary": "Address filter",
+                "description": "A AddressFilter object",
+                "schema": {
+                    "$ref": "#/components/schemas/AddressFilter"
+                }
+            },
             "AddressInfo": {
                 "name": "AddressInfo",
                 "summary": "Address information",

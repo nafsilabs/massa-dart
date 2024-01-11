@@ -1,7 +1,5 @@
 import 'package:massa/massa.dart';
 import 'package:massa/src/models/balance.dart';
-import 'package:massa/src/wallet/account.dart';
-import 'package:massa/src/wallet/network_types.dart';
 
 class Wallet {
   Balance totalBalance = Balance(0, 0, 0, 0);

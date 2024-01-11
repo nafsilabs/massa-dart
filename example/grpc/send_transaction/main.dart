@@ -4,7 +4,7 @@ import 'package:massa/massa.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/execution.pb.dart';
 import 'package:massa/src/grpc/generated/public.pb.dart';
 import 'package:massa/src/wallet/network_types.dart';
-import '../constants.dart' as c;
+import '../../constants.dart' as c;
 
 void main() async {
 //For Native Amount: amount = mantissa * 10^(-scale)
@@ -21,7 +21,9 @@ void main() async {
 
   const reciepientAddress = 'AU12BR6bGpZg5YKhgoxnGhz17UUjB5NmnXnCX3FmfhPjpfLwzsQLa';
   late String opID;
-  final tx = await sendTransaction(account!, reciepientAddress, 100, 0.001, expirePeriod.toInt());
+  const fee = 0.0;
+  const coinAmount = 50.00;
+  final tx = await sendTransaction(account!, reciepientAddress, coinAmount, fee, expirePeriod.toInt());
   await for (final resp in grpc.sendOperations([tx])) {
     if (resp.hasOperationIds()) {
       opID = resp.operationIds.operationIds[0];
