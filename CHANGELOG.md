@@ -1,3 +1,8 @@
+## 1.8.2
+
+ - **FEAT**: Improved wallet account to return account after adding a new account.
+
+ 
 ## 1.8.1
 
  - **FEAT**: Improved the support of JSONRPC.
