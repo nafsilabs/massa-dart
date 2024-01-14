@@ -10,10 +10,11 @@ class Wallet {
   }
 
   /// Add account into the wallet from secret key
-  Future<void> addAccountFromSecretKey(String secret, AddressType addressType, NetworkType networkType) async {
+  Future<Account> addAccountFromSecretKey(String secret, AddressType addressType, NetworkType networkType) async {
     var keyPair = await keyPairFromSecret(secret);
     var account = Account(keyPair, addressType, networkType);
     _addAccount(account);
+    return account;
   }
 
   /// Get an account associated to a given address
@@ -26,10 +27,11 @@ class Wallet {
   }
 
 // Creates a new account and add it into the wallet
-  Future<void> newAccount(AddressType addressType, NetworkType networkType) async {
+  Future<Account> newAccount(AddressType addressType, NetworkType networkType) async {
     var keyPair = await generateKeyPair();
     var account = Account(keyPair, addressType, networkType);
     _addAccount(account);
+    return account;
   }
 
   Map<String, Account> listAccounts() {
