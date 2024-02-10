@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('Public API Test: ', () {
-    final Uri pubUri = Uri.https('test.massa.net', 'api/v2');
+    final Uri pubUri = Uri.https('buildnet.massa.net', 'api/v2');
 
     JsonrpcPublicApi api = JsonrpcPublicApi(pubUri);
     test('get status', () async {
