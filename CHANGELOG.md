@@ -1,3 +1,8 @@
+
+## 1.8.3
+
+ - **FEAT**: Added custom address wallet generation example.
+
 ## 1.8.2
 
  - **FEAT**: Improved wallet account to return account after adding a new account.

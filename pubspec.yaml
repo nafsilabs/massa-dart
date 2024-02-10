@@ -1,6 +1,6 @@
 name: massa
 description: Massa package  is an SDK that connects your Dart and Flutter applications to the Massa blockchain, create wallet, send transactions, and work with smart contracts.
-version: 1.8.2
+version: 1.8.3
 repository: https://github.com/jwmdev/massa-dart
 homepage: https://bits.africa
 
