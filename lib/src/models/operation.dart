@@ -8,13 +8,15 @@ class Operation {
     required this.isFinal,
     required this.thread,
     required this.operation,
+    required this.opExecutionStatus,
   });
   late final String id;
   late final bool inPool;
   List<String>? inBlocks;
-  bool? isFinal;
+  late bool isFinal;
   late final int thread;
   late final OperationData operation;
+  late bool opExecutionStatus;
 
   Operation.decode(Map<String, dynamic> json) {
     id = json['id'];
@@ -23,6 +25,7 @@ class Operation {
     isFinal = json['is_operation_final'];
     thread = json['thread'];
     operation = OperationData.decode(json['operation']);
+    opExecutionStatus = json['op_exec_status'];
   }
 
   Map<String, dynamic> encode() {
@@ -33,6 +36,7 @@ class Operation {
     data['is_operation_final'] = isFinal;
     data['thread'] = thread;
     data['operation'] = operation.encode();
+    data['op_exec_status'] = opExecutionStatus;
     return data;
   }
 }
@@ -43,14 +47,12 @@ class OperationData {
       required this.signature,
       required this.contentCreatorPubKey,
       required this.contentCreatorAddress,
-      required this.id,
-      required this.opExecutionStatus});
+      required this.id});
   late final OperationContent content;
   late final String signature;
   late final String contentCreatorPubKey;
   late final String contentCreatorAddress;
   late final String id;
-  String? opExecutionStatus;
 
   OperationData.decode(Map<String, dynamic> json) {
     // content = OperationContent.decode(json['content']);
@@ -58,7 +60,6 @@ class OperationData {
     // contentCreatorPubKey = json['content_creator_pub_key'];
     // contentCreatorAddress = json['content_creator_address'];
     id = json['id'];
-    opExecutionStatus = json['op_exec_status'];
   }
 
   Map<String, dynamic> encode() {
@@ -68,7 +69,6 @@ class OperationData {
     // data['content_creator_pub_key'] = contentCreatorPubKey;
     // data['content_creator_address'] = contentCreatorAddress;
     data['id'] = id;
-    data['op_exec_status'] = opExecutionStatus;
     return data;
   }
 }

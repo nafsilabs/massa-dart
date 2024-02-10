@@ -1,6 +1,10 @@
 
 ## 1.8.3
 
+ - **FEAT**: Improved operation model.
+
+## 1.8.3
+
  - **FEAT**: Added custom address wallet generation example.
 
 ## 1.8.2
