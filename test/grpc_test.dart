@@ -18,23 +18,26 @@ void main() {
 
     test('query state', () async {
       final q1 = ExecutionQueryRequestItem(
-        addressBalanceFinal: AddressBalanceFinal(address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
+        addressBalanceFinal: AddressBalanceFinal(
+            address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
         /* addressRollsFinal: AddressRollsFinal(
             address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),*/
       );
 
       final q2 = ExecutionQueryRequestItem(
-        addressBalanceCandidate:
-            AddressBalanceCandidate(address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
+        addressBalanceCandidate: AddressBalanceCandidate(
+            address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
       );
       final q3 = ExecutionQueryRequestItem(
-        addressRollsFinal: AddressRollsFinal(address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
+        addressRollsFinal: AddressRollsFinal(
+            address: 'AU13AftnUhkUEpP55TA2t8onLAE5rrHowEhkY1STjpYWAJpk3Mfi'),
       );
       var state = await grpc.queryState(queries: [q1, q2, q3]);
       print(state.toString());
     });
     test('get stakers', () async {
-      var stakers = await grpc.getStakers(minRolls: Int64(10), limit: Int64(10));
+      var stakers =
+          await grpc.getStakers(minRolls: Int64(10), limit: Int64(10));
       print(stakers.toString());
     });
 

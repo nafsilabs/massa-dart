@@ -9,7 +9,8 @@ import '../../constants.dart' as c;
 
 void main() async {
   var grpc = GRPCPublicClient(c.ipAddress, c.port);
-  const contractAddress = 'AS12JzAc9MBtgAfyRb1zjpJfoEfWUFCkrjCP6C6hbXgXFpfPQmjMT';
+  const contractAddress =
+      'AS12JzAc9MBtgAfyRb1zjpJfoEfWUFCkrjCP6C6hbXgXFpfPQmjMT';
   final wallet = Wallet();
   const networkType = NetworkType.BUILDNET;
   await wallet.addAccountFromSecretKey(c.secret, AddressType.user, networkType);
@@ -17,10 +18,11 @@ void main() async {
 
 //start game
   final status = await grpc.getStatus();
-  final expirePeriod = status.lastExecutedFinalSlot.period + status.config.operationValidityPeriods;
+  final expirePeriod = status.lastExecutedFinalSlot.period +
+      status.config.operationValidityPeriods;
 
-  final operation =
-      await callSC(account!, contractAddress, 'start', Uint8List.fromList([]), 0.1, 0.1, 1, expirePeriod.toInt());
+  final operation = await callSC(account!, contractAddress, 'start',
+      Uint8List.fromList([]), 0.1, 0.1, 1, expirePeriod.toInt());
   await for (final resp in grpc.sendOperations([operation])) {
     //await Future.delayed(const Duration(seconds: 1), () {});
     final opID = resp.operationIds.operationIds[0];
@@ -49,8 +51,10 @@ void main() async {
 
     final status = await grpc.getStatus();
 
-    final expirePeriod = status.lastExecutedFinalSlot.period + status.config.operationValidityPeriods;
-    final operation = await callSC(account, contractAddress, 'play', params, 0.1, 0.1, 1, expirePeriod.toInt());
+    final expirePeriod = status.lastExecutedFinalSlot.period +
+        status.config.operationValidityPeriods;
+    final operation = await callSC(account, contractAddress, 'play', params,
+        0.1, 0.1, 1, expirePeriod.toInt());
     var dataString = '';
     await for (final resp in grpc.sendOperations([operation])) {
       final opID = resp.operationIds.operationIds[0];
@@ -65,7 +69,8 @@ void main() async {
       break;
     }
     print(dataString);
-    if (dataString.contains('Congrat!') || dataString.contains('Game is over!')) {
+    if (dataString.contains('Congrat!') ||
+        dataString.contains('Game is over!')) {
       break;
     }
     attempts--;

@@ -16,7 +16,8 @@ abstract class BaseSendOperation {
   OperationType operationType;
   double? fee;
   int? expirePeriod;
-  BaseSendOperation(this.operationType, {this.fee = minimumFee, this.expirePeriod});
+  BaseSendOperation(this.operationType,
+      {this.fee = minimumFee, this.expirePeriod});
 
   Uint8List compact();
 }

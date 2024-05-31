@@ -23,19 +23,26 @@ class GRPCPublicClient {
   factory GRPCPublicClient(String host, int port) {
     _instance.host = host;
     _instance.port = port;
-    _instance.channel =
-        ClientChannel(host, port: port, options: const ChannelOptions(credentials: ChannelCredentials.insecure()));
+    _instance.channel = ClientChannel(host,
+        port: port,
+        options:
+            const ChannelOptions(credentials: ChannelCredentials.insecure()));
     _instance.publicServiceClient = PublicServiceClient(_instance.channel);
     return _instance;
   }
 
   /// ExecuteReadOnlyCall
-  Future<ReadOnlyExecutionOutput> executeReadOnlyCall(
-      double maximuGas, String targetAddress, String targetFunction, List<int> parameters,
+  Future<ReadOnlyExecutionOutput> executeReadOnlyCall(double maximuGas,
+      String targetAddress, String targetFunction, List<int> parameters,
       {String? callerAddress}) async {
-    final fn = FunctionCall(targetAddress: targetAddress, targetFunction: targetFunction, parameter: parameters);
+    final fn = FunctionCall(
+        targetAddress: targetAddress,
+        targetFunction: targetFunction,
+        parameter: parameters);
     final call = ReadOnlyExecutionCall(
-        maxGas: Int64(doubleToMassaInt(maximuGas)), functionCall: fn, callerAddress: StringValue(value: callerAddress));
+        maxGas: Int64(doubleToMassaInt(maximuGas)),
+        functionCall: fn,
+        callerAddress: StringValue(value: callerAddress));
     final request = ExecuteReadOnlyCallRequest(call: call);
     try {
       final response = await publicServiceClient.executeReadOnlyCall(
@@ -62,7 +69,8 @@ class GRPCPublicClient {
   }
 
   /// GetDatastoreEntries
-  Future<GetDatastoreEntriesResponse?> getDataStoreEntries(List<GetDatastoreEntryFilter> filters) async {
+  Future<GetDatastoreEntriesResponse?> getDataStoreEntries(
+      List<GetDatastoreEntryFilter> filters) async {
     final request = GetDatastoreEntriesRequest(filters: filters);
     try {
       return await publicServiceClient.getDatastoreEntries(
@@ -75,7 +83,8 @@ class GRPCPublicClient {
   }
 
   /// GetEndorsements
-  Future<GetEndorsementsResponse?> getEndorsements(List<String> endorsementIds) async {
+  Future<GetEndorsementsResponse?> getEndorsements(
+      List<String> endorsementIds) async {
     final request = GetEndorsementsRequest(endorsementIds: endorsementIds);
     try {
       return await publicServiceClient.getEndorsements(
@@ -101,7 +110,8 @@ class GRPCPublicClient {
   }
 
   /// Get operations
-  Future<List<OperationWrapper>> getOperations(List<String> operationIds) async {
+  Future<List<OperationWrapper>> getOperations(
+      List<String> operationIds) async {
     final request = GetOperationsRequest(operationIds: operationIds);
     try {
       final response = await publicServiceClient.getOperations(
@@ -115,7 +125,8 @@ class GRPCPublicClient {
   }
 
   /// getScExecutionEvents
-  Future<List<ScExecutionEvent>> getScExecutionEvents(List<ScExecutionEventsFilter> filters) async {
+  Future<List<ScExecutionEvent>> getScExecutionEvents(
+      List<ScExecutionEventsFilter> filters) async {
     final request = GetScExecutionEventsRequest(filters: filters);
     try {
       final response = await publicServiceClient.getScExecutionEvents(
@@ -129,7 +140,8 @@ class GRPCPublicClient {
   }
 
   /// get selector draws
-  Future<GetSelectorDrawsResponse?> getSelectorDraw(List<SelectorDrawsFilter> filters) async {
+  Future<GetSelectorDrawsResponse?> getSelectorDraw(
+      List<SelectorDrawsFilter> filters) async {
     final request = GetSelectorDrawsRequest(filters: filters);
     try {
       return await publicServiceClient.getSelectorDraws(
@@ -142,8 +154,10 @@ class GRPCPublicClient {
   }
 
   /// Get list of stakers
-  Future<List<StakerEntry>> getStakers({Int64? minRolls, Int64? maxRolls, Int64? limit}) async {
-    final filter = StakersFilter(minRolls: minRolls, maxRolls: maxRolls, limit: limit);
+  Future<List<StakerEntry>> getStakers(
+      {Int64? minRolls, Int64? maxRolls, Int64? limit}) async {
+    final filter =
+        StakersFilter(minRolls: minRolls, maxRolls: maxRolls, limit: limit);
     try {
       final request = GetStakersRequest(filters: [filter]);
       final response = await publicServiceClient.getStakers(
@@ -185,7 +199,8 @@ class GRPCPublicClient {
   }
 
   /// Search Operations
-  Future<SearchOperationsResponse> searchOperations(List<SearchOperationsFilter> filters) async {
+  Future<SearchOperationsResponse> searchOperations(
+      List<SearchOperationsFilter> filters) async {
     try {
       final request = SearchOperationsRequest(filters: filters);
       final response = await publicServiceClient.searchOperations(
@@ -200,7 +215,8 @@ class GRPCPublicClient {
   }
 
   /// Query state
-  Future<QueryStateResponse> queryState({List<ExecutionQueryRequestItem>? queries}) async {
+  Future<QueryStateResponse> queryState(
+      {List<ExecutionQueryRequestItem>? queries}) async {
     try {
       final request = QueryStateRequest(queries: queries);
       return await publicServiceClient.queryState(
@@ -269,7 +285,8 @@ class GRPCPublicClient {
   }
 
   /// stream new operations
-  Stream<SignedOperation> newOperations({List<NewOperationsFilter>? filters}) async* {
+  Stream<SignedOperation> newOperations(
+      {List<NewOperationsFilter>? filters}) async* {
     final requestStream = StreamController<NewOperationsRequest>();
     if (filters != null) {
       final req = NewOperationsRequest(filters: filters);
@@ -291,7 +308,8 @@ class GRPCPublicClient {
   }
 
   /// stream new slot execution outputs
-  Stream<SlotExecutionOutput> newSlotExecutionOutputs({List<NewSlotExecutionOutputsFilter>? filters}) async* {
+  Stream<SlotExecutionOutput> newSlotExecutionOutputs(
+      {List<NewSlotExecutionOutputsFilter>? filters}) async* {
     final requestStream = StreamController<NewSlotExecutionOutputsRequest>();
     if (filters != null) {
       final req = NewSlotExecutionOutputsRequest(filters: filters);
@@ -354,7 +372,8 @@ class GRPCPublicClient {
   }
 
   /// stream send endorsements
-  Stream<SendOperationsResponse> sendOperations(List<Uint8List> operations) async* {
+  Stream<SendOperationsResponse> sendOperations(
+      List<Uint8List> operations) async* {
     final requestStream = StreamController<SendOperationsRequest>();
     final req = SendOperationsRequest(operations: operations);
     requestStream.add(req);

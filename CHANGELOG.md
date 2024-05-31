@@ -1,3 +1,6 @@
+## 1.8.5
+
+ - **FEAT**: Added minimum fee.
 
 ## 1.8.4
 

@@ -10,7 +10,8 @@ Future<void> main() async {
   var grpc = GRPCPublicClient(c.ipAddress, c.port);
 
   const opID = 'O127Rkm698hFqbemdocVtssUvLShmiiapSi1iee6HNTWhPT5ixx8';
-  final searchFilter = SearchOperationsFilter(operationIds: OperationIds(operationIds: [opID]));
+  final searchFilter =
+      SearchOperationsFilter(operationIds: OperationIds(operationIds: [opID]));
   var op = await grpc.searchOperations([searchFilter]);
   print(op.toProto3Json());
   grpc.close();

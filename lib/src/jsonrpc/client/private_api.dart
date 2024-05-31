@@ -25,7 +25,8 @@ class JsonrpcPrivateApi {
   /// Add node to peers whitelist
   Future<dynamic> addToPeersWhitelist(String ipAddress) async {
     try {
-      var response = await client.post(RequestMethod.nodeAddToPeersWhitelist, params: [
+      var response =
+          await client.post(RequestMethod.nodeAddToPeersWhitelist, params: [
         [ipAddress]
       ]);
       return response['result'];
@@ -37,7 +38,8 @@ class JsonrpcPrivateApi {
   /// Add node to peers whitelist
   Future<dynamic> removeFromWhitelist(String ipAddress) async {
     try {
-      var response = await client.post(RequestMethod.nodeRemoveFromWhitelist, params: [
+      var response =
+          await client.post(RequestMethod.nodeRemoveFromWhitelist, params: [
         [ipAddress]
       ]);
       return response['result'];
@@ -107,7 +109,8 @@ class JsonrpcPrivateApi {
   /// Add staking secret keys
   Future<List<String>?> addStakingPrivateKeys(List<String> secretKeys) async {
     try {
-      var response = await client.post(RequestMethod.addStakingPrivateKeys, params: secretKeys);
+      var response = await client.post(RequestMethod.addStakingPrivateKeys,
+          params: secretKeys);
       return response['result'];
     } catch (e) {
       return null;
@@ -117,7 +120,8 @@ class JsonrpcPrivateApi {
   /// Remove staking addresses
   Future<dynamic> removeStakingAddresses(List<String> secretKeys) async {
     try {
-      var response = await client.post(RequestMethod.removeStakingAddresses, params: secretKeys);
+      var response = await client.post(RequestMethod.removeStakingAddresses,
+          params: secretKeys);
       return response['result'];
     } catch (e) {
       return null;

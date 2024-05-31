@@ -15,12 +15,14 @@ const maxRetryAttempts = 8;
 
 /// HTTP client
 class Client {
-  final r = const RetryOptions(maxAttempts: maxRetryAttempts, delayFactor: Duration(seconds: 1));
+  final r = const RetryOptions(
+      maxAttempts: maxRetryAttempts, delayFactor: Duration(seconds: 1));
   static const headers = {'Content-type': 'application/json'};
   late Uri uri;
   Client(this.uri);
 
-  Future<dynamic> get(String method, {Map<String, dynamic> header = Client.headers}) async {
+  Future<dynamic> get(String method,
+      {Map<String, dynamic> header = Client.headers}) async {
     final response = await r.retry(
       () => http.get(uri, headers: headers),
       retryIf: (e) => e is SocketException || e is TimeoutException,
@@ -54,7 +56,8 @@ class Client {
   }
 
   /// PUT function
-  Future<dynamic> put({required Map<String, dynamic> body, dynamic headers}) async {
+  Future<dynamic> put(
+      {required Map<String, dynamic> body, dynamic headers}) async {
     final response = await r.retry(
       () => http.put(uri, body: body, headers: headers),
       // Retry on SocketException or TimeoutException
@@ -64,7 +67,8 @@ class Client {
   }
 
   /// DELETE function
-  Future<dynamic> delete({required Map<String, dynamic> body, dynamic headers}) async {
+  Future<dynamic> delete(
+      {required Map<String, dynamic> body, dynamic headers}) async {
     final response = await r.retry(
       () => http.delete(uri, headers: headers),
       retryIf: (e) => e is SocketException || e is TimeoutException,
@@ -80,19 +84,22 @@ dynamic _returnResponse(http.Response response) {
       try {
         return json.decode(response.body.toString());
       } catch (e) {
-        throw BadRequestException(response.statusCode, response.body.toString());
+        throw BadRequestException(
+            response.statusCode, response.body.toString());
       }
     case -32000:
       throw BadRequestException(response.statusCode, response.body.toString());
     case -32001:
-      throw InternalServerErrorException(response.statusCode, response.body.toString());
+      throw InternalServerErrorException(
+          response.statusCode, response.body.toString());
     case -32004:
       throw NotFoundException(response.statusCode, response.body.toString());
 
     case -32006:
       throw SendChannelException(response.statusCode, response.body.toString());
     case -32007:
-      throw ReceiveChannelException(response.statusCode, response.body.toString());
+      throw ReceiveChannelException(
+          response.statusCode, response.body.toString());
     case -32008:
       throw MessageHashException(response.statusCode, response.body.toString());
     case -32009:
@@ -110,15 +117,19 @@ dynamic _returnResponse(http.Response response) {
     case -32015:
       throw WalletException(response.statusCode, response.body.toString());
     case -32016:
-      throw InconsistanceException(response.statusCode, response.body.toString());
+      throw InconsistanceException(
+          response.statusCode, response.body.toString());
     case -32017:
-      throw MissingCommandSenderException(response.statusCode, response.body.toString());
+      throw MissingCommandSenderException(
+          response.statusCode, response.body.toString());
     case -32018:
-      throw MissingConfigException(response.statusCode, response.body.toString());
+      throw MissingConfigException(
+          response.statusCode, response.body.toString());
     case -32019:
       throw WrongAPIException(response.statusCode, response.body.toString());
 
     default:
-      throw BadRequestException(response.statusCode, 'Error occured while communicationg with the server');
+      throw BadRequestException(response.statusCode,
+          'Error occured while communicationg with the server');
   }
 }

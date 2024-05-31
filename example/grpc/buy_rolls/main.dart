@@ -15,7 +15,8 @@ void main(List<String> args) async {
   const roll = 1;
   const fee = 0.0;
 
-  final expirePeriod = status.lastExecutedFinalSlot.period + status.config.operationValidityPeriods;
+  final expirePeriod = status.lastExecutedFinalSlot.period +
+      status.config.operationValidityPeriods;
   final operation = await buyRoles(account!, roll, fee, expirePeriod.toInt());
   //final operations = await sellRoles(account!, 1, 0.1, expirePeriod.toInt());
   await for (final resp in grpc.sendOperations([operation])) {

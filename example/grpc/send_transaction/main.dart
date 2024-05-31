@@ -17,13 +17,16 @@ void main() async {
   var account = wallet.getAccount(c.address);
   final status = await grpc.getStatus();
 
-  final expirePeriod = status.lastExecutedFinalSlot.period + status.config.operationValidityPeriods;
+  final expirePeriod = status.lastExecutedFinalSlot.period +
+      status.config.operationValidityPeriods;
 
-  const reciepientAddress = 'AU12BR6bGpZg5YKhgoxnGhz17UUjB5NmnXnCX3FmfhPjpfLwzsQLa';
+  const reciepientAddress =
+      'AU12BR6bGpZg5YKhgoxnGhz17UUjB5NmnXnCX3FmfhPjpfLwzsQLa';
   late String opID;
   const fee = 0.0;
   const coinAmount = 50.00;
-  final tx = await sendTransaction(account!, reciepientAddress, coinAmount, fee, expirePeriod.toInt());
+  final tx = await sendTransaction(
+      account!, reciepientAddress, coinAmount, fee, expirePeriod.toInt());
   await for (final resp in grpc.sendOperations([tx])) {
     if (resp.hasOperationIds()) {
       opID = resp.operationIds.operationIds[0];
@@ -32,14 +35,17 @@ void main() async {
     break;
   }
   //monitor the state of the operation id
-  final filter = NewSlotExecutionOutputsFilter(executedOpsChangesFilter: ExecutedOpsChangesFilter(operationId: opID));
+  final filter = NewSlotExecutionOutputsFilter(
+      executedOpsChangesFilter: ExecutedOpsChangesFilter(operationId: opID));
   await for (var resp in grpc.newSlotExecutionOutputs(filters: [filter])) {
     //print('execution status: ${resp.status}');
     if (resp.executionOutput.stateChanges.executedOpsChanges.isNotEmpty) {
-      print('operation status: ${resp.executionOutput.stateChanges.executedOpsChanges[0].value.status}');
+      print(
+          'operation status: ${resp.executionOutput.stateChanges.executedOpsChanges[0].value.status}');
     }
     //break the await for
-    if (resp.executionOutput == ExecutionOutputStatus.EXECUTION_OUTPUT_STATUS_FINAL) {
+    if (resp.executionOutput ==
+        ExecutionOutputStatus.EXECUTION_OUTPUT_STATUS_FINAL) {
       print('execution status: ${resp.status}');
       break;
     }

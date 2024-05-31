@@ -21,15 +21,20 @@ void main(List<String> args) async {
   const roll = 5;
   const fee = 0.0;
 
-  final expirePeriod = status.lastSlot.period + status.config.operationValidityPeriods;
+  final expirePeriod =
+      status.lastSlot.period + status.config.operationValidityPeriods;
   final rolls = BuyRolls(rollCount: roll, fee: fee, expirePeriod: expirePeriod);
   final rollsCompactData = rolls.compact();
-  final signatureData =
-      concat([account!.networkType.serialise(), getBytesPublicKeyVersioned(account.publicKey()), rollsCompactData]);
+  final signatureData = concat([
+    account!.networkType.serialise(),
+    getBytesPublicKeyVersioned(account.publicKey()),
+    rollsCompactData
+  ]);
   final signature = await account.keyPair.sign(signatureData);
 
   //final operations = await sellRoles(account!, 1, 0.1, expirePeriod.toInt());
-  final response = await api.sendOperations(rollsCompactData, account.publicKey(), signature);
+  final response = await api.sendOperations(
+      rollsCompactData, account.publicKey(), signature);
 
   print(response);
 }

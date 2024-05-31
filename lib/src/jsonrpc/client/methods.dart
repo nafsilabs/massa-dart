@@ -28,11 +28,15 @@ class RequestMethod {
   static const nodeBanByIP = 'node_ban_by_ip';
   static const nodeBootstrapBlacklist = 'node_bootstrap_blacklist';
   static const nodeBootstrapWhitelist = 'node_bootstrap_whitelist';
-  static const nodeBootstrapWhitelistAllowAll = 'node_bootstrap_whitelist_allow_all';
+  static const nodeBootstrapWhitelistAllowAll =
+      'node_bootstrap_whitelist_allow_all';
   static const nodePeersWhitelist = 'node_peers_whitelist';
-  static const nodeRemoveFromBootstrapBlacklist = 'node_remove_from_bootstrap_blacklist';
-  static const nodeRemoveFromBootstrapWhitelist = 'node_remove_from_bootstrap_whitelist';
-  static const nodeRemoveFromPeersWhitelist = 'node_remove_from_peers_whitelist';
+  static const nodeRemoveFromBootstrapBlacklist =
+      'node_remove_from_bootstrap_blacklist';
+  static const nodeRemoveFromBootstrapWhitelist =
+      'node_remove_from_bootstrap_whitelist';
+  static const nodeRemoveFromPeersWhitelist =
+      'node_remove_from_peers_whitelist';
   static const nodeRemoveFromWhitelist = 'node_remove_from_whitelist';
   static const removeStakingAddresses = 'remove_staking_addresses';
   static const nodeSignMessage = 'node_sign_message';

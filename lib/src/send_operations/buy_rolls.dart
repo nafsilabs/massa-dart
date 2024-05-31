@@ -8,7 +8,8 @@ import 'package:massa/src/helpers/helpers.dart';
 /// Buy roll class extends send operation base class
 class BuyRolls extends BaseSendOperation {
   int rollCount;
-  BuyRolls({required this.rollCount, required double fee, required int expirePeriod})
+  BuyRolls(
+      {required this.rollCount, required double fee, required int expirePeriod})
       : super(OperationType.buyRoll, fee: fee, expirePeriod: expirePeriod);
 
   /// Compact bytes to be sent
@@ -19,6 +20,11 @@ class BuyRolls extends BaseSendOperation {
     final expirePeriodEncoded = Varint.encode(expirePeriod!);
     final operationTypeEncoded = Varint.encode(operationType.index);
     final rollCountEncoded = Varint.encode(rollCount);
-    return concat([feeEncoded, expirePeriodEncoded, operationTypeEncoded, rollCountEncoded]);
+    return concat([
+      feeEncoded,
+      expirePeriodEncoded,
+      operationTypeEncoded,
+      rollCountEncoded
+    ]);
   }
 }
