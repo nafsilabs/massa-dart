@@ -5,6 +5,7 @@ import 'package:massa/src/grpc/generated/massa/model/v1/amount.pb.dart';
 
 const decimalFactor = double.maxFinite;
 const decimalScale = 9;
+const minimumFee = 0.01;
 
 class Amount {
   static NativeAmount fromDecimal(double amount) {

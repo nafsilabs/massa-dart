@@ -19,7 +19,7 @@ Future<void> main() async {
   );
 
   var state = await grpc.queryState(queries: [q1, q2, q3]);
-  print(state.toString());
+  print(state.responses[0].result.amount.mantissa.toDouble() / 1e9);
 
   grpc.close();
 }

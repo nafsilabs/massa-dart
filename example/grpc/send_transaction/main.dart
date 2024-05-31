@@ -39,7 +39,7 @@ void main() async {
       print('operation status: ${resp.executionOutput.stateChanges.executedOpsChanges[0].value.status}');
     }
     //break the await for
-    if (resp.status == ExecutionOutputStatus.EXECUTION_OUTPUT_STATUS_FINAL) {
+    if (resp.executionOutput == ExecutionOutputStatus.EXECUTION_OUTPUT_STATUS_FINAL) {
       print('execution status: ${resp.status}');
       break;
     }

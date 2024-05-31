@@ -14,13 +14,11 @@ Future<void> main() async {
     final account = await wallet.newAccount(AddressType.user, networkType);
 
     //create address with custom keyword
-    const searchKeyWord1 = 'nas';
-    const searchKeyWord2 = 'xd';
-    const searchKeyWord3 = 'JW';
+    //const searchKeyWord1 = 'test';
+    //const searchKeyWord2 = 'xd';
+    const searchKeyWord3 = 'bot';
     //remove .toLowerCase if you want to search for keyword as is
-    if (account.address().toLowerCase().contains(searchKeyWord1) ||
-        account.address().toLowerCase().contains(searchKeyWord2) ||
-        account.address().toLowerCase().contains(searchKeyWord3)) {
+    if (account.address().toLowerCase().contains(searchKeyWord3)) {
       print(account.toString());
       isObtained = true;
     }

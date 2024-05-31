@@ -1,5 +1,7 @@
 import 'dart:typed_data';
 
+import 'package:massa/src/send_operations/amount.dart';
+
 /// Operation types
 enum OperationType {
   transaction,
@@ -14,7 +16,7 @@ abstract class BaseSendOperation {
   OperationType operationType;
   double? fee;
   int? expirePeriod;
-  BaseSendOperation(this.operationType, {this.fee, this.expirePeriod});
+  BaseSendOperation(this.operationType, {this.fee = minimumFee, this.expirePeriod});
 
   Uint8List compact();
 }
