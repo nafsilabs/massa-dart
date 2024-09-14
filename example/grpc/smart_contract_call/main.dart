@@ -10,8 +10,7 @@ import '../../constants.dart' as c;
 
 void main() async {
   var grpc = GRPCPublicClient(c.ipAddress, c.port);
-  const contractAddress =
-      'AS12cdcRczrDe3TxeGqQU6TFWVuYnVN4SeSvJdQNvEvHZ2YwMafFa';
+  const contractAddress = 'AS12cdcRczrDe3TxeGqQU6TFWVuYnVN4SeSvJdQNvEvHZ2YwMafFa';
   const name = 'alice';
   final wallet = Wallet();
   const networkType = NetworkType.BUILDNET;
@@ -21,18 +20,17 @@ void main() async {
 
   final status = await grpc.getStatus();
 
-  final expirePeriod = status.lastExecutedFinalSlot.period +
-      status.config.operationValidityPeriods;
+  final expirePeriod = status.lastExecutedFinalSlot.period + status.config.operationValidityPeriods;
 
   Random random = Random();
   int age = random.nextInt(100) + 1;
 
-  final params = SmartContractParameters();
+  final params = Args();
   params.addString(name);
   params.addU32(age);
 
-  final operation = await callSC(account!, contractAddress, 'changeAge',
-      params.getBytes(), 0.1, 0.1, 10, expirePeriod.toInt());
+  final operation =
+      await callSC(account!, contractAddress, 'changeAge', params.serialise(), 0.1, 0.1, 10, expirePeriod.toInt());
   var count = 0;
   await for (final resp in grpc.sendOperations([operation])) {
     print('operation ids = ${resp.toString()}');
@@ -47,9 +45,7 @@ void main() async {
         final dataString = bytesToUtf8String(Uint8List.fromList(event[0].data));
         print(dataString);
         print('\n');
-        if (count > 100 ||
-            event[0].context.status ==
-                ScExecutionEventStatus.SC_EXECUTION_EVENT_STATUS_FINAL) {
+        if (count > 100 || event[0].context.status == ScExecutionEventStatus.SC_EXECUTION_EVENT_STATUS_FINAL) {
           break;
         }
       }

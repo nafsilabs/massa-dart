@@ -1,3 +1,7 @@
+## 1.9.0
+
+ - **FEAT**: Improved serialization and added more functions.
+
 ## 1.8.5
 
  - **FEAT**: Added minimum fee.

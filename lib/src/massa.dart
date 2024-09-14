@@ -6,4 +6,4 @@ export 'wallet/wallet.dart';
 export 'grpc/grpc.dart';
 export 'jsonrpc/jsonrpc.dart';
 export 'helpers/helpers.dart';
-export 'helpers/contract_parameters.dart';
+export 'serialisation/serialisation.dart';

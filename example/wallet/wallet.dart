@@ -6,7 +6,7 @@ import 'package:massa/massa.dart';
 
 Future<void> main() async {
   final wallet = Wallet();
-  const networkType = NetworkType.BUILDNET;
+  const networkType = NetworkType.MAINNET;
   var isObtained = false;
   var count = 0;
   while (!isObtained) {
@@ -16,9 +16,9 @@ Future<void> main() async {
     //create address with custom keyword
     //const searchKeyWord1 = 'test';
     //const searchKeyWord2 = 'xd';
-    const searchKeyWord3 = 'bot';
+    const searchKeyWord3 = 'dao';
     //remove .toLowerCase if you want to search for keyword as is
-    if (account.address().toLowerCase().contains(searchKeyWord3)) {
+    if (account.address().toLowerCase().endsWith(searchKeyWord3)) {
       print(account.toString());
       isObtained = true;
     }

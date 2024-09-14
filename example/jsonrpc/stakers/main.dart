@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:massa/massa.dart';
 
 /// This example shows how to use the api, e.g for listing stakers

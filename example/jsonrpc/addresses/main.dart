@@ -13,11 +13,12 @@ Future<void> main() async {
 
   final addresses = await api.getAddresses(addressParams);
   if (addresses == null) {
-    print('No addresses found');
+    //print('No addresses found');
     return;
   }
 
   for (var address in addresses) {
+    // ignore: avoid_print
     print('${address.encode()}}');
   }
 }

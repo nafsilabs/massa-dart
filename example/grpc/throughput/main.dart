@@ -6,7 +6,7 @@ import '../../constants.dart';
 void main() async {
   var grpc = GRPCPublicClient(ipAddress, port);
   await for (final resp in grpc.transactionThroughput(interval: 5)) {
-    print('throughput = ${resp} transactions/second');
+    print('throughput = $resp transactions/second');
   }
   await grpc.close();
 }

@@ -13,9 +13,9 @@ Uint8List hexToBytes(String hex) {
 }
 
 /// Convert a bigint to a byte array
-Uint8List bigIntToBytes(BigInt bigInt) {
-  return hexToBytes(bigInt.toRadixString(16).padLeft(32, '0'));
-}
+// Uint8List bigIntToBytes(BigInt bigInt) {
+//   return hexToBytes(bigInt.toRadixString(16).padLeft(32, '0'));
+// }
 
 /// Convert a bigint to a byte array
 String bigIntToHex(BigInt? bigInt) {

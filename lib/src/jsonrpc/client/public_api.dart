@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:typed_data';
 
 import 'package:massa/src/jsonrpc/client/client.dart';
@@ -41,8 +43,7 @@ class JsonrpcPublicApi {
   Future<List<Address>?> getAddresses(List<String> addresses) async {
     var params = [addresses];
     try {
-      var response =
-          await client.post(RequestMethod.getAddresses, params: params);
+      var response = await client.post(RequestMethod.getAddresses, params: params);
       List<Address> addressInfos = [];
       var data = List<dynamic>.from(response['result']);
 
@@ -79,8 +80,7 @@ class JsonrpcPublicApi {
       slot.encode(),
     ];
     try {
-      var response = await client.post(RequestMethod.getBlockcliqueBlockBySlot,
-          params: params);
+      var response = await client.post(RequestMethod.getBlockcliqueBlockBySlot, params: params);
       return BlockcliqueBlockBySlot.decode(response['result']);
     } catch (e) {
       return null;
@@ -122,8 +122,7 @@ class JsonrpcPublicApi {
   Future<List<Endorsement>?> getEndosements(List<String> endosementIds) async {
     var params = [endosementIds];
     try {
-      var response =
-          await client.post(RequestMethod.getEndorsements, params: params);
+      var response = await client.post(RequestMethod.getEndorsements, params: params);
       List<Endorsement> endorsements = [];
       for (var endorsement in response['result']) {
         endorsements.add(Endorsement.decode(endorsement));
@@ -146,8 +145,7 @@ class JsonrpcPublicApi {
       {'start': start, 'end': end}
     ];
     try {
-      var response =
-          await client.post(RequestMethod.getGraphInterval, params: params);
+      var response = await client.post(RequestMethod.getGraphInterval, params: params);
       List<GraphInterval> graphIntervals = [];
       for (var interval in response['result']) {
         graphIntervals.add(GraphInterval.decode(interval));
@@ -163,8 +161,7 @@ class JsonrpcPublicApi {
   Future<List<Operation>?> getOperations(List<String> ops) async {
     var params = [ops];
     try {
-      var response =
-          await client.post(RequestMethod.getOperations, params: params);
+      var response = await client.post(RequestMethod.getOperations, params: params);
       var data = List<dynamic>.from(response['result']);
       if (data.isEmpty) {
         return null;
@@ -203,19 +200,13 @@ class JsonrpcPublicApi {
   }
 
   /// Adds operations to pool. Returns operations that were ok and sent to pool.
-  Future<String?> sendOperations(
-      Uint8List data, String publicKey, String signature) async {
+  Future<String?> sendOperations(Uint8List data, String publicKey, String signature) async {
     var params = [
-      {
-        'serialized_content': data,
-        'creator_public_key': publicKey,
-        'signature': signature
-      }
+      {'serialized_content': data, 'creator_public_key': publicKey, 'signature': signature}
     ];
 
     try {
-      var response =
-          await client.post(RequestMethod.sendOperations, params: [params]);
+      var response = await client.post(RequestMethod.sendOperations, params: [params]);
       print(response);
       return response['result'][0];
     } catch (e) {
