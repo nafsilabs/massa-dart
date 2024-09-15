@@ -47,6 +47,7 @@ class Args {
   }
 
   Uint8List serialise() => _byteData.toBytes();
+  int offset() => _offset;
 
   // --- deserialisation functions ---
   bool nextBool() {

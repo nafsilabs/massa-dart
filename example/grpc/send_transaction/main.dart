@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_print
 
 import 'package:massa/massa.dart';
-import 'package:massa/src/grpc/generated/massa/model/v1/execution.pb.dart';
 import 'package:massa/src/grpc/generated/public.pb.dart';
 import '../../constants.dart' as c;
 

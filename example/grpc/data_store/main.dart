@@ -2,7 +2,6 @@
 
 import 'dart:typed_data';
 import 'package:massa/massa.dart';
-import 'package:massa/src/grpc/generated/massa/model/v1/datastore.pb.dart';
 import 'package:massa/src/grpc/generated/public.pbgrpc.dart';
 import '../../constants.dart' as c;
 

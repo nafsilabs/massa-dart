@@ -16,7 +16,7 @@ Future<void> main() async {
     //create address with custom keyword
     //const searchKeyWord1 = 'test';
     //const searchKeyWord2 = 'xd';
-    const searchKeyWord3 = 'dao';
+    const searchKeyWord3 = 'mug';
     //remove .toLowerCase if you want to search for keyword as is
     if (account.address().toLowerCase().endsWith(searchKeyWord3)) {
       print(account.toString());

@@ -1,3 +1,7 @@
+## 1.9.1
+
+ - **FEAT**: Added serialization of array of strings.
+
 ## 1.9.0
 
  - **FEAT**: Improved serialization and added more functions.

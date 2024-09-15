@@ -4,7 +4,7 @@ import 'dart:typed_data';
 
 import 'package:massa/src/serialisation/args.dart';
 
-enum ArrayTypes { BOOL, U8, U16, U32, U64, U128, U256, I16, I32, I64, /*I128,*/ F32, F64 }
+enum ArrayTypes { STRING, BOOL, U8, U16, U32, U64, U128, U256, I16, I32, I64, /*I128,*/ F32, F64 }
 
 /// get array data type size
 int getDataTypeSize(ArrayTypes value) {
@@ -39,9 +39,9 @@ Uint8List arrayToBytes({required List<dynamic> source, required ArrayTypes type}
 
   for (var value in source) {
     switch (type) {
-      // case ArrayTypes.STRING:
-      //   ser.addArray(value as List<String>, type);
-      //   break;
+      case ArrayTypes.STRING:
+        ser.addString(value as String);
+        break;
       case ArrayTypes.BOOL:
         ser.addBool(value as bool);
         break;
@@ -91,9 +91,14 @@ Uint8List arrayToBytes({required List<dynamic> source, required ArrayTypes type}
 /// bytesToArray coverts the bytes to an array of specified type
 List<dynamic> bytesToArray({required Uint8List source, required int length, required ArrayTypes type}) {
   final ser = Args(initialData: source);
-  length = length ~/ getDataTypeSize(type);
+  if (type != ArrayTypes.STRING) length = length ~/ getDataTypeSize(type);
   List<dynamic> data = [];
   switch (type) {
+    case ArrayTypes.STRING:
+      while (ser.offset() < length) {
+        data.add(ser.nextString());
+      }
+      return data;
     case ArrayTypes.BOOL:
       for (int i = 0; i < length; i++) {
         data.add(ser.nextBool());

@@ -7,3 +7,4 @@ export 'grpc/grpc.dart';
 export 'jsonrpc/jsonrpc.dart';
 export 'helpers/helpers.dart';
 export 'serialisation/serialisation.dart';
+export 'send_operations/send_operations.dart';

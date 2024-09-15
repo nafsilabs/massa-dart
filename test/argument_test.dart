@@ -209,5 +209,38 @@ void main() {
       args.addArray(i644Array, ArrayTypes.I64);
       expect(i644Array, args.nextArray(ArrayTypes.I64));
     });
+    test('Serialisation of an array of strings and array of i64s', () async {
+      final args = Args();
+      final arrayStrings = ['hello there', 'evgeni', '🙂🙂'];
+      args.addArray(arrayStrings, ArrayTypes.STRING);
+      final i644Array = <dynamic>[BigInt.from(-2300345435), BigInt.from(97607665667)];
+      args.addArray(i644Array, ArrayTypes.I64);
+
+      final serialised = args.serialise();
+      final args2 = Args(initialData: serialised);
+      final desealised = args2.nextArray(ArrayTypes.STRING);
+      expect(arrayStrings, desealised);
+      expect(i644Array, args2.nextArray(ArrayTypes.I64));
+    });
   });
+
+  /*
+  it('should correctly serialize and deserialize an array of Strings', () => {
+    const arrayStrings = ['hello there', 'evgeni', '🙂🙂']
+    const serialized = new Args()
+      .addArray(arrayStrings, ArrayTypes.STRING)
+      .serialize()
+    const args = new Args(serialized)
+    const deserialized = args.nextArray(ArrayTypes.STRING)
+    expect(deserialized).toEqual(arrayStrings)
+  })
+
+  it('should correctly serialize and deserialize an empty string array', () => {
+    const array = []
+    const serialized = new Args().addArray(array, ArrayTypes.STRING).serialize()
+    const args = new Args(serialized)
+    const deserialized = args.nextArray(ArrayTypes.STRING)
+    expect(deserialized).toEqual(array)
+  })
+  */
 }
