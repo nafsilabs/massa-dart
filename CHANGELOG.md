@@ -1,3 +1,7 @@
+## 1.9.2
+
+ - **FEAT**: Improved the grpc and the generated protobuf codes.
+
 ## 1.9.1
 
  - **FEAT**: Added serialization of array of strings.
