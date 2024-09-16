@@ -17,14 +17,7 @@ import 'dart:typed_data' as $typed_data;
 const IndexedSlot$json = {
   '1': 'IndexedSlot',
   '2': [
-    {
-      '1': 'slot',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.massa.model.v1.Slot',
-      '10': 'slot'
-    },
+    {'1': 'slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
     {'1': 'index', '3': 2, '4': 1, '5': 4, '10': 'index'},
   ],
 };
@@ -51,14 +44,7 @@ final $typed_data.Uint8List slotDescriptor = $convert.base64Decode(
 const Slots$json = {
   '1': 'Slots',
   '2': [
-    {
-      '1': 'slots',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.massa.model.v1.Slot',
-      '10': 'slots'
-    },
+    {'1': 'slots', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slots'},
   ],
 };
 
@@ -70,22 +56,8 @@ final $typed_data.Uint8List slotsDescriptor = $convert.base64Decode(
 const SlotRange$json = {
   '1': 'SlotRange',
   '2': [
-    {
-      '1': 'start_slot',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.massa.model.v1.Slot',
-      '10': 'startSlot'
-    },
-    {
-      '1': 'end_slot',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.massa.model.v1.Slot',
-      '10': 'endSlot'
-    },
+    {'1': 'start_slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'startSlot'},
+    {'1': 'end_slot', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'endSlot'},
   ],
 };
 
@@ -94,3 +66,4 @@ final $typed_data.Uint8List slotRangeDescriptor = $convert.base64Decode(
     'CglTbG90UmFuZ2USMwoKc3RhcnRfc2xvdBgBIAEoCzIULm1hc3NhLm1vZGVsLnYxLlNsb3RSCX'
     'N0YXJ0U2xvdBIvCghlbmRfc2xvdBgCIAEoCzIULm1hc3NhLm1vZGVsLnYxLlNsb3RSB2VuZFNs'
     'b3Q=');
+

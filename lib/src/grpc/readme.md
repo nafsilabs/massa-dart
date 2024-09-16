@@ -2,7 +2,7 @@
 
 First activate the plugin by running this command `dart pub global activate protoc_plugin`
 
-Run the following command to generate the grpc codes
+Run the following command to generate the grpc codes. Make sure that the lib/src/grpc/generated folder is created and is empty.
 ```
 protoc \
   ../massa-proto/proto/**/*.proto \

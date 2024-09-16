@@ -26,3 +26,4 @@ const NativeAmount$json = {
 final $typed_data.Uint8List nativeAmountDescriptor = $convert.base64Decode(
     'CgxOYXRpdmVBbW91bnQSGgoIbWFudGlzc2EYASABKARSCG1hbnRpc3NhEhQKBXNjYWxlGAIgAS'
     'gNUgVzY2FsZQ==');
+

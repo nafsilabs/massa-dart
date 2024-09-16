@@ -26,3 +26,4 @@ const StakerEntry$json = {
 final $typed_data.Uint8List stakerEntryDescriptor = $convert.base64Decode(
     'CgtTdGFrZXJFbnRyeRIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNzEhQKBXJvbGxzGAIgASgEUg'
     'Vyb2xscw==');
+

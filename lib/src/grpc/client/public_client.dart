@@ -5,6 +5,7 @@ import 'dart:typed_data';
 import 'package:fixnum/fixnum.dart';
 import 'package:grpc/grpc.dart';
 import 'package:massa/src/grpc/generated/google/protobuf/wrappers.pb.dart';
+import 'package:massa/src/grpc/generated/massa/model/v1/amount.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/block.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/endorsement.pb.dart';
 import 'package:massa/src/grpc/generated/massa/model/v1/execution.pb.dart';
@@ -33,11 +34,14 @@ class GRPCPublicClient {
 
   /// ExecuteReadOnlyCall
   Future<ReadOnlyExecutionOutput> executeReadOnlyCall(
-      double maximuGas, String targetAddress, String targetFunction, List<int> parameters,
+      double fee, double maximuGas, String targetAddress, String targetFunction, List<int> parameters,
       {String? callerAddress}) async {
     final fn = FunctionCall(targetAddress: targetAddress, targetFunction: targetFunction, parameter: parameters);
     final call = ReadOnlyExecutionCall(
-        maxGas: Int64(doubleToMassaInt(maximuGas)), functionCall: fn, callerAddress: StringValue(value: callerAddress));
+        fee: NativeAmount(mantissa: Int64(doubleToMassaInt(maximuGas)), scale: 9),
+        maxGas: Int64(doubleToMassaInt(maximuGas)),
+        functionCall: fn,
+        callerAddress: StringValue(value: callerAddress));
     final request = ExecuteReadOnlyCallRequest(call: call);
     try {
       final response = await publicServiceClient.executeReadOnlyCall(

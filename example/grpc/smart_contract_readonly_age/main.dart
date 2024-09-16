@@ -18,8 +18,8 @@ void main() async {
   final params = Args();
   params.addString(message);
 
-  final response =
-      await grpc.executeReadOnlyCall(0.5, contractAddress, 'getAge', params.serialise(), callerAddress: c.address);
+  final response = await grpc.executeReadOnlyCall(0.01, 0.01, contractAddress, 'getAge', params.serialise(),
+      callerAddress: c.address);
   final dataResult = Uint8List.fromList(response.callResult).buffer.asByteData().getUint32(0, Endian.little);
   print('alice age is : $dataResult');
   print('\n');

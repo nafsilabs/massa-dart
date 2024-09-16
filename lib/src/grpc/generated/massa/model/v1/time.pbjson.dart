@@ -24,3 +24,4 @@ const NativeTime$json = {
 /// Descriptor for `NativeTime`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List nativeTimeDescriptor = $convert.base64Decode(
     'CgpOYXRpdmVUaW1lEiIKDG1pbGxpc2Vjb25kcxgBIAEoBFIMbWlsbGlzZWNvbmRz');
+
