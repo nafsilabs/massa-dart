@@ -1,3 +1,7 @@
+## 1.9.3
+
+ - **FEAT**: Defined Massa constants.
+
 ## 1.9.2
 
  - **FEAT**: Improved the grpc and the generated protobuf codes.
