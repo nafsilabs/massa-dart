@@ -1,6 +1,6 @@
 import 'package:massa/src/crypto/key_pair.dart';
 import 'package:massa/src/models/balance.dart';
-import 'package:massa/src/wallet/network_types.dart';
+import 'package:massa/src/constants/network_types.dart';
 
 /// Account class holds keypair, balance, address and address types
 class Account {

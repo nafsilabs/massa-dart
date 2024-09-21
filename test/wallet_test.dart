@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:massa/src/crypto/key_pair.dart';
-import 'package:massa/src/wallet/network_types.dart';
+import 'package:massa/src/constants/network_types.dart';
 import 'package:massa/src/wallet/wallet.dart';
 import 'package:test/test.dart';
 

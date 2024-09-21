@@ -21,9 +21,3 @@ enum NetworkType {
     return Uint8List(8)..buffer.asByteData().setUint64(0, value, Endian.big);
   }
 }
-
-/*class NetworkType {
-  static Uint8List serialise(int networkType) {
-    return Uint8List(8)..buffer.asByteData().setUint64(0, networkType, Endian.big);
-  }
-}*/

@@ -1,7 +1,7 @@
 export 'crypto/crypto.dart';
 export 'models/models.dart';
 export 'wallet/account.dart';
-export 'wallet/network_types.dart';
+export 'constants/network_types.dart';
 export 'wallet/wallet.dart';
 export 'grpc/grpc.dart';
 export 'jsonrpc/jsonrpc.dart';
