@@ -1,6 +1,10 @@
+## 1.9.4
+
+ - **FEAT**: Exported constants.
+
 ## 1.9.3
 
- - **FEAT**: Defined Massa constants.
+ - **FEAT**: Added Massa constants.
 
 ## 1.9.2
 
