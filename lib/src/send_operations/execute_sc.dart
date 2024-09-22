@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
+import 'package:massa/src/constants/constants.dart';
 import 'package:massa/src/crypto/varuint.dart';
-import 'package:massa/src/send_operations/amount.dart';
 import 'package:massa/src/send_operations/base_send_operation.dart';
 import 'package:massa/src/helpers/helpers.dart';
 

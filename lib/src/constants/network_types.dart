@@ -2,12 +2,6 @@
 
 import 'dart:typed_data';
 
-//const MAINNET = 77658377;
-//const BUILDNET = 77658366;
-//const SECURENET = 77658383;
-//const LABNET = 77658376;
-//const SANDBOX = 77;
-
 enum NetworkType {
   MAINNET(77658377),
   BUILDNET(77658366),

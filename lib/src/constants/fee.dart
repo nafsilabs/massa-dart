@@ -1,0 +1,1 @@
+const minimumFee = 0.01; //current minimum fee is 0.01 MAS

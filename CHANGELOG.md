@@ -1,3 +1,8 @@
+
+## 1.9.5
+
+ - **FEAT**: Added massa units.
+
 ## 1.9.4
 
  - **FEAT**: Exported constants.
