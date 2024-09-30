@@ -54,8 +54,22 @@ final $typed_data.Uint8List mipComponentDescriptor = $convert.base64Decode(
 const MipStatusEntry$json = {
   '1': 'MipStatusEntry',
   '2': [
-    {'1': 'mip_info', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.MipInfo', '10': 'mipInfo'},
-    {'1': 'state_id', '3': 2, '4': 1, '5': 14, '6': '.massa.model.v1.ComponentStateId', '10': 'stateId'},
+    {
+      '1': 'mip_info',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.MipInfo',
+      '10': 'mipInfo'
+    },
+    {
+      '1': 'state_id',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.ComponentStateId',
+      '10': 'stateId'
+    },
   ],
 };
 
@@ -71,10 +85,38 @@ const MipInfo$json = {
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     {'1': 'version', '3': 2, '4': 1, '5': 13, '10': 'version'},
-    {'1': 'start', '3': 3, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'start'},
-    {'1': 'timeout', '3': 4, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'timeout'},
-    {'1': 'activation_delay', '3': 5, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'activationDelay'},
-    {'1': 'components', '3': 6, '4': 3, '5': 11, '6': '.massa.model.v1.MipComponentEntry', '10': 'components'},
+    {
+      '1': 'start',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'start'
+    },
+    {
+      '1': 'timeout',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'timeout'
+    },
+    {
+      '1': 'activation_delay',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'activationDelay'
+    },
+    {
+      '1': 'components',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.MipComponentEntry',
+      '10': 'components'
+    },
   ],
 };
 
@@ -91,7 +133,14 @@ final $typed_data.Uint8List mipInfoDescriptor = $convert.base64Decode(
 const MipComponentEntry$json = {
   '1': 'MipComponentEntry',
   '2': [
-    {'1': 'kind', '3': 1, '4': 1, '5': 14, '6': '.massa.model.v1.MipComponent', '10': 'kind'},
+    {
+      '1': 'kind',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.massa.model.v1.MipComponent',
+      '10': 'kind'
+    },
     {'1': 'version', '3': 2, '4': 1, '5': 13, '10': 'version'},
   ],
 };
@@ -100,4 +149,3 @@ const MipComponentEntry$json = {
 final $typed_data.Uint8List mipComponentEntryDescriptor = $convert.base64Decode(
     'ChFNaXBDb21wb25lbnRFbnRyeRIwCgRraW5kGAEgASgOMhwubWFzc2EubW9kZWwudjEuTWlwQ2'
     '9tcG9uZW50UgRraW5kEhgKB3ZlcnNpb24YAiABKA1SB3ZlcnNpb24=');
-

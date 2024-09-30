@@ -1,4 +1,8 @@
 
+## 1.9.6
+
+ - **FEAT**: Improved the http client get method.
+
 ## 1.9.5
 
  - **FEAT**: Added massa units.

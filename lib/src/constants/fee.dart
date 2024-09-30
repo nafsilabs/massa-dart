@@ -1,1 +1,2 @@
-const minimumFee = 0.01; //current minimum fee is 0.01 MAS
+/// minimumFee sets the minimum transaction fee which is 0.01 MAS
+const minimumFee = 0.01;

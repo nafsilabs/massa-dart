@@ -8,15 +8,32 @@ void main() {
   group('Serialisation types: ', () {
     test('strToBytes/bytesToStr - emoj', () async {
       const value = 'Hello world 🙂';
-      final expected =
-          Uint8List.fromList([72, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 32, 240, 159, 153, 130]);
+      final expected = Uint8List.fromList([
+        72,
+        101,
+        108,
+        108,
+        111,
+        32,
+        119,
+        111,
+        114,
+        108,
+        100,
+        32,
+        240,
+        159,
+        153,
+        130
+      ]);
       final result1 = strToBytes(value);
       final result2 = bytesToStr(expected);
       expect(result1, expected);
       expect(result2, value);
     });
     test('strToBytes/bytesToStr - Ascii', () async {
-      const value = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      const value =
+          'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
       final expected = Uint8List.fromList([
         65,
         66,
@@ -114,7 +131,8 @@ void main() {
     });
     test('i64ToBytes/bytesToI64', () async {
       final value = BigInt.from(-666);
-      final expected = Uint8List.fromList([102, 253, 255, 255, 255, 255, 255, 255]);
+      final expected =
+          Uint8List.fromList([102, 253, 255, 255, 255, 255, 255, 255]);
       final result1 = i64ToBytes(value);
       final result2 = bytesToI64(expected);
       expect(result1, expected);
@@ -122,7 +140,8 @@ void main() {
     });
     test('u128ToBytes/bytesToU128', () async {
       final value = BigInt.parse('123456789012345678901234567890', radix: 10);
-      final expected = Uint8List.fromList([210, 10, 63, 78, 238, 224, 115, 195, 246, 15, 233, 142, 1, 0, 0, 0]);
+      final expected = Uint8List.fromList(
+          [210, 10, 63, 78, 238, 224, 115, 195, 246, 15, 233, 142, 1, 0, 0, 0]);
       final result1 = u128ToBytes(value);
       final result2 = bytesToU128(expected);
       expect(result1, expected);
@@ -137,7 +156,8 @@ void main() {
     //   expect(value, result2);
     // });
     test('u256ToBytes/bytesToU256', () async {
-      final value = BigInt.parse('340282366920938463479561609432376342295', radix: 10);
+      final value =
+          BigInt.parse('340282366920938463479561609432376342295', radix: 10);
       final expected = Uint8List.fromList([
         23,
         247,

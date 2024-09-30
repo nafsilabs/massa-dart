@@ -114,7 +114,8 @@ void main() {
 
     test('Serialisation of a u128, i128, an u256 and a string', () async {
       final u128Val = BigInt.from(146738984765738234);
-      final u256Val = BigInt.parse('146738984765738234146738984765738234', radix: 10);
+      final u256Val =
+          BigInt.parse('146738984765738234146738984765738234', radix: 10);
       final randomString = generateRandomString(23);
       final args1 = Args();
       args1.addU128(u128Val);
@@ -178,7 +179,11 @@ void main() {
 
     test('Serialisation of an array of U64', () async {
       final args = Args();
-      final u64Array = <dynamic>[BigInt.from(10000000000), BigInt.from(2000000000), BigInt.from(3000000000)];
+      final u64Array = <dynamic>[
+        BigInt.from(10000000000),
+        BigInt.from(2000000000),
+        BigInt.from(3000000000)
+      ];
       args.addArray(u64Array, ArrayTypes.U64);
       expect(u64Array, args.nextArray(ArrayTypes.U64));
     });
@@ -205,7 +210,10 @@ void main() {
     });
     test('Serialisation of an array of i64s', () async {
       final args = Args();
-      final i644Array = <dynamic>[BigInt.from(-2300345435), BigInt.from(97607665667)];
+      final i644Array = <dynamic>[
+        BigInt.from(-2300345435),
+        BigInt.from(97607665667)
+      ];
       args.addArray(i644Array, ArrayTypes.I64);
       expect(i644Array, args.nextArray(ArrayTypes.I64));
     });
@@ -213,7 +221,10 @@ void main() {
       final args = Args();
       final arrayStrings = ['hello there', 'evgeni', '🙂🙂'];
       args.addArray(arrayStrings, ArrayTypes.STRING);
-      final i644Array = <dynamic>[BigInt.from(-2300345435), BigInt.from(97607665667)];
+      final i644Array = <dynamic>[
+        BigInt.from(-2300345435),
+        BigInt.from(97607665667)
+      ];
       args.addArray(i644Array, ArrayTypes.I64);
 
       final serialised = args.serialise();

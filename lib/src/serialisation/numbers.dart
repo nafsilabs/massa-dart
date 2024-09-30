@@ -98,7 +98,8 @@ int bytesToI32(Uint8List arr, [int offset = 0]) {
 
 Uint8List i64ToBytes(BigInt val) {
   if (val < I64_MIN || val > I64_MAX) {
-    throw Exception('Unable to serialize invalid int64 value ${val.toString()}');
+    throw Exception(
+        'Unable to serialize invalid int64 value ${val.toString()}');
   }
   final buffer = ByteData(8);
   buffer.setInt64(0, val.toInt(), Endian.little);

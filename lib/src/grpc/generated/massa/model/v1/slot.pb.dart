@@ -30,25 +30,32 @@ class IndexedSlot extends $pb.GeneratedMessage {
     return $result;
   }
   IndexedSlot._() : super();
-  factory IndexedSlot.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory IndexedSlot.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory IndexedSlot.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IndexedSlot.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IndexedSlot', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'IndexedSlot',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
     ..aOM<Slot>(1, _omitFieldNames ? '' : 'slot', subBuilder: Slot.create)
-    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   IndexedSlot clone() => IndexedSlot()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  IndexedSlot copyWith(void Function(IndexedSlot) updates) => super.copyWith((message) => updates(message as IndexedSlot)) as IndexedSlot;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  IndexedSlot copyWith(void Function(IndexedSlot) updates) =>
+      super.copyWith((message) => updates(message as IndexedSlot))
+          as IndexedSlot;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -57,14 +64,18 @@ class IndexedSlot extends $pb.GeneratedMessage {
   IndexedSlot createEmptyInstance() => create();
   static $pb.PbList<IndexedSlot> createRepeated() => $pb.PbList<IndexedSlot>();
   @$core.pragma('dart2js:noInline')
-  static IndexedSlot getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IndexedSlot>(create);
+  static IndexedSlot getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<IndexedSlot>(create);
   static IndexedSlot? _defaultInstance;
 
   /// Slot
   @$pb.TagNumber(1)
   Slot get slot => $_getN(0);
   @$pb.TagNumber(1)
-  set slot(Slot v) { setField(1, v); }
+  set slot(Slot v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasSlot() => $_has(0);
   @$pb.TagNumber(1)
@@ -76,7 +87,10 @@ class IndexedSlot extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $fixnum.Int64 get index => $_getI64(1);
   @$pb.TagNumber(2)
-  set index($fixnum.Int64 v) { $_setInt64(1, v); }
+  set index($fixnum.Int64 v) {
+    $_setInt64(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasIndex() => $_has(1);
   @$pb.TagNumber(2)
@@ -99,25 +113,31 @@ class Slot extends $pb.GeneratedMessage {
     return $result;
   }
   Slot._() : super();
-  factory Slot.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Slot.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Slot.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Slot.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Slot', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'period', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Slot',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'period', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'thread', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Slot clone() => Slot()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Slot copyWith(void Function(Slot) updates) => super.copyWith((message) => updates(message as Slot)) as Slot;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Slot copyWith(void Function(Slot) updates) =>
+      super.copyWith((message) => updates(message as Slot)) as Slot;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -126,14 +146,18 @@ class Slot extends $pb.GeneratedMessage {
   Slot createEmptyInstance() => create();
   static $pb.PbList<Slot> createRepeated() => $pb.PbList<Slot>();
   @$core.pragma('dart2js:noInline')
-  static Slot getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Slot>(create);
+  static Slot getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Slot>(create);
   static Slot? _defaultInstance;
 
   /// Period
   @$pb.TagNumber(1)
   $fixnum.Int64 get period => $_getI64(0);
   @$pb.TagNumber(1)
-  set period($fixnum.Int64 v) { $_setInt64(0, v); }
+  set period($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasPeriod() => $_has(0);
   @$pb.TagNumber(1)
@@ -143,7 +167,10 @@ class Slot extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get thread => $_getIZ(1);
   @$pb.TagNumber(2)
-  set thread($core.int v) { $_setUnsignedInt32(1, v); }
+  set thread($core.int v) {
+    $_setUnsignedInt32(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasThread() => $_has(1);
   @$pb.TagNumber(2)
@@ -162,24 +189,30 @@ class Slots extends $pb.GeneratedMessage {
     return $result;
   }
   Slots._() : super();
-  factory Slots.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Slots.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Slots.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Slots.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Slots', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
-    ..pc<Slot>(1, _omitFieldNames ? '' : 'slots', $pb.PbFieldType.PM, subBuilder: Slot.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Slots',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
+    ..pc<Slot>(1, _omitFieldNames ? '' : 'slots', $pb.PbFieldType.PM,
+        subBuilder: Slot.create)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Slots clone() => Slots()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Slots copyWith(void Function(Slots) updates) => super.copyWith((message) => updates(message as Slots)) as Slots;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Slots copyWith(void Function(Slots) updates) =>
+      super.copyWith((message) => updates(message as Slots)) as Slots;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -188,7 +221,8 @@ class Slots extends $pb.GeneratedMessage {
   Slots createEmptyInstance() => create();
   static $pb.PbList<Slots> createRepeated() => $pb.PbList<Slots>();
   @$core.pragma('dart2js:noInline')
-  static Slots getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Slots>(create);
+  static Slots getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Slots>(create);
   static Slots? _defaultInstance;
 
   /// Slots
@@ -212,25 +246,30 @@ class SlotRange extends $pb.GeneratedMessage {
     return $result;
   }
   SlotRange._() : super();
-  factory SlotRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SlotRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory SlotRange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SlotRange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SlotRange', package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SlotRange',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'massa.model.v1'),
+      createEmptyInstance: create)
     ..aOM<Slot>(1, _omitFieldNames ? '' : 'startSlot', subBuilder: Slot.create)
     ..aOM<Slot>(2, _omitFieldNames ? '' : 'endSlot', subBuilder: Slot.create)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   SlotRange clone() => SlotRange()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SlotRange copyWith(void Function(SlotRange) updates) => super.copyWith((message) => updates(message as SlotRange)) as SlotRange;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SlotRange copyWith(void Function(SlotRange) updates) =>
+      super.copyWith((message) => updates(message as SlotRange)) as SlotRange;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -239,14 +278,18 @@ class SlotRange extends $pb.GeneratedMessage {
   SlotRange createEmptyInstance() => create();
   static $pb.PbList<SlotRange> createRepeated() => $pb.PbList<SlotRange>();
   @$core.pragma('dart2js:noInline')
-  static SlotRange getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SlotRange>(create);
+  static SlotRange getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SlotRange>(create);
   static SlotRange? _defaultInstance;
 
   /// Start lot (Optional)
   @$pb.TagNumber(1)
   Slot get startSlot => $_getN(0);
   @$pb.TagNumber(1)
-  set startSlot(Slot v) { setField(1, v); }
+  set startSlot(Slot v) {
+    setField(1, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasStartSlot() => $_has(0);
   @$pb.TagNumber(1)
@@ -258,7 +301,10 @@ class SlotRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Slot get endSlot => $_getN(1);
   @$pb.TagNumber(2)
-  set endSlot(Slot v) { setField(2, v); }
+  set endSlot(Slot v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasEndSlot() => $_has(1);
   @$pb.TagNumber(2)
@@ -267,6 +313,6 @@ class SlotRange extends $pb.GeneratedMessage {
   Slot ensureEndSlot() => $_ensure(1);
 }
 
-
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

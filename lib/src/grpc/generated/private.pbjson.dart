@@ -22,8 +22,9 @@ const AddToBootstrapBlacklistRequest$json = {
 };
 
 /// Descriptor for `AddToBootstrapBlacklistRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addToBootstrapBlacklistRequestDescriptor = $convert.base64Decode(
-    'Ch5BZGRUb0Jvb3RzdHJhcEJsYWNrbGlzdFJlcXVlc3QSEAoDaXBzGAEgAygJUgNpcHM=');
+final $typed_data.Uint8List addToBootstrapBlacklistRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5BZGRUb0Jvb3RzdHJhcEJsYWNrbGlzdFJlcXVlc3QSEAoDaXBzGAEgAygJUgNpcHM=');
 
 @$core.Deprecated('Use addToBootstrapBlacklistResponseDescriptor instead')
 const AddToBootstrapBlacklistResponse$json = {
@@ -31,8 +32,8 @@ const AddToBootstrapBlacklistResponse$json = {
 };
 
 /// Descriptor for `AddToBootstrapBlacklistResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addToBootstrapBlacklistResponseDescriptor = $convert.base64Decode(
-    'Ch9BZGRUb0Jvb3RzdHJhcEJsYWNrbGlzdFJlc3BvbnNl');
+final $typed_data.Uint8List addToBootstrapBlacklistResponseDescriptor =
+    $convert.base64Decode('Ch9BZGRUb0Jvb3RzdHJhcEJsYWNrbGlzdFJlc3BvbnNl');
 
 @$core.Deprecated('Use addToBootstrapWhitelistRequestDescriptor instead')
 const AddToBootstrapWhitelistRequest$json = {
@@ -43,8 +44,9 @@ const AddToBootstrapWhitelistRequest$json = {
 };
 
 /// Descriptor for `AddToBootstrapWhitelistRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addToBootstrapWhitelistRequestDescriptor = $convert.base64Decode(
-    'Ch5BZGRUb0Jvb3RzdHJhcFdoaXRlbGlzdFJlcXVlc3QSEAoDaXBzGAEgAygJUgNpcHM=');
+final $typed_data.Uint8List addToBootstrapWhitelistRequestDescriptor =
+    $convert.base64Decode(
+        'Ch5BZGRUb0Jvb3RzdHJhcFdoaXRlbGlzdFJlcXVlc3QSEAoDaXBzGAEgAygJUgNpcHM=');
 
 @$core.Deprecated('Use addToBootstrapWhitelistResponseDescriptor instead')
 const AddToBootstrapWhitelistResponse$json = {
@@ -52,8 +54,8 @@ const AddToBootstrapWhitelistResponse$json = {
 };
 
 /// Descriptor for `AddToBootstrapWhitelistResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addToBootstrapWhitelistResponseDescriptor = $convert.base64Decode(
-    'Ch9BZGRUb0Jvb3RzdHJhcFdoaXRlbGlzdFJlc3BvbnNl');
+final $typed_data.Uint8List addToBootstrapWhitelistResponseDescriptor =
+    $convert.base64Decode('Ch9BZGRUb0Jvb3RzdHJhcFdoaXRlbGlzdFJlc3BvbnNl');
 
 @$core.Deprecated('Use addToPeersWhitelistRequestDescriptor instead')
 const AddToPeersWhitelistRequest$json = {
@@ -64,8 +66,9 @@ const AddToPeersWhitelistRequest$json = {
 };
 
 /// Descriptor for `AddToPeersWhitelistRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addToPeersWhitelistRequestDescriptor = $convert.base64Decode(
-    'ChpBZGRUb1BlZXJzV2hpdGVsaXN0UmVxdWVzdBIQCgNpcHMYASADKAlSA2lwcw==');
+final $typed_data.Uint8List addToPeersWhitelistRequestDescriptor =
+    $convert.base64Decode(
+        'ChpBZGRUb1BlZXJzV2hpdGVsaXN0UmVxdWVzdBIQCgNpcHMYASADKAlSA2lwcw==');
 
 @$core.Deprecated('Use addToPeersWhitelistResponseDescriptor instead')
 const AddToPeersWhitelistResponse$json = {
@@ -73,8 +76,8 @@ const AddToPeersWhitelistResponse$json = {
 };
 
 /// Descriptor for `AddToPeersWhitelistResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addToPeersWhitelistResponseDescriptor = $convert.base64Decode(
-    'ChtBZGRUb1BlZXJzV2hpdGVsaXN0UmVzcG9uc2U=');
+final $typed_data.Uint8List addToPeersWhitelistResponseDescriptor =
+    $convert.base64Decode('ChtBZGRUb1BlZXJzV2hpdGVsaXN0UmVzcG9uc2U=');
 
 @$core.Deprecated('Use addStakingSecretKeysRequestDescriptor instead')
 const AddStakingSecretKeysRequest$json = {
@@ -85,9 +88,10 @@ const AddStakingSecretKeysRequest$json = {
 };
 
 /// Descriptor for `AddStakingSecretKeysRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addStakingSecretKeysRequestDescriptor = $convert.base64Decode(
-    'ChtBZGRTdGFraW5nU2VjcmV0S2V5c1JlcXVlc3QSHwoLc2VjcmV0X2tleXMYASADKAlSCnNlY3'
-    'JldEtleXM=');
+final $typed_data.Uint8List addStakingSecretKeysRequestDescriptor =
+    $convert.base64Decode(
+        'ChtBZGRTdGFraW5nU2VjcmV0S2V5c1JlcXVlc3QSHwoLc2VjcmV0X2tleXMYASADKAlSCnNlY3'
+        'JldEtleXM=');
 
 @$core.Deprecated('Use addStakingSecretKeysResponseDescriptor instead')
 const AddStakingSecretKeysResponse$json = {
@@ -95,8 +99,8 @@ const AddStakingSecretKeysResponse$json = {
 };
 
 /// Descriptor for `AddStakingSecretKeysResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addStakingSecretKeysResponseDescriptor = $convert.base64Decode(
-    'ChxBZGRTdGFraW5nU2VjcmV0S2V5c1Jlc3BvbnNl');
+final $typed_data.Uint8List addStakingSecretKeysResponseDescriptor =
+    $convert.base64Decode('ChxBZGRTdGFraW5nU2VjcmV0S2V5c1Jlc3BvbnNl');
 
 @$core.Deprecated('Use allowEveryoneToBootstrapRequestDescriptor instead')
 const AllowEveryoneToBootstrapRequest$json = {
@@ -104,8 +108,8 @@ const AllowEveryoneToBootstrapRequest$json = {
 };
 
 /// Descriptor for `AllowEveryoneToBootstrapRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List allowEveryoneToBootstrapRequestDescriptor = $convert.base64Decode(
-    'Ch9BbGxvd0V2ZXJ5b25lVG9Cb290c3RyYXBSZXF1ZXN0');
+final $typed_data.Uint8List allowEveryoneToBootstrapRequestDescriptor =
+    $convert.base64Decode('Ch9BbGxvd0V2ZXJ5b25lVG9Cb290c3RyYXBSZXF1ZXN0');
 
 @$core.Deprecated('Use allowEveryoneToBootstrapResponseDescriptor instead')
 const AllowEveryoneToBootstrapResponse$json = {
@@ -113,8 +117,8 @@ const AllowEveryoneToBootstrapResponse$json = {
 };
 
 /// Descriptor for `AllowEveryoneToBootstrapResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List allowEveryoneToBootstrapResponseDescriptor = $convert.base64Decode(
-    'CiBBbGxvd0V2ZXJ5b25lVG9Cb290c3RyYXBSZXNwb25zZQ==');
+final $typed_data.Uint8List allowEveryoneToBootstrapResponseDescriptor =
+    $convert.base64Decode('CiBBbGxvd0V2ZXJ5b25lVG9Cb290c3RyYXBSZXNwb25zZQ==');
 
 @$core.Deprecated('Use getBootstrapBlacklistRequestDescriptor instead')
 const GetBootstrapBlacklistRequest$json = {
@@ -122,8 +126,8 @@ const GetBootstrapBlacklistRequest$json = {
 };
 
 /// Descriptor for `GetBootstrapBlacklistRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getBootstrapBlacklistRequestDescriptor = $convert.base64Decode(
-    'ChxHZXRCb290c3RyYXBCbGFja2xpc3RSZXF1ZXN0');
+final $typed_data.Uint8List getBootstrapBlacklistRequestDescriptor =
+    $convert.base64Decode('ChxHZXRCb290c3RyYXBCbGFja2xpc3RSZXF1ZXN0');
 
 @$core.Deprecated('Use getBootstrapBlacklistResponseDescriptor instead')
 const GetBootstrapBlacklistResponse$json = {
@@ -134,8 +138,9 @@ const GetBootstrapBlacklistResponse$json = {
 };
 
 /// Descriptor for `GetBootstrapBlacklistResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getBootstrapBlacklistResponseDescriptor = $convert.base64Decode(
-    'Ch1HZXRCb290c3RyYXBCbGFja2xpc3RSZXNwb25zZRIQCgNpcHMYASADKAlSA2lwcw==');
+final $typed_data.Uint8List getBootstrapBlacklistResponseDescriptor =
+    $convert.base64Decode(
+        'Ch1HZXRCb290c3RyYXBCbGFja2xpc3RSZXNwb25zZRIQCgNpcHMYASADKAlSA2lwcw==');
 
 @$core.Deprecated('Use getBootstrapWhitelistRequestDescriptor instead')
 const GetBootstrapWhitelistRequest$json = {
@@ -143,8 +148,8 @@ const GetBootstrapWhitelistRequest$json = {
 };
 
 /// Descriptor for `GetBootstrapWhitelistRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getBootstrapWhitelistRequestDescriptor = $convert.base64Decode(
-    'ChxHZXRCb290c3RyYXBXaGl0ZWxpc3RSZXF1ZXN0');
+final $typed_data.Uint8List getBootstrapWhitelistRequestDescriptor =
+    $convert.base64Decode('ChxHZXRCb290c3RyYXBXaGl0ZWxpc3RSZXF1ZXN0');
 
 @$core.Deprecated('Use getBootstrapWhitelistResponseDescriptor instead')
 const GetBootstrapWhitelistResponse$json = {
@@ -155,8 +160,9 @@ const GetBootstrapWhitelistResponse$json = {
 };
 
 /// Descriptor for `GetBootstrapWhitelistResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getBootstrapWhitelistResponseDescriptor = $convert.base64Decode(
-    'Ch1HZXRCb290c3RyYXBXaGl0ZWxpc3RSZXNwb25zZRIQCgNpcHMYASADKAlSA2lwcw==');
+final $typed_data.Uint8List getBootstrapWhitelistResponseDescriptor =
+    $convert.base64Decode(
+        'Ch1HZXRCb290c3RyYXBXaGl0ZWxpc3RSZXNwb25zZRIQCgNpcHMYASADKAlSA2lwcw==');
 
 @$core.Deprecated('Use getMipStatusRequestDescriptor instead')
 const GetMipStatusRequest$json = {
@@ -164,14 +170,21 @@ const GetMipStatusRequest$json = {
 };
 
 /// Descriptor for `GetMipStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getMipStatusRequestDescriptor = $convert.base64Decode(
-    'ChNHZXRNaXBTdGF0dXNSZXF1ZXN0');
+final $typed_data.Uint8List getMipStatusRequestDescriptor =
+    $convert.base64Decode('ChNHZXRNaXBTdGF0dXNSZXF1ZXN0');
 
 @$core.Deprecated('Use getMipStatusResponseDescriptor instead')
 const GetMipStatusResponse$json = {
   '1': 'GetMipStatusResponse',
   '2': [
-    {'1': 'mipstatus_entries', '3': 1, '4': 3, '5': 11, '6': '.massa.model.v1.MipStatusEntry', '10': 'mipstatusEntries'},
+    {
+      '1': 'mipstatus_entries',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.massa.model.v1.MipStatusEntry',
+      '10': 'mipstatusEntries'
+    },
   ],
 };
 
@@ -186,14 +199,21 @@ const GetNodeStatusRequest$json = {
 };
 
 /// Descriptor for `GetNodeStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getNodeStatusRequestDescriptor = $convert.base64Decode(
-    'ChRHZXROb2RlU3RhdHVzUmVxdWVzdA==');
+final $typed_data.Uint8List getNodeStatusRequestDescriptor =
+    $convert.base64Decode('ChRHZXROb2RlU3RhdHVzUmVxdWVzdA==');
 
 @$core.Deprecated('Use getNodeStatusResponseDescriptor instead')
 const GetNodeStatusResponse$json = {
   '1': 'GetNodeStatusResponse',
   '2': [
-    {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NodeStatus', '10': 'status'},
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NodeStatus',
+      '10': 'status'
+    },
   ],
 };
 
@@ -208,8 +228,8 @@ const GetPeersWhitelistRequest$json = {
 };
 
 /// Descriptor for `GetPeersWhitelistRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getPeersWhitelistRequestDescriptor = $convert.base64Decode(
-    'ChhHZXRQZWVyc1doaXRlbGlzdFJlcXVlc3Q=');
+final $typed_data.Uint8List getPeersWhitelistRequestDescriptor =
+    $convert.base64Decode('ChhHZXRQZWVyc1doaXRlbGlzdFJlcXVlc3Q=');
 
 @$core.Deprecated('Use getPeersWhitelistResponseDescriptor instead')
 const GetPeersWhitelistResponse$json = {
@@ -220,8 +240,9 @@ const GetPeersWhitelistResponse$json = {
 };
 
 /// Descriptor for `GetPeersWhitelistResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getPeersWhitelistResponseDescriptor = $convert.base64Decode(
-    'ChlHZXRQZWVyc1doaXRlbGlzdFJlc3BvbnNlEhAKA2lwcxgBIAMoCVIDaXBz');
+final $typed_data.Uint8List getPeersWhitelistResponseDescriptor =
+    $convert.base64Decode(
+        'ChlHZXRQZWVyc1doaXRlbGlzdFJlc3BvbnNlEhAKA2lwcxgBIAMoCVIDaXBz');
 
 @$core.Deprecated('Use banNodesByIdsRequestDescriptor instead')
 const BanNodesByIdsRequest$json = {
@@ -232,8 +253,9 @@ const BanNodesByIdsRequest$json = {
 };
 
 /// Descriptor for `BanNodesByIdsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List banNodesByIdsRequestDescriptor = $convert.base64Decode(
-    'ChRCYW5Ob2Rlc0J5SWRzUmVxdWVzdBIZCghub2RlX2lkcxgBIAMoCVIHbm9kZUlkcw==');
+final $typed_data.Uint8List banNodesByIdsRequestDescriptor =
+    $convert.base64Decode(
+        'ChRCYW5Ob2Rlc0J5SWRzUmVxdWVzdBIZCghub2RlX2lkcxgBIAMoCVIHbm9kZUlkcw==');
 
 @$core.Deprecated('Use banNodesByIdsResponseDescriptor instead')
 const BanNodesByIdsResponse$json = {
@@ -241,8 +263,8 @@ const BanNodesByIdsResponse$json = {
 };
 
 /// Descriptor for `BanNodesByIdsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List banNodesByIdsResponseDescriptor = $convert.base64Decode(
-    'ChVCYW5Ob2Rlc0J5SWRzUmVzcG9uc2U=');
+final $typed_data.Uint8List banNodesByIdsResponseDescriptor =
+    $convert.base64Decode('ChVCYW5Ob2Rlc0J5SWRzUmVzcG9uc2U=');
 
 @$core.Deprecated('Use banNodesByIpsRequestDescriptor instead')
 const BanNodesByIpsRequest$json = {
@@ -253,8 +275,8 @@ const BanNodesByIpsRequest$json = {
 };
 
 /// Descriptor for `BanNodesByIpsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List banNodesByIpsRequestDescriptor = $convert.base64Decode(
-    'ChRCYW5Ob2Rlc0J5SXBzUmVxdWVzdBIQCgNpcHMYASADKAlSA2lwcw==');
+final $typed_data.Uint8List banNodesByIpsRequestDescriptor = $convert
+    .base64Decode('ChRCYW5Ob2Rlc0J5SXBzUmVxdWVzdBIQCgNpcHMYASADKAlSA2lwcw==');
 
 @$core.Deprecated('Use banNodesByIpsResponseDescriptor instead')
 const BanNodesByIpsResponse$json = {
@@ -262,8 +284,8 @@ const BanNodesByIpsResponse$json = {
 };
 
 /// Descriptor for `BanNodesByIpsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List banNodesByIpsResponseDescriptor = $convert.base64Decode(
-    'ChVCYW5Ob2Rlc0J5SXBzUmVzcG9uc2U=');
+final $typed_data.Uint8List banNodesByIpsResponseDescriptor =
+    $convert.base64Decode('ChVCYW5Ob2Rlc0J5SXBzUmVzcG9uc2U=');
 
 @$core.Deprecated('Use removeFromBootstrapBlacklistRequestDescriptor instead')
 const RemoveFromBootstrapBlacklistRequest$json = {
@@ -274,9 +296,10 @@ const RemoveFromBootstrapBlacklistRequest$json = {
 };
 
 /// Descriptor for `RemoveFromBootstrapBlacklistRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List removeFromBootstrapBlacklistRequestDescriptor = $convert.base64Decode(
-    'CiNSZW1vdmVGcm9tQm9vdHN0cmFwQmxhY2tsaXN0UmVxdWVzdBIQCgNpcHMYASADKAlSA2lwcw'
-    '==');
+final $typed_data.Uint8List removeFromBootstrapBlacklistRequestDescriptor =
+    $convert.base64Decode(
+        'CiNSZW1vdmVGcm9tQm9vdHN0cmFwQmxhY2tsaXN0UmVxdWVzdBIQCgNpcHMYASADKAlSA2lwcw'
+        '==');
 
 @$core.Deprecated('Use removeFromBootstrapBlacklistResponseDescriptor instead')
 const RemoveFromBootstrapBlacklistResponse$json = {
@@ -284,8 +307,9 @@ const RemoveFromBootstrapBlacklistResponse$json = {
 };
 
 /// Descriptor for `RemoveFromBootstrapBlacklistResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List removeFromBootstrapBlacklistResponseDescriptor = $convert.base64Decode(
-    'CiRSZW1vdmVGcm9tQm9vdHN0cmFwQmxhY2tsaXN0UmVzcG9uc2U=');
+final $typed_data.Uint8List removeFromBootstrapBlacklistResponseDescriptor =
+    $convert
+        .base64Decode('CiRSZW1vdmVGcm9tQm9vdHN0cmFwQmxhY2tsaXN0UmVzcG9uc2U=');
 
 @$core.Deprecated('Use removeFromBootstrapWhitelistRequestDescriptor instead')
 const RemoveFromBootstrapWhitelistRequest$json = {
@@ -296,9 +320,10 @@ const RemoveFromBootstrapWhitelistRequest$json = {
 };
 
 /// Descriptor for `RemoveFromBootstrapWhitelistRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List removeFromBootstrapWhitelistRequestDescriptor = $convert.base64Decode(
-    'CiNSZW1vdmVGcm9tQm9vdHN0cmFwV2hpdGVsaXN0UmVxdWVzdBIQCgNpcHMYASADKAlSA2lwcw'
-    '==');
+final $typed_data.Uint8List removeFromBootstrapWhitelistRequestDescriptor =
+    $convert.base64Decode(
+        'CiNSZW1vdmVGcm9tQm9vdHN0cmFwV2hpdGVsaXN0UmVxdWVzdBIQCgNpcHMYASADKAlSA2lwcw'
+        '==');
 
 @$core.Deprecated('Use removeFromBootstrapWhitelistResponseDescriptor instead')
 const RemoveFromBootstrapWhitelistResponse$json = {
@@ -306,8 +331,9 @@ const RemoveFromBootstrapWhitelistResponse$json = {
 };
 
 /// Descriptor for `RemoveFromBootstrapWhitelistResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List removeFromBootstrapWhitelistResponseDescriptor = $convert.base64Decode(
-    'CiRSZW1vdmVGcm9tQm9vdHN0cmFwV2hpdGVsaXN0UmVzcG9uc2U=');
+final $typed_data.Uint8List removeFromBootstrapWhitelistResponseDescriptor =
+    $convert
+        .base64Decode('CiRSZW1vdmVGcm9tQm9vdHN0cmFwV2hpdGVsaXN0UmVzcG9uc2U=');
 
 @$core.Deprecated('Use removeFromPeersWhitelistRequestDescriptor instead')
 const RemoveFromPeersWhitelistRequest$json = {
@@ -318,8 +344,9 @@ const RemoveFromPeersWhitelistRequest$json = {
 };
 
 /// Descriptor for `RemoveFromPeersWhitelistRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List removeFromPeersWhitelistRequestDescriptor = $convert.base64Decode(
-    'Ch9SZW1vdmVGcm9tUGVlcnNXaGl0ZWxpc3RSZXF1ZXN0EhAKA2lwcxgBIAMoCVIDaXBz');
+final $typed_data.Uint8List removeFromPeersWhitelistRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9SZW1vdmVGcm9tUGVlcnNXaGl0ZWxpc3RSZXF1ZXN0EhAKA2lwcxgBIAMoCVIDaXBz');
 
 @$core.Deprecated('Use removeFromPeersWhitelistResponseDescriptor instead')
 const RemoveFromPeersWhitelistResponse$json = {
@@ -327,8 +354,8 @@ const RemoveFromPeersWhitelistResponse$json = {
 };
 
 /// Descriptor for `RemoveFromPeersWhitelistResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List removeFromPeersWhitelistResponseDescriptor = $convert.base64Decode(
-    'CiBSZW1vdmVGcm9tUGVlcnNXaGl0ZWxpc3RSZXNwb25zZQ==');
+final $typed_data.Uint8List removeFromPeersWhitelistResponseDescriptor =
+    $convert.base64Decode('CiBSZW1vdmVGcm9tUGVlcnNXaGl0ZWxpc3RSZXNwb25zZQ==');
 
 @$core.Deprecated('Use removeStakingAddressesRequestDescriptor instead')
 const RemoveStakingAddressesRequest$json = {
@@ -339,9 +366,10 @@ const RemoveStakingAddressesRequest$json = {
 };
 
 /// Descriptor for `RemoveStakingAddressesRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List removeStakingAddressesRequestDescriptor = $convert.base64Decode(
-    'Ch1SZW1vdmVTdGFraW5nQWRkcmVzc2VzUmVxdWVzdBIcCglhZGRyZXNzZXMYASADKAlSCWFkZH'
-    'Jlc3Nlcw==');
+final $typed_data.Uint8List removeStakingAddressesRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1SZW1vdmVTdGFraW5nQWRkcmVzc2VzUmVxdWVzdBIcCglhZGRyZXNzZXMYASADKAlSCWFkZH'
+        'Jlc3Nlcw==');
 
 @$core.Deprecated('Use removeStakingAddressesResponseDescriptor instead')
 const RemoveStakingAddressesResponse$json = {
@@ -349,8 +377,8 @@ const RemoveStakingAddressesResponse$json = {
 };
 
 /// Descriptor for `RemoveStakingAddressesResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List removeStakingAddressesResponseDescriptor = $convert.base64Decode(
-    'Ch5SZW1vdmVTdGFraW5nQWRkcmVzc2VzUmVzcG9uc2U=');
+final $typed_data.Uint8List removeStakingAddressesResponseDescriptor =
+    $convert.base64Decode('Ch5SZW1vdmVTdGFraW5nQWRkcmVzc2VzUmVzcG9uc2U=');
 
 @$core.Deprecated('Use signMessagesRequestDescriptor instead')
 const SignMessagesRequest$json = {
@@ -361,8 +389,9 @@ const SignMessagesRequest$json = {
 };
 
 /// Descriptor for `SignMessagesRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List signMessagesRequestDescriptor = $convert.base64Decode(
-    'ChNTaWduTWVzc2FnZXNSZXF1ZXN0EhoKCG1lc3NhZ2VzGAEgAygMUghtZXNzYWdlcw==');
+final $typed_data.Uint8List signMessagesRequestDescriptor =
+    $convert.base64Decode(
+        'ChNTaWduTWVzc2FnZXNSZXF1ZXN0EhoKCG1lc3NhZ2VzGAEgAygMUghtZXNzYWdlcw==');
 
 @$core.Deprecated('Use signMessagesResponseDescriptor instead')
 const SignMessagesResponse$json = {
@@ -384,8 +413,8 @@ const ShutdownGracefullyRequest$json = {
 };
 
 /// Descriptor for `ShutdownGracefullyRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List shutdownGracefullyRequestDescriptor = $convert.base64Decode(
-    'ChlTaHV0ZG93bkdyYWNlZnVsbHlSZXF1ZXN0');
+final $typed_data.Uint8List shutdownGracefullyRequestDescriptor =
+    $convert.base64Decode('ChlTaHV0ZG93bkdyYWNlZnVsbHlSZXF1ZXN0');
 
 @$core.Deprecated('Use shutdownGracefullyResponseDescriptor instead')
 const ShutdownGracefullyResponse$json = {
@@ -393,8 +422,8 @@ const ShutdownGracefullyResponse$json = {
 };
 
 /// Descriptor for `ShutdownGracefullyResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List shutdownGracefullyResponseDescriptor = $convert.base64Decode(
-    'ChpTaHV0ZG93bkdyYWNlZnVsbHlSZXNwb25zZQ==');
+final $typed_data.Uint8List shutdownGracefullyResponseDescriptor =
+    $convert.base64Decode('ChpTaHV0ZG93bkdyYWNlZnVsbHlSZXNwb25zZQ==');
 
 @$core.Deprecated('Use unbanNodesByIdsRequestDescriptor instead')
 const UnbanNodesByIdsRequest$json = {
@@ -405,8 +434,9 @@ const UnbanNodesByIdsRequest$json = {
 };
 
 /// Descriptor for `UnbanNodesByIdsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List unbanNodesByIdsRequestDescriptor = $convert.base64Decode(
-    'ChZVbmJhbk5vZGVzQnlJZHNSZXF1ZXN0EhkKCG5vZGVfaWRzGAEgAygJUgdub2RlSWRz');
+final $typed_data.Uint8List unbanNodesByIdsRequestDescriptor =
+    $convert.base64Decode(
+        'ChZVbmJhbk5vZGVzQnlJZHNSZXF1ZXN0EhkKCG5vZGVfaWRzGAEgAygJUgdub2RlSWRz');
 
 @$core.Deprecated('Use unbanNodesByIdsResponseDescriptor instead')
 const UnbanNodesByIdsResponse$json = {
@@ -414,8 +444,8 @@ const UnbanNodesByIdsResponse$json = {
 };
 
 /// Descriptor for `UnbanNodesByIdsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List unbanNodesByIdsResponseDescriptor = $convert.base64Decode(
-    'ChdVbmJhbk5vZGVzQnlJZHNSZXNwb25zZQ==');
+final $typed_data.Uint8List unbanNodesByIdsResponseDescriptor =
+    $convert.base64Decode('ChdVbmJhbk5vZGVzQnlJZHNSZXNwb25zZQ==');
 
 @$core.Deprecated('Use unbanNodesByIpsRequestDescriptor instead')
 const UnbanNodesByIpsRequest$json = {
@@ -426,8 +456,8 @@ const UnbanNodesByIpsRequest$json = {
 };
 
 /// Descriptor for `UnbanNodesByIpsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List unbanNodesByIpsRequestDescriptor = $convert.base64Decode(
-    'ChZVbmJhbk5vZGVzQnlJcHNSZXF1ZXN0EhAKA2lwcxgBIAMoCVIDaXBz');
+final $typed_data.Uint8List unbanNodesByIpsRequestDescriptor = $convert
+    .base64Decode('ChZVbmJhbk5vZGVzQnlJcHNSZXF1ZXN0EhAKA2lwcxgBIAMoCVIDaXBz');
 
 @$core.Deprecated('Use unbanNodesByIpsResponseDescriptor instead')
 const UnbanNodesByIpsResponse$json = {
@@ -435,6 +465,5 @@ const UnbanNodesByIpsResponse$json = {
 };
 
 /// Descriptor for `UnbanNodesByIpsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List unbanNodesByIpsResponseDescriptor = $convert.base64Decode(
-    'ChdVbmJhbk5vZGVzQnlJcHNSZXNwb25zZQ==');
-
+final $typed_data.Uint8List unbanNodesByIpsResponseDescriptor =
+    $convert.base64Decode('ChdVbmJhbk5vZGVzQnlJcHNSZXNwb25zZQ==');

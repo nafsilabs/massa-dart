@@ -6,11 +6,13 @@ final BigInt U64_MAX = BigInt.parse('0xffffffffffffffff');
 
 final BigInt U128_MAX = BigInt.parse('0xffffffffffffffffffffffffffffffff');
 
-final BigInt U256_MAX = BigInt.parse('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
+final BigInt U256_MAX = BigInt.parse(
+    '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
 
 final BigInt I128_MAX = BigInt.parse('0x7fffffffffffffffffffffffffffffff');
 
-final BigInt I128_MIN = BigInt.parse('-170141183460469231731687303715884105728');
+final BigInt I128_MIN =
+    BigInt.parse('-170141183460469231731687303715884105728');
 
 // Uint8List generic128ToBytes(BigInt val) {
 //   final BigInt upper = val >> 64;
@@ -81,7 +83,8 @@ BigInt bytesToBigInt(Iterable<int> bytes, {Endian endian = Endian.big}) {
 
 /// Encode a BigInt into bytes
 /// This is I2OSP as defined in rfc3447.
-Uint8List bigIntToBytes(BigInt number, {int? outLen, Endian endian = Endian.big}) {
+Uint8List bigIntToBytes(BigInt number,
+    {int? outLen, Endian endian = Endian.big}) {
   int size = (number.bitLength + 7) >> 3;
   if (outLen == null) {
     outLen = size;

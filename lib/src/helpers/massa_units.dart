@@ -21,8 +21,10 @@ double toMAS(BigInt amount) {
 
 class MassaUnits {
   static final BigInt oneMassa = BigInt.from(10).pow(9); // 1 Massa in nanoMassa
-  static final BigInt mMassa = BigInt.from(10).pow(6); // 1 milliMassa in nanoMassa
-  static final BigInt uMassa = BigInt.from(10).pow(3); // 1 microMassa in nanoMassa
+  static final BigInt mMassa =
+      BigInt.from(10).pow(6); // 1 milliMassa in nanoMassa
+  static final BigInt uMassa =
+      BigInt.from(10).pow(3); // 1 microMassa in nanoMassa
 
   static NativeAmount fromDecimal(double amount) {
     var mantisa = amount * pow(10, 9);

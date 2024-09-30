@@ -26,14 +26,16 @@ void main(List<String> args) async {
   final prefix = Uint8List.fromList([0x42, 0x03]);
 
   final counter = BigInt.from(1);
-  final counterBytes = bigIntToBytes(counter, outLen: 32, endian: Endian.little);
+  final counterBytes =
+      bigIntToBytes(counter, outLen: 32, endian: Endian.little);
 
   final key = concat([prefix, counterBytes]);
   print(key);
   //final key = 0x00;
 
   const dnsAddress = 'AS1q5hUfxLXNXLKsYQVXZLK7MPUZcWaNZZsK7e9QzqhGdAgLpUGT';
-  final filter = GetDatastoreEntryFilter(addressKey: AddressKeyEntry(address: dnsAddress, key: key));
+  final filter = GetDatastoreEntryFilter(
+      addressKey: AddressKeyEntry(address: dnsAddress, key: key));
   final resp = await grpc.getDataStoreEntries([filter]);
   resp?.datastoreEntries.forEach((value) {
     print(value.finalValue);

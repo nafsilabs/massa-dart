@@ -17,8 +17,22 @@ import 'dart:typed_data' as $typed_data;
 const ConsensusStats$json = {
   '1': 'ConsensusStats',
   '2': [
-    {'1': 'start_timespan', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'startTimespan'},
-    {'1': 'end_timespan', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'endTimespan'},
+    {
+      '1': 'start_timespan',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'startTimespan'
+    },
+    {
+      '1': 'end_timespan',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'endTimespan'
+    },
     {'1': 'final_block_count', '3': 3, '4': 1, '5': 4, '10': 'finalBlockCount'},
     {'1': 'stale_block_count', '3': 4, '4': 1, '5': 4, '10': 'staleBlockCount'},
     {'1': 'clique_count', '3': 5, '4': 1, '5': 4, '10': 'cliqueCount'},
@@ -37,7 +51,13 @@ final $typed_data.Uint8List consensusStatsDescriptor = $convert.base64Decode(
 const PoolStats$json = {
   '1': 'PoolStats',
   '2': [
-    {'1': 'endorsements_count', '3': 1, '4': 1, '5': 4, '10': 'endorsementsCount'},
+    {
+      '1': 'endorsements_count',
+      '3': 1,
+      '4': 1,
+      '5': 4,
+      '10': 'endorsementsCount'
+    },
     {'1': 'operations_count', '3': 2, '4': 1, '5': 4, '10': 'operationsCount'},
   ],
 };
@@ -51,8 +71,20 @@ final $typed_data.Uint8List poolStatsDescriptor = $convert.base64Decode(
 const NetworkStats$json = {
   '1': 'NetworkStats',
   '2': [
-    {'1': 'in_connection_count', '3': 1, '4': 1, '5': 4, '10': 'inConnectionCount'},
-    {'1': 'out_connection_count', '3': 2, '4': 1, '5': 4, '10': 'outConnectionCount'},
+    {
+      '1': 'in_connection_count',
+      '3': 1,
+      '4': 1,
+      '5': 4,
+      '10': 'inConnectionCount'
+    },
+    {
+      '1': 'out_connection_count',
+      '3': 2,
+      '4': 1,
+      '5': 4,
+      '10': 'outConnectionCount'
+    },
     {'1': 'known_peer_count', '3': 3, '4': 1, '5': 4, '10': 'knownPeerCount'},
     {'1': 'banned_peer_count', '3': 4, '4': 1, '5': 4, '10': 'bannedPeerCount'},
     {'1': 'active_node_count', '3': 5, '4': 1, '5': 4, '10': 'activeNodeCount'},
@@ -71,10 +103,30 @@ final $typed_data.Uint8List networkStatsDescriptor = $convert.base64Decode(
 const ExecutionStats$json = {
   '1': 'ExecutionStats',
   '2': [
-    {'1': 'time_window_start', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'timeWindowStart'},
-    {'1': 'time_window_end', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.NativeTime', '10': 'timeWindowEnd'},
+    {
+      '1': 'time_window_start',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'timeWindowStart'
+    },
+    {
+      '1': 'time_window_end',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.NativeTime',
+      '10': 'timeWindowEnd'
+    },
     {'1': 'final_block_count', '3': 3, '4': 1, '5': 4, '10': 'finalBlockCount'},
-    {'1': 'final_executed_operations_count', '3': 4, '4': 1, '5': 4, '10': 'finalExecutedOperationsCount'},
+    {
+      '1': 'final_executed_operations_count',
+      '3': 4,
+      '4': 1,
+      '5': 4,
+      '10': 'finalExecutedOperationsCount'
+    },
   ],
 };
 
@@ -85,4 +137,3 @@ final $typed_data.Uint8List executionStatsDescriptor = $convert.base64Decode(
     'KAsyGi5tYXNzYS5tb2RlbC52MS5OYXRpdmVUaW1lUg10aW1lV2luZG93RW5kEioKEWZpbmFsX2'
     'Jsb2NrX2NvdW50GAMgASgEUg9maW5hbEJsb2NrQ291bnQSRQofZmluYWxfZXhlY3V0ZWRfb3Bl'
     'cmF0aW9uc19jb3VudBgEIAEoBFIcZmluYWxFeGVjdXRlZE9wZXJhdGlvbnNDb3VudA==');
-

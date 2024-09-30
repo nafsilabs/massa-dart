@@ -18,17 +18,36 @@ class Client {
   final r = const RetryOptions(
       maxAttempts: maxRetryAttempts, delayFactor: Duration(seconds: 1));
   static const headers = {'Content-type': 'application/json'};
-  late Uri uri;
+  final Uri uri;
   Client(this.uri);
 
-  Future<dynamic> get(String method,
-      {Map<String, dynamic> header = Client.headers}) async {
+  Future<dynamic> get(String path,
+      {Map<String, dynamic>? params,
+      Map<String, dynamic> header = Client.headers}) async {
+    final url = Uri(
+        scheme: uri.scheme,
+        host: uri.host,
+        path: path,
+        queryParameters: params);
     final response = await r.retry(
-      () => http.get(uri, headers: headers),
+      () => http.get(url, headers: headers),
       retryIf: (e) => e is SocketException || e is TimeoutException,
     );
     return _returnResponse(response);
   }
+
+  /* 
+  final queryParameters = {
+  'param1': 'one',
+  'param2': 'two',
+};
+final uri =
+    Uri.https('www.myurl.com', '/api/v1/test', queryParameters);
+final response = await http.get(uri, headers: {
+  HttpHeaders.authorizationHeader: 'Token $token',
+  HttpHeaders.contentTypeHeader: 'application/json',
+});
+  */
 
   /// POST function
   Future<dynamic> post(String method,

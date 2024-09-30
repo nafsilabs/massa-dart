@@ -15,6 +15,7 @@ import 'package:massa/src/grpc/generated/massa/model/v1/staker.pb.dart';
 import 'package:massa/src/grpc/generated/public.pbgrpc.dart';
 import 'package:massa/src/helpers/helpers.dart';
 
+/// GRPCPublicClient is class for defining the public GRPC client.
 class GRPCPublicClient {
   late String host; //host ip address
   late int port;
@@ -120,7 +121,7 @@ class GRPCPublicClient {
     }
   }
 
-  /// getScExecutionEvents
+  /// getScExecutionEvents gets the smart contract execution events
   Future<List<ScExecutionEvent>> getScExecutionEvents(List<ScExecutionEventsFilter> filters) async {
     final request = GetScExecutionEventsRequest(filters: filters);
     try {
@@ -134,7 +135,7 @@ class GRPCPublicClient {
     }
   }
 
-  /// get selector draws
+  /// getSelectorDraw gets selector draws
   Future<GetSelectorDrawsResponse?> getSelectorDraw(List<SelectorDrawsFilter> filters) async {
     final request = GetSelectorDrawsRequest(filters: filters);
     try {
@@ -147,7 +148,7 @@ class GRPCPublicClient {
     }
   }
 
-  /// Get list of stakers
+  /// getStakers gets the list of stakers
   Future<List<StakerEntry>> getStakers({Int64? minRolls, Int64? maxRolls, Int64? limit}) async {
     final filter = StakersFilter(minRolls: minRolls, maxRolls: maxRolls, limit: limit);
     try {
@@ -162,7 +163,7 @@ class GRPCPublicClient {
     }
   }
 
-  /// Get network status
+  /// getStatus get network status
   Future<PublicStatus> getStatus() async {
     try {
       final request = GetStatusRequest();

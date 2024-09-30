@@ -17,8 +17,24 @@ import 'dart:typed_data' as $typed_data;
 const Denunciation$json = {
   '1': 'Denunciation',
   '2': [
-    {'1': 'block_header', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.BlockHeaderDenunciation', '9': 0, '10': 'blockHeader'},
-    {'1': 'endorsement', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.EndorsementDenunciation', '9': 0, '10': 'endorsement'},
+    {
+      '1': 'block_header',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.BlockHeaderDenunciation',
+      '9': 0,
+      '10': 'blockHeader'
+    },
+    {
+      '1': 'endorsement',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.EndorsementDenunciation',
+      '9': 0,
+      '10': 'endorsement'
+    },
   ],
   '8': [
     {'1': 'entry'},
@@ -37,7 +53,14 @@ const BlockHeaderDenunciation$json = {
   '1': 'BlockHeaderDenunciation',
   '2': [
     {'1': 'public_key', '3': 1, '4': 1, '5': 9, '10': 'publicKey'},
-    {'1': 'slot', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
+    {
+      '1': 'slot',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
     {'1': 'hash_1', '3': 3, '4': 1, '5': 9, '10': 'hash1'},
     {'1': 'hash_2', '3': 4, '4': 1, '5': 9, '10': 'hash2'},
     {'1': 'signature_1', '3': 5, '4': 1, '5': 9, '10': 'signature1'},
@@ -57,7 +80,14 @@ const EndorsementDenunciation$json = {
   '1': 'EndorsementDenunciation',
   '2': [
     {'1': 'public_key', '3': 1, '4': 1, '5': 9, '10': 'publicKey'},
-    {'1': 'slot', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
+    {
+      '1': 'slot',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
     {'1': 'index', '3': 3, '4': 1, '5': 13, '10': 'index'},
     {'1': 'hash_1', '3': 4, '4': 1, '5': 9, '10': 'hash1'},
     {'1': 'hash_2', '3': 5, '4': 1, '5': 9, '10': 'hash2'},
@@ -78,8 +108,24 @@ final $typed_data.Uint8List endorsementDenunciationDescriptor = $convert.base64D
 const DenunciationIndex$json = {
   '1': 'DenunciationIndex',
   '2': [
-    {'1': 'block_header', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.DenunciationBlockHeader', '9': 0, '10': 'blockHeader'},
-    {'1': 'endorsement', '3': 2, '4': 1, '5': 11, '6': '.massa.model.v1.DenunciationEndorsement', '9': 0, '10': 'endorsement'},
+    {
+      '1': 'block_header',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.DenunciationBlockHeader',
+      '9': 0,
+      '10': 'blockHeader'
+    },
+    {
+      '1': 'endorsement',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.DenunciationEndorsement',
+      '9': 0,
+      '10': 'endorsement'
+    },
   ],
   '8': [
     {'1': 'entry'},
@@ -97,26 +143,41 @@ final $typed_data.Uint8List denunciationIndexDescriptor = $convert.base64Decode(
 const DenunciationBlockHeader$json = {
   '1': 'DenunciationBlockHeader',
   '2': [
-    {'1': 'slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
+    {
+      '1': 'slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
   ],
 };
 
 /// Descriptor for `DenunciationBlockHeader`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List denunciationBlockHeaderDescriptor = $convert.base64Decode(
-    'ChdEZW51bmNpYXRpb25CbG9ja0hlYWRlchIoCgRzbG90GAEgASgLMhQubWFzc2EubW9kZWwudj'
-    'EuU2xvdFIEc2xvdA==');
+final $typed_data.Uint8List denunciationBlockHeaderDescriptor =
+    $convert.base64Decode(
+        'ChdEZW51bmNpYXRpb25CbG9ja0hlYWRlchIoCgRzbG90GAEgASgLMhQubWFzc2EubW9kZWwudj'
+        'EuU2xvdFIEc2xvdA==');
 
 @$core.Deprecated('Use denunciationEndorsementDescriptor instead')
 const DenunciationEndorsement$json = {
   '1': 'DenunciationEndorsement',
   '2': [
-    {'1': 'slot', '3': 1, '4': 1, '5': 11, '6': '.massa.model.v1.Slot', '10': 'slot'},
+    {
+      '1': 'slot',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.massa.model.v1.Slot',
+      '10': 'slot'
+    },
     {'1': 'index', '3': 2, '4': 1, '5': 13, '10': 'index'},
   ],
 };
 
 /// Descriptor for `DenunciationEndorsement`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List denunciationEndorsementDescriptor = $convert.base64Decode(
-    'ChdEZW51bmNpYXRpb25FbmRvcnNlbWVudBIoCgRzbG90GAEgASgLMhQubWFzc2EubW9kZWwudj'
-    'EuU2xvdFIEc2xvdBIUCgVpbmRleBgCIAEoDVIFaW5kZXg=');
-
+final $typed_data.Uint8List denunciationEndorsementDescriptor =
+    $convert.base64Decode(
+        'ChdEZW51bmNpYXRpb25FbmRvcnNlbWVudBIoCgRzbG90GAEgASgLMhQubWFzc2EubW9kZWwudj'
+        'EuU2xvdFIEc2xvdBIUCgVpbmRleBgCIAEoDVIFaW5kZXg=');
