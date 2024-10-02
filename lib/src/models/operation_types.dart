@@ -1,3 +1,4 @@
+/// OperationTypes defines transaction, CallSC, BuyRoll, and SellRoll operations
 class OperationType {
   TransactionOperation? transaction;
   ExecuteSCOperation? executeSC;
@@ -56,7 +57,10 @@ class TransactionOperation {
   }
 }
 
+/// ExecuteSCOperation
 class ExecuteSCOperation {}
+
+/// CallSCOperation for encoding and decoding Call smart contract
 
 class CallSCOperation {
   late String targetAddr;

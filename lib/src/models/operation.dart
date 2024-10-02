@@ -1,5 +1,6 @@
 import 'package:massa/src/models/operation_types.dart';
 
+/// Operation model is for managing types of various types of operations
 class Operation {
   Operation({
     this.id,
@@ -44,6 +45,7 @@ class Operation {
   }
 }
 
+/// OperationData
 class OperationData {
   late final String contentCreatorAddress;
   late final String contentCreatorPubKey;
@@ -74,6 +76,7 @@ class OperationData {
   }
 }
 
+/// Operation contents
 class OperationContent {
   OperationContent({
     required this.fee,
