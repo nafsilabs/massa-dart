@@ -17,7 +17,7 @@ dependencies:
   fixnum: ^1.1.0
   grpc: ^4.0.1
   http: ^1.2.2
-  binary: ^3.0.1
+  binary: ^4.0.0
 
 dev_dependencies:
   lints: ^4.0.0
