@@ -1,3 +1,6 @@
+## 1.9.7
+
+ - **FIX**: Updated operation model.
 
 ## 1.9.6
 

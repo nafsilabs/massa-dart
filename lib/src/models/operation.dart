@@ -2,30 +2,32 @@ import 'package:massa/src/models/operation_types.dart';
 
 class Operation {
   Operation({
-    required this.id,
-    required this.inPool,
-    required this.inBlocks,
-    required this.isFinal,
-    required this.thread,
+    this.id,
+    this.inPool,
+    this.inBlocks,
+    this.isFinal,
+    this.thread,
+    this.opExecutionStatus,
     required this.operation,
-    required this.opExecutionStatus,
   });
-  late final String id;
-  late final bool inPool;
+  String? id;
+  bool? inPool;
   List<String>? inBlocks;
-  late bool isFinal;
-  late final int thread;
-  late final OperationData operation;
-  late bool opExecutionStatus;
+  bool? isFinal;
+  int? thread;
+  bool? opExecutionStatus;
+  int? timestamp;
+  OperationData? operation;
 
   Operation.decode(Map<String, dynamic> json) {
     id = json['id'];
     inPool = json['in_pool'];
     inBlocks = List.from(json['in_blocks']);
     isFinal = json['is_operation_final'];
-    thread = json['thread'];
-    operation = OperationData.decode(json['operation']);
+    thread = (json['thread'] is String) ? int.parse(json['thread']) : json['thread'];
     opExecutionStatus = json['op_exec_status'];
+    timestamp = (json['timestamp'] is String) ? int.parse(json['timestamp']) : json['timestamp'];
+    operation = OperationData.decode(json['operation']);
   }
 
   Map<String, dynamic> encode() {
@@ -35,40 +37,39 @@ class Operation {
     data['in_blocks'] = inBlocks;
     data['is_operation_final'] = isFinal;
     data['thread'] = thread;
-    data['operation'] = operation.encode();
     data['op_exec_status'] = opExecutionStatus;
+    data['timestamp'] = timestamp;
+    data['operation'] = operation?.encode();
     return data;
   }
 }
 
 class OperationData {
-  OperationData(
-      {required this.content,
-      required this.signature,
-      required this.contentCreatorPubKey,
-      required this.contentCreatorAddress,
-      required this.id});
-  late final OperationContent content;
-  late final String signature;
-  late final String contentCreatorPubKey;
   late final String contentCreatorAddress;
-  late final String id;
+  late final String contentCreatorPubKey;
+  late final String signature;
+  late final OperationContent content;
+
+  OperationData({
+    required this.contentCreatorAddress,
+    required this.contentCreatorPubKey,
+    required this.signature,
+    required this.content,
+  });
 
   OperationData.decode(Map<String, dynamic> json) {
-    // content = OperationContent.decode(json['content']);
-    // signature = json['signature'];
-    // contentCreatorPubKey = json['content_creator_pub_key'];
-    // contentCreatorAddress = json['content_creator_address'];
-    id = json['id'];
+    contentCreatorAddress = json['content_creator_address'];
+    contentCreatorPubKey = json['content_creator_pub_key'];
+    signature = json['signature'];
+    content = OperationContent.decode(json['content']);
   }
 
   Map<String, dynamic> encode() {
     final data = <String, dynamic>{};
-    // data['content'] = content.encode();
-    // data['signature'] = signature;
-    // data['content_creator_pub_key'] = contentCreatorPubKey;
-    // data['content_creator_address'] = contentCreatorAddress;
-    data['id'] = id;
+    data['content_creator_address'] = contentCreatorAddress;
+    data['content_creator_pub_key'] = contentCreatorPubKey;
+    data['signature'] = signature;
+    data['content'] = content.encode();
     return data;
   }
 }
@@ -85,7 +86,7 @@ class OperationContent {
 
   OperationContent.decode(Map<String, dynamic> json) {
     fee = json['fee'];
-    expirePeriod = json['expire_period'];
+    expirePeriod = (json['expire_period'] is String) ? int.parse(json['expire_period']) : json['expire_period'];
     op = OperationType.decode(json['op']);
   }
 
